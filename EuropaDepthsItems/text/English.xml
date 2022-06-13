@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <upgradename.turretincreasefirerate>Overvolt Turrets</upgradename.turretincreasefirerate>
+  <upgradedescription.turretincreasefirerate>Greatly increase the fire rate and power usage of all turrets at the expense of power usage.</upgradedescription.turretincreasefirerate>
+  <upgradename.increasecrushdepth>Upgrade Pressure Seals</upgradename.increasecrushdepth>
+  <upgradedescription.increasecrushdepth>Increate the subs pressure rating.</upgradedescription.increasecrushdepth>
+  <entityname.coilgunammoboxcopper>Coilgun Copper Ammunition Box</entityname.coilgunammoboxcopper>
+  <entitydescription.coilgunammoboxcopper>Ammunition for the coilgun that higher penetration then lead, but less than piercing.</entitydescription.coilgunammoboxcopper>
+  <entityname.ed_raptorbanespear>Rapter Bane Harpoon</entityname.ed_raptorbanespear>
+  <entitydescription.ed_raptorbanespear>A harpoon infused with Rapter Bane for the harpoon gun.</entitydescription.ed_raptorbanespear>
+  <entityname.clowndivingmaskunique>Mother's Tangency</entityname.clowndivingmaskunique>
+  <entitydescription.clowndivingmaskunique>Nothing is out of mother's reach.</entitydescription.clowndivingmaskunique>
+</infotexts>
