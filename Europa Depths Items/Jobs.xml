@@ -75,9 +75,6 @@
           <sprite texture="Content/Items/Jobgear/Captain/captain_torso_[GENDER]_3.png" sourcerect="121,0,76,80" offset="-20,15" />
         </PreviewSprites>
       </ItemSet>
-      <PortraitClothing>
-        <sprite name="Portrait Clothing Captain" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="2,0"/>
-      </PortraitClothing>
       <AutonomousObjectives>
         <Order identifier="fightintruders" prioritymodifier="1"/>
         <Order identifier="extinguishfires" prioritymodifier ="1"/>
@@ -132,9 +129,6 @@
           <sprite texture="Content/Items/Jobgear/Engineer/engineer_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
         </PreviewSprites>
       </ItemSet>
-      <PortraitClothing>
-        <sprite name="Portrait Clothing Engineer" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="0,0"/>
-      </PortraitClothing>
       <AutonomousObjectives>
         <Order identifier="extinguishfires" prioritymodifier ="1"/>
         <Order identifier="repairelectrical" prioritymodifier="1"/>
@@ -209,9 +203,6 @@
           <sprite texture="Content/Items/Jobgear/Mechanic/mechanic_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
         </PreviewSprites>
       </ItemSet>
-      <PortraitClothing>
-        <sprite name="Portrait Clothing Mechanic" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="1,0"/>
-      </PortraitClothing>
       <AutonomousObjectives>
         <Order identifier="fixleaks" prioritymodifier="1"/>
         <Order identifier="repairmechanical" prioritymodifier="1"/>
@@ -324,9 +315,6 @@
           <sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_3.png" sourcerect="121,0,76,80" offset="-20,15" />
         </PreviewSprites>
       </ItemSet>
-      <PortraitClothing>
-        <sprite name="Portrait Clothing Security Officer" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="1,1"/>
-      </PortraitClothing>
       <AutonomousObjectives>
         <Order identifier="fightintruders" prioritymodifier="1"/>
         <Order identifier="rescue" prioritymodifier="1"/>
@@ -389,9 +377,6 @@
           <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
         </PreviewSprites>
       </ItemSet>
-      <PortraitClothing>
-        <sprite name="Portrait Clothing Medic" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="0,1"/>
-      </PortraitClothing>
       <AutonomousObjectives>
         <Order identifier="rescue" prioritymodifier="1"/>
         <Order identifier="extinguishfires" prioritymodifier ="0.5"/>
@@ -429,9 +414,6 @@
           <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="121,0,76,80" offset="-20,15" />
         </PreviewSprites>
       </ItemSet>
-      <PortraitClothing>
-        <sprite name="Portrait Clothing Assistant" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="0,2"/>
-      </PortraitClothing>
       <AutonomousObjectives>
         <Order identifier="extinguishfires" prioritymodifier ="1"/>
         <Order identifier="pumpwater" option="pumpout" prioritymodifier="1"/>
@@ -493,11 +475,6 @@
         <Order identifier="extinguishfires" prioritymodifier="0.75" />
       </AutonomousObjectives>
     </Job>
-    <NoJob>
-      <PortraitClothing>
-        <sprite name="Portrait Clothing None" texture="Content/Items/Jobgear/PortraitClothing.png" sheetindex="2,2"/>
-      </PortraitClothing>
-    </NoJob>
 
     <ItemRepairPriorities>
       <Item tag="reactor" priority="5.0"/>
