@@ -626,6 +626,9 @@
         <RequiredItem identifier="lead" />
         <RequiredItem identifier="physicorium" />
       </Fabricate>
+      <WifiComponent range="75000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0" comparison="And">
+        <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" targetslot="1"/>
+      </WifiComponent>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="768,0,128,128" origin="0.5,0.5" />
       <Sprite name="PUCS Item" texture="Content/Items/Jobgear/Engineer/PUCS_Items.png" sourcerect="0,0,154,134" depth="0.55" origin="0.5,0.5" />
       <ContainedSprite name="PUCS In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="Content/Items/Jobgear/Engineer/PUCS_Items.png" sourcerect="164,0,87,190" depth="0.55" origin="0.5,0.5" />
@@ -666,6 +669,10 @@
         <StatusEffect type="OnContained" target="Contained" Condition="1.0">
           <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
           <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="Contained" Condition="1.0">
+          <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+          <RequiredItem items="mobilebattery" type="Contained" excludebroken="false" excludefullcondition="true" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="1000.0" Condition="-0.3" comparison="And" targetslot="0">
           <Conditional IsDead="false" />
@@ -774,10 +781,16 @@
       <Body radius="6" height="55" density="20" />
       <LightComponent allowingameediting="false" lightcolor="60,200,150,150" canbeselected="false" range="300.0" ison="true" />
       <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="Always" target="NearbyCharacters" range="125" interval="1" disabledeltatime="true">
+      </Holdable>
+      <ItemComponent>
+        <StatusEffect type="OnNotContained" target="This" IsActive="true">
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="This" IsActive="false">
+        </StatusEffect>
+        <StatusEffect type="OnActive" target="NearbyCharacters" range="125" interval="1" disabledeltatime="true">
           <Affliction identifier="radiationsickness" strength="0.5" />
         </StatusEffect>
-      </Holdable>
+      </ItemComponent>
       <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
         <Containable items="nucleargunbolt" />
         <StatusEffect type="OnUse" target="This" condition="-20" disabledeltatime="true">

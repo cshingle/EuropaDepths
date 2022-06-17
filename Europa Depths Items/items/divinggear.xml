@@ -76,7 +76,7 @@
         <RequiredItem identifier="rubber" />
         <RequiredItem identifier="rubber" />
       </Fabricate>
-      <WifiComponent range="50000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0" comparison="And">
+      <WifiComponent range="75000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0" comparison="And">
         <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" targetslot="1"/>
       </WifiComponent>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="0,256,128,128" origin="0.5,0.5" />
@@ -119,6 +119,10 @@
         <StatusEffect type="OnContained" target="Contained" Condition="1.0">
           <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
           <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="Contained" Condition="1.0">
+          <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+          <RequiredItem items="mobilebattery" type="Contained" excludebroken="false" excludefullcondition="true" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="Or" targetslot="0">
           <Conditional IsDead="false" />
@@ -259,6 +263,9 @@
         <RequiredItem identifier="titaniumaluminiumalloy" />
         <RequiredItem identifier="rubber" />
       </Fabricate>
+      <WifiComponent range="75000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0" comparison="And">
+        <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" targetslot="1"/>
+      </WifiComponent>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="192,384,128,128" origin="0.5,0.5" />
       <Sprite name="Abyss Diving Suit Item" texture="Content/Items/Diving/Abyss_DivingSuit_Items.png" sourcerect="0,0,157,121" depth="0.55" origin="0.5,0.5" />
       <ContainedSprite name="Abyss Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="Content/Items/Diving/Abyss_DivingSuit_Items.png" sourcerect="181,0,70,192" depth="0.55" origin="0.5,0.5" />
@@ -298,6 +305,10 @@
         <StatusEffect type="OnContained" target="Contained" Condition="1.0">
           <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
           <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true"/>
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="Contained" Condition="1.0">
+          <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+          <RequiredItem items="mobilebattery" type="Contained" excludebroken="false" excludefullcondition="true" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="Or" targetslot="0">
           <Conditional IsDead="false" />
@@ -369,6 +380,9 @@
         <RequiredItem identifier="titaniumaluminiumalloy" />
         <RequiredItem identifier="rubber" />
       </Fabricate>
+      <WifiComponent range="75000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0" comparison="And">
+        <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" targetslot="1"/>
+      </WifiComponent>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="512,0,128,128" origin="0.5,0.5" />
       <Sprite name="Combat Diving Suit Item" texture="Content/Items/Diving/Combat_DivingSuit_Items.png" sourcerect="0,0,157,121" depth="0.55" origin="0.5,0.5" />
       <ContainedSprite name="Combat Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="Content/Items/Diving/Combat_DivingSuit_Items.png" sourcerect="181,0,70,192" depth="0.55" origin="0.5,0.5" />
@@ -409,6 +423,10 @@
         <StatusEffect type="OnContained" target="Contained" Condition="1.0">
           <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
           <RequiredItem items="refillableoxygensource" type="Contained" excludebroken="false" excludefullcondition="true" />
+        </StatusEffect>
+        <StatusEffect type="OnContained" target="Contained" Condition="1.0">
+          <Conditional Voltage="gt 0.01" targetcontainer="true" targetgrandparent="true" targetitemcomponent="Powered" />
+          <RequiredItem items="mobilebattery" type="Contained" excludebroken="false" excludefullcondition="true" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="Or" targetslot="0">
           <Conditional IsDead="false" />

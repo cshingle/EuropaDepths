@@ -940,7 +940,7 @@
       <Deconstruct time="10">
         <Item identifier="aluminium" />
       </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="0.0">
+      <Fabricate suitablefabricators="fabricator" displayname="OxygenTankEmpty" outcondition="0.0" requiredtime="10">
         <RequiredSkill identifier="mechanical" level="20" />
         <RequiredItem identifier="aluminium" />
       </Fabricate>
@@ -1477,7 +1477,7 @@
       </Sonar>
     </Item>
   </Override>
-  <Item name="Fuelrod Case" identifier="fuelrodcase" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+  <Item name="Fuelrod Case" identifier="fuelrodcase" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox,radiationproof" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
     <PreferredContainer primary="reactorcab" />
     <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.1"/>
     <Price baseprice="50" sold="false">
