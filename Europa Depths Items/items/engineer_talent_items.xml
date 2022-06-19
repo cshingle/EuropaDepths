@@ -515,10 +515,17 @@
           <LightTexture texture="Content/Lights/lightcone.png" origin="-0.01, 0.5" size="1.0,1.0" />
         </LightComponent>
       </Propulsion>
-      <ItemContainer capacity="1" maxstacksize="1" slotsperrow="3" hideitems="true" containedstateindicatorslot="0" containedstateindicatorstyle="battery">
-        <Containable items="mobilebattery" />
+      <ItemContainer capacity="0" slotsperrow="3" hideitems="true" canbeselected="false" keepopenwhenequipped="true" movableframe="true" containedstateindicatorslot="0" containedstateindicatorstyle="battery">
         <SlotIcon slotindex="0" texture="Content/UI/WeaponUI.png" sourcerect="64,961,32,22" origin="0.5,0.45" />
-        <SubContainer capacity="11" maxstacksize="64">
+        <SlotIcon slotindex="1" texture="%ModDir%/sprites/items.png" sourcerect="335,10,64,44" scale="0.5" origin="0.5,0.45" />
+        <SlotIcon slotindex="2" texture="%ModDir%/sprites/items.png" sourcerect="335,10,64,44" scale="0.5" origin="0.5,0.45" />
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable items="mobilebattery" />
+        </SubContainer>
+        <SubContainer capacity="2" maxstacksize="64">
+          <Containable items="smallitem,mediumitem,ammobox,coilgunammo,depthchargeammo,railgunammo,deepdiving" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+        </SubContainer>
+        <SubContainer capacity="9" maxstacksize="64">
           <Containable items="smallitem,mediumitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
         </SubContainer>
       </ItemContainer>

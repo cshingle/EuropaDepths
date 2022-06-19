@@ -316,9 +316,9 @@
         <SpawnItem identifiers="coilgunboltcopper" spawnposition="ThisInventory" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="This" condition="-0.5" disabledeltatime="true">
-        <RequiredItem items="coilgunbolt" type="Contained" />
+        <RequiredItem items="coilgunboltcopper" type="Contained" />
       </StatusEffect>
-      <Containable items="coilgunbolt" />
+      <Containable items="coilgunboltcopper" />
     </ItemContainer>
   </Item>
   <Override>
