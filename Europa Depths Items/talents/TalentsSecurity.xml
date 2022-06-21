@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+  <Override>
+    <Talent identifier="warlord">
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.assaultrifle,entityname.assaultriflemagazine,entityname.physicoriumassaultriflemagazine" color="gui.orange"/>
+      </Description>
+      <Description tag="talentdescription.chanceofextraweapondamage">
+        <Replace tag="[probability]" value="5" color="gui.green"/>
+      </Description>
+      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,4" sheetelementsize="128,128"/>
+      <AbilityGroupEffect abilityeffecttype="OnAttack">
+        <Conditions>
+          <AbilityConditionServerRandom randomchance="0.05"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyAttackData addeddamagemultiplier="1" />
+        </Abilities>
+      </AbilityGroupEffect>
+      <AddedRecipe itemidentifier="assaultrifle"/>
+      <AddedRecipe itemidentifier="assaultriflemagazine"/>
+      <AddedRecipe itemidentifier="physicoriumassaultriflemagazine"/>
+    </Talent>
+  </Override>
+</Talents>

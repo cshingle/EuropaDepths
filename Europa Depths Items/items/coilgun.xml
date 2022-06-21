@@ -301,7 +301,7 @@
       <RequiredSkill identifier="weapons" level="50"/>
       <RequiredItem identifier="lead"/>
       <RequiredItem identifier="steel"/>
-      <RequiredItem identifier="coilgunammobox" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
+      <RequiredItem identifier="coilgunammoboxcopper" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
     </Fabricate>
     <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
     <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="800,788,95,78" origin="0.5,0.5" />

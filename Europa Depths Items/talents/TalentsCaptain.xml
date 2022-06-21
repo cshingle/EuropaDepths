@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+  <Override>
+  <Talent identifier="bountyhunter">
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.handcannon,entityname.handcannonround,entityname.handcannonroundhallowpoint" color="gui.orange"/>
+    </Description>
+    <Description tag="talentdescription.bountyhunter">
+      <Replace tag="[percentage]" value="25" color="gui.green"/>
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,0" sheetelementsize="128,128"/>
+    <AbilityGroupEffect abilityeffecttype="OnCrewKillCharacter">
+      <Conditions>
+        <AbilityConditionCharacter targettypes="Monster"/>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityBountyHunter vitalitypercentage="0.25"/>
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="handcannon"/>
+    <AddedRecipe itemidentifier="handcannonround"/>
+    <AddedRecipe itemidentifier="handcannonroundhallowpoint"/>
+  </Talent>
+  </Override>  
+</Talents>

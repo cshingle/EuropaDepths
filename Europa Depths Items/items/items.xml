@@ -24,4 +24,15 @@
       <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="721,497,238,396" depth="0.1" origin="0.5,0.5" alpha="1.0" />
     </LightComponent>
   </Item> -->
+
+
+<!-- <StatusEffect type="OnUse" target="this" force="100" setvalue="true">
+  <RequiredItem items="ammobox,coilgunammo,depthchargeammo,railgunammo" type="Contained" />
+</StatusEffect> -->
+
+  <!-- <SlotIcon slotindex="1" texture="%ModDir%/sprites/items.png" sourcerect="335,10,64,44" scale="0.5" origin="0.5,0.45" />
+  <SubContainer capacity="1" maxstacksize="1">
+    <Containable items="smallitem,mediumitem,ammobox,coilgunammo,depthchargeammo,railgunammo" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+  </SubContainer> -->
+
 </Items>

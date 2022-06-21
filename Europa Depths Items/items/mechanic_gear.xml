@@ -90,6 +90,8 @@
       <Body width="80" height="45" density="30" />
       <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
         <sprite name="Baseball Cap Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" sourcerect="320,327,88,51" origin="0.45,1.0" />
+        <SkillModifier skillidentifier="mechanical" skillvalue="5" />
+        <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.95" />
       </Wearable>
     </Item>
   </Override>

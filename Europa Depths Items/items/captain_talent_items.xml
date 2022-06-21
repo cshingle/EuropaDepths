@@ -6,7 +6,7 @@
       <PreferredContainer primary="handcannon" amount="6" spawnprobability="1.0"/>
       <PreferredContainer secondary="wrecksecarmcab" minamount="1" maxamount="6" spawnprobability="0.02"/>
       <Price baseprice="115" sold="false" />
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="4">
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="6">
         <RequiredSkill identifier="weapons" level="45" />
         <RequiredItem identifier="magnesium" />
         <RequiredItem identifier="physicorium" />
@@ -18,7 +18,7 @@
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,115,200" scalemultiplier="1,1" />
-        <Attack structuredamage="20" targetforce="10" itemdamage="40" severlimbsprobability="1.0" penetration="0.4">
+        <Attack structuredamage="20" targetforce="10" itemdamage="40" severlimbsprobability="1.0" penetration="0.6">
           <Affliction identifier="bleeding" strength="70" />
           <Affliction identifier="gunshotwound" strength="50" />
           <Affliction identifier="stun" strength="1.5" />
@@ -34,6 +34,42 @@
       </Projectile>
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
+</Override>
+<Item name="Handcannon Hollow Point Round" identifier="handcannonroundhallowpoint" category="Weapon" maxstacksize="12" interactthroughwalls="false" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,handcannonammo,pistolammoitem" impactsoundtag="impact_metal_light" spritecolor="255,255,100,255" InventoryIconColor="255,255,100,255">
+  <PreferredContainer primary="secarmcab" secondary="armcab"/>
+  <PreferredContainer primary="handcannon" amount="6" />
+  <PreferredContainer secondary="wrecksecarmcab" minamount="1" maxamount="6" spawnprobability="0.01"/>
+  <Price baseprice="40" sold="false" />
+  <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="6">
+    <RequiredSkill identifier="weapons" level="45" />
+    <RequiredItem identifier="magnesium" />
+    <RequiredItem identifier="copper" />
+    <RequiredItem identifier="lead" />
+  </Fabricate>
+  <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="166,430,43,43" origin="0.5,0.5" />
+  <Sprite texture="Content/Items/Jobgear/TalentGear.png" sourcerect="3,118,24,9" depth="0.55" origin="0.5,0.5" />
+  <Body width="34" height="14" density="50" />
+  <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+  <Projectile characterusable="false" hitscan="true" removeonhit="true">
+    <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,115,200" scalemultiplier="1,1" />
+    <Attack structuredamage="13" targetforce="20" itemdamage="25" severlimbsprobability="0.25" penetration="0.25">
+      <Affliction identifier="bleeding" strength="50" />
+      <Affliction identifier="gunshotwound" strength="40" />
+      <Affliction identifier="stun" strength="2.5" />
+      <Affliction identifier="blunttrauma" strength="1" />
+    </Attack>
+    <StatusEffect type="OnImpact" target="UseTarget">
+      <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="6,6" colormultiplier="255,200,115,200" />
+    </StatusEffect>
+    <StatusEffect type="OnImpact" target="UseTarget">
+      <Conditional entitytype="eq Structure" />
+      <Conditional hastag="eq door" />
+      <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.75" scalemax="1" />
+    </StatusEffect>
+  </Projectile>
+  <Upgrade gameversion="0.10.0.0" scale="0.5" />
+</Item>
+<Override>
     <Item name="" identifier="handcannon" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,pistolitem,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="secarmcab"/>
       <PreferredContainer secondary="armcab,weaponholder" />

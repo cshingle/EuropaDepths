@@ -10,4 +10,8 @@
   <entitydescription.ed_raptorbanespear>A harpoon infused with Rapter Bane for the harpoon gun.</entitydescription.ed_raptorbanespear>
   <entityname.clowndivingmaskunique>Mother's Tangency</entityname.clowndivingmaskunique>
   <entitydescription.clowndivingmaskunique>Nothing is out of mother's reach.</entitydescription.clowndivingmaskunique>
+  <entityname.physicoriumassaultriflemagazine>Assault Rifle Physicorium Magazine</entityname.physicoriumassaultriflemagazine>
+  <entitydescription.physicoriumassaultriflemagazine>A magazine designed for holding 6.8mm Physicorium cartridges.</entitydescription.physicoriumassaultriflemagazine>
+  <entityname.handcannonroundhallowpoint>Handcannon Hollow Point Round</entityname.handcannonroundhallowpoint>
+  <entitydescription.handcannonroundhallowpoint>An exceedingly large .61 hollow point revolver round. Reduced overpenetration and increased knockdown at the expense of overall damage.</entitydescription.handcannonroundhallowpoint>
 </infotexts>

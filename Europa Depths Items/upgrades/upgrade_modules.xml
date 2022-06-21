@@ -64,17 +64,24 @@
   <UpgradeCategory name="" identifier="oxygengenerators" items="oxygengenerator"/>
   -->
 
-  <!-- WALLS -->
+  <!--  WALLS  -->
+  <!-- <Override>
+    <UpgradeModule identifier="increasewallhealth" maxlevel="10" categories="walls" increaseontooltip="12">
+      <Price baseprice="2000" increaselow="+15%" increasehigh="+20%"/>
+      <Structure maxhealth="+12%"/>
+      <Sprite texture="Content/UI/CampaignUIAtlas2.png" sourcerect="640,640,128,128" origin="0.5,0.5"/>
+    </UpgradeModule>
+  </Override>
 
-  <UpgradeModule identifier="increasecrushdepth" maxlevel="2" categories="walls" increaseontooltip="2">
-    <Price baseprice="2000" increaselow="+15%" increasehigh="+25%"/>
+  <UpgradeModule identifier="increasecrushdepth" maxlevel="12" categories="walls" increaseontooltip="2">
+    <Price baseprice="2000" increaselow="+15%" increasehigh="+20%"/>
     <Structure crushdepth="+6%"/>
     <Sprite texture="Content/UI/CampaignUIAtlas2.png" sourcerect="640,640,128,128" origin="0.5,0.5"/>
-  </UpgradeModule>
+  </UpgradeModule> -->
 
   <!-- TURRET -->
   <Override>
-    <UpgradeModule identifier="turretdecreasepowerconsumption" maxlevel="5" categories="supercapacitors" increaseontooltip="5" >
+    <UpgradeModule identifier="turretdecreasepowerconsumption" maxlevel="5" categories="supercapacitors" increaseontooltip="5">
       <Price baseprice="1500" increaselow="+15%" increasehigh="+20%"/>
       <PowerContainer efficiency="+0.04"/>
       <!-- <DecorativeSprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,384,64,64" depth="0.75" origin="0.5,0.5"/> -->
@@ -82,7 +89,7 @@
     </UpgradeModule>
   </Override>
 
-  <UpgradeModule identifier="turretincreasefirerate" maxlevel="1" categories="weapons" increaseontooltip="1" >
+  <UpgradeModule identifier="turretincreasefirerate" maxlevel="1" categories="weapons" increaseontooltip="1">
     <Price baseprice="10000" increaselow="+15%" increasehigh="+20%"/>
     <Turret reload="-50%" powerconsumption="+50%"/>
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="0,0,128,128" origin="0.5,0.5"/>

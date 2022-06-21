@@ -19,7 +19,8 @@
       </ItemContainer>
     </Item>
 
-    <Item name="" identifier="depthchargeshell" tags="depthchargeammo" category="Weapon" sonarsize="5" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Item name="" identifier="depthchargeshell" tags="depthchargeammo" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_heavy">
+      <PreferredContainer primary="depthchargeloader" secondary="ammoboxcontainer" />
       <Price baseprice="75" minavailable="1">
         <Price storeidentifier="merchantoutpost" multiplier="1.4" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="2" />
@@ -54,7 +55,8 @@
       </ItemContainer>
     </Item>
 
-    <Item name="" identifier="nucleardepthcharge" tags="depthchargeammo" category="Weapon" sonarsize="5" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Item name="" identifier="nucleardepthcharge" tags="depthchargeammo" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_heavy">
+      <PreferredContainer primary="depthchargeloader" secondary="ammoboxcontainer" />
       <Price baseprice="450" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.35" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -106,7 +108,7 @@
       </ItemContainer>
     </Item>
 
-    <Item name="" identifier="depthdecoyshell" tags="depthchargeammo,decoy" category="Weapon" sonarsize="5" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Item name="" identifier="depthdecoyshell" tags="depthchargeammo,decoy" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_heavy">
       <PreferredContainer primary="depthchargeloader" secondary="ammoboxcontainer" />
       <Price baseprice="250" minavailable="2">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.4" />
@@ -147,7 +149,7 @@
       </ItemContainer>
     </Item>
 
-    <Item name="" identifier="nucleardepthdecoy" tags="depthchargeammo,decoy" category="Weapon" sonarsize="5" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Item name="" identifier="nucleardepthdecoy" tags="depthchargeammo,decoy" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_heavy">
       <PreferredContainer primary="depthchargeloader" secondary="ammoboxcontainer" />
       <Price baseprice="590" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.35" />

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+    <Override>
+        <Talent identifier="waterprankster">
+            <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="5,5" sheetelementsize="128,128"/>
+            <Description tag="talentdescription.unlockrecipe">
+                <Replace tag="[itemname]" value="entityname.clowndivingmask,entityname.clowndivingmaskunique" color="gui.orange"/>
+            </Description>
+            <Description tag="talentdescription.waterprankster">
+                <Replace tag="[afflictionname]" value="afflictionname.clownpower" color="gui.orange"/>
+                <Replace tag="[swimspeedvalue]" value="50" color="gui.green"/>
+            </Description>
+            <AbilityGroupInterval>
+                <Conditions>
+                    <AbilityConditionHasAffliction afflictionidentifier="clownpower" />
+                </Conditions>
+                <Abilities>
+                    <CharacterAbilityModifyStat stattype="SwimmingSpeed" value="0.5"/>
+                    <CharacterAbilityModifyFlag flagtype="ImmuneToPressure" />
+                </Abilities>
+            </AbilityGroupInterval>
+            <AddedRecipe itemidentifier="clowndivingmask"/>
+            <AddedRecipe itemidentifier="clowndivingmaskunique"/>
+        </Talent>
+    </Override>
+</Talents>

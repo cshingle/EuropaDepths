@@ -23,13 +23,7 @@
         <RequiredItem identifier="fpgacircuit" />
         <RequiredItem identifier="wificomponent"/>
       </Fabricate>
-      <WifiComponent range="20000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0" comparison="And">
-        <Conditional HasStatusTag="neq EMI" />
-        <Conditional HasStatusTag="neq EMD" />
-      </WifiComponent>
-      <WifiComponent range="10000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0" comparison="And">
-        <Conditional HasStatusTag="eq EMI" />
-        <Conditional HasStatusTag="neq EMD" />
+      <WifiComponent range="25000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0">
       </WifiComponent>
       <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
         <sprite name="Headset Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hideotherwearables="false" sourcerect="26,317,51,64" origin="0.5,0.6" />
