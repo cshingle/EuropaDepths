@@ -311,8 +311,6 @@
         <Containable items="alienartifact"/>
       </ItemContainer>
     </Item>
-
-
     <Item name="" identifier="sealedsupplycrate" tags="crate" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" hideinmenus="true">
       <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.02"/>
       <Price baseprice="1250" sold="false" canbespecial="false" />

@@ -59,7 +59,7 @@
         <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
       </Wearable>
     </Item>
-    <Item name="" identifier="clownmaskunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask" description="" hideinmenus="true" scale="0.5">
+    <Item name="" identifier="clownmaskunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmaskunique" description="" hideinmenus="true" scale="0.5">
       <Price baseprice="40" sold="false" canbespecial="false" />
       <PreferredContainer primary="wreckstoragecab" spawnprobability="0.01" />
       <PreferredContainer primary="crewcab"/>
