@@ -186,7 +186,7 @@
       <PreferredContainer secondary="wreckweaponholder" spawnprobability="0.05" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1"/>
       <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder"/>
-<Price baseprice="150" minavailable="1">
+      <Price baseprice="150" minavailable="1">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="2" sold="false"/>
         <Price storeidentifier="merchantresearch" multiplier="1.25" />
@@ -218,7 +218,7 @@
         <RequiredItems items="harpoonammo" type="Contained" msg="ItemMsgSpearRequired" />
         <RequiredSkill identifier="weapons" level="30" />
       </RangedWeapon>
-<ItemContainer itempos="27,10" iteminterval="0,-4" hideitems="false" capacity="1" maxstacksize="6" containedstateindicatorstyle="spear" containedspritedepths="0.551,0.552,0.553,0.554,0.555,0.556">
+      <ItemContainer itempos="27,10" iteminterval="0,-4" hideitems="false" capacity="1" maxstacksize="6" containedstateindicatorstyle="spear" containedspritedepths="0.551,0.552,0.553,0.554,0.555,0.556">
         <Containable items="harpoonammo" />
       </ItemContainer>
       <aitarget sightrange="0" soundrange="500" fadeouttime="2" />

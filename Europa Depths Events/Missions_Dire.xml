@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Missions>
+  <MonsterMission name="Dire Hunting grounds" identifier="huntinggroundsdire2" textidentifier="huntinggrounds" tags="huntinggrounds" type="Monster" sideobjective="true" difficulty="4" commonness="0" reward="10000" sonarlabel="target" spawntype="Abyss" maxsonarmarkerdistance="500" successmessage="" monsterfile="Charybdis">
+    <monster character="Charybdis" min="2" max="2" />
+    <Reputation identifier="location" amount="20" />
+    <Reputation identifier="coalition" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="missionheader0.huntinggrounds1" text="missionmessage0.huntinggrounds1"/>
+  </MonsterMission>
+  <MonsterMission name="Hunting grounds" identifier="huntinggroundsdire3" textidentifier="huntinggrounds" tags="huntinggrounds,hard" type="Monster" sideobjective="true" difficulty="4" commonness="0" reward="12000" sonarlabel="target" spawntype="Abyss" maxsonarmarkerdistance="500" successmessage="" monsterfile="Endworm">
+    <monster character="Endworm" min="2" max="2" />
+    <Reputation identifier="location" amount="20" />
+    <Reputation identifier="coalition" amount="10" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+    <message header="missionheader0.huntinggrounds1" text="missionmessage0.huntinggrounds1"/>
+  </MonsterMission>
+
+  <MonsterMission identifier="killhammerhead3" textidentifier="killhammerhead" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="100" reward="6000" maxsonarmarkerdistance="10000" monsterfile="Hammerheadgold_m">
+    <monster character="Hammerhead_m" min="5" max="10" delaybetweenspawns="2" />
+    <monster character="Hammerheadgold_m" min="3" max="3" delaybetweenspawns="2" />
+    <monster character="Hammerheadblack" min="3" max="3" delaybetweenspawns="4" />
+    <Reputation identifier="location" amount="10" delaybetweenspawns="1" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48" />
+  </MonsterMission>
+  <MonsterMission identifier="killhammerhead4" textidentifier="killhammerhead" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="80" reward="6000" maxsonarmarkerdistance="10000" monsterfile="Hammerheadgold_m">
+    <monster character="Hammerhead_m" min="9" max="14" delaybetweenspawns="2" />
+    <monster character="Hammerheadgold_m" min="3" max="3" delaybetweenspawns="2" />
+    <monster character="Hammerheadblack" min="3" max="5" delaybetweenspawns="4" />
+    <Reputation identifier="location" amount="10" delaybetweenspawns="1" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48" />
+  </MonsterMission>
+  <MonsterMission identifier="killmatriarch3" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="50" reward="6000" maxsonarmarkerdistance="10000">
+    <monster character="hammerheadmatriarch" count="2" delaybetweenspawns="1" />
+    <monster character="hammerhead" min="5" max="15" delaybetweenspawns="2" />
+    <monster character="hammerheadgold" min="3" max="3" delaybetweenspawns="2" />
+    <monster character="Hammerheadblack" min="3" max="3" delaybetweenspawns="4" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
+  </MonsterMission>
+
+  <MonsterMission identifier="killcrawlerswarm2huge" sonarlabel="character.crawler" name="missionname.killcrawlerswarm1huge" description="missiondescription.killcrawlerswarm1huge" tags="killmonster,killswarm,killswarm_set2" type="Monster" difficulty="4" commonness="10" reward="5000" successmessage="missionsuccess.killcrawlerswarm1" maxsonarmarkerdistance="10000">
+    <monster character="crawlerhusk" min="10" max="15" scatter="2000" delaybetweenspawns="1"/>
+    <monster character="crawlerhusk" min="10" max="15" scatter="2000" delaybetweenspawns="4"/>
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killcrawlerswarm1"/>
+  </MonsterMission>
+  <MonsterMission identifier="killcrawlerbroodmother3" tags="killmonster,killmonster_set3" textidentifier="killcrawlerbroodmother1" type="Monster" difficulty="4" commonness="90" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother">
+    <monster character="crawler" min="15" max="20" delaybetweenspawns="1" />
+    <Reputation identifier="location" amount="10" delaybetweenspawns="1" />
+    <Reputation identifier="coalition" amount="5" delaybetweenspawns="1" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48" />
+  </MonsterMission>
+  <MonsterMission identifier="killcrawlerbroodmother4" tags="killmonster,killmonster_set4" textidentifier="killcrawlerbroodmother1" type="Monster" difficulty="4" commonness="90" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother">
+    <monster character="crawler" min="20" max="25" delaybetweenspawns="1" />
+    <Reputation identifier="location" amount="10" delaybetweenspawns="1" />
+    <Reputation identifier="coalition" amount="5" delaybetweenspawns="1" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48" />
+  </MonsterMission>
+
+  <MonsterMission identifier="killgiantspineling3" textidentifier="killgiantspineling1" tags="killmonster,killmonster_set3" type="Monster" difficulty="4" commonness="100" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.spineling" monsterfile="spineling_giant">
+    <monster character="spineling_giant" min="2" max="2" delaybetweenspawns="1" />
+    <monster character="spineling" min="20" max="25" delaybetweenspawns="2" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48" />
+  </MonsterMission>
+  <MonsterMission identifier="killgiantspineling3" textidentifier="killgiantspineling1" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="100" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.spineling" monsterfile="spineling_giant">
+    <monster character="spineling_giant" min="3" max="4" delaybetweenspawns="1" />
+    <monster character="spineling" min="20" max="25" delaybetweenspawns="2" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48" />
+  </MonsterMission>
+
+  <MonsterMission identifier="killthresherswarm3" textidentifier="killthresherswarm1" tags="killmonster,killmonster_set3" type="Monster" difficulty="4" commonness="100" reward="6000" maxsonarmarkerdistance="10000">
+    <monster character="tigerthresher" min="10" max="15" delaybetweenspawns="1" />
+    <monster character="bonethresher" min="5" max="10" delaybetweenspawns="1" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,256,256,256" color="214,50,48" />
+  </MonsterMission>
+  <MonsterMission identifier="killthresherswarm4" textidentifier="killthresherswarm1" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="100" reward="6000" maxsonarmarkerdistance="10000">
+    <monster character="tigerthresher" min="10" max="15" delaybetweenspawns="1" />
+    <monster character="bonethresher" min="10" max="12" delaybetweenspawns="1" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,256,256,256" color="214,50,48" />
+  </MonsterMission>
+
+  <MonsterMission identifier="killmudraptors3" textidentifier="killmudraptors1" tags="killmonster,killmonster_set3" type="Monster" difficulty="4" commonness="100" reward="6000" sonarlabel="character.mudraptor" maxsonarmarkerdistance="10000">
+    <monster character="mudraptor" min="10" max="10" delaybetweenspawns="1" />
+    <monster character="mudraptor_veteran" min="8" max="10" delaybetweenspawns="1" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48" />
+    <message header="missionheader0.killmudraptors1" text="missionmessage0.killmudraptors1"/>
+  </MonsterMission>
+  <MonsterMission identifier="killmudraptors4" textidentifier="killmudraptors1" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="100" reward="6000" sonarlabel="character.mudraptor" maxsonarmarkerdistance="10000">
+    <monster character="mudraptor_veteran" min="10" max="15" delaybetweenspawns="1" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48" />
+    <message header="missionheader0.killmudraptors1" text="missionmessage0.killmudraptors1"/>
+  </MonsterMission>
+
+  <MonsterMission identifier="killmoloch2" tags="killmonster,killmonster_set3" type="Monster" difficulty="3" commonness="100" reward="4000" maxsonarmarkerdistance="10000" monsterfile="Moloch_m">
+    <monster character="Moloch_m" min="3" max="5" scatter="3000" delaybetweenspawns="5" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,512,256,256" color="214,50,48"/>
+    <message header="missionheader0.killmoloch" text="missionmessage0.killmoloch"/>
+  </MonsterMission>
+  <MonsterMission identifier="killmolochblack2" tags="killmonsterrare,killmonster_set4" textidentifier="killmoloch" type="Monster" difficulty="4" commonness="100" reward="7000" maxsonarmarkerdistance="10000" monsterfile="Molochblack_m">
+    <monster character="Molochblack_m" min="1" max="3" scatter="3000" delaybetweenspawns="30" />
+    <monster character="Moloch_m" min="3" max="5" scatter="3000" delaybetweenspawns="5" />
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="coalition" amount="5" />
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,512,256,256" color="214,50,48"/>
+    <message header="missionheader0.killmoloch" text="missionmessage0.killmoloch"/>
+  </MonsterMission>
+</Missions>
