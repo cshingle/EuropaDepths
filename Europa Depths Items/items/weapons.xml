@@ -186,7 +186,7 @@
       <PreferredContainer secondary="wreckweaponholder" spawnprobability="0.05" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1"/>
       <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder"/>
-      <Price baseprice="75" minavailable="1">
+<Price baseprice="150" minavailable="1">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="2" sold="false"/>
         <Price storeidentifier="merchantresearch" multiplier="1.25" />
@@ -218,7 +218,7 @@
         <RequiredItems items="harpoonammo" type="Contained" msg="ItemMsgSpearRequired" />
         <RequiredSkill identifier="weapons" level="30" />
       </RangedWeapon>
-      <ItemContainer itempos="27,10" iteminterval="0,-4" hideitems="false" capacity="1" maxstacksize="6" containedstateindicatorstyle="spear" containedspritedepths="0.551,0.552,0.553,0.554,0.555,0.556" keepopenwhenequipped="true">
+<ItemContainer itempos="27,10" iteminterval="0,-4" hideitems="false" capacity="1" maxstacksize="6" containedstateindicatorstyle="spear" containedspritedepths="0.551,0.552,0.553,0.554,0.555,0.556">
         <Containable items="harpoonammo" />
       </ItemContainer>
       <aitarget sightrange="0" soundrange="500" fadeouttime="2" />
@@ -242,7 +242,7 @@
         <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="12" />
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="24" />
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="6">
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="12">
         <RequiredSkill identifier="weapons" level="30" />
         <RequiredItem identifier="magnesium" />
         <RequiredItem identifier="lead" />
@@ -431,7 +431,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="smg" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,gunsmith" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="smg" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="secarmcab" amount="1" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer secondary="outpostsecarmcab" amount="1" spawnprobability="0.5"/>
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" amount="1" spawnprobability="0.25"/>
@@ -584,7 +584,6 @@
       <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true"/>
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.2"/>
       <PreferredContainer secondary="armcab"/>
-
       <Upgrade gameversion="0.9.3.0" scale="0.5"/>
       <Price baseprice="150">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.35" />
@@ -633,7 +632,6 @@
       <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true"/>
       <PreferredContainer primary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.05"/>
       <PreferredContainer secondary="armcab"/>
-
       <Upgrade gameversion="0.9.3.0" scale="0.5"/>
       <Price baseprice="175" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -753,7 +751,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="divingknife" category="Weapon" Tags="smallitem,weapon,gunsmith" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Item name="" identifier="divingknife" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.25"/>
       <PreferredContainer secondary="abandonedstoragecab" amount="1" spawnprobability="0.05"/>
       <PreferredContainer secondary="beaconsupplycab" amount="1" spawnprobability="0.05"/>
@@ -798,7 +796,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="grenadelauncher" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="grenadelauncher" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="secarmcab" amount="1" spawnprobability="0.2" notcampaign="true"/>
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.1"/>
       <PreferredContainer secondary="armcab"/>
@@ -850,7 +848,6 @@
       <PreferredContainer primary="grenadelauncher" amount="1" spawnprobability="1"/>
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.2"/>
       <PreferredContainer primary="secarmcab" secondary="armcab"/>
-
       <Price baseprice="100" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -951,7 +948,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="shotgun" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="shotgun" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="secarmcab" amount="1" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer secondary="outpostsecarmcab" amount="1" spawnprobability="0.5"/>
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" amount="1" spawnprobability="0.2"/>
@@ -1048,7 +1045,7 @@
       </Projectile>
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
-    <Item name="Rubber Bullets" identifier="shotgunshellblunt" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="shotgunshellblunt" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="shotgun,autoshotgun,shotgununique" />
       <PreferredContainer primary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5"/>
@@ -1062,7 +1059,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="12" />
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="6">
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" amount="6">
         <RequiredSkill identifier="weapons" level="30" />
         <RequiredItem identifier="magnesium" />
         <RequiredItem identifier="rubber" />
@@ -1085,7 +1082,7 @@
       </Projectile>
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
-    <Item name="" identifier="stungun" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,stunner,gunsmith" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="stungun" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,stunner,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1"/>
       <PreferredContainer secondary="armcab"/>
@@ -1174,7 +1171,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="toyhammer" category="Weapon,mountableweapon" Tags="smallitem" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Item name="" identifier="toyhammer" category="Weapon" Tags="smallitem,mountableweapon" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <PreferredContainer primary="crewcab" secondary="armcab"/>
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" spawnprobability="0.06"/>
       <Price baseprice="1" sold="false" canbespecial="false">
@@ -1223,7 +1220,7 @@
         </StatusEffect>
       </ItemComponent>
     </Item>
-    <Item name="" identifier="shotgununique" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true">
+    <Item name="" identifier="shotgununique" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true">
       <PreferredContainer primary="secarmcab" secondary="armcab"/>
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.05"/>
       <Price baseprice="931" sold="false" canbespecial="false" />
@@ -1297,7 +1294,7 @@
       </Projectile>
     </Item>
 
-    <Item name="" identifier="divingknifeunique" category="Weapon" Tags="smallitem,weapon" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true" RequireAimToUse="True">
+    <Item name="" identifier="divingknifeunique" category="Weapon" Tags="smallitem,weapon,mountableweapon" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true" RequireAimToUse="True">
       <PreferredContainer primary="secarmcab" secondary="armcab"/>
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.05"/>
       <Price baseprice="770" sold="false" canbespecial="false" />
@@ -1331,7 +1328,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="smgunique" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true">
+    <Item name="" identifier="smgunique" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true">
       <PreferredContainer primary="secarmcab" secondary="armcab"/>
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.05"/>
       <Price baseprice="1064" sold="false" canbespecial="false" />

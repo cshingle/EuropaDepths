@@ -242,7 +242,7 @@
       <Body width="32" height="20" density="30" />
       <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
       <Quality>
-        <QualityStat stattype="Condition" value="0.1"/>
+        <QualityStat stattype="Condition" value="0.15"/>
       </Quality>
     </Item>
 
@@ -273,7 +273,7 @@
       <Body width="32" height="20" density="30" />
       <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
       <Quality>
-        <QualityStat stattype="Condition" value="0.1"/>
+        <QualityStat stattype="Condition" value="0.15"/>
       </Quality>
     </Item>
 

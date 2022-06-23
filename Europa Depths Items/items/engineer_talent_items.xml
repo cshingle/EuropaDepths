@@ -241,7 +241,7 @@
         <Price storeidentifier="merchantmilitary" />
         <Price storeidentifier="merchantmine" />
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="5">
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="12">
         <RequiredSkill identifier="weapons" level="30" />
         <RequiredSkill identifier="electrical" level="30" />
         <RequiredItem identifier="magnesium" />
@@ -498,6 +498,15 @@
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="131,123,53,58" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" depth="0.55" sourcerect="295,195,149,105" origin="0.5,0.5" />
       <Body width="140" height="100" density="10" />
+      <LightComponent LightColor="1.0,1.0,1.0,0.6" range="140" powerconsumption="1" ison="true" allowingameediting="true">
+        <StatusEffect type="InWater" target="This" Voltage="1.0" setvalue="true">
+          <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" targetslot="0"/>
+        </StatusEffect>
+        <StatusEffect type="InWater" target="Contained" targetslot="0" Condition="-0.05">
+          <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" targetslot="0"/>
+        </StatusEffect>
+        <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5, 0.5" size="1.5,1.5" />
+      </LightComponent>
       <Holdable slots="RightHand+LeftHand" aimpos="90,0" handle1="-35,36" handle2="-37,38" msg="ItemMsgPickUpSelect" />
       <Propulsion force="150" usablein="water" particles="bubbles">
         <RequiredItems items="mobilebattery" targetslot="0" type="Contained" msg="ItemMsgBatteryCellRequired" />
@@ -788,8 +797,9 @@
       <Body radius="6" height="55" density="20" />
       <LightComponent allowingameediting="false" lightcolor="60,200,150,150" canbeselected="false" range="300.0" ison="true" />
       <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="Always" target="NearbyCharacters" range="125" interval="1" disabledeltatime="true">
-          <!-- <Sound file="%ModDir%/sounds/geigercounter.ogg" range="250" /> -->
+        <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="1" disabledeltatime="true" comparison="And">
+          <Conditional hastag="neq radiationproof" targetcontainer="true" />
+          <Conditional hastag="neq reactor" targetcontainer="true" />
           <Affliction identifier="radiationsickness" strength="0.5" />
         </StatusEffect>
       </Holdable>

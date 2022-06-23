@@ -14,4 +14,8 @@
   <entitydescription.physicoriumassaultriflemagazine>A magazine designed for holding 6.8mm Physicorium cartridges.</entitydescription.physicoriumassaultriflemagazine>
   <entityname.handcannonroundhallowpoint>Handcannon Hollow Point Round</entityname.handcannonroundhallowpoint>
   <entitydescription.handcannonroundhallowpoint>An exceedingly large .61 hollow point revolver round. Reduced overpenetration and increased knockdown at the expense of overall damage.</entitydescription.handcannonroundhallowpoint>
+  <entityname.railgunshrapnelshell>Shrapnel Shell</entityname.railgunshrapnelshell>
+  <entitydescription.railgunshrapnelshell>A reloadable burst-type munition for the railgun that fires a large number of blunt pellets.</entitydescription.railgunshrapnelshell>
+  <entityname.railgunshrapnelshellpellet>Shrapnel Shell Pellet</entityname.railgunshrapnelshellpellet>
+  <entitydescription.railgunshrapnelshellpellet>A pellet fired out of a shrapnel shell.</entitydescription.railgunshrapnelshellpellet>
 </infotexts>

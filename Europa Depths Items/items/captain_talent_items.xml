@@ -45,6 +45,7 @@
     <RequiredItem identifier="magnesium" />
     <RequiredItem identifier="copper" />
     <RequiredItem identifier="lead" />
+    <RequiredItem identifier="aluminium" />
   </Fabricate>
   <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="166,430,43,43" origin="0.5,0.5" />
   <Sprite texture="Content/Items/Jobgear/TalentGear.png" sourcerect="3,118,24,9" depth="0.55" origin="0.5,0.5" />
@@ -94,7 +95,7 @@
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="303,364,42,67" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Jobgear/TalentGear.png" sourcerect="0,256,111,56" depth="0.55" origin="0.5,0.5" />
       <Body width="106" height="49" density="70" />
-      <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="90,10" handle1="-30,-4" handle2="-50,-15" msg="ItemMsgPickUpSelect" />
+      <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="90,10" handle1="-30,-4" handle2="-50,-15" msg="ItemMsgPickUpSelect" />
       <RangedWeapon reload="1.45" barrelpos="20,6" spread="0" unskilledspread="8" combatPriority="90" drawhudwhenequipped="true" crosshairscale="0.2">
         <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
         <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />

@@ -119,11 +119,11 @@
         <RequiredSkill identifier="weapons" level="40" />
         <RequiredItem identifier="magnesium" />
         <RequiredItem identifier="lead" />
-        <RequiredItem identifier="steel" />
+        <RequiredItem identifier="aluminium" />
       </Fabricate>
       <Deconstruct time="15">
         <Item identifier="lead" copycondition="true" />
-        <Item identifier="steel" />
+        <Item identifier="aluminium" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="476,3,36,48" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="476,3,36,48" depth="0.55" origin="0.5,0.5" />
@@ -174,11 +174,11 @@
       <RequiredSkill identifier="weapons" level="40" />
       <RequiredItem identifier="magnesium" />
       <RequiredItem identifier="physicorium" />
-      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="aluminium" />
     </Fabricate>
     <Deconstruct time="15">
       <Item identifier="physicorium" copycondition="true" />
-      <Item identifier="steel" />
+      <Item identifier="aluminium" />
     </Deconstruct>
     <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="476,3,36,48" origin="0.5,0.5" />
     <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="476,3,36,48" depth="0.55" origin="0.5,0.5" />

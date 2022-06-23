@@ -91,7 +91,7 @@
 
   <UpgradeModule identifier="turretincreasefirerate" maxlevel="1" categories="weapons" increaseontooltip="1">
     <Price baseprice="10000" increaselow="+15%" increasehigh="+20%"/>
-    <Turret reload="-50%" powerconsumption="+50%"/>
+    <Turret reload="-50%" powerconsumption="+100%"/>
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="0,0,128,128" origin="0.5,0.5"/>
   </UpgradeModule>
 

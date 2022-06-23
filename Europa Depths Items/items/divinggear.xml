@@ -205,8 +205,7 @@
       <Deconstruct time="20">
         <Item identifier="aluminium" />
         <Item identifier="aluminium" />
-        <Item identifier="copper" />
-        <Item identifier="plastic" />
+        <Item identifier="fpgacircuit" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="30">
         <RequiredSkill identifier="mechanical" level="30" />
