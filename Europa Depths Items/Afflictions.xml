@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+    <Affliction name="EMP Damage" identifier="empdamage" type="damage" limbspecific="false" indicatorlimb="Torso" showiconthreshold="10" showinhealthscannerthreshold="5" treatmentthreshold="10" karmachangeonapplied="-10" maxstrength="100" healcostmultiplier="2.75">
+        <!-- Slow the player down and paralyze in the end-->
+        <Effect minstrength="0" maxstrength="20" >
+            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
+                <Conditional speciesgroup="ancientalien" />
+                <Affliction identifier="internaldamage" strength="20"/>
+            </StatusEffect>
+            <StatusEffect target="Character" disabledeltatime="true">
+                <Conditional ishuman="true"/>
+                <reduceaffliction identifier="empdamage" strength="100"/>
+            </StatusEffect>
+        </Effect>
+        <Effect minstrength="20" maxstrength="40">
+            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
+                <Conditional speciesgroup="ancientalien" />
+                <Affliction identifier="internaldamage" strength="40"/>
+            </StatusEffect>
+            <StatusEffect target="Character" disabledeltatime="true">
+                <Conditional ishuman="true"/>
+                <reduceaffliction identifier="empdamage" strength="100"/>
+            </StatusEffect>
+        </Effect>
+        <Effect minstrength="40" maxstrength="60">
+            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.3">
+                <Conditional speciesgroup="ancientalien" />
+                <Affliction identifier="internaldamage" strength="60"/>
+            </StatusEffect>
+            <StatusEffect target="Character" disabledeltatime="true">
+                <Conditional ishuman="true"/>
+                <reduceaffliction identifier="empdamage" strength="100"/>
+            </StatusEffect>
+        </Effect>
+        <Effect minstrength="60" maxstrength="80">
+            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.2">
+                <Conditional speciesgroup="ancientalien" />
+                <Affliction identifier="internaldamage" strength="80"/>
+            </StatusEffect>
+            <StatusEffect target="Character" disabledeltatime="true">
+                <Conditional ishuman="true"/>
+                <reduceaffliction identifier="empdamage" strength="100"/>
+            </StatusEffect>
+        </Effect>
+        <Effect minstrength="80" maxstrength="99">
+            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1">
+                <Conditional speciesgroup="ancientalien" />
+                <Affliction identifier="internaldamage" strength="100"/>
+            </StatusEffect>
+            <StatusEffect target="Character" disabledeltatime="true">
+                <Conditional ishuman="true"/>
+                <reduceaffliction identifier="empdamage" strength="100"/>
+            </StatusEffect>
+        </Effect>
+        <Effect minstrength="99" maxstrength="100">
+            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.0">
+                <Conditional speciesgroup="ancientalien" />
+                <Affliction identifier="internaldamage" strength="200"/>
+            </StatusEffect>
+            <StatusEffect target="Character" disabledeltatime="true">
+                <Conditional ishuman="true"/>
+                <reduceaffliction identifier="empdamage" strength="100"/>
+            </StatusEffect>
+        </Effect>
+        <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="0,255,0,255" origin="0,0"/>
+    </Affliction>
+</Afflictions>

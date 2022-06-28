@@ -49,13 +49,13 @@
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
     <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killcrawlerswarm1"/>
   </MonsterMission>
-  <MonsterMission identifier="killcrawlerbroodmother3" tags="killmonster,killmonster_set3" textidentifier="killcrawlerbroodmother1" type="Monster" difficulty="4" commonness="90" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother">
+  <MonsterMission identifier="killcrawlerbroodmother4" tags="killmonster,killmonster_set3" textidentifier="killcrawlerbroodmother1" type="Monster" difficulty="4" commonness="90" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother">
     <monster character="crawler" min="15" max="20" delaybetweenspawns="1" />
     <Reputation identifier="location" amount="10" delaybetweenspawns="1" />
     <Reputation identifier="coalition" amount="5" delaybetweenspawns="1" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48" />
   </MonsterMission>
-  <MonsterMission identifier="killcrawlerbroodmother4" tags="killmonster,killmonster_set4" textidentifier="killcrawlerbroodmother1" type="Monster" difficulty="4" commonness="90" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother">
+  <MonsterMission identifier="killcrawlerbroodmother5" tags="killmonster,killmonster_set4" textidentifier="killcrawlerbroodmother1" type="Monster" difficulty="4" commonness="90" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother">
     <monster character="crawler" min="20" max="25" delaybetweenspawns="1" />
     <Reputation identifier="location" amount="10" delaybetweenspawns="1" />
     <Reputation identifier="coalition" amount="5" delaybetweenspawns="1" />
@@ -69,7 +69,7 @@
     <Reputation identifier="coalition" amount="5" />
     <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48" />
   </MonsterMission>
-  <MonsterMission identifier="killgiantspineling3" textidentifier="killgiantspineling1" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="100" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.spineling" monsterfile="spineling_giant">
+  <MonsterMission identifier="killgiantspineling4" textidentifier="killgiantspineling1" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="100" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.spineling" monsterfile="spineling_giant">
     <monster character="spineling_giant" min="3" max="4" delaybetweenspawns="1" />
     <monster character="spineling" min="20" max="25" delaybetweenspawns="2" />
     <Reputation identifier="location" amount="10" />

@@ -18,4 +18,10 @@
   <entitydescription.railgunshrapnelshell>A reloadable burst-type munition for the railgun that fires a large number of blunt pellets.</entitydescription.railgunshrapnelshell>
   <entityname.railgunshrapnelshellpellet>Shrapnel Shell Pellet</entityname.railgunshrapnelshellpellet>
   <entitydescription.railgunshrapnelshellpellet>A pellet fired out of a shrapnel shell.</entitydescription.railgunshrapnelshellpellet>
+  <entityname.40mmempgrenade>40mm EMP Grenade</entityname.40mmempgrenade>
+  <entitydescription.40mmempgrenade>Ammunition for grenade launcher. Effective against Guardians.</entitydescription.40mmempgrenade>
+  <entityname.engineeringheadset>Engineering Headset</entityname.engineeringheadset>
+  <entitydescription.engineeringheadset>Longer range headset that requires batteries.</entitydescription.engineeringheadset>
+  <entityname.medicalhelmet>Medic Helmet</entityname.medicalhelmet>
+  <entitydescription.medicalhelmet>While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.</entitydescription.medicalhelmet>
 </infotexts>

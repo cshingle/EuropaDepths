@@ -318,8 +318,8 @@
         <RequiredItem identifier="railguncanistershell" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
       </Fabricate>
       <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
-      <Sprite texture="Content/Items/Containers/containers2.png" sourcerect="799,708,216,34" depth="0.55" origin="0.5,0.5" />
-      <BrokenSprite texture="Content/Items/Containers/containers2.png" sourcerect="799,744,216,34" depth="0.55" origin="0.5,0.5" maxcondition="0"/>
+      <Sprite texture="%ModDir%/sprites/items.png" sourcerect="127,95,216,34" depth="0.55" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/sprites/items.png" sourcerect="127,131,216,34" depth="0.55" origin="0.5,0.5" maxcondition="0"/>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="0,447,64,64" origin="0.5,0.5" />
       <Body width="215" height="30" density="35" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" msg="ItemMsgPickUpSelect" />
@@ -335,7 +335,7 @@
     <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="140,486,21,21" depth="0.55" />
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <Projectile characterusable="false" launchimpulse="50.0" impulsespread="0.45" spread="45">
+    <Projectile characterusable="false" launchimpulse="55.0" impulsespread="0.45" spread="45">
       <Attack structuredamage="5" itemdamage="5" severlimbsprobability="1.0" targetforce="15" penetration="0.1">
         <Affliction identifier="bleeding" strength="2.5" />
         <Affliction identifier="blunttrauma" strength="40" />
@@ -385,9 +385,9 @@
       <RequiredItem identifier="railgunshrapnelshell" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
     </Fabricate>
     <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
-    <Sprite texture="Content/Items/Containers/containers2.png" sourcerect="799,708,216,34" depth="0.55" origin="0.5,0.5" />
-    <BrokenSprite texture="Content/Items/Containers/containers2.png" sourcerect="799,744,216,34" depth="0.55" origin="0.5,0.5" maxcondition="0"/>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="0,447,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/sprites/items.png" sourcerect="127,196,216,34" depth="0.55" origin="0.5,0.5" />
+    <BrokenSprite texture="%ModDir%/sprites/items.png" sourcerect="127,232,216,34" depth="0.55" origin="0.5,0.5" maxcondition="0"/>
+    <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,0,64,64" origin="0.5,0.5" />
     <Body width="215" height="30" density="35" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" msg="ItemMsgPickUpSelect" />
     <ItemContainer hideitems="true" capacity="16" drawinventory="false" canbeselected="false" canbecombined="true" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet" spawnwithid="railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet,railgunshrapnelshellpellet">

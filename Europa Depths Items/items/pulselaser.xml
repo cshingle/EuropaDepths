@@ -126,7 +126,7 @@
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" />
     <Body width="170" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <Projectile characterusable="false" hitscan="true" removeonhit="true" spread="20" staticspread="true" hitscancount="3">
+    <Projectile characterusable="false" hitscan="true" removeonhit="true" spread="15" staticspread="true" hitscancount="3">
       <ParticleEmitter particle="tracerpulselaser" particleamount="1" velocitymin="0" velocitymax="0" />
       <Attack structuredamage="30" targetforce="5" itemdamage="15" severlimbsprobability="1.0">
         <Affliction identifier="burn" strength="80" />

@@ -30,4 +30,56 @@
       </Wearable>
     </Item>
   </Override>
+  <Item name="Engineering Headset" identifier="engineeringheadset" scale="0.5" category="Equipment" tags="smallitem,mobileradio" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="crewcab" secondary="divingcab"/>
+    <Price baseprice="190">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" minavailable="1" />
+      <Price storeidentifier="merchantmine" minavailable="1" />
+    </Price>
+    <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="576,0,64,64" origin="0.5,0.5" />
+    <Sprite name="Headset" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="28,321,49,62" origin="0.5,0.5" />
+    <Body radius="20" height="20" density="30" />
+    <Deconstruct time="10">
+      <Item identifier="headset" />
+      <Item identifier="fpgacircuit"/>
+      <Item identifier="copper"/>
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="electrical" level="40" />
+      <RequiredItem identifier="headset" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="copper" />
+    </Fabricate>
+    <WifiComponent range="38000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0">
+      <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01"/>
+    </WifiComponent>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true">
+      <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,184,120,32"/>
+      <Containable items="mobilebattery"/>
+    </ItemContainer>
+    <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
+      <sprite name="Headset Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hideotherwearables="false" sourcerect="26,317,51,64" origin="0.5,0.6" />
+      <StatusEffect type="OnWearing" targettype="Contained,Character" Condition="-0.04" comparison="And">
+        <Conditional IsPlayer="True"/>
+        <RequiredItem items="batterycell" type="Contained"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" targettype="Contained,Character" Condition="-0.01" comparison="And">
+        <Conditional IsPlayer="True"/>
+        <RequiredItem items="fulguriumbatterycell" type="Contained"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" targettype="Contained,Character" Condition="-0.04" comparison="And">
+        <Conditional IsPlayer="True"/>
+        <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained" stackable="false" comparison="And">
+        <Conditional condition="lt 5.0"/>
+        <RequiredItem items="mobilebattery,batterycell,fulguriumbatterycell" type="Contained" playsoundonrequireditemfailure="true"/>
+        <Sound file="Content/Items/WarningBeepSlow.ogg" range="100" loop="true"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" LowPassMultiplier="0.8" setvalue="true" disabledeltatime="true"/>
+    </Wearable>
+  </Item>
 </Items>
