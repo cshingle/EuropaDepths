@@ -12,10 +12,12 @@
   <entitydescription.clowndivingmaskunique>Nothing is out of mother's reach.</entitydescription.clowndivingmaskunique>
   <entityname.physicoriumassaultriflemagazine>Assault Rifle Physicorium Magazine</entityname.physicoriumassaultriflemagazine>
   <entitydescription.physicoriumassaultriflemagazine>A magazine designed for holding 6.8mm Physicorium cartridges.</entitydescription.physicoriumassaultriflemagazine>
-  <entityname.handcannonroundhallowpoint>Handcannon Hollow Point Round</entityname.handcannonroundhallowpoint>
+  <entityname.handcannonroundhallowpoint>Handcannon Hollowpoint Round</entityname.handcannonroundhallowpoint>
   <entitydescription.handcannonroundhallowpoint>An exceedingly large .61 hollow point revolver round. Reduced overpenetration and increased knockdown at the expense of overall damage.</entitydescription.handcannonroundhallowpoint>
+  <entityname.shotgunslughollowpoint>Hollowpoint Slug Shell</entityname.shotgunslughollowpoint>
+  <entitydescription.shotgunslughollowpoint>A shotgun slug that expands and fragments on impact. Powerful, but still somewhat inaccurate on account of being fired out of a shotgun.</entitydescription.shotgunslughollowpoint>
   <entityname.railgunshrapnelshell>Shrapnel Shell</entityname.railgunshrapnelshell>
-  <entitydescription.railgunshrapnelshell>A reloadable burst-type munition for the railgun that fires a large number of blunt pellets.</entitydescription.railgunshrapnelshell>
+  <entitydescription.railgunshrapnelshell>A reloadable burst-type munition for the railgun that fires a large number of blunt pellets in a wide spread.</entitydescription.railgunshrapnelshell>
   <entityname.railgunshrapnelshellpellet>Shrapnel Shell Pellet</entityname.railgunshrapnelshellpellet>
   <entitydescription.railgunshrapnelshellpellet>A pellet fired out of a shrapnel shell.</entitydescription.railgunshrapnelshellpellet>
   <entityname.40mmempgrenade>40mm EMP Grenade</entityname.40mmempgrenade>

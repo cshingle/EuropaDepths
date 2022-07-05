@@ -48,6 +48,7 @@
     </Item>
 
     <Item name="" identifier="alienspear" category="Weapon,Alien" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="harpoongun" amount="6" spawnprobability="0.01"/>
       <PreferredContainer primary="armcab" amount="6" spawnprobability="0.05" notcampaign="true"/>
       <PreferredContainer secondary="ruinstoragesmall" minamount="1" maxamount="2" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstorage" minamount="2" maxamount="3" spawnprobability="0.05" />
@@ -94,6 +95,7 @@
     </Item>
 
     <Item name="" identifier="explosivespear" category="Weapon" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="harpoongun" amount="6" spawnprobability="0.01"/>
       <PreferredContainer primary="armcab" amount="6" spawnprobability="0.1" notcampaign="true"/>
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="6" spawnprobability="0.1"/>
       <PreferredContainer primary="secarmcab" />
@@ -143,6 +145,7 @@
     </Item>
   </Override>
   <Item name="Raptorbane Harpoon" identifier="ed_raptorbanespear" inherit="spear" pickdistance="150" spritecolor="255,165,0,255" InventoryIconColor="255,165,0,255">
+    <PreferredContainer primary="harpoongun" amount="6" spawnprobability="0.05"/>
     <PreferredContainer primary="armcab" minamount="3" maxamount="6" spawnprobability="0.1" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="4" spawnprobability="0.1"/>
     <PreferredContainer primary="secarmcab" />
@@ -914,11 +917,11 @@
         <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" minavailable="4" />
       </Price>
       <Deconstruct time="5">
-        <Item identifier="iron" />
-        <Item identifier="phosphorus" />
-        <Item identifier="flashpowder" />
+        <Item identifier="iron" outcondition="0.5" />
+        <Item identifier="phosphorus" outcondition="0.5" />
+        <Item identifier="flashpowder" outcondition="0.5" />
       </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="2">
         <RequiredSkill identifier="weapons" level="30"/>
         <RequiredItem identifier="iron"/>
         <RequiredItem identifier="phosphorus"/>
@@ -965,7 +968,12 @@
       <Price storeidentifier="merchantmine" multiplier="1.25" />
       <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" minavailable="4" />
     </Price>
-    <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="3">
+    <Deconstruct time="5">
+      <Item identifier="iron" outcondition="0.5" />
+      <Item identifier="phosphorus" outcondition="0.5" />
+      <Item identifier="lithium" outcondition="0.5" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="2">
       <RequiredSkill identifier="weapons" level="30"/>
       <RequiredItem identifier="iron"/>
       <RequiredItem identifier="phosphorus"/>
@@ -1129,8 +1137,8 @@
       <Projectile characterusable="false" hitscan="true" hitscancount="8" removeonhit="true" spread="15">
         <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="150,150,200,200" scalemultiplier="1,0.5" />
         <Attack structuredamage="0" targetforce="4" itemdamage="0" severlimbsprobability="0">
-          <Affliction identifier="blunttrauma" strength="3" />
-          <Affliction identifier="stun" strength="0.5" />
+          <Affliction identifier="blunttrauma" strength="5" />
+          <Affliction identifier="stun" strength="0.7" />
         </Attack>
         <StatusEffect type="OnImpact" target="UseTarget">
           <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="150,150,200,130"/>

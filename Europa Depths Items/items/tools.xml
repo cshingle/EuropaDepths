@@ -249,8 +249,9 @@
       </Upgrade>
     </Item>
 
-    <Item name="" identifier="weldingfueltank" category="Equipment,Fuel" maxstacksize="8" Tags="smallitem,weldingtoolfuel,weldingfuel" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="weldingfueltank" category="Equipment,Fuel" maxstacksize="8" Tags="smallitem,weldingtoolfuel,weldingfuel,weldingfuelsource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="weldingtool,flamer" spawnprobability="1"/>
+      <PreferredContainer primary="weldingfuelholder" />
       <PreferredContainer primary="engcab" minamount="4" maxamount="6" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer primary="weldingfuelholder" minamount="3" maxamount="3" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" minamount="1" maxamount="3" spawnprobability="0.2"/>

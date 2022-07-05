@@ -90,10 +90,10 @@
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,425,113,9" depth="0.55" />
       <Body width="160" height="10" density="20" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-      <Projectile characterusable="false" launchimpulse="80.0">
-        <Attack structuredamage="25" itemdamage="15" severlimbsprobability="0.5" penetration="0.4">
+      <Projectile characterusable="false" launchimpulse="90.0">
+        <Attack structuredamage="25" itemdamage="15" severlimbsprobability="0.6" penetration="0.4">
           <Affliction identifier="lacerations" strength="15" />
-          <Affliction identifier="bleeding" strength="1.0" />
+          <Affliction identifier="bleeding" strength="1.5" />
           <Affliction identifier="stun" strength="0.025" />
           <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
             <Conditional radiationsickness="lt 30" />
@@ -388,7 +388,7 @@
         </StatusEffect>
       </MeleeWeapon>
     </Item>
-    <Item name="" identifier="nucleargun" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Item name="" identifier="nucleargun" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,mountableweapon,radiationproof" Scale="0.5" impactsoundtag="impact_metal_heavy">
       <PreferredContainer primary="secarmcab" secondary="weaponholder,armcab"/>
       <Price baseprice="900" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -800,12 +800,13 @@
         <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="1" disabledeltatime="true" comparison="And">
           <Conditional hastag="neq radiationproof" targetcontainer="true" />
           <Conditional hastag="neq reactor" targetcontainer="true" />
+          <Conditional hastag="neq radiationproof" targetcontainer="true" />
           <Affliction identifier="radiationsickness" strength="0.5" />
         </StatusEffect>
       </Holdable>
       <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
         <Containable items="nucleargunbolt" />
-        <StatusEffect type="OnUse" target="This" condition="-20" disabledeltatime="true">
+        <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true">
           <SpawnItem identifiers="nucleargunbolt" spawnposition="ThisInventory" />
         </StatusEffect>
       </ItemContainer>

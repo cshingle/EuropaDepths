@@ -2,7 +2,7 @@
 <Items>
   <Override>
     <Item name="" identifier="divingmask" scale="0.5" category="Diving,Equipment" Tags="smallitem,diving,lightdiving" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
-      <Price baseprice="80" buyingpricemodifier="1.2">
+      <Price baseprice="100">
         <Price storeidentifier="merchantoutpost" multiplier="0.9" minavailable="5" />
         <Price storeidentifier="merchantcity" multiplier="0.85" minavailable="7" />
         <Price storeidentifier="merchantresearch" minavailable="5" />

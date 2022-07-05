@@ -35,7 +35,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 </Override>
-<Item name="Handcannon Hollow Point Round" identifier="handcannonroundhallowpoint" category="Weapon" maxstacksize="12" interactthroughwalls="false" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,handcannonammo,pistolammoitem" impactsoundtag="impact_metal_light" spritecolor="255,255,100,255" InventoryIconColor="255,255,100,255">
+<Item name="Handcannon Hollowpoint Round" identifier="handcannonroundhallowpoint" category="Weapon" maxstacksize="12" interactthroughwalls="false" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,handcannonammo,pistolammoitem" impactsoundtag="impact_metal_light" spritecolor="255,255,100,255" InventoryIconColor="255,255,100,255">
   <PreferredContainer primary="secarmcab" secondary="armcab"/>
   <PreferredContainer primary="handcannon" amount="6" />
   <PreferredContainer secondary="wrecksecarmcab" minamount="1" maxamount="6" spawnprobability="0.01"/>
@@ -52,10 +52,11 @@
   <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
   <Projectile characterusable="false" hitscan="true" removeonhit="true">
     <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,115,200" scalemultiplier="1,1" />
-    <Attack structuredamage="13" targetforce="20" itemdamage="25" severlimbsprobability="0.25" penetration="0.25">
-      <Affliction identifier="bleeding" strength="50" />
-      <Affliction identifier="gunshotwound" strength="40" />
-      <Affliction identifier="stun" strength="2.5" />
+    <Attack structuredamage="13" targetforce="20" itemdamage="30" severlimbsprobability="0.25" penetration="0.25">
+      <Affliction identifier="bleeding" strength="40" />
+      <Affliction identifier="gunshotwound" strength="35" />
+      <Affliction identifier="stun" strength="0.5" />
+      <Affliction identifier="stun" strength="1" probability="0.5" />
       <Affliction identifier="blunttrauma" strength="1" />
     </Attack>
     <StatusEffect type="OnImpact" target="UseTarget">

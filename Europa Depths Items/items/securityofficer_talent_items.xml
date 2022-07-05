@@ -214,6 +214,45 @@
       </StatusEffect>
     </Projectile>
   </Item>
+  <Item name="Hollowpoint Slug Shell" identifier="shotgunslughollowpoint" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="armcab" secondary="secarmcab"/>
+    <Price baseprice="75" sold="false">
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="6">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="lead" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="449,211,24,12" depth="0.55" origin="0.5,0.5" />
+    <Body width="23" height="10" density="40" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" hitscancount="1" removeonhit="true" spread="1">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,115,95,150" scalemultiplier="1,0.9" />
+      <Attack structuredamage="18" targetforce="18" itemdamage="34" severlimbsprobability="0.5" penetration="0.25">
+        <Affliction identifier="bleeding" strength="50" />
+        <Affliction identifier="gunshotwound" strength="50" />
+        <Affliction identifier="gunshotwound" strength="10" probability="0.25" />
+        <Affliction identifier="stun" strength="0.25" />
+        <Affliction identifier="stun" strength="1" probability="0.25" />
+        <Affliction identifier="blunttrauma" strength="2" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="6,6" colormultiplier="255,200,115,200" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.75" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
   <Override>
     <Item name="" identifier="shotgunslugexplosive" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="armcab" secondary="secarmcab"/>
@@ -224,7 +263,6 @@
         <Price storeidentifier="merchantmilitary" multiplier="0.9" />
         <Price storeidentifier="merchantmine" multiplier="1.25" />
       </Price>
-      <Deconstruct time="5"></Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="6">
         <RequiredSkill identifier="weapons" level="40" />
         <RequiredItem identifier="plastic" />

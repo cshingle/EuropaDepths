@@ -340,11 +340,4 @@
       </ItemContainer>
     </Item>
   </Override>
-  <Item name="Welding Fuel Cabinet" identifier="ed_weldingfuel_cabnet" nameidentifier="weldingfuelcabinet" category="Equipment" tags="container,weldingfuelholder" pickdistance="50" scale="0.5" spritecolor="255,0,0,255">
-    <Sprite name="Diving Suit Locker Small" texture="Content/Items/Containers/containers.png" sourcerect="714,259,99,82" depth="0.84" origin="0.5,0.5"/>
-    <ItemContainer hideitems="false" drawinventory="true" capacity="3" maxstacksize="1" slotsperrow="3" itempos="27,-42" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
-      <GuiFrame relativesize="0.16,0.18" anchor="Center" style="ItemUI"/>
-      <Containable items="weldingfuel" excludebroken="false"/>
-    </ItemContainer>
-  </Item>
 </Items>

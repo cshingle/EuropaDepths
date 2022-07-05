@@ -173,7 +173,7 @@
                     </Item>
                     <Item identifier="toolbelt" equip="true" />
                 </ItemSet>
-                <ItemSet commonness="0.4">
+                <ItemSet commonness="0.5">
                     <Item identifier="idcard" equip="true" />
                     <Item identifier="banditclothes1" equip="true" />
                     <Item identifier="divingmask">
@@ -181,7 +181,7 @@
                     </Item>
                     <Item identifier="divingknife" equip="false" />
                     <Item identifier="shotgun">
-                        <Item identifier="shotgunshell" />
+                        <Item identifier="shotgunslugexplosive" />
                         <Item identifier="shotgunshell" />
                         <Item identifier="shotgunshell" />
                         <Item identifier="shotgunshell" />
@@ -191,7 +191,7 @@
                     <Item identifier="toolbelt" equip="true" />
                 </ItemSet>
             </npc>
-            <npc identifier="banditleader" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="2" aimspeed="0.8" aimaccuracy="0.75" reportrange="750">
+            <npc identifier="banditleader" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="2" aimspeed="1.0" aimaccuracy="0.75" reportrange="750">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
                     <Item identifier="antidama1" />
@@ -206,8 +206,8 @@
                         <Item identifier="oxygentank" />
                     </Item>
                     <Item identifier="shotgununique">
-                        <Item identifier="shotgunshell" />
-                        <Item identifier="shotgunshell" />
+                        <Item identifier="shotgunslugexplosive"/>
+                        <Item identifier="shotgunslugexplosive"/>
                     </Item>
                     <Item identifier="shotgunshell" />
                     <Item identifier="shotgunshell" />
@@ -301,7 +301,7 @@
                     <Item identifier="toolbelt" equip="true"/>
                 </ItemSet>
             </npc>
-            <npc identifier="banditleader_heavy" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1.7" healthmultiplierinmultiplayer="2.5" aimspeed="0.8" aimaccuracy="0.75" reportrange="750">
+            <npc identifier="banditleader_heavy" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1.7" healthmultiplierinmultiplayer="2.5" aimspeed="1.0" aimaccuracy="0.75" reportrange="750">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
                     <Item identifier="securityuniform2" equip="true" />

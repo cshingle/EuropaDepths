@@ -18,6 +18,14 @@
                         <Item identifier="revolverround"/>
                         <Item identifier="revolverround"/>
                     </Item>
+                    <Item identifier="revolver" equip="false">
+                        <Item identifier="revolverround"/>
+                        <Item identifier="revolverround"/>
+                        <Item identifier="revolverround"/>
+                        <Item identifier="revolverround"/>
+                        <Item identifier="revolverround"/>
+                        <Item identifier="revolverround"/>
+                    </Item>
                     <Item identifier="captainspipe" equip="false"/>
                     <Item identifier="pressurestabilizer" equip="false" />
                 </ItemSet>
@@ -40,7 +48,7 @@
                     <Item identifier="pressurestabilizer" equip="false" />
                 </ItemSet>
             </npc>
-            <npc identifier="piratecaptainlord" job="captain" moduleflags="none" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="1.75" aimspeed="0.8" aimaccuracy="0.7">
+            <npc identifier="piratecaptainlord" job="captain" moduleflags="none" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="1.75" aimspeed="1.0" aimaccuracy="0.7">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" showpreview="false"/>
                     <Item identifier="piratecaptainhat" equip="true"/>
@@ -178,8 +186,8 @@
                         <Item identifier="oxygentank"/>
                     </Item>
                     <Item identifier="shotgununique">
-                        <Item identifier="shotgunshell"/>
-                        <Item identifier="shotgunshell"/>
+                        <Item identifier="shotgunslugexplosive"/>
+                        <Item identifier="shotgunslugexplosive"/>
                     </Item>
                     <Item identifier="shotgunslugexplosive"/>
                     <Item identifier="shotgunslugexplosive"/>
@@ -189,14 +197,6 @@
                     <Item identifier="shotgunslugexplosive"/>
                     <Item identifier="shotgunslugexplosive"/>
                     <Item identifier="shotgunslugexplosive"/>
-                    <Item identifier="shotgunshell"/>
-                    <Item identifier="shotgunshell"/>
-                    <Item identifier="shotgunshell"/>
-                    <Item identifier="shotgunshell"/>
-                    <Item identifier="shotgunshell"/>
-                    <Item identifier="shotgunshell"/>
-                    <Item identifier="shotgunshell"/>
-                    <Item identifier="shotgunshell"/>
                     <Item identifier="pressurestabilizer" equip="false" />
                 </ItemSet>
             </npc>
