@@ -214,7 +214,7 @@
       </StatusEffect>
     </Projectile>
   </Item>
-  <Item name="Hollowpoint Slug Shell" identifier="shotgunslughollowpoint" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="Rifled Slug" identifier="shotgunslugshell" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="armcab" secondary="secarmcab"/>
     <Price baseprice="75" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -229,18 +229,18 @@
       <RequiredItem identifier="lead" />
     </Fabricate>
     <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,64,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="449,211,24,12" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,124,60,18" depth="0.55" origin="0.5,0.5" />
     <Body width="23" height="10" density="40" />
     <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
     <Projectile characterusable="false" hitscan="true" hitscancount="1" removeonhit="true" spread="1">
       <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,115,95,150" scalemultiplier="1,0.9" />
-      <Attack structuredamage="18" targetforce="18" itemdamage="34" severlimbsprobability="0.5" penetration="0.25">
-        <Affliction identifier="bleeding" strength="50" />
+      <Attack structuredamage="10" targetforce="20" itemdamage="34" severlimbsprobability="0.5" penetration="0.2">
+        <Affliction identifier="bleeding" strength="48" />
         <Affliction identifier="gunshotwound" strength="50" />
-        <Affliction identifier="gunshotwound" strength="10" probability="0.25" />
+        <Affliction identifier="gunshotwound" strength="15" probability="0.25" />
         <Affliction identifier="stun" strength="0.25" />
         <Affliction identifier="stun" strength="1" probability="0.25" />
-        <Affliction identifier="blunttrauma" strength="2" />
+        <Affliction identifier="blunttrauma" strength="10" />
       </Attack>
       <StatusEffect type="OnImpact" target="UseTarget">
         <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="6,6" colormultiplier="255,200,115,200" />
@@ -268,8 +268,8 @@
         <RequiredItem identifier="plastic" />
         <RequiredItem identifier="incendium" />
       </Fabricate>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="576,192,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="449,211,24,12" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="496,64,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,144,60,18" depth="0.55" origin="0.5,0.5" />
       <Body width="23" height="10" density="40" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
       <Projectile characterusable="false" hitscan="true" hitscancount="1" removeonhit="true" spread="1">
@@ -493,10 +493,10 @@
           <Conditional IsPlayer="True"/>
           <RequiredItem items="fulguriumbatterycell" type="Contained" targetslot="1"/>
         </StatusEffect>
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.65" damagesound="LimbArmor" deflectprojectiles="true" />
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.75" damagesound="" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor"/>
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" damagemultiplier="0.5" probabilitymultiplier="0.5" damagesound="LimbArmor"/>
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" damagemultiplier="0.5" probabilitymultiplier="0.25" damagesound="LimbArmor"/>
       </Wearable>
       <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use">
         <Upgrade gameversion="0.1401.0.0" msg="ItemMsgPickUpUse" />

@@ -248,10 +248,9 @@
         <RequiredItem identifier="depletedfuel" />
         <RequiredItem identifier="copper" />
       </Fabricate>
-      <Sprite texture="Content/Items/Weapons/weapons_new.png" />
       <Projectile>
         <ParticleEmitter colormultiplier="200,255,80,175" />
-        <Attack structuredamage="10" targetforce="10" itemdamage="15" penetration="0.25">
+        <Attack structuredamage="10" targetforce="10" itemdamage="20" penetration="0.25">
           <Affliction identifier="bleeding" strength="10" />
           <Affliction identifier="gunshotwound" strength="35" />
           <Affliction identifier="stun" strength="0.4" />
@@ -764,7 +763,7 @@
         </SubContainer>
       </ItemContainer>
     </Item>
-    <Item name="" identifier="fulguriumfuelrodvolatile" category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="400" scale="0.5">
+    <Item name="" identifier="fulguriumfuelrodvolatile" category="Fuel" Tags="smallitem,reactorfuel,volatilefuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="400" scale="0.5">
       <PreferredContainer primary="reactorcab" secondary="locker"/>
       <Price baseprice="400" sold="false" displaynonempty="true">
         <Price storeidentifier="merchantoutpost" />
@@ -790,7 +789,7 @@
         <RequiredSkill identifier="electrical" level="70" />
         <RequiredItem identifier="fulgurium" />
         <RequiredItem identifier="thorium" />
-        <RequiredItem identifier="fulguriumfuelrodvolatile" mincondition="0.0" usecondition="false" />
+        <RequiredItem identifier="fulguriumfuelrodvolatile" mincondition="0.0" maxcondition="0.1" usecondition="false" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="67,176,62,61" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" depth="0.55" sourcerect="190,60,20,71" origin="0.5,0.5" />
@@ -799,9 +798,15 @@
       <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="1" disabledeltatime="true" comparison="And">
           <Conditional hastag="neq radiationproof" targetcontainer="true" />
-          <Conditional hastag="neq reactor" targetcontainer="true" />
+          <Conditional hastag="neq fabricator" targetcontainer="true" />
+          <Conditional hastag="neq deconstructor" targetcontainer="true" />
+          <Affliction identifier="radiationsickness" strength="0.7" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="this" disabledeltatime="true" comparison="And">
           <Conditional hastag="neq radiationproof" targetcontainer="true" />
-          <Affliction identifier="radiationsickness" strength="0.5" />
+          <Conditional hastag="neq fabricator" targetcontainer="true" />
+          <Conditional hastag="neq deconstructor" targetcontainer="true" />
+          <sound file="%ModDir%/sounds/geigercounter.ogg" range="500.0" />
         </StatusEffect>
       </Holdable>
       <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
@@ -815,4 +820,148 @@
       </Quality>
     </Item>
   </Override>
+  <Item name="" identifier="fuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,volatilefuel" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5">
+    <PreferredContainer primary="reactorcab"/>
+    <PreferredContainer secondary="nucleargun" minamount="1" maxamount="1" spawnprobability="1"/>
+    <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
+    <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.2"/>
+    <PreferredContainer secondary="abandonedengcab,wreckengcab" amount="1" spawnprobability="0.05"/>
+    <Price baseprice="150" displaynonempty="true" minavailable="2">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" minavailable="3" />
+      <Price storeidentifier="merchantresearch" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" />
+      <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="5" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel"/>
+      <Item identifier="uranium" copycondition="true"/>
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+      <RequiredSkill identifier="electrical" level="25" />
+      <RequiredItem identifier="uranium" />
+      <RequiredItem identifier="steel" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="10">
+      <RequiredSkill identifier="electrical" level="15" />
+      <RequiredItem identifier="uranium" />
+      <RequiredItem identifier="fuelrodvolatile" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="410,1,19,68" />
+    <Body radius="6" height="55" density="20" />
+    <LightComponent allowingameediting="false" lightcolor="128,255,0,100" canbeselected="false" range="300.0" ison="true" />
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="1" disabledeltatime="true" comparison="And">
+        <Conditional hastag="neq radiationproof" targetcontainer="true" />
+        <Conditional hastag="neq fabricator" targetcontainer="true" />
+        <Conditional hastag="neq deconstructor" targetcontainer="true" />
+        <Affliction identifier="radiationsickness" strength="0.5" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="this" disabledeltatime="true" comparison="And">
+        <Conditional hastag="neq radiationproof" targetcontainer="true" />
+        <Conditional hastag="neq fabricator" targetcontainer="true" />
+        <Conditional hastag="neq deconstructor" targetcontainer="true" />
+        <sound file="%ModDir%/sounds/geigercounter.ogg" range="500.0" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
+      <Containable items="nucleargunbolt" />
+      <StatusEffect type="OnUse" target="This" condition="-16.6666" disabledeltatime="true">
+        <SpawnItem identifiers="nucleargunbolt" spawnposition="ThisInventory" />
+      </StatusEffect>
+    </ItemContainer>
+    <Quality>
+      <QualityStat stattype="Condition" value="0.1"/>
+    </Quality>
+  </Item>
+  <Item name="" identifier="thoriumfuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,volatilefuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="200" scale="0.5">
+    <PreferredContainer primary="reactorcab" />
+    <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.1"/>
+    <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.02"/>
+    <PreferredContainer secondary="abandonedengcab,wreckengcab" amount="1" spawnprobability="0.01"/>
+    <Price baseprice="200" displaynonempty="true">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" minavailable="1" />
+      <Price storeidentifier="merchantresearch" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
+      <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel"/>
+      <Item identifier="lead" />
+      <Item identifier="thorium" copycondition="true"/>
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+      <RequiredSkill identifier="electrical" level="50" />
+      <RequiredItem identifier="thorium" />
+      <RequiredItem identifier="steel" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="10">
+      <RequiredSkill identifier="electrical" level="30" />
+      <RequiredItem identifier="thorium" />
+      <RequiredItem identifier="thoriumfuelrodvolatile" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="452,1,19,68" />
+    <Body radius="6" width="21" height="71" density="20" />
+    <LightComponent allowingameediting="false" lightcolor="192,192,192,100" canbeselected="false" range="300.0" ison="true" />
+    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="1" disabledeltatime="true" comparison="And">
+        <Conditional hastag="neq radiationproof" targetcontainer="true" />
+        <Conditional hastag="neq fabricator" targetcontainer="true" />
+        <Conditional hastag="neq deconstructor" targetcontainer="true" />
+        <Affliction identifier="radiationsickness" strength="0.4" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="this" disabledeltatime="true" comparison="And">
+        <Conditional hastag="neq radiationproof" targetcontainer="true" />
+        <Conditional hastag="neq fabricator" targetcontainer="true" />
+        <Conditional hastag="neq deconstructor" targetcontainer="true" />
+        <sound file="%ModDir%/sounds/geigercounter.ogg" range="500.0" />
+      </StatusEffect>
+    </Holdable>
+    <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
+      <Containable items="nucleargunbolt" />
+      <StatusEffect type="OnUse" target="This" condition="-16.6666" disabledeltatime="true">
+        <SpawnItem identifiers="nucleargunbolt" spawnposition="ThisInventory" />
+      </StatusEffect>
+    </ItemContainer>
+    <Quality>
+      <QualityStat stattype="Condition" value="0.1"/>
+    </Quality>
+  </Item>
+  <Item name="30-30 Depleted Fuel Round" identifier="3030rounddepletedfuel" variantof="3030round" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
+    <PreferredContainer primary="leveractionrifle" />
+    <PreferredContainer primary="armcab" />
+    <PreferredContainer secondary="secarmcab" />
+    <Price baseprice="55" sold="false">
+      <Price storeidentifier="merchantoutpost" multiplier="1.4" />
+      <Price storeidentifier="merchantcity" />
+      <Price storeidentifier="merchantresearch" />
+      <Price storeidentifier="merchantmilitary" />
+      <Price storeidentifier="merchantmine" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="12">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredSkill identifier="electrical" level="30" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="depletedfuel" />
+      <RequiredItem identifier="copper" />
+    </Fabricate>
+    <Projectile>
+      <ParticleEmitter colormultiplier="200,255,80,175" />
+      <Attack structuredamage="10" targetforce="10" itemdamage="20" penetration="0.30">
+        <Affliction identifier="gunshotwound" strength="40" />
+        <Affliction identifier="bleeding" strength="35" />
+        <Affliction identifier="stun" strength="0.6" />
+        <Affliction identifier="blunttrauma" strength="1.5" />
+        <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+          <Conditional radiationsickness="lt 30" />
+          <Affliction identifier="radiationsickness" strength="10" />
+        </StatusEffect>
+      </Attack>
+    </Projectile>
+  </Item>
 </Items>

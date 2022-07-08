@@ -2,8 +2,6 @@
 <infotexts language="English" nowhitespace="false" translatedname="English">
   <upgradename.turretincreasefirerate>Overvolt Turrets</upgradename.turretincreasefirerate>
   <upgradedescription.turretincreasefirerate>Greatly increase the fire rate and power usage of all turrets at the expense of power usage.</upgradedescription.turretincreasefirerate>
-  <upgradename.increasecrushdepth>Upgrade Pressure Seals</upgradename.increasecrushdepth>
-  <upgradedescription.increasecrushdepth>Increate the subs pressure rating.</upgradedescription.increasecrushdepth>
   <entityname.coilgunammoboxcopper>Coilgun Copper Ammunition Box</entityname.coilgunammoboxcopper>
   <entitydescription.coilgunammoboxcopper>Ammunition for the coilgun that higher penetration then lead, but less than piercing.</entitydescription.coilgunammoboxcopper>
   <entityname.ed_raptorbanespear>Rapter Bane Harpoon</entityname.ed_raptorbanespear>
@@ -14,8 +12,8 @@
   <entitydescription.physicoriumassaultriflemagazine>A magazine designed for holding 6.8mm Physicorium cartridges.</entitydescription.physicoriumassaultriflemagazine>
   <entityname.handcannonroundhallowpoint>Handcannon Hollowpoint Round</entityname.handcannonroundhallowpoint>
   <entitydescription.handcannonroundhallowpoint>An exceedingly large .61 hollow point revolver round. Reduced overpenetration and increased knockdown at the expense of overall damage.</entitydescription.handcannonroundhallowpoint>
-  <entityname.shotgunslughollowpoint>Hollowpoint Slug Shell</entityname.shotgunslughollowpoint>
-  <entitydescription.shotgunslughollowpoint>A shotgun slug that expands and fragments on impact. Powerful, but still somewhat inaccurate on account of being fired out of a shotgun.</entitydescription.shotgunslughollowpoint>
+  <entityname.shotgunslugshell>Rifled Slug</entityname.shotgunslugshell>
+  <entitydescription.shotgunslugshell>A shotgun slug round. Powerful, but fairly low penetration.</entitydescription.shotgunslugshell>
   <entityname.railgunshrapnelshell>Shrapnel Shell</entityname.railgunshrapnelshell>
   <entitydescription.railgunshrapnelshell>A reloadable burst-type munition for the railgun that fires a large number of blunt pellets in a wide spread.</entitydescription.railgunshrapnelshell>
   <entityname.railgunshrapnelshellpellet>Shrapnel Shell Pellet</entityname.railgunshrapnelshellpellet>
@@ -25,5 +23,19 @@
   <entityname.engineeringheadset>Engineering Headset</entityname.engineeringheadset>
   <entitydescription.engineeringheadset>Longer range headset that requires batteries.</entitydescription.engineeringheadset>
   <entityname.medicalhelmet>Medic Helmet</entityname.medicalhelmet>
-  <entitydescription.medicalhelmet>While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it can be extremely useful if there are traitors on board.</entitydescription.medicalhelmet>
+  <entitydescription.medicalhelmet>While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it is better than no protection.</entitydescription.medicalhelmet>
+  <entityname.leveractionrifle>Lever Action Rifle</entityname.leveractionrifle>
+  <entitydescription.leveractionrifle>Effective against unarmored targets. No Cowboy should leave how without it.</entitydescription.leveractionrifle>
+  <entityname.3030round>30-30 Round</entityname.3030round>
+  <entitydescription.3030round>.30 caliber round for a Lever Action Rifle</entitydescription.3030round>
+  <entityname.3030rounddepletedfuel>30-30 Depleted Fuel Round</entityname.3030rounddepletedfuel>
+  <entitydescription.3030rounddepletedfuel>.30 caliber round for a Lever Action Rifle. Along with increased penetration, the ammo has been special-made to also inflict radiation sickness on the target.</entitydescription.3030rounddepletedfuel>
+  <entityname.captainscap4>A Nice Hat</entityname.captainscap4>
+  <entityname.captainscap5>Cowboy Hat</entityname.captainscap5>
+  <entityname.fuelrodvolatile>Volatile Fuel Rod</entityname.fuelrodvolatile>
+  <entitydescription.fuelrodvolatile>A fuel rod that has been further refined to supply power for much longer than normal. However, its radiation shielding can only partially limit the emitted ambient radiation, so the rod must be handled with care.</entitydescription.fuelrodvolatile>
+  <entityname.thoriumfuelrodvolatile>Volatile Thorium Fuel Rod</entityname.thoriumfuelrodvolatile>
+  <entitydescription.thoriumfuelrodvolatile>A Thorium fuel rod that has been further refined to supply power for much longer than normal. However, its radiation shielding can only partially limit the emitted ambient radiation, so the rod must be handled with care.</entitydescription.thoriumfuelrodvolatile>
+  <entityname.hammer>Hammer</entityname.hammer>
+  <entitydescription.hammer>Useful for removing unwanted walls.</entitydescription.hammer>
 </infotexts>

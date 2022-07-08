@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <Override>
-    <Item name="" identifier="reactor1" tags="reactor" type="Reactor" scale="0.5" linkable="true" category="Machine" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <Item name="" identifier="reactor1" tags="reactor,radiationproof" type="Reactor" scale="0.5" linkable="true" category="Machine" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
       <Upgrade gameversion="0.10.0.0" scale="*0.5" />
       <trigger />
       <Sprite texture="Content/Items/Reactor/reactor.png" sourcerect="0,16,528,336" origin="0.5,0.45" depth="0.8" />
@@ -48,6 +48,7 @@
             <Affliction identifier="explosiondamage" strength="50" />
             <Affliction identifier="radiationsickness" strength="50" />
             <Affliction identifier="stun" strength="5" />
+            <Affliction identifier="blunttrauma" strength="1.5" />
           </Explosion>
         </StatusEffect>
         <StatusEffect type="OnBroken" target="Contained" Condition="0.0" setvalue="true" />
@@ -94,16 +95,22 @@
       </ConnectionPanel>
       <ItemContainer capacity="4" maxstacksize="1" canbeselected="true" hudpos="0.5,0.15" slotsperrow="1" uilabel="FuelRods">
         <Containable items="fuelrod">
+          <StatusEffect type="OnContaining" target="This" AvailableFuel="60.0" disabledeltatime="true" />
+        </Containable>
+        <Containable items="thoriumfuelrod">
           <StatusEffect type="OnContaining" target="This" AvailableFuel="80.0" disabledeltatime="true" />
         </Containable>
         <Containable items="fulguriumfuelrod">
-          <StatusEffect type="OnContaining" target="This" AvailableFuel="150.0" disabledeltatime="true" />
+          <StatusEffect type="OnContaining" target="This" AvailableFuel="120.0" disabledeltatime="true" />
         </Containable>
-        <Containable items="thoriumfuelrod">
-          <StatusEffect type="OnContaining" target="This" AvailableFuel="100.0" disabledeltatime="true" />
+        <Containable items="fuelrodvolatile">
+          <StatusEffect type="OnContaining" target="This" AvailableFuel="120.0" disabledeltatime="true" />
+        </Containable>
+        <Containable items="thoriumfuelrodvolatile">
+          <StatusEffect type="OnContaining" target="This" AvailableFuel="150.0" disabledeltatime="true" />
         </Containable>
         <Containable items="fulguriumfuelrodvolatile">
-          <StatusEffect type="OnContaining" target="This" AvailableFuel="150.0" disabledeltatime="true" />
+          <StatusEffect type="OnContaining" target="This" AvailableFuel="180.0" disabledeltatime="true" />
         </Containable>
       </ItemContainer>
       <Repairable selectkey="Action" header="electricalrepairsheader" deteriorationspeed="0.125" mindeteriorationdelay="120" maxdeteriorationdelay="720" MinDeteriorationCondition="10" minsabotagecondition="10" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairScrewdriver" hudpriority="10">

@@ -254,8 +254,8 @@
         <RequiredItem identifier="lead" />
         <RequiredItem identifier="copper" />
       </Fabricate>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,384,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="191,290,21,7" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,196,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,93,50,13" depth="0.55" origin="0.5,0.5" />
       <Body width="29" height="10" density="40" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
@@ -1086,8 +1086,8 @@
         <RequiredItem identifier="lead" />
         <RequiredItem identifier="plastic" />
       </Fabricate>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,960,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="189,299,23,11" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,256,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,105,50,18" depth="0.55" origin="0.5,0.5" />
       <Body width="23" height="10" density="40" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
       <!--When fired, spawns 8 projectiles simultaneously.-->
@@ -1309,9 +1309,9 @@
         </StatusEffect>
         <!-- Cocking sound, delayed by 1.0 seconds. -->
         <StatusEffect type="OnUse" delay="1.0">
-          <Sound file="Content/Items/Weapons/ShotgunLoad1.ogg" type="OnUse" range="3000" selectionmode="Random" />
-          <Sound file="Content/Items/Weapons/ShotgunLoad2.ogg" type="OnUse" range="3000" />
-          <Sound file="Content/Items/Weapons/ShotgunLoad3.ogg" type="OnUse" range="3000" />
+          <Sound file="Content/Items/Weapons/ShotgunLoad1.ogg" type="OnUse" range="1000" selectionmode="Random" />
+          <Sound file="Content/Items/Weapons/ShotgunLoad2.ogg" type="OnUse" range="1000" />
+          <Sound file="Content/Items/Weapons/ShotgunLoad3.ogg" type="OnUse" range="1000" />
         </StatusEffect>
         <RequiredItems items="shotgunammo" type="Contained" msg="ItemMsgAmmoRequired" />
         <RequiredSkill identifier="weapons" level="60" />
@@ -1429,10 +1429,95 @@
       <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="bullet">
         <Containable items="smgammo" />
       </ItemContainer>
-      <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+      <aitarget sightrange="3000" soundrange="4000" fadeouttime="5" />
       <Quality>
         <QualityStat stattype="FirepowerMultiplier" value="0.1"/>
       </Quality>
     </Item>
   </Override>
+  <Item name="Lever Action Rifle" identifier="leveractionrifle" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,mountableweapon" Scale="0.55" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab"/>
+    <PreferredContainer primary="weaponholder" spawnprobability="0.03" />
+    <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.03" />
+    <Price baseprice="250" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" minavailable="1" maxavailable="1"/>
+      <Price locationtype="city" multiplier="1.25" minavailable="1" maxavailable="1"/>
+      <Price locationtype="research" multiplier="1.25" sold="false"/>
+      <Price locationtype="military" multiplier="1" minavailable="1" maxavailable="1"/>
+      <Price locationtype="mine" multiplier="1.25" sold="false"/>
+    </Price>
+    <Deconstruct time="17">
+      <Item identifier="carbon"/>
+      <Item identifier="steel"/>
+      <Item identifier="steel"/>
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="0,312,106,123"/>
+    <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,282,197,48" depth="0.55"/>
+    <Body width="160" height="40" density="40"/>
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="50,-20" aimpos="65,0" handle1="-40,0" handle2="15,15" holdangle="-20" msg="ItemMsgPickUpSelect"/>
+    <RangedWeapon barrelpos="95,24" spread="0.1" unskilledspread="3" combatPriority="60" drawhudwhenequipped="true" crosshairscale="0.2" holdtrigger="true">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256"/>
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256"/>
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" scalemin="1.2" scalemax="1.5"/>
+      <Sound file="Content/Items/Weapons/Revolver3.ogg" type="OnUse" range="3000" />
+      <StatusEffect type="OnUse" target="This" reload="0.9" setvalue="true" delay="0.2">
+        <Sound file="%ModDir%/sounds/leveraction.ogg" type="OnUse" range="1000"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse">
+        <Explosion range="200.0" force="2" shockwave="false" smoke="false" flames="false" flash="true" sparks="false" underwaterbubble="false" camerashake="14.0"/>
+      </StatusEffect>
+      <RequiredItems identifier="leveractionammo" type="Contained" msg="ItemMsgAmmoRequired"/>
+      <RequiredSkill identifier="weapons" level="50"/>
+    </RangedWeapon>
+    <ItemContainer autofill="False" capacity="1" maxstacksize="6" hideitems="true" itempos="-60,-16" containedstateindicatorstyle="bullet">
+      <Containable identifier="leveractionammo"/>
+      <StatusEffect type="OnUse" target="Contained">
+        <RequiredItem identifiers="leveractionammo" type="Contained"/>
+        <Use/>
+      </StatusEffect>
+    </ItemContainer>
+    <Quality>
+      <QualityStat stattype="AttackMultiplier" value="0.1"/>
+    </Quality>
+  </Item>
+  <Item name="30-30 Round" identifier="3030round" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,leveractionammo,pistolammoitem" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="leveractionrifle" amount="6" spawnprobability="1"/>
+    <PreferredContainer primary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true"/>
+    <PreferredContainer secondary="secarmcab" />
+    <Price baseprice="30" minavailable="6">
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="12" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="24" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="12" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="24" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="12">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="lead" />
+      <RequiredItem identifier="copper" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,128,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,81,50,13" depth="0.55" origin="0.5,0.5" />
+    <Body width="29" height="10" density="40" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,175" scalemultiplier="1,0.6"/>
+      <Attack structuredamage="10" targetforce="10" itemdamage="20" severlimbsprobability="0.2" armorpenetration="0.15">
+        <Affliction identifier="gunshotwound" strength="40" />
+        <Affliction identifier="bleeding" strength="35" />
+        <Affliction identifier="stun" strength="0.6" />
+        <Affliction identifier="blunttrauma" strength="5" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure"/>
+        <Conditional hastag="eq door"/>
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
 </Items>

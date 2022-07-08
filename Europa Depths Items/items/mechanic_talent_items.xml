@@ -38,9 +38,9 @@
         <Price storeidentifier="merchantmine" />
       </Price>
       <Deconstruct time="10">
-        <Item identifier="copper" />
-        <Item identifier="silicon" />
-        <Item identifier="steel" />
+        <Item identifier="copper" amount="0.5" />
+        <Item identifier="silicon" amount="0.5" />
+        <Item identifier="steel" amount="0.5" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="2">
         <RequiredItem identifier="copper" />
@@ -90,7 +90,7 @@
           <Conditional targetcontainer="true" flowpercentage="! 0" />
           <RequiredItem items="batterycell" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnActive" targettype="Contained" Condition="-5">
+        <StatusEffect type="OnActive" targettype="Contained" Condition="-2.5">
           <Conditional targetcontainer="true" flowpercentage="! 0" />
           <RequiredItem items="fulguriumbatterycell" type="Contained" />
         </StatusEffect>

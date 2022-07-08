@@ -3,7 +3,7 @@
   <Override>
     <Talent identifier="warlord">
       <Description tag="talentdescription.unlockrecipe">
-        <Replace tag="[itemname]" value="entityname.assaultrifle,entityname.assaultriflemagazine,entityname.physicoriumassaultriflemagazine" color="gui.orange"/>
+        <Replace tag="[itemname]" value="entityname.assaultrifle, entityname.assaultriflemagazine, entityname.physicoriumassaultriflemagazine" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.chanceofextraweapondamage">
         <Replace tag="[probability]" value="5" color="gui.green"/>
@@ -23,7 +23,7 @@
     </Talent>
     <Talent identifier="munitionsexpertise">
       <Description tag="talentdescription.unlockrecipe">
-        <Replace tag="[itemname]" value="entityname.shotgunslugexplosive,entityname.shotgunslughollowpoint" color="gui.orange"/>
+        <Replace tag="[itemname]" value="entityname.shotgunslugexplosive, entityname.shotgunslugshell" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.extraskillfromcrafting">
         <Replace tag="[amount]" value="125" color="gui.green"/>
@@ -51,7 +51,7 @@
         </Abilities>
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="shotgunslugexplosive"/>
-      <AddedRecipe itemidentifier="shotgunslughollowpoint"/>
+      <AddedRecipe itemidentifier="shotgunslugshell"/>
     </Talent>
   </Override>
 </Talents>

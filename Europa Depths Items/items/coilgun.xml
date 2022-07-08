@@ -253,7 +253,7 @@
         <RequiredSkill identifier="weapons" level="20"/>
         <RequiredItem identifier="lead"/>
         <RequiredItem identifier="steel"/>
-        <RequiredItem identifier="coilgunammobox" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
+        <RequiredItem identifier="coilgunammobox" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
       </Fabricate>
       <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
       <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="800,788,95,78" origin="0.5,0.5" />
@@ -301,7 +301,7 @@
       <RequiredSkill identifier="weapons" level="50"/>
       <RequiredItem identifier="lead"/>
       <RequiredItem identifier="steel"/>
-      <RequiredItem identifier="coilgunammoboxcopper" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
+      <RequiredItem identifier="coilgunammoboxcopper" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
     </Fabricate>
     <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
     <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="800,788,95,78" origin="0.5,0.5" />
@@ -342,7 +342,7 @@
         <RequiredSkill identifier="weapons" level="30"/>
         <RequiredItem identifier="physicorium" />
         <RequiredItem identifier="steel" />
-        <RequiredItem identifier="physicoriumammobox" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
+        <RequiredItem identifier="physicoriumammobox" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
       </Fabricate>
       <Deconstruct time="10">
         <Item identifier="steel" mincondition="0.10" copycondition="true"/>
@@ -394,7 +394,7 @@
         <RequiredSkill identifier="weapons" level="40" />
         <RequiredItem identifier="ic4block" />
         <RequiredItem identifier="steel" />
-        <RequiredItem identifier="coilgunammoboxexplosive" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
+        <RequiredItem identifier="coilgunammoboxexplosive" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
       </Fabricate>
       <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
       <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="550,782,117,89" origin="0.5,0.5" />
@@ -441,7 +441,7 @@
         <RequiredSkill identifier="weapons" level="25" />
         <RequiredItem identifier="titaniumaluminiumalloy" />
         <RequiredItem identifier="steel" />
-        <RequiredItem identifier="coilgunammoboxpiercing" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
+        <RequiredItem identifier="coilgunammoboxpiercing" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
       </Fabricate>
       <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
       <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="680,788,95,78" origin="0.5,0.5" />
