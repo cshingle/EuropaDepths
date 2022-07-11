@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Traditional Chinese" nowhitespace="true" translatedname="中文(繁體)">
+    <entityname.largecabinet>Large Cabinet</entityname.largecabinet>
+    <entitydescription.largecabinet>Storage for small- and medium-sized items.</entitydescription.largecabinet>
+    <entityname.shelflarge>Large Shelf</entityname.shelflarge>
+    <entitydescription.shelflarge>Storage for small- and medium-sized items.</entitydescription.shelflarge>
+    <entityname.weldingfuelcabinet>Welding Fuel Cabinet</entityname.weldingfuelcabinet>
+    <entitydescription.weldingfuelcabinet>Storage Welding Fuel.</entitydescription.weldingfuelcabinet>
+    <entityname.largecoilgunammoshelf>Large Ammunition Shelf</entityname.largecoilgunammoshelf>
+    <entitydescription.largecoilgunammoshelf>A way to neatly stow ammunition boxes.</entitydescription.largecoilgunammoshelf>
+    <entityname.crateshelfnocargo>Crate Shelf (No Cargo)</entityname.crateshelfnocargo>
+    <entityname.distiller>Distiller</entityname.distiller>
+    <entitydescription.distiller>A place to drink your problems away.</entitydescription.distiller>
+    <entityname.largerailgunshellrack>Large Railgun Shell Rack</entityname.largerailgunshellrack>
+    <entitydescription.largerailgunshellrack>A way to neatly stow railgun shells.</entitydescription.largerailgunshellrack>
+</infotexts>

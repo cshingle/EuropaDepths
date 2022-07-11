@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Large Cabinet" identifier="large_cabnet" nameidentifier="largecabinet" tags="locker,container" linkable="true" pickdistance="150" waterproof="true" width="80" height="128" texturescale="1.0,1.0" scale="0.8" category="Equipment">
+    <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="400,0,80,128" depth="0.84" premultiplyalpha="false" origin="0.5,0.5" />
+    <ItemContainer capacity="30" slotsperrow="6" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.45" anchor="Center" slotsperrow="6" style="ItemUI" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+  </Item>
+  <Item name="Large Shelf" identifier="shelflarge" nameidentifier="largecabinet" tags="locker,container" linkable="true" pickdistance="150" waterproof="true" width="272" height="336" texturescale="1.0,1.0" scale="0.5" category="Equipment">
+    <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1504,1,272,336" depth="0.84" premultiplyalpha="false" origin="0.5,0.5" />
+    <ItemContainer capacity="36" slotsperrow="6" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.55" anchor="CenterLeft" style="ItemUI" />
+      <Containable items="smallitem,mediumitem" />
+    </ItemContainer>
+  </Item>
+  <Item name="Welding Fuel Cabinet" identifier="weldingfuel_cabnet" nameidentifier="weldingfuelcabinet" category="Equipment" tags="container,weldingfuelholder" pickdistance="50" scale="0.5" spritecolor="255,0,0,255">
+    <Sprite name="Diving Suit Locker Small" texture="Content/Items/Containers/containers.png" sourcerect="714,259,99,82" depth="0.84" origin="0.5,0.5" />
+    <Powered powerconsumption="30" currpowerconsumption="30" isactive="true">
+      <GuiFrame relativesize="0.18,0.15" minsize="350,160" maxsize="420,192" anchor="Center" relativeoffset="0,-0.1" style="ItemUI" msg="ItemMsgInteractSelect" />
+    </Powered>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="20" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="3" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particleburstinterval="1.05" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+      <input name="power_in" displayname="connection.powerin" />
+    </ConnectionPanel>
+    <ItemContainer hideitems="false" drawinventory="true" capacity="3" maxstacksize="1" slotsperrow="3" itempos="27,-42" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.16,0.18" anchor="Center" style="ItemUI" />
+      <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
+        <StatusEffect type="OnContaining" targettype="Contained" Condition="0.1" Comparison="And">
+          <Conditional Voltage="gt 0.1" targetcontainer="true" targetitemcomponent="Powered"/>
+          <Conditional HasTag="weldingfuelsource"/>
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+  </Item>
+  <Item name="Large Railgun Shell Rack" identifier="largerailgunshellrack" tags="container,railgunammocontainer" pickdistance="120" scale="0.5" canflipx="false" canflipy="false" category="Equipment">
+    <Sprite texture="%ModDir%/sprites/equipment.png" depth="0.84" sourcerect="0,0,418,212" origin="0.5,0.5" />
+    <ItemContainer hideitems="false" drawinventory="true" capacity="12" slotsperrow="6" itempos="24,-100" iteminterval="30,0" itemrotation="90" canbeselected="true" msg="ItemMsgInteractSelect">
+      <Upgrade gameversion="0.18.0.0" itempos="32,-100" iteminterval="30,0" />
+      <GuiFrame relativesize="0.3,0.3" anchor="Center" style="ItemUI" />
+      <Containable items="railgunammo" />
+    </ItemContainer>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="Large Ammunition Shelf" identifier="largecoilgunammoshelf" tags="container,ammoboxcontainer" linkable="true" pickdistance="150" waterproof="true" scale="0.5">
+    <Sprite texture="%ModDir%/sprites/equipment.png" depth="0.84" sourcerect="0,215,140,405" canflipx="false" origin="0.5,0.5" />
+    <ItemContainer capacity="4" canbeselected="true" hideitems="false" itempos="70,-52" iteminterval="0,-96" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.26,0.20" anchor="Center" style="ItemUI" />
+      <Containable items="ammobox,coilgunammo,depthchargeammo" />
+    </ItemContainer>
+  </Item>
+  <Item name="Crate Shelf (No Cargo)" identifier="crateshelfnocargo" tags="container" linkable="true" canflipx="false" pickdistance="150" scale="0.5">
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.84" sourcerect="1,657,185,366" origin="0.5,0.5" />
+    <ItemContainer capacity="4" maxstacksize="1" canbeselected="true" hideitems="false" itempos="92,-48" iteminterval="0,-92" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
+      <Containable items="crate" />
+    </ItemContainer>
+  </Item>
+  <Item name="Distiller" identifier="distiller" nameidentifier="distiller" tags="container,distiller" width="370" height="355" scale="0.5" category="Equipment">
+    <sprite texture="Content/Map/Outposts/Art/CafeteriaGardenAssets.png" sourcerect="606,2,370,355" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+    <ItemContainer hideitems="true" capacity="1" maxstacksize="1" slotsperrow="1" itempos="27,-42" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.16,0.18" anchor="Center" style="ItemUI" />
+      <Containable items="ethanol" excludebroken="false">
+        <StatusEffect type="OnContaining" targettype="Contained" Condition="0.5"/>
+      </Containable>
+    </ItemContainer>
+    <Controller hidehud="false" canbeselected="true" drawuserbehind="false">
+      <StatusEffect type="OnActive" target="This">
+        <SpawnItem identifiers="ethanol" spawnposition="ThisInventory" condition="0.01" />
+      </StatusEffect>
+      <StatusEffect type="OnActive" target="Character">
+        <Affliction identifier="drunk" amount="2.0" />
+        <reduceaffliction type="damage" strength="0.2" />
+        <reduceaffliction identifier="bloodloss" strength="0.2" />
+        <reduceaffliction identifier="bleeding" strength="0.2" />
+        <reduceaffliction identifier="psychosis" strength="0.2" />
+        <reduceaffliction identifier="opiatewithdrawal" strength="0.2" />
+        <reduceaffliction identifier="radiationsickness" strength="0.2" />
+        <reduceaffliction identifier="morbusinepoisoning" strength="0.2" />
+        <reduceaffliction identifier="sufforinpoisoning" strength="0.2" />
+        <reduceaffliction identifier="cyanidepoisoning" strength="0.2" />
+        <reduceaffliction identifier="concussion" strength="0.2" />
+        <reduceaffliction identifier="internaldamage" strength="0.2" />
+        <reduceaffliction identifier="blunttrauma" strength="0.2" />
+        <reduceaffliction identifier="bitewounds" strength="0.2" />
+        <reduceaffliction identifier="gunshotwound" strength="0.2" />
+        <reduceaffliction identifier="organdamage" strength="0.2" />
+        <reduceaffliction identifier="burn" strength="0.2" />
+        <reduceaffliction identifier="opiateaddiction" strength="0.2" />
+        <reduceaffliction identifier="huskinfection" strength="0.2" />
+        <reduceaffliction identifier="reaperstax" strength="0.2" />
+      </StatusEffect>
+    </Controller>
+  </Item>
+  <Override>
+    <Item name="" identifier="unitloaddevice" tags="cargocontainer" linkable="true" pickdistance="150" scale="0.5">
+      <Sprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.8" sourcerect="0,0,567,446" origin="0.5,0.5" />
+      <DecorativeSprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.85" sourcerect="0,457,567,446" origin="0.5,0.5" />
+      <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="120,-364" iteminterval="150,80" itemsperrow="3" msg="ItemMsgInteractSelect" containedspritedepths="0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82">
+        <GuiFrame relativesize="0.25,0.3" anchor="Center" style="ItemUI" />
+        <Containable items="crate" />
+      </ItemContainer>
+    </Item>
+  </Override>
+</Items>
