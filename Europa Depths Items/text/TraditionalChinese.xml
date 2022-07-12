@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Traditional Chinese" nowhitespace="true" translatedname="中文(繁體)">
+    <upgradename.turretincreasefirerate>超載砲塔</upgradename.turretincreasefirerate>
+    <upgradedescription.turretincreasefirerate>以更大的能源消耗換取大幅提升的開火速率。</upgradedescription.turretincreasefirerate>
+    <entityname.coilgunammoboxcopper>銅製電磁槍彈藥箱</entityname.coilgunammoboxcopper>
+    <entitydescription.coilgunammoboxcopper>一個穿透力高於鉛制彈藥但是低於穿甲彈藥的電磁砲彈箱。</entitydescription.coilgunammoboxcopper>
+    <entityname.ed_raptorbanespear>迅猛龍殺手魚叉</entityname.ed_raptorbanespear>
+    <entitydescription.ed_raptorbanespear>塗有迅猛龍殺手精華的魚叉。</entitydescription.ed_raptorbanespear>
+    <entityname.clowndivingmaskunique>聖母的撫摸</entityname.clowndivingmaskunique>
+    <entitydescription.clowndivingmaskunique>沒有事物是在聖母觸及之外的。</entitydescription.clowndivingmaskunique>
+    <entityname.physicoriumassaultriflemagazine>剛素突擊步槍彈匣</entityname.physicoriumassaultriflemagazine>
+    <entitydescription.physicoriumassaultriflemagazine>一個用於容納6.8毫米剛素子彈的彈匣。</entitydescription.physicoriumassaultriflemagazine>
+    <entityname.handcannonroundhallowpoint>空尖手砲子彈</entityname.handcannonroundhallowpoint>
+    <entitydescription.handcannonroundhallowpoint>一種非常大的.61口徑左輪手槍子彈。降低穿深與傷害來換取更大的擊退力。</entitydescription.handcannonroundhallowpoint>
+    <entityname.shotgunslugshell>獨頭彈</entityname.shotgunslugshell>
+    <entitydescription.shotgunslugshell>一個霰彈槍用的獨頭彈。威力巨大但穿透力有限。</entitydescription.shotgunslugshell>
+    <entityname.railgunshrapnelshell>破片軌道砲砲彈</entityname.railgunshrapnelshell>
+    <entitydescription.railgunshrapnelshell>一個可裝填發射大量鈍狀彈丸的軌道砲砲彈。</entitydescription.railgunshrapnelshell>
+    <entityname.railgunshrapnelshellpellet>破片砲彈彈丸</entityname.railgunshrapnelshellpellet>
+    <entitydescription.railgunshrapnelshellpellet>從砲彈發射出的彈丸。</entitydescription.railgunshrapnelshellpellet>
+    <entityname.40mmempgrenade>40mmEMP榴彈</entityname.40mmempgrenade>
+    <entitydescription.40mmempgrenade>榴彈發射器彈藥。對付守衛者非常有效。</entitydescription.40mmempgrenade>
+    <entityname.engineeringheadset>工程用耳機</entityname.engineeringheadset>
+    <entitydescription.engineeringheadset>需要電池運作的長距離耳機。</entitydescription.engineeringheadset>
+    <entityname.medicalhelmet>醫療頭盔</entityname.medicalhelmet>
+    <entitydescription.medicalhelmet>雖然對於冰洋中的大多數居民來說，它脆弱如紙，但總比沒保護好。</entitydescription.medicalhelmet>
+    <entityname.leveractionrifle>槓桿式步槍</entityname.leveractionrifle>
+    <entitydescription.leveractionrifle>對無裝甲目標有奇效，任何牛仔都應該有一把。</entitydescription.leveractionrifle>
+    <entityname.3030round>30-30子彈</entityname.3030round>
+    <entitydescription.3030round>槓桿步槍使用的.30口徑子彈。</entitydescription.3030round>
+    <entityname.3030rounddepletedfuel>30-30貧化燃料子彈</entityname.3030rounddepletedfuel>
+    <entitydescription.3030rounddepletedfuel>槓桿步槍使用的.30口徑子彈。除了穿透力提升外，該子彈還能對目標造成輻射傷害。</entitydescription.3030rounddepletedfuel>
+    <entityname.captainscap4>一個看上去不錯的帽子</entityname.captainscap4>
+    <entityname.captainscap5>牛仔帽</entityname.captainscap5>
+    <entityname.fuelrodcase>Fuel Rod Case</entityname.fuelrodcase>
+    <entitydescription.fuelrodcase>A case for safly storing volatile fuel rods.</entitydescription.fuelrodcase>
+    <entityname.fuelrodvolatile>揮發性燃料棒</entityname.fuelrodvolatile>
+    <entitydescription.fuelrodvolatile>一根經過進一步提煉的燃料棒，可以在正常情況下提供更長時間的電力。然而，它的輻射屏罩層只能限制部份環境輻射，因此必須小心處理該燃料棒。</entitydescription.fuelrodvolatile>
+    <entityname.thoriumfuelrodvolatile>揮發性雷素燃料棒</entityname.thoriumfuelrodvolatile>
+    <entitydescription.thoriumfuelrodvolatile>一根經過進一步提煉的雷素燃料棒，可以在正常情況下提供更長時間的電力。然而，它的輻射屏罩層只能限制部份環境輻射，因此必須小心處理該燃料棒。</entitydescription.thoriumfuelrodvolatile>
+    <entityname.hammer>槌子</entityname.hammer>
+    <entitydescription.hammer>對移除沒用的牆壁特別有效。</entitydescription.hammer>
+    <afflictionname.empdamage>EMP Damage</afflictionname.empdamage>
+    <afflictiondescription.empdamage>There are signs of damage to internal components caused by an Electromagnetic Pulse .</afflictiondescription.empdamage>
+</infotexts>

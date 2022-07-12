@@ -259,7 +259,7 @@
       </ItemContainer>
     </Item>
 
-    <Item name="Shredder Chaingun Ammunition Box" identifier="chaingunammoboxshredder" scale="0.5" tags="chaingunequipment,chaingunammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy">
+    <Item name="" identifier="chaingunammoboxshredder" scale="0.5" tags="chaingunequipment,chaingunammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy">
       <PreferredContainer primary="chaingunammosource,ammoboxcontainer" mincondition="1"/>
       <Price baseprice="475" minavailable="0" displaynonempty="true" minleveldifficulty="15">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />

@@ -4,7 +4,7 @@
         <Talent identifier="armsdealer">
             <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,7" sheetelementsize="128,128"/>
             <Description tag="talentdescription.unlockrecipe">
-                <Replace tag="[itemname]" value="entityname.smgmagazinedepletedfuel, entityname.revolverrounddepletedfuel, entityname.3030rounddepletedfuel" color="gui.orange"/>
+                <Replace tag="[itemname]" value="entityname.smgmagazinedepletedfuel,entityname.revolverrounddepletedfuel,entityname.3030rounddepletedfuel" color="gui.orange"/>
             </Description>
             <Description tag="talentdescription.gainitemsonmission"/>
             <Description tag="talentdescription.gainitem">

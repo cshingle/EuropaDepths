@@ -334,4 +334,64 @@
       </Throwable>
     </Item>
   </Override>
+  <Item name="Mining Laser Prototype" identifier="mininglaser" category="Equipment" Tags="smallitem,cuttingequipment,tool,mountableweapon" fireprobability="0.1" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="weaponholder,divingcab" secondary="engcab"/>
+    <Price baseprice="900" sold="false">
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="fpgacircuit" amount="2" />
+      <Item identifier="lead" />
+      <Item identifier="titaniumaluminiumalloy" amount="2" />
+      <Item identifier="fulgurium" amount="2" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="85" />
+      <Item identifier="fpgacircuit" amount="2" />
+      <Item identifier="lead" />
+      <Item identifier="titaniumaluminiumalloy" amount="2" />
+      <Item identifier="fulgurium" amount="2" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,384,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,372,159,57" depth="0.55" origin="0.4,0.5" />
+    <Body radius="40" width="60" density="40" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-10,0" handle2="50,-10" msg="ItemMsgPickUpSelect" />
+    <RepairTool firedamage="15.0" structurefixamount="-1.0" range="305" barrelpos="62,0" combatpriority="20" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-20.0" targetforce="12">
+      <RequiredItems items="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-4.0" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-1" />
+      <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-60.0" Condition="-10.0" />
+      <StatusEffect type="OnUse" targettype="UseTarget" Condition="-10.0" />
+      <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.005">
+        <Affliction identifier="burn" amount="6.0" />
+      </StatusEffect>
+      <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+      <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
+      <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
+      <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+      <ParticleEmitterHitItem identifiers="ore" particle="iceshards" particlespersecond="5" anglemin="-40" anglemax="40" velocitymin="10" velocitymax="300" scalemin="0.5" scalemax="1.0" />
+      <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
+      <sound file="Content/Items/Tools/PlasmaCutterLoop.ogg" type="OnUse" range="500.0" loop="true" />
+      <Fixable identifier="structure" />
+      <RequiredSkill identifier="mechanical" level="50" />
+      <StatusEffect type="OnFailure" targettype="Contained" targets="batterycell" Condition="-8.0" />
+      <StatusEffect type="OnFailure" targettype="Contained" targets="fulguriumbatterycell" Condition="-2" />
+    <LightComponent LightColor="1.0,1.0,1.0,0.7" range="650" Flicker="1" flickerspeed="0.2">
+      <LightTexture texture="%ModDir%/sprites/beam.png" origin="-0.01, 0.471" size="0.3,0.3" />
+    </LightComponent>
+    </RepairTool>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-30,-10" containedspritedepth="0.60" itemrotation="90" containedstateindicatorstyle="battery">
+      <Containable items="mobilebattery">
+      </Containable>
+    </ItemContainer>
+    <aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
+    <Quality>
+      <QualityStat stattype="RepairToolStructureDamageMultiplier" value="0.1"/>
+      <QualityStat stattype="RepairToolDeattachTimeMultiplier" value="0.1"/>
+    </Quality>
+  </Item>
 </Items>

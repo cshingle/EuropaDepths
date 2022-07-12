@@ -30,7 +30,7 @@
       </Wearable>
     </Item>
   </Override>
-  <Item name="Engineering Headset" identifier="engineeringheadset" scale="0.5" category="Equipment" tags="smallitem,mobileradio" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="engineeringheadset" scale="0.5" category="Equipment" tags="smallitem,mobileradio" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="crewcab" secondary="divingcab"/>
     <Price baseprice="190">
       <Price storeidentifier="merchantoutpost" minavailable="1" />
@@ -82,4 +82,22 @@
       <StatusEffect type="OnWearing" target="Character" LowPassMultiplier="0.8" setvalue="true" disabledeltatime="true"/>
     </Wearable>
   </Item>
+  <Override>
+    <Item name="" identifier="duffelbag" category="Equipment" tags="mobilecontainer,despawncontainer" fireproof="true" description="" impactsoundtag="impact_soft" scale="0.4">
+      <Deconstruct time="5" />
+      <Sprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="612,398,206,114" origin="0.5,0.56" depth="0.56" />
+      <BrokenSprite texture="Content/Items/Jobgear/MiscJobGear.png" sourcerect="818,398,206,114" depth="0.56" maxcondition="80" fadein="true" />
+      <Body width="120" radius="45" density="10.2" friction="1.0" restitution="0.01" />
+      <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="0,50" handle2="0,50" aimable="false" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="OnActive" targettype="This" Condition="-0.5" />
+        <StatusEffect type="OnBroken" target="This">
+          <DropContainedItems />
+          <Remove />
+        </StatusEffect>
+      </Holdable>
+      <ItemContainer capacity="20" keepopenwhenequipped="false" movableframe="true">
+        <Containable items="smallitem" excludeditems="toolbox" />
+      </ItemContainer>
+    </Item>
+  </Override>
 </Items>

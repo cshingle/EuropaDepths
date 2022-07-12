@@ -104,7 +104,7 @@
       </ItemContainer>
     </Item>
   </Override>
-  <Item name="Medic Helmet" identifier="medicalhelmet" aliases="ballistichelmet" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy" scale="0.325">
+  <Item name="" identifier="medicalhelmet" aliases="ballistichelmet" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy" scale="0.325">
     <Upgrade gameversion="0.9.6.0" scale="0.325" />
     <PreferredContainer primary="medcab" amount="1" spawnprobability="0.5" notcampaign="true"/>
     <Price baseprice="175">

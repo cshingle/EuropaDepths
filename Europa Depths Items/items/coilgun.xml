@@ -299,7 +299,7 @@
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
       <RequiredSkill identifier="weapons" level="50"/>
-      <RequiredItem identifier="lead"/>
+      <RequiredItem identifier="copper"/>
       <RequiredItem identifier="steel"/>
       <RequiredItem identifier="coilgunammoboxcopper" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
     </Fabricate>

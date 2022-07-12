@@ -144,7 +144,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
   </Override>
-  <Item name="Raptorbane Harpoon" identifier="ed_raptorbanespear" inherit="spear" pickdistance="150" spritecolor="255,165,0,255" InventoryIconColor="255,165,0,255">
+  <Item name="" identifier="ed_raptorbanespear" inherit="spear" pickdistance="150" spritecolor="255,165,0,255" InventoryIconColor="255,165,0,255">
     <PreferredContainer primary="harpoongun" amount="6" spawnprobability="0.05"/>
     <PreferredContainer primary="armcab" minamount="3" maxamount="6" spawnprobability="0.1" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="4" spawnprobability="0.1"/>
@@ -568,6 +568,7 @@
         <!-- statuseffect that explodes the grenade when used by something else than a character (e.g. a detonator) -->
         <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
         <StatusEffect type="OnBroken" target="NearbyCharacters,this" range="500" disabledeltatime="true" comparison="And">
+          <Conditional speciesgroup="ancientalien" />
           <Affliction identifier="empdamage" strength="50" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
@@ -808,7 +809,7 @@
     <Item name="" identifier="grenadelauncher" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="secarmcab" amount="1" spawnprobability="0.2" notcampaign="true"/>
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.1"/>
-      <PreferredContainer secondary="armcab"/>
+      <PreferredContainer secondary="weaponholder,armcab"/>
       <Price baseprice="1000" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -957,7 +958,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
   </Override>
-  <Item name="40mm EMP Grenade" identifier="40mmempgrenade" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="40mmempgrenade" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.2"/>
     <PreferredContainer primary="secarmcab" secondary="armcab"/>
     <Price baseprice="160" sold="false">
@@ -999,6 +1000,7 @@
         </Explosion>
       </StatusEffect>
       <StatusEffect type="OnImpact" target="NearbyCharacters,this" range="300" disabledeltatime="true" comparison="And">
+        <Conditional speciesgroup="ancientalien" />
         <Affliction identifier="empdamage" strength="50" />
       </StatusEffect>
       <!--Destroy this after exploding-->
@@ -1393,7 +1395,7 @@
     </Item>
 
     <Item name="" identifier="smgunique" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true">
-      <PreferredContainer primary="secarmcab" secondary="armcab"/>
+      <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder"/>
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.05"/>
       <Price baseprice="1064" sold="false" canbespecial="false" />
       <Deconstruct time="10">
@@ -1435,7 +1437,7 @@
       </Quality>
     </Item>
   </Override>
-  <Item name="Lever Action Rifle" identifier="leveractionrifle" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,mountableweapon" Scale="0.55" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="leveractionrifle" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,mountableweapon" Scale="0.55" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="secarmcab"/>
     <PreferredContainer primary="weaponholder" spawnprobability="0.03" />
     <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.03" />
@@ -1480,7 +1482,7 @@
       <QualityStat stattype="AttackMultiplier" value="0.1"/>
     </Quality>
   </Item>
-  <Item name="30-30 Round" identifier="3030round" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,leveractionammo,pistolammoitem" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="3030round" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,leveractionammo,pistolammoitem" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="leveractionrifle" amount="6" spawnprobability="1"/>
     <PreferredContainer primary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true"/>
     <PreferredContainer secondary="secarmcab" />

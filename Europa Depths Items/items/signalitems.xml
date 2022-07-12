@@ -1664,14 +1664,6 @@
         <input name="control_in" displayname="connection.controlin" />
       </ConnectionPanel>
     </Item>
-    <Item name="Camera" category="Legacy" nameidentifier="camera" Tags="smallitem,camera" focusonselected="true" offsetonselected="500" cargocontaineridentifier="metalcrate" description="">
-      <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="199,69,16,32" origin="0.5,0.5" />
-      <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-        <RequiredItem items="screwdriver" type="Equipped" />
-        <input name="control_in" displayname="connection.controlin" />
-      </ConnectionPanel>
-    </Item>
     <Item name="" identifier="terminal" category="Electrical" Tags="smallitem,logic" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
       <Upgrade gameversion="0.10.0" scale="*0.5" />
       <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="0,368,144,128" origin="0.5,0.3" canflipx="false" />

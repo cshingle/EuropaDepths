@@ -23,8 +23,9 @@ Short list of current features:
 * Nearly all items excluding small arms ammunition is deconstructable
 * Container for transporting Volatile Fuel Rods
 * Additional Volatile Fuel types
-* Nerfed standard fuel rods to make volatile versions worth using
-* Made Reactor block radiation from Volatile Fuel Rods while they are in the reactor
+* Volatile fuel rods last longer and run hotter
+* Standard fuel rods are used up more quickly
+* Made Reactor and Fabricator block radiation from Volatile Fuel Rods while they are in the inventory
 * Cargo Scooter has slots to carry limited large items (Ammo Containers, Railgun Rounds and Suits)
 * Cargo Scooter has a light when in water (to make it easier to find)
 * Additional Harpoon type

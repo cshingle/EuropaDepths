@@ -15,17 +15,27 @@
         <RequiredItem identifier="fuelrod" mincondition="0.0" maxcondition="0.1" usecondition="false" />
         <RequiredItem identifier="steel" />
       </Fabricate>
-      <Fabricate suitablefabricators="fabricator" requiredtime="15" requiresrecipe="true">
+      <Fabricate suitablefabricators="fabricator" requiredtime="25" requiresrecipe="true" amount="2">
+        <RequiredSkill identifier="electrical" level="35" />
+        <RequiredItem identifier="fuelrodvolatile" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+        <RequiredItem identifier="steel" />
+      </Fabricate>
+      <Fabricate suitablefabricators="fabricator" requiredtime="25" requiresrecipe="true">
         <RequiredSkill identifier="electrical" level="35" />
         <RequiredItem identifier="thoriumfuelrod" mincondition="0.0" maxcondition="0.1" usecondition="false" />
         <RequiredItem identifier="steel" />
       </Fabricate>
-      <Fabricate suitablefabricators="fabricator" requiredtime="25" requiresrecipe="true" amount="2">
+      <Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="true">
+        <RequiredSkill identifier="electrical" level="35" />
+        <RequiredItem identifier="thoriumfuelrodvolatile" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+        <RequiredItem identifier="steel" />
+      </Fabricate>
+      <Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="true" amount="1">
         <RequiredSkill identifier="electrical" level="35" />
         <RequiredItem identifier="fulguriumfuelrod" mincondition="0.0" maxcondition="0.1" usecondition="false" />
         <RequiredItem identifier="steel" />
       </Fabricate>
-      <Fabricate suitablefabricators="fabricator" requiredtime="25" requiresrecipe="true" amount="2">
+      <Fabricate suitablefabricators="fabricator" requiredtime="45" requiresrecipe="true" amount="2">
         <RequiredSkill identifier="electrical" level="35" />
         <RequiredItem identifier="fulguriumfuelrodvolatile" mincondition="0.0" maxcondition="0.1" usecondition="false" />
         <RequiredItem identifier="steel" />
@@ -435,7 +445,7 @@
         <RequiredItems items="reactorfuel" type="Contained" msg="ItemMsgAmmoRequired" />
         <RequiredSkill identifier="weapons" level="25" />
       </RangedWeapon>
-      <ItemContainer itemrotation="90" capacity="1" maxstacksize="1" hideitems="false" itempos="10,-5" containedspritedepth="0.56" containedstateindicatorstyle="tank">
+      <ItemContainer itemrotation="90" capacity="1" maxstacksize="1" hideitems="false" itempos="10,-5" containedspritedepth="0.56" containedstateindicatorstyle="battery">
         <Containable items="reactorfuel" />
       </ItemContainer>
       <aitarget sightrange="3000" soundrange="5000" fadeouttime="5" />
@@ -764,7 +774,7 @@
       </ItemContainer>
     </Item>
     <Item name="" identifier="fulguriumfuelrodvolatile" category="Fuel" Tags="smallitem,reactorfuel,volatilefuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="400" scale="0.5">
-      <PreferredContainer primary="reactorcab" secondary="locker"/>
+      <PreferredContainer primary="fuelrodcase" secondary="reactorcab,locker" />
       <Price baseprice="400" sold="false" displaynonempty="true">
         <Price storeidentifier="merchantoutpost" />
         <Price storeidentifier="merchantcity" multiplier="0.9" />
@@ -805,7 +815,6 @@
         <StatusEffect type="Always" target="this" disabledeltatime="true" comparison="And">
           <Conditional hastag="neq radiationproof" targetcontainer="true" />
           <Conditional hastag="neq fabricator" targetcontainer="true" />
-          <Conditional hastag="neq deconstructor" targetcontainer="true" />
           <sound file="%ModDir%/sounds/geigercounter.ogg" range="500.0" />
         </StatusEffect>
       </Holdable>
@@ -820,8 +829,8 @@
       </Quality>
     </Item>
   </Override>
-  <Item name="" identifier="fuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,volatilefuel" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5">
-    <PreferredContainer primary="reactorcab"/>
+  <Item name="" identifier="fuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,volatilefuel" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" health="150">
+    <PreferredContainer primary="fuelrodcase" secondary="reactorcab,locker" />
     <PreferredContainer secondary="nucleargun" minamount="1" maxamount="1" spawnprobability="1"/>
     <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
     <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.2"/>
@@ -838,7 +847,7 @@
       <Item identifier="steel"/>
       <Item identifier="uranium" copycondition="true"/>
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+    <Fabricate suitablefabricators="fabricator" requiredtime="15" requiresrecipe="true">
       <RequiredSkill identifier="electrical" level="25" />
       <RequiredItem identifier="uranium" />
       <RequiredItem identifier="steel" />
@@ -862,7 +871,6 @@
       <StatusEffect type="Always" target="this" disabledeltatime="true" comparison="And">
         <Conditional hastag="neq radiationproof" targetcontainer="true" />
         <Conditional hastag="neq fabricator" targetcontainer="true" />
-        <Conditional hastag="neq deconstructor" targetcontainer="true" />
         <sound file="%ModDir%/sounds/geigercounter.ogg" range="500.0" />
       </StatusEffect>
     </Holdable>
@@ -876,8 +884,8 @@
       <QualityStat stattype="Condition" value="0.1"/>
     </Quality>
   </Item>
-  <Item name="" identifier="thoriumfuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,volatilefuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="200" scale="0.5">
-    <PreferredContainer primary="reactorcab" />
+  <Item name="" identifier="thoriumfuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,volatilefuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="300" scale="0.5">
+    <PreferredContainer primary="fuelrodcase" secondary="reactorcab,locker" />
     <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.1"/>
     <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.02"/>
     <PreferredContainer secondary="abandonedengcab,wreckengcab" amount="1" spawnprobability="0.01"/>
@@ -894,7 +902,7 @@
       <Item identifier="lead" />
       <Item identifier="thorium" copycondition="true"/>
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="15">
+    <Fabricate suitablefabricators="fabricator" requiredtime="15" requiresrecipe="true">
       <RequiredSkill identifier="electrical" level="50" />
       <RequiredItem identifier="thorium" />
       <RequiredItem identifier="steel" />
@@ -918,7 +926,6 @@
       <StatusEffect type="Always" target="this" disabledeltatime="true" comparison="And">
         <Conditional hastag="neq radiationproof" targetcontainer="true" />
         <Conditional hastag="neq fabricator" targetcontainer="true" />
-        <Conditional hastag="neq deconstructor" targetcontainer="true" />
         <sound file="%ModDir%/sounds/geigercounter.ogg" range="500.0" />
       </StatusEffect>
     </Holdable>
@@ -932,7 +939,7 @@
       <QualityStat stattype="Condition" value="0.1"/>
     </Quality>
   </Item>
-  <Item name="30-30 Depleted Fuel Round" identifier="3030rounddepletedfuel" variantof="3030round" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
+  <Item name="" identifier="3030rounddepletedfuel" variantof="3030round" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
     <PreferredContainer primary="leveractionrifle" />
     <PreferredContainer primary="armcab" />
     <PreferredContainer secondary="secarmcab" />

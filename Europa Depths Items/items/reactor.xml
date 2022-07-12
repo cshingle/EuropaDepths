@@ -95,13 +95,13 @@
       </ConnectionPanel>
       <ItemContainer capacity="4" maxstacksize="1" canbeselected="true" hudpos="0.5,0.15" slotsperrow="1" uilabel="FuelRods">
         <Containable items="fuelrod">
-          <StatusEffect type="OnContaining" target="This" AvailableFuel="60.0" disabledeltatime="true" />
-        </Containable>
-        <Containable items="thoriumfuelrod">
           <StatusEffect type="OnContaining" target="This" AvailableFuel="80.0" disabledeltatime="true" />
         </Containable>
+        <Containable items="thoriumfuelrod">
+          <StatusEffect type="OnContaining" target="This" AvailableFuel="100.0" disabledeltatime="true" />
+        </Containable>
         <Containable items="fulguriumfuelrod">
-          <StatusEffect type="OnContaining" target="This" AvailableFuel="120.0" disabledeltatime="true" />
+          <StatusEffect type="OnContaining" target="This" AvailableFuel="150.0" disabledeltatime="true" />
         </Containable>
         <Containable items="fuelrodvolatile">
           <StatusEffect type="OnContaining" target="This" AvailableFuel="120.0" disabledeltatime="true" />

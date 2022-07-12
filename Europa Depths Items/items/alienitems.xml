@@ -169,5 +169,65 @@
       </Holdable>
       <LightComponent range="150.0" lightcolor="255,56,144,111" IsOn="true" castshadows="false" allowingameediting="false" pulseamount="0.9" pulsefrequency="0.25" />
     </Item>
+    <Item identifier="guardianpod" description="" texturescale="0.5,0.5" scale="0.5" category="Alien" Tags="alien,guardianshelter" damagedbyexplosions="true" damagedbyprojectiles="true" damagedbyrepairtools="true" damagedbymeleeweapons="true" health="500">
+      <Body width="330" height="650" bodytype="Static" />
+      <sprite name="guardianpod_background" texture="Content/Items/Alien/guardianpod.png" sourcerect="8,0,338,658" depth="0.6" origin="0.5,0.5" />
+      <DecorativeSprite name="guardianpod" texture="Content/Items/Alien/guardianpod.png" sourcerect="345,0,338,658" depth="0.03" origin="0.5,0.5" />
+      <BrokenSprite name="guardianpod_broken_gradual" texture="Content/Items/Alien/guardianpod.png" sourcerect="681,0,338,658" origin="0.5,0.5" depth="0.02" fadein="true" maxcondition="99" />
+      <BrokenSprite name="guardianpod_broken" texture="Content/Items/Alien/guardianpod.png" sourcerect="681,0,338,658" origin="0.5,0.5" depth="0.01" fadein="false" />
+      <TriggerComponent triggeredby="Creature" force="0" radius="100" allowingameediting="false">
+        <StatusEffect type="OnActive" target="This,Character" comparison="And">
+          <Conditional group="ancientalien" />
+          <Conditional IsDead="false" />
+          <Conditional AIState="FleeTo" />
+          <ReduceAffliction type="damage" amount="1.25" />
+          <ReduceAffliction type="empdamage" amount="0.75" />
+          <Affliction identifier="damageimmunity" amount="100" />
+          <Affliction identifier="concealed" amount="100" />
+          <Sound file="Content/Items/Alien/ALIEN_guardianPodLoop.ogg" loop="true" range="3000" />
+        </StatusEffect>
+      </TriggerComponent>
+      <LightComponent range="200" lightcolor="255,62,62,255" IsOn="false" castshadows="false" allowingameediting="false" vulnerabletoemp="false" flicker="0.8" flickerspeed="0.1" pulsefrequency="0.1" pulseamount="0.1">
+        <sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="1704,504,338,658" origin="0.5,0.5" size="1,1" alpha="1.0" />
+        <IsActive targetitemcomponent="TriggerComponent" triggeractive="true" />
+      </LightComponent>
+      <LightComponent range="0" lightcolor="224,81,255,70" IsOn="true" castshadows="false" allowingameediting="false" vulnerabletoemp="false" flickerspeed="0.1">
+        <sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="1704,504,338,658" origin="0.5,0.5" size="1,1" alpha="1.0" />
+      </LightComponent>
+      <ConnectionPanel canbeselected="true" hudpriority="10">
+        <RequiredItem items="screwdriver" type="Equipped" />
+        <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+        <input name="toggle" displayname="connection.togglestate" />
+        <input name="set_state" displayname="connection.setstate" />
+        <input name="shutdown" displayname="connection.shutdown">
+          <StatusEffect type="OnUse" target="This" condition="-1000" setvalue="true" />
+        </input>
+        <output name="state_out" displayname="connection.stateout" fallbackdisplayname="connection.signalout" />
+        <StatusEffect type="OnDamaged" target="This">
+          <Sound file="Content/Items/Alien/DAMAGE_guardianPodImpact1.ogg" range="3000" selectionmode="Random" />
+          <Sound file="Content/Items/Alien/DAMAGE_guardianPodImpact2.ogg" range="3000" selectionmode="Random" />
+          <Sound file="Content/Items/Alien/DAMAGE_guardianPodImpact3.ogg" range="3000" selectionmode="Random" />
+          <Sound file="Content/Items/Alien/DAMAGE_guardianPodImpact4.ogg" range="3000" selectionmode="Random" />
+          <Sound file="Content/Items/Alien/DAMAGE_guardianPodImpact5.ogg" range="3000" selectionmode="Random" />
+          <ParticleEmitter particle="plasmaspark" drawontop="true" particleamount="10" scalemin="0.3" scalemax="0.5" velocitymin="300" velocitymax="800" anglemin="0" anglemax="360" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Sound file="Content/Sounds/Damage/GlassBreak1.ogg" range="3000" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/GlassBreak2.ogg" range="3000" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/GlassBreak3.ogg" range="3000" selectionmode="Random" />
+          <Sound file="Content/Sounds/Damage/GlassBreak4.ogg" range="3000" selectionmode="Random" />
+          <ParticleEmitter particle="plasmaspark" drawontop="true" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="600" velocitymax="1000" anglemin="0" anglemax="360" />
+          <Explosion range="150.0" structuredamage="0" itemdamage="0" force="10" severlimbsprobability="0" decal="explosion" showeffects="true" flames="false" applyfireeffects="false">
+            <Affliction identifier="explosiondamage" strength="20" />
+            <Affliction identifier="stun" strength="3" />
+            <StatusEffect type="OnUse" target="NearbyCharacters" range="60" disabledeltatime="true">
+              <Conditional group="ancientalien" />
+              <ReduceAffliction identifier="damageimmunity" amount="100" />
+            </StatusEffect>
+          </Explosion>
+        </StatusEffect>
+      </ConnectionPanel>
+      <aitarget sightrange="5000" soundrange="5000" static="true" />
+    </Item>
   </Override>
 </Items>

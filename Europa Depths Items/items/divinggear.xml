@@ -406,7 +406,7 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="512,0,128,128" origin="0.5,0.5" />
       <Sprite name="Combat Diving Suit Item" texture="Content/Items/Diving/Combat_DivingSuit_Items.png" sourcerect="0,0,157,121" depth="0.55" origin="0.5,0.5" />
       <ContainedSprite name="Combat Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="Content/Items/Diving/Combat_DivingSuit_Items.png" sourcerect="181,0,70,192" depth="0.55" origin="0.5,0.5" />
-      <ContainedSprite name="Combat Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="Content/Items/Containers/containers.png" sourcerect="215,407,80,207" depth="0.55" origin="-0.12,-0.14" />
+      <ContainedSprite name="Combat Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="Content/Items/Containers/containers.png" sourcerect="215,379,80,207" depth="0.55" origin="-0.12,-0.14" />
       <ContainedSprite name="Combat Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="Content/Items/Diving/Combat_DivingSuit_Items.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
       <Body radius="45" width="34" density="15" />
       <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">

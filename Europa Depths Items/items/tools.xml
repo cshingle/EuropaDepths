@@ -1008,7 +1008,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="fuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5">
+    <Item name="" identifier="fuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" health="75">
       <PreferredContainer primary="reactorcab"/>
       <PreferredContainer secondary="nucleargun" minamount="1" maxamount="1" spawnprobability="1"/>
       <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
@@ -1058,7 +1058,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="fulguriumfuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="150" scale="0.5">
+    <Item name="" identifier="fulguriumfuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="200" scale="0.5">
       <PreferredContainer primary="reactorcab" />
       <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.2"/>
       <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.05"/>
@@ -1102,7 +1102,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="thoriumfuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="200" scale="0.5">
+    <Item name="" identifier="thoriumfuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="125" scale="0.5">
       <PreferredContainer primary="reactorcab" />
       <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.1"/>
       <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.02"/>
@@ -1478,7 +1478,7 @@
       </Sonar>
     </Item>
   </Override>
-  <Item name="Fuelrod Case" identifier="fuelrodcase" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox,radiationproof" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+  <Item name="" identifier="fuelrodcase" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox,radiationproof" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
     <PreferredContainer primary="reactorcab" />
     <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.1"/>
     <Price baseprice="50" sold="false">
@@ -1513,7 +1513,7 @@
     </ItemContainer>
     <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
   </Item>
-  <Item name="Hammer" identifier="hammer" category="Equipment" Tags="mediumitem,tool,crowbar,mountableweapon" scale="0.5" requireaimtouse="true" impactsoundtag="impact_metal_heavy">
+  <Item name="" identifier="hammer" category="Equipment" Tags="mediumitem,tool,crowbar,mountableweapon" scale="0.5" requireaimtouse="true" impactsoundtag="impact_metal_heavy">
     <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
     <PreferredContainer primary="engcab"/>
     <Price baseprice="250" sold="true">

@@ -80,7 +80,7 @@
       </ItemContainer>
     </Item>
   </Override>
-  <Item name="Mother's Tangency" identifier="clowndivingmaskunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask,diving,lightdiving" description="" scale="0.5">
+  <Item name="" identifier="clowndivingmaskunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask,diving,lightdiving" description="" scale="0.5">
     <PreferredContainer primary="divingcab,supplycab" />
     <Price baseprice="150" sold="false" canbespecial="false" />
     <Sprite name="Clown Mask" texture="Content/Items/JobGear/TalentGear.png" depth="0.6" sourcerect="328,304,51,51" origin="0.5,0.5" scale="0.5" />

@@ -63,7 +63,7 @@
       </Wearable>
     </Item>
   </Override>
-  <Item name="Captain's Cap 4" identifier="captainscap4" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" scale="0.4">
+  <Item name="" identifier="captainscap4" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" scale="0.4">
     <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true"/>
     <Price baseprice="75">
       <Price storeidentifier="merchantoutpost" minavailable="1" />
@@ -83,7 +83,7 @@
       <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound" armorsector="0.0,360.0" damagemultiplier="0.8" />
     </Wearable>
   </Item>
-  <Item name="Cowboy Hat" identifier="captainscap5" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" scale="0.4">
+  <Item name="" identifier="captainscap5" category="Equipment" tags="smallitem,clothing" cargocontaineridentifier="metalcrate" description="" scale="0.4">
     <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true"/>
     <Price baseprice="75">
       <Price storeidentifier="merchantoutpost" minavailable="1" />

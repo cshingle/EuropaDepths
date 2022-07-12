@@ -136,7 +136,7 @@
       </ItemContainer>
       <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     </Item>
-    <Item name="assaultrifleround" identifier="assaultrifleround" category="Weapon" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" hideinmenus="true" scale="0.5">
+    <Item name="" identifier="assaultrifleround" category="Weapon" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" hideinmenus="true" scale="0.5">
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,960,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="195,282,17,6" depth="0.55" origin="0.5,0.5" />
       <Body width="40" height="14" density="40" />
@@ -214,7 +214,7 @@
       </StatusEffect>
     </Projectile>
   </Item>
-  <Item name="Rifled Slug" identifier="shotgunslugshell" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="shotgunslugshell" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="armcab" secondary="secarmcab"/>
     <Price baseprice="75" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -312,7 +312,7 @@
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="202,304,48,61" origin="0.45,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="216,210,78,95" depth="0.6" origin="0.5,0.5" />
       <Body radius="30" height="30" density="40" />
-      <Wearable slots="OuterClothes" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true" pickkey="Select">
+      <Wearable slots="OuterClothes,Bag" msg="ItemMsgPickUpSelect" canbeselected="false" canbepicked="true" pickkey="Select">
         <sprite name="Security Vest" texture="Content/Items/JobGear/TalentGear.png" limb="Torso" hidelimb="false" sourcerect="215,209,79,97" inherittexturescale="true" origin="0.45,0.6" />
         <SkillModifier skillidentifier="weapons" skillvalue="15" />
         <StatValue stattype="RangedAttackSpeed" value="0.25" />
@@ -324,7 +324,7 @@
       </ItemContainer>
     </Item>
     <Item name="" identifier="boardingaxe" category="Weapon" Tags="mediumitem,weapon,gunsmith,mountableweapon" scale="0.5" requireaimtouse="true" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="secarmcab" secondary="armcab"/>
+      <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder"/>
       <Price baseprice="350" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.25" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
