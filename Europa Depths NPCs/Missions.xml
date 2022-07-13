@@ -20,7 +20,7 @@
             <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true"/>
             <message header="missionheader0.abandonedoutposthumans" text="missionmessage0.abandonedoutposthumans"/>
         </OutpostDestroyMission>
-        <OutpostDestroyMission name="Outpost Recovery" identifier="abandonedoutpostrescue" tags="abandonedoutpost" type="OutpostRescue" reward="3000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
+        <OutpostDestroyMission name="Outpost Recovery" identifier="abandonedoutpostrescue" tags="abandonedoutpost" MaxDifficulty="50" type="OutpostRescue" reward="3000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
             <Reputation identifier="location" amount="10"/>
             <Reputation identifier="coalition" amount="5"/>
             <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
@@ -45,7 +45,44 @@
             </Characters>
             <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
         </OutpostDestroyMission>
-        <OutpostNestMission name="Outpost Recovery" identifier="abandonedoutpostmudraptor" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" type="OutpostDestroy" reward="3000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+        <OutpostDestroyMission name="Outpost Recovery" identifier="abandonedoutpostrescuedire" tags="abandonedoutpost" MinDifficulty="50" type="OutpostRescue" reward="5000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
+            <Reputation identifier="location" amount="10"/>
+            <Reputation identifier="coalition" amount="5"/>
+            <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
+            <LocationType identifier="Abandoned"/>
+            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
+            <Characters>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule" multiplayeronly="true"/>
+                <Character identifier="banditleader" from="abandonedoutpostnpcsdire" spawnpointtags="banditleader"/>
+                <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true"/>
+                <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true"/>
+                <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true" multiplayeronly="true"/>
+            </Characters>
+            <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
+        </OutpostDestroyMission>
+        <OutpostNestMission name="Outpost Recovery" identifier="abandonedoutpostmudraptor" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MaxDifficulty="50" type="OutpostDestroy" reward="3000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
             <Reputation identifier="location" amount="10"/>
             <Reputation identifier="coalition" amount="5"/>
             <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
@@ -71,7 +108,33 @@
             </Items>
             <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
         </OutpostNestMission>
-        <OutpostNestMission name="Outpost Recovery" identifier="abandonedoutpostcrawler" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" type="OutpostDestroy" reward="3000" difficulty="3" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+        <OutpostNestMission name="Outpost Recovery Dire" identifier="abandonedoutpostmudraptordire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="50" type="OutpostDestroy" reward="5000" difficulty="4" commonness="15" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+            <Reputation identifier="location" amount="10"/>
+            <Reputation identifier="coalition" amount="5"/>
+            <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
+            <LocationType identifier="Abandoned"/>
+            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
+            <Characters>
+                <Character identifier="husk" min="0" max="2"/>
+                <Character identifier="mudraptor" min="10" max="10"/>
+                <Character identifier="mudraptor_veteran" min="5" max="8"/>
+                <Character identifier="mudraptor" min="5" max="10" multiplayeronly="true"/>
+            </Characters>
+            <Items>
+                <Item identifier="largemudraptoregg" spawnpointtags="nest">
+                    <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
+                </Item>
+                <Item identifier="largemudraptoregg" spawnpointtags="nest">
+                    <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9"/>
+                </Item>
+                <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
+                <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
+                <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
+                <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
+            </Items>
+            <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
+        </OutpostNestMission>
+        <OutpostNestMission name="Outpost Recovery" identifier="abandonedoutpostcrawler" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MaxDifficulty="50" type="OutpostDestroy" reward="3000" difficulty="3" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
             <Reputation identifier="location" amount="10"/>
             <Reputation identifier="coalition" amount="5"/>
             <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
@@ -96,7 +159,32 @@
             <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
             <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
         </OutpostNestMission>
-        <OutpostDestroyMission name="Outpost assassination" identifier="abandonedoutpostassassinate" tags="abandonedoutpost" type="OutpostDestroy" reward="3000" difficulty="4" commonness="20" allowretry="true" sonarlabel="target" unhideentitysubcategories="abandonedhuman">
+        <OutpostNestMission name="Outpost Recovery Dire" identifier="abandonedoutpostcrawlerdire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="50" type="OutpostDestroy" reward="5000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+            <Reputation identifier="location" amount="10"/>
+            <Reputation identifier="coalition" amount="5"/>
+            <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
+            <LocationType identifier="Abandoned"/>
+            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
+            <Characters>
+                <Character identifier="husk" min="-2" max="5"/>
+                <Character identifier="crawler" min="20" max="25"/>
+            </Characters>
+            <Items>
+                <Item identifier="crawleregg" spawnpointtags="nest">
+                    <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
+                </Item>
+                <Item identifier="crawleregg" spawnpointtags="nest">
+                    <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9"/>
+                </Item>
+                <Item identifier="crawleregg" spawnpointtags="nest"/>
+                <Item identifier="crawleregg" spawnpointtags="nest"/>
+                <Item identifier="crawleregg" spawnpointtags="nest"/>
+                <Item identifier="crawleregg" spawnpointtags="nest"/>
+            </Items>
+            <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
+            <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
+        </OutpostNestMission>
+        <OutpostDestroyMission name="Outpost assassination" identifier="abandonedoutpostassassinate" tags="abandonedoutpost" type="OutpostDestroy" MaxDifficulty="50" reward="3000" difficulty="4" commonness="20" allowretry="true" sonarlabel="target" unhideentitysubcategories="abandonedhuman">
             <Reputation identifier="location" amount="10"/>
             <Reputation identifier="coalition" amount="5"/>
             <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,512,256,256" color="214,50,48"/>
@@ -121,6 +209,40 @@
             <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true"/>
             <message header="missionheader0.abandonedoutpostassassinate" text="missionmessage0.abandonedoutpostassassinate"/>
         </OutpostDestroyMission>
+        <OutpostDestroyMission name="Outpost assassination Dire" identifier="abandonedoutpostassassinatedire" tags="abandonedoutpost" type="OutpostDestroy" MinDifficulty="50" reward="5000" difficulty="4" commonness="20" allowretry="true" sonarlabel="target" unhideentitysubcategories="abandonedhuman">
+            <Reputation identifier="location" amount="10"/>
+            <Reputation identifier="coalition" amount="5"/>
+            <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,512,256,256" color="214,50,48"/>
+            <LocationType identifier="Abandoned"/>
+            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
+            <Characters>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+                <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule" multiplayeronly="true"/>
+                <Character identifier="banditleader_heavy" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirekill="true"/>
+            </Characters>
+            <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true"/>
+            <message header="missionheader0.abandonedoutpostassassinate" text="missionmessage0.abandonedoutpostassassinate"/>
+        </OutpostDestroyMission>
         <PirateMission type="Pirate" identifier="pirate1" tags="piratehumpback" difficulty="4" commonness="20" reward="4000" achievementidentifier="piratemission" addedmissiondifficultyperplayer="8">
             <message header="Pirates detected" text=""/>
             <message header="Pirates eliminated" text=""/>
@@ -128,7 +250,7 @@
             <SubmarineTypes>
                 <Submarine path="Content/Map/EnemySubmarines/DugongPirate.sub" preferreddifficulty="10" alternatereward="3200"/>
                 <Submarine path="Content/Map/EnemySubmarines/HumpbackPirate.sub" preferreddifficulty="40" alternatereward="4400"/>
-                <Submarine path="Content/Map/EnemySubmarines/Typhon2Pirate.sub" preferreddifficulty="70" alternatereward="5600"/>
+                <Submarine path="%ModDir%/HumpbackAttackPirate.sub" preferreddifficulty="55" alternatereward="5600"/>
             </SubmarineTypes>
             <Characters>
                 <Character typeidentifier="piratecaptain" minamount="1" maxamount="1"/>
@@ -143,16 +265,24 @@
                 </CharacterType>
                 <CharacterType typeidentifier="piratesecurity">
                     <Character identifier="piratesecurityrecruit" from="piratenpcs1" preferreddifficulty="40"/>
+                    <Character identifier="piratesecuritygunner" from="piratenpcs1" preferreddifficulty="50"/>
+                    <Character identifier="piratesecuritygunner" from="piratenpcs1" preferreddifficulty="50"/>
+                    <Character identifier="piratesecuritygunner" from="piratenpcs1" preferreddifficulty="50"/>
                     <Character identifier="piratesecuritygunner" from="piratenpcs1" preferreddifficulty="60"/>
+                    <Character identifier="piratesecuritygunner" from="piratenpcs1" preferreddifficulty="60"/>
+                    <Character identifier="piratesecuritybrute" from="piratenpcs1" preferreddifficulty="70"/>
                     <Character identifier="piratesecuritybrute" from="piratenpcs1" preferreddifficulty="70"/>
                     <Character identifier="piratesecurityelite" from="piratenpcs1" preferreddifficulty="100"/>
                 </CharacterType>
                 <CharacterType typeidentifier="piratemechanic">
                     <Character identifier="piratemechanicrecruit" from="piratenpcs1" preferreddifficulty="40"/>
+                    <Character identifier="piratemechanicveteran" from="piratenpcs1" preferreddifficulty="50"/>
                     <Character identifier="piratemechanicveteran" from="piratenpcs1" preferreddifficulty="70"/>
                 </CharacterType>
                 <CharacterType typeidentifier="pirateengineer">
                     <Character identifier="pirateengineerrecruit" from="piratenpcs1" preferreddifficulty="40"/>
+                    <Character identifier="pirateengineerveteran" from="piratenpcs1" preferreddifficulty="60"/>
+                    <Character identifier="pirateengineerveteran" from="piratenpcs1" preferreddifficulty="60"/>
                     <Character identifier="pirateengineerveteran" from="piratenpcs1" preferreddifficulty="70"/>
                 </CharacterType>
             </CharacterTypes>

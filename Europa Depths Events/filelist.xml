@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Events" modversion="1.0.10" corepackage="False" steamworkshopid="2827201404" gameversion="0.18.12.0">
+<contentpackage name="Europa Depths Events" modversion="1.0.11" corepackage="False" steamworkshopid="2827201404" gameversion="0.18.12.0">
   <EventManagerSettings file="%ModDir%/EventManagerSettings.xml" />
   <Missions file="%ModDir%/Missions_Dire.xml" />
   <RandomEvents file="%ModDir%/randomevents_campaign.xml" />
   <Missions file="%ModDir%/Missions.xml" />
   <Character file="%ModDir%/Characters/Hammerheadblack/Hammerheadblack.xml" />
+  <Text file="%ModDir%/text/English.xml" />
 </contentpackage>

@@ -349,7 +349,7 @@
       <Item identifier="titaniumaluminiumalloy" amount="2" />
       <Item identifier="fulgurium" amount="2" />
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+    <Fabricate suitablefabricators="fabricator" requiresrecipe="true"  requiredtime="20">
       <RequiredSkill identifier="mechanical" level="85" />
       <Item identifier="fpgacircuit" amount="2" />
       <Item identifier="lead" />
