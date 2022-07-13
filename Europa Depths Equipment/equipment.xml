@@ -9,7 +9,7 @@
   </Item>
   <Item name="Large Shelf" identifier="shelflarge" nameidentifier="largecabinet" tags="locker,container" linkable="true" pickdistance="150" waterproof="true" width="272" height="336" texturescale="1.0,1.0" scale="0.5" category="Equipment">
     <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1504,1,272,336" depth="0.84" premultiplyalpha="false" origin="0.5,0.5" />
-    <ItemContainer capacity="36" slotsperrow="6" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect" movableframe="true">
+    <ItemContainer capacity="36" slotsperrow="6" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.25,0.55" anchor="CenterLeft" style="ItemUI" />
       <Containable items="smallitem,mediumitem" />
     </ItemContainer>

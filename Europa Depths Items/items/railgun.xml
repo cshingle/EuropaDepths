@@ -371,17 +371,17 @@
       <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5"/>
     </Price>
     <Deconstruct time="10">
-      <Item identifier="iron" copycondition="true" />
+      <Item identifier="iron" amount="2" copycondition="true" />
       <Item identifier="steel" amount="2" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
       <RequiredSkill identifier="weapons" level="25" />
-      <RequiredItem identifier="iron" />
+      <RequiredItem identifier="iron" amount="2" />
       <RequiredItem identifier="steel" amount="2" />
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="8">
       <RequiredSkill identifier="weapons" level="20" />
-      <RequiredItem identifier="iron" />
+      <RequiredItem identifier="iron" amount="2" />
       <RequiredItem identifier="railgunshrapnelshell" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
     </Fabricate>
     <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->

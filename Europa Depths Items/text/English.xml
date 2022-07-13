@@ -24,6 +24,8 @@
   <entitydescription.engineeringheadset>Longer range headset that requires batteries.</entitydescription.engineeringheadset>
   <entityname.medicalhelmet>Medic Helmet</entityname.medicalhelmet>
   <entitydescription.medicalhelmet>While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it is better than no protection.</entitydescription.medicalhelmet>
+  <entityname.thermalhelmet>Thermal Helmet</entityname.thermalhelmet>
+  <entitydescription.thermalhelmet>While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it is better than no protection.</entitydescription.thermalhelmet>
   <entityname.leveractionrifle>Lever Action Rifle</entityname.leveractionrifle>
   <entitydescription.leveractionrifle>Effective against unarmored targets. No Cowboy should leave how without it.</entitydescription.leveractionrifle>
   <entityname.3030round>30-30 Round</entityname.3030round>
@@ -40,6 +42,11 @@
   <entitydescription.thoriumfuelrodvolatile>A Thorium fuel rod that has been further refined to supply power for much longer than normal. However, its radiation shielding can only partially limit the emitted ambient radiation, so the rod must be handled with care.</entitydescription.thoriumfuelrodvolatile>
   <entityname.hammer>Hammer</entityname.hammer>
   <entitydescription.hammer>Useful for removing unwanted walls.</entitydescription.hammer>
+  <entityname.mininglaser>Mining Laser</entityname.mininglaser>
+  <entitydescription.mininglaser>Cuts through various materials using a laser.</entitydescription.mininglaser>
   <afflictionname.empdamage>EMP Damage</afflictionname.empdamage>
   <afflictiondescription.empdamage>There are signs of damage to internal components caused by an Electromagnetic Pulse.</afflictiondescription.empdamage>
+  <Override>
+    <talentdescription.miner>Unlock recipe: [itemname].\nWhenever you deconstruct an ore, you have a [probability]% chance to gain double the output.</talentdescription.miner>
+  </Override>
 </infotexts>

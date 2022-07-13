@@ -176,7 +176,7 @@
         </StatusEffect>
         <StatusEffect tags="poison" type="OnUse" target="Character" duration="20">
           <Conditional speciesgroup="mudraptor" />
-          <Affliction identifier="organdamage" amount="10" />
+          <Affliction identifier="organdamage" amount="8" />
         </StatusEffect>
       </Attack>
       <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">

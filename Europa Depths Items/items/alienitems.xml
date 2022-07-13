@@ -22,7 +22,7 @@
       </Deconstruct>
       <Body radius="45" density="50" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="Always" target="This,Hull" oxygen="-50000.0">
+        <StatusEffect type="Always" target="This,Hull" oxygen="-100000.0">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
           <ParticleEmitter particle="skyholderfx2" anglemax="360" distancemin="100" distancemax="300" velocitymin="-700" velocitymax="-1200" particlespersecond="100" />
           <ParticleEmitter particle="skyholderfx" anglemax="360" particlespersecond="2" />
@@ -51,7 +51,7 @@
       </Deconstruct>
       <Body radius="45" density="50" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="NotInWater" target="This" stackable="false" delay="30" checkconditionalalways="true">
+        <StatusEffect type="NotInWater" target="This" stackable="false" delay="15" checkconditionalalways="true">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
           <ParticleEmitter particle="thermalSetFire" anglemax="360" scalemultiplier="3,3" particleamount="40" />
           <sound file="Content/Items/Alien/AlienTurret1.ogg" range="500.0" loop="false" />
@@ -89,7 +89,7 @@
         <StatusEffect type="Always" target="This" Condition="0" delay="15" stackable="false" setvalue="true" />
         <StatusEffect type="OnBroken" target="This" Condition="100" delay="0.5" setvalue="true">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
-          <Explosion range="200.0" empstrength="5" camerashake="0" stun="0" force="2.0" flames="false" smoke="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Explosion range="400.0" empstrength="5" camerashake="0" stun="0" force="2.0" flames="false" smoke="false" shockwave="false" sparks="true" underwaterbubble="false" />
           <ParticleEmitter particle="faradayfx" anglemax="360" distancemax="80" scalemultiplier="2.6,2.6" particleamount="40" />
         </StatusEffect>
         <StatusEffect type="OnSpawn" target="This" Condition="100" delay="0.1" setvalue="true" />
@@ -163,7 +163,7 @@
         </StatusEffect>
         <StatusEffect type="OnContained" target="Character,This">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
-          <Affliction identifier="psychosis" strength="0.5" />
+          <Affliction identifier="psychosis" strength="1" />
           <ParticleEmitter particle="psychosisfx" anglemax="360" particlespersecond="12" />
         </StatusEffect>
       </Holdable>
@@ -181,7 +181,7 @@
           <Conditional IsDead="false" />
           <Conditional AIState="FleeTo" />
           <ReduceAffliction type="damage" amount="1.25" />
-          <ReduceAffliction type="empdamage" amount="0.75" />
+          <ReduceAffliction type="empdamage" amount="1.0" />
           <Affliction identifier="damageimmunity" amount="100" />
           <Affliction identifier="concealed" amount="100" />
           <Sound file="Content/Items/Alien/ALIEN_guardianPodLoop.ogg" loop="true" range="3000" />
@@ -228,6 +228,41 @@
         </StatusEffect>
       </ConnectionPanel>
       <aitarget sightrange="5000" soundrange="5000" static="true" />
+    </Item>
+    <Item name="" identifier="spinelingspike" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+      <Sprite texture="Content/Characters/Spineling/Spineling.png" sourcerect="0,215,180,18" depth="0.55" />
+      <Body width="160" height="10" density="20" />
+      <Projectile characterusable="false" launchimpulse="200" maxtargetstohit="3" sticktocharacters="true" sticktoitems="false" sticktostructures="true" penetration="0.25" friendlyfire="false">
+        <Attack structuredamage="20" severlimbsprobability="0.5">
+          <!--Hits up to 3 limbs, so the actual damage can be 3x-->
+          <Affliction identifier="lacerations" strength="10" />
+          <Affliction identifier="bleeding" strength="10" />
+          <Affliction identifier="stun" strength="0.25" />
+          <Affliction identifier="stun" strength="4" probability="0.25" />
+        </Attack>
+        <StatusEffect type="OnActive" target="This" lifetime="0.5">
+          <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="0" anglemax="0" particleamount="10" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" />
+        </StatusEffect>
+        <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1">
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This" condition="-34"/>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="eq Structure"/>
+          <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="5" velocitymin="100" velocitymax="2000" scalemin="0.1" scalemax="0.2" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="eq Structure"/>
+          <Conditional hastag="eq door"/>
+          <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This">
+          <Remove />
+        </StatusEffect>
+      </Projectile>
+      <LightComponent range="200" castshadows="False" drawbehindsubs="False" ison="True" blinkfrequency="0" lightcolor="200,200,255,20" isactive="True" minvoltage="0" powerconsumption="0" vulnerabletoemp="False" pickingtime="0" canbepicked="False" allowingameediting="False" msg="">
+        <Sprite texture="Content/Characters/Spineling/Spineling.png" sourcerect="0,230,180,23" origin="0.5,0.6" alpha="0.5"/>
+      </LightComponent>
     </Item>
   </Override>
 </Items>

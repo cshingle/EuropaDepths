@@ -24,6 +24,8 @@
     <entitydescription.engineeringheadset>需要電池運作的長距離耳機。</entitydescription.engineeringheadset>
     <entityname.medicalhelmet>醫療頭盔</entityname.medicalhelmet>
     <entitydescription.medicalhelmet>雖然對於冰洋中的大多數居民來說，它脆弱如紙，但總比沒保護好。</entitydescription.medicalhelmet>
+    <entityname.thermalhelmet>Thermal Helmet</entityname.thermalhelmet>
+    <entitydescription.thermalhelmet>雖然對於冰洋中的大多數居民來說，它脆弱如紙，但總比沒保護好。</entitydescription.thermalhelmet>
     <entityname.leveractionrifle>槓桿式步槍</entityname.leveractionrifle>
     <entitydescription.leveractionrifle>對無裝甲目標有奇效，任何牛仔都應該有一把。</entitydescription.leveractionrifle>
     <entityname.3030round>30-30子彈</entityname.3030round>
@@ -40,6 +42,8 @@
     <entitydescription.thoriumfuelrodvolatile>一根經過進一步提煉的雷素燃料棒，可以在正常情況下提供更長時間的電力。然而，它的輻射屏罩層只能限制部份環境輻射，因此必須小心處理該燃料棒。</entitydescription.thoriumfuelrodvolatile>
     <entityname.hammer>槌子</entityname.hammer>
     <entitydescription.hammer>對移除沒用的牆壁特別有效。</entitydescription.hammer>
+    <entityname.mininglaser>Mining Laser</entityname.mininglaser>
+    <entitydescription.mininglaser>Cuts through various materials using a laser.</entitydescription.mininglaser>
     <afflictionname.empdamage>EMP Damage</afflictionname.empdamage>
     <afflictiondescription.empdamage>There are signs of damage to internal components caused by an Electromagnetic Pulse .</afflictiondescription.empdamage>
 </infotexts>
