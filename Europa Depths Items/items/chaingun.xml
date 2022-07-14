@@ -186,8 +186,8 @@
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
       </Price>
       <Deconstruct time="10">
-        <Item identifier="lead" mincondition="0.10" copycondition="true" />
-        <Item identifier="titanium" mincondition="0.10" copycondition="true"/>
+        <Item identifier="lead" copycondition="true" mincondition="0.25" />
+        <Item identifier="titanium" copycondition="true" mincondition="0.25"/>
         <Item identifier="aluminium" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
@@ -228,8 +228,8 @@
         <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" minavailable="1"/>
       </Price>
       <Deconstruct time="10">
-        <Item identifier="physicorium" mincondition="0.10" copycondition="true" />
-        <Item identifier="titanium" mincondition="0.10" copycondition="true"/>
+        <Item identifier="physicorium" copycondition="true" mincondition="0.25" />
+        <Item identifier="titanium" copycondition="true" mincondition="0.25" />
         <Item identifier="aluminium" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
@@ -270,8 +270,8 @@
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
       </Price>
       <Deconstruct time="10">
-        <Item identifier="lead" mincondition="0.10" copycondition="true" />
-        <Item identifier="titaniumaluminiumalloy" mincondition="0.10" copycondition="true" />
+        <Item identifier="lead" copycondition="true" mincondition="0.25" />
+        <Item identifier="titaniumaluminiumalloy" copycondition="true" mincondition="0.25" />
         <Item identifier="aluminium" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">

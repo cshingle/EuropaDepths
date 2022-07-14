@@ -28,9 +28,9 @@
       <RequiredItem identifier="potassium" />
     </Fabricate>
     <Deconstruct time="20">
-      <Item identifier="calcium" copycondition="true" mincondition="0.1" />
-      <Item identifier="potassium" copycondition="true" mincondition="0.1" />
-      <Item identifier="zinc" copycondition="true" mincondition="0.1" />
+      <Item identifier="calcium" copycondition="true" mincondition="0.25" />
+      <Item identifier="potassium" copycondition="true" mincondition="0.25" />
+      <Item identifier="zinc" copycondition="true" mincondition="0.25" />
     </Deconstruct>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,704,64,64" origin="0.5,0.5" />
     <Sprite texture="Medicines.png" sourcerect="383,5,33,87" depth="0.6" origin="0.5,0.5" />
@@ -76,9 +76,9 @@
       <RequiredItem identifier="carbon" />
     </Fabricate>
     <Deconstruct time="20">
-      <Item identifier="phosphorus" copycondition="true" mincondition="0.1" />
-      <Item identifier="carbon" copycondition="true" mincondition="0.1" />
-      <Item identifier="chlorine" copycondition="true" mincondition="0.1" />
+      <Item identifier="phosphorus" copycondition="true" mincondition="0.25" />
+      <Item identifier="carbon" copycondition="true" mincondition="0.25" />
+      <Item identifier="chlorine" copycondition="true" mincondition="0.25" />
     </Deconstruct>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,448,64,64" origin="0.5,0.5" />
     <Sprite texture="Medicines.png" sourcerect="75,0,37,69" depth="0.6" origin="0.5,0.5" />
@@ -152,8 +152,8 @@
       <RequiredItem identifier="antidama2" />
     </Fabricate>
     <Deconstruct time="20">
-      <Item identifier="tonicliquid" copycondition="true" mincondition="0.1" />
-      <Item identifier="antidama2" copycondition="true" mincondition="0.1" />
+      <Item identifier="tonicliquid" copycondition="true" mincondition="0.25" />
+      <Item identifier="antidama2" copycondition="true" mincondition="0.25" />
     </Deconstruct>
     <!-- TODO: sprite -->
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,448,64,64" origin="0.5,0.5" />
@@ -221,8 +221,8 @@
       <RequiredItem identifier="steroids" />
     </Fabricate>
     <Deconstruct time="20">
-      <Item identifier="meth" copycondition="true" mincondition="0.1" />
-      <Item identifier="steroids" copycondition="true" mincondition="0.1" />
+      <Item identifier="meth" copycondition="true" mincondition="0.25" />
+      <Item identifier="steroids" copycondition="true" mincondition="0.25" />
     </Deconstruct>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,448,64,64" origin="0.5,0.5" />
     <Sprite texture="Medicines.png" sourcerect="149,0,37,69" depth="0.6" origin="0.5,0.5" />

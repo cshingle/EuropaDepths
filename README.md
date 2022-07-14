@@ -43,13 +43,19 @@ Short list of current features:
 * Small buff to stun weapons
 * Narrow the beams on the tri-lazer from 20 to 15
 * Added Medic Helmet
+* Added Thermal Helmet
 * Added Lever Action Rifle
 * Added 30-30 Rifle round
 * Added Depleted 30-30 Rifle round
 * Added Cowboy Hat
-* Added Hammer for quickly destroying things
+* Added Hammer for quickly destroying things and opening doors
+* Added Mining Laser item that is unlocked by the Mechanic Miner talent
 * Swapped the damage modifiers for diving suits. Combat Suits and Slit Suits now provide better production then standard, abyss and puc suits
 * Replaced several Vanilla ammunition sprites with better looking custom ones
+* Doubled the impulse of Depth Charges from 5 to 10 so they sink faster
+* Made depthcharges cheaper since they are worse then a rail gun round in almost every way
+* Made the Alien Flare work
+* Made the Alien Flare buoyant to differentiate it from the normal one
 
 ## Europa Depths NPCs
 Europa Depths NPCs adjusts the load outs and balance of NPC characters to make Pirates and Abandoned Outposts more challenging.

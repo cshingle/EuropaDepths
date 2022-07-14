@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <Override>
-    <Item name="" identifier="depletedfuel" category="Fuel" maxstacksize="8" Tags="smallitem" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.4" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="depletedfuel" category="Fuel" maxstacksize="8" Tags="smallitem" canbepicked="true" cargocontaineridentifier="metalcrate" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" scale="0.4" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="reactorcab" />
       <Price baseprice="75" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -78,9 +78,9 @@
         <RequiredItem identifier="coilgunammoboxdepletedfuel" mincondition="0.0" maxcondition="0.0" usecondition="false" />
       </Fabricate>
       <Deconstruct time="10">
-        <Item identifier="depletedfuel" copycondition="true" />
-        <Item identifier="depletedfuel" copycondition="true" />
-        <Item identifier="steel" copycondition="true" />
+        <Item identifier="depletedfuel" copycondition="true" mincondition="0.125" />
+        <Item identifier="depletedfuel" copycondition="true" mincondition="0.125" />
+        <Item identifier="steel" copycondition="true" mincondition="0.25" />
         <Item identifier="aluminium" />
       </Deconstruct>
       <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="907,782,117,89" origin="0.5,0.5" />
@@ -101,7 +101,7 @@
       <Body width="160" height="10" density="20" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
       <Projectile characterusable="false" launchimpulse="90.0">
-        <Attack structuredamage="25" itemdamage="15" severlimbsprobability="0.6" penetration="0.4">
+        <Attack structuredamage="25" itemdamage="15" severlimbsprobability="0.5" penetration="0.4">
           <Affliction identifier="lacerations" strength="15" />
           <Affliction identifier="bleeding" strength="1.5" />
           <Affliction identifier="stun" strength="0.025" />
@@ -142,13 +142,11 @@
       </Price>
       <Deconstruct>
         <Item identifier="iron" />
-        <Item identifier="depletedfuel" />
-        <Item identifier="depletedfuel" />
+        <Item identifier="depletedfuel" amount="2" />
       </Deconstruct>
       <Fabricate requiresrecipe="true">
         <RequiredItem identifier="wrench" />
-        <RequiredItem identifier="depletedfuel" />
-        <RequiredItem identifier="depletedfuel" />
+        <RequiredItem identifier="depletedfuel" amount="2" />
       </Fabricate>
       <MeleeWeapon reload="*1.3">
         <Attack targetimpulse="8" penetration="0.25">
@@ -167,13 +165,11 @@
       <Price baseprice="+150" sold="false" />
       <Deconstruct>
         <Item identifier="iron" />
-        <Item identifier="depletedfuel" />
-        <Item identifier="depletedfuel" />
+        <Item identifier="depletedfuel" amount="2" />
       </Deconstruct>
       <Fabricate requiresrecipe="true">
         <RequiredItem identifier="crowbar" />
-        <RequiredItem identifier="depletedfuel" />
-        <RequiredItem identifier="depletedfuel" />
+        <RequiredItem identifier="depletedfuel" amount="2" />
       </Fabricate>
       <MeleeWeapon reload="*1.3">
         <Attack targetimpulse="13" penetration="0.25">
@@ -184,20 +180,21 @@
       </MeleeWeapon>
     </Item>
     <Item name="" identifier="screwdriverhardened" variantof="screwdriver" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" addedrepairspeedmultiplier="0.25">
-      <PreferredContainer spawnprobability="0" />
-      <PreferredContainer spawnprobability="0" />
-      <PreferredContainer spawnprobability="0" />
-      <PreferredContainer spawnprobability="0" />
+      <PreferredContainer secondary="respawncontainer" spawnprobability="0" notcampaign="true"/>
+      <PreferredContainer primary="reactorcab,engcab" spawnprobability="0"/>
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0"/>
+      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
+      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" spawnprobability="0" />
+      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
+      <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
       <Price baseprice="+150" sold="false" />
       <Deconstruct>
         <Item identifier="iron" />
-        <Item identifier="depletedfuel" />
-        <Item identifier="depletedfuel" />
+        <Item identifier="depletedfuel" amount="2" />
       </Deconstruct>
       <Fabricate requiresrecipe="true">
         <RequiredItem identifier="screwdriver" />
-        <RequiredItem identifier="depletedfuel" />
-        <RequiredItem identifier="depletedfuel" />
+        <RequiredItem identifier="depletedfuel" amount="2" />
       </Fabricate>
       <MeleeWeapon reload="*1.3">
         <Attack targetimpulse="8" penetration="0.25">
@@ -221,13 +218,11 @@
       </Price>
       <Deconstruct>
         <Item identifier="iron" />
-        <Item identifier="depletedfuel" />
-        <Item identifier="depletedfuel" />
+        <Item identifier="depletedfuel" amount="2" />
       </Deconstruct>
       <Fabricate requiresrecipe="true">
         <RequiredItem identifier="divingknife" />
-        <RequiredItem identifier="depletedfuel" />
-        <RequiredItem identifier="depletedfuel" />
+        <RequiredItem identifier="depletedfuel" amount="2" />
       </Fabricate>
       <MeleeWeapon reload="*1.3">
         <Attack targetimpulse="4" itemdamage="20" penetration="0.25">
@@ -281,18 +276,18 @@
         <RequiredSkill identifier="weapons" level="40" />
         <RequiredSkill identifier="electrical" level="30" />
         <RequiredItem identifier="magnesium" />
-        <RequiredItem identifier="depletedfuel" usecondition="true" mincondition="0.5" />
+        <RequiredItem identifier="depletedfuel" />
         <RequiredItem identifier="steel" />
       </Fabricate>
       <Fabricate suitablefabricators="fabricator" requiredtime="18" requiresrecipe="true" displayname="recycleitem">
         <RequiredSkill identifier="weapons" level="40" />
         <RequiredSkill identifier="electrical" level="30" />
         <RequiredItem identifier="magnesium" />
-        <RequiredItem identifier="depletedfuel" usecondition="true" mincondition="0.5" />
-        <RequiredItem identifier="smgmagazinedepletedfuel" mincondition="0.0" usecondition="false"/>
+        <RequiredItem identifier="depletedfuel" />
+        <RequiredItem identifier="smgmagazinedepletedfuel" mincondition="0.0" maxcondition="0.25" usecondition="false"/>
       </Fabricate>
       <Deconstruct time="15">
-        <Item identifier="depletedfuel" copycondition="true" outcondition="0.5" />
+        <Item identifier="depletedfuel" copycondition="true" mincondition="0.25" />
         <Item identifier="steel" />
       </Deconstruct>
       <Sprite texture="Content/Items/Weapons/weapons_new.png" />
@@ -307,7 +302,7 @@
       <Sprite texture="Content/Items/Weapons/weapons_new.png" />
       <Projectile>
         <ParticleEmitter colormultiplier="200,255,80,175" />
-        <Attack structuredamage="5" targetforce="5" itemdamage="20" severlimbsprobability="0.05" penetration="0.25">
+        <Attack structuredamage="5" targetforce="5" itemdamage="20" severlimbsprobability="0.1" penetration="0.25">
           <Affliction identifier="bleeding" strength="5" />
           <Affliction identifier="gunshotwound" strength="15" />
           <Affliction identifier="stun" strength="0.15" />
@@ -498,11 +493,13 @@
       <Deconstruct time="20">
         <Item identifier="aluminium" amount="2" />
         <Item identifier="titaniumaluminiumalloy" amount="2" />
+        <Item identifier="fpgacircuit" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true">
         <RequiredSkill identifier="mechanical" level="30" />
         <RequiredItem identifier="aluminium" amount="2" />
         <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
+        <RequiredItem identifier="fpgacircuit" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="131,123,53,58" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" depth="0.55" sourcerect="295,195,149,105" origin="0.5,0.5" />
@@ -785,8 +782,8 @@
       <Deconstruct time="15">
         <Item identifier="steel" />
         <Item identifier="lead" />
-        <Item identifier="fulgurium" copycondition="true" />
-        <Item identifier="thorium" copycondition="true" />
+        <Item identifier="fulgurium" copycondition="true" mincondition="0.25" />
+        <Item identifier="thorium" copycondition="true" mincondition="0.25" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="25" requiresrecipe="true">
         <RequiredSkill identifier="electrical" level="70" />
@@ -845,7 +842,7 @@
     </Price>
     <Deconstruct time="10">
       <Item identifier="steel"/>
-      <Item identifier="uranium" copycondition="true"/>
+      <Item identifier="uranium" copycondition="true" mincondition="0.25" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="15" requiresrecipe="true">
       <RequiredSkill identifier="electrical" level="25" />
@@ -900,7 +897,7 @@
     <Deconstruct time="10">
       <Item identifier="steel"/>
       <Item identifier="lead" />
-      <Item identifier="thorium" copycondition="true"/>
+      <Item identifier="thorium" copycondition="true" mincondition="0.25" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="15" requiresrecipe="true">
       <RequiredSkill identifier="electrical" level="50" />
@@ -963,7 +960,7 @@
         <Affliction identifier="gunshotwound" strength="40" />
         <Affliction identifier="bleeding" strength="35" />
         <Affliction identifier="stun" strength="0.6" />
-        <Affliction identifier="blunttrauma" strength="1.5" />
+        <Affliction identifier="blunttrauma" strength="5" />
         <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
           <Conditional radiationsickness="lt 30" />
           <Affliction identifier="radiationsickness" strength="10" />

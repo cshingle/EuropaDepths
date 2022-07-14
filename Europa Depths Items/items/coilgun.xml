@@ -239,8 +239,8 @@
         <Price storeidentifier="merchantarmory" multiplier="1.0" minavailable="15"/>
       </Price>
       <Deconstruct time="10">
-        <Item identifier="lead" mincondition="0.10" copycondition="true"/>
-        <Item identifier="steel" mincondition="0.10" copycondition="true"/>
+        <Item identifier="lead" copycondition="true" mincondition="0.25" />
+        <Item identifier="steel" copycondition="true" mincondition="0.25" />
         <Item identifier="aluminium"/>
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
@@ -287,8 +287,8 @@
       <Price storeidentifier="merchantarmory" multiplier="1.0" sold="true" minavailable="6" />
     </Price>
     <Deconstruct time="10">
-      <Item identifier="copper" mincondition="0.10" copycondition="true"/>
-      <Item identifier="steel" mincondition="0.10" copycondition="true"/>
+      <Item identifier="copper" copycondition="true" mincondition="0.25" />
+      <Item identifier="steel" copycondition="true" mincondition="0.25" />
       <Item identifier="aluminium"/>
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
@@ -345,8 +345,8 @@
         <RequiredItem identifier="physicoriumammobox" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
       </Fabricate>
       <Deconstruct time="10">
-        <Item identifier="steel" mincondition="0.10" copycondition="true"/>
-        <Item identifier="physicorium" mincondition="0.10" copycondition="true"/>
+        <Item identifier="steel" copycondition="true" mincondition="0.25" />
+        <Item identifier="physicorium" copycondition="true" mincondition="0.25" />
         <Item identifier="aluminium"/>
       </Deconstruct>
       <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
@@ -380,8 +380,8 @@
         <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" maxavailable="2" />
       </Price>
       <Deconstruct time="10">
-        <Item identifier="steel" copycondition="true"/>
-        <Item identifier="ic4block" copycondition="true" mincondition="0.1" />
+        <Item identifier="steel" copycondition="true" mincondition="0.25" />
+        <Item identifier="ic4block" copycondition="true" mincondition="0.25" />
         <Item identifier="aluminium" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
@@ -427,8 +427,8 @@
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="8"/>
       </Price>
       <Deconstruct time="10">
-        <Item identifier="titaniumaluminiumalloy" mincondition="0.10" copycondition="true" />
-        <Item identifier="steel" mincondition="0.10" copycondition="true"/>
+        <Item identifier="titaniumaluminiumalloy" copycondition="true" mincondition="0.25" />
+        <Item identifier="steel" copycondition="true" mincondition="0.25" />
         <Item identifier="aluminium"/>
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">

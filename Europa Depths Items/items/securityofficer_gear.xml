@@ -110,7 +110,7 @@
       <PreferredContainer primary="secarmcab" amount="3" notcampaign="true"/>
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab,outpostarmcab" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="armcab"/>
-      <Price baseprice="300">
+      <Price baseprice="400">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
         <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="false" />
         <Price storeidentifier="merchantresearch" sold="false" />
@@ -144,7 +144,7 @@
       <PreferredContainer primary="secarmcab" amount="1" notcampaign="true"/>
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab,outpostarmcab" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="armcab"/>
-      <Price baseprice="175">
+      <Price baseprice="225">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
         <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="false"/>
         <Price storeidentifier="merchantresearch" sold="false" />
@@ -173,7 +173,7 @@
       <PreferredContainer primary="secarmcab" amount="1" notcampaign="true"/>
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab,outpostarmcab" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="armcab"/>
-      <Price baseprice="175">
+      <Price baseprice="225">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
         <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="false"/>
         <Price storeidentifier="merchantresearch" sold="false" />
@@ -203,7 +203,7 @@
       <PreferredContainer primary="secarmcab" amount="1" notcampaign="true"/>
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab,outpostarmcab" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="armcab"/>
-      <Price baseprice="175">
+      <Price baseprice="225">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
         <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" sold="false"/>
         <Price storeidentifier="merchantresearch" sold="false" />
@@ -242,11 +242,11 @@
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
       </Price>
       <Deconstruct time="10">
-        <Item identifier="steel" />
+        <Item identifier="iron" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="10">
         <RequiredSkill identifier="weapons" level="20" />
-        <RequiredItem identifier="steel" />
+        <RequiredItem identifier="iron" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,0,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Jobgear/Mechanic/safetyharness.png" sourcerect="405,0,56,49" depth="0.6" />

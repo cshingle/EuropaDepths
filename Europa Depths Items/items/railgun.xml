@@ -304,7 +304,7 @@
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5"/>
       </Price>
       <Deconstruct time="10">
-        <Item identifier="lead" copycondition="true" />
+        <Item identifier="lead" copycondition="true" mincondition="0.25" />
         <Item identifier="steel" amount="2" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
@@ -371,7 +371,7 @@
       <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="5"/>
     </Price>
     <Deconstruct time="10">
-      <Item identifier="iron" amount="2" copycondition="true" />
+      <Item identifier="iron" amount="2" copycondition="true" mincondition="0.25" />
       <Item identifier="steel" amount="2" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">

@@ -36,18 +36,18 @@
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05"/>
       <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.1"/>
       <Deconstruct time="10">
-        <Item identifier="steel" />
+        <Item identifier="steel" amount="2" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
         <RequiredSkill identifier="mechanical" level="20" />
-        <Item identifier="steel" />
+        <Item identifier="steel" amount="2" />
       </Fabricate>
-      <Price baseprice="25">
-        <Price storeidentifier="merchantoutpost" minavailable="4" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="6" />
+      <Price baseprice="60">
+        <Price storeidentifier="merchantoutpost" minavailable="1" />
+        <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
         <Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="1" />
         <Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="1" />
-        <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="8" />
+        <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="4" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6" />
       <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" origin="0.5,0.5" depth="0.6" />
@@ -266,11 +266,11 @@
         <Price storeidentifier="merchantengineering" minavailable="10" multiplier="0.9"/>
       </Price>
       <Deconstruct time="10">
-        <Item identifier="aluminium" />
+        <Item identifier="aluminium" amount="2" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="10">
         <RequiredSkill identifier="mechanical" level="20" />
-        <RequiredItem identifier="aluminium" />
+        <RequiredItem identifier="aluminium" amount="2" />
         <RequiredItem identifier="ethanol" />
       </Fabricate>
       <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="5">
@@ -312,11 +312,11 @@
         <Price storeidentifier="merchantmine" multiplier="1.4" />
       </Price>
       <Deconstruct time="10">
-        <Item identifier="aluminium" />
+        <Item identifier="aluminium" amount="2" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="15">
         <RequiredSkill identifier="mechanical" level="40" />
-        <RequiredItem identifier="aluminium" />
+        <RequiredItem identifier="aluminium" amount="2" />
         <RequiredItem identifier="incendium" />
       </Fabricate>
       <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="10">
@@ -377,7 +377,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="sprayer" category="Equipment" Tags="smallitem,tool" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="sprayer" category="Equipment" Tags="smallitem,tool,mountableweapon" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="engcab"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05"/>
       <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab" amount="1" spawnprobability="0.1"/>
@@ -436,7 +436,7 @@
       <aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
     </Item>
 
-    <Item name="" identifier="screwdriver" category="Equipment" Tags="smallitem,simpletool,tool,electricalrepairtool" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Item name="" identifier="screwdriver" category="Equipment" Tags="smallitem,simpletool,tool,electricalrepairtool,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer primary="reactorcab,engcab"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.2"/>
@@ -482,7 +482,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="wrench" category="Equipment" Tags="smallitem,tool,simpletool,mechanicalrepairtool,wrenchitem" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Item name="" identifier="wrench" category="Equipment" Tags="smallitem,tool,simpletool,mechanicalrepairtool,wrenchitem,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer primary="engcab"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.2"/>
@@ -521,7 +521,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="crowbar" category="Equipment" Tags="smallitem,tool,simpletool,dooropeningtool,crowbaritem" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Item name="" identifier="crowbar" category="Equipment" Tags="smallitem,tool,simpletool,dooropeningtool,crowbaritem,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer primary="engcab"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1"/>
@@ -658,7 +658,7 @@
         </StatusEffect>
         <StatusEffect type="OnActive" targettype="This" SoundRange="50000" setvalue="true">
           <Conditional Voltage="gt 0.5" targetitemcomponent="LightComponent" />
-          <!-- This should be painful if it is on out of water -->
+          <!-- This should be painful if it is on out of water? Yes, it should -->
           <sound file="Content/Items/Weapons/SonarDecoy.ogg" range="500.0" loop="true" volume="0.25" dontmuffle="true" />
         </StatusEffect>
       </LightComponent>
@@ -770,7 +770,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="alienflare" category="Equipment,Alien" maxstacksize="8" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,light,provocative" impactsoundtag="impact_soft">
+    <Item name="" identifier="alienflare" category="Equipment,Alien" maxstacksize="8" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,light,provocative" impactsoundtag="impact_soft" isshootable="true">
       <PreferredContainer primary="divingcab"/>
       <PreferredContainer secondary="abandonedstoragecab,wreckstoragecab" amount="1" spawnprobability="0.01"/>
       <PreferredContainer secondary="ruintreasure" minamount="2" maxamount="4" spawnprobability="0.05"/>
@@ -787,7 +787,7 @@
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="68,966,54,54" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Tools/tools.png" sourcerect="283,205,54,18" depth="0.55" origin="0.5,0.5" />
-      <Body width="50" height="15" density="12" />
+      <Body width="50" height="15" density="10" />
       <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" holdangle="90" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
       <LightComponent LightColor="0,162,232,255" Flicker="0.5" range="1000" IsOn="false">
         <StatusEffect type="OnUse" targettype="This" IsOn="true">
@@ -805,7 +805,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="flamer" category="Equipment" Tags="smallitem,weapon,gun" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="flamer" category="Equipment" Tags="smallitem,weapon,gun,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="secarmcab" amount="1" spawnprobability="0.2" notcampaign="true"/>
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" amount="1" spawnprobability="0.1"/>
@@ -979,13 +979,13 @@
       <PreferredContainer secondary="wrecksupplycab" amount="1" spawnprobability="0.02"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
       <Deconstruct time="10">
-        <Item identifier="aluminium" />
+        <Item identifier="aluminium" amount="2" />
         <Item identifier="liquidoxygenite" mincondition="0.1" />
         <Item identifier="liquidoxygenite" mincondition="0.9" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" outcondition="1.0" requiredtime="5">
         <RequiredSkill identifier="mechanical" level="40" />
-        <RequiredItem identifier="aluminium" />
+        <RequiredItem identifier="aluminium" amount="2" />
         <RequiredItem identifier="liquidoxygenite" />
         <RequiredItem identifier="liquidoxygenite" />
       </Fabricate>
@@ -1025,7 +1025,7 @@
       <Deconstruct time="10">
         <Item identifier="steel"/>
         <Item identifier="lead" />
-        <Item identifier="uranium" copycondition="true"/>
+        <Item identifier="uranium" copycondition="true" mincondition="0.25" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="15">
         <RequiredSkill identifier="electrical" level="25" />
@@ -1058,7 +1058,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="fulguriumfuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="200" scale="0.5">
+    <Item name="" identifier="fulguriumfuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="175" scale="0.5">
       <PreferredContainer primary="reactorcab" />
       <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.2"/>
       <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.05"/>
@@ -1074,7 +1074,7 @@
       <Deconstruct time="10">
         <Item identifier="steel"/>
         <Item identifier="lead" />
-        <Item identifier="fulgurium" copycondition="true"/>
+        <Item identifier="fulgurium" copycondition="true" mincondition="0.25" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="15">
         <RequiredSkill identifier="electrical" level="60" />
@@ -1118,7 +1118,7 @@
       <Deconstruct time="10">
         <Item identifier="steel"/>
         <Item identifier="lead" />
-        <Item identifier="thorium" copycondition="true"/>
+        <Item identifier="thorium" copycondition="true" mincondition="0.25" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="15">
         <RequiredSkill identifier="electrical" level="50" />
@@ -1171,9 +1171,9 @@
         <RequiredItem identifier="alienblood" />
       </Fabricate>
       <Deconstruct time="20">
-        <Item identifier="ethanol" copycondition="true" mincondition="0.1" />
-        <Item identifier="rubber" copycondition="true" mincondition="0.1" />
-        <Item identifier="alienblood" copycondition="true" mincondition="0.1" />
+        <Item identifier="ethanol" copycondition="true" mincondition="0.25" />
+        <Item identifier="rubber" copycondition="true" mincondition="0.25" />
+        <Item identifier="alienblood" copycondition="true" mincondition="0.25" />
       </Deconstruct>
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
       <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
@@ -1208,9 +1208,9 @@
         <RequiredItem identifier="copper" />
       </Fabricate>
       <Deconstruct time="20">
-        <Item identifier="ethanol" copycondition="true" mincondition="0.1" />
-        <Item identifier="rubber" copycondition="true" mincondition="0.1" />
-        <Item identifier="copper" copycondition="true" mincondition="0.1" />
+        <Item identifier="ethanol" copycondition="true" mincondition="0.25" />
+        <Item identifier="rubber" copycondition="true" mincondition="0.25" />
+        <Item identifier="copper" copycondition="true" mincondition="0.25" />
       </Deconstruct>
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
       <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
@@ -1245,9 +1245,9 @@
         <RequiredItem identifier="zinc" />
       </Fabricate>
       <Deconstruct time="20">
-        <Item identifier="ethanol" copycondition="true" mincondition="0.1" />
-        <Item identifier="rubber" copycondition="true" mincondition="0.1" />
-        <Item identifier="zinc" copycondition="true" mincondition="0.1" />
+        <Item identifier="ethanol" copycondition="true" mincondition="0.25" />
+        <Item identifier="rubber" copycondition="true" mincondition="0.25" />
+        <Item identifier="zinc" copycondition="true" mincondition="0.25" />
       </Deconstruct>
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
       <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
@@ -1282,9 +1282,9 @@
         <RequiredItem identifier="zinc" />
       </Fabricate>
       <Deconstruct time="20">
-        <Item identifier="ethanol" copycondition="true" mincondition="0.1" />
-        <Item identifier="rubber" copycondition="true" mincondition="0.1" />
-        <Item identifier="zinc" copycondition="true" mincondition="0.1" />
+        <Item identifier="ethanol" copycondition="true" mincondition="0.25" />
+        <Item identifier="rubber" copycondition="true" mincondition="0.25" />
+        <Item identifier="zinc" copycondition="true" mincondition="0.25" />
       </Deconstruct>
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
       <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
@@ -1319,9 +1319,9 @@
         <RequiredItem identifier="zinc" />
       </Fabricate>
       <Deconstruct time="20">
-        <Item identifier="ethanol" copycondition="true" mincondition="0.1" />
-        <Item identifier="rubber" copycondition="true" mincondition="0.1" />
-        <Item identifier="zinc" copycondition="true" mincondition="0.1" />
+        <Item identifier="ethanol" copycondition="true" mincondition="0.25" />
+        <Item identifier="rubber" copycondition="true" mincondition="0.25" />
+        <Item identifier="zinc" copycondition="true" mincondition="0.25" />
       </Deconstruct>
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
       <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
@@ -1349,7 +1349,7 @@
       </Deconstruct>
       <Body width="150" height="77" density="40" />
       <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="50,0" handle1="-55,-20" handle2="-15,-10" msg="ItemMsgPickUpSelect" />
-      <RepairTool firedamage="20.0" structurefixamount="0.0" range="500" barrelpos="35,10" fireprobability="0.005" repairmultiple="true" repairthroughwalls="false" repairthroughholes="true" combatpriority="90" spread="25" unskilledspread="25">
+      <RepairTool firedamage="20.0" structurefixamount="0.0" range="500" barrelpos="35,10" fireprobability="0.01" repairmultiple="true" repairthroughwalls="false" repairthroughholes="true" combatpriority="90" spread="25" unskilledspread="25">
         <RequiredItems items="weldingtoolfuel" type="Contained" msg="ItemMsgWeldingFuelRequired" />
         <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="100" />
         <ParticleEmitter particle="steamspray" particlespersecond="80" anglemin="0" anglemax="0" velocitymin="1500" velocitymax="2000" highqualitycollisiondetection="true"/>
@@ -1481,7 +1481,7 @@
   <Item name="" identifier="fuelrodcase" category="Equipment" tags="smallitem,mobilecontainer,tool,toolbox,radiationproof" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
     <PreferredContainer primary="reactorcab" />
     <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.1"/>
-    <Price baseprice="50" sold="false">
+    <Price baseprice="60" sold="false">
       <Price storeidentifier="merchantoutpost" />
       <Price storeidentifier="merchantcity" multiplier="0.9" />
       <Price storeidentifier="merchantresearch" multiplier="1.25" />

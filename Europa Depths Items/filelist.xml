@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Items" modversion="1.0.13" corepackage="False" steamworkshopid="2821614540" gameversion="0.18.12.0">
+<contentpackage name="Europa Depths Items" modversion="1.0.14" corepackage="False" steamworkshopid="2821614540" gameversion="0.18.15.0">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Item file="%ModDir%/items/alienitems.xml" />
   <Item file="%ModDir%/items/assistant_gear.xml" />
@@ -35,7 +35,6 @@
   <Talents file="%ModDir%/talents/TalentsSecurity.xml" />
   <Item file="%ModDir%/items/tools.xml" />
   <Item file="%ModDir%/items/weapons.xml" />
-  <Item file="%ModDir%/items/items.xml" />
   <Other file="%ModDir%/sprites/items.png" />
   <Other file="%ModDir%/sprites/beam.png" />
   <Text file="%ModDir%/text/English.xml" />

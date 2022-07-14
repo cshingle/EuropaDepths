@@ -34,8 +34,8 @@
       </Rope>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
         <Attack structuredamage="20" itemdamage="40" targetforce="5" severlimbsprobability="0.1">
-          <Affliction identifier="bleeding" strength="30" />
-          <Affliction identifier="lacerations" strength="30" />
+          <Affliction identifier="bleeding" strength="28" />
+          <Affliction identifier="lacerations" strength="28" />
           <Affliction identifier="stun" strength="0.3" />
         </Attack>
         <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
@@ -80,7 +80,7 @@
         </StatusEffect>
       </Rope>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
-        <Attack structuredamage="30" itemdamage="60" targetforce="10" severlimbsprobability="0.1">
+        <Attack structuredamage="30" itemdamage="60" targetforce="10" severlimbsprobability="0.2">
           <Affliction identifier="bleeding" strength="35" />
           <Affliction identifier="lacerations" strength="57.5" />
           <Affliction identifier="stun" strength="1" />
@@ -167,10 +167,9 @@
     </Fabricate>
     <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
       <Attack structuredamage="20" itemdamage="40" targetforce="5" severlimbsprobability="0.1">
-        <Affliction identifier="bleeding" strength="30" />
-        <Affliction identifier="lacerations" strength="30" />
-        <Affliction identifier="stun" strength="0.3" />
-        <Affliction identifier="stun" strength="0.3" />
+        <Affliction identifier="bleeding" strength="28" />
+        <Affliction identifier="lacerations" strength="28" />
+        <Affliction identifier="stun" strength="0.4" />
         <StatusEffect tags="poison" type="OnUse" target="Character" duration="20">
           <Affliction identifier="nausea" amount="5" />
         </StatusEffect>
@@ -261,8 +260,8 @@
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,175" scalemultiplier="1,0.6"/>
         <Attack structuredamage="10" targetforce="10" itemdamage="20" severlimbsprobability="0.2" armorpenetration="0.1">
-          <Affliction identifier="gunshotwound" strength="35" />
-          <Affliction identifier="bleeding" strength="30" />
+          <Affliction identifier="gunshotwound" strength="30" />
+          <Affliction identifier="bleeding" strength="28" />
           <Affliction identifier="stun" strength="0.4" />
         </Attack>
         <StatusEffect type="OnImpact" target="UseTarget">
@@ -277,7 +276,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="revolver" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,stunner,gun,pistolitem,gunsmith" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="revolver" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,stunner,gun,pistolitem,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
       <!--
       An example on using the PreferredContainer:
       
@@ -363,7 +362,7 @@
       </ItemContainer>
       <aitarget sightrange="2000" soundrange="5000" fadeouttime="5" />
       <Quality>
-        <QualityStat stattype="StrikingPowerMultiplier" value="0.1"/>
+        <QualityStat stattype="FirepowerMultiplier" value="0.1"/>
       </Quality>
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
@@ -376,8 +375,8 @@
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,175" scalemultiplier="1,0.6"/>
         <Attack structuredamage="5" targetforce="5" itemdamage="10" severlimbsprobability="0.1">
-          <Affliction identifier="bleeding" strength="12.5" />
           <Affliction identifier="gunshotwound" strength="12.5" />
+          <Affliction identifier="bleeding" strength="12.5" />
           <Affliction identifier="stun" strength="0.15" />
         </Attack>
         <StatusEffect type="OnImpact" target="UseTarget">
@@ -392,7 +391,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="smgmagazine" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,smgammo" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="smgmagazine" maxstacksize="2" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,smgammo" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="smg,smgunique" amount="1" spawnprobability="1"/>
       <PreferredContainer primary="armcab" amount="1" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
@@ -419,7 +418,7 @@
         <RequiredItem identifier="smgmagazine" mincondition="0.0" usecondition="false"/>
       </Fabricate>
       <Deconstruct time="10">
-        <Item identifier="lead" copycondition="true"/>
+        <Item identifier="lead" copycondition="true" mincondition="0.25" />
         <Item identifier="steel" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,960,64,64" />
@@ -896,10 +895,10 @@
           <sound file="Content/Items/Weapons/StunGrenade.ogg" />
         </StatusEffect>
         <!--Destroy this after exploding-->
-        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true" >
           <Remove />
         </StatusEffect>
-        <StatusEffect type="OnBroken">
+        <StatusEffect type="OnBroken" >
           <Remove />
         </StatusEffect>
       </Projectile>
@@ -1096,8 +1095,8 @@
       <Projectile characterusable="false" hitscan="true" hitscancount="8" removeonhit="true" spread="15">
         <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,100" scalemultiplier="1,0.5"/>
         <Attack structuredamage="1" targetforce="4" itemdamage="15" severlimbsprobability="0.5">
-          <Affliction identifier="bleeding" strength="6" />
           <Affliction identifier="gunshotwound" strength="8" />
+          <Affliction identifier="bleeding" strength="6" />
           <Affliction identifier="stun" strength="0.2" />
         </Attack>
         <StatusEffect type="OnImpact" target="UseTarget">
@@ -1117,7 +1116,7 @@
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5"/>
       <PreferredContainer secondary="wreckarmcab,wrecksecarmcab,abandonedarmcab,abandonedsecarmcab" minamount="1" maxamount="3" spawnprobability="0.2"/>
       <PreferredContainer secondary="secarmcab"/>
-      <Price baseprice="30">
+      <Price baseprice="20">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="4" sold="true"/>
         <Price storeidentifier="merchantresearch" sold="false" multiplier="1.25" />
@@ -1125,7 +1124,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="12" />
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" amount="6">
+      <Fabricate suitablefabricators="fabricator" requiredtime="20" amount="12">
         <RequiredSkill identifier="weapons" level="30" />
         <RequiredItem identifier="magnesium" />
         <RequiredItem identifier="rubber" />
@@ -1161,7 +1160,7 @@
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="4" />
       </Price>
       <Deconstruct time="10">
-        <Item identifier="steel"/>
+        <Item identifier="steel" />
         <Item identifier="plastic" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
@@ -1507,8 +1506,8 @@
     <Projectile characterusable="false" hitscan="true" removeonhit="true">
       <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,175" scalemultiplier="1,0.6"/>
       <Attack structuredamage="10" targetforce="10" itemdamage="20" severlimbsprobability="0.2" armorpenetration="0.15">
-        <Affliction identifier="gunshotwound" strength="40" />
-        <Affliction identifier="bleeding" strength="35" />
+        <Affliction identifier="gunshotwound" strength="38" />
+        <Affliction identifier="bleeding" strength="33" />
         <Affliction identifier="stun" strength="0.6" />
         <Affliction identifier="blunttrauma" strength="5" />
       </Attack>
