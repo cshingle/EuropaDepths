@@ -34,8 +34,8 @@
       </Rope>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
         <Attack structuredamage="20" itemdamage="40" targetforce="5" severlimbsprobability="0.1">
-          <Affliction identifier="bleeding" strength="28" />
-          <Affliction identifier="lacerations" strength="28" />
+          <Affliction identifier="bleeding" strength="30" />
+          <Affliction identifier="lacerations" strength="30" />
           <Affliction identifier="stun" strength="0.3" />
         </Attack>
         <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
@@ -167,8 +167,8 @@
     </Fabricate>
     <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
       <Attack structuredamage="20" itemdamage="40" targetforce="5" severlimbsprobability="0.1">
-        <Affliction identifier="bleeding" strength="28" />
-        <Affliction identifier="lacerations" strength="28" />
+        <Affliction identifier="bleeding" strength="30" />
+        <Affliction identifier="lacerations" strength="30" />
         <Affliction identifier="stun" strength="0.4" />
         <StatusEffect tags="poison" type="OnUse" target="Character" duration="20">
           <Affliction identifier="nausea" amount="5" />
@@ -260,8 +260,8 @@
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,175" scalemultiplier="1,0.6"/>
         <Attack structuredamage="10" targetforce="10" itemdamage="20" severlimbsprobability="0.2" armorpenetration="0.1">
-          <Affliction identifier="gunshotwound" strength="30" />
-          <Affliction identifier="bleeding" strength="28" />
+          <Affliction identifier="gunshotwound" strength="35" />
+          <Affliction identifier="bleeding" strength="30" />
           <Affliction identifier="stun" strength="0.4" />
         </Attack>
         <StatusEffect type="OnImpact" target="UseTarget">
@@ -1506,8 +1506,8 @@
     <Projectile characterusable="false" hitscan="true" removeonhit="true">
       <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,175" scalemultiplier="1,0.6"/>
       <Attack structuredamage="10" targetforce="10" itemdamage="20" severlimbsprobability="0.2" armorpenetration="0.15">
-        <Affliction identifier="gunshotwound" strength="38" />
-        <Affliction identifier="bleeding" strength="33" />
+        <Affliction identifier="gunshotwound" strength="40" />
+        <Affliction identifier="bleeding" strength="35" />
         <Affliction identifier="stun" strength="0.6" />
         <Affliction identifier="blunttrauma" strength="5" />
       </Attack>
