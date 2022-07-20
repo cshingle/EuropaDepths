@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Europa Depths Npcs Lite" modversion="1.0.12" corepackage="False" steamworkshopid="2838048209" gameversion="0.18.15.0">
+  <NPCSets file="%ModDir%/PirateNpcs.xml" />
+  <Missions file="%ModDir%/Missions.xml" />
+  <EnemySubmarine file="%ModDir%/HumpbackAttackPirate.sub" />
+</contentpackage>
