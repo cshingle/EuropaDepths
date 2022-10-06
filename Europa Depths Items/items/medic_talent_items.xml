@@ -22,7 +22,7 @@
         <RequiredItem identifier="plastic" />
         <RequiredItem identifier="fpgacircuit" />
       </Fabricate>
-      <WifiComponent range="38000.0" LinkToChat="true" MinChatMessageInterval="0.0" />
+      <WifiComponent range="35000.0" LinkToChat="true" MinChatMessageInterval="0.0" />
       <ItemContainer capacity="1" maxstacksize="1" autoinject="true">
         <SlotIcon slotindex="0" texture="Content/UI/ContainerIndicators.png" sourcerect="2,155,120,29" origin="0.5,0.5" />
         <Containable items="chem,medical" />
@@ -30,30 +30,6 @@
       <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
         <sprite name="Headset Wearable" texture="Content/Items/JobGear/TalentGear.png" sourcerect="253,305,76,58" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hideotherwearables="false" origin="0.5,0.5" />
       </Wearable>
-    </Item>
-    <Item name="" identifier="skillbookeuropanmedicine" category="Misc" Tags="smallitem,skillbook" maxstacksize="8" scale="0.5" impactsoundtag="impact_soft">
-      <PreferredContainer primary="crewcab"/>
-      <Price baseprice="350" buyingpricemodifier="2.5" minleveldifficulty="40">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" maxavailable="1" />
-        <Price storeidentifier="merchantresearch" maxavailable="1" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
-      <Deconstruct time="20">
-        <Item identifier="carbon" />
-      </Deconstruct>
-      <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="1,368,40,56" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="2,75,32,38" depth="0.6" origin="0.5,0.5" />
-      <Body width="28" height="36" density="20" />
-      <MeleeWeapon slots="Any,RightHand+LeftHand" aimable="false" aimpos="40,-20" handle1="5,0" holdangle="260" swingamount="0,3" swingspeed="0.5" swingwhenaiming="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-10" />
-        <StatusEffect type="OnSecondaryUse" target="This,Character" disabledeltatime="true">
-          <Conditional Condition="lte 0" />
-          <GiveSkill skillidentifier="medical" amount="10" />
-          <RemoveItem />
-        </StatusEffect>
-      </MeleeWeapon>
     </Item>
     <Item name="" identifier="combatstimulantsyringe" category="Medical" maxstacksize="8" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
@@ -107,12 +83,12 @@
     </Item>
     <Item name="" identifier="pressurestabilizer" category="Medical" maxstacksize="8" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
-      <Price baseprice="200" buyingpricemodifier="5" >
+      <Price baseprice="200" buyingpricemodifier="5">
         <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
+        <Price storeidentifier="merchantcity" multiplier="0.9" />
+        <Price storeidentifier="merchantresearch" multiplier="0.9" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.1" />
+        <Price storeidentifier="merchantmine" multiplier="1.1" />
       </Price>
       <Fabricate suitablefabricators="medicalfabricator" requiredtime="35" amount="2" requiresrecipe="true">
         <RequiredSkill identifier="medical" level="40" />
@@ -198,7 +174,7 @@
       <Price baseprice="550" sold="false" minleveldifficulty="65">
         <Price storeidentifier="merchantoutpost" />
         <Price storeidentifier="merchantcity" multiplier="0.9" />
-        <Price storeidentifier="merchantresearch" multiplier="1.1" />
+        <Price storeidentifier="merchantresearch" multiplier="1.1" sold="true" />
         <Price storeidentifier="merchantmilitary" multiplier="1.1" />
         <Price storeidentifier="merchantmine" />
       </Price>

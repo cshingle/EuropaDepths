@@ -35,7 +35,7 @@
       <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="6,3" sheetelementsize="128,128"/>
       <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
         <Conditions>
-          <AbilityConditionServerRandom randomchance="0.75"/>
+          <AbilityConditionServerRandom randomchance="0.6"/>
           <AbilityConditionItem tags="smgammo,shotgunammo,stungunammo"/>
         </Conditions>
         <Abilities>

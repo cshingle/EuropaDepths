@@ -21,7 +21,7 @@
 
     <Item name="" identifier="depthchargeshell" tags="depthchargeammo" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_heavy">
       <PreferredContainer primary="depthchargeloader" secondary="ammoboxcontainer" />
-      <Price baseprice="75" minavailable="1">
+      <Price baseprice="30" minavailable="1">
         <Price storeidentifier="merchantoutpost" multiplier="1.4" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="2" />
         <Price storeidentifier="merchantresearch" multiplier="1.25" />
@@ -29,13 +29,11 @@
         <Price storeidentifier="merchantmine" multiplier="1.25" />
       </Price>
       <Deconstruct time="10">
-        <Item identifier="iron" amount="2" />
-        <Item identifier="aluminium" />
+        <Item identifier="iron" amount="2"/>
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
         <RequiredSkill identifier="weapons" level="25" />
         <RequiredItem identifier="iron" amount="2" />
-        <RequiredItem identifier="aluminium" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,128,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="0,0,130,89" depth="0.55" origin="0.5,0.5" />
@@ -71,7 +69,7 @@
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="30">
         <RequiredSkill identifier="weapons" level="40" />
-        <RequiredItem identifier="iron" amount="2" />
+        <RequiredItem identifier="depthchargeshell" />
         <RequiredItem identifier="uranium" />
         <RequiredItem identifier="ic4block" />
       </Fabricate>
@@ -83,15 +81,21 @@
         <Attack structuredamage="2" damagetype="Blunt">
           <Affliction identifier="blunttrauma" strength="10" />
         </Attack>
-        <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" type="OnImpact" selectionmode="Random" range="50000" />
-        <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" type="OnImpact" selectionmode="Random" range="50000" />
+        <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" type="OnUse" volume="10" selectionmode="Random" range="50000" dontmuffle="true" />
+        <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" type="OnUse" volume="10" selectionmode="Random" range="50000" dontmuffle="true" />
         <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
-          <Explosion range="1000.0" structuredamage="2000" ballastfloradamage="1000" force="50.0" severlimbsprobability="1.5" decal="explosion" decalsize="1.0" camerashake="500" camerashakerange="50000" flashrange="10000" flashduration="5.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="3.0">
-            <Affliction identifier="burn" strength="300" />
+        <Explosion range="1500.0" structuredamage="600" itemdamage="1000" ballastfloradamage="1000" force="50.0" severlimbsprobability="2" decal="explosion" decalsize="1.0"
+           camerashake="1000" camerashakerange="50000"
+           flashrange="10000" flashduration="5.0"
+           screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="5.0" penetration="0.5">
+            <Affliction identifier="explosiondamage" strength="1000" />
+            <Affliction identifier="burn" strength="1000" />
             <Affliction identifier="radiationsickness" strength="100" />
-            <Affliction identifier="explosiondamage" strength="400" />
-            <Affliction identifier="stun" strength="20" />
+            <Affliction identifier="bleeding" strength="500" probability="0.05" />
+            <Affliction identifier="stun" strength="30" />
           </Explosion>
+          <Explosion range="2000" force="0.0" smoke="false" sparks="false" empstrength="2.5" applyfireeffects="false"/>
+          <ParticleEmitter particle="underwaterexplosion" anglemin="0" anglemax="360" particleamount="3" velocitymin="0" velocitymax="0" scalemin="15" scalemax="15" />
           <SpawnItem identifier="nuclearaftereffectemitter" spawnposition="This"/>
         </StatusEffect>
         <StatusEffect type="OnImpact" target="Contained" allowwhenbroken="true">
@@ -119,12 +123,12 @@
       </Price>
       <Deconstruct time="10">
         <Item identifier="iron" amount="2" />
-        <Item identifier="aluminium" />
+        <Item identifier="uranium" />
+        <Item identifier="ic4block" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
         <RequiredSkill identifier="weapons" level="25" />
-        <RequiredItem identifier="iron" amount="2" />
-        <RequiredItem identifier="aluminium" />
+        <RequiredItem identifier="depthchargeshell" />
         <RequiredItem identifier="sonarbeacon" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="267,64,41,61" origin="0.5,0.5" />
@@ -162,16 +166,15 @@
         <Item identifier="iron" />
         <Item identifier="uranium" />
         <Item identifier="ic4block" />
+        <Item identifier="sonarbeacon" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="30">
         <RequiredSkill identifier="weapons" level="40" />
-        <RequiredItem identifier="iron" />
-        <RequiredItem identifier="uranium" />
-        <RequiredItem identifier="ic4block" />
+        <RequiredItem identifier="nucleardepthcharge" />
         <RequiredItem identifier="sonarbeacon" />
       </Fabricate>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="267,64,41,61" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="138,380,129,88" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="524,259,41,61" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="270,379,129,88" depth="0.55" origin="0.5,0.5" />
       <Body width="128" height="85" density="12" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,20" handle2="10,20" aimable="false" msg="ItemMsgPickUpSelect" />
       <AiTarget soundrange="10000" fadeouttime="50" />
@@ -182,15 +185,18 @@
         <Attack structuredamage="2" damagetype="Blunt">
           <Affliction identifier="blunttrauma" strength="10" />
         </Attack>
-        <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" type="OnImpact" selectionmode="Random" range="20000" />
-        <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" type="OnImpact" selectionmode="Random" range="20000" />
+        <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" type="OnUse" volume="10" selectionmode="Random" range="50000" dontmuffle="true" />
+        <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" type="OnUse" volume="10" selectionmode="Random" range="50000" dontmuffle="true" />
         <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
-          <Explosion range="1000.0" structuredamage="2000" ballastfloradamage="1000" force="50.0" severlimbsprobability="1.5" decal="explosion" decalsize="1.0" camerashake="500" camerashakerange="50000" flashrange="10000" flashduration="5.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="3.0">
-            <Affliction identifier="burn" strength="300" />
+          <Explosion range="1500.0" structuredamage="600" itemdamage="1000" ballastfloradamage="1000" force="50.0" severlimbsprobability="2" decal="explosion" decalsize="1.0" camerashake="1000" camerashakerange="50000" flashrange="10000" flashduration="5.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="5.0" penetration="0.5">
+            <Affliction identifier="explosiondamage" strength="1000" />
+            <Affliction identifier="burn" strength="1000" />
             <Affliction identifier="radiationsickness" strength="100" />
-            <Affliction identifier="explosiondamage" strength="400" />
-            <Affliction identifier="stun" strength="20" />
+            <Affliction identifier="bleeding" strength="500" probability="0.05" />
+            <Affliction identifier="stun" strength="30" />
           </Explosion>
+          <Explosion range="2000" force="0.0" smoke="false" sparks="false" empstrength="2.5" applyfireeffects="false"/>
+          <ParticleEmitter particle="underwaterexplosion" anglemin="0" anglemax="360" particleamount="3" velocitymin="0" velocitymax="0" scalemin="15" scalemax="15" />
           <SpawnItem identifier="nuclearaftereffectemitter" spawnposition="This"/>
         </StatusEffect>
         <StatusEffect type="OnImpact" target="Contained">

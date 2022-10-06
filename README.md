@@ -62,6 +62,9 @@ Europa Depths NPCs adjusts the load outs and balance of NPC characters to make P
 All bandits have some kind of weapon and are an actual threat.
 Elite Pirates are a major threat.
 
+## Europa Depths NPCs Lite
+This is a varient of Europa Depths NPCs that ajusts the abandon outpost missions, but does not override the outpostnpcs1 and abandonedoutpostnpcs sets to be more compatible with other mods that do override these NPC sets like Enhanced Armaments.
+
 ## Europa Depths Events
 Europa Depths Events adds additional monster spawns to bring more challenge to the game.
 This increases the number of monsters that spawn per event and increases the number of events.

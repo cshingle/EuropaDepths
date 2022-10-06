@@ -21,7 +21,7 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="130,183,61,52" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="64,3,36,28" depth="0.55" origin="0.5,0.5" />
-      <Body width="40" height="22" density="40" />
+    <Body width="40" height="22" density="25" />
       <AiTarget sight="500" staticsight="true" />
       <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect" />
       <MiniMap enableitemfinder="false" enablehullcondition="false" enableelectricalview="false" drawhudwhenequipped="true" displaybordersize="-0.1" characterusable="false" allowuioverlap="true">
@@ -37,19 +37,14 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.25" />
         <Price storeidentifier="merchantmine" />
       </Price>
-      <Deconstruct time="10">
-        <Item identifier="copper" amount="0.5" />
-        <Item identifier="silicon" amount="0.5" />
-        <Item identifier="steel" amount="0.5" />
-      </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="2">
         <RequiredItem identifier="copper" />
         <RequiredItem identifier="silicon" />
-        <RequiredItem identifier="steel" />
+      <RequiredItem identifier="tin" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="251,1,56,57" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="113,239,57,19" depth="0.55" origin="0.5,0.5" />
-      <Body width="60" height="15" density="50" />
+    <Body width="60" height="15" density="25" />
       <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" holdangle="-80" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSuccess" target="This">
           <Remove />
@@ -68,7 +63,7 @@
       </Price>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="0,312,58,56" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" depth="0.8" sourcerect="7,129,56,61" origin="0.5,0.5" />
-      <Body width="50" height="55" density="30" />
+    <Body width="50" height="55" density="25" />
       <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true">
         <RequiredSkill identifier="mechanical" level="50" />
         <RequiredItem identifier="dementonite" amount="2" />
@@ -146,9 +141,9 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="198,132,67,57" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="58,326,143,40" depth="0.6" origin="0.5,0.5" />
-      <Body width="120" height="35" density="40" />
+    <Body width="120" height="35" density="25" />
       <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
-        <damagemodifier afflictiontypes="lacerations" armorsector="0.0,360.0" damagemultiplier="0.1" />
+      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.1" />
         <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.1" />
         <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.25" />
         <sprite name="safetyharness Torso" texture="Content/Items/Jobgear/Mechanic/safetyharness.png" limb="Torso" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
@@ -168,7 +163,7 @@
       <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
       <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0"/>
       <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
-      <Price baseprice="+200" sold="false">
+    <Price baseprice="450" sold="false">
         <Price storeidentifier="merchantoutpost" />
         <Price storeidentifier="merchantcity" multiplier="0.9" />
         <Price storeidentifier="merchantresearch" />
@@ -177,11 +172,11 @@
       </Price>
       <Deconstruct>
         <Item identifier="iron" />
-        <Item identifier="dementonite" />
+        <Item identifier="dementonite" amount="2" />
       </Deconstruct>
       <Fabricate requiresrecipe="true">
+      <RequiredItem identifier="dementonite" amount="2" />
         <RequiredItem identifier="wrench" />
-        <RequiredItem identifier="dementonite" />
       </Fabricate>
       <MeleeWeapon reload="*0.7">
         <Attack targetimpulse="8">
@@ -201,14 +196,14 @@
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
       <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0" />
       <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
-      <Price baseprice="+200" sold="false" />
+    <Price baseprice="450" sold="false" />
       <Deconstruct>
         <Item identifier="iron" />
-        <Item identifier="dementonite" />
+        <Item identifier="dementonite" amount="2" />
       </Deconstruct>
       <Fabricate requiresrecipe="true">
         <RequiredItem identifier="crowbar" />
-        <RequiredItem identifier="dementonite" />
+        <RequiredItem identifier="dementonite" amount="2" />
       </Fabricate>
       <MeleeWeapon reload="*0.7">
         <Attack targetimpulse="13">
@@ -234,14 +229,14 @@
       <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" spawnprobability="0" />
       <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
       <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
-      <Price baseprice="+200" sold="false" />
+    <Price baseprice="450" sold="false" />
       <Deconstruct>
         <Item identifier="iron" />
-        <Item identifier="dementonite" />
+        <Item identifier="dementonite" amount="2" />
       </Deconstruct>
       <Fabricate requiresrecipe="true">
         <RequiredItem identifier="screwdriver" />
-        <RequiredItem identifier="dementonite" />
+        <RequiredItem identifier="dementonite" amount="2" />
       </Fabricate>
       <MeleeWeapon reload="*0.7">
         <Attack targetimpulse="8">
@@ -260,7 +255,8 @@
       <PreferredContainer secondary="abandonedstoragecab" spawnprobability="0"/>
       <PreferredContainer secondary="beaconsupplycab" spawnprobability="0"/>
       <PreferredContainer primary="armcab,secarmcab" spawnprobability="0" />
-      <Price baseprice="+200" sold="false">
+    
+    <Price baseprice="450" sold="false">
         <Price storeidentifier="merchantoutpost" />
         <Price storeidentifier="merchantcity" multiplier="0.9" />
         <Price storeidentifier="merchantresearch" />
@@ -290,7 +286,7 @@
     </Item>
     <Item name="" identifier="fixfoamgrenade" category="Equipment" maxstacksize="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="engcab" secondary="locker"/>
-      <Price baseprice="55" sold="false">
+    <Price baseprice="95" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
         <Price storeidentifier="merchantcity" multiplier="1.3" />
         <Price storeidentifier="merchantresearch" multiplier="1.2" />
@@ -299,8 +295,8 @@
       </Price>
       <Deconstruct time="10">
         <Item identifier="steel" amount="0.5" />
-        <Item identifier="sodium" mincondition="1.0" amount="0.5" />
-        <Item identifier="phosphorus" mincondition="1.0" amount="0.5" />
+        <Item identifier="sodium" mincondition="0.95" amount="0.5" />
+        <Item identifier="phosphorus" mincondition="0.95" amount="0.5" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="2">
         <RequiredSkill identifier="mechanical" level="35" />

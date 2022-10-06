@@ -13,4 +13,8 @@
     <entitydescription.distiller>A place to drink your problems away.</entitydescription.distiller>
     <entityname.largerailgunshellrack>Large Railgun Shell Rack</entityname.largerailgunshellrack>
     <entitydescription.largerailgunshellrack>A way to neatly stow railgun shells.</entitydescription.largerailgunshellrack>
+    <entityname.largeengine_boost>大型引擎</entityname.largeengine_boost>
+    <entitydescription.largeengine_boost>在水準方向上產生動能的裝置。</entitydescription.largeengine_boost>
+    <entityname.oxygentankshelflarge>氧氣罐置物架</entityname.oxygentankshelflarge>
+    <entitydescription.oxygentankshelflarge>可擺放多個氧氣罐。</entitydescription.oxygentankshelflarge>
 </infotexts>

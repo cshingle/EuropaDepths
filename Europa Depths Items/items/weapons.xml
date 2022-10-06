@@ -23,7 +23,7 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,968,55,55" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="85,368,168,11" depth="0.55" origin="0.5,0.5" />
-      <Body width="160" height="10" density="20" />
+      <Body width="160" height="10" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
       <Rope sourcepullforce="300" targetpullforce="100" projectilepullforce="5" maxlength="1500" snaponcollision="false" spritewidth="3" tile="true" origin="0.05,0.5" targetminmass="30" lerpforces="true" snapanimduration="0.5">
         <Sprite texture="Content/Map/Thalamus/thalamus.png" sourcerect="617,352,174,32" depth="0.57" origin="0.5,0.5" />
@@ -33,10 +33,10 @@
         </StatusEffect>
       </Rope>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
-        <Attack structuredamage="20" itemdamage="40" targetforce="5" severlimbsprobability="0.1">
-          <Affliction identifier="bleeding" strength="30" />
-          <Affliction identifier="lacerations" strength="30" />
-          <Affliction identifier="stun" strength="0.3" />
+        <Attack structuredamage="20" itemdamage="40" targetforce="20" severlimbsprobability="0.1">
+<Affliction identifier="lacerations" strength="40" />
+<Affliction identifier="bleeding" strength="40" />
+<Affliction identifier="stun" strength="0.5" />
         </Attack>
         <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
           <Conditional Snapped="false" />
@@ -70,7 +70,7 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="449,968,55,55" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="85,398,170,14" depth="0.55" origin="0.5,0.5" />
-      <Body width="160" height="10" density="20" />
+      <Body width="160" height="10" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
       <Rope sourcepullforce="300" targetpullforce="100" projectilepullforce="5" maxlength="1500" snaponcollision="false" spritewidth="3" tile="true" origin="0.05,0.5" targetminmass="30" lerpforces="true" snapanimduration="0.5">
         <Sprite texture="Content/Map/Thalamus/thalamus.png" sourcerect="617,352,174,32" depth="0.57" origin="0.5,0.5" />
@@ -80,11 +80,11 @@
         </StatusEffect>
       </Rope>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
-        <Attack structuredamage="30" itemdamage="60" targetforce="10" severlimbsprobability="0.2">
-          <Affliction identifier="bleeding" strength="35" />
-          <Affliction identifier="lacerations" strength="57.5" />
-          <Affliction identifier="stun" strength="1" />
-        </Attack>
+<Attack structuredamage="30" itemdamage="60" targetforce="20" severlimbsprobability="0.2">
+  <Affliction identifier="lacerations" strength="60" />
+  <Affliction identifier="bleeding" strength="60" />
+  <Affliction identifier="stun" strength="0.5" />
+</Attack>
         <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
           <Conditional Snapped="false" />
           <Conditional mass="lt 30"/>
@@ -117,21 +117,19 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="385,968,55,55" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="85,381,168,15" depth="0.55" origin="0.5,0.5" />
-      <Body width="160" height="10" density="20" />
+      <Body width="160" height="10" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" severlimbsprobability="0.1">
-        <Attack structuredamage="20" itemdamage="100">
-          <Affliction identifier="lacerations" strength="20" />
-          <Affliction identifier="stun" strength="0.4" />
-        </Attack>
+<Attack structuredamage="20" targetforce="10" penetration="0.5">
+  <Affliction identifier="explosiondamage" strength="25" />
+</Attack>
         <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" type="OnUse" range="2000" selectionmode="All" />
         <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" type="OnUse" range="2000" />
         <StatusEffect type="OnUse" Condition="-100.0" stun="10.0" disabledeltatime="true">
-          <Explosion range="200.0" structuredamage="10" itemdamage="250" stun="2" force="5" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
-            <Affliction identifier="bleeding" strength="50" />
-            <Affliction identifier="explosiondamage" strength="40" />
-            <Affliction identifier="stun" strength="1" />
-          </Explosion>
+<Explosion range="200.0" ballastfloradamage="50" structuredamage="10" levelwalldamage="50" itemdamage="250" force="5" severlimbsprobability="0.25">
+  <Affliction identifier="burn" strength="50" />
+  <Affliction identifier="stun" strength="1.5" />
+</Explosion>
         </StatusEffect>
         <!--Destroy this after exploding-->
         <StatusEffect type="OnUse" target="This" disabledeltatime="true">
@@ -166,10 +164,10 @@
       <RequiredItem identifier="raptorbaneextract" />
     </Fabricate>
     <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
-      <Attack structuredamage="20" itemdamage="40" targetforce="5" severlimbsprobability="0.1">
-        <Affliction identifier="bleeding" strength="30" />
-        <Affliction identifier="lacerations" strength="30" />
-        <Affliction identifier="stun" strength="0.4" />
+      <Attack structuredamage="20" itemdamage="40" targetforce="20" severlimbsprobability="0.1">
+<Affliction identifier="lacerations" strength="40" />
+<Affliction identifier="bleeding" strength="40" />
+<Affliction identifier="stun" strength="0.5" />
         <StatusEffect tags="poison" type="OnUse" target="Character" duration="20">
           <Affliction identifier="nausea" amount="5" />
         </StatusEffect>
@@ -262,7 +260,7 @@
         <Attack structuredamage="10" targetforce="10" itemdamage="20" severlimbsprobability="0.2" armorpenetration="0.1">
           <Affliction identifier="gunshotwound" strength="35" />
           <Affliction identifier="bleeding" strength="30" />
-          <Affliction identifier="stun" strength="0.4" />
+          <Affliction identifier="stun" strength="0.3" />
         </Attack>
         <StatusEffect type="OnImpact" target="UseTarget">
           <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" />
@@ -342,9 +340,9 @@
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,64,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,418,76,41" depth="0.55" origin="0.5,0.5" />
-      <Body width="72" height="40" density="50" />
+      <Body width="72" height="40" density="25" />
       <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="70,5" handle1="-25,-7" msg="ItemMsgPickUpSelect" />
-      <RangedWeapon barrelpos="29,11" spread="0" unskilledspread="2" combatPriority="70" drawhudwhenequipped="true" crosshairscale="0.2">
+      <RangedWeapon barrelpos="29,11" spread="0" unskilledspread="2" combatPriority="70" drawhudwhenequipped="true" crosshairscale="0.2" reload="0.5">
         <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
         <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
         <Sound file="Content/Items/Weapons/Revolver1.ogg" type="OnUse" range="3000" selectionmode="Random" />
@@ -370,7 +368,7 @@
     <Item name="" identifier="smground" category="Weapon" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" hideinmenus="true" scale="0.5">
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,960,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="195,282,17,6" depth="0.55" origin="0.5,0.5" />
-      <Body width="40" height="14" density="40" />
+      <Body width="40" height="14" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,175" scalemultiplier="1,0.6"/>
@@ -418,12 +416,12 @@
         <RequiredItem identifier="smgmagazine" mincondition="0.0" usecondition="false"/>
       </Fabricate>
       <Deconstruct time="10">
-        <Item identifier="lead" copycondition="true" mincondition="0.25" />
+        <Item identifier="lead" mincondition="0.95"/>
         <Item identifier="steel" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,960,64,64" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" depth="0.54" sourcerect="146,157,33,44" origin="0.5,0.5" />
-      <Body width="30" height="40" density="50" />
+      <Body width="30" height="40" density="20" />
       <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" SpawnWithId="smground" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
         <Containable items="smground" />
         <!--Spawn an SMG round on use. Condition -4.8 -> 21 shots per magazine.-->
@@ -455,7 +453,7 @@
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,830,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,121,144,80" depth="0.55" origin="0.5,0.5" />
-      <Body width="140" height="60" density="50" />
+      <Body width="140" height="60" density="25" />
       <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="40,-10" aimpos="45,-10" handle1="-30,-15" handle2="26,5" holdangle="-35" msg="ItemMsgPickUpSelect"/>
       <RangedWeapon reload="0.175" holdtrigger="true" barrelpos="64,9" spread="10" unskilledspread="16" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2">
         <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
@@ -520,9 +518,9 @@
         <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
         <StatusEffect type="OnBroken" target="This">
           <sound file="Content/Items/Weapons/StunGrenade.ogg" />
-          <Explosion range="500" force="0.1" smoke="false">
-            <Affliction identifier="explosiondamage" strength="5" />
-            <Affliction identifier="stun" strength="25"/>
+          <Explosion range="750" force="1" smoke="false">
+            <Affliction identifier="explosiondamage" strength="10" />
+            <Affliction identifier="stun" strength="40"/>
           </Explosion>
         </StatusEffect>
       </ItemComponent>
@@ -573,9 +571,9 @@
         <StatusEffect type="OnBroken" target="This">
           <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="1000" selectionmode="All" />
           <sound file="Content/Items/Weapons/Emp.ogg" range="1000" />
-          <Explosion range="500" force="0.1" smoke="false" sparks="true" empstrength="10" applyfireeffects="false">
-            <Affliction identifier="explosiondamage" strength="2" />
-            <Affliction identifier="stun" strength="1" />
+          <Explosion range="500" force="5" empstrength="10" applyfireeffects="false" flames="false">
+            <Affliction identifier="explosiondamage" strength="10" />
+            <Affliction identifier="stun" strength="5" />
           </Explosion>
           <Remove />
         </StatusEffect>
@@ -604,7 +602,7 @@
       </Price>
       <Deconstruct time="10">
         <Item identifier="iron" />
-        <Item identifier="uex" mincondition="0.9" />
+        <Item identifier="sodium" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="20">
         <RequiredSkill identifier="weapons" level="60" />
@@ -620,11 +618,12 @@
         <StatusEffect type="OnBroken" target="This">
           <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnUse" range="10000" selectionmode="All" />
           <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="10000" />
-          <Explosion range="600.0" structuredamage="20" ballastfloradamage="120" itemdamage="500" force="10" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
-            <Affliction identifier="bleeding" strength="80" />
-            <Affliction identifier="explosiondamage" strength="180" />
-            <Affliction identifier="stun" strength="5"/>
-          </Explosion>
+<Explosion range="750.0" ballastfloradamage="100" structuredamage="20" levelwalldamage="140" itemdamage="500" force="5" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
+  <Affliction identifier="explosiondamage" strength="150" />
+  <Affliction identifier="bleeding" strength="100" />
+  <Affliction identifier="bleeding" strength="50" probability="0.1" dividebylimbcount="false"/>
+  <Affliction identifier="stun" strength="7"/>
+</Explosion>
           <Remove />
         </StatusEffect>
       </ItemComponent>
@@ -667,11 +666,11 @@
         <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
         <StatusEffect type="OnBroken" target="This">
           <sound file="Content/Items/Weapons/IncendiumGrenade.ogg" />
-          <Explosion range="500" ballastfloradamage="50" itemdamage="200" force="0.1" smoke="false">
-            <Affliction identifier="explosiondamage" strength="5" />
-            <Affliction identifier="burn" strength="100" />
-            <Affliction identifier="stun" strength="8" />
-          </Explosion>
+<Explosion range="500" ballastfloradamage="100" itemdamage="200" force="5" smoke="false">
+  <Affliction identifier="burn" strength="75" />
+  <Affliction identifier="burn" strength="15" probability="0.2" dividebylimbcount="false"/>
+  <Affliction identifier="stun" strength="7" />
+</Explosion>
           <Remove />
           <Fire size="300.0" />
         </StatusEffect>
@@ -709,7 +708,7 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="770,0,58,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,191,63" depth="0.55" origin="0.4954025,0.7936202" />
-      <Body width="170" height="30" density="30" />
+      <Body width="170" height="30" density="25" />
       <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="45,10" handle1="-30,15" holdangle="20" reload="0.95" range="100" combatPriority="49" msg="ItemMsgPickUpSelect" preferredcontaineditems="mobilebattery">
         <Attack targetimpulse="5" itemdamage="1">
           <Sound file="Content/Items/Weapons/Smack1.ogg" range="800" />
@@ -756,7 +755,7 @@
       </ItemContainer>
       <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
       <Quality>
-        <QualityStat stattype="StrikingSpeedMultiplier" value="0.1"/>
+        <QualityStat stattype="StrikingSpeedMultiplier" value="0.25"/>
       </Quality>
     </Item>
 
@@ -782,7 +781,7 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="835,385,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="183,203,66,16" depth="0.55" origin="0.5,0.5" />
-      <Body width="65" height="15" density="50" />
+      <Body width="65" height="15" density="25" />
       <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-10,0" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
         <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="10" structuredamage="10" structuresoundtype="StructureSlash">
           <Affliction identifier="lacerations" strength="10" />
@@ -823,7 +822,7 @@
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,831,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,244,186,65" depth="0.55" origin="0.5,0.5" />
-      <Body width="170" height="40" density="50" />
+      <Body width="170" height="40" density="25" />
       <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="40,-20" aimpos="45,-10" handle1="-33,-15" handle2="26,5" holdangle="-25" />
       <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
         <sprite name="Grenade Launcher Worn" texture="Content/Items/Weapons/weapons_new.png" canbehiddenbyotherwearables="false" sourcerect="0,244,186,65" rotation="90" inheritlimbdepth="false" depth="0.6" limb="Torso" scale="0.5" origin="0.5,0.8" />
@@ -848,7 +847,8 @@
       </ItemContainer>
       <aitarget sightrange="500" soundrange="500" fadeouttime="3" />
       <Quality>
-        <QualityStat stattype="FirepowerMultiplier" value="0.1"/>
+<QualityStat stattype="ExplosionRadius" value="0.1"/>
+<QualityStat stattype="ExplosionDamage" value="0.1"/>
       </Quality>
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
@@ -867,7 +867,7 @@
       </Price>
       <Deconstruct time="5">
         <Item identifier="iron" />
-        <Item identifier="uex" />
+        <Item identifier="sodium" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="10">
         <RequiredSkill identifier="weapons" level="30"/>
@@ -879,19 +879,18 @@
       <Body width="38" height="15" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="false">
-        <Attack structuredamage="2">
-          <Affliction identifier="blunttrauma" strength="5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
+<Attack structuredamage="40" penetration="0.5">
+  <Affliction identifier="explosiondamage" strength="50" />
+</Attack>
         <sound file="Content/Items/Weapons/FragGrenade40mmShot1.ogg" type="OnImpact" range="500" selectionmode="Random" />
         <sound file="Content/Items/Weapons/FragGrenade40mmShot2.ogg" type="OnImpact" range="500" />
         <!--Grenade launcher ammo explodes on impact-->
-        <StatusEffect type="OnImpact" Condition="-100.0" disabledeltatime="true">
-          <Explosion range="250.0" ballastfloradamage="110" structuredamage="20" levelwalldamage="500" itemdamage="500" force="10.0" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
-            <Affliction identifier="bleeding" strength="40" />
-            <Affliction identifier="explosiondamage" strength="80" />
-            <Affliction identifier="stun" strength="5" />
-          </Explosion>
+<StatusEffect type="OnImpact" Condition="-100.0" disabledeltatime="true">
+  <Explosion range="300.0" ballastfloradamage="80" structuredamage="20" levelwalldamage="120" itemdamage="400" force="5.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.3">
+    <Affliction identifier="burn" strength="100" />
+    <Affliction identifier="bleeding" strength="400" probability="0.05"/>
+    <Affliction identifier="stun" strength="5" />
+  </Explosion>
           <sound file="Content/Items/Weapons/StunGrenade.ogg" />
         </StatusEffect>
         <!--Destroy this after exploding-->
@@ -932,17 +931,13 @@
       <Body width="38" height="15" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="false">
-        <Attack structuredamage="2">
-          <Affliction identifier="blunttrauma" strength="5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
         <sound file="Content/Items/Weapons/StunGrenade40mmShot1.ogg" type="OnImpact" range="500" selectionmode="Random" />
         <sound file="Content/Items/Weapons/StunGrenade40mmShot2.ogg" type="OnImpact" range="500" />
         <!--Grenade launcher ammo explodes on impact-->
         <StatusEffect type="OnImpact" Condition="-100.0" disabledeltatime="true">
           <sound file="Content/Items/Weapons/StunGrenade.ogg" />
-          <Explosion range="300" force="0.1" smoke="false">
-            <Affliction identifier="explosiondamage" strength="5" />
+<Explosion range="300" force="1" flames="false">
+  <Affliction identifier="explosiondamage" strength="10" />
             <Affliction identifier="stun" strength="15" />
           </Explosion>
         </StatusEffect>
@@ -1033,9 +1028,9 @@
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,830,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,65,185,54" depth="0.55" origin="0.5,0.25" />
-      <Body width="180" height="30" density="50" />
+      <Body width="180" height="30" density="25" />
       <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="40,-10" aimpos="55,5" handle1="-25,-16" handle2="26,0" holdangle="-40" msg="ItemMsgPickUpSelect"/>
-      <RangedWeapon barrelpos="80,5" spread="1" unskilledspread="10" combatPriority="80" reload="1.5" drawhudwhenequipped="true" crosshairscale="0.2">
+      <RangedWeapon barrelpos="80,5" spread="1" unskilledspread="10" combatPriority="80" reload="1" drawhudwhenequipped="true" crosshairscale="0.2">
         <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
         <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
         <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
@@ -1132,7 +1127,7 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="576,132,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="189,269,22,10" depth="0.55" origin="0.5,0.5" />
-      <Body width="23" height="10" density="40" />
+      <Body width="23" height="10" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
       <!--When fired, spawns 8 projectiles simultaneously.-->
       <Projectile characterusable="false" hitscan="true" hitscancount="8" removeonhit="true" spread="15">
@@ -1170,7 +1165,7 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,830,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,368,83,47" depth="0.55" origin="0.5,0.5" />
-      <Body width="80" height="40" density="50" />
+      <Body width="80" height="40" density="25" />
       <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="70,10" handle1="-5,-7" msg="ItemMsgPickUpSelect"/>
       <RangedWeapon barrelpos="14,6" spread="0" unskilledspread="2" combatPriority="100" drawhudwhenequipped="true" crosshairscale="0.2">
         <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
@@ -1213,14 +1208,14 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="766,576,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="183,221,72,18" depth="0.55" origin="0.5,0.5" />
-      <Body width="70" height="15" density="40" />
+      <Body width="70" height="15" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
       <!--Non-lethal projectile sticks to characters and stuns them for 5 seconds.-->
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true">
         <Attack structuredamage="0" targetforce="2">
           <Affliction identifier="lacerations" strength="1" />
-          <Affliction identifier="stun" strength="1" />
-          <Affliction identifier="progressivestun" strength="20" />
+          <Affliction identifier="stun" strength="0.5" />
+          <Affliction identifier="progressivestun" strength="10" />
         </Attack>
         <StatusEffect type="OnImpact" target="This">
           <Sound file="Content/Items/Weapons/TaserHit1.ogg" type="OnUse" range="3000" selectionmode="Random" />
@@ -1295,7 +1290,7 @@
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="320,320,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="262,70,184,51" depth="0.55" origin="0.5,0.25" />
-      <Body width="180" height="30" density="50" />
+      <Body width="180" height="30" density="25" />
       <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="40,-10" aimpos="55,5" handle1="-20,-11" handle2="26,7" holdangle="-40" msg="ItemMsgPickUpSelect"/>
       <RangedWeapon barrelpos="85,10" spread="1" unskilledspread="10" combatPriority="80" reload="0.1" drawhudwhenequipped="true" crosshairscale="0.2">
         <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
@@ -1310,10 +1305,12 @@
         </StatusEffect>
         <!-- Cocking sound, delayed by 1.0 seconds. -->
         <StatusEffect type="OnUse" delay="1.0">
-          <Sound file="Content/Items/Weapons/ShotgunLoad1.ogg" type="OnUse" range="1000" selectionmode="Random" />
-          <Sound file="Content/Items/Weapons/ShotgunLoad2.ogg" type="OnUse" range="1000" />
-          <Sound file="Content/Items/Weapons/ShotgunLoad3.ogg" type="OnUse" range="1000" />
+          <Sound file="Content/Items/Weapons/ShotgunLoad1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+          <Sound file="Content/Items/Weapons/ShotgunLoad2.ogg" type="OnUse" range="3000" />
+          <Sound file="Content/Items/Weapons/ShotgunLoad3.ogg" type="OnUse" range="3000" />
         </StatusEffect>
+        <StatusEffect type="OnUse" target="This" reload="1.0" setvalue="true" delay="0.2" />
+        <StatusEffect type="OnUse" target="This" reload="0.1" setvalue="true" delay="1.0" />
         <RequiredItems items="shotgunammo" type="Contained" msg="ItemMsgAmmoRequired" />
         <RequiredSkill identifier="weapons" level="60" />
       </RangedWeapon>
@@ -1336,7 +1333,7 @@
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="448,256,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="262,363,172,14" depth="0.55" origin="0.5,0.5" />
-      <Body width="160" height="10" density="20" />
+      <Body width="160" height="10" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
       <Rope sourcepullforce="300" targetpullforce="100" projectilepullforce="5" maxlength="1500" snaponcollision="false" spritewidth="3" tile="true" origin="0.05,0.5" targetminmass="30" lerpforces="true" snapanimduration="0.5">
         <Sprite texture="Content/Map/Thalamus/thalamus.png" sourcerect="617,352,174,32" depth="0.57" origin="0.5,0.5" />
@@ -1347,9 +1344,9 @@
       </Rope>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodeflective="true">
         <Attack structuredamage="40" itemdamage="100" targetforce="20" severlimbsprobability="0.2">
-          <Affliction identifier="bleeding" strength="50" />
-          <Affliction identifier="lacerations" strength="70" />
-          <Affliction identifier="stun" strength="3" />
+<Affliction identifier="lacerations" strength="80" />
+<Affliction identifier="bleeding" strength="80" />
+<Affliction identifier="stun" strength="1" />
         </Attack>
         <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
           <Conditional Snapped="false" />
@@ -1369,7 +1366,7 @@
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="448,320,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="186,183,63,16" depth="0.55" origin="0.5,0.5" />
-      <Body width="65" height="15" density="50" />
+      <Body width="65" height="15" density="25" />
       <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-10,0" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
         <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="10">
           <Affliction identifier="lacerations" strength="10" />
@@ -1403,7 +1400,7 @@
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="384,320,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="263,135,145,56" depth="0.55" origin="0.5,0.5" />
-      <Body width="140" height="60" density="50" />
+      <Body width="140" height="60" density="25" />
       <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="40,-15" aimpos="45,-10" handle1="-30,-8" handle2="18,5" holdangle="-35" msg="ItemMsgPickUpSelect"/>
       <RangedWeapon reload="0.1" holdtrigger="true" barrelpos="58,19" spread="2" unskilledspread="8" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2">
         <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
@@ -1477,8 +1474,9 @@
         <Use/>
       </StatusEffect>
     </ItemContainer>
+    <aitarget sightrange="3000" soundrange="4000" fadeouttime="5" />
     <Quality>
-      <QualityStat stattype="AttackMultiplier" value="0.1"/>
+      <QualityStat stattype="FirepowerMultiplier" value="0.1"/>
     </Quality>
   </Item>
   <Item name="" identifier="3030round" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,leveractionammo,pistolammoitem" impactsoundtag="impact_metal_light">

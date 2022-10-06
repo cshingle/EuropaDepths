@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Items" modversion="1.0.15" corepackage="False" steamworkshopid="2821614540" gameversion="0.18.15.0">
+<contentpackage name="Europa Depths Items" modversion="1.0.16" corepackage="False" steamworkshopid="2821614540" gameversion="0.19.10.0">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Item file="%ModDir%/items/alienitems.xml" />
   <Item file="%ModDir%/items/assistant_gear.xml" />
@@ -17,9 +17,7 @@
   <Item file="%ModDir%/items/idcard.xml" />
   <Item file="%ModDir%/items/mechanic_gear.xml" />
   <Item file="%ModDir%/items/mechanic_talent_items.xml" />
-  <Item file="%ModDir%/items/medic_gear.xml" />
   <Item file="%ModDir%/items/medic_talent_items.xml" />
-  <Item file="%ModDir%/items/medmaterials.xml" />
   <Item file="%ModDir%/items/misc.xml" />
   <Item file="%ModDir%/items/poweritems.xml" />
   <Item file="%ModDir%/items/pulselaser.xml" />
@@ -27,7 +25,6 @@
   <Item file="%ModDir%/items/reactor.xml" />
   <Item file="%ModDir%/items/securityofficer_gear.xml" />
   <Item file="%ModDir%/items/securityofficer_talent_items.xml" />
-  <Item file="%ModDir%/items/signalitems.xml" />
   <Talents file="%ModDir%/talents/TalentsAssistant.xml" />
   <Talents file="%ModDir%/talents/TalentsCaptain.xml" />
   <Talents file="%ModDir%/talents/TalentsEngineer.xml" />

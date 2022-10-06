@@ -46,6 +46,8 @@
   <entitydescription.mininglaser>Cuts through various materials using a laser.</entitydescription.mininglaser>
   <afflictionname.empdamage>EMP Damage</afflictionname.empdamage>
   <afflictiondescription.empdamage>There are signs of damage to internal components caused by an Electromagnetic Pulse.</afflictiondescription.empdamage>
+  <entityname.suitcrate>Metal Suit Crate</entityname.suitcrate>
+  <entitydescription.suitcrate>A vessel in which diving suits may be stored.</entitydescription.suitcrate>
   <Override>
     <talentdescription.miner>Unlock recipe: [itemname].\nWhenever you deconstruct an ore, you have a [probability]% chance to gain double the output.</talentdescription.miner>
   </Override>

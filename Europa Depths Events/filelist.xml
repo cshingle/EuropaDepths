@@ -1,9 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Events" modversion="1.0.11" corepackage="False" steamworkshopid="2827201404" gameversion="0.18.12.0">
+<contentpackage name="Europa Depths Events" modversion="1.0.13" corepackage="False" steamworkshopid="2827201404" gameversion="0.18.15.0">
   <EventManagerSettings file="%ModDir%/EventManagerSettings.xml" />
   <Missions file="%ModDir%/Missions_Dire.xml" />
   <RandomEvents file="%ModDir%/randomevents_campaign.xml" />
   <Missions file="%ModDir%/Missions.xml" />
-  <Character file="%ModDir%/Characters/Hammerheadblack/Hammerheadblack.xml" />
   <Text file="%ModDir%/text/English.xml" />
+  <Character file="%ModDir%/Characters/Hammerheadblack/Hammerheadblack.xml" />
+  <Character file="%ModDir%/Characters/Bonethresher_cave/Bonethresher_cave.xml" />
+  <Character file="%ModDir%/Characters/Bonethresher_veteran/Bonethresher_veteran.xml" />
+  <Character file="%ModDir%/Characters/Tigerthresher_veteran/Tigerthresher_veteran.xml" />
+  <Character file="%ModDir%/Characters/Crawler_veteran/Crawler_veteran.xml" />
+  <Character file="%ModDir%/Characters/Hammerhead_veteran/Hammerhead_veteran.xml" />
+  <Character file="%ModDir%/Characters/Hammerheadgold_veteran/Hammerheadgold_veteran.xml" />
+  <Character file="%ModDir%/Characters/Fractaldestroyer/Fractaldestroyer.xml"/>
 </contentpackage>

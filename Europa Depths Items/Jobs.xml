@@ -19,7 +19,7 @@
         <Item identifier="idcard" equip="true" showpreview="false"/>
         <Item identifier="captainscap1" equip="true"/>
         <Item identifier="captainsuniform1" equip="true" outfit="true"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
+        <Item identifier="headset" equip="true" showpreview="false"/>
         <Item identifier="captainspipe" equip="false"/>
         <Item identifier="revolver" equip="false">
           <Item identifier="revolverround"/>
@@ -39,7 +39,7 @@
         <Item identifier="idcard" equip="true" showpreview="false"/>
         <Item identifier="captainscap2" equip="true"/>
         <Item identifier="captainsuniform2" equip="true" outfit="true"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
+        <Item identifier="headset" equip="true" showpreview="false"/>
         <Item identifier="captainspipe" equip="false"/>
         <Item identifier="revolver" equip="false">
           <Item identifier="revolverround"/>
@@ -59,7 +59,7 @@
         <Item identifier="idcard" equip="true" showpreview="false"/>
         <Item identifier="captainscap3" equip="true"/>
         <Item identifier="captainsuniform3" equip="true" outfit="true"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
+        <Item identifier="headset" equip="true" showpreview="false"/>
         <Item identifier="captainspipe" equip="false"/>
         <Item identifier="revolver" equip="false">
           <Item identifier="revolverround"/>
@@ -81,6 +81,7 @@
         <Order identifier="rescue" prioritymodifier="1"/>
         <Order identifier="steer" option="maintainposition" prioritymodifier="1"/>
         <Order identifier="operatereactor" option="powerup" prioritymodifier="0.1"/>
+        <Order identifier="fixleaks" prioritymodifier="0.1"/>
       </AutonomousObjectives>
       <AppropriateOrders>
         <Order identifier="steer"/>
@@ -103,12 +104,11 @@
       </Skills>
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false"/>
-        <Item identifier="toolbelt" equip="true">
-          <Item identifier="wrench"/>
-          <Item identifier="screwdriver"/>
-        </Item>
         <Item identifier="orangejumpsuit1" equip="true" outfit="true"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
+        <Item identifier="headset" equip="true" showpreview="false"/>
+        <Item identifier="toolbelt" equip="true"/>
+        <Item identifier="wrench"/>
+        <Item identifier="screwdriver"/>
         <Item identifier="pressurestabilizer" equip="false" />
         <PreviewSprites dims="120,109">
           <sprite texture="Content/Items/Jobgear/Engineer/engineer_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -117,12 +117,11 @@
       </ItemSet>
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false"/>
-        <Item identifier="toolbelt" equip="true">
-          <Item identifier="wrench"/>
-          <Item identifier="screwdriver"/>
-        </Item>
         <Item identifier="orangejumpsuit2" equip="true" outfit="true"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
+        <Item identifier="headset" equip="true" showpreview="false"/>
+        <Item identifier="toolbelt" equip="true"/>
+        <Item identifier="wrench"/>
+        <Item identifier="screwdriver"/>
         <Item identifier="pressurestabilizer" equip="false" />
         <PreviewSprites dims="120,109">
           <sprite texture="Content/Items/Jobgear/Engineer/engineer_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -162,19 +161,18 @@
       </Skills>
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false"/>
-        <Item identifier="toolbelt" equip="true">
-          <Item identifier="wrench"/>
-          <Item identifier="weldingtool">
-            <Item identifier="weldingfueltank" showpreview="false"/>
-          </Item>
-          <Item identifier="plasmacutter">
-            <Item identifier="oxygentank" showpreview="false"/>
-          </Item>
-          <Item identifier="screwdriver"/>
-        </Item>
         <Item identifier="baseballcap" equip="true" />
         <Item identifier="bluejumpsuit1" equip="true" outfit="true"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
+        <Item identifier="headset" equip="true" showpreview="false"/>
+        <Item identifier="toolbelt" equip="true"/>
+        <Item identifier="wrench"/>
+        <Item identifier="screwdriver"/>
+        <Item identifier="weldingtool">
+          <Item identifier="weldingfueltank" showpreview="false"/>
+        </Item>
+        <Item identifier="plasmacutter">
+          <Item identifier="oxygentank" showpreview="false"/>
+        </Item>
         <Item identifier="pressurestabilizer" equip="false" />
         <PreviewSprites dims="120,109">
           <sprite texture="Content/Items/Jobgear/Mechanic/mechanic_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -183,20 +181,18 @@
       </ItemSet>
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false"/>
-        <Item identifier="toolbelt" equip="true">
-          <Item identifier="wrench"/>
-          <Item identifier="screwdriver"/>
-          <Item identifier="weldingtool">
-            <Item identifier="weldingfueltank" showpreview="false"/>
-          </Item>
-          <Item identifier="plastic"/>
-          <Item identifier="steel"/>
-          <Item identifier="aluminium"/>
-        </Item>
-        <Item identifier="crowbar"/>
         <Item identifier="baseballcap" equip="true" />
         <Item identifier="bluejumpsuit2" equip="true" outfit="true"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
+        <Item identifier="headset" equip="true" showpreview="false"/>
+        <Item identifier="toolbelt" equip="true"/>
+        <Item identifier="wrench"/>
+        <Item identifier="screwdriver"/>
+        <Item identifier="weldingtool">
+          <Item identifier="weldingfueltank" showpreview="false"/>
+        </Item>
+        <Item identifier="plasmacutter">
+          <Item identifier="oxygentank" showpreview="false"/>
+        </Item>
         <Item identifier="pressurestabilizer" equip="false" />
         <PreviewSprites dims="120,109">
           <sprite texture="Content/Items/Jobgear/Mechanic/mechanic_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -237,20 +233,12 @@
       <ItemSet>
         <Item identifier="securityuniform1" equip="true" outfit="true"/>
         <Item identifier="idcard" equip="true" showpreview="false"/>
-        <Item identifier="smg">
-          <Item identifier="smgmagazine" showpreview="false"/>
-        </Item>
+        <Item identifier="headset" equip="true" showpreview="false"/>
         <Item identifier="divingknife" equip="false"/>
-        <Item identifier="steroids"/>
-        <Item identifier="antibleeding1"/>
         <Item identifier="handcuffs"/>
         <Item identifier="stunbaton">
           <Item identifier="batterycell" showpreview="false"/>
         </Item>
-        <Item identifier="batterycell" showpreview="false"/>
-        <Item identifier="bodyarmor" equip="true"/>
-        <Item identifier="ballistichelmet1" equip="true"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
         <Item identifier="pressurestabilizer" equip="false" />
         <PreviewSprites dims="120,109">
           <sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -260,28 +248,12 @@
       <ItemSet>
         <Item identifier="securityuniform2" equip="true" outfit="true"/>
         <Item identifier="idcard" equip="true" showpreview="false"/>
-        <!--<Item identifier="stungun">
-        <Item identifier="stungundart"/>
-        <Item identifier="stungundart"/>
-      </Item>-->
+        <Item identifier="headset" equip="true" showpreview="false"/>
+        <Item identifier="divingknife" equip="false"/>
+        <Item identifier="handcuffs"/>
         <Item identifier="stunbaton">
           <Item identifier="batterycell" showpreview="false"/>
         </Item>
-        <Item identifier="shotgun">
-          <Item identifier="shotgunshell" showpreview="false"/>
-          <Item identifier="shotgunshell" showpreview="false"/>
-          <Item identifier="shotgunshell" showpreview="false"/>
-          <Item identifier="shotgunshell" showpreview="false"/>
-          <Item identifier="shotgunshell" showpreview="false"/>
-          <Item identifier="shotgunshell" showpreview="false"/>
-        </Item>
-        <Item identifier="batterycell" showpreview="false"/>
-        <Item identifier="divingknife" equip="false"/>
-        <Item identifier="handcuffs"/>
-        <Item identifier="antibleeding1"/>
-        <Item identifier="bodyarmor" equip="true"/>
-        <Item identifier="ballistichelmet3" equip="true"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
         <Item identifier="pressurestabilizer" equip="false" />
         <PreviewSprites dims="120,109">
           <sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -291,24 +263,12 @@
       <ItemSet>
         <Item identifier="securityuniform3" equip="true" outfit="true"/>
         <Item identifier="idcard" equip="true" showpreview="false"/>
-        <Item identifier="revolver" equip="false">
-          <Item identifier="revolverround"/>
-          <Item identifier="revolverround"/>
-          <Item identifier="revolverround"/>
-          <Item identifier="revolverround"/>
-          <Item identifier="revolverround"/>
-          <Item identifier="revolverround"/>
-        </Item>
+        <Item identifier="headset" equip="true" showpreview="false"/>
+        <Item identifier="divingknife" equip="false"/>
+        <Item identifier="handcuffs"/>
         <Item identifier="stunbaton">
           <Item identifier="batterycell" showpreview="false"/>
         </Item>
-        <Item identifier="batterycell" showpreview="false"/>
-        <Item identifier="handcuffs"/>
-        <Item identifier="wrench"/>
-        <Item identifier="antibleeding1"/>
-        <Item identifier="bodyarmor" equip="true"/>
-        <Item identifier="ballistichelmet2" equip="true"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
         <Item identifier="pressurestabilizer" equip="false" />
         <PreviewSprites dims="120,109">
           <sprite texture="Content/Items/Jobgear/Security/securityofficer_torso_[GENDER]_3.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -320,6 +280,7 @@
         <Order identifier="rescue" prioritymodifier="1"/>
         <Order identifier="extinguishfires" prioritymodifier ="0.75"/>
         <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2"/>
+        <Order identifier="fixleaks" prioritymodifier="0.1"/>
       </AutonomousObjectives>
       <AppropriateOrders>
         <Order identifier="operateweapons"/>
@@ -343,14 +304,11 @@
       </Skills>
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false"/>
-        <Item identifier="doctorsuniform1" equip="true" outfit="true">
-          <Item identifier="antibloodloss2"/>
-        </Item>
+        <Item identifier="doctorsuniform1" equip="true" outfit="true"/>
         <Item identifier="healthscanner"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
+        <Item identifier="headset" equip="true" showpreview="false"/>
         <Item identifier="syringegun"/>
         <Item identifier="antibleeding1"/>
-        <Item identifier="antibiotics"/>
         <Item identifier="antidama1"/>
         <Item identifier="pressurestabilizer" equip="false" />
         <PreviewSprites dims="120,109">
@@ -360,18 +318,12 @@
       </ItemSet>
       <ItemSet>
         <Item identifier="idcard" equip="true" showpreview="false"/>
-        <Item identifier="doctorsuniform2" equip="true" outfit="true">
-          <Item identifier="antibloodloss1"/>
-          <Item identifier="antibloodloss2"/>
-          <Item identifier="antinarc"/>
-        </Item>
+        <Item identifier="doctorsuniform2" equip="true" outfit="true"/>
         <Item identifier="healthscanner"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
+        <Item identifier="headset" equip="true" showpreview="false"/>
         <Item identifier="syringegun"/>
         <Item identifier="antibleeding1"/>
         <Item identifier="antidama1"/>
-        <Item identifier="tonicliquid"/>
-        <Item identifier="pressurestabilizer" equip="false" />
         <PreviewSprites dims="120,109">
           <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="2,38,120,109" offset="0,0" />
           <sprite texture="Content/Items/Jobgear/Medic/medic_torso_[GENDER]_2.png" sourcerect="121,0,76,80" offset="-20,15" />
@@ -381,6 +333,7 @@
         <Order identifier="rescue" prioritymodifier="1"/>
         <Order identifier="extinguishfires" prioritymodifier ="0.5"/>
         <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2"/>
+        <Order identifier="fixleaks" prioritymodifier="0.1"/>
       </AutonomousObjectives>
       <AppropriateOrders>
         <Order identifier="rescue"/>
@@ -407,7 +360,7 @@
         <Item identifier="assistantclothes" equip="true" outfit="true"/>
         <Item identifier="wrench"/>
         <Item identifier="screwdriver"/>
-        <Item identifier="headset" equip="true" showpreview="false" />
+        <Item identifier="headset" equip="true" showpreview="false"/>
         <Item identifier="pressurestabilizer" equip="false" />
         <PreviewSprites dims="120,109">
           <sprite texture="Content/Items/Jobgear/Assistant/assistant_torso_[GENDER]_1.png" sourcerect="2,38,120,109" offset="0,0" />
@@ -436,6 +389,7 @@
           <Item identifier="revolverround"/>
           <Item identifier="revolverround"/>
         </Item>
+        <Item identifier="pressurestabilizer" equip="false" />
       </ItemSet>
     </Job>
     <!--NPC only jobs-->

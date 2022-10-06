@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Charactervariant inherit="Bonethresher" speciesname="Bonethresher_cave" speciestranslationoverride="Bonethresher_cave" usebosshealthbar="false">
+  <health Vitality="450" />
+  <ragdoll scalemultiplier="0.5"/>
+  <attack damagemultiplier="0.5" rangemultiplier="0.5" impactmultiplier="0.5"/>
+</Charactervariant>

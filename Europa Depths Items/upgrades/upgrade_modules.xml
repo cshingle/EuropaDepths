@@ -75,9 +75,9 @@
 
   <!-- TURRET -->
   <Override>
-    <UpgradeModule identifier="turretdecreasepowerconsumption" maxlevel="5" categories="supercapacitors" increaseontooltip="5">
-      <Price baseprice="1500" increaselow="+15%" increasehigh="+20%"/>
-      <PowerContainer efficiency="+0.04"/>
+    <UpgradeModule identifier="turretdecreasepowerconsumption" maxlevel="4" categories="supercapacitors" increaseontooltip="5">
+      <Price baseprice="3000" increaselow="+15%" increasehigh="+20%"/>
+      <PowerContainer efficiency="+0.05"/>
       <!-- <DecorativeSprite texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,384,64,64" depth="0.75" origin="0.5,0.5"/> -->
       <Sprite texture="Content/UI/CampaignUIAtlas2.png" sourcerect="512,896,128,128" origin="0.5,0.5"/>
     </UpgradeModule>
@@ -85,7 +85,7 @@
 
   <UpgradeModule identifier="turretincreasefirerate" maxlevel="1" categories="weapons" increaseontooltip="1">
     <Price baseprice="10000" increaselow="+15%" increasehigh="+20%"/>
-    <Turret reload="-50%" powerconsumption="+100%"/>
+    <Turret reload="-50%" delaybetweenbursts="-50%" powerconsumption="+100%"/>
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="0,0,128,128" origin="0.5,0.5"/>
   </UpgradeModule>
 

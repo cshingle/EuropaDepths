@@ -35,22 +35,23 @@
     </ConnectionPanel>
     <ItemContainer hideitems="false" drawinventory="true" capacity="3" maxstacksize="1" slotsperrow="3" itempos="27,-42" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.16,0.18" anchor="Center" style="ItemUI" />
+      <StatusEffect type="OnFire" target="This" tags="onfire" duration="1" stackable="false" />
       <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
         <StatusEffect type="OnContaining" targettype="Contained" Condition="0.1" Comparison="And">
           <Conditional Voltage="gt 0.1" targetcontainer="true" targetitemcomponent="Powered"/>
-          <Conditional HasTag="weldingfuelsource"/>
+          <Conditional HasTag="weldingfuel"/>
+          <Conditional targetcontainer="true" HasStatusTag="!eq onfire" />
         </StatusEffect>
       </Containable>
     </ItemContainer>
   </Item>
   <Item name="Large Railgun Shell Rack" identifier="largerailgunshellrack" tags="container,railgunammocontainer" pickdistance="120" scale="0.5" canflipx="false" canflipy="false" category="Equipment">
     <Sprite texture="%ModDir%/sprites/equipment.png" depth="0.84" sourcerect="0,0,418,212" origin="0.5,0.5" />
-    <ItemContainer hideitems="false" drawinventory="true" capacity="12" slotsperrow="6" itempos="24,-100" iteminterval="30,0" itemrotation="90" canbeselected="true" msg="ItemMsgInteractSelect">
-      <Upgrade gameversion="0.18.0.0" itempos="32,-100" iteminterval="30,0" />
-      <GuiFrame relativesize="0.3,0.3" anchor="Center" style="ItemUI" />
+    <ItemContainer hideitems="false" drawinventory="true" capacity="12" slotsperrow="6" itempos="42,-100" iteminterval="30,0" itemrotation="90" canbeselected="true" msg="ItemMsgInteractSelect">
+    <Upgrade gameversion="0.18.0.0" itempos="42,-100" iteminterval="30,0" />
+      <GuiFrame relativesize="0.3,0.28" anchor="Center" style="ItemUI" />
       <Containable items="railgunammo" />
     </ItemContainer>
-    <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
   <Item name="Large Ammunition Shelf" identifier="largecoilgunammoshelf" tags="container,ammoboxcontainer" linkable="true" pickdistance="150" waterproof="true" scale="0.5">
     <Sprite texture="%ModDir%/sprites/equipment.png" depth="0.84" sourcerect="0,215,140,405" canflipx="false" origin="0.5,0.5" />
@@ -107,9 +108,49 @@
       <Sprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.8" sourcerect="0,0,567,446" origin="0.5,0.5" />
       <DecorativeSprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.85" sourcerect="0,457,567,446" origin="0.5,0.5" />
       <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="120,-364" iteminterval="150,80" itemsperrow="3" msg="ItemMsgInteractSelect" containedspritedepths="0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82">
-        <GuiFrame relativesize="0.25,0.3" anchor="Center" style="ItemUI" />
+        <GuiFrame relativesize="0.25,0.3" slotsperrow="6" anchor="Center" style="ItemUI" />
         <Containable items="crate" />
       </ItemContainer>
     </Item>
   </Override>
+  <Item name="" identifier="largeengine_boost" inherit="largeengine" tags="engine" category="Machine" Scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <LightComponent range="10.0" lightcolor="255,0,0,50" powerconsumption="1" IsOn="false" castshadows="false" allowingameediting="false">
+      <IsActive targetitemcomponent="Engine" currpowerconsumption="gt 3000" />
+      <StatusEffect type="OnActive" target="This" Condition="-2">
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="4" scalemin="2" scalemax="4" angle="270" distance="30" />
+      </StatusEffect>
+      <sprite texture="Content/Items/Engine/Engines.png" depth="0.025" sourcerect="0,933,1613,592" origin="0.5,0.5" alpha="0.2" />
+    </LightComponent>
+  </Item>
+  <Item name="" identifier="oxygentankshelflarge" nameidentifier="oxygentankshelf" category="Diving" tags="container,oxygentankcontainer,oxygentankrefiller" pickdistance="50" scale="0.5">
+    <Sprite name="Diving Suit Locker Large" texture="%ModDir%/sprites/equipment.png" sourcerect="145,221,257,84" depth="0.84" origin="0.5,0.5" />
+    <Powered powerconsumption="60" currpowerconsumption="60" isactive="true">
+      <GuiFrame relativesize="0.18,0.15" minsize="350,160" maxsize="420,192" anchor="Center" relativeoffset="0,-0.1" style="ItemUI" msg="ItemMsgInteractSelect" />
+    </Powered>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="20" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/Weapons/ElectricalDischarger.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="3" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particleburstinterval="1.05" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+      <input name="power_in" displayname="connection.powerin" />
+    </ConnectionPanel>
+    <ItemContainer hideitems="false" drawinventory="true" capacity="10" maxstacksize="1" itempos="27,-44" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.25" anchor="Center" slotsperrow="6" style="ItemUI" />
+      <StatusEffect type="OnFire" target="This" tags="onfire" duration="1" stackable="false" />
+      <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
+        <StatusEffect type="OnContaining" targettype="Contained" Condition="1.0" Comparison="And">
+          <Conditional Voltage="gt 0.1" targetcontainer="true" targetitemcomponent="Powered"/>
+          <Conditional HasTag="refillableoxygensource"/>
+          <Conditional targetcontainer="true" HasStatusTag="!eq onfire" />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+  </Item>
 </Items>
