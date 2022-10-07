@@ -3250,12 +3250,12 @@ MonsterEvent
       <!-- Populate the wrecks -->
       <EventSet identifier="wreck_encounters" chooserandom="true" perwreck="true" allowatstart="true" triggereventcooldown="false">
         <EventSet identifier="crawler_vs_husk" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
-          <MonsterEvent characterfile="Crawler" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" delaybetweenspawns="1" />
+          <MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" delaybetweenspawns="1" />
           <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" delaybetweenspawns="1" />
         </EventSet>
         <EventSet identifier="crawler_vs_mudraptor" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
           <MonsterEvent characterfile="Crawlerhusk" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" delaybetweenspawns="1" />
-          <MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" delaybetweenspawns="1" />
+          <MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" delaybetweenspawns="1" />
         </EventSet>
         <EventSet identifier="crawler_vs_thresher" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
           <MonsterEvent characterfile="Crawlerhusk" minamount="2" maxamount="4" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" delaybetweenspawns="1" />
@@ -3858,12 +3858,12 @@ MonsterEvent
 
       <!-- Populate the caves -->
       <EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-        <MonsterEvent characterfile="Crawler" minamount="5" maxamount="10" spawntype="cave" />
+        <MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="10" spawntype="cave" />
         <MonsterEvent characterfile="Crawlerhusk" minamount="5" maxamount="10" spawntype="cave" />
         <MonsterEvent characterfile="Spineling" minamount="5" maxamount="8" spawntype="cave" />
         <MonsterEvent characterfile="tigerthresher_veteran" minamount="3" maxamount="5" spawntype="cave" />
         <MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="6" spawntype="cave" />
-        <MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="6" spawntype="cave" />
+        <MonsterEvent characterfile="Bonethresher_cave" minamount="3" maxamount="6" spawntype="cave" />
       </EventSet>
 
       <!-- Populate the beacon stations - Only spawn if there's spawnpoint with tag 'encounter' present! -->
@@ -3987,10 +3987,10 @@ MonsterEvent
           <MonsterEvent characterfile="Crawlerhusk" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
         </EventSet>
         <EventSet identifier="crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="30">
-          <MonsterEvent characterfile="Crawler" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
-          <MonsterEvent characterfile="Crawler" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
-          <MonsterEvent characterfile="Crawler" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
-          <MonsterEvent characterfile="Crawler" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
+          <MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
+          <MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
+          <MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
+          <MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="3" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
           <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="4" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
           <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="4" spawntype="wreck" spawnprobability="0.5" spawndistance="1000" delaybetweenspawns="1" />
         </EventSet>
@@ -4007,8 +4007,8 @@ MonsterEvent
           <MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="5" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
         </EventSet>
         <EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-          <MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
-          <MonsterEvent characterfile="Hammerheadgold" minamount="1" maxamount="4" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
+          <MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
+          <MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="4" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
           <MonsterEvent characterfile="Hammerheadblack" minamount="0" maxamount="3" spawntype="wreck" spawnprobability="1" spawndistance="1000" delaybetweenspawns="1" />
         </EventSet>
         <EventSet identifier="mudraptor_veterans" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
@@ -4042,6 +4042,10 @@ MonsterEvent
         </EventSet>
         <EventSet commonness="50">
           <MonsterEvent characterfile="Endworm" amount="1" spawntype="abyss" />
+          <MonsterEvent characterfile="Hammerheadblack" amount="1" spawntype="abyss" />
+        </EventSet>
+        <EventSet commonness="1">
+          <MonsterEvent characterfile="Doomworm" amount="1" spawntype="abyss" />
           <MonsterEvent characterfile="Hammerheadblack" amount="1" spawntype="abyss" />
         </EventSet>
       </EventSet>
@@ -4438,7 +4442,7 @@ MonsterEvent
 
     <EventSet identifier="End" biome="endzone" chooserandom="false" allowatstart="true" campaign="true">
       <EventSet chooserandom="false" allowatstart="false" triggereventcooldown="false" disableinhuntinggrounds="false">
-        <MonsterEvent characterfile="Doomworm" amount="1" maxamountperlevel="1" spawntype="mainpath" />
+        <MonsterEvent characterfile="Fractaldestroyer" amount="1" maxamountperlevel="1" spawntype="mainpath" />
       </EventSet>
     </EventSet>
   </Override>

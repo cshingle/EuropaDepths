@@ -34,9 +34,9 @@
       </Rope>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
         <Attack structuredamage="20" itemdamage="40" targetforce="20" severlimbsprobability="0.1">
-<Affliction identifier="lacerations" strength="40" />
-<Affliction identifier="bleeding" strength="40" />
-<Affliction identifier="stun" strength="0.5" />
+          <Affliction identifier="lacerations" strength="40" />
+          <Affliction identifier="bleeding" strength="40" />
+          <Affliction identifier="stun" strength="0.5" />
         </Attack>
         <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
           <Conditional Snapped="false" />
@@ -80,11 +80,11 @@
         </StatusEffect>
       </Rope>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
-<Attack structuredamage="30" itemdamage="60" targetforce="20" severlimbsprobability="0.2">
-  <Affliction identifier="lacerations" strength="60" />
-  <Affliction identifier="bleeding" strength="60" />
-  <Affliction identifier="stun" strength="0.5" />
-</Attack>
+        <Attack structuredamage="30" itemdamage="60" targetforce="20" severlimbsprobability="0.2">
+          <Affliction identifier="lacerations" strength="60" />
+          <Affliction identifier="bleeding" strength="60" />
+          <Affliction identifier="stun" strength="0.5" />
+        </Attack>
         <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
           <Conditional Snapped="false" />
           <Conditional mass="lt 30"/>
@@ -120,16 +120,16 @@
       <Body width="160" height="10" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" severlimbsprobability="0.1">
-<Attack structuredamage="20" targetforce="10" penetration="0.5">
-  <Affliction identifier="explosiondamage" strength="25" />
-</Attack>
+        <Attack structuredamage="20" targetforce="10" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="25" />
+        </Attack>
         <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" type="OnUse" range="2000" selectionmode="All" />
         <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" type="OnUse" range="2000" />
         <StatusEffect type="OnUse" Condition="-100.0" stun="10.0" disabledeltatime="true">
-<Explosion range="200.0" ballastfloradamage="50" structuredamage="10" levelwalldamage="50" itemdamage="250" force="5" severlimbsprobability="0.25">
-  <Affliction identifier="burn" strength="50" />
-  <Affliction identifier="stun" strength="1.5" />
-</Explosion>
+          <Explosion range="200.0" ballastfloradamage="50" structuredamage="10" levelwalldamage="50" itemdamage="250" force="5" severlimbsprobability="0.25">
+            <Affliction identifier="burn" strength="50" />
+            <Affliction identifier="stun" strength="1.5" />
+          </Explosion>
         </StatusEffect>
         <!--Destroy this after exploding-->
         <StatusEffect type="OnUse" target="This" disabledeltatime="true">
@@ -165,9 +165,9 @@
     </Fabricate>
     <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true">
       <Attack structuredamage="20" itemdamage="40" targetforce="20" severlimbsprobability="0.1">
-<Affliction identifier="lacerations" strength="40" />
-<Affliction identifier="bleeding" strength="40" />
-<Affliction identifier="stun" strength="0.5" />
+        <Affliction identifier="lacerations" strength="40" />
+        <Affliction identifier="bleeding" strength="40" />
+        <Affliction identifier="stun" strength="0.5" />
         <StatusEffect tags="poison" type="OnUse" target="Character" duration="20">
           <Affliction identifier="nausea" amount="5" />
         </StatusEffect>
@@ -618,12 +618,12 @@
         <StatusEffect type="OnBroken" target="This">
           <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" type="OnUse" range="10000" selectionmode="All" />
           <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" type="OnUse" range="10000" />
-<Explosion range="750.0" ballastfloradamage="100" structuredamage="20" levelwalldamage="140" itemdamage="500" force="5" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
-  <Affliction identifier="explosiondamage" strength="150" />
-  <Affliction identifier="bleeding" strength="100" />
-  <Affliction identifier="bleeding" strength="50" probability="0.1" dividebylimbcount="false"/>
-  <Affliction identifier="stun" strength="7"/>
-</Explosion>
+          <Explosion range="750.0" ballastfloradamage="100" structuredamage="20" levelwalldamage="140" itemdamage="500" force="5" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
+            <Affliction identifier="explosiondamage" strength="150" />
+            <Affliction identifier="bleeding" strength="100" />
+            <Affliction identifier="bleeding" strength="50" probability="0.1" dividebylimbcount="false"/>
+            <Affliction identifier="stun" strength="7"/>
+          </Explosion>
           <Remove />
         </StatusEffect>
       </ItemComponent>
@@ -666,11 +666,11 @@
         <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
         <StatusEffect type="OnBroken" target="This">
           <sound file="Content/Items/Weapons/IncendiumGrenade.ogg" />
-<Explosion range="500" ballastfloradamage="100" itemdamage="200" force="5" smoke="false">
-  <Affliction identifier="burn" strength="75" />
-  <Affliction identifier="burn" strength="15" probability="0.2" dividebylimbcount="false"/>
-  <Affliction identifier="stun" strength="7" />
-</Explosion>
+          <Explosion range="500" ballastfloradamage="100" itemdamage="200" force="5" smoke="false">
+            <Affliction identifier="burn" strength="75" />
+            <Affliction identifier="burn" strength="15" probability="0.2" dividebylimbcount="false"/>
+            <Affliction identifier="stun" strength="7" />
+          </Explosion>
           <Remove />
           <Fire size="300.0" />
         </StatusEffect>
@@ -755,7 +755,7 @@
       </ItemContainer>
       <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
       <Quality>
-        <QualityStat stattype="StrikingSpeedMultiplier" value="0.25"/>
+        <QualityStat stattype="StrikingPowerMultiplier" value="0.25"/>
       </Quality>
     </Item>
 
@@ -847,8 +847,8 @@
       </ItemContainer>
       <aitarget sightrange="500" soundrange="500" fadeouttime="3" />
       <Quality>
-<QualityStat stattype="ExplosionRadius" value="0.1"/>
-<QualityStat stattype="ExplosionDamage" value="0.1"/>
+        <QualityStat stattype="ExplosionRadius" value="0.1"/>
+        <QualityStat stattype="ExplosionDamage" value="0.1"/>
       </Quality>
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
@@ -879,25 +879,25 @@
       <Body width="38" height="15" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect"/>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="false">
-<Attack structuredamage="40" penetration="0.5">
-  <Affliction identifier="explosiondamage" strength="50" />
-</Attack>
+        <Attack structuredamage="40" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="50" />
+        </Attack>
         <sound file="Content/Items/Weapons/FragGrenade40mmShot1.ogg" type="OnImpact" range="500" selectionmode="Random" />
         <sound file="Content/Items/Weapons/FragGrenade40mmShot2.ogg" type="OnImpact" range="500" />
         <!--Grenade launcher ammo explodes on impact-->
-<StatusEffect type="OnImpact" Condition="-100.0" disabledeltatime="true">
-  <Explosion range="300.0" ballastfloradamage="80" structuredamage="20" levelwalldamage="120" itemdamage="400" force="5.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.3">
-    <Affliction identifier="burn" strength="100" />
-    <Affliction identifier="bleeding" strength="400" probability="0.05"/>
-    <Affliction identifier="stun" strength="5" />
-  </Explosion>
+        <StatusEffect type="OnImpact" Condition="-100.0" disabledeltatime="true">
+          <Explosion range="300.0" ballastfloradamage="80" structuredamage="20" levelwalldamage="120" itemdamage="400" force="5.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.3">
+            <Affliction identifier="burn" strength="100" />
+            <Affliction identifier="bleeding" strength="400" probability="0.05"/>
+            <Affliction identifier="stun" strength="5" />
+          </Explosion>
           <sound file="Content/Items/Weapons/StunGrenade.ogg" />
         </StatusEffect>
         <!--Destroy this after exploding-->
-        <StatusEffect type="OnUse" target="This" disabledeltatime="true" >
+        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
           <Remove />
         </StatusEffect>
-        <StatusEffect type="OnBroken" >
+        <StatusEffect type="OnBroken">
           <Remove />
         </StatusEffect>
       </Projectile>
@@ -936,8 +936,8 @@
         <!--Grenade launcher ammo explodes on impact-->
         <StatusEffect type="OnImpact" Condition="-100.0" disabledeltatime="true">
           <sound file="Content/Items/Weapons/StunGrenade.ogg" />
-<Explosion range="300" force="1" flames="false">
-  <Affliction identifier="explosiondamage" strength="10" />
+          <Explosion range="300" force="1" flames="false">
+            <Affliction identifier="explosiondamage" strength="10" />
             <Affliction identifier="stun" strength="15" />
           </Explosion>
         </StatusEffect>
@@ -1344,9 +1344,9 @@
       </Rope>
       <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodeflective="true">
         <Attack structuredamage="40" itemdamage="100" targetforce="20" severlimbsprobability="0.2">
-<Affliction identifier="lacerations" strength="80" />
-<Affliction identifier="bleeding" strength="80" />
-<Affliction identifier="stun" strength="1" />
+          <Affliction identifier="lacerations" strength="80" />
+          <Affliction identifier="bleeding" strength="80" />
+          <Affliction identifier="stun" strength="1" />
         </Attack>
         <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
           <Conditional Snapped="false" />

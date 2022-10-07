@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
     <character.hammerheadblack>Black Hammerhead</character.hammerheadblack>
+    <character.Bonethresher_cave>Cave Bonethresher</character.Bonethresher_cave>
+    <character.Bonethresher_veteran>Veteran Bonethresher</character.Bonethresher_veteran>
+    <character.Crawler_veteran>Veteran Crawler</character.Crawler_veteran>
+    <character.Hammerhead_veteran>Veteran Hammerhead</character.Hammerhead_veteran>
+    <character.Hammerheadgold_veteran>Veteran Golden Hammerhead</character.Hammerheadgold_veteran>
+    <character.Tigerthresher_veteran>Veteran Tigerthresher</character.Tigerthresher_veteran>
 </infotexts>

@@ -14,7 +14,7 @@
   <entityname.largerailgunshellrack>Large Railgun Shell Rack</entityname.largerailgunshellrack>
   <entitydescription.largerailgunshellrack>A way to neatly stow railgun shells.</entitydescription.largerailgunshellrack>
   <entityname.largeengine_boost>Large Engine (Boost)</entityname.largeengine_boost>
-  <entitydescription.largeengine_boost>Usable device for generating motion on the X axis.</entitydescription.largeengine_boost>
+  <entitydescription.largeengine_boost>Usable device for generating motion on the X axis. This version takes damage if power usage exceeds 3000kw.</entitydescription.largeengine_boost>
   <entityname.oxygentankshelflarge>Large Oxygen Tank Shelf</entityname.oxygentankshelflarge>
   <entitydescription.oxygentankshelflarge>Neatly stores multiple oxygen tanks.</entitydescription.oxygentankshelflarge>
 </infotexts>

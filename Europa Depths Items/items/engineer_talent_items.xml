@@ -834,7 +834,7 @@
     <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
     <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.2"/>
     <PreferredContainer secondary="abandonedengcab,wreckengcab" amount="1" spawnprobability="0.05"/>
-    <Price baseprice="150" displaynonempty="true" minavailable="2">
+    <Price baseprice="150" sold="false" displaynonempty="true" minavailable="2">
       <Price storeidentifier="merchantoutpost" />
       <Price storeidentifier="merchantcity" minavailable="3" />
       <Price storeidentifier="merchantresearch" />
@@ -887,7 +887,7 @@
     <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.1"/>
     <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.02"/>
     <PreferredContainer secondary="abandonedengcab,wreckengcab" amount="1" spawnprobability="0.01"/>
-    <Price baseprice="200" displaynonempty="true">
+    <Price baseprice="200" sold="false" displaynonempty="true">
       <Price storeidentifier="merchantoutpost" sold="false" />
       <Price storeidentifier="merchantcity" minavailable="1" />
       <Price storeidentifier="merchantresearch" sold="false" multiplier="1.25" />
