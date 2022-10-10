@@ -45,7 +45,7 @@
       </monsters>
       <monsters commonness="10">
         <monster character="Tigerthresher" min="1" max="4" />
-        <monster character="Bonethresher" min="3" max="5" />
+        <monster character="Bonethresher_cave" min="3" max="5" />
       </monsters>
       <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,256,256,256" color="243,146,55" />
       <Reputation identifier="coalition" amount="5" />

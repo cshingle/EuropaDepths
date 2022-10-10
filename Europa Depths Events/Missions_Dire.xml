@@ -32,7 +32,7 @@
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48" />
   </MonsterMission>
   <MonsterMission identifier="killhammerhead5" textidentifier="killhammerhead" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="80" reward="6000" maxsonarmarkerdistance="10000" monsterfile="Hammerheadgold_m">
-    <monster character="Hammerheadgold_veteran" min="3" max="5" delaybetweenspawns="2" />
+    <monster character="Hammerheadgold_eravetn" min="3" max="5" delaybetweenspawns="2" />
     <monster character="Hammerheadblack" min="5" max="6" delaybetweenspawns="4" />
     <Reputation identifier="location" amount="10" delaybetweenspawns="1" />
     <Reputation identifier="coalition" amount="5" />
@@ -167,4 +167,29 @@
     <LocationType from="Research" to="Lair"/>
     <message text="missionmessage0.tigerthreshernest"/>
   </NestMission>
+  <OutpostNestMission name="Outpost Recovery Dire" identifier="abandonedoutpostcrawlerdire2" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="60" type="OutpostDestroy" reward="5000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+    <Reputation identifier="location" amount="10"/>
+    <Reputation identifier="coalition" amount="5"/>
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
+    <LocationType identifier="Abandoned"/>
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
+    <Characters>
+      <Character identifier="husk" min="-2" max="5"/>
+      <Character identifier="Crawler_veteran" min="20" max="25"/>
+    </Characters>
+    <Items>
+      <Item identifier="crawleregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
+      </Item>
+      <Item identifier="crawleregg" spawnpointtags="nest">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9"/>
+      </Item>
+      <Item identifier="crawleregg" spawnpointtags="nest"/>
+      <Item identifier="crawleregg" spawnpointtags="nest"/>
+      <Item identifier="crawleregg" spawnpointtags="nest"/>
+      <Item identifier="crawleregg" spawnpointtags="nest"/>
+    </Items>
+    <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
+    <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
+  </OutpostNestMission>
 </Missions>

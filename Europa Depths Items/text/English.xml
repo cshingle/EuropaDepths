@@ -14,6 +14,8 @@
   <entitydescription.handcannonroundhallowpoint>An exceedingly large .61 hollow point revolver round. Reduced overpenetration and increased knockdown at the expense of overall damage.</entitydescription.handcannonroundhallowpoint>
   <entityname.shotgunslugshell>Rifled Slug</entityname.shotgunslugshell>
   <entitydescription.shotgunslugshell>A shotgun slug round. Powerful, but fairly low penetration.</entitydescription.shotgunslugshell>
+  <entityname.depletedshotgunslugshell>Depleted Rifled Slug</entityname.depletedshotgunslugshell>
+  <entitydescription.depletedshotgunslugshell>A shotgun slug round made from depleted fuel.</entitydescription.depletedshotgunslugshell>
   <entityname.railgunshrapnelshell>Shrapnel Shell</entityname.railgunshrapnelshell>
   <entitydescription.railgunshrapnelshell>A reloadable burst-type munition for the railgun that fires a large number of blunt pellets in a wide spread.</entitydescription.railgunshrapnelshell>
   <entityname.railgunshrapnelshellpellet>Shrapnel Shell Pellet</entityname.railgunshrapnelshellpellet>
@@ -51,4 +53,6 @@
   <Override>
     <talentdescription.miner>Unlock recipe: [itemname].\nWhenever you deconstruct an ore, you have a [probability]% chance to gain double the output.</talentdescription.miner>
   </Override>
+  <entityname.boardingaxeunique>Depleted Boarding Axe</entityname.boardingaxeunique>
+  <entitydescription.boardingaxeunique>A hand axe, made from Depleted Fuel.</entitydescription.boardingaxeunique>
 </infotexts>

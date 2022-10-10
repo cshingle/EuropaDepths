@@ -48,4 +48,6 @@
     <afflictiondescription.empdamage>There are signs of damage to internal components caused by an Electromagnetic Pulse .</afflictiondescription.empdamage>
     <entityname.suitcrate>Metal Suit Crate</entityname.suitcrate>
     <entitydescription.suitcrate>A vessel in which diving suits may be stored.</entitydescription.suitcrate>
+    <entityname.boardingaxeunique>登船斧</entityname.boardingaxeunique>
+    <entitydescription.boardingaxeunique>一把大型手斧，需用雙手揮舞。</entitydescription.boardingaxeunique>
 </infotexts>

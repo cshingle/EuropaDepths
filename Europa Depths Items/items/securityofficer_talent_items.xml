@@ -252,6 +252,49 @@
     </Projectile>
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
+  <Item name="" identifier="depletedshotgunslugshell" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
+    <PreferredContainer primary="armcab" secondary="secarmcab"/>
+    <Price baseprice="75" sold="false">
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="6">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="depletedfuel" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,124,60,18" depth="0.55" origin="0.5,0.5" />
+    <Body width="23" height="10" density="25" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" hitscancount="1" removeonhit="true" spread="1">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,115,95,150" scalemultiplier="1,0.9" />
+      <Attack structuredamage="10" targetforce="20" itemdamage="34" severlimbsprobability="0.4" penetration="0.1">
+        <Affliction identifier="bleeding" strength="48" />
+        <Affliction identifier="gunshotwound" strength="50" />
+        <Affliction identifier="gunshotwound" strength="15" probability="0.25" />
+        <Affliction identifier="stun" strength="0.25" />
+        <Affliction identifier="stun" strength="1" probability="0.25" />
+        <Affliction identifier="blunttrauma" strength="10" />
+        <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+          <Conditional radiationsickness="lt 30" />
+          <Affliction identifier="radiationsickness" strength="10" />
+        </StatusEffect>
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="6,6" colormultiplier="255,200,115,200" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.75" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
   <Override>
     <Item name="" identifier="shotgunslugexplosive" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="armcab" secondary="secarmcab"/>
@@ -363,6 +406,49 @@
       </Quality>
       <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
     </Item>
+</Override>
+<Item name="" identifier="boardingaxeunique" category="Weapon" Tags="mediumitem,weapon,gunsmith,mountableweapon,boardingaxe" scale="0.5" requireaimtouse="true" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
+  <PreferredContainer primary="secarmcab,weaponholder" secondary="armcab"/>
+  <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.05"/>
+  <Price baseprice="700" sold="false">
+    <Price storeidentifier="merchantoutpost" multiplier="1.25" />
+    <Price storeidentifier="merchantcity" multiplier="1.25" />
+    <Price storeidentifier="merchantresearch" multiplier="1.25" />
+    <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+    <Price storeidentifier="merchantmine" multiplier="1.25" />
+  </Price>
+  <Deconstruct time="20">
+    <Item identifier="depletedfuel" />
+    <Item identifier="titaniumaluminiumalloy" />
+  </Deconstruct>
+  <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="165,366,64,64" origin="0.5,0.5" />
+  <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="1,425,164,53" depth="0.55" origin="0.5,0.2" />
+  <Body width="161" height="20" density="25" />
+  <MeleeWeapon slots="Any,RightHand+LeftHand" aimpos="50,0" handle1="-22,2" handle2="-32,5" holdangle="30" reload="1.2" range="175" combatPriority="40" msg="ItemMsgPickUpSelect">
+    <Attack targetimpulse="5" severlimbsprobability="7.5" itemdamage="50" structuredamage="10">
+      <Affliction identifier="lacerations" strength="36" />
+      <Affliction identifier="bleeding" strength="10" />
+      <Affliction identifier="stun" strength="0.5" />
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+        <Conditional radiationsickness="lt 30" />
+        <Affliction identifier="radiationsickness" strength="10" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character">
+        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+      </StatusEffect>
+    </Attack>
+  </MeleeWeapon>
+  <Quality>
+    <QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
+  </Quality>
+  <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+</Item>
+<Override>
     <Item name="" identifier="skillbooksubmarinewarfare" category="Misc" cargocontaineridentifier="metalcrate" Tags="smallitem,skillbook" maxstacksize="8" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="crewcab"/>
       <Price baseprice="350" buyingpricemodifier="2.5" minleveldifficulty="40">
@@ -439,7 +525,7 @@
         <sprite name="SlipSuit Right Shoe" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
         <StatValue stattype="SwimmingSpeed" value="0.45" />
         <StatValue stattype="WalkingSpeed" value="-0.6" />
-        <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+        <StatusEffect type="OnWearing" target="Character" OxygenAvailable="0.0" UseHullOxygen="true" />
         <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="6000.0" SpeedMultiplier="0.95" PropulsionSpeedMultiplier="1.4" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
           <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true" />
           <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true" />
@@ -457,12 +543,17 @@
           <Conditional IsDead="false" />
           <Conditional HullOxygenPercentage="lt 50" />
           <Conditional InWater="false" />
-          <RequiredItem items="oxygentank" type="Contained" targetslot="0"/>
+          <RequiredItem items="oxygensource" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="1000.0" Condition="-0.3" comparison="And" targetslot="0">
           <Conditional IsDead="false" />
           <Conditional InWater="true" />
-          <RequiredItem items="oxygentank" type="Contained" targetslot="0"/>
+          <RequiredItem items="oxygentank" type="Contained" />
+        </StatusEffect>
+        <!-- Always drain oxygenite tanks to get speed boost -->
+        <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="1500.0" Condition="-0.3" comparison="And" targetslot="0">
+          <Conditional IsDead="false" />
+          <RequiredItem items="oxygenitetank" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" Oxygen="-20.0" Condition="-0.5" targetslot="0">
           <Conditional IsDead="false" />
@@ -473,23 +564,9 @@
           <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0"/>
           <Affliction identifier="burn" amount="0.1" />
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="1500.0" Condition="-0.1" comparison="Or" targetslot="0">
+        <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="And">
           <Conditional IsDead="false" />
           <RequiredItem items="oxygenitetank" type="Contained" targetslot="0"/>
-        </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="Or">
-          <Conditional IsDead="false" />
-          <RequiredItem items="oxygenitetank" type="Contained" targetslot="0"/>
-        </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" comparison="And" targetslot="0">
-          <RequiredItem items="oxygensource" type="Contained" />
-          <Conditional condition="lt 5.0" />
-          <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" loop="true"/>
-        </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
-          <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
-          <Conditional condition="lte 0.0" />
-          <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true"/>
         </StatusEffect>
         <StatusEffect type="OnWearing" targettype="Contained,Character" targetslot="1" Condition="-0.1" comparison="And">
           <Conditional IsPlayer="True"/>
@@ -505,6 +582,19 @@
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.75" damagesound="" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor"/>
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" damagemultiplier="0.5" probabilitymultiplier="0.25" damagesound="LimbArmor"/>
+        <ItemComponent>
+          <IsActive HullOxygenPercentage="lt 50" />
+          <StatusEffect type="OnActive" target="Contained,Character" comparison="And">
+            <RequiredItem items="oxygensource" type="Contained" />
+            <Conditional condition="lt 5.0" />
+            <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" loop="true"/>
+          </StatusEffect>
+          <StatusEffect type="OnActive" target="Contained" playsoundonrequireditemfailure="true">
+            <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+            <Conditional condition="lte 0.0" />
+            <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true"/>
+          </StatusEffect>
+        </ItemComponent>
       </Wearable>
       <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" />
       <ItemContainer capacity="0" maxstacksize="0" slotsperrow="2" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0" autoinject="true">

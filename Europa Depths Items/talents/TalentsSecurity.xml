@@ -23,7 +23,7 @@
     </Talent>
     <Talent identifier="munitionsexpertise">
       <Description tag="talentdescription.unlockrecipe">
-        <Replace tag="[itemname]" value="entityname.shotgunslugexplosive, entityname.shotgunslugshell" color="gui.orange"/>
+        <Replace tag="[itemname]" value="entityname.shotgunslugexplosive, entityname.shotgunslugshell, entityname.depletedshotgunslugshell" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.extraskillfromcrafting">
         <Replace tag="[amount]" value="125" color="gui.green"/>
@@ -52,6 +52,8 @@
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="shotgunslugexplosive"/>
       <AddedRecipe itemidentifier="shotgunslugshell"/>
+      <AddedRecipe itemidentifier="depletedshotgunslugshell"/>
+
     </Talent>
   </Override>
 </Talents>

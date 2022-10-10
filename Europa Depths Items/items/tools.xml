@@ -195,8 +195,7 @@
       <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-60,-21" handle2="-21,-20" msg="ItemMsgPickUpSelect" />
       <RepairTool firedamage="10.0" structurefixamount="-0.125" range="150" barrelpos="55,10" combatpriority="10" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-5.0" targetforce="10">
         <RequiredItems items="oxygensource,weldingtoolfuel" type="Contained" msg="ItemMsgOxygenTankRequired" />
-        <StatusEffect type="OnUse" targettype="Contained" targets="oxygentank" Condition="-1.0" />
-        <StatusEffect type="OnUse" targettype="Contained" targets="oxygenitetank" Condition="-0.5" />
+        <StatusEffect type="OnUse" targettype="Contained" targets="oxygensource" Condition="-1.0" />
         <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-20.0" Condition="-3.0" />
         <StatusEffect type="OnUse" targettype="UseTarget" Condition="-3.0" />
         <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.005">
@@ -229,7 +228,6 @@
         <Fixable identifier="structure" />
         <RequiredSkill identifier="mechanical" level="30" />
         <StatusEffect type="OnFailure" targettype="Contained" targets="oxygentank" Condition="-3.0" />
-        <StatusEffect type="OnFailure" targettype="Contained" targets="oxygenitetank" Condition="-1.5" />
         <LightComponent LightColor="0.8,0.7,1.0,1.0" Flicker="0.5">
           <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
         </LightComponent>
@@ -792,7 +790,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="oxygenitetank" category="Diving,Equipment" maxstacksize="8" Tags="smallitem,oxygensource" description="" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="oxygenitetank" category="Diving,Equipment" maxstacksize="8" Tags="smallitem,oxygensource" description="" scale="0.5" health="300" impactsoundtag="impact_metal_light">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <Price baseprice="175" displaynonempty="true">
         <Price storeidentifier="merchantoutpost" sold="false" />

@@ -67,7 +67,7 @@
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
       <sprite name="Clown Diving Mask Wearable" texture="%ModDir%/sprites/items.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="8,128,100,88" origin="0.54,0.46" />
       <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
-      <!-- copied from divingmask -->
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="0.0" UseHullOxygen="true" />
       <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="1000.0" Condition="-0.3" comparison="And">
         <Conditional IsDead="false" />
         <Conditional HullOxygenPercentage="lt 50" />
@@ -79,10 +79,6 @@
         <Conditional InWater="true" />
         <RequiredItem items="oxygentank" type="Contained" />
       </StatusEffect>
-      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="Or">
-        <Conditional IsDead="false" />
-        <RequiredItem items="oxygenitetank" type="Contained" />
-      </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="-100.0" Oxygen="-5.0" Condition="-5.0">
         <Conditional IsDead="false" />
         <RequiredItem items="weldingfueltank" type="Contained" />
@@ -91,11 +87,11 @@
         <RequiredItem items="incendiumfueltank" type="Contained" />
         <Affliction identifier="burn" amount="0.1" />
       </StatusEffect>
-      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.1" comparison="Or">
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.3" comparison="And">
         <Conditional IsDead="false" />
         <RequiredItem items="oxygenitetank" type="Contained" />
       </StatusEffect>
-      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.2" setvalue="true" comparison="Or">
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.2" setvalue="true" comparison="And">
         <Conditional IsDead="false" />
         <RequiredItem items="oxygenitetank" type="Contained" />
       </StatusEffect>
@@ -120,6 +116,9 @@
         <reduceaffliction identifier="huskinfection" strength="0.05"/>
         <reduceaffliction identifier="reaperstax" strength="0.05"/>
       </StatusEffect>
+      <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictiontypes="bleeding" armorsector="0.0,360.0" damagemultiplier="0.1" damagesound="LimbArmor" deflectprojectiles="true" />
+      <damagemodifier afflictionidentifiers="concussion" armorsector="0.0,360.0" damagemultiplier="0.70" damagesound="" deflectprojectiles="true" />
     </Wearable>
     <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
       <Containable items="oxygensource,weldingtoolfuel" />
