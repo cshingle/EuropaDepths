@@ -184,5 +184,20 @@
         <Containable items="smallitem,mediumitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
       </ItemContainer>
     </Item>
+    <Item name="" identifier="medcabinet" tags="container,medcontainer" category="Medical" linkable="true" pickdistance="150" waterproof="true" scale="0.5">
+      <Sprite texture="Content/Items/Containers/containers.png" depth="0.84" sourcerect="815,1,208,346"/>
+      <ItemContainer capacity="30" slotsperrow="6" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.25,0.45" anchor="Center" slotsperrow="6" style="ItemUI"/>
+        <Containable items="smallitem,chem,medical,medicalcase"/>
+      </ItemContainer>
+    </Item>
+    <Item name="" identifier="toxcabinet" tags="container,toxcontainer" linkable="true" pickdistance="150" waterproof="true" scale="0.5">
+      <Sprite texture="Content/Items/Containers/containers.png" depth="0.84" sourcerect="889,483,125,148" origin="0.5,0.5"/>
+      <ItemContainer capacity="20" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+        <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI"/>
+        <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true"/>
+        <Containable items="smallitem,chem,medical,medicalcase"/>
+      </ItemContainer>
+    </Item>
   </Override>
 </Items>

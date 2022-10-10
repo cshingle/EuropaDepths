@@ -50,4 +50,6 @@
     <entitydescription.suitcrate>A vessel in which diving suits may be stored.</entitydescription.suitcrate>
     <entityname.boardingaxeunique>登船斧</entityname.boardingaxeunique>
     <entitydescription.boardingaxeunique>一把大型手斧，需用雙手揮舞。</entitydescription.boardingaxeunique>
+    <entityname.medicalcase>Medical Case</entityname.medicalcase>
+    <entitydescription.medicalcase>A case for safly storing medical supplies.</entitydescription.medicalcase>
 </infotexts>

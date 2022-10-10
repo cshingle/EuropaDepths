@@ -1336,6 +1336,43 @@
     </ItemContainer>
     <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
   </Item>
+  <Item name="" identifier="medicalcase" category="Equipment" tags="mediumitem,mobilecontainer,tool,toolbox" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+    <PreferredContainer primary="medcabinet" secondary="supplycab" />
+    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05"/>
+    <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.1"/>
+    <Deconstruct time="10">
+      <Item identifier="steel" amount="2" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <Item identifier="steel" amount="2" />
+      <Item identifier="plastic" />
+    </Fabricate>
+    <Price baseprice="65">
+      <Price storeidentifier="merchantoutpost" minavailable="1" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="1" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="4" />
+    </Price>
+    <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="256,529,64,64" origin="0.5,0.6" />
+    <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,523,94,74" origin="0.5,0.5" depth="0.6" />
+    <!--<Sprite texture="Content/Items/Containers/crates.png" depth="0.54" sourcerect="1,0,68,39"/>-->
+    <Body width="90" height="60" density="20" />
+    <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="0" itemdamage="5" targetimpulse="2">
+        <Affliction identifier="blunttrauma" strength="2" />
+        <Affliction identifier="stun" strength="0.6" />
+        <Sound file="Content/Items/Weapons/Smack2.ogg" range="800" />
+      </Attack>
+    </MeleeWeapon>
+    <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
+      <Containable items="chem,medical" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+    </ItemContainer>
+    <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
   <Item name="" identifier="hammer" category="Equipment" Tags="mediumitem,tool,crowbar,mountableweapon" scale="0.5" requireaimtouse="true" impactsoundtag="impact_metal_heavy">
     <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
     <PreferredContainer primary="engcab"/>

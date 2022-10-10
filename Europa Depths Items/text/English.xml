@@ -55,4 +55,6 @@
   </Override>
   <entityname.boardingaxeunique>Depleted Boarding Axe</entityname.boardingaxeunique>
   <entitydescription.boardingaxeunique>A hand axe, made from Depleted Fuel.</entitydescription.boardingaxeunique>
+  <entityname.medicalcase>Medical Case</entityname.medicalcase>
+  <entitydescription.medicalcase>A case for safly storing medical supplies.</entitydescription.medicalcase>
 </infotexts>
