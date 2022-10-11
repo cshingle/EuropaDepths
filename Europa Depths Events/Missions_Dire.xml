@@ -32,7 +32,7 @@
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48" />
   </MonsterMission>
   <MonsterMission identifier="killhammerhead5" textidentifier="killhammerhead" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="80" reward="6000" maxsonarmarkerdistance="10000" monsterfile="Hammerheadgold_m">
-    <monster character="Hammerheadgold_eravetn" min="3" max="5" delaybetweenspawns="2" />
+    <monster character="Hammerheadgold_veteran" min="3" max="5" delaybetweenspawns="2" />
     <monster character="Hammerheadblack" min="5" max="6" delaybetweenspawns="4" />
     <Reputation identifier="location" amount="10" delaybetweenspawns="1" />
     <Reputation identifier="coalition" amount="5" />
@@ -174,8 +174,8 @@
     <LocationType identifier="Abandoned"/>
     <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
     <Characters>
-      <Character identifier="husk" min="-2" max="5"/>
-      <Character identifier="Crawler_veteran" min="20" max="25"/>
+      <Character identifier="Crawler" min="10" max="15"/>
+      <Character identifier="Crawler_veteran" min="10" max="15"/>
     </Characters>
     <Items>
       <Item identifier="crawleregg" spawnpointtags="nest">
