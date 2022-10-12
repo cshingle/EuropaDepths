@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item name="Death Free Days Poster" identifier="deathfree_propagandaposter" width="224" height="298" texturescale="1.0,1.0" scale="0.5" category="Decorative" allowattachitems="true">
+        <sprite texture="%ModDir%/sprites/posters.png" sourcerect="0,0,224,298" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+    </Item>
+    <Item name="Radiation Hazard Poster" identifier="radiationhazard_propagandaposter" width="224" height="298" texturescale="1.0,1.0" scale="0.5" category="Decorative" allowattachitems="true">
+        <sprite texture="%ModDir%/sprites/posters.png" sourcerect="224,0,224,298" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+    </Item>
+</Items>

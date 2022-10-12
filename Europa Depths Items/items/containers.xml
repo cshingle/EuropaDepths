@@ -68,13 +68,33 @@
       <Body width="145" height="85" density="25" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-20,14" handle2="20,14" aimable="false" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="12" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
-        <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+        <Containable items="chem,paint" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+      </ItemContainer>
+    </Item>
+    <Item name="" identifier="materialcrate" tags="crate,allowcleanup" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy">
+      <Deconstruct time="20">
+        <Item identifier="steel" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="20" />
+        <Item identifier="steel" />
+      </Fabricate>
+      <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,128,64,64" />-->
+      <Sprite texture="%ModDir%/sprites/items.png" depth="0.54" sourcerect="128,520,152,89" origin="0.5,0.5" />
+      <Body width="150" height="80" density="25" />
+      <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+      <ItemContainer capacity="20" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
+        <Containable items="material,ore" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
       </ItemContainer>
     </Item>
     <Item name="" identifier="mediccrate" category="Medical" tags="crate,allowcleanup" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" waterproof="true">
       <Deconstruct time="20">
         <Item identifier="steel" />
       </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="20" />
+        <Item identifier="steel" />
+      </Fabricate>
       <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="410,563,148,87" origin="0.5,0.5" />
       <Body width="145" height="85" density="25" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-20,14" handle2="20,14" aimable="false" msg="ItemMsgPickUpSelect" />

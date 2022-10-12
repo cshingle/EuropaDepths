@@ -35,7 +35,7 @@
     <entityname.captainscap4>一個看上去不錯的帽子</entityname.captainscap4>
     <entityname.captainscap5>牛仔帽</entityname.captainscap5>
     <entityname.fuelrodcase>Fuel Rod Case</entityname.fuelrodcase>
-    <entitydescription.fuelrodcase>A case for safly storing volatile fuel rods.</entitydescription.fuelrodcase>
+    <entitydescription.fuelrodcase>A case for safely storing volatile fuel rods.</entitydescription.fuelrodcase>
     <entityname.fuelrodvolatile>揮發性燃料棒</entityname.fuelrodvolatile>
     <entitydescription.fuelrodvolatile>一根經過進一步提煉的燃料棒，可以在正常情況下提供更長時間的電力。然而，它的輻射屏罩層只能限制部份環境輻射，因此必須小心處理該燃料棒。</entitydescription.fuelrodvolatile>
     <entityname.thoriumfuelrodvolatile>揮發性雷素燃料棒</entityname.thoriumfuelrodvolatile>
@@ -51,5 +51,7 @@
     <entityname.boardingaxeunique>登船斧</entityname.boardingaxeunique>
     <entitydescription.boardingaxeunique>一把大型手斧，需用雙手揮舞。</entitydescription.boardingaxeunique>
     <entityname.medicalcase>Medical Case</entityname.medicalcase>
-    <entitydescription.medicalcase>A case for safly storing medical supplies.</entitydescription.medicalcase>
+    <entitydescription.medicalcase>A case for safely storing medical supplies.</entitydescription.medicalcase>
+    <entityname.materialcrate>Materials Crate</entityname.materialcrate>
+    <entitydescription.materialcrate>A crate for safely storing materials.</entitydescription.materialcrate>
 </infotexts>

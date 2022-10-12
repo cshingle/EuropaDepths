@@ -37,7 +37,7 @@
   <entityname.captainscap4>A Nice Hat</entityname.captainscap4>
   <entityname.captainscap5>Cowboy Hat</entityname.captainscap5>
   <entityname.fuelrodcase>Fuel Rod Case</entityname.fuelrodcase>
-  <entitydescription.fuelrodcase>A case for safly storing volatile fuel rods.</entitydescription.fuelrodcase>
+  <entitydescription.fuelrodcase>A case for safely storing volatile fuel rods.</entitydescription.fuelrodcase>
   <entityname.fuelrodvolatile>Volatile Fuel Rod</entityname.fuelrodvolatile>
   <entitydescription.fuelrodvolatile>A fuel rod that has been further refined to supply power for much longer than normal. However, its radiation shielding can only partially limit the emitted ambient radiation, so the rod must be handled with care.</entitydescription.fuelrodvolatile>
   <entityname.thoriumfuelrodvolatile>Volatile Thorium Fuel Rod</entityname.thoriumfuelrodvolatile>
@@ -56,5 +56,7 @@
   <entityname.boardingaxeunique>Depleted Boarding Axe</entityname.boardingaxeunique>
   <entitydescription.boardingaxeunique>A hand axe, made from Depleted Fuel.</entitydescription.boardingaxeunique>
   <entityname.medicalcase>Medical Case</entityname.medicalcase>
-  <entitydescription.medicalcase>A case for safly storing medical supplies.</entitydescription.medicalcase>
+  <entitydescription.medicalcase>A case for safely storing medical supplies.</entitydescription.medicalcase>
+  <entityname.materialcrate>Materials Crate</entityname.materialcrate>
+  <entitydescription.materialcrate>A crate for safely storing materials.</entitydescription.materialcrate>
 </infotexts>

@@ -1356,8 +1356,8 @@
       <Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="1" />
       <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="4" />
     </Price>
-    <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="256,529,64,64" origin="0.5,0.6" />
-    <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,523,94,74" origin="0.5,0.5" depth="0.6" />
+    <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="256,607,64,64" origin="0.5,0.6" />
+    <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,604,94,74" origin="0.5,0.5" depth="0.6" />
     <!--<Sprite texture="Content/Items/Containers/crates.png" depth="0.54" sourcerect="1,0,68,39"/>-->
     <Body width="90" height="60" density="20" />
     <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
