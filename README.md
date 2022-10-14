@@ -85,5 +85,10 @@ It currently contains the following items;
 *Distiller - Slowly produces Ethanol. Remaining in the Use GUI will cause the player Character to get more and more drunk. Some drunk submariners claim that it also has healing capabilities.
 *Unit Load Device - Overrode the default Unit Load Device to hold 12 crates rather than 10.
 
+## Europa Depths Vanilla Monsters
+Europa Depths Vanilla Monsters allows additional mosters to enter the sub
+
+Note: I removed Endworms and Molochs because they killed frame rates and caused glitches.
+
 # Modders
 Feel free to use any part of this in your own mods.

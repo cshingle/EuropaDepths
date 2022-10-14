@@ -48,7 +48,7 @@
   <Item name="Large Railgun Shell Rack" identifier="largerailgunshellrack" tags="container,railgunammocontainer" pickdistance="120" scale="0.5" canflipx="false" canflipy="false" category="Equipment">
     <Sprite texture="%ModDir%/sprites/equipment.png" depth="0.84" sourcerect="0,0,418,212" origin="0.5,0.5" />
     <ItemContainer hideitems="false" drawinventory="true" capacity="12" slotsperrow="6" itempos="42,-100" iteminterval="30,0" itemrotation="90" canbeselected="true" msg="ItemMsgInteractSelect">
-    <Upgrade gameversion="0.18.0.0" itempos="42,-100" iteminterval="30,0" />
+      <Upgrade gameversion="0.18.0.0" itempos="42,-100" iteminterval="30,0" />
       <GuiFrame relativesize="0.3,0.28" anchor="Center" style="ItemUI" />
       <Containable items="railgunammo" />
     </ItemContainer>
@@ -137,6 +137,40 @@
       <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
         <StatusEffect type="OnContaining" targettype="Contained" Condition="1.0" Comparison="And">
           <Conditional Voltage="gt 0.1" targetcontainer="true" targetitemcomponent="Powered"/>
+          <Conditional HasTag="refillableoxygensource"/>
+          <Conditional targetcontainer="true" HasStatusTag="!eq onfire" />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="oxygentankshelflarge_oxygengenerator" nameidentifier="oxygentankshelf" category="Machine" tags="container,oxygentankcontainer,oxygentankrefiller" pickdistance="50" linkable="true" allowedlinks="oxygenerator" scale="0.5">
+    <Sprite name="Diving Suit Locker Large" texture="%ModDir%/sprites/equipment.png" sourcerect="145,221,257,84" depth="0.84" origin="0.5,0.5" />
+    <Vent>
+      <sound file="Content/Items/OxygenGenerator/Ventilation.ogg" type="OnActive" range="400.0" volumeproperty="OxygenFlow" volume="0.0005f" loop="true"/>
+    </Vent>
+    <ItemContainer hideitems="false" drawinventory="true" capacity="10" maxstacksize="1" itempos="27,-44" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.25" anchor="Center" slotsperrow="6" style="ItemUI" />
+      <StatusEffect type="OnFire" target="This" tags="onfire" duration="1" stackable="false" />
+      <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
+        <StatusEffect type="OnContaining" targettype="Contained" Condition="1.0" Comparison="And">
+          <Conditional OxygenFlow="gt 10" targetitemcomponent="Vent" targetcontainer="true"/>
+          <Conditional HasTag="refillableoxygensource"/>
+          <Conditional targetcontainer="true" HasStatusTag="!eq onfire" />
+        </StatusEffect>
+      </Containable>
+    </ItemContainer>
+  </Item>
+  <Item name="" identifier="oxygentankshelf2_oxygengenerator" nameidentifier="oxygentankshelf" category="Diving" tags="container,oxygentankcontainer,oxygentankrefiller" pickdistance="50" linkable="true" allowedlinks="oxygenerator" scale="0.5">
+    <Sprite name="Diving Suit Locker Small" texture="Content/Items/Containers/containers.png" sourcerect="714,259,99,82" depth="0.84" origin="0.5,0.5" />
+    <Vent>
+      <sound file="Content/Items/OxygenGenerator/Ventilation.ogg" type="OnActive" range="400.0" volumeproperty="OxygenFlow" volume="0.0005f" loop="true"/>
+    </Vent>
+    <ItemContainer hideitems="false" drawinventory="true" capacity="3" maxstacksize="1" slotsperrow="3" itempos="27,-42" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.16,0.18" anchor="Center" style="ItemUI" />
+      <StatusEffect type="OnFire" target="This" tags="onfire" duration="1" stackable="false" />
+      <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
+        <StatusEffect type="OnContaining" targettype="Contained" Condition="1.0" Comparison="And">
+          <Conditional OxygenFlow="gt 10" targetitemcomponent="Vent" targetcontainer="true"/>
           <Conditional HasTag="refillableoxygensource"/>
           <Conditional targetcontainer="true" HasStatusTag="!eq onfire" />
         </StatusEffect>

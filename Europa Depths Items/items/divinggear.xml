@@ -379,8 +379,6 @@
         </SubContainer>
       </ItemContainer>
       <aitarget maxsightrange="1500" />
-
-
     </Item>
   </Override>
 </Items>

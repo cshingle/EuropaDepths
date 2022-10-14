@@ -17,4 +17,8 @@
     <entitydescription.largeengine_boost>在水準方向上產生動能的裝置。</entitydescription.largeengine_boost>
     <entityname.oxygentankshelflarge>氧氣罐置物架</entityname.oxygentankshelflarge>
     <entitydescription.oxygentankshelflarge>可擺放多個氧氣罐。</entitydescription.oxygentankshelflarge>
+    <entityname.oxygentankshelflarge_oxygengenerator>Large Oxygen Tank Shelf</entityname.oxygentankshelflarge_oxygengenerator>
+    <entitydescription.oxygentankshelflarge_oxygengenerator>A large tank shelf that is linked to the oxygen generator</entitydescription.oxygentankshelflarge_oxygengenerator>
+    <entityname.oxygentankshelf2_oxygengenerator>Oxygen Tank Shelf</entityname.oxygentankshelf2_oxygengenerator>
+    <entitydescription.oxygentankshelf2_oxygengenerator>A tank shelf that is linked to the oxygen generator</entitydescription.oxygentankshelf2_oxygengenerator>
 </infotexts>

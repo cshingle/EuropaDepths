@@ -432,7 +432,6 @@
       <aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
     </Item>
 
-
     <Item name="" identifier="handheldsonar" category="Equipment" Tags="smallitem,sonar,provocative" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
       <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer primary="divingcab" amount="1" spawnprobability="1" notcampaign="true"/>
@@ -534,8 +533,7 @@
         </StatusEffect>
         <StatusEffect type="OnActive" targettype="This" SoundRange="50000" setvalue="true">
           <Conditional Voltage="gt 0.5" targetitemcomponent="LightComponent" />
-          <!-- This should be painful if it is on out of water? Yes, it should -->
-          <sound file="Content/Items/Weapons/SonarDecoy.ogg" range="500.0" loop="true" volume="0.25" dontmuffle="true" />
+        <sound file="Content/Items/Weapons/SonarDecoy.ogg" range="500.0" loop="true" volume="0.25" />
         </StatusEffect>
       </LightComponent>
       <CustomInterface canbeselected="false" drawhudwhenequipped="true" allowuioverlap="true">

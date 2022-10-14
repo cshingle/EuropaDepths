@@ -406,49 +406,49 @@
       </Quality>
       <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
     </Item>
-</Override>
-<Item name="" identifier="boardingaxeunique" category="Weapon" Tags="mediumitem,weapon,gunsmith,mountableweapon,boardingaxe" scale="0.5" requireaimtouse="true" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
-  <PreferredContainer primary="secarmcab,weaponholder" secondary="armcab"/>
-  <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.05"/>
-  <Price baseprice="700" sold="false">
-    <Price storeidentifier="merchantoutpost" multiplier="1.25" />
-    <Price storeidentifier="merchantcity" multiplier="1.25" />
-    <Price storeidentifier="merchantresearch" multiplier="1.25" />
-    <Price storeidentifier="merchantmilitary" multiplier="0.9" />
-    <Price storeidentifier="merchantmine" multiplier="1.25" />
-  </Price>
-  <Deconstruct time="20">
-    <Item identifier="depletedfuel" />
-    <Item identifier="titaniumaluminiumalloy" />
-  </Deconstruct>
-  <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="165,366,64,64" origin="0.5,0.5" />
-  <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="1,425,164,53" depth="0.55" origin="0.5,0.2" />
-  <Body width="161" height="20" density="25" />
-  <MeleeWeapon slots="Any,RightHand+LeftHand" aimpos="50,0" handle1="-22,2" handle2="-32,5" holdangle="30" reload="1.2" range="175" combatPriority="40" msg="ItemMsgPickUpSelect">
-    <Attack targetimpulse="5" severlimbsprobability="7.5" itemdamage="50" structuredamage="10">
-      <Affliction identifier="lacerations" strength="36" />
-      <Affliction identifier="bleeding" strength="10" />
-      <Affliction identifier="stun" strength="0.5" />
-      <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
-        <Conditional radiationsickness="lt 30" />
-        <Affliction identifier="radiationsickness" strength="10" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="Character">
-        <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
-        <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
-        <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
-        <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
-        <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
-        <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
-      </StatusEffect>
-    </Attack>
-  </MeleeWeapon>
-  <Quality>
-    <QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
-  </Quality>
-  <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
-</Item>
-<Override>
+  </Override>
+  <Item name="" identifier="boardingaxeunique" category="Weapon" Tags="mediumitem,weapon,gunsmith,mountableweapon,boardingaxe" scale="0.5" requireaimtouse="true" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
+    <PreferredContainer primary="secarmcab,weaponholder" secondary="armcab"/>
+    <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.05"/>
+    <Price baseprice="700" sold="false">
+      <Price storeidentifier="merchantoutpost" multiplier="1.25" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" />
+    </Price>
+    <Deconstruct time="20">
+      <Item identifier="depletedfuel" />
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="165,366,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="1,425,164,53" depth="0.55" origin="0.5,0.2" />
+    <Body width="161" height="20" density="25" />
+    <MeleeWeapon slots="Any,RightHand+LeftHand" aimpos="50,0" handle1="-22,2" handle2="-32,5" holdangle="30" reload="1.2" range="175" combatPriority="40" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="5" severlimbsprobability="7.5" itemdamage="50" structuredamage="10">
+        <Affliction identifier="lacerations" strength="36" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.5" />
+        <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+          <Conditional radiationsickness="lt 30" />
+          <Affliction identifier="radiationsickness" strength="10" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="Character">
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </Attack>
+    </MeleeWeapon>
+    <Quality>
+      <QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
+    </Quality>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+  </Item>
+  <Override>
     <Item name="" identifier="skillbooksubmarinewarfare" category="Misc" cargocontaineridentifier="metalcrate" Tags="smallitem,skillbook" maxstacksize="8" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="crewcab"/>
       <Price baseprice="350" buyingpricemodifier="2.5" minleveldifficulty="40">
@@ -582,36 +582,23 @@
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.75" damagesound="" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor"/>
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" damagemultiplier="0.5" probabilitymultiplier="0.25" damagesound="LimbArmor"/>
-        <ItemComponent>
-          <IsActive HullOxygenPercentage="lt 50" />
-          <StatusEffect type="OnActive" target="Contained,Character" comparison="And">
-            <RequiredItem items="oxygensource" type="Contained" />
-            <Conditional condition="lt 5.0" />
-            <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" loop="true"/>
-          </StatusEffect>
-          <StatusEffect type="OnActive" target="Contained" playsoundonrequireditemfailure="true">
-            <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
-            <Conditional condition="lte 0.0" />
-            <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true"/>
-          </StatusEffect>
-        </ItemComponent>
       </Wearable>
       <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" />
-      <ItemContainer capacity="0" maxstacksize="0" slotsperrow="2" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0" autoinject="true">
-        <Containable items="none" />
+      <ItemContainer capacity="1" maxstacksize="1" slotsperrow="2" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0" autoinject="true">
         <SlotIcon slotindex="0" texture="Content/UI/ContainerIndicators.png" sourcerect="1,93,120,29" origin="0.5,0.45" />
         <SlotIcon slotindex="1" texture="Content/UI/WeaponUI.png" sourcerect="64,961,32,22" origin="0.5,0.45" />
         <SlotIcon slotindex="2" texture="Content/UI/ContainerIndicators.png" sourcerect="2,155,120,29" origin="0.5,0.5" />
-        <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="oxygensource,weldingtoolfuel" />
-        </SubContainer>
-        <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="mobilebattery">
-            <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true">
-              <Conditional condition="gt 0.01" />
-            </StatusEffect>
-          </Containable>
-        </SubContainer>
+        <Containable items="oxygensource,weldingtoolfuel" />
+        <StatusEffect type="OnWearing" target="Contained" targetslot="0">
+          <RequiredItem items="oxygensource" type="Contained" />
+          <Conditional condition="lt 5.0" />
+          <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" loop="true"/>
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+          <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+          <Conditional condition="lte 0.0" />
+          <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true"/>
+        </StatusEffect>
         <SubContainer capacity="1" maxstacksize="1">
           <Containable items="chem,medical" />
         </SubContainer>

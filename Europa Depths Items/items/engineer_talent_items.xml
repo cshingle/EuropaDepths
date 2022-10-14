@@ -740,30 +740,24 @@
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.1" damagesound="" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.1" damagesound="LimbArmor" />
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" damagemultiplier="0.5" probabilitymultiplier="0.1" damagesound="LimbArmor" />
-        <ItemComponent>
-          <IsActive HullOxygenPercentage="lt 50" />
-          <StatusEffect type="OnActive" target="Contained,Character" comparison="And">
-            <RequiredItem items="oxygensource" type="Contained" />
-            <Conditional condition="lt 5.0" />
-            <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" loop="true"/>
-          </StatusEffect>
-          <StatusEffect type="OnActive" target="Contained" playsoundonrequireditemfailure="true">
-            <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
-            <Conditional condition="lte 0.0" />
-            <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true"/>
-          </StatusEffect>
-        </ItemComponent>
       </Wearable>
       <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" />
-      <ItemContainer capacity="0" maxstacksize="0" slotsperrow="2" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0" autoinject="true">
-        <Containable items="none" />
+      <ItemContainer capacity="1" maxstacksize="1" slotsperrow="2" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0" autoinject="true">
         <SlotIcon slotindex="0" texture="Content/UI/ContainerIndicators.png" sourcerect="1,93,120,29" origin="0.5,0.45" />
         <SlotIcon slotindex="1" texture="Content/UI/WeaponUI.png" sourcerect="64,961,32,22" origin="0.5,0.45" />
         <SlotIcon slotindex="2" texture="Content/UI/ContainerIndicators.png" sourcerect="2,155,120,29" origin="0.5,0.5" />
         <SlotIcon slotindex="3" texture="Content/UI/ContainerIndicators.png" sourcerect="2,155,120,29" origin="0.5,0.5" />
-        <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="oxygensource,weldingtoolfuel" />
-        </SubContainer>
+        <Containable items="oxygensource,weldingtoolfuel" />
+        <StatusEffect type="OnWearing" target="Contained" targetslot="0">
+          <RequiredItem items="oxygensource" type="Contained" />
+          <Conditional condition="lt 5.0" />
+          <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" loop="true"/>
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+          <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+          <Conditional condition="lte 0.0" />
+          <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true"/>
+        </StatusEffect>
         <SubContainer capacity="1" maxstacksize="1">
           <Containable items="mobilebattery">
             <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true">
