@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths More Plants" modversion="1.1.7" corepackage="False" steamworkshopid="2873446110" gameversion="0.19.11.0">
+<contentpackage name="Europa Depths More Plants" modversion="1.1.8" corepackage="False" steamworkshopid="2873446110" gameversion="0.19.11.0">
   <Item file="%ModDir%/Plants.xml" />
 </contentpackage>

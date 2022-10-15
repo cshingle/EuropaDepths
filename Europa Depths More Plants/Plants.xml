@@ -3,12 +3,13 @@
   <Item name="Aquatic Poppy Seed" identifier="aquaticpoppyseed" category="Material" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="244,110,61,255">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="830,636,31,30" origin="0.5,0.5" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.10" />
-    <Price baseprice="450">
-      <Price storeidentifier="merchantoutpost" sold="false"/>
-      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2"/>
-      <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2"/>
-      <Price storeidentifier="merchantmine" sold="false" multiplier="1.2"/>
+    <Price baseprice="450" sold="false" displaynonempty="true" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="true" minavailable="1" maxavailable="2" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.3" />
+      <Price storeidentifier="merchantmine" multiplier="1.2" sold="true" minavailable="1" maxavailable="2" />
+      <Price storeidentifier="merchantarmory" multiplier="1.2" />
     </Price>
     <Deconstruct time="10">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
@@ -17,6 +18,7 @@
       <ProducedItem identifier="opium" probability="1.0" />
       <ProducedItem identifier="opium" probability="0.25" />
       <ProducedItem identifier="opium" probability="0.25" />
+      <ProducedItem identifier="aquaticpoppyseed" probability="0.01" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
@@ -50,12 +52,13 @@
   <Item name="Elastin Plant Seed" identifier="elastinplantseed" category="Material" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="41,158,68,255">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,636,30,31" origin="0.5,0.5" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.10" />
-    <Price baseprice="340">
-      <Price storeidentifier="merchantoutpost" sold="false"/>
-      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2"/>
-      <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2"/>
-      <Price storeidentifier="merchantmine" sold="false" multiplier="1.2"/>
+    <Price baseprice="340" sold="false" displaynonempty="true" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="true" minavailable="1" maxavailable="2" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.3" />
+      <Price storeidentifier="merchantmine" multiplier="1.2" sold="true" minavailable="1" maxavailable="2" />
+      <Price storeidentifier="merchantarmory" multiplier="1.2" />
     </Price>
     <Deconstruct time="10">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
@@ -63,7 +66,7 @@
     <Growable growthspeed="0.065" pickingtime="3" maximumvines="24" maxhealth="500" hardiness="0.175" floodtolerance="2.0" seedrate="0" productrate="0.022" flowertint="41,158,68,255" leaftint="41,158,68,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="18,69,30,255">
       <ProducedItem identifier="elastin" probability="1.00" />
       <ProducedItem identifier="elastin" probability="0.25" />
-      <ProducedItem identifier="elastin" probability="0.25" />
+      <ProducedItem identifier="elastinplantseed" probability="0.01" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
@@ -97,12 +100,13 @@
   <Item name="Fiber Plant Seed" identifier="fiberplantseed" category="Material" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="197,76,246,255">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="863,668,30,33" origin="0.5,0.5" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.3" />
-    <Price baseprice="240">
-      <Price storeidentifier="merchantoutpost" sold="false"/>
-      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2"/>
-      <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2"/>
-      <Price storeidentifier="merchantmine" sold="false" multiplier="1.2"/>
+    <Price baseprice="240" sold="false" displaynonempty="true" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="true" minavailable="1" maxavailable="2" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.3" />
+      <Price storeidentifier="merchantmine" multiplier="1.2" sold="true" minavailable="1" maxavailable="2" />
+      <Price storeidentifier="merchantarmory" multiplier="1.2" />
     </Price>
     <Deconstruct time="10">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
@@ -110,7 +114,7 @@
     <Growable growthspeed="0.12" pickingtime="3" maximumvines="24" maxhealth="500" hardiness="0.175" floodtolerance="2.0" seedrate="0" productrate="0.022" flowertint="197,76,246,255" leaftint="197,76,246,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="131,9,179,255">
       <ProducedItem identifier="organicfiber" probability="1.00" />
       <ProducedItem identifier="organicfiber" probability="0.25" />
-      <ProducedItem identifier="organicfiber" probability="0.25" />
+      <ProducedItem identifier="fiberplantseed" probability="0.01" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
@@ -144,12 +148,13 @@
   <Item name="Sea Yeast Shroom Seed" identifier="seayeastshroomseed" category="Material" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="56,85,245,255">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.1" />
-    <Price baseprice="200">
-      <Price storeidentifier="merchantoutpost" sold="false"/>
-      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2"/>
-      <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2"/>
-      <Price storeidentifier="merchantmine" sold="false" multiplier="1.2"/>
+    <Price baseprice="200" sold="false" displaynonempty="true" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="true" minavailable="1" maxavailable="2" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.3" />
+      <Price storeidentifier="merchantmine" multiplier="1.2" sold="true" minavailable="1" maxavailable="2" />
+      <Price storeidentifier="merchantarmory" multiplier="1.2" />
     </Price>
     <Deconstruct time="10">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
@@ -157,6 +162,7 @@
     <Growable growthspeed="0.065" pickingtime="3" maximumvines="48" maxhealth="500" hardiness="0.175" floodtolerance="2.0" seedrate="0" productrate="0.022" flowertint="124,143,244,255" leaftint="56,85,244,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="56,85,244,255">
       <ProducedItem identifier="ethanol" probability="1.00" />
       <ProducedItem identifier="ethanol" probability="0.5" />
+      <ProducedItem identifier="seayeastshroomseed" probability="0.01" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
@@ -188,12 +194,13 @@
   <Item name="Slime Bacteria Seed" identifier="slimebacteriaseed" category="Material" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="244,213,72,255">
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="829,666,33,35" origin="0.5,0.5" />
     <PreferredContainer primary="seedbag" amount="1" spawnprobability="0.1" />
-    <Price baseprice="360">
-      <Price storeidentifier="merchantoutpost" sold="false"/>
-      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1"/>
-      <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="2"/>
-      <Price storeidentifier="merchantmilitary" sold="false" multiplier="1.2"/>
-      <Price storeidentifier="merchantmine" sold="false" multiplier="1.2"/>
+    <Price baseprice="360" sold="false" displaynonempty="true" minleveldifficulty="15">
+      <Price storeidentifier="merchantoutpost" multiplier="1.3" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" />
+      <Price storeidentifier="merchantresearch" multiplier="1.0" sold="true" minavailable="1" maxavailable="2" />
+      <Price storeidentifier="merchantmilitary" multiplier="1.3" />
+      <Price storeidentifier="merchantmine" multiplier="1.2" sold="true" minavailable="1" maxavailable="2" />
+      <Price storeidentifier="merchantarmory" multiplier="1.2" />
     </Price>
     <Deconstruct time="10">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
@@ -201,6 +208,7 @@
     <Growable growthspeed="0.065" pickingtime="3" maximumvines="18" maxhealth="500" hardiness="0.175" floodtolerance="1.0" seedrate="0" productrate="0.022" flowertint="244,213,72,255" leaftint="244,213,72,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="110,93,8,255">
       <ProducedItem identifier="antibiotics" probability="1" />
       <ProducedItem identifier="antibiotics" probability="0.25" />
+      <ProducedItem identifier="slimebacteriaseed" probability="0.01" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
