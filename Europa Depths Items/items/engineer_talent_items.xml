@@ -587,7 +587,7 @@
       <AiTarget sightrange="1000.0" soundrange="1000" sonardisruption="10" static="True" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="0,0,2,2" depth="0.55" origin="0.5,0.5" />
       <ItemComponent>
-        <StatusEffect type="Always" target="This" condition="-25"></StatusEffect>
+        <StatusEffect type="Always" target="This" condition="-12"></StatusEffect>
         <StatusEffect type="Always" target="NearbyCharacters" range="1600" interval="1" disabledeltatime="true">
           <Affliction identifier="radiationsickness" strength="16" />
         </StatusEffect>
@@ -736,23 +736,20 @@
           <Conditional IsPlayer="True"/>
           <RequiredItem items="fulguriumbatterycell" type="Contained" targetslot="1"/>
         </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained,Character" comparison="And" targetslot="0">
+          <RequiredItem items="oxygensource" type="Contained" />
+          <Conditional condition="lt 5.0" targetslot="0" />
+          <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+          <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
+          <Conditional condition="lte 0.0" targetslot="0" />
+          <Sound file="Content/Items/WarningBeep.ogg" range="500" />
+        </StatusEffect>
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.7" damagesound="LimbArmor" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.1" damagesound="" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.1" damagesound="LimbArmor" />
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" damagemultiplier="0.5" probabilitymultiplier="0.1" damagesound="LimbArmor" />
-        <ItemComponent>
-          <IsActive HullOxygenPercentage="lt 50" />
-          <StatusEffect type="Always" target="Contained,Character" comparison="And">
-            <RequiredItem items="oxygensource" type="Contained" />
-            <Conditional condition="lt 5.0" />
-            <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" loop="true"/>
-          </StatusEffect>
-          <StatusEffect type="Always" target="Contained" playsoundonrequireditemfailure="true">
-            <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
-            <Conditional condition="lte 0.0" />
-            <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true"/>
-          </StatusEffect>
-        </ItemComponent>
       </Wearable>
       <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" />
       <ItemContainer capacity="0" maxstacksize="0" slotsperrow="2" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0" autoinject="true">
@@ -878,7 +875,7 @@
     </Holdable>
     <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
       <Containable items="nucleargunbolt" />
-      <StatusEffect type="OnUse" target="This" condition="-16.6666" disabledeltatime="true">
+      <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true">
         <SpawnItem identifiers="nucleargunbolt" spawnposition="ThisInventory" />
       </StatusEffect>
     </ItemContainer>
@@ -932,7 +929,7 @@
     </Holdable>
     <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
       <Containable items="nucleargunbolt" />
-      <StatusEffect type="OnUse" target="This" condition="-16.6666" disabledeltatime="true">
+      <StatusEffect type="OnUse" target="This" condition="-10" disabledeltatime="true">
         <SpawnItem identifiers="nucleargunbolt" spawnposition="ThisInventory" />
       </StatusEffect>
     </ItemContainer>

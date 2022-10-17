@@ -871,7 +871,7 @@
       </Holdable>
       <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
         <Containable items="nucleargunbolt" />
-        <StatusEffect type="OnUse" target="This" condition="-25.0" disabledeltatime="true">
+        <StatusEffect type="OnUse" target="This" condition="-20.0" disabledeltatime="true">
           <SpawnItem identifiers="nucleargunbolt" spawnposition="ThisInventory" />
         </StatusEffect>
       </ItemContainer>
@@ -915,7 +915,7 @@
       <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
       <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
         <Containable items="nucleargunbolt" />
-        <StatusEffect type="OnUse" target="This" condition="-12.5" disabledeltatime="true">
+        <StatusEffect type="OnUse" target="This" condition="-20" disabledeltatime="true">
           <SpawnItem identifiers="nucleargunbolt" spawnposition="ThisInventory" />
         </StatusEffect>
       </ItemContainer>
@@ -964,7 +964,7 @@
       </Holdable>
       <ItemContainer hideitems="true" capacity="1" itemrotation="90" drawinventory="false" canbeselected="false" SpawnWithId="nucleargunbolt" removecontaineditemsondeconstruct="true" showcontainedstateindicator="false">
         <Containable items="nucleargunbolt" />
-        <StatusEffect type="OnUse" target="This" condition="-25.0" disabledeltatime="true">
+        <StatusEffect type="OnUse" target="This" condition="-20" disabledeltatime="true">
           <SpawnItem identifiers="nucleargunbolt" spawnposition="ThisInventory" />
         </StatusEffect>
       </ItemContainer>
