@@ -5,9 +5,10 @@
   <animations folder="Content/Characters/Bonethresher/Animations"/>
   <health vitality="300" doesbleed="True" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="2" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="2" stunimmunity="true"/>
   <ai combatstrength="500" sight="1" hearing="1" aggressionhurt="100" aggressiongreed="100" fleehealththreshold="0" attackwhenprovoked="True" aggressiveboarding="True" avoidgunfire="False" enforceaggressivebehaviorformissions="True" targetinnerwalls="False" randomattack="False" avoidtime="3" minfleetime="20" targetouterwalls="True">
-    <target tag="decoy" state="Attack" priority="500" reactdistance="0" attackdistance="0" timer="0" ignorecontained="False" ignoreifnotinsamesub="True"/>
-    <target tag="provocative" state="Attack" priority="100" reactdistance="0" attackdistance="0" timer="0" ignorecontained="False" ignoreifnotinsamesub="True"/>
-    <target tag="weapon" state="Attack" priority="100" reactdistance="0" attackdistance="0" timer="0" ignorecontained="False" ignoreifnotinsamesub="True"/>
+    <target tag="decoy" state="Attack" priority="100" ignoreifnotinsamesub="True" />
+    <target tag="provocative" state="Attack" priority="100" ignoreifnotinsamesub="True"/>
+    <target tag="weapon" state="Attack" priority="100" ignoreifnotinsamesub="True"/>
+    <target tag="nasonov" state="Attack" priority="100" ignoreinside="True"/>
     <target tag="stronger" state="Aggressive" priority="80" reactdistance="2000" attackdistance="0" timer="0" ignorecontained="False" />
     <target tag="equal" state="Aggressive" priority="80" reactdistance="2000" attackdistance="0" timer="0" ignorecontained="False" />
     <target tag="leucocyte" state="Avoid" priority="50" reactdistance="1000" attackdistance="0" timer="0" ignorecontained="False" />
@@ -31,9 +32,16 @@
   <sound file="Content/Characters/Bonethresher/TIGERTRESHERb_attack2.ogg" state="Attack" range="5000" volume="1" />
   <sound file="Content/Characters/Bonethresher/TIGERTRESHERb_death1.ogg" state="Die" range="4000" volume="1" />
   <sound file="Content/Characters/Bonethresher/TIGERTRESHERb_death2.ogg" state="Die" range="4000" volume="1" />
-  <Inventory slots="Any, Any" accessiblewhenalive="False">
+  <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="False" commonness="15">
     <Item identifier="alienblood" />
+  </Inventory>
+  <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="False" commonness="5">
     <Item identifier="alienblood" />
+    <Item identifier="diversremains" />
+  </Inventory>
+  <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="False" commonness="5">
+    <Item identifier="alienblood" />
+    <Item identifier="scrap" />
   </Inventory>
   <bloodemitter particle="blood" anglemin="1" anglemax="2" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" particleamount="10" highqualitycollisiondetection="False" copyentityangle="False" />
   <bloodemitter particle="waterblood" anglemin="1" anglemax="2" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" particleamount="1" highqualitycollisiondetection="False" copyentityangle="False" />

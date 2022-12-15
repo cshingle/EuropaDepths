@@ -22,9 +22,7 @@
     <SwarmBehavior mindistfromclosest="300" maxdistfromcenter="3000" cohesion="0.25" />
   </ai>
   <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="False" commonness="1">
-    <Item identifier="alienblood" />
-    <Item identifier="alienblood" />
-    <Item identifier="alienblood" />
+    <Item identifier="alienblood" amount="3" />
     <Item identifier="swimbladder" />
   </Inventory>
   <sound file="Content/Characters/Hammerheadmatriarch/MHAMMERHEAD_explosion1.ogg" state="Die" range="10000" volume="1" />

@@ -31,24 +31,41 @@ function aggressive_boarding () {
     sed -i 's|aggressiveboarding="False"|aggressiveboarding="True"|' Characters/$charactor/$charactor.xml
 }
 
+function leave_abyss () {
+    charactor=$1
+    sed -i 's|StayInAbyss="True"|StayInAbyss="False"|' Characters/$charactor/$charactor.xml
+}
+
 rm -f contentpackage
 mkdir -p Characters
+
+# copy all
+for line in `cat can_enter_sub aggressiveboarding leave_abyss` 
+do
+  echo "$line"
+  copy_vanilla "$line"
+  echo "  <Character file=\"%ModDir%/Characters/${line}/${line}.xml\" />" >> contentpackage
+done
 
 while read -r line      # read a line from file.
 do
   echo "$line"
-  copy_vanilla "$line"
   can_enter_sub "$line"
   echo "  <Character file=\"%ModDir%/Characters/${line}/${line}.xml\" />" >> contentpackage
 done < can_enter_sub
 
 while read -r line      # read a line from file.
 do
-  copy_vanilla "$line"
   can_enter_sub "$line"
   aggressive_boarding "$line"
   echo "  <Character file=\"%ModDir%/Characters/${line}/${line}.xml\" />" >> contentpackage
 done < aggressiveboarding
+
+while read -r line      # read a line from file.
+do
+  leave_abyss "$line"
+  echo "  <Character file=\"%ModDir%/Characters/${line}/${line}.xml\" />" >> contentpackage
+done < leave_abyss
 
 sort -u contentpackage
 echo See contentpackage for files that need to be added to filelist.xml
