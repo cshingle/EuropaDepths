@@ -14,11 +14,11 @@
     <Deconstruct time="10">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
     </Deconstruct>
-    <Growable growthspeed="0.065" pickingtime="3" maximumvines="48" maxhealth="500" hardiness="0.175" floodtolerance="2.0" seedrate="0" productrate="0.022" flowertint="244,110,61,255" leaftint="244,110,61,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="89,143,45,255">
+    <Growable growthspeed="0.065" pickingtime="3" maximumvines="48" maxhealth="500" hardiness="0.175" floodtolerance="0.3" seedrate="0" productrate="0.022" flowertint="244,110,61,255" leaftint="244,110,61,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="89,143,45,255">
       <ProducedItem identifier="opium" probability="1.0" />
       <ProducedItem identifier="opium" probability="0.25" />
       <ProducedItem identifier="opium" probability="0.25" />
-      <ProducedItem identifier="aquaticpoppyseed" probability="0.01" />
+      <ProducedItem identifier="aquaticpoppyseed" probability="0.05" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
@@ -63,10 +63,10 @@
     <Deconstruct time="10">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
     </Deconstruct>
-    <Growable growthspeed="0.065" pickingtime="3" maximumvines="24" maxhealth="500" hardiness="0.175" floodtolerance="2.0" seedrate="0" productrate="0.022" flowertint="41,158,68,255" leaftint="41,158,68,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="18,69,30,255">
+    <Growable growthspeed="0.065" pickingtime="3" maximumvines="24" maxhealth="500" hardiness="0.175" floodtolerance="0.4" seedrate="0" productrate="0.022" flowertint="41,158,68,255" leaftint="41,158,68,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="18,69,30,255">
       <ProducedItem identifier="elastin" probability="1.00" />
       <ProducedItem identifier="elastin" probability="0.25" />
-      <ProducedItem identifier="elastinplantseed" probability="0.01" />
+      <ProducedItem identifier="elastinplantseed" probability="0.05" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
@@ -111,10 +111,10 @@
     <Deconstruct time="10">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
     </Deconstruct>
-    <Growable growthspeed="0.12" pickingtime="3" maximumvines="24" maxhealth="500" hardiness="0.175" floodtolerance="2.0" seedrate="0" productrate="0.022" flowertint="197,76,246,255" leaftint="197,76,246,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="131,9,179,255">
+    <Growable growthspeed="0.12" pickingtime="3" maximumvines="24" maxhealth="500" hardiness="0.175" floodtolerance="0.5" seedrate="0" productrate="0.022" flowertint="197,76,246,255" leaftint="197,76,246,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="131,9,179,255">
       <ProducedItem identifier="organicfiber" probability="1.00" />
       <ProducedItem identifier="organicfiber" probability="0.25" />
-      <ProducedItem identifier="fiberplantseed" probability="0.01" />
+      <ProducedItem identifier="fiberplantseed" probability="0.05" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
@@ -159,10 +159,10 @@
     <Deconstruct time="10">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
     </Deconstruct>
-    <Growable growthspeed="0.065" pickingtime="3" maximumvines="48" maxhealth="500" hardiness="0.175" floodtolerance="2.0" seedrate="0" productrate="0.022" flowertint="124,143,244,255" leaftint="56,85,244,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="56,85,244,255">
+    <Growable growthspeed="0.065" pickingtime="3" maximumvines="48" maxhealth="500" hardiness="0.175" floodtolerance="0.4" seedrate="0" productrate="0.022" flowertint="124,143,244,255" leaftint="56,85,244,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="56,85,244,255">
       <ProducedItem identifier="ethanol" probability="1.00" />
       <ProducedItem identifier="ethanol" probability="0.5" />
-      <ProducedItem identifier="seayeastshroomseed" probability="0.01" />
+      <ProducedItem identifier="seayeastshroomseed" probability="0.05" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
@@ -205,10 +205,10 @@
     <Deconstruct time="10">
       <Item identifier="carbon" copycondition="true" mincondition="0.1" />
     </Deconstruct>
-    <Growable growthspeed="0.065" pickingtime="3" maximumvines="18" maxhealth="500" hardiness="0.175" floodtolerance="1.0" seedrate="0" productrate="0.022" flowertint="244,213,72,255" leaftint="244,213,72,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="110,93,8,255">
+    <Growable growthspeed="0.065" pickingtime="3" maximumvines="18" maxhealth="500" hardiness="0.175" floodtolerance="0.3" seedrate="0" productrate="0.022" flowertint="244,213,72,255" leaftint="244,213,72,255" flowerquantity="10" baseflowerscale="0.35" vinescale="0.25" vinetint="110,93,8,255">
       <ProducedItem identifier="antibiotics" probability="1" />
       <ProducedItem identifier="antibiotics" probability="0.25" />
-      <ProducedItem identifier="slimebacteriaseed" probability="0.01" />
+      <ProducedItem identifier="slimebacteriaseed" probability="0.05" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,0,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,0,256,256" />
