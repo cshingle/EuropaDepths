@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item name="Embrace The Abyss" identifier="boardingaxeunique" variantof="boardingaxe" hideinmenus="true" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
+        <PreferredContainer primary="secarmcab,weaponholder" secondary="armcab"/>
+        <Price baseprice="700" sold="false">
+            <Price storeidentifier="merchantoutpost" multiplier="1.25" />
+            <Price storeidentifier="merchantcity" multiplier="1.25" />
+            <Price storeidentifier="merchantresearch" multiplier="1.25" />
+            <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+            <Price storeidentifier="merchantmine" multiplier="1.25" />
+        </Price>
+        <Deconstruct time="20">
+            <Item identifier="dementonite" />
+            <Item identifier="titaniumaluminiumalloy" />
+        </Deconstruct>
+        <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="165,366,64,64" origin="0.5,0.5" />
+        <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="1,425,164,53" depth="0.55" origin="0.5,0.2" />
+        <Body width="161" height="20" density="25" />
+        <MeleeWeapon slots="Any,RightHand+LeftHand" aimpos="50,0" handle1="-22,2" handle2="-32,5" holdangle="30" reload="1.2" range="155" combatPriority="40" msg="ItemMsgPickUpSelect">
+            <Attack targetimpulse="5" severlimbsprobability="7.5" itemdamage="50" structuredamage="25">
+                <Affliction identifier="lacerations" strength="36" />
+                <Affliction identifier="bleeding" strength="10" />
+                <Affliction identifier="stun" strength="0.5" />
+                <Affliction identifier="morbusinepoisoning" strength="2" />
+                <StatusEffect type="OnUse" target="Character">
+                    <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+                    <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+                    <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+                    <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+                    <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+                    <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <Quality>
+            <QualityStat stattype="StrikingPowerMultiplier" value="0.1" />
+        </Quality>
+        <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+    </Item>
+</Items>

@@ -498,6 +498,43 @@
                     <Item identifier="antibloodloss1" />
                 </ItemSet>
             </npc>
+            <npc identifier="banditbrute" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="3" healthmultiplierinmultiplayer="3.5" aimspeed="1.0" aimaccuracy="0.95" reportrange="750">
+                <ItemSet commonness="3">
+                    <Item identifier="idcard" equip="true" />
+                    <Item identifier="antidama1" />
+                    <Item identifier="antibleeding2" />
+                    <Item identifier="antibleeding2" />
+                    <Item identifier="steroids" />
+                    <Item identifier="steroids" />
+                    <Item identifier="banditclothes1" equip="true" />
+                    <Item identifier="piratebodyarmor" equip="true"/>
+                    <Item identifier="piratehelmet" equip="true"/>
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="divingknife" equip="true"/>
+                    <Item identifier="divingknife" equip="true"/>
+                    <Item identifier="pressurestabilizer" equip="false" />
+                    <Item identifier="toolbelt" equip="true"/>
+                </ItemSet>
+                <ItemSet commonness="3">
+                    <Item identifier="idcard" equip="true" />
+                    <Item identifier="antidama1" />
+                    <Item identifier="antibleeding2" />
+                    <Item identifier="antibleeding2" />
+                    <Item identifier="steroids" />
+                    <Item identifier="steroids" />
+                    <Item identifier="banditclothes1" equip="true" />
+                    <Item identifier="piratebodyarmor" equip="true"/>
+                    <Item identifier="piratehelmet" equip="true"/>
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="boardingaxe" equip="true"/>
+                    <Item identifier="pressurestabilizer" equip="false" />
+                    <Item identifier="toolbelt" equip="true"/>
+                </ItemSet>
+            </npc>
             <npc identifier="hostage" job="assistant" moduleflags="none" behavior="Passive">
                 <ItemSet>
                     <Item identifier="commonerclothes1" equip="true" />
@@ -525,6 +562,32 @@
                         <Item identifier="oxygentank" />
                     </Item>
                     <Item identifier="pressurestabilizer" equip="false" />
+                </ItemSet>
+            </npc>
+            <npc identifier="psychoclown" commonness="0" moduleflags="none" job="killer" behavior="Passive" healthmultiplier="1.5" healthmultiplierinmultiplayer="3" aimspeed="1" aimaccuracy="1" reportrange="500">
+                <ItemSet commonness="10">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="clowncostume" equip="true"/>
+                    <Item identifier="clownmask" equip="true"/>
+                    <Item identifier="clowndivingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="oxygentank" />
+                    <Item identifier="pressurestabilizer" />
+                    <Item identifier="divingknife" equip="true"/>
+                    <Item identifier="bikehorn" equip="true"/>
+                </ItemSet>
+                <ItemSet commonness="1">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="clownsuitunique" equip="true"/>
+                    <Item identifier="clownmaskunique" equip="true"/>
+                    <Item identifier="clowndivingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="oxygentank" />
+                    <Item identifier="pressurestabilizer" />
+                    <Item identifier="divingknifeunique" equip="true"/>
+                    <Item identifier="bikehorn" equip="true"/>
                 </ItemSet>
             </npc>
         </npcset>
