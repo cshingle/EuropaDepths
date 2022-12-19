@@ -21,14 +21,14 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="130,183,61,52" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="64,3,36,28" depth="0.55" origin="0.5,0.5" />
-    <Body width="40" height="22" density="25" />
+      <Body width="40" height="22" density="25" />
       <AiTarget sight="500" staticsight="true" />
       <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect" />
       <MiniMap enableitemfinder="false" enablehullcondition="false" enableelectricalview="false" drawhudwhenequipped="true" displaybordersize="-0.1" characterusable="false" allowuioverlap="true">
         <GuiFrame relativesize="0.4,0.4" anchor="CenterLeft" relativeoffset="0.006,-0.01" style="ItemUI" />
       </MiniMap>
     </Item>
-    <Item name="" identifier="repairpack" category="Equipment" maxstacksize="8" Tags="smallitem,tool,wrench,screwdriver" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" addedrepairspeedmultiplier="1.5">
+    <Item name="" identifier="repairpack" category="Equipment" maxstacksize="8" Tags="smallitem,tool,wrench,screwdriver" cargocontaineridentifier="metalcrate" allowasextracargo="true" Scale="0.5" impactsoundtag="impact_metal_light" addedrepairspeedmultiplier="1.5">
       <PreferredContainer primary="engcab"/>
       <Price baseprice="43" sold="false">
         <Price storeidentifier="merchantoutpost" />
@@ -40,11 +40,11 @@
       <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="2">
         <RequiredItem identifier="copper" />
         <RequiredItem identifier="silicon" />
-      <RequiredItem identifier="tin" />
+        <RequiredItem identifier="tin" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="251,1,56,57" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="113,239,57,19" depth="0.55" origin="0.5,0.5" />
-    <Body width="60" height="15" density="25" />
+      <Body width="60" height="15" density="25" />
       <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" holdangle="-80" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSuccess" target="This">
           <Remove />
@@ -52,7 +52,7 @@
       </Holdable>
       <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
     </Item>
-    <Item name="" identifier="portablepump" tags="smallitem" category="Machine" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" impactsoundtag="impact_metal_heavy" isshootable="true">
+    <Item name="" identifier="portablepump" tags="smallitem" category="Machine" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" allowasextracargo="true" impactsoundtag="impact_metal_heavy" isshootable="true">
       <PreferredContainer primary="engcab"/>
       <Price baseprice="520" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.2" />
@@ -63,7 +63,7 @@
       </Price>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="0,312,58,56" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" depth="0.8" sourcerect="7,129,56,61" origin="0.5,0.5" />
-    <Body width="50" height="55" density="25" />
+      <Body width="50" height="55" density="25" />
       <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true">
         <RequiredSkill identifier="mechanical" level="50" />
         <RequiredItem identifier="dementonite" amount="2" />
@@ -71,9 +71,10 @@
         <RequiredItem identifier="fpgacircuit" />
       </Fabricate>
       <Deconstruct time="20">
-        <RequiredItem identifier="dementonite" amount="2" />
-        <RequiredItem identifier="steel" amount="2" />
-        <RequiredItem identifier="fpgacircuit" />
+        <Item identifier="copper" />
+        <Item identifier="plastic" />
+        <Item identifier="dementonite" amount="2" />
+        <Item identifier="steel" amount="2" />
       </Deconstruct>
       <Pump canbeselected="true" maxflow="1000" PowerConsumption="60.0" MinVoltage="0.3" IsOn="false" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.2" minsize="420,220" anchor="Center" style="ItemUI" />
@@ -81,13 +82,9 @@
         <PumpInEmitter particle="bubbles" particlespersecond="5" position="28,-40" anglemin="90" anglemax="90" velocitymin="100" velocitymax="200" scalemin="0.5" scalemax="0.6" />
         <PumpInEmitter particle="watersplash" particlespersecond="50" position="28,-40" anglemin="90" anglemax="90" velocitymin="200" velocitymax="400" scalemin="0.5" scalemax="0.6" />
         <PumpOutEmitter particle="bubbles" particlespersecond="5" position="28,-40" anglemin="0" anglemax="360" velocitymin="0" velocitymax="0" scalemin="0.5" scalemax="0.6" />
-        <StatusEffect type="OnActive" targettype="Contained" Condition="-10.0">
+        <StatusEffect type="OnActive" targettype="Contained" Condition="-5.0">
           <Conditional targetcontainer="true" flowpercentage="! 0" />
-          <RequiredItem items="batterycell" type="Contained" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" targettype="Contained" Condition="-2.5">
-          <Conditional targetcontainer="true" flowpercentage="! 0" />
-          <RequiredItem items="fulguriumbatterycell" type="Contained" />
+          <RequiredItem items="mobilebattery" type="Contained" />
         </StatusEffect>
         <!-- turn off automatically if not attached to a wall -->
         <StatusEffect type="OnActive" targettype="This" IsOn="false">
@@ -119,7 +116,7 @@
         </Containable>
       </ItemContainer>
     </Item>
-    <Item name="" identifier="safetyharness" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+    <Item name="" identifier="safetyharness" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" allowasextracargo="true" description="" impactsoundtag="impact_soft">
       <PreferredContainer primary="crewcab" secondary="engcab"/>
       <Price baseprice="120" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.2" />
@@ -141,9 +138,9 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="198,132,67,57" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="58,326,143,40" depth="0.6" origin="0.5,0.5" />
-    <Body width="120" height="35" density="25" />
+      <Body width="120" height="35" density="25" />
       <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
-      <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.1" />
+        <damagemodifier afflictionidentifiers="lacerations" armorsector="0.0,360.0" damagemultiplier="0.1" />
         <damagemodifier afflictiontypes="burn" armorsector="0.0,360.0" damagemultiplier="0.1" />
         <damagemodifier afflictiontypes="stun" armorsector="0.0,360.0" damagemultiplier="0.25" />
         <sprite name="safetyharness Torso" texture="Content/Items/Jobgear/Mechanic/safetyharness.png" limb="Torso" hidelimb="false" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
@@ -156,14 +153,14 @@
         <StatValue stattype="FlowResistance" value="0.9" />
       </Wearable>
     </Item>
-    <Item name="" identifier="wrenchdementonite" descriptionidentifier="dementonitetool" variantof="wrench" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4">
+    <Item name="" identifier="wrenchdementonite" descriptionidentifier="dementonitetool" variantof="wrench" allowasextracargo="true" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4">
       <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="0" notcampaign="true"/>
       <PreferredContainer primary="engcab" spawnprobability="0"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
       <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
       <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0"/>
       <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
-    <Price baseprice="450" sold="false">
+      <Price baseprice="450" sold="false">
         <Price storeidentifier="merchantoutpost" />
         <Price storeidentifier="merchantcity" multiplier="0.9" />
         <Price storeidentifier="merchantresearch" />
@@ -175,10 +172,10 @@
         <Item identifier="dementonite" amount="2" />
       </Deconstruct>
       <Fabricate requiresrecipe="true">
-      <RequiredItem identifier="dementonite" amount="2" />
+        <RequiredItem identifier="dementonite" amount="2" />
         <RequiredItem identifier="wrench" />
       </Fabricate>
-      <MeleeWeapon reload="*0.7">
+      <MeleeWeapon reload="*0.9">
         <Attack targetimpulse="8">
           <Affliction identifier="blunttrauma" strength="8.5" />
           <Affliction identifier="psychosis" strength="5" />
@@ -190,13 +187,13 @@
         </StatusEffect>
       </MeleeWeapon>
     </Item>
-    <Item name="" identifier="crowbardementonite" descriptionidentifier="dementonitetool" variantof="crowbar" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedpickingspeedmultiplier="0.6">
+    <Item name="" identifier="crowbardementonite" descriptionidentifier="dementonitetool" variantof="crowbar" allowasextracargo="true" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedpickingspeedmultiplier="0.6">
       <PreferredContainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer primary="engcab" spawnprobability="0"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
       <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0" />
       <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
-    <Price baseprice="450" sold="false" />
+      <Price baseprice="450" sold="false" />
       <Deconstruct>
         <Item identifier="iron" />
         <Item identifier="dementonite" amount="2" />
@@ -205,7 +202,7 @@
         <RequiredItem identifier="crowbar" />
         <RequiredItem identifier="dementonite" amount="2" />
       </Fabricate>
-      <MeleeWeapon reload="*0.7">
+      <MeleeWeapon reload="*0.9">
         <Attack targetimpulse="13">
           <Affliction identifier="blunttrauma" strength="18" />
           <Affliction identifier="psychosis" strength="5" />
@@ -215,13 +212,13 @@
           <Sound file="Content/Items/Alien/AlienTurret1.ogg" range="500" />
           <Affliction identifier="psychosis" strength="10" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="Character">
+        <StatusEffect type="OnSuccess" target="Character">
           <Sound file="Content/Items/Alien/AlienTurret2.ogg" range="500" />
           <Affliction identifier="psychosis" strength="5" probability="0.05" />
         </StatusEffect>
       </MeleeWeapon>
     </Item>
-    <Item name="" identifier="screwdriverdementonite" descriptionidentifier="dementonitetool" variantof="screwdriver" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4">
+    <Item name="" identifier="screwdriverdementonite" descriptionidentifier="dementonitetool" variantof="screwdriver" allowasextracargo="true" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4">
       <PreferredContainer secondary="respawncontainer" spawnprobability="0" notcampaign="true"/>
       <PreferredContainer primary="reactorcab,engcab" spawnprobability="0"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0"/>
@@ -229,7 +226,7 @@
       <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" spawnprobability="0" />
       <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
       <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
-    <Price baseprice="450" sold="false" />
+      <Price baseprice="450" sold="false" />
       <Deconstruct>
         <Item identifier="iron" />
         <Item identifier="dementonite" amount="2" />
@@ -238,7 +235,7 @@
         <RequiredItem identifier="screwdriver" />
         <RequiredItem identifier="dementonite" amount="2" />
       </Fabricate>
-      <MeleeWeapon reload="*0.7">
+      <MeleeWeapon reload="*0.9">
         <Attack targetimpulse="8">
           <Affliction identifier="lacerations" strength="7.5" />
           <Affliction identifier="psychosis" strength="5" />
@@ -250,13 +247,13 @@
         </StatusEffect>
       </MeleeWeapon>
     </Item>
-    <Item name="" identifier="divingknifedementonite" descriptionidentifier="dementonitetool" variantof="divingknife" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166">
+    <Item name="" identifier="divingknifedementonite" descriptionidentifier="dementonitetool" variantof="divingknife" allowasextracargo="true" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166">
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" spawnprobability="0"/>
       <PreferredContainer secondary="abandonedstoragecab" spawnprobability="0"/>
       <PreferredContainer secondary="beaconsupplycab" spawnprobability="0"/>
       <PreferredContainer primary="armcab,secarmcab" spawnprobability="0" />
-    
-    <Price baseprice="450" sold="false">
+
+      <Price baseprice="450" sold="false">
         <Price storeidentifier="merchantoutpost" />
         <Price storeidentifier="merchantcity" multiplier="0.9" />
         <Price storeidentifier="merchantresearch" />
@@ -271,8 +268,8 @@
         <RequiredItem identifier="divingknife" />
         <RequiredItem identifier="dementonite" amount="2" />
       </Fabricate>
-      <MeleeWeapon reload="*0.7">
-        <Attack targetimpulse="4" itemdamage="20">
+      <MeleeWeapon reload="*0.9">
+        <Attack targetimpulse="4" itemdamage="5">
           <Affliction identifier="lacerations" strength="10" />
           <Affliction identifier="bleeding" strength="10" />
           <Affliction identifier="psychosis" strength="5" />
@@ -284,9 +281,9 @@
         </StatusEffect>
       </MeleeWeapon>
     </Item>
-    <Item name="" identifier="fixfoamgrenade" category="Equipment" maxstacksize="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="fixfoamgrenade" category="Equipment" maxstacksize="8" cargocontaineridentifier="explosivecrate" allowasextracargo="true" tags="smallitem,weapon,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="engcab" secondary="locker"/>
-    <Price baseprice="95" sold="false">
+      <Price baseprice="95" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
         <Price storeidentifier="merchantcity" multiplier="1.3" />
         <Price storeidentifier="merchantresearch" multiplier="1.2" />
@@ -330,6 +327,7 @@
       </Throwable>
     </Item>
   </Override>
+
   <Item name="Mining Laser" identifier="mininglaser" category="Equipment" Tags="smallitem,cuttingequipment,tool,mountableweapon" fireprobability="0.25" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_heavy">
     <PreferredContainer primary="weaponholder,divingcab" secondary="engcab"/>
     <Price baseprice="900" sold="false">
@@ -345,7 +343,7 @@
       <Item identifier="titaniumaluminiumalloy" amount="2" />
       <Item identifier="fulgurium" amount="2" />
     </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiresrecipe="true"  requiredtime="20">
+    <Fabricate suitablefabricators="fabricator" requiresrecipe="true" requiredtime="20">
       <RequiredSkill identifier="mechanical" level="85" />
       <Item identifier="fpgacircuit" amount="2" />
       <Item identifier="lead" />
@@ -376,14 +374,14 @@
       <RequiredSkill identifier="mechanical" level="50" />
       <StatusEffect type="OnFailure" targettype="Contained" targets="batterycell" Condition="-8.0" />
       <StatusEffect type="OnFailure" targettype="Contained" targets="fulguriumbatterycell" Condition="-2" />
-      <StatusEffect type="OnFailure" target="Character" >
+      <StatusEffect type="OnFailure" target="Character">
         <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
         <Affliction identifier="stun" strength="5" />
         <Affliction identifier="burn" strength="2" />
       </StatusEffect>
-    <LightComponent LightColor="1.0,1.0,1.0,1" range="650" Flicker="1" flickerspeed="0.2">
-      <LightTexture texture="%ModDir%/sprites/beam.png" origin="-0.01, 0.471" size="0.3,0.3" />
-    </LightComponent>
+      <LightComponent LightColor="1.0,1.0,1.0,1" range="650" Flicker="1" flickerspeed="0.2">
+        <LightTexture texture="%ModDir%/sprites/beam.png" origin="-0.01, 0.471" size="0.3,0.3" />
+      </LightComponent>
     </RepairTool>
     <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-30,-10" containedspritedepth="0.60" itemrotation="90" containedstateindicatorstyle="battery">
       <Containable items="mobilebattery" />

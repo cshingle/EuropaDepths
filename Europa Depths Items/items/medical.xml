@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <TonicLiquid name="Dr. Neon's Healing Tonic" identifier="minorhealingtonic" category="Medical,Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+        <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
+        <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.1" />
+        <SuitableTreatment type="alieninfection" suitability="1" />
+        <SuitableTreatment type="bloodloss" suitability="1" />
+        <SuitableTreatment type="burn" suitability="1" />
+        <SuitableTreatment type="damage" suitability="1" />
+        <SuitableTreatment type="poison" suitability="1" />
+        <SuitableTreatment type="psychosis" suitability="1" />
+        <SuitableTreatment type="respawnpenalty" suitability="1" />
+        <Price baseprice="30" minavailable="3">
+            <Price storeidentifier="merchantoutpost" />
+            <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="7" />
+            <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="10" />
+            <Price storeidentifier="merchantmilitary" multiplier="1.1" minavailable="8" />
+            <Price storeidentifier="merchantmine" multiplier="1.1" />
+        </Price>
+        <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="50" fabricationlimitmin="5" fabricationlimitmax="10"/>
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="20" amount="2">
+            <RequiredSkill identifier="medical" level="45" />
+            <RequiredItem identifier="ethanol" amount="1" />
+            <RequiredItem identifier="alienblood" amount="1" />
+            <RequiredItem identifier="creepingorange" amount="1" />
+        </Fabricate>
+        <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,445,64,64" origin="0.5,0.5" />
+        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="228,380,64,64" depth="0.6" origin="0.5,0.5" />
+        <Body width="30" height="80" density="9" />
+        <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+            <RequiredSkill identifier="medical" level="45" />
+            <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
+                <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+            </StatusEffect>
+            <StatusEffect tags="medical" type="OnSuccess" target="Character">
+                <affliction identifier="minorhealing" strength="80"/>
+                <Affliction identifier="drunk" amount="60" />
+            </StatusEffect>
+            <StatusEffect tags="medical" type="OnFailure" target="Character">
+                <affliction identifier="minorhealing" strength="33"/>
+                <Affliction identifier="drunk" amount="90" />
+                <affliction identifier="nausea" strength="40"/>
+            </StatusEffect>
+            <!-- Remove the item when fully used -->
+            <StatusEffect type="OnBroken" target="This">
+                <Remove />
+            </StatusEffect>
+        </MeleeWeapon>
+    </TonicLiquid>
+</Items>

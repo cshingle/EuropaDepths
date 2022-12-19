@@ -89,7 +89,9 @@
         <StatusEffect type="Always" target="This" Condition="0" delay="15" stackable="false" setvalue="true" />
         <StatusEffect type="OnBroken" target="This" Condition="100" delay="0.5" setvalue="true">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
-          <Explosion range="400.0" empstrength="5" camerashake="0" stun="0" force="2.0" flames="false" smoke="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Explosion range="200.0" empstrength="5" camerashake="0" stun="0" force="2.0" flames="false" smoke="false" shockwave="false" sparks="true" underwaterbubble="false">
+            <Affliction identifier="emp" strength="25" multiplybymaxvitality="true" />
+          </Explosion>
           <ParticleEmitter particle="faradayfx" anglemax="360" distancemax="80" scalemultiplier="2.6,2.6" particleamount="40" />
         </StatusEffect>
         <StatusEffect type="OnSpawn" target="This" Condition="100" delay="0.1" setvalue="true" />
@@ -169,6 +171,42 @@
       </Holdable>
       <LightComponent range="150.0" lightcolor="255,56,144,111" IsOn="true" castshadows="false" allowingameediting="false" pulseamount="0.9" pulsefrequency="0.25" />
     </Item>
+    </Override>
+    <Item name="" identifier="radiantartifact" category="Alien" Tags="alien,alienartifact" sonarsize="30" spritecolor="255,165,0,255" scale="0.5" impactsoundtag="impact_metal_heavy">
+      <Upgrade gameversion="0.9.3.1" scale="0.5" />
+      <Price baseprice="1000" sold="false">
+        <Price storeidentifier="merchantoutpost" multiplier="0.85" />
+        <Price storeidentifier="merchantcity" multiplier="0.85" />
+        <Price storeidentifier="merchantresearch" multiplier="2" />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25 "/>
+        <Price storeidentifier="merchantmine" />
+      </Price>
+      <PreferredContainer primary="artifactholder" amount="1" spawnprobability="0.5" />
+      <PreferredContainer primary="wrecksecarmcab" amount="1" spawnprobability="0.01" />
+      <PreferredContainer primary="ruintreasure" amount="1" spawnprobability="0.05" />
+      <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" depth="0.6" sourcerect="541,0,88,108" origin="0.5,0.5" />
+      <Deconstruct time="30">
+        <Item identifier="steel" />
+        <Item identifier="fulgurium" />
+        <Item identifier="fulgurium" />
+        <Item identifier="fulgurium" />
+      </Deconstruct>
+      <Body radius="45" density="50" friction="0.95" />
+      <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
+        <StatusEffect type="Always" target="This" comparison="And">
+          <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
+          <Conditional hastag="neq fabricator" targetcontainer="true" />
+          <sound file="%ModDir%/sounds/geigercounter.ogg" range="500.0" loop="true" />
+        </StatusEffect>
+        <StatusEffect type="Always" target="NearbyCharacters,this" range="400" interval="1" disabledeltatime="true" comparison="And">
+          <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
+          <Conditional hastag="neq fabricator" targetcontainer="true" />
+          <Affliction identifier="radiationsickness" strength="0.7" />
+        </StatusEffect>
+      </Holdable>
+      <LightComponent allowingameediting="false" lightcolor="60,200,150,150" canbeselected="false" range="500.0" ison="true" />
+    </Item>
+    <Override>
     <Item name="" identifier="alienpowercell" category="Alien,Equipment" maxstacksize="8" Tags="alien,smallitem,alienpowercell" scale="0.3" impactsoundtag="impact_metal_light">
       <Price baseprice="150" sold="false">
         <Price storeidentifier="merchantoutpost" />
@@ -209,7 +247,7 @@
           <Conditional IsDead="false" />
           <Conditional AIState="FleeTo" />
           <ReduceAffliction type="damage" amount="1.25" />
-          <ReduceAffliction type="empdamage" amount="1.0" />
+          <ReduceAffliction type="emp" amount="1.0" />
           <Affliction identifier="damageimmunity" amount="100" />
           <Affliction identifier="concealed" amount="100" />
           <Sound file="Content/Items/Alien/ALIEN_guardianPodLoop.ogg" loop="true" range="3000" />
@@ -245,9 +283,9 @@
           <Sound file="Content/Sounds/Damage/GlassBreak3.ogg" range="3000" selectionmode="Random" />
           <Sound file="Content/Sounds/Damage/GlassBreak4.ogg" range="3000" selectionmode="Random" />
           <ParticleEmitter particle="plasmaspark" drawontop="true" particleamount="50" scalemin="0.5" scalemax="1" velocitymin="600" velocitymax="1000" anglemin="0" anglemax="360" />
-        <Explosion range="100.0" structuredamage="0" itemdamage="0" force="5" severlimbsprobability="0" decal="explosion" showeffects="true" flames="false" applyfireeffects="false">
-          <Affliction identifier="explosiondamage" strength="50" />
-          <Affliction identifier="stun" strength="5" />
+          <Explosion range="100.0" structuredamage="0" itemdamage="0" force="5" severlimbsprobability="0" decal="explosion" showeffects="true" flames="false" applyfireeffects="false">
+            <Affliction identifier="explosiondamage" strength="50" />
+            <Affliction identifier="stun" strength="5" />
             <StatusEffect type="OnUse" target="NearbyCharacters" range="60" disabledeltatime="true">
               <Conditional group="ancientalien" />
               <ReduceAffliction identifier="damageimmunity" amount="100" />
@@ -257,11 +295,12 @@
       </ConnectionPanel>
       <aitarget sightrange="5000" soundrange="5000" static="true" />
     </Item>
+
     <Item name="" identifier="spinelingspike" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
       <Sprite texture="Content/Characters/Spineling/Spineling.png" sourcerect="0,215,180,18" depth="0.55" />
       <Body width="160" height="10" density="20" />
-    <Projectile characterusable="false" launchimpulse="200" maxtargetstohit="3" sticktocharacters="true" sticktoitems="false" sticktostructures="true" penetration="0.25" friendlyfire="false" damagedoors="true">
-      <Attack structuredamage="20" itemdamage="20" severlimbsprobability="0.5" penetration="0.2">
+      <Projectile characterusable="false" launchimpulse="200" maxtargetstohit="3" sticktocharacters="true" sticktoitems="false" sticktostructures="true" penetration="0.25" friendlyfire="false" damagedoors="true">
+        <Attack structuredamage="20" itemdamage="20" severlimbsprobability="0.5" penetration="0.2">
           <!--Hits up to 3 limbs, so the actual damage can be 3x-->
           <Affliction identifier="lacerations" strength="10" />
           <Affliction identifier="bleeding" strength="10" />
@@ -292,11 +331,12 @@
         <Sprite texture="Content/Characters/Spineling/Spineling.png" sourcerect="0,230,180,23" origin="0.5,0.6" alpha="0.5"/>
       </LightComponent>
     </Item>
+
     <Item name="" identifier="giantspinelingspike" nameidentifier="spinelingspike" translationidentifier="spinelingspike" category="Misc" scale="0.5" sonarsize="6" hideinmenus="true">
       <Sprite texture="Content/Characters/Spineling_giant/Spineling_giant.png" sourcerect="0,860,720,72" depth="0.55" />
       <Body width="600" height="35" density="20" />
-    <Projectile characterusable="false" launchimpulse="400" maxtargetstohit="10" sticktocharacters="false" sticktoitems="false" sticktostructures="true" friendlyfire="false" damagedoors="true">
-      <Attack structuredamage="100" itemdamage="100" severlimbsprobability="2.0" penetration="0.5">
+      <Projectile characterusable="false" launchimpulse="400" maxtargetstohit="10" sticktocharacters="false" sticktoitems="false" sticktostructures="true" friendlyfire="false" damagedoors="true">
+        <Attack structuredamage="100" itemdamage="100" severlimbsprobability="2.0" penetration="0.5">
           <!--Hits up to 10 limbs, so the actual damage can be 10x-->
           <Affliction identifier="lacerations" strength="15" />
           <Affliction identifier="bleeding" strength="10" />
@@ -312,10 +352,10 @@
         <StatusEffect type="OnImpact" target="UseTarget">
           <Conditional entitytype="eq Structure"/>
           <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="5" velocitymin="100" velocitymax="2000" scalemin="0.1" scalemax="0.2" />
-        <!--Add some impact effect-->
-        <Explosion ignorecover="true" onlyinside="true" range="600" force="10" playtinnitus="false" showeffects="false" applyfireeffects="false">
-          <Affliction identifier="stun" strength="1" />
-        </Explosion>
+          <!--Add some impact effect-->
+          <Explosion ignorecover="true" onlyinside="true" range="600" force="10" playtinnitus="false" showeffects="false" applyfireeffects="false">
+            <Affliction identifier="stun" strength="1" />
+          </Explosion>
         </StatusEffect>
         <StatusEffect type="OnImpact" target="UseTarget">
           <Conditional entitytype="eq Structure"/>

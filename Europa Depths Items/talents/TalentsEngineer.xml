@@ -1,71 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Talents>
     <Override>
-        <Talent identifier="armsdealer">
+        <Talent identifier="armsrace">
             <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,7" sheetelementsize="128,128"/>
             <Description tag="talentdescription.unlockrecipe">
-                <Replace tag="[itemname]" value="entityname.smgmagazinedepletedfuel,entityname.revolverrounddepletedfuel,entityname.3030rounddepletedfuel" color="gui.orange"/>
+                <Replace tag="[itemname]" value="entityname.smgmagazinedepletedfuel,entityname.revolverrounddepletedfuel,entityname.3030rounddepletedfuel,entityname.depletedshotgunslugshell" color="gui.orange"/>
             </Description>
-            <Description tag="talentdescription.gainitemsonmission"/>
-            <Description tag="talentdescription.gainitem">
-                <Replace tag="[amount]" value="4" color="gui.green"/>
-                <Replace tag="[itemname]" value="entityname.magnesium" color="gui.orange"/>
-            </Description>
-            <Description tag="talentdescription.gainitem">
-                <Replace tag="[amount]" value="2" color="gui.green"/>
-                <Replace tag="[itemname]" value="entityname.steel" color="gui.orange"/>
-            </Description>
-            <Description tag="talentdescription.gainitem">
-                <Replace tag="[amount]" value="2" color="gui.green"/>
-                <Replace tag="[itemname]" value="entityname.copper" color="gui.orange"/>
-            </Description>
-            <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
-                <Abilities>
-                    <CharacterAbilityPutItem itemidentifier="magnesium" amount="4"/>
-                    <CharacterAbilityPutItem itemidentifier="steel" amount="2"/>
-                    <CharacterAbilityPutItem itemidentifier="copper" amount="2"/>
-                </Abilities>
-            </AbilityGroupEffect>
-            <AddedRecipe itemidentifier="smgmagazinedepletedfuel"/>
-            <AddedRecipe itemidentifier="revolverrounddepletedfuel"/>
+            <AddedRecipe itemidentifier="smgmagazinedepletedfuel" />
+            <AddedRecipe itemidentifier="revolverrounddepletedfuel" />
             <AddedRecipe itemidentifier="3030rounddepletedfuel"/>
+            <AddedRecipe itemidentifier="depletedshotgunslugshell"/>
         </Talent>
-        <Talent identifier="hazardousmaterials">
+        <Talent identifier="dangerzone">
             <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,0" sheetelementsize="128,128"/>
-            <Description tag="talentdescription.unlockrecipe">
-                <Replace tag="[itemname]" value="entityname.fuelrodvolatile, entityname.thoriumfuelrodvolatile, entityname.fulguriumfuelrodvolatile" color="gui.orange"/>
+            <Description tag="talentdescription.dangerzone">
+                <Replace tag="[resistance]" value="50" color="gui.green"/>
             </Description>
-            <Description tag="talentdescription.hazardousmaterials"/>
-            <AbilityGroupEffect abilityeffecttype="OnOpenItemContainer">
-                <Conditions>
-                    <AbilityConditionItemInSubmarine submarinetype="Wreck"/>
-                    <AbilityConditionItem tags="reactor"/>
-                </Conditions>
-                <Abilities>
-                    <CharacterAbilitySpawnItemsToContainer oncepercontainer="true">
-                        <StatusEffects>
-                            <StatusEffect type="OnAbility" target="UseTarget">
-                                <SpawnItem identifiers="fulgurium" spawnposition="ThisInventory" spawnifinventoryfull="true"/>
-                            </StatusEffect>
-                        </StatusEffects>
-                    </CharacterAbilitySpawnItemsToContainer>
-                    <CharacterAbilitySpawnItemsToContainer oncepercontainer="true">
-                        <StatusEffects>
-                            <StatusEffect type="OnAbility" target="UseTarget" spawnitemrandomly="true">
-                                <SpawnItem identifiers="physicorium" spawnposition="ThisInventory" spawnifinventoryfull="true"/>
-                                <SpawnItem identifiers="sulphuriteshard" spawnposition="ThisInventory" spawnifinventoryfull="true"/>
-                                <SpawnItem identifiers="oxygeniteshard" spawnposition="ThisInventory" spawnifinventoryfull="true"/>
-                                <SpawnItem identifiers="incendium" spawnposition="ThisInventory" spawnifinventoryfull="true"/>
-                                <SpawnItem identifiers="fulgurium" spawnposition="ThisInventory" spawnifinventoryfull="true"/>
-                                <SpawnItem identifiers="dementonite" spawnposition="ThisInventory" spawnifinventoryfull="true"/>
-                            </StatusEffect>
-                        </StatusEffects>
-                    </CharacterAbilitySpawnItemsToContainer>
-                </Abilities>
-            </AbilityGroupEffect>
+            <Description tag="talentdescription.unlockrecipe">
+                <Replace tag="[itemname]" value="entityname.fuelrodvolatile,entityname.thoriumfuelrodvolatile,entityname.fulguriumfuelrodvolatile" color="gui.orange"/>
+            </Description>
             <AddedRecipe itemidentifier="fuelrodvolatile"/>
             <AddedRecipe itemidentifier="thoriumfuelrodvolatile"/>
             <AddedRecipe itemidentifier="fulguriumfuelrodvolatile"/>
+            <AbilityGroupInterval interval="0.9">
+                <Conditions>
+                    <AbilityConditionHasItem tags="radiationproof" />
+                </Conditions>
+                <Abilities>
+                    <CharacterAbilityModifyResistance resistanceid="radiationsickness" multiplier="0.5"/>
+                </Abilities>
+            </AbilityGroupInterval>
         </Talent>
     </Override>
 </Talents>

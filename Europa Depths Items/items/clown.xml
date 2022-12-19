@@ -69,7 +69,14 @@
       <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
         <sprite name="Clown Mask Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="414,417,89,71" origin="0.5,0.6" />
         <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
-        <damagemodifier afflictionidentifiers="gunshotwound,bitewounds,lacerations" armorsector="0.0,360.0" damagemultiplier="0.8" />
+        <StatusEffect type="OnWearing" target="Contained,Character" interval="1" disabledeltatime="true">
+          <affliction identifier="psychosis" strength="1"/>
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained,Character" disabledeltatime="true" comparison="And">
+          <Conditional clownpower="gt 0.05" />
+          <Conditional HealthPercentage="lt -5"/>
+          <affliction identifier="mothersembrace" strength="1"/>
+        </StatusEffect>
       </Wearable>
     </Item>
     <Item name="" identifier="clownsuitunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clowngear" description="" impactsoundtag="impact_soft" hideinmenus="true" scale="0.5">
@@ -97,8 +104,64 @@
         <!-- HöNK -->
         <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
         <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
-        <damagemodifier afflictionidentifiers="gunshotwound,bitewounds,lacerations" armorsector="0.0,360.0" damagemultiplier="0.75" />
       </Wearable>
     </Item>
   </Override>
+
+  <Item name="" identifier="clowndivingmaskunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask,diving,lightdiving" description="" scale="0.5">
+    <PreferredContainer primary="divingcab,supplycab" />
+    <Price baseprice="150" sold="false" canbespecial="false" />
+    <Sprite name="Clown Mask" texture="Content/Items/JobGear/TalentGear.png" depth="0.6" sourcerect="328,304,51,51" origin="0.5,0.5" scale="0.5" />
+    <Body width="5" radius="25" density="15" />
+    <Deconstruct time="10">
+      <Item identifier="clownmaskunique" />
+      <Item identifier="divingmask" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true">
+      <RequiredItem identifier="clownmaskunique" />
+      <RequiredItem identifier="divingmask" />
+    </Fabricate>
+    <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
+      <sprite name="Clown Diving Mask Wearable" texture="%ModDir%/sprites/items.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" sourcerect="8,128,100,88" origin="0.54,0.46" />
+      <StatusEffect tags="clown" type="OnWearing" target="Character" HideFace="true" duration="0.1" stackable="false" />
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="0.0" UseHullOxygen="true" />
+      <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="1000.0" Condition="-0.3" comparison="And">
+        <Conditional IsDead="false" />
+        <Conditional HullOxygenPercentage="lt 50" />
+        <Conditional InWater="false" />
+        <RequiredItem items="oxygensource" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="1000.0" Condition="-0.3" comparison="And">
+        <Conditional IsDead="false" />
+        <Conditional InWater="true" />
+        <RequiredItem items="oxygensource" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="-100.0" Oxygen="-5.0" Condition="-5.0">
+        <Conditional IsDead="false" />
+        <RequiredItem items="weldingfueltank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="-100.0" Oxygen="-7.0" Condition="-5.0">
+        <RequiredItem items="incendiumfueltank" type="Contained" />
+        <Affliction identifier="burn" amount="0.1" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.2" setvalue="true" comparison="And">
+        <Conditional IsDead="false" />
+        <RequiredItem items="oxygenitetank" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" interval="1" disabledeltatime="true">
+        <affliction identifier="psychosis" strength="1"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character" comparison="And">
+        <Conditional clownpower="gt 0.05" />
+        <Conditional HealthPercentage="lt -5"/>
+        <affliction identifier="mothersembrace" strength="1"/>
+      </StatusEffect>
+      <!-- HöNK -->
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+    </Wearable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
+      <Containable items="oxygensource,weldingtoolfuel" />
+    </ItemContainer>
+  </Item>
 </Items>

@@ -1,61 +1,44 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Afflictions>
-    <Affliction name="" identifier="empdamage" type="damage" limbspecific="false" indicatorlimb="Torso" showiconthreshold="10" showinhealthscannerthreshold="5" treatmentthreshold="10" karmachangeonapplied="-10" maxstrength="100" healcostmultiplier="2.75">
-        <!-- Slow the player down and paralyze in the end-->
-        <Effect minstrength="0" maxstrength="20" multiplybymaxvitality="true" minvitalitydecrease="0.3" maxvitalitydecrease="0.4">
-            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.60">
-                <Conditional speciesgroup="ancientalien" />
-            </StatusEffect>
-            <StatusEffect target="Character" disabledeltatime="true">
-                <Conditional ishuman="true"/>
-                <reduceaffliction identifier="empdamage" strength="100"/>
+    <Affliction name="Cowboy" identifier="cowboy" type="resistance" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+        <Effect minstrength="0" maxstrength="1" resistancefor="stun" minresistance="0.33" maxresistance="0.33">
+            <StatValue stattype="RangedAttackSpeed" value="0.25" />
+        </Effect>
+        <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="3,1" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
+    </Affliction>
+
+    <Affliction name="Minor Healing" identifier="minorhealing" description="Healing Effect" type="resistance" isbuff="true" limbspecific="false" maxstrength="100">
+        <Effect minstrength="0" maxstrength="70" strengthchange="-1">
+            <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
+                <reduceaffliction type="alieninfection" strength="0.05" />
+                <reduceaffliction type="bloodloss" strength="0.05" />
+                <reduceaffliction type="burn" strength="0.05" />
+                <reduceaffliction type="damage" strength="0.05" />
+                <reduceaffliction type="poison" strength="0.05" />
+                <reduceaffliction type="psychosis" strength="0.05" />
+                <reduceaffliction type="respawnpenalty" strength="0.05" />
             </StatusEffect>
         </Effect>
-        <Effect minstrength="20" maxstrength="40" multiplybymaxvitality="true" minvitalitydecrease="0.4" maxvitalitydecrease="0.5">
-            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.40">
-                <Conditional speciesgroup="ancientalien" />
-            </StatusEffect>
-            <StatusEffect target="Character" disabledeltatime="true">
-                <Conditional ishuman="true"/>
-                <reduceaffliction identifier="empdamage" strength="100"/>
-            </StatusEffect>
-        </Effect>
-        <Effect minstrength="40" maxstrength="60" multiplybymaxvitality="true" minvitalitydecrease="0.5" maxvitalitydecrease="0.6">
-            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.30">
-                <Conditional speciesgroup="ancientalien" />
-            </StatusEffect>
-            <StatusEffect target="Character" disabledeltatime="true">
-                <Conditional ishuman="true"/>
-                <reduceaffliction identifier="empdamage" strength="100"/>
+        <Effect minstrength="70" maxstrength="100" strengthchange="-1">
+            <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
+                <reduceaffliction type="alieninfection" strength="0.1" />
+                <reduceaffliction type="bloodloss" strength="0.1" />
+                <reduceaffliction type="burn" strength="0.1" />
+                <reduceaffliction type="damage" strength="0.1" />
+                <reduceaffliction type="poison" strength="0.1" />
+                <reduceaffliction type="psychosis" strength="0.1" />
+                <reduceaffliction type="respawnpenalty" strength="0.1" />
             </StatusEffect>
         </Effect>
-        <Effect minstrength="60" maxstrength="80" multiplybymaxvitality="true" minvitalitydecrease="0.6" maxvitalitydecrease="0.7">
-            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.25">
-                <Conditional speciesgroup="ancientalien" />
-            </StatusEffect>
-            <StatusEffect target="Character" disabledeltatime="true">
-                <Conditional ishuman="true"/>
-                <reduceaffliction identifier="empdamage" strength="100"/>
-            </StatusEffect>
-        </Effect>
-        <Effect minstrength="80" maxstrength="99" multiplybymaxvitality="true" minvitalitydecrease="0.8" maxvitalitydecrease="0.9">
-            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.15">
-                <Conditional speciesgroup="ancientalien" />
-            </StatusEffect>
-            <StatusEffect target="Character" disabledeltatime="true">
-                <Conditional ishuman="true"/>
-                <reduceaffliction identifier="empdamage" strength="100"/>
+        <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,896,128,128" color="255,165,0,255" origin="0,0"/>
+    </Affliction>
+
+    <Affliction name="Mother's Embrace" identifier="mothersembrace" description="Mother's Embrace" type="resistance" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+        <Effect minstrength="0" maxstrength="1" resistancefor="oxygenlow,bleeding" minresistance="1" maxresistance="1">
+            <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
+                <reduceaffliction type="bleeding" strength="0.2" />
             </StatusEffect>
         </Effect>
-        <Effect minstrength="99" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.9" maxvitalitydecrease="1">
-            <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.05">
-                <Conditional speciesgroup="ancientalien" />
-            </StatusEffect>
-            <StatusEffect target="Character" disabledeltatime="true">
-                <Conditional ishuman="true"/>
-                <reduceaffliction identifier="empdamage" strength="100"/>
-            </StatusEffect>
-        </Effect>
-        <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="0,255,0,255" origin="0,0"/>
+        <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,7" sheetelementsize="128,128" color="255,165,0,255" origin="0,0"/>
     </Affliction>
 </Afflictions>

@@ -3,27 +3,23 @@
   <Override>
     <Talent identifier="miner">
       <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,3" sheetelementsize="128,128"/>
-      <Description tag="talentdescription.unlockrecipe">
-        <Replace tag="[itemname]" value="entityname.mininglaser" color="gui.orange"/>
-      </Description>
       <Description tag="talentdescription.miner">
-        <Replace tag="[probability]" value="50" color="gui.green"/>
-      </Description>
-      <Description tag="talentdescription.gainstructurecutterdamage">
-        <Replace tag="[amount]" value="100" color="gui.green"/>
+        <Replace tag="[probability]" value="20" color="gui.green"/>
       </Description>
       <Description tag="talentdescription.gainoredetachspeed">
         <Replace tag="[amount]" value="100" color="gui.green"/>
       </Description>
+      <Description tag="talentdescription.unlockrecipe">
+        <Replace tag="[itemname]" value="entityname.mininglaser" color="gui.orange"/>
+      </Description>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>
           <CharacterAbilityGiveStat stattype="RepairToolDeattachTimeMultiplier" value="1"/>
-          <CharacterAbilityGiveStat stattype="RepairToolStructureDamageMultiplier" value="1"/>
         </Abilities>
       </AbilityGroupEffect>
       <AbilityGroupEffect abilityeffecttype="OnItemDeconstructedMaterial">
         <Conditions>
-          <AbilityConditionServerRandom randomchance="0.5"/>
+          <AbilityConditionServerRandom randomchance="0.2"/>
           <AbilityConditionItem tags="ore"/>
         </Conditions>
         <Abilities>

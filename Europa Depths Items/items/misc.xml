@@ -64,19 +64,11 @@
       <sprite name="Headset Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hideotherwearables="false" sourcerect="26,317,51,64" origin="0.5,0.6" />
       <StatusEffect type="OnWearing" targettype="Contained,Character" Condition="-0.04" comparison="And">
         <Conditional IsPlayer="True"/>
-        <RequiredItem items="batterycell" type="Contained"/>
-      </StatusEffect>
-      <StatusEffect type="OnWearing" targettype="Contained,Character" Condition="-0.01" comparison="And">
-        <Conditional IsPlayer="True"/>
-        <RequiredItem items="fulguriumbatterycell" type="Contained"/>
-      </StatusEffect>
-      <StatusEffect type="OnWearing" targettype="Contained,Character" Condition="-0.04" comparison="And">
-        <Conditional IsPlayer="True"/>
-        <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained"/>
+        <RequiredItem items="mobilebattery" type="Contained"/>
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Contained" stackable="false" comparison="And">
         <Conditional condition="lt 5.0"/>
-        <RequiredItem items="mobilebattery,batterycell,fulguriumbatterycell" type="Contained" playsoundonrequireditemfailure="true"/>
+        <RequiredItem items="mobilebattery" type="Contained" playsoundonrequireditemfailure="true"/>
         <Sound file="Content/Items/WarningBeepSlow.ogg" range="100" loop="true"/>
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Character" LowPassMultiplier="0.8" setvalue="true" disabledeltatime="true"/>
