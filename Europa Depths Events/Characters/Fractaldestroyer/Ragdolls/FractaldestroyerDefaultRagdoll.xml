@@ -101,7 +101,7 @@
   </limb>
   <limb id="17" radius="89.475006" width="0" height="0" name="Limb 17" type="Tail" spriteorientation="NaN" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" attackpriority="1" steerforce="0" density="10" ignorecollisions="False" angulardamping="7" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" notes="" constanttorque="0" constantangle="0" scale="1" attackforcemultiplier="1" minseverancedamage="1" healthindex="0" friction="0.3" restitution="0.05" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="533,51,189,316" origin="0.49470899,0.34177214" depth="0.032" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
-    <damagemodifier damagesound="" damagemultiplier="2" probabilitymultiplier="1" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="" afflictiontypes="damage" damageparticle="" />
+    <damagemodifier damagesound="" damagemultiplier="1" probabilitymultiplier="1" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="" afflictiontypes="damage" damageparticle="" />
     <lightsource color="255,63,0,176" range="680" scale="1" offset="0,0" rotation="0" flicker="0.5" flickerspeed="0.5" pulsefrequency="0" pulseamount="0" blinkfrequency="0">
       <lighttexture texture="Content/Lights/pointlight_bright.png" origin="0.5,0.7" size="1,1" />
     </lightsource>

@@ -1,16 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Events" modversion="1.1.7" corepackage="False" steamworkshopid="2827201404" gameversion="0.19.11.0">
-  <EventManagerSettings file="%ModDir%/EventManagerSettings.xml" />
-  <Missions file="%ModDir%/Missions_Dire.xml" />
-  <RandomEvents file="%ModDir%/randomevents_campaign.xml" />
-  <Missions file="%ModDir%/Missions.xml" />
-  <Text file="%ModDir%/text/English.xml" />
-  <Character file="%ModDir%/Characters/Hammerheadblack/Hammerheadblack.xml" />
+<contentpackage name="Europa Depths Events" modversion="1.2" corepackage="False" steamworkshopid="2827201404" gameversion="0.20.15.0">
   <Character file="%ModDir%/Characters/Bonethresher_cave/Bonethresher_cave.xml" />
   <Character file="%ModDir%/Characters/Bonethresher_veteran/Bonethresher_veteran.xml" />
-  <Character file="%ModDir%/Characters/Tigerthresher_veteran/Tigerthresher_veteran.xml" />
+  <Character file="%ModDir%/Characters/Charybdis_juvenile/Charybdis_juvenile.xml" />
   <Character file="%ModDir%/Characters/Crawler_veteran/Crawler_veteran.xml" />
+  <Character file="%ModDir%/Characters/Fractalbrain1/Fractalbrain1.xml" />
+  <Character file="%ModDir%/Characters/Hammerhead_juvenile/Hammerhead_juvenile.xml" />
   <Character file="%ModDir%/Characters/Hammerhead_veteran/Hammerhead_veteran.xml" />
+  <Character file="%ModDir%/Characters/Hammerheadblack/Hammerheadblack.xml" />
   <Character file="%ModDir%/Characters/Hammerheadgold_veteran/Hammerheadgold_veteran.xml" />
-  <Character file="%ModDir%/Characters/Fractaldestroyer/Fractaldestroyer.xml" />
+  <Character file="%ModDir%/Characters/Tigerthresher_veteran/Tigerthresher_veteran.xml" />
+  <EventManagerSettings file="%ModDir%/EventManagerSettings.xml" />
+  <Missions file="%ModDir%/Missions_Dire.xml" />
+  <Missions file="%ModDir%/Missions.xml" />
+  <Missions file="%ModDir%/OutpostMissions.xml" />
+  <RandomEvents file="%ModDir%/randomevents_campaign.xml" />
+  <Text file="%ModDir%/text/English.xml" />
 </contentpackage>
