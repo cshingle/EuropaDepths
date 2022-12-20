@@ -43,16 +43,17 @@
         <RequiredSkill identifier="electrical" level="50" />
         <sound file="Content/Items/Reactor/Reactor.ogg" type="OnActive" range="2000.0" volumeproperty="FissionRate" volume="0.02" loop="true" />
         <StatusEffect type="OnBroken" target="This" FissionRate="0.0" disabledeltatime="true">
-        <Conditional AvailableFuel="gt 1" />
-        <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" range="50000" volume="10" selectionmode="Random" dontmuffle="true" />
+          <Conditional AvailableFuel="gt 1" />
+          <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" range="50000" volume="10" selectionmode="Random" dontmuffle="true" />
           <sound file="Content/Items/Weapons/ExplosionDebris5.ogg" range="8000" />
-        <Explosion range="750" ballastfloradamage="1000" structuredamage="300" itemdamage="500" force="25.0" camerashake="0" flashrange="10000" flashduration="5.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="3.0" decal="explosion" decalsize="1">
+          <Explosion range="750" ballastfloradamage="1000" structuredamage="300" itemdamage="500" force="25.0" camerashake="0" flashrange="10000" flashduration="5.0" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="3.0" decal="explosion" decalsize="1">
             <Affliction identifier="explosiondamage" strength="500" />
             <Affliction identifier="burn" strength="500" />
             <Affliction identifier="stun" strength="15" />
           </Explosion>
-        <Explosion range="2000" force="0.0" camerashake="200" camerashakerange="50000" showEffects="false" empstrength="1.25" applyfireeffects="false" ignorecover="true">
+          <Explosion range="2000" force="0.0" camerashake="200" camerashakerange="50000" showEffects="false" empstrength="1.25" applyfireeffects="false" ignorecover="true">
             <Affliction identifier="radiationsickness" strength="75" />
+            <Affliction identifier="emp" strength="50" multiplybymaxvitality="true" />
           </Explosion>
           <ParticleEmitter particle="underwaterexplosion" anglemin="0" anglemax="360" particleamount="3" velocitymin="0" velocitymax="0" scalemin="15" scalemax="15" />
         </StatusEffect>

@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Vanilla Monsters" modversion="1.1.8" corepackage="False" steamworkshopid="2871805415" gameversion="0.19.11.0">
+<contentpackage name="Europa Depths Vanilla Monsters" modversion="1.2.0" corepackage="False" steamworkshopid="2871805415" gameversion="0.20.15.0">
   <Character file="%ModDir%/Characters/Bonethresher/Bonethresher.xml" />
   <Character file="%ModDir%/Characters/Charybdis/Charybdis.xml" />
   <Character file="%ModDir%/Characters/Hammerhead/Hammerhead.xml" />
   <Character file="%ModDir%/Characters/Hammerheadgold/Hammerheadgold.xml" />
   <Character file="%ModDir%/Characters/Hammerheadmatriarch/Hammerheadmatriarch.xml" />
   <Character file="%ModDir%/Characters/Spineling/Spineling.xml" />
+  <Character file="%ModDir%/Characters/Latcher/Latcher.xml" />
 </contentpackage>

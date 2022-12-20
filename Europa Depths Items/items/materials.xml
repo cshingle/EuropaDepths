@@ -42,6 +42,23 @@
           <Remove />
         </StatusEffect>
       </Holdable>
+      <!-- for scrap cannon -->
+      <Projectile characterusable="false" hitscan="true" hitscancount="16" removeonhit="true" spread="25">
+        <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,100" scalemultiplier="1,0.5" />
+        <Attack structuredamage="1" targetforce="4" itemdamage="15" severlimbsprobability="0.5">
+          <Affliction identifier="lacerations" strength="3" />
+          <Affliction identifier="bleeding" strength="6" />
+          <Affliction identifier="stun" strength="0.1" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+        </StatusEffect>
+      </Projectile>
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
@@ -166,8 +183,19 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,192,64,64" />
       <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="29,7,23,44" depth="0.55" origin="0.5,0.5" />
       <Body width="22" height="42" density="25" />
-      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="InWater" target="This" Condition="0.0" setvalue="true"/>
+      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+      <LightComponent LightColor="255,127,39,255" Flicker="1.0" range="100" IsOn="false">
+        <StatusEffect type="NotInWater" target="This" IsOn="false" />
+        <StatusEffect type="InWater" target="This" IsOn="true">
+          <ParticleEmitter particle="weldspark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="swirlysmoke" particlespersecond="2" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="360" velocitymin="-10" velocitymax="10" />
+          <sound file="Content/Items/Tools/FlareLoop.ogg" type="OnActive" range="800.0" loop="true" />
+        </StatusEffect>
+        <StatusEffect type="InWater" target="This" delay="3.0" setvalue="true" condition="0" stackable="false" checkconditionalalways="true">
+          <!-- check the item is still in water after the delay has run out-->
+          <Conditional InWater="true"/>
+        </StatusEffect>
         <!-- Remove the item when fully used -->
         <StatusEffect type="OnBroken" target="This">
           <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" selectionmode="All" range="5000" />
@@ -178,7 +206,7 @@
           </Explosion>
           <Remove />
         </StatusEffect>
-      </Holdable>
+      </LightComponent>
     </Item>
 
     <Item name="" identifier="silicon" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -279,8 +307,19 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,192,64,64" />
       <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="77,6,23,44" depth="0.55" origin="0.5,0.5" />
       <Body width="22" height="42" density="25" />
-      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="InWater" target="This" Condition="0.0" setvalue="true"/>
+      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+      <LightComponent LightColor="255,127,39,255" Flicker="1.0" range="100" IsOn="false">
+        <StatusEffect type="NotInWater" target="This" IsOn="false" />
+        <StatusEffect type="InWater" target="This" IsOn="true">
+          <ParticleEmitter particle="weldspark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="swirlysmoke" particlespersecond="2" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="360" velocitymin="-10" velocitymax="10" />
+          <sound file="Content/Items/Tools/FlareLoop.ogg" type="OnActive" range="800.0" loop="true" />
+        </StatusEffect>
+        <StatusEffect type="InWater" target="This" delay="3.0" setvalue="true" condition="0" stackable="false" checkconditionalalways="true">
+          <!-- check the item is still in water after the delay has run out-->
+          <Conditional InWater="true"/>
+        </StatusEffect>
         <!-- Remove the item when fully used -->
         <StatusEffect type="OnBroken" target="This">
           <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" selectionmode="All" range="5000" />
@@ -291,7 +330,7 @@
           </Explosion>
           <Remove />
         </StatusEffect>
-      </Holdable>
+      </LightComponent>
     </Item>
 
     <Item name="" identifier="titanium" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -345,8 +384,19 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,192,64,64" />
       <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="3,7,24,44" depth="0.55" origin="0.5,0.5" />
       <Body width="27" height="47" density="25" />
-      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="InWater" target="This" Condition="0.0" setvalue="true"/>
+      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+      <LightComponent LightColor="255,0,0,255" Flicker="1.0" range="100" IsOn="false">
+        <StatusEffect type="NotInWater" target="This" IsOn="false" />
+        <StatusEffect type="InWater" target="This" IsOn="true">
+          <ParticleEmitter particle="weldspark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="swirlysmoke" particlespersecond="2" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="360" velocitymin="-10" velocitymax="10" />
+          <sound file="Content/Items/Tools/FlareLoop.ogg" type="OnActive" range="800.0" loop="true" />
+        </StatusEffect>
+        <StatusEffect type="InWater" target="This" delay="3.0" setvalue="true" condition="0" stackable="false" checkconditionalalways="true">
+          <!-- check the item is still in water after the delay has run out-->
+          <Conditional InWater="true"/>
+        </StatusEffect>
         <!-- Remove the item when fully used -->
         <StatusEffect type="OnBroken" target="This">
           <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" selectionmode="All" range="5000" />
@@ -357,7 +407,7 @@
           </Explosion>
           <Remove />
         </StatusEffect>
-      </Holdable>
+      </LightComponent>
     </Item>
 
     <Item name="" identifier="chlorine" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
@@ -419,8 +469,9 @@
         <RequiredItem identifier="iron" amount="2" />
       </Fabricate>
       <Deconstruct time="5">
-        <Item identifier="carbon" copycondition="true"/>
-        <Item identifier="iron" copycondition="true"/>
+        <Item identifier="iron" mincondition="0.5"/>
+        <Item identifier="iron" mincondition="0.95"/>
+        <Item identifier="carbon" mincondition="0.95"/>
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,128,64,64" />
       <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="4,171,54,27" depth="0.55" origin="0.5,0.5" />
@@ -431,6 +482,23 @@
           <Remove />
         </StatusEffect>
       </Holdable>
+      <!-- for scrap cannon -->
+      <Projectile characterusable="false" hitscan="true" hitscancount="16" removeonhit="true" spread="25">
+        <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,100" scalemultiplier="1,0.5" />
+        <Attack structuredamage="1" targetforce="4" itemdamage="15" severlimbsprobability="0.5">
+          <Affliction identifier="lacerations" strength="6" />
+          <Affliction identifier="bleeding" strength="6" />
+          <Affliction identifier="stun" strength="0.1" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+        </StatusEffect>
+      </Projectile>
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
@@ -450,7 +518,8 @@
         <RequiredItem identifier="aluminium" amount="2" />
       </Fabricate>
       <Deconstruct time="5">
-        <Item identifier="aluminium" copycondition="true"/>
+        <Item identifier="aluminium" mincondition="0.5"/>
+        <Item identifier="aluminium" mincondition="0.95"/>
         <Item identifier="titanium" copycondition="true"/>
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,768,64,64" />
@@ -481,7 +550,8 @@
         <RequiredItem identifier="carbon" />
       </Fabricate>
       <Deconstruct time="5">
-        <Item identifier="silicon" copycondition="true"/>
+        <Item identifier="silicon" mincondition="0.5"/>
+        <Item identifier="silicon" mincondition="0.95"/>
         <Item identifier="carbon" copycondition="true"/>
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,128,64,64" />
@@ -512,11 +582,12 @@
       </Fabricate>
       <Deconstruct time="5">
         <Item identifier="titanium" copycondition="true"/>
-        <Item identifier="plastic" copycondition="true"/>
+        <Item identifier="plastic" mincondition="0.5"/>
+        <Item identifier="plastic" mincondition="0.95"/>
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="706,770,62,61" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="221,0,35,53" depth="0.55" origin="0.5,0.5" />
-      <Body width="35" height="55" density="15" />
+      <Body width="35" height="55" density="10.02" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
         <StatusEffect type="OnBroken" target="This">
@@ -578,7 +649,8 @@
       </Fabricate>
       <Deconstruct time="5">
         <Item identifier="magnesium" copycondition="true"/>
-        <Item identifier="potassium" copycondition="true"/>
+        <Item identifier="potassium" mincondition="0.5"/>
+        <Item identifier="potassium" mincondition="0.95"/>
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,256,64,64" />
       <Sprite texture="Content/Items/Materials/CraftingElements1.png" depth="0.55" sourcerect="127,134,23,42" origin="0.5,0.5" />
@@ -624,6 +696,25 @@
           <Remove />
         </StatusEffect>
       </Holdable>
+      <!-- for scrap cannon -->
+      <Projectile characterusable="false" hitscan="true" hitscancount="16" removeonhit="true" spread="25">
+        <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,100" scalemultiplier="1,0.5" />
+        <Attack structuredamage="1" targetforce="4" itemdamage="15" severlimbsprobability="0.5">
+          <Affliction identifier="lacerations" strength="3" />
+          <Affliction identifier="lacerations" strength="3" probability="0.5" />
+          <Affliction identifier="bleeding" strength="6" />
+          <Affliction identifier="bleeding" strength="6" probability="0.5" />
+          <Affliction identifier="stun" strength="0.1" />
+        </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget">
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
+          <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+        </StatusEffect>
+      </Projectile>
     </Item>
 
 
@@ -642,11 +733,6 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" />
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.9" />
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" displayname="scrapsavantitem" requiresrecipe="true">
-        <RequiredItem identifier="scrap" />
-        <RequiredItem identifier="scrap" />
-        <RequiredItem identifier="scrap" />
-      </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="260,835,53,61" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Alien/AlienMaterials.png" sourcerect="105,439,52,61" depth="0.55" origin="0.5,0.5" />
       <Body radius="20" height="10" density="30" />
@@ -687,11 +773,6 @@
         <Price storeidentifier="merchantmilitary" sold="false" />
         <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="1"/>
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" displayname="scrapsavantitem" requiresrecipe="true">
-        <RequiredItem identifier="scrap" />
-        <RequiredItem identifier="scrap" />
-        <RequiredItem identifier="scrap" />
-      </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="328,833,51,63" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Alien/AlienMaterials.png" sourcerect="186,351,59,67" depth="0.55" origin="0.5,0.5" />
       <Body radius="25" density="30" />
@@ -724,11 +805,6 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" />
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.9" />
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" displayname="scrapsavantitem" requiresrecipe="true">
-        <RequiredItem identifier="scrap" />
-        <RequiredItem identifier="scrap" />
-        <RequiredItem identifier="scrap" />
-      </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="70,835,52,59" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Alien/AlienMaterials.png" sourcerect="97,349,58,71" depth="0.55" origin="0.5,0.5" />
       <Body radius="25" density="50" />
@@ -762,11 +838,6 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" />
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.9" />
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" displayname="scrapsavantitem" requiresrecipe="true">
-        <RequiredItem identifier="scrap" />
-        <RequiredItem identifier="scrap" />
-        <RequiredItem identifier="scrap" />
-      </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,830,64,64" />
       <Sprite texture="Content/Items/Alien/AlienMaterials.png" sourcerect="15,356,60,54" depth="0.55" origin="0.5,0.5" />
       <Body radius="25" density="30" />

@@ -1,45 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Items" modversion="1.1.10" corepackage="False" steamworkshopid="2821614540" gameversion="0.19.11.0">
+<contentpackage name="Europa Depths Items" modversion="1.2.4" corepackage="False" steamworkshopid="2821614540" gameversion="0.20.15.0">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Item file="%ModDir%/items/alienitems.xml" />
   <Item file="%ModDir%/items/assistant_gear.xml" />
   <Item file="%ModDir%/items/assistant_talent_items.xml" />
   <Item file="%ModDir%/items/captain_gear.xml" />
   <Item file="%ModDir%/items/captain_talent_items.xml" />
+  <Item file="%ModDir%/items/chaingun.xml" />
   <Item file="%ModDir%/items/clown.xml" />
   <Item file="%ModDir%/items/coilgun.xml" />
   <Item file="%ModDir%/items/containers.xml" />
-  <Item file="%ModDir%/items/chaingun.xml" />
-  <Item file="%ModDir%/items/depthcharge.xml" />
   <Item file="%ModDir%/items/divinggear.xml" />
   <Item file="%ModDir%/items/engineer_gear.xml" />
   <Item file="%ModDir%/items/engineer_talent_items.xml" />
   <Item file="%ModDir%/items/flakcannon.xml" />
+  <Item file="%ModDir%/items/gardeningtools.xml" />
   <Item file="%ModDir%/items/idcard.xml" />
   <Item file="%ModDir%/items/materials.xml" />
   <Item file="%ModDir%/items/mechanic_gear.xml" />
   <Item file="%ModDir%/items/mechanic_talent_items.xml" />
   <Item file="%ModDir%/items/medic_gear.xml" />
   <Item file="%ModDir%/items/medic_talent_items.xml" />
+  <Item file="%ModDir%/items/medical.xml" />
   <Item file="%ModDir%/items/misc.xml" />
+  <Item file="%ModDir%/items/PirateItems.xml" />
   <Item file="%ModDir%/items/poweritems.xml" />
   <Item file="%ModDir%/items/pulselaser.xml" />
-  <Item file="%ModDir%/items/PirateItems.xml" />
   <Item file="%ModDir%/items/railgun.xml" />
   <Item file="%ModDir%/items/reactor.xml" />
   <Item file="%ModDir%/items/securityofficer_gear.xml" />
   <Item file="%ModDir%/items/securityofficer_talent_items.xml" />
+  <Item file="%ModDir%/items/tools.xml" />
+  <Item file="%ModDir%/items/weapons.xml" />
+  <Jobs file="%ModDir%/Jobs.xml" />
+  <Other file="%ModDir%/sprites/beam.png" />
+  <Other file="%ModDir%/sprites/items.png" />
   <Talents file="%ModDir%/talents/TalentsAssistant.xml" />
   <Talents file="%ModDir%/talents/TalentsCaptain.xml" />
   <Talents file="%ModDir%/talents/TalentsEngineer.xml" />
   <Talents file="%ModDir%/talents/TalentsMechanic.xml" />
   <Talents file="%ModDir%/talents/TalentsSecurity.xml" />
-  <Item file="%ModDir%/items/tools.xml" />
-  <Item file="%ModDir%/items/weapons.xml" />
-  <Other file="%ModDir%/sprites/items.png" />
-  <Other file="%ModDir%/sprites/beam.png" />
   <Text file="%ModDir%/text/English.xml" />
   <Text file="%ModDir%/text/TraditionalChinese.xml" />
   <UpgradeModules file="%ModDir%/upgrades/upgrade_modules.xml" />
-  <Jobs file="%ModDir%/Jobs.xml" />
+  <Submarine file="%ModDir%/Europa Depths Items Tester.sub" />
 </contentpackage>

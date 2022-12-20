@@ -1,59 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talents>
   <Override>
-    <Talent identifier="warlord">
-      <Description tag="talentdescription.unlockrecipe">
-        <Replace tag="[itemname]" value="entityname.assaultrifle, entityname.assaultriflemagazine, entityname.physicoriumassaultriflemagazine" color="gui.orange"/>
-      </Description>
-      <Description tag="talentdescription.chanceofextraweapondamage">
-        <Replace tag="[probability]" value="5" color="gui.green"/>
-      </Description>
-      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="3,4" sheetelementsize="128,128"/>
-      <AbilityGroupEffect abilityeffecttype="OnAttack">
-        <Conditions>
-          <AbilityConditionServerRandom randomchance="0.05"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityModifyAttackData addeddamagemultiplier="1" />
-        </Abilities>
-      </AbilityGroupEffect>
-      <AddedRecipe itemidentifier="assaultrifle"/>
-      <AddedRecipe itemidentifier="assaultriflemagazine"/>
-      <AddedRecipe itemidentifier="physicoriumassaultriflemagazine"/>
-    </Talent>
     <Talent identifier="munitionsexpertise">
       <Description tag="talentdescription.unlockrecipe">
-        <Replace tag="[itemname]" value="entityname.shotgunslugexplosive, entityname.shotgunslugshell, entityname.depletedshotgunslugshell" color="gui.orange"/>
-      </Description>
-      <Description tag="talentdescription.extraskillfromcrafting">
-        <Replace tag="[amount]" value="125" color="gui.green"/>
-        <Replace tag="[skillname]" value="skillname.weapons" color="gui.orange"/>
-      </Description>
-      <Description tag="talentdescription.munitionsexpertise">
-        <Replace tag="[probability]" value="50" color="gui.green"/>
+        <Replace tag="[itemname]" value="entityname.smgmagazine,entityname.shotgunshell,entityname.shotgunslugshell" color="gui.orange"/>
       </Description>
       <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="6,3" sheetelementsize="128,128"/>
-      <AbilityGroupEffect abilityeffecttype="OnItemFabricatedAmount">
-        <Conditions>
-          <AbilityConditionServerRandom randomchance="0.6"/>
-          <AbilityConditionItem tags="smgammo,shotgunammo,stungunammo"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityModifyValue multiplyvalue="2"/>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnItemFabricationSkillGain">
-        <Conditions>
-          <AbilityConditionSkill skillidentifier="weapons"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityModifyValue multiplyvalue="2.25"/>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AddedRecipe itemidentifier="shotgunslugexplosive"/>
+      <AddedRecipe itemidentifier="smgmagazine"/>
+      <AddedRecipe itemidentifier="shotgunshell"/>
       <AddedRecipe itemidentifier="shotgunslugshell"/>
-      <AddedRecipe itemidentifier="depletedshotgunslugshell"/>
-
     </Talent>
   </Override>
 </Talents>

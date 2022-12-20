@@ -24,15 +24,19 @@
   <sound file="Content/Characters/Hammerhead/HAMMERHEAD_death1.ogg" state="Die" range="4000" volume="1" />
   <sound file="Content/Characters/Hammerhead/HAMMERHEAD_death2.ogg" state="Die" range="4000" volume="1" />
   <sound file="Content/Characters/Hammerhead/HAMMERHEAD_death3.ogg" state="Die" range="4000" volume="1" />
-  <Inventory slots="Any, Any" accessiblewhenalive="False" commonness="1">
+  <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="False" commonness="3">
     <Item identifier="swimbladder" />
     <Item identifier="alienblood" />
   </Inventory>
+  <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="False" commonness="1">
+    <Item identifier="swimbladder" />
+    <Item identifier="hammerheadribs" />
+  </Inventory>
   <ai combatstrength="400" sight="2" hearing="1" aggressionhurt="100" aggressiongreed="10" fleehealththreshold="0" attackwhenprovoked="True" aggressiveboarding="False" avoidgunfire="False">
-    <target tag="decoy" state="Attack" priority="500" ignoreifnotinsamesub="True"/>
-    <target tag="nasonov" state="Attack" priority="200" />
+    <target tag="decoy" state="Attack" priority="100" ignoreifnotinsamesub="True" />
     <target tag="provocative" state="Attack" priority="100" ignoreifnotinsamesub="True"/>
-    <target tag="weapon" state="Aggressive" priority="100" reactdistance="2000" ignoreifnotinsamesub="True"/>
+    <target tag="weapon" state="Attack" priority="100" ignoreifnotinsamesub="True"/>
+    <target tag="nasonov" state="Attack" priority="100" ignoreinside="True"/>
     <target tag="door" state="Attack" priority="80" />
     <target tag="wall" state="Attack" priority="80" />
     <target tag="stronger" state="Aggressive" priority="75" reactdistance="2000"/>

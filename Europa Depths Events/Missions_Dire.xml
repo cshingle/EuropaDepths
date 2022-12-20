@@ -165,31 +165,84 @@
     <LocationType from="Research" to="Research"/>
     <LocationType from="Research" to="Mine"/>
     <LocationType from="Research" to="Lair"/>
-    <message text="missionmessage0.tigerthreshernest"/>
+    <message header="missionheader0.tigerthreshernest" text="missionmessage0.tigerthreshernest"/>
   </NestMission>
-  <OutpostNestMission name="Outpost Recovery Dire" identifier="abandonedoutpostcrawlerdire2" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="60" type="OutpostDestroy" reward="5000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
-    <Reputation identifier="location" amount="10"/>
-    <Reputation identifier="coalition" amount="5"/>
-    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
-    <LocationType identifier="Abandoned"/>
-    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
-    <Characters>
-      <Character identifier="Crawler" min="10" max="15"/>
-      <Character identifier="Crawler_veteran" min="10" max="15"/>
-    </Characters>
-    <Items>
-      <Item identifier="crawleregg" spawnpointtags="nest">
-        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
-      </Item>
-      <Item identifier="crawleregg" spawnpointtags="nest">
-        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9"/>
-      </Item>
-      <Item identifier="crawleregg" spawnpointtags="nest"/>
-      <Item identifier="crawleregg" spawnpointtags="nest"/>
-      <Item identifier="crawleregg" spawnpointtags="nest"/>
-      <Item identifier="crawleregg" spawnpointtags="nest"/>
-    </Items>
-    <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
-    <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
-  </OutpostNestMission>
+
+  <BeaconMission name="Activate Beacon" identifier="beacondire" textidentifier="beaconmission" tags="beacon" type="Beacon" MinDifficulty="50" description="The beacon station between [location1] and [location2] is down - get in there and get it back online and transmitting an active sonar signal." difficulty="4" commonness="200" reward="2800">
+    <monsters commonness="60">
+      <monster character="Crawler_veteran" min="10" max="12" />
+    </monsters>
+    <monsters commonness="60">
+      <monster character="Mudraptor" min="3" max="6" />
+      <monster character="Mudraptor_veteran" min="6" max="8" />
+    </monsters>
+    <monsters commonness="50">
+      <MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" />
+      <MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" />
+    </monsters>
+    <monsters commonness="40">
+      <MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" />
+      <MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" />
+      <MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" />
+    </monsters>
+    <monsters commonness="30">
+      <monster character="Tigerthresher" min="4" max="6" />
+      <monster character="Bonethresher" min="2" max="4" />
+    </monsters>
+    <monsters commonness="30">
+      <MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" scatter="1000" />
+      <MonsterEvent characterfile="Tigerthresher_veteran" minamount="4" maxamount="6" />
+    </monsters>
+    <monsters commonness="20">
+      <monster character="Moloch" min="1" max="2" />
+    </monsters>
+    <monsters commonness="10">
+      <monster character="Moloch" min="1" max="2" />
+      <monster character="Molochblack" min="1" max="1" />
+    </monsters>
+    <monsters commonness="5">
+      <monster character="Charybdis_juvenile" min="1" max="2" />
+    </monsters>
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,256,256,256" color="243,146,55" />
+    <Reputation identifier="coalition" amount="5" />
+    <message header="Beacon reactivated" text="The beacon station is back online. Make sure it stays transmitting, and navigate the submarine to [location2] to claim your reward." />
+  </BeaconMission>
+  <BeaconMission name="Activate Beacon" identifier="beaconnorewarddire" tags="beacondire,beaconnorewarddire" type="Beacon" MinDifficulty="50" description="The beacon station between [location1] and [location2] is down - get in there and get it back online and transmitting an active sonar signal." difficulty="4" commonness="0" reward="2200" sideobjective="true">
+    <monsters commonness="60">
+      <monster character="Crawler_veteran" min="10" max="12" />
+    </monsters>
+    <monsters commonness="60">
+      <monster character="Mudraptor" min="3" max="6" />
+      <monster character="Mudraptor_veteran" min="6" max="8" />
+    </monsters>
+    <monsters commonness="50">
+      <MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" />
+      <MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" />
+    </monsters>
+    <monsters commonness="40">
+      <MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" />
+      <MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" />
+      <MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" />
+    </monsters>
+    <monsters commonness="30">
+      <monster character="Tigerthresher" min="4" max="6" />
+      <monster character="Bonethresher" min="2" max="4" />
+    </monsters>
+    <monsters commonness="30">
+      <MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" scatter="1000" />
+      <MonsterEvent characterfile="Tigerthresher_veteran" minamount="4" maxamount="6" />
+    </monsters>
+    <monsters commonness="20">
+      <monster character="Moloch" min="1" max="2" />
+    </monsters>
+    <monsters commonness="10">
+      <monster character="Molochblack" min="1" max="2" />
+    </monsters>
+    <monsters commonness="5">
+      <monster character="Charybdis_juvenile" min="1" max="2" />
+    </monsters>
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,256,256,256" color="243,146,55" />
+    <Reputation identifier="coalition" amount="5" />
+    <message header="Beacon reactivated" text="The beacon station is back online. Make sure it stays transmitting, and navigate the submarine to [location2] to claim your reward." />
+  </BeaconMission>
 </Missions>

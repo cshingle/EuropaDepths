@@ -1,68 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Talents>
   <Override>
-    <Talent identifier="handsomestranger">
+    <Talent identifier="gunsmith">
+      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.unlockrecipe">
-        <Replace tag="[itemname]" value="entityname.revolverround, entityname.3030round" color="gui.orange"/>
+        <Replace tag="[itemname]" value="entityname.revolver,entityname.revolverround,entityname.leveractionrifle,entityname.3030round" color="gui.orange"/>
       </Description>
-      <Description tag="talentdescription.increasereputationgains">
-        <Replace tag="[value]" value="20" color="gui.green"/>
-      </Description>
-      <Description tag="talentdescription.simultaneousskillgain">
-        <Replace tag="[skillname1]" value="skillname.helm" color="gui.orange"/>
-        <Replace tag="[skillname2]" value="skillname.weapons" color="gui.orange"/>
-      </Description>
-      <Description tag="talentdescription.gaindoubleskillatskill">
-        <Replace tag="[skillname1]" value="skillname.helm" color="gui.orange"/>
-        <Replace tag="[skilltotal]" value="100" color="gui.orange"/>
-        <Replace tag="[skillname2]" value="skillname.weapons" color="gui.orange"/>
-      </Description>
-      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="0,0" sheetelementsize="128,128"/>
-      <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
-        <Conditions>
-          <AbilityConditionSkill skillidentifier="weapons"/>
-          <AbilityConditionHasSkill skillidentifier="helm" minvalue="100"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityGainSimultaneousSkill skillidentifier="weapons" />
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="OnGainSkillPoint">
-        <Conditions>
-          <AbilityConditionSkill skillidentifier="helm"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityGainSimultaneousSkill skillidentifier="weapons" />
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="None">
-        <Abilities>
-          <CharacterAbilityGiveStat stattype="ReputationGainMultiplier" value="0.2"/>
-        </Abilities>
-      </AbilityGroupEffect>
+      <AddedRecipe itemidentifier="revolver"/>
       <AddedRecipe itemidentifier="revolverround"/>
       <AddedRecipe itemidentifier="3030round"/>
-    </Talent>
-
-    <Talent identifier="bountyhunter">
-      <Description tag="talentdescription.unlockrecipe">
-        <Replace tag="[itemname]" value="entityname.handcannon,entityname.handcannonround,entityname.handcannonroundhallowpoint" color="gui.orange"/>
-      </Description>
-      <Description tag="talentdescription.bountyhunter">
-        <Replace tag="[percentage]" value="25" color="gui.green"/>
-      </Description>
-      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="4,0" sheetelementsize="128,128"/>
-      <AbilityGroupEffect abilityeffecttype="OnCrewKillCharacter">
-        <Conditions>
-          <AbilityConditionCharacter targettypes="Monster"/>
-        </Conditions>
-        <Abilities>
-          <CharacterAbilityBountyHunter vitalitypercentage="0.25"/>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AddedRecipe itemidentifier="handcannon"/>
-      <AddedRecipe itemidentifier="handcannonround"/>
-      <AddedRecipe itemidentifier="handcannonroundhallowpoint"/>
+      <AddedRecipe itemidentifier="leveractionrifle"/>
     </Talent>
   </Override>
 </Talents>

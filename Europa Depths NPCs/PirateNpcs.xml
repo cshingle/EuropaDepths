@@ -248,10 +248,14 @@
                 </ItemSet>
             </npc>
             <npc identifier="piratesecuritybrute" job="securityofficer" spawnpointtags="security" behavior="Patrol" healthmultiplier="0.9" healthmultiplierinmultiplayer="1.9" aimspeed="0.5" aimaccuracy="0.4">
-                <ItemSet commonness="1">
+                <ItemSet commonness="5">
                     <Item identifier="pirateclothes" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="headset" equip="true" showpreview="false" />
+                    <Item identifier="antibleeding2" />
+                    <Item identifier="antibleeding2" />
+                    <Item identifier="steroids" />
+                    <Item identifier="steroids" />
                     <Item identifier="boardingaxe" equip="true"/>
                     <Item identifier="piratebodyarmor" equip="true"/>
                     <Item identifier="piratebandana" equip="true"/>
@@ -259,29 +263,41 @@
                         <Item identifier="oxygentank"/>
                     </Item>
                 </ItemSet>
-                <ItemSet commonness="0.5">
+            </npc>
+            <npc identifier="piratesecuritybruteelite" job="securityofficer" spawnpointtags="security" behavior="Patrol" healthmultiplier="0.9" healthmultiplierinmultiplayer="1.9" aimspeed="0.5" aimaccuracy="0.4">
+                <ItemSet commonness="5">
                     <Item identifier="pirateclothes" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="headset" equip="true" showpreview="false" />
-                    <Item identifier="shotgun">
-                        <Item identifier="shotgunshell"/>
-                        <Item identifier="shotgunshell"/>
-                        <Item identifier="shotgunshell"/>
-                        <Item identifier="shotgunshell"/>
-                        <Item identifier="shotgunshell"/>
-                        <Item identifier="shotgunshell"/>
-                    </Item>
+                    <Item identifier="antibleeding2" />
+                    <Item identifier="antibleeding2" />
+                    <Item identifier="steroids" />
+                    <Item identifier="steroids" />
                     <Item identifier="boardingaxe" equip="true"/>
                     <Item identifier="piratebodyarmor" equip="true"/>
                     <Item identifier="piratebandana" equip="true"/>
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank"/>
                     </Item>
-                    <Item identifier="pressurestabilizer" equip="false" />
+                </ItemSet>
+                <ItemSet commonness="1">
+                    <Item identifier="pirateclothes" equip="true"/>
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="headset" equip="true" showpreview="false" />
+                    <Item identifier="antibleeding2" />
+                    <Item identifier="antibleeding2" />
+                    <Item identifier="steroids" />
+                    <Item identifier="steroids" />
+                    <Item identifier="boardingaxeunique" equip="true"/>
+                    <Item identifier="piratebodyarmor" equip="true"/>
+                    <Item identifier="piratebandana" equip="true"/>
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank"/>
+                    </Item>
                 </ItemSet>
             </npc>
             <npc identifier="piratesecurityelite" job="securityofficer" spawnpointtags="security" behavior="Patrol" healthmultiplier="1.1" healthmultiplierinmultiplayer="2.1" aimspeed="1.0" aimaccuracy="0.8">
-                <ItemSet commonness="1">
+                <ItemSet commonness="2">
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="pirateclotheshard" equip="true"/>
                     <Item identifier="piratebodyarmor" equip="true"/>
@@ -305,7 +321,7 @@
                     <Item identifier="spearunique"/>
                     <Item identifier="pressurestabilizer" equip="false" />
                 </ItemSet>
-                <ItemSet commonness="1">
+                <ItemSet commonness="2">
                     <Item identifier="pirateclotheshard" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="headset" equip="true" showpreview="false" />
@@ -322,7 +338,7 @@
                     </Item>
                     <Item identifier="pressurestabilizer" equip="false" />
                 </ItemSet>
-                <ItemSet commonness="0.3">
+                <ItemSet commonness="1">
                     <Item identifier="pirateclotheshard" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="headset" equip="true" showpreview="false" />

@@ -127,33 +127,9 @@
       </Upgrade>
     </Item>
 
-    <Item name="" identifier="loosepanel" nameidentifier="loosepanel" tags="hidden" scale="0.5" interactdistance="100" requirebodyinsidetrigger="false" requirecursorinsidetrigger="true">
-      <trigger x="55" y="-55" width="40" height="40" />
-      <sprite texture="Content/Items/Containers/containers.png" sourcerect="330,648,162,161" depth="0.885" origin="0.5339039,0.4379086" canflipx="false"/>
-      <ItemContainer capacity="1" slotsperrow="1" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
-        <Containable items="smallitem,mediumitem" />
-      </ItemContainer>
-      <Upgrade gameversion="0.10.0.0" scale="*0.77" />
-    </Item>
 
-    <Item name="" identifier="loosepanel2" nameidentifier="loosepanel" tags="hidden" scale="0.5" interactdistance="100" requirebodyinsidetrigger="false" requirecursorinsidetrigger="true">
-      <trigger x="35" y="-35" width="30" height="30" />
-      <sprite texture="Content/Items/Containers/containers.png" sourcerect="1,545,112,110" depth="0.885" origin="0.5,0.5" canflipx="false"/>
-      <ItemContainer capacity="1" slotsperrow="1" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
-        <Containable items="smallitem,mediumitem" />
-      </ItemContainer>
-      <Upgrade gameversion="0.10.0.0" scale="*0.676" />
-    </Item>
 
-    <Item name="" identifier="crateshelf" tags="container,cargocontainer" linkable="true" canflipx="false" pickdistance="150" scale="0.5">
-      <Sprite texture="Content/Items/Containers/containers.png" depth="0.84" sourcerect="1,657,185,366" origin="0.5,0.5" />
-      <ItemContainer capacity="4" maxstacksize="1" canbeselected="true" hideitems="false" itempos="92,-48" iteminterval="0,-92" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.15,0.2" anchor="Center" style="ItemUI" />
-        <Containable items="crate" />
-      </ItemContainer>
-    </Item>
+  
 
     <Item name="" identifier="artifacttransportcase" category="Equipment" tags="mediumitem,mobilecontainer,artifactcontainer" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_soft">
       <PreferredContainer primary="engcab"/>
@@ -180,6 +156,8 @@
         <Containable items="alienartifact"/>
       </ItemContainer>
     </Item>
+
+    
     <Item name="" identifier="sealedsupplycrate" tags="crate" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" hideinmenus="true">
       <PreferredContainer secondary="wreckstoragecab" spawnprobability="0.02"/>
       <Price baseprice="1250" sold="false" canbespecial="false" />
@@ -188,14 +166,7 @@
       <Body width="150" height="80" density="25" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
-    <Item name="" identifier="unitloaddevice" tags="cargocontainer" linkable="true" pickdistance="150" scale="0.5" waterproof="true">
-      <Sprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.8" sourcerect="0,0,567,446" origin="0.5,0.5" />
-      <DecorativeSprite texture="Content/Items/Containers/UnitLoadDevice.png" depth="0.85" sourcerect="0,457,567,446" origin="0.5,0.5" />
-      <ItemContainer capacity="12" maxstacksize="1" canbeselected="true" hideitems="false" itempos="120,-364" iteminterval="150,80" itemsperrow="3" msg="ItemMsgInteractSelect" containedspritedepths="0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82,0.81,0.82">
-        <GuiFrame relativesize="0.25,0.3" anchor="Center" style="ItemUI" />
-        <Containable items="crate" />
-      </ItemContainer>
-    </Item>
+
     <Item name="" identifier="metalcrate_event" nameidentifier="metalcrate" tags="crate,allowcleanup" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" hideinmenus="true">
       <Deconstruct time="20">
         <Item identifier="steel" />
@@ -212,7 +183,7 @@
       <Sprite texture="Content/Items/Containers/containers.png" depth="0.84" sourcerect="815,1,208,346"/>
       <ItemContainer capacity="30" slotsperrow="6" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.45" anchor="Center" slotsperrow="6" style="ItemUI"/>
-        <Containable items="smallitem,chem,medical,toolbox"/>
+        <Containable items="smallitem,chem,medical,medicalcase"/>
       </ItemContainer>
     </Item>
     <Item name="" identifier="toxcabinet" tags="container,toxcontainer" linkable="true" pickdistance="150" waterproof="true" scale="0.5">
@@ -220,7 +191,7 @@
       <ItemContainer capacity="20" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI"/>
         <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true"/>
-        <Containable items="smallitem,chem,medical,toolbox"/>
+        <Containable items="smallitem,chem,medical,medicalcase"/>
       </ItemContainer>
     </Item>
   </Override>

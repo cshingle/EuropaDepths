@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
-  <upgradename.turretincreasefirerate>Overvolt Turrets</upgradename.turretincreasefirerate>
-  <upgradedescription.turretincreasefirerate>Greatly increase the fire rate and power usage of all turrets at the expense of power usage.</upgradedescription.turretincreasefirerate>
+  <upgradename.increasesupercapacitorefficiency>Upgrade Supercapacitor Efficiency</upgradename.increasesupercapacitorefficiency>
+  <upgradedescription.increasesupercapacitorefficiency>Supercapacitors will waste less Electricity.</upgradedescription.increasesupercapacitorefficiency>
   <entityname.coilgunammoboxcopper>Coilgun Copper Ammunition Box</entityname.coilgunammoboxcopper>
   <entitydescription.coilgunammoboxcopper>Ammunition for the coilgun that higher penetration then lead, but less than piercing.</entitydescription.coilgunammoboxcopper>
   <entityname.ed_raptorbanespear>Rapter Bane Harpoon</entityname.ed_raptorbanespear>
@@ -46,17 +46,25 @@
   <entitydescription.hammer>Useful for removing unwanted walls.</entitydescription.hammer>
   <entityname.mininglaser>Mining Laser</entityname.mininglaser>
   <entitydescription.mininglaser>Cuts through various materials using a laser.</entitydescription.mininglaser>
-  <afflictionname.empdamage>EMP Damage</afflictionname.empdamage>
-  <afflictiondescription.empdamage>There are signs of damage to internal components caused by an Electromagnetic Pulse.</afflictiondescription.empdamage>
   <entityname.suitcrate>Metal Suit Crate</entityname.suitcrate>
   <entitydescription.suitcrate>A vessel in which diving suits may be stored.</entitydescription.suitcrate>
   <Override>
     <talentdescription.miner>Unlock recipe: [itemname].\nWhenever you deconstruct an ore, you have a [probability]% chance to gain double the output.</talentdescription.miner>
   </Override>
-  <entityname.boardingaxeunique>Depleted Boarding Axe</entityname.boardingaxeunique>
-  <entitydescription.boardingaxeunique>A hand axe, made from Depleted Fuel.</entitydescription.boardingaxeunique>
   <entityname.medicalcase>Medical Case</entityname.medicalcase>
   <entitydescription.medicalcase>A case for safely storing medical supplies.</entitydescription.medicalcase>
   <entityname.materialcrate>Materials Crate</entityname.materialcrate>
   <entitydescription.materialcrate>A crate for safely storing materials.</entitydescription.materialcrate>
+  <afflictionname.cowboy>Cowboy</afflictionname.cowboy>
+  <afflictiondescription.cowboy>Cowboys and men are two totally different breeds.</afflictiondescription.cowboy>
+  <afflictionname.minorhealing>Minor Healing</afflictionname.minorhealing>
+  <afflictiondescription.minorhealing>Provides a healing effect over time.</afflictiondescription.minorhealing>
+  <entityname.minorhealingtonic>Dr. Neon's Healing Tonic</entityname.minorhealingtonic>
+  <entitydescription.minorhealingtonic>Provides a healing effect over time with no known side effects.</entitydescription.minorhealingtonic>
+  <entityname.coilgun_overvolted>Overvolted Coilgun</entityname.coilgun_overvolted>
+  <entitydescription.coilgun_overvolted>An overvolted version of the coilgun with a higher rate of fire, but also higher power demands.</entitydescription.coilgun_overvolted>
+  <entityname.doublecoilgun_overvolted>Overvolted Double Coilgun</entityname.doublecoilgun_overvolted>
+  <entitydescription.doublecoilgun_overvolted>An overvolted double coilgun with a higher rate of fire, but also higher power demands..</entitydescription.doublecoilgun_overvolted>
+  <entityname.radiantartifact>Radiant Alien Artifact</entityname.radiantartifact>
+  <entitydescription.radiantartifact>Artifact found in alien ruins.</entitydescription.radiantartifact>
 </infotexts>

@@ -44,8 +44,6 @@
     <entitydescription.hammer>對移除沒用的牆壁特別有效。</entitydescription.hammer>
     <entityname.mininglaser>Mining Laser</entityname.mininglaser>
     <entitydescription.mininglaser>Cuts through various materials using a laser.</entitydescription.mininglaser>
-    <afflictionname.empdamage>EMP Damage</afflictionname.empdamage>
-    <afflictiondescription.empdamage>There are signs of damage to internal components caused by an Electromagnetic Pulse .</afflictiondescription.empdamage>
     <entityname.suitcrate>Metal Suit Crate</entityname.suitcrate>
     <entitydescription.suitcrate>A vessel in which diving suits may be stored.</entitydescription.suitcrate>
     <entityname.boardingaxeunique>登船斧</entityname.boardingaxeunique>
