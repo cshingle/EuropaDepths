@@ -67,4 +67,15 @@
   <entitydescription.doublecoilgun_overvolted>An overvolted double coilgun with a higher rate of fire, but also higher power demands..</entitydescription.doublecoilgun_overvolted>
   <entityname.radiantartifact>Radiant Alien Artifact</entityname.radiantartifact>
   <entitydescription.radiantartifact>Artifact found in alien ruins.</entitydescription.radiantartifact>
+
+  <entityname.nuclearlaser>Nuclear Laser</entityname.nuclearlaser>
+  <entitydescription.nuclearlaser>A powerful nuclear laser that does massive burn damage.</entitydescription.nuclearlaser>
+  <entityname.nuclearlaserloader>Nuclear Laser Loader</entityname.nuclearlaserloader>
+  <entitydescription.nuclearlaserloader>Feeds nuclear ammunition into a linked Nuclear Laser.</entitydescription.nuclearlaserloader>
+  <entityname.nuclearlaserammobox>Nuclear Laser Ammo Box</entityname.nuclearlaserammobox>
+  <entitydescription.nuclearlaserammobox>A heavly shielded box containing uranium based nuclear fuel. Used as ammo by the Nuclear Laser</entitydescription.nuclearlaserammobox>
+  <entityname.nuclearlaserthoriumammobox>Nuclear Laser Thorium Ammo Box</entityname.nuclearlaserthoriumammobox>
+  <entitydescription.nuclearlaserthoriumammobox>A heavly shielded box containing thorium based nuclear fuel. Used as ammo by the Nuclear Laser</entitydescription.nuclearlaserthoriumammobox>
+  <entityname.nuclearlaserfulguriumammobox>Nuclear Laser fulgurium Ammo Box</entityname.nuclearlaserfulguriumammobox>
+  <entitydescription.nuclearlaserfulguriumammobox>A heavly shielded box containing fulgurium based nuclear fuel. Used as ammo by the Nuclear Laser</entitydescription.nuclearlaserfulguriumammobox>
 </infotexts>

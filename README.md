@@ -3,59 +3,62 @@ Europa Depths is a balance mod for Barotrauma. It is split up into several optio
 
 ## Europa Depths Items
 
+Now updated for version 0.20.14
+
+[h1]Europa Depths[/h1]
 Europa Depths Items adjusts the balance of items in the game. It is created with the following principals.
-* Every item should be useful.
-* Fabrication and deconstruction should allow experimentation.
-* Balance the buying as selling economy to make more sense.
-* Items should have a similar power balance to vanilla.
-* Items should add requirements to bring new challenges.
-* Items should make boring tasks faster.
+[list]
+[*]Every item should be useful.
+[*]Fabrication and deconstruction should allow experimentation.
+[*]Balance the buying as selling economy to make more sense.
+[*]Items should have a similar power balance to vanilla.
+[*]Items should add requirements to bring new challenges.
+[*]Items should make boring tasks faster.
+[*]Don't make stuipd balance choices just to avoid fractional items
+[/list]
 
 Short list of current features:
-* Deconstruction recipes updated
-* Shorter radio range
-* Additional Engineering Headset with longer range but takes batteries
-* Suits now take batteries for lights and long range radios
-* Suits now have additional small item slots (no stacking)
-* Swapped the damage modifiers for diving suits. Combat Suits and Slit Suits now provide better production then standard, abyss and puc suits.
-* All small arms ammunition produces a full load or full stack unless noted
-* Harpoons produce 4 per steel
-* Nearly all items excluding small arms ammunition is deconstructable
-* Container for transporting Volatile Fuel Rods
-* Additional Volatile Fuel types
-* Volatile fuel rods last longer and run hotter
-* Standard fuel rods are used up more quickly
-* Made Reactor and Fabricator block radiation from Volatile Fuel Rods while they are in the inventory
-* Cargo Scooter has slots to carry limited large items (Ammo Containers, Railgun Rounds and Suits)
-* Cargo Scooter has a light when in water (to make it easier to find)
-* Additional Harpoon type
-* Additional Assault Rifle ammo type
-* Additional Hand Cannon ammo type
-* Additional Coilgun ammo type
-* Additional 40mm EMP Grenade ammo
-* Additional Rifled Slug shotgun ammo type
-* Additional Shrapnel Shell Railgun ammo type
-* EMP weapons will slow and damage Ancient Aliens
-* Ruin Artifact Holders can contain artifacts when not doing an artifact mission
-* Additional Unique clown diving mask with unique art and properties (Mother's Tangency)
-* Modified the turretdecreasepowerconsumption upgrade to make Supercaps more efficient rather than adjust turret power usage
-* Additional Over-volt Turrets upgrade that greatly increases turret fire rate and power usage
-* Small buff to stun weapons
-* Narrow the beams on the tri-lazer from 20 to 15
-* Added Medic Helmet
-* Added Thermal Helmet
-* Added Lever Action Rifle
-* Added 30-30 Rifle round
-* Added Depleted 30-30 Rifle round
-* Added Cowboy Hat
-* Added Hammer for quickly destroying things and opening doors
-* Added Mining Laser item that is unlocked by the Mechanic Miner talent
-* Swapped the damage modifiers for diving suits. Combat Suits and Slit Suits now provide better production then standard, abyss and puc suits
-* Replaced several Vanilla ammunition sprites with better looking custom ones
-* Doubled the impulse of Depth Charges from 5 to 10 so they sink faster
-* Made depthcharges cheaper since they are worse then a rail gun round in almost every way
-* Made the Alien Flare work
-* Made the Alien Flare buoyant to differentiate it from the normal one
+[list]
+[*]Deconstruction recipes updated for common items like tanks/batteries
+[*]Set the mincondition on most/all consumables to 0.25. You should now never get partial items that are less than %25 as it will be rounded down to zero. Only a few items still produce partial items.
+[*]Shorter radio range
+[*]Additional Engineering Headset with longer range but takes batteries
+[*]Suits now take batteries for lights and long range radios
+[*]Swapped the damage modifiers for diving suits. Combat Suits and Slit Suits now provide better production then standard, abyss and puc suits
+[*]All small arms ammunition produces a full load or full stack unless noted
+[*]Nearly all items excluding small arms ammunition is deconstructable
+[*]Container for transporting Volatile Fuel Rods
+[*]Cargo Scooter has limited ability to carry heavier items
+[*]Cargo Scooter has a light when in water (to make it easier to find)
+[*]Additional Harpoon type
+[*]Additional Shotgun ammo type
+[*]Additional Coilgun ammo type
+[*]Additional 40mm EMP Grenade ammo (Updated to use new vanilla EMP Affliction)
+[*]Ruin Artifact Holders can contain artifacts when not doing an artifact mission
+[*]Ruin Artifacts have stronger effects
+[*]Additional Unique clown diving mask with unique art and affects (Mother's Tangency)
+[*]Additional Coil Gun/Double Coil Gun Turrets that greatly increases turret fire rate and power usage
+[*]Small buff to stun weapons
+[*]Reverted the last vanilla nerf to the revolver. It was already the worst weapon in the game
+[*]Added Medic Helmet
+[*]Added Lever Action Rifle and 30-30 Rounds.
+[*]Added Cowboy Hat (Has Cowboy Affliction)
+[*]Replaced the graphics for several types of ammo with a better one. The new rifle rounds still look like crap.
+[*]Added Mining Laser recipe to Mechanic Miner trait
+[*]Added Thermal Helmet
+[*]Added Hammer for destorying things and opening doors
+[*]Made the Alien Flare light when thrown
+[*]Made the Alien Flare buoyant to differentiate it from the normal ones
+[*]Made flairs very cheap
+[*]Made Alien Power Cells, Coilgun, Chaingun, flak and Laser ammo boxes combinable
+[*]Added new alian artifact variant
+[*]Added Dirtybomb to Military Applications talant since the old talant it was connected to was removed
+[/list]
+
+Now with Chinese Traditional translation that is already out of date.
+
+
+[url=https://github.com/cshingle/EuropaDepths] Github Project [/url]
 
 ## Europa Depths NPCs
 Europa Depths NPCs adjusts the load outs and balance of NPC characters to make Pirates and Abandoned Outposts more challenging.

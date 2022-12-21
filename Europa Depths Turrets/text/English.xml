@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <entityname.coilgun_overvolted>Overvolted Coilgun</entityname.coilgun_overvolted>
+  <entitydescription.coilgun_overvolted>An overvolted version of the coilgun with a higher rate of fire, but also higher power demands.</entitydescription.coilgun_overvolted>
+  <entityname.doublecoilgun_overvolted>Overvolted Double Coilgun</entityname.doublecoilgun_overvolted>
+  <entitydescription.doublecoilgun_overvolted>An overvolted double coilgun with a higher rate of fire, but also higher power demands..</entitydescription.doublecoilgun_overvolted>
+  <entityname.lightlaser>Light Laser</entityname.lightlaser>
+  <entitydescription.lightlaser>A laser turret that uses large amounts of power rather than ammo.</entitydescription.lightlaser>
+  <entityname.lightlaserloader>Light Laser Loader</entityname.lightlaserloader>
+  <entitydescription.lightlaserloader>Loader Base.</entitydescription.lightlaserloader>
+</infotexts>

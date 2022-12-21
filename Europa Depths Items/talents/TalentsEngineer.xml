@@ -31,5 +31,23 @@
                 </Abilities>
             </AbilityGroupInterval>
         </Talent>
+        <Talent identifier="militaryapplications">
+            <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="7,6" sheetelementsize="128,128"/>
+            <Description tag="talentdescription.skillbonus">
+                <Replace tag="[amount]" value="20" color="gui.green"/>
+                <Replace tag="[skillname]" value="skillname.weapons" color="gui.orange"/>
+            </Description>
+            <Description tag="talentdescription.unlockrecipe">
+                <Replace tag="[itemname]" value="entityname.depletedfuel,entityname.coilgunammoboxdepletedfuel,entityname.dirtybomb" color="gui.orange"/>
+            </Description>
+            <AbilityGroupEffect abilityeffecttype="None">
+                <Abilities>
+                    <CharacterAbilityGiveStat stattype="WeaponsSkillBonus" value="20"/>
+                </Abilities>
+            </AbilityGroupEffect>
+            <AddedRecipe itemidentifier="depletedfuel"/>
+            <AddedRecipe itemidentifier="coilgunammoboxdepletedfuel"/>
+            <AddedRecipe itemidentifier="dirtybomb"/>
+        </Talent>
     </Override>
 </Talents>

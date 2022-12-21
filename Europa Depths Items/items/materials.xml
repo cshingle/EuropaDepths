@@ -355,7 +355,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="" identifier="magnesium" descriptionidentifier="flashpowder" category="Material" maxstacksize="8" Tags="smallitem,chem" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="magnesium" category="Material" maxstacksize="8" Tags="smallitem,chem" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05"/>
       <Price baseprice="65">
@@ -672,7 +672,7 @@
       </Throwable>
     </Item>
 
-    <Item name="" identifier="scrap" category="Material" maxstacksize="8" Tags="smallitem" canbepicked="true" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" aliases="scrap1,scrap2,scrap3,scrap4,scrap5,scrap6,scrap7,scrap8">
+    <Item name="" identifier="scrap" sonarsize="2" category="Material" maxstacksize="8" Tags="smallitem" canbepicked="true" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" aliases="scrap1,scrap2,scrap3,scrap4,scrap5,scrap6,scrap7,scrap8">
       <PreferredContainer primary="storagecab"/>
       <PreferredContainer secondary="wreckstoragecab,wreckreactorcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.5"/>
       <Price baseprice="5" sold="false" />

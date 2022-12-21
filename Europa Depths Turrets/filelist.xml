@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Europa Depths Turrets" modversion="1.2.3" corepackage="False" steamworkshopid="2821614540" gameversion="0.20.15.0">
+  <Item file="%ModDir%/items/coilgun.xml" />
+  <Item file="%ModDir%/items/lightlaser.xml" />
+  <Text file="%ModDir%/text/English.xml" />
+  <Text file="%ModDir%/text/TraditionalChinese.xml" />
+  <UpgradeModules file="%ModDir%/upgrades/upgrade_modules.xml" />
+</contentpackage>

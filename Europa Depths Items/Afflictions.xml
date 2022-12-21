@@ -8,7 +8,7 @@
     </Affliction>
 
     <Affliction name="Minor Healing" identifier="minorhealing" description="Healing Effect" type="resistance" isbuff="true" limbspecific="false" maxstrength="100">
-        <Effect minstrength="0" maxstrength="70" strengthchange="-1">
+        <Effect minstrength="0" maxstrength="70" strengthchange="-0.333">
             <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
                 <reduceaffliction type="alieninfection" strength="0.05" />
                 <reduceaffliction type="bloodloss" strength="0.05" />
@@ -19,7 +19,7 @@
                 <reduceaffliction type="respawnpenalty" strength="0.05" />
             </StatusEffect>
         </Effect>
-        <Effect minstrength="70" maxstrength="100" strengthchange="-1">
+        <Effect minstrength="70" maxstrength="100" strengthchange="-0.333">
             <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
                 <reduceaffliction type="alieninfection" strength="0.1" />
                 <reduceaffliction type="bloodloss" strength="0.1" />
