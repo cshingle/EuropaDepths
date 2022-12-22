@@ -162,7 +162,7 @@
       </Fabricate>
       <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
         <RequiredSkill identifier="weapons" level="40" />
-        <RequiredItem identifier="uex" amount="2" />
+        <RequiredItem identifier="c4block" amount="2" />
         <RequiredItem identifier="steel" />
         <RequiredItem identifier="flakcannonammoboxexplosive" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
       </Fabricate>

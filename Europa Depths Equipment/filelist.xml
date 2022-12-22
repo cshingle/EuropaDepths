@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Equipment" modversion="1.2.0" corepackage="False" steamworkshopid="2832149257" gameversion="0.20.15.0">
+<contentpackage name="Europa Depths Equipment" modversion="1.2.1" corepackage="False" steamworkshopid="2832149257" gameversion="0.20.16.1">
   <Item file="%ModDir%/equipment.xml" />
   <Item file="%ModDir%/posters.xml" />
   <Item file="%ModDir%/depthcharge.xml" />

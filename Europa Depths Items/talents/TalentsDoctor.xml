@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+  <Override>
+<Talent identifier="blooddonor">
+  <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,2" sheetelementsize="128,128"/>
+  <Description tag="talentdescription.blooddonor" />
+  <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+    <Abilities>
+      <CharacterAbilityPutItem itemidentifier="antibloodloss2" amount="3"/>
+    </Abilities>
+  </AbilityGroupEffect>
+</Talent>
+  </Override>
+</Talents>

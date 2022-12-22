@@ -53,6 +53,7 @@ Short list of current features:
 [*]Made Alien Power Cells, Coilgun, Chaingun, flak and Laser ammo boxes combinable
 [*]Added new alian artifact variant
 [*]Added Dirtybomb to Military Applications talant since the old talant it was connected to was removed
+[*]Buff Blooddonor talant to drop 3 blood bags
 [/list]
 
 Now with Chinese Traditional translation that is already out of date.
