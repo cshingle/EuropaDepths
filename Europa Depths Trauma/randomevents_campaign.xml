@@ -289,17 +289,18 @@
 
       <!-- populate the ruins -->
       <EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
-        <MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Fractalguardian2" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="3" spawntype="ruin" spawnprobability="0.5" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="1" spawntype="ruin" spawnprobability="0.4" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Fractalguardian2" minamount="1" maxamount="2" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalguardian" minamount="0" maxamount="2" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="1" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="ruin" probability="0.8" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="ruin" probability="0.6" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="ruin" probability="0.4" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.3" spawnpointtag="husk" />
         <EventSet identifier="ruin_encounters" chooserandom="true" triggereventcooldown="false" allowatstart="true">
           <EventSet identifier="entrance1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
             <MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance1" />
-            <MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="1" spawntype="ruin" spawnpointtag="encounter_entrance1" />
+            <MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="1" spawntype="ruin" spawnpointtag="encounter_entrance1" />
             <MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
           </EventSet>
           <EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
@@ -637,17 +638,18 @@
 
       <!-- populate the ruins -->
       <EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
-        <MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Fractalguardian2" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="3" spawntype="ruin" spawnprobability="0.5" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="1" spawntype="ruin" spawnprobability="0.4" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Fractalguardian2" minamount="1" maxamount="2" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalguardian" minamount="0" maxamount="2" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="1" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="ruin" probability="0.8" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="ruin" probability="0.6" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="ruin" probability="0.4" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.3" spawnpointtag="husk" />
         <EventSet identifier="ruin_encounters" chooserandom="true" triggereventcooldown="false" allowatstart="true">
           <EventSet identifier="entrance1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
             <MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance1" />
-            <MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="1" spawntype="ruin" spawnpointtag="encounter_entrance1" />
+            <MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="1" spawntype="ruin" spawnpointtag="encounter_entrance1" />
             <MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
           </EventSet>
           <EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
@@ -1024,15 +1026,15 @@
 
       <!-- populate the ruins -->
       <EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
-        <MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="8" spawntype="ruin" spawnprobability="1" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Swarmfeeder" minamount="4" maxamount="6" spawntype="ruin" spawnprobability="0.3" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnprobability="0.4" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="0.4" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.8" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.6" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.4" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="0.3" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="8" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="4" maxamount="6" spawntype="ruin" probability="0.3" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.8" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.6" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.4" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.3" spawnpointtag="husk" />
         <EventSet identifier="ruin_encounters" chooserandom="true" triggereventcooldown="false" allowatstart="true">
           <EventSet identifier="entrance1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
             <MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance1" />
@@ -1427,15 +1429,15 @@
 
       <!-- populate the ruins -->
       <EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
-        <MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="8" spawntype="ruin" spawnprobability="1" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Swarmfeeder" minamount="4" maxamount="6" spawntype="ruin" spawnprobability="0.3" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnprobability="0.4" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="0.4" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.8" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.6" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.4" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="0.3" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="8" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="4" maxamount="6" spawntype="ruin" probability="0.3" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.8" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.6" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.4" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.3" spawnpointtag="husk" />
         <EventSet identifier="ruin_encounters" chooserandom="true" triggereventcooldown="false" allowatstart="true">
           <EventSet identifier="entrance1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
             <MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance1" />
@@ -1843,15 +1845,15 @@
 
       <!-- populate the ruins -->
       <EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
-        <MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="8" spawntype="ruin" spawnprobability="1" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Swarmfeeder" minamount="4" maxamount="6" spawntype="ruin" spawnprobability="0.3" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnprobability="0.5" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="3" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.8" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.6" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.4" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="0.3" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="8" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="4" maxamount="6" spawntype="ruin" probability="0.3" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.8" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.6" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.4" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.3" spawnpointtag="husk" />
         <EventSet identifier="ruin_encounters" chooserandom="true" triggereventcooldown="false" allowatstart="true">
           <EventSet identifier="entrance1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
             <MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
@@ -2326,14 +2328,14 @@
 
       <!-- populate the ruins -->
       <EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
-        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" spawnprobability="1" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" spawnprobability="0.3" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="0.3" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
         <EventSet identifier="ruin_encounters" chooserandom="true" triggereventcooldown="false" allowatstart="true">
           <EventSet identifier="entrance1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
             <MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
@@ -3029,14 +3031,14 @@
 
       <!-- populate the ruins -->
       <EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
-        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" spawnprobability="1" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" spawnprobability="0.3" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="0.3" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
         <EventSet identifier="ruin_encounters" chooserandom="true" triggereventcooldown="false" allowatstart="true">
           <EventSet identifier="entrance1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
             <MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
@@ -3732,14 +3734,14 @@
 
       <!-- populate the ruins -->
       <EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
-        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" spawnprobability="1" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" spawnprobability="0.3" spawnpointtag="swarmfeeder" />
-        <MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Fractalbrain1" minamount="3" maxamount="6" spawntype="ruin" spawnprobability="1" spawnpointtag="fractalguardian" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
-        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" spawnprobability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="0.3" spawnpointtag="swarmfeeder" />
+        <MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Fractalbrain1" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
+        <MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
         <EventSet identifier="ruin_encounters" chooserandom="true" triggereventcooldown="false" allowatstart="true">
           <EventSet identifier="entrance1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
             <MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
