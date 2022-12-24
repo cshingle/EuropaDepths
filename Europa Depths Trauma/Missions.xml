@@ -61,7 +61,7 @@
       <message text="missionmessage0.beaconmission" />
     </BeaconMission>
 
-    <AlienRuinClearMission identifier="clearruin" tags="alienruin,alienruinclear" type="ClearAlienRuins" difficulty="4" commonness="25" reward="7000" sonarlabel="target" targetitems="guardianpod" targetenemies="fractalguardian,fractalguardian2" minenemycount="4" requireruin="true">
+    <AlienRuinClearMission identifier="clearruin" tags="alienruin,alienruinclear" type="ClearAlienRuins" difficulty="4" commonness="25" reward="7000" sonarlabel="target" targetitems="guardianpod" targetenemies="fractalguardian,fractalguardian2" minenemycount="6" requireruin="true">
       <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,768,256,256" color="214,50,48" />
       <Reputation identifier="location" amount="10" />
       <Reputation identifier="coalition" amount="5" />

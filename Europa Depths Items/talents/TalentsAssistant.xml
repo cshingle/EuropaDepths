@@ -17,6 +17,7 @@
                 </Conditions>
                 <Abilities>
                     <CharacterAbilityModifyStat stattype="SwimmingSpeed" value="0.5"/>
+                    <CharacterAbilityModifyFlag flagtype="ImmuneToPressure" />
                 </Abilities>
             </AbilityGroupInterval>
             <AddedRecipe itemidentifier="clowndivingmask"/>

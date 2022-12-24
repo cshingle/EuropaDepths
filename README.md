@@ -6,6 +6,7 @@ Europa Depths is a balance mod for Barotrauma. It is split up into several optio
 Now updated for version 0.20.14
 
 [h1]Europa Depths[/h1]
+[h2]Now with %100 More Pressure Resistent Clowns[h2]
 Europa Depths Items adjusts the balance of items in the game. It is created with the following principals.
 [list]
 [*]Every item should be useful.
@@ -38,6 +39,7 @@ Short list of current features:
 [*]Ruin Artifacts have stronger effects
 [*]Additional Unique clown diving mask with unique art and affects (Mother's Tangency)
 [*]Additional Coil Gun/Double Coil Gun Turrets that greatly increases turret fire rate and power usage
+[*]Added new Nuclar Laser Turret. Custom art is comming.
 [*]Small buff to stun weapons
 [*]Reverted the last vanilla nerf to the revolver. It was already the worst weapon in the game
 [*]Added Medic Helmet
@@ -54,6 +56,7 @@ Short list of current features:
 [*]Added new alian artifact variant
 [*]Added Dirtybomb to Military Applications talant since the old talant it was connected to was removed
 [*]Buff Blooddonor talant to drop 3 blood bags
+[*]Allow the 40MM Grenade Launcher to hold 4 rounds to make it not useless with the new weapons
 [/list]
 
 Now with Chinese Traditional translation that is already out of date.
@@ -62,19 +65,30 @@ Now with Chinese Traditional translation that is already out of date.
 [url=https://github.com/cshingle/EuropaDepths] Github Project [/url]
 
 ## Europa Depths NPCs
+[h1]Description[/h1]
+Tired of one player killing everything on the abandon station before anyone else is out of the armory?
+
 Europa Depths NPCs adjusts the load outs and balance of NPC characters to make Pirates and Abandoned Outposts more challenging.
-All bandits have some kind of weapon and are an actual threat.
-Elite Pirates are a major threat.
+
+Abandon outposts will now be a fun and challenging mission rather than just a turkey shoot. I recommend disabling destructible stations for maximum fun.
+
+Elite Pirates are a major threat. Engaging them in CQC will likely end in your death.
 
 ## Europa Depths NPCs Lite
 This is a varient of Europa Depths NPCs that ajusts the abandon outpost missions, but does not override the outpostnpcs1 and abandonedoutpostnpcs sets to be more compatible with other mods that do override these NPC sets like Enhanced Armaments.
 
 ## Europa Depths Events
-Europa Depths Events adds additional monster spawns to bring more challenge to the game.
-This increases the number of monsters that spawn per event and increases the number of events.
+Updated for 0.20.16.1
+
+[h1]Description[/h1]
+
+Put the Trauma back in Barotrauma?
+
+Europa Depths Trauma adds additional monster spawns to bring more challenge to the game.
+This increases the number of monsters that spawn per event and increases the number of spawn events.
 This mod also introduces dire missions that are much harder than standard missions.
 
-This mod should work with event mods that do not override the reandomevents_campaign.xml such as BaroTraumatic.
+This mod entirely replaces the reandomevents_campaign.xml with a fully custom one to give a new and consistent experience. Due to this This mod should work with mods that do not override the reandomevents_campaign.xml such as BaroTraumatic.
 
 ## Europa Depths Equipment
 Europa Depths Equipment adds items that can be placed on custom subs. This mod can be used as a dependency for custom subs.
@@ -87,7 +101,6 @@ It currently contains the following items;
 *Large Ammunition Shelf - Holds 4 ammobox, coilgunammo, depthchargeammo
 *Crate Shelf (No Cargo) - Create Shelf that will not get filled with cargo for cargo missions
 *Distiller - Slowly produces Ethanol. Remaining in the Use GUI will cause the player Character to get more and more drunk. Some drunk submariners claim that it also has healing capabilities.
-*Unit Load Device - Overrode the default Unit Load Device to hold 12 crates rather than 10.
 
 ## Europa Depths Vanilla Monsters
 Europa Depths Vanilla Monsters allows additional mosters to enter the sub

@@ -72,9 +72,8 @@
         <StatusEffect type="OnWearing" target="Contained,Character" interval="1" disabledeltatime="true">
           <affliction identifier="psychosis" strength="1"/>
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" disabledeltatime="true" comparison="And">
+        <StatusEffect type="OnWearing" target="Contained,Character" comparison="And">
           <Conditional clownpower="gt 0.05" />
-          <Conditional HealthPercentage="lt -5"/>
           <affliction identifier="mothersembrace" strength="1"/>
         </StatusEffect>
       </Wearable>
@@ -151,14 +150,13 @@
       <StatusEffect type="OnWearing" target="Contained,Character" interval="1" disabledeltatime="true">
         <affliction identifier="psychosis" strength="1"/>
       </StatusEffect>
-      <StatusEffect type="OnWearing" target="Contained,Character" comparison="And">
-        <Conditional clownpower="gt 0.05" />
-        <Conditional HealthPercentage="lt -5"/>
-        <affliction identifier="mothersembrace" strength="1"/>
-      </StatusEffect>
       <!-- HöNK -->
       <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
       <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
+      <StatusEffect type="OnWearing" target="Contained,Character" comparison="And">
+        <Conditional clownpower="gt 0.05" />
+        <affliction identifier="mothersembrace" strength="1"/>
+      </StatusEffect>
     </Wearable>
     <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank">
       <Containable items="oxygensource,weldingtoolfuel" />

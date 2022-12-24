@@ -34,11 +34,13 @@
     </Affliction>
 
     <Affliction name="Mother's Embrace" identifier="mothersembrace" description="Mother's Embrace" type="resistance" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
-        <Effect minstrength="0" maxstrength="1" resistancefor="oxygenlow,bleeding" minresistance="1" maxresistance="1">
+        <Effect minstrength="0" maxstrength="1" resistancefor="bleeding,bloodloss" minresistance="0.20" maxresistance="0.20">
             <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
-                <reduceaffliction type="bleeding" strength="0.2" />
+                <reduceaffliction type="bleeding" strength="0.1" />
+                <reduceaffliction type="bloodloss" strength="0.1" />
             </StatusEffect>
         </Effect>
         <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,7" sheetelementsize="128,128" color="255,165,0,255" origin="0,0"/>
     </Affliction>
+
 </Afflictions>

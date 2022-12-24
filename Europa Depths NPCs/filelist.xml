@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Npcs" modversion="1.1.6" corepackage="False" steamworkshopid="2824698537" gameversion="0.19.11.0">
+<contentpackage name="Europa Depths Npcs" modversion="1.2.0" corepackage="False" steamworkshopid="2824698537" gameversion="0.20.16.1">
   <Item file="%ModDir%/items.xml" />
   <Missions file="%ModDir%/Missions.xml" />
   <NPCSets file="%ModDir%/AbandonedOutpostNpcs.xml" />

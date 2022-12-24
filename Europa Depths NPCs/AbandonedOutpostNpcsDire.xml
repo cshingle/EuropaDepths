@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <npcsets>
     <npcset identifier="abandonedoutpostnpcsdire">
-        <npc identifier="bandit" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1.2" healthmultiplierinmultiplayer="2" aimspeed="1" aimaccuracy="0.75" reportrange="500">
+        <npc identifier="bandit" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1.2" healthmultiplierinmultiplayer="2" aimspeed="1" aimaccuracy="0.85" reportrange="500">
             <ItemSet commonness="0.9">
                 <Item identifier="idcard" equip="true" />
                 <Item identifier="banditclothes1" equip="true" />
@@ -25,15 +25,22 @@
             <ItemSet commonness="0.8">
                 <Item identifier="idcard" equip="true" />
                 <Item identifier="banditclothes2" equip="true" />
+                <Item identifier="piratebodyarmor" equip="true"/>
+                <Item identifier="piratehelmet" equip="true"/>
                 <Item identifier="divingmask">
                     <Item identifier="oxygentank" />
                 </Item>
                 <Item identifier="baseballcap" equip="true" />
                 <Item identifier="divingknife" equip="false" />
                 <Item identifier="wrench" equip="false" />
-                <Item identifier="opium" />
-                <Item identifier="antibleeding1" />
-                <Item identifier="antibleeding1" />
+                <Item identifier="revolver" equip="true">
+                    <Item identifier="revolverrounddepletedfuel" />
+                    <Item identifier="revolverrounddepletedfuel" />
+                    <Item identifier="revolverrounddepletedfuel" />
+                    <Item identifier="revolverrounddepletedfuel" />
+                    <Item identifier="revolverrounddepletedfuel" />
+                    <Item identifier="revolverrounddepletedfuel" />
+                </Item>
                 <Item identifier="revolver" equip="true">
                     <Item identifier="revolverrounddepletedfuel" />
                     <Item identifier="revolverrounddepletedfuel" />
@@ -52,22 +59,14 @@
                 <Item identifier="baseballcap" equip="true" />
                 <Item identifier="divingknife" equip="false" />
                 <Item identifier="wrench" equip="false" />
-                <Item identifier="revolver" equip="true">
-                    <Item identifier="revolverrounddepletedfuel" />
-                    <Item identifier="revolverrounddepletedfuel" />
-                    <Item identifier="revolverrounddepletedfuel" />
-                    <Item identifier="revolverrounddepletedfuel" />
-                    <Item identifier="revolverrounddepletedfuel" />
-                    <Item identifier="revolverrounddepletedfuel" />
+                <Item identifier="opium" />
+                <Item identifier="antibleeding1" />
+                <Item identifier="antibleeding1" />
+                <Item identifier="machinepistol" equip="true">
+                    <Item identifier="smgmagazinedepletedfuel" />
                 </Item>
-                <Item identifier="revolver" equip="true">
-                    <Item identifier="revolverrounddepletedfuel" />
-                    <Item identifier="revolverrounddepletedfuel" />
-                    <Item identifier="revolverrounddepletedfuel" />
-                    <Item identifier="revolverrounddepletedfuel" />
-                    <Item identifier="revolverrounddepletedfuel" />
-                    <Item identifier="revolverrounddepletedfuel" />
-                </Item>
+                <Item identifier="smgmagazinedepletedfuel" />
+                <Item identifier="smgmagazinedepletedfuel" />
             </ItemSet>
             <ItemSet commonness="0.6">
                 <Item identifier="idcard" equip="true" />
@@ -115,6 +114,29 @@
                 </Item>
                 <Item identifier="toolbelt" equip="true" />
             </ItemSet>
+            <ItemSet commonness="0.4">
+                <Item identifier="idcard" equip="true" />
+                <Item identifier="banditclothes1" equip="true" />
+                <Item identifier="antibleeding1" />
+                <Item identifier="antibleeding1" />
+                <Item identifier="piratebodyarmor" equip="true"/>
+                <Item identifier="piratehelmet" equip="true"/>
+                <Item identifier="divingmask">
+                    <Item identifier="oxygentank" />
+                </Item>
+                <Item identifier="crowbar" />
+                <Item identifier="divingknife" />
+                <Item identifier="fraggrenade" equip="true" />
+                <Item identifier="weldingfueltank" />
+                <Item identifier="weldingfueltank" />
+                <Item identifier="divingmask">
+                    <Item identifier="oxygentank" />
+                </Item>
+                <Item identifier="flamerunique">
+                    <Item identifier="weldingfueltank" />
+                </Item>
+                <Item identifier="toolbelt" equip="true" />
+            </ItemSet>
             <ItemSet commonness="0.7">
                 <Item identifier="idcard" equip="true" />
                 <Item identifier="banditclothes2" equip="true" />
@@ -149,6 +171,23 @@
                     <Item identifier="shotgunshell" />
                     <Item identifier="shotgunshell" />
                     <Item identifier="shotgunshell" />
+                </Item>
+                <Item identifier="toolbelt" equip="true" />
+            </ItemSet>
+            <ItemSet commonness="0.6">
+                <Item identifier="idcard" equip="true" />
+                <Item identifier="banditclothes1" equip="true" />
+                <Item identifier="divingmask">
+                    <Item identifier="oxygentank" />
+                </Item>
+                <Item identifier="divingknife" equip="false" />
+                <Item identifier="shotgun">
+                    <Item identifier="shotgunslugexplosive" />
+                    <Item identifier="shotgunslugexplosive" />
+                    <Item identifier="shotgunslugexplosive" />
+                    <Item identifier="shotgunslugexplosive" />
+                    <Item identifier="shotgunslugexplosive" />
+                    <Item identifier="shotgunslugexplosive" />
                 </Item>
                 <Item identifier="toolbelt" equip="true" />
             </ItemSet>
@@ -210,13 +249,12 @@
                 <Item identifier="steroids" />
                 <Item identifier="divingknife" />
                 <Item identifier="fraggrenade" />
-                <Item identifier="weldingfueltank" />
-                <Item identifier="weldingfueltank" />
+                <Item identifier="hmgammo" />
                 <Item identifier="divingmask">
                     <Item identifier="oxygentank" />
                 </Item>
-                <Item identifier="flamerunique">
-                    <Item identifier="weldingfueltank" />
+                <Item identifier="hmg">
+                    <Item identifier="hmgammo" />
                 </Item>
                 <Item identifier="toolbelt" />
             </ItemSet>
@@ -263,7 +301,7 @@
                 <Item identifier="toolbelt" equip="true"/>
             </ItemSet>
         </npc>
-        <npc identifier="banditleader_heavy" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="2.3" healthmultiplierinmultiplayer="3.5" aimspeed="1.0" aimaccuracy="0.95" reportrange="750">
+        <npc identifier="banditleader_heavy" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="2.3" healthmultiplierinmultiplayer="3.5" aimspeed="1.0" aimaccuracy="1" reportrange="750">
             <ItemSet commonness="1">
                 <Item identifier="idcard" equip="true" />
                 <Item identifier="securityuniform2" equip="true" />
@@ -325,15 +363,15 @@
                 <Item identifier="steroids" />
                 <Item identifier="steroids" />
                 <Item identifier="divingknife" />
-                <Item identifier="weldingfueltank" />
-                <Item identifier="weldingfueltank" />
-                <Item identifier="weldingfueltank" />
-                <Item identifier="weldingfueltank" />
                 <Item identifier="divingmask">
                     <Item identifier="oxygentank" />
                 </Item>
-                <Item identifier="flamerunique">
-                    <Item identifier="weldingfueltank" />
+                <Item identifier="hmgammo" />
+                <Item identifier="divingmask">
+                    <Item identifier="oxygentank" />
+                </Item>
+                <Item identifier="hmg">
+                    <Item identifier="hmgammo" />
                 </Item>
                 <Item identifier="fraggrenade" equip="true" />
                 <Item identifier="pressurestabilizer" equip="false" />

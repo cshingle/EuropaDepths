@@ -50,6 +50,7 @@
   <entitydescription.suitcrate>A vessel in which diving suits may be stored.</entitydescription.suitcrate>
   <Override>
     <talentdescription.miner>Unlock recipe: [itemname].\nWhenever you deconstruct an ore, you have a [probability]% chance to gain double the output.</talentdescription.miner>
+    <talentdescription.waterprankster>Clown Power gives you immunity to pressure and allows you to swim [swimspeedvalue]% faster.</talentdescription.waterprankster>
   </Override>
   <entityname.medicalcase>Medical Case</entityname.medicalcase>
   <entitydescription.medicalcase>A case for safely storing medical supplies.</entitydescription.medicalcase>
@@ -76,6 +77,6 @@
   <entitydescription.nuclearlaserammobox>A heavly shielded box containing uranium based nuclear fuel. Used as ammo by the Nuclear Laser</entitydescription.nuclearlaserammobox>
   <entityname.nuclearlaserthoriumammobox>Nuclear Laser Thorium Ammo Box</entityname.nuclearlaserthoriumammobox>
   <entitydescription.nuclearlaserthoriumammobox>A heavly shielded box containing thorium based nuclear fuel. Used as ammo by the Nuclear Laser</entitydescription.nuclearlaserthoriumammobox>
-  <entityname.nuclearlaserfulguriumammobox>Nuclear Laser fulgurium Ammo Box</entityname.nuclearlaserfulguriumammobox>
+  <entityname.nuclearlaserfulguriumammobox>Nuclear Laser Fulgurium Ammo Box</entityname.nuclearlaserfulguriumammobox>
   <entitydescription.nuclearlaserfulguriumammobox>A heavly shielded box containing fulgurium based nuclear fuel. Used as ammo by the Nuclear Laser</entitydescription.nuclearlaserfulguriumammobox>
 </infotexts>
