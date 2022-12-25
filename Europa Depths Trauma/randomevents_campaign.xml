@@ -22,7 +22,7 @@
 			</Commonness>
 
 			<!-- 20% or 3 min -->
-			<EventSet identifier="1_twenty" chooserandom="true" mindistancetraveled="0.20" minmissiontime="180" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.25">
+			<EventSet identifier="1_twenty" chooserandom="true" mindistancetraveled="0.20" minmissiontime="180" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.25">
 				<EventSet identifier="crawlers" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -32,7 +32,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 10 min -->
-			<EventSet identifier="1_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.25">
+			<EventSet identifier="1_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.25">
 				<EventSet identifier="crawlers" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -42,7 +42,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 15 min -->
-			<EventSet identifier="1_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.25">
+			<EventSet identifier="1_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.25">
 				<EventSet identifier="crawlers" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -52,7 +52,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 20 min -->
-			<EventSet identifier="1_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="1200" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.25">
+			<EventSet identifier="1_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="1200" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.25">
 				<EventSet identifier="crawlers" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -146,7 +146,7 @@
 			</EventSet>
 
 			<!-- 5% or 1 min -->
-			<EventSet identifier="2_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.35">
+			<EventSet identifier="2_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.35">
 				<EventSet identifier="crawlers" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="4" maxamount="5" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -162,7 +162,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 20% or 5 min -->
-			<EventSet identifier="2_twenty" chooserandom="true" mindistancetraveled="0.20" minmissiontime="300" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.35">
+			<EventSet identifier="2_twenty" chooserandom="true" mindistancetraveled="0.20" minmissiontime="300" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.35">
 				<EventSet identifier="crawlers" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="4" maxamount="5" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -178,7 +178,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 10 min -->
-			<EventSet identifier="2_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.35">
+			<EventSet identifier="2_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.35">
 				<EventSet identifier="crawlers" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="4" maxamount="5" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -194,7 +194,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 50% or 15 min -->
-			<EventSet identifier="2_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.35">
+			<EventSet identifier="2_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.35">
 				<EventSet identifier="crawlers" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="4" maxamount="5" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -210,7 +210,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 15 min -->
-			<EventSet identifier="2_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.35">
+			<EventSet identifier="2_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.35">
 				<EventSet identifier="crawlers" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="4" maxamount="5" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -226,7 +226,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 30 min -->
-			<EventSet identifier="2_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="1800" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.35">
+			<EventSet identifier="2_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="1800" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.35">
 				<EventSet identifier="crawlers" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="4" maxamount="5" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -384,7 +384,7 @@
 			</EventSet>
 
 			<!-- 5% or 1 min -->
-			<EventSet identifier="3_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.45">
+			<EventSet identifier="3_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.45">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -413,7 +413,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 15% or 5 min -->
-			<EventSet identifier="3_fifteen" chooserandom="true" mindistancetraveled="0.15" minmissiontime="300" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.45">
+			<EventSet identifier="3_fifteen" chooserandom="true" mindistancetraveled="0.15" minmissiontime="300" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.45">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -442,7 +442,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 30% or 10 min -->
-			<EventSet identifier="3_thirty" chooserandom="true" mindistancetraveled="0.30" minmissiontime="600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.45">
+			<EventSet identifier="3_thirty" chooserandom="true" mindistancetraveled="0.30" minmissiontime="600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.45">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -471,7 +471,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 15 min -->
-			<EventSet identifier="3_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.45">
+			<EventSet identifier="3_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.45">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -500,7 +500,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 50% or 20 min -->
-			<EventSet identifier="3_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.45">
+			<EventSet identifier="3_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.45">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -529,7 +529,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 25 min -->
-			<EventSet identifier="3_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.45">
+			<EventSet identifier="3_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.45">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -558,7 +558,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 33 min -->
-			<EventSet identifier="3_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="2000" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.45">
+			<EventSet identifier="3_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="2000" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.45">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -733,7 +733,7 @@
 			</EventSet>
 
 			<!-- 5% or 1 min -->
-			<EventSet identifier="4_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.55">
+			<EventSet identifier="4_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.55">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -765,7 +765,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 15% or 5 min -->
-			<EventSet identifier="4_fifteen" chooserandom="true" mindistancetraveled="0.15" minmissiontime="300" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.55">
+			<EventSet identifier="4_fifteen" chooserandom="true" mindistancetraveled="0.15" minmissiontime="300" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.55">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -797,7 +797,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 30% or 10 min -->
-			<EventSet identifier="4_thirty" chooserandom="true" mindistancetraveled="0.30" minmissiontime="600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.55">
+			<EventSet identifier="4_thirty" chooserandom="true" mindistancetraveled="0.30" minmissiontime="600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.55">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -829,7 +829,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 15 min -->
-			<EventSet identifier="4_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.55">
+			<EventSet identifier="4_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.55">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -861,7 +861,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 50% or 20 min -->
-			<EventSet identifier="4_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.55">
+			<EventSet identifier="4_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.55">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -893,7 +893,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 25 min -->
-			<EventSet identifier="4_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.55">
+			<EventSet identifier="4_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.55">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -925,7 +925,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 33 min -->
-			<EventSet identifier="4_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="2000" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.55">
+			<EventSet identifier="4_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="2000" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.55">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="0" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1136,7 +1136,7 @@
 			</EventSet>
 
 			<!-- 5% or 1 min -->
-			<EventSet identifier="5_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.65">
+			<EventSet identifier="5_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.65">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1166,7 +1166,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 15% or 5 min -->
-			<EventSet identifier="5_fifteen" chooserandom="true" mindistancetraveled="0.15" minmissiontime="300" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.65">
+			<EventSet identifier="5_fifteen" chooserandom="true" mindistancetraveled="0.15" minmissiontime="300" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.65">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1196,7 +1196,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 25% or 10 min -->
-			<EventSet identifier="5_twentyfive" chooserandom="true" mindistancetraveled="0.25" minmissiontime="600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.65">
+			<EventSet identifier="5_twentyfive" chooserandom="true" mindistancetraveled="0.25" minmissiontime="600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.65">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1226,7 +1226,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 15 min -->
-			<EventSet identifier="5_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.65">
+			<EventSet identifier="5_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.65">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1256,7 +1256,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 50% or 20 min -->
-			<EventSet identifier="5_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.65">
+			<EventSet identifier="5_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.65">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1286,7 +1286,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 25 min -->
-			<EventSet identifier="5_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.65">
+			<EventSet identifier="5_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.65">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1316,7 +1316,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 33 min -->
-			<EventSet identifier="5_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="2000" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.65">
+			<EventSet identifier="5_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="2000" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.65">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1346,7 +1346,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 95% -->
-			<EventSet identifier="5_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.65">
+			<EventSet identifier="5_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.65">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -1536,7 +1536,7 @@
 			</EventSet>
 
 			<!-- 5% or 1 min -->
-			<EventSet identifier="6_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.75">
+			<EventSet identifier="6_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.75">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -1549,7 +1549,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 15% or 5 min -->
-			<EventSet identifier="6_fifteen" chooserandom="true" mindistancetraveled="0.15" minmissiontime="300" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.75">
+			<EventSet identifier="6_fifteen" chooserandom="true" mindistancetraveled="0.15" minmissiontime="300" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.75">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1584,7 +1584,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 25% or 10 min -->
-			<EventSet identifier="6_twentyfive" chooserandom="true" mindistancetraveled="0.25" minmissiontime="600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.75">
+			<EventSet identifier="6_twentyfive" chooserandom="true" mindistancetraveled="0.25" minmissiontime="600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.75">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1619,7 +1619,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 15 min -->
-			<EventSet identifier="6_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.75">
+			<EventSet identifier="6_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.75">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1654,7 +1654,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 50% or 20 min -->
-			<EventSet identifier="6_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.75">
+			<EventSet identifier="6_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.75">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1689,7 +1689,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 25 min -->
-			<EventSet identifier="6_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.75">
+			<EventSet identifier="6_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.75">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1724,7 +1724,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 33 min -->
-			<EventSet identifier="6_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="2000" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.75">
+			<EventSet identifier="6_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="2000" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.75">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -1759,7 +1759,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 95% -->
-			<EventSet identifier="6_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.75">
+			<EventSet identifier="6_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.75">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Crawler" minamount="6" maxamount="10" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -1969,7 +1969,7 @@
 			</EventSet>
 
 			<!-- 5% or 1 min -->
-			<EventSet identifier="7_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.8">
+			<EventSet identifier="7_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.8">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -1982,7 +1982,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 15% or 5 min -->
-			<EventSet identifier="7_fifteen" chooserandom="true" mindistancetraveled="0.15" minmissiontime="300" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.8">
+			<EventSet identifier="7_fifteen" chooserandom="true" mindistancetraveled="0.15" minmissiontime="300" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.8">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
@@ -2028,7 +2028,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 25% or 10 min -->
-			<EventSet identifier="7_twentyfive" chooserandom="true" mindistancetraveled="0.25" minmissiontime="600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.8">
+			<EventSet identifier="7_twentyfive" chooserandom="true" mindistancetraveled="0.25" minmissiontime="600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.8">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
@@ -2074,7 +2074,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 15 min -->
-			<EventSet identifier="7_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.8">
+			<EventSet identifier="7_forty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.8">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
@@ -2120,7 +2120,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 50% or 20 min -->
-			<EventSet identifier="7_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.8">
+			<EventSet identifier="7_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.8">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
@@ -2166,7 +2166,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 25 min -->
-			<EventSet identifier="7_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.8">
+			<EventSet identifier="7_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.8">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
@@ -2212,7 +2212,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 40 min -->
-			<EventSet identifier="7_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="2400" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.8">
+			<EventSet identifier="7_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="2400" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.8">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
@@ -2258,7 +2258,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 95% -->
-			<EventSet identifier="7_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.8">
+			<EventSet identifier="7_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.8">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -2476,7 +2476,7 @@
 			</EventSet>
 
 			<!-- 5% or 1 min -->
-			<EventSet identifier="8_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="8_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -2489,7 +2489,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 10% or 2 min -->
-			<EventSet identifier="8_ten" chooserandom="true" mindistancetraveled="0.10" minmissiontime="120" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="8_ten" chooserandom="true" mindistancetraveled="0.10" minmissiontime="120" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -2498,7 +2498,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -2507,11 +2508,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -2520,18 +2524,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -2554,7 +2564,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 20% or 5 min -->
-			<EventSet identifier="8_twenty" chooserandom="true" mindistancetraveled="0.20" minmissiontime="300" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="8_twenty" chooserandom="true" mindistancetraveled="0.20" minmissiontime="300" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -2563,7 +2573,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -2572,11 +2583,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -2585,18 +2599,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -2619,7 +2639,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 30% or 10 min -->
-			<EventSet identifier="8_forty" chooserandom="true" mindistancetraveled="0.30" minmissiontime="600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="8_forty" chooserandom="true" mindistancetraveled="0.30" minmissiontime="600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -2628,7 +2648,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -2637,11 +2658,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -2650,18 +2674,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -2684,7 +2714,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 15 min -->
-			<EventSet identifier="8_thirty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="8_thirty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -2693,7 +2723,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -2702,11 +2733,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -2715,18 +2749,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -2749,7 +2789,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 50% or 20 min -->
-			<EventSet identifier="8_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="8_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -2758,7 +2798,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -2767,11 +2808,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -2780,18 +2824,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -2814,7 +2864,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 25 min -->
-			<EventSet identifier="8_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="8_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -2823,7 +2873,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -2832,11 +2883,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -2845,18 +2899,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -2879,7 +2939,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 60 min -->
-			<EventSet identifier="8_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="3600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="8_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="3600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -2888,7 +2948,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -2897,11 +2958,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -2910,18 +2974,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -2944,7 +3014,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 95% -->
-			<EventSet identifier="8_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="8_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="16" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -3162,7 +3232,7 @@
 			</EventSet>
 
 			<!-- 5% or 1 min -->
-			<EventSet identifier="9_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="9_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="16" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -3177,7 +3247,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 10% or 2 min -->
-			<EventSet identifier="9_ten" chooserandom="true" mindistancetraveled="0.10" minmissiontime="120" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="9_ten" chooserandom="true" mindistancetraveled="0.10" minmissiontime="120" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -3186,7 +3256,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -3195,11 +3266,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -3208,18 +3282,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -3242,7 +3322,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 20% or 5 min -->
-			<EventSet identifier="9_twenty" chooserandom="true" mindistancetraveled="0.20" minmissiontime="300" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="9_twenty" chooserandom="true" mindistancetraveled="0.20" minmissiontime="300" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -3251,7 +3331,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -3260,11 +3341,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -3273,18 +3357,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -3307,7 +3397,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 30% or 10 min -->
-			<EventSet identifier="9_forty" chooserandom="true" mindistancetraveled="0.30" minmissiontime="600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="9_forty" chooserandom="true" mindistancetraveled="0.30" minmissiontime="600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -3316,7 +3406,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -3325,11 +3416,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -3338,18 +3432,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -3372,7 +3472,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 15 min -->
-			<EventSet identifier="9_thirty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="9_thirty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -3381,7 +3481,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -3390,11 +3491,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -3403,18 +3507,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -3437,7 +3547,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 50% or 20 min -->
-			<EventSet identifier="9_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="9_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -3446,7 +3556,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -3455,11 +3566,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -3468,18 +3582,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -3502,7 +3622,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 25 min -->
-			<EventSet identifier="9_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="9_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -3511,7 +3631,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -3520,11 +3641,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -3533,18 +3657,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -3567,7 +3697,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 60 min -->
-			<EventSet identifier="9_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="3600" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="9_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="3600" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -3576,7 +3706,8 @@
 					<MonsterEvent characterfile="Crawlerhusk" minamount="15" maxamount="18" spawntype="mainpath,sidepath" scatter="1000" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="watcher" commonness="10">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" />
@@ -3585,11 +3716,14 @@
 							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="mudraptors">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						</EventSet>
 						<EventSet identifier="threshers">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="8" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" />
+							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						</EventSet>
 					</EventSet>
 				</EventSet>
@@ -3598,18 +3732,24 @@
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" commonness="40">
-					<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" scatter="1000" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="5" maxamount="6" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Bonethresher" minamount="3" maxamount="4" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" scatter="1000" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="5" maxamount="5" spawntype="mainpath,sidepath" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="3" spawntype="mainpath,sidepath" spawnprobability="0.5" />
 					</EventSet>
 					<EventSet identifier="matriarch">
-						<MonsterEvent characterfile="Hammerhead_veteran" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
-						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="6" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerheadgold" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_juvenile" minamount="3" maxamount="4" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadmatriarch" minamount="1" maxamount="2" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadspawn" minamount="5" maxamount="10" spawntype="mainpath,sidepath" />
@@ -3632,7 +3772,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 95% -->
-			<EventSet identifier="9_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="false" minintensity="0.0" maxintensity="0.85">
+			<EventSet identifier="9_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="true" minintensity="0.0" maxintensity="0.85">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="16" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -3856,7 +3996,7 @@
 			</EventSet>
 
 			<!-- 5% or 1 min -->
-			<EventSet identifier="10_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="10_five" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -3873,7 +4013,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 10% or 2 min -->
-			<EventSet identifier="10_ten" chooserandom="true" mindistancetraveled="0.10" minmissiontime="120" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="10_ten" chooserandom="true" mindistancetraveled="0.10" minmissiontime="120" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -3941,7 +4081,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 20% or 5 min -->
-			<EventSet identifier="10_twenty" chooserandom="true" mindistancetraveled="0.20" minmissiontime="300" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="10_twenty" chooserandom="true" mindistancetraveled="0.20" minmissiontime="300" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -4009,7 +4149,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 30% or 10 min -->
-			<EventSet identifier="10_forty" chooserandom="true" mindistancetraveled="0.30" minmissiontime="600" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="10_forty" chooserandom="true" mindistancetraveled="0.30" minmissiontime="600" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -4077,7 +4217,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 15 min -->
-			<EventSet identifier="10_thirty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="10_thirty" chooserandom="true" mindistancetraveled="0.40" minmissiontime="900" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -4145,7 +4285,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 50% or 20 min -->
-			<EventSet identifier="10_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="10_fifty" chooserandom="true" mindistancetraveled="0.50" minmissiontime="1200" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -4213,7 +4353,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 25 min -->
-			<EventSet identifier="10_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="10_sixty" chooserandom="true" mindistancetraveled="0.60" minmissiontime="1500" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -4281,7 +4421,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 60 min -->
-			<EventSet identifier="10_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="3600" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="10_eighty" chooserandom="true" mindistancetraveled="0.80" minmissiontime="3600" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="10">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="12" maxamount="15" spawntype="mainpath,sidepath" />
 					<MonsterEvent characterfile="Crawlerbroodmother" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
@@ -4349,7 +4489,7 @@
 				</EventSet>
 			</EventSet>
 			<!-- 95% -->
-			<EventSet identifier="10_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="10_nintyFive" chooserandom="true" mindistancetraveled="0.95" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<EventSet identifier="crawlerswarm" chooserandom="false" commonness="20">
 					<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" />
 				</EventSet>
@@ -4371,11 +4511,11 @@
 		<!--                               Set 11                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<EventSet identifier="End" biome="endzone" chooserandom="false" allowatstart="true" campaign="true">
-			<EventSet identifier="boss" chooserandom="true" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="boss" chooserandom="true" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<MonsterEvent characterfile="Doomworm" minamount="1" maxamount="1" spawntype="mainpath" />
 			</EventSet>
 			<!-- 60% -->
-			<EventSet identifier="lastwave" chooserandom="true" mindistancetraveled="0.60" delaywhencrewaway="false" minintensity="0.0" maxintensity="1.0">
+			<EventSet identifier="lastwave" chooserandom="true" mindistancetraveled="0.60" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
 				<MonsterEvent characterfile="Fractalbrain1" minamount="6" maxamount="6" spawntype="mainpath" />
 			</EventSet>
 		</EventSet>

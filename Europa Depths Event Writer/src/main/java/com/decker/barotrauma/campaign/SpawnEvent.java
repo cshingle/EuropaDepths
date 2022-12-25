@@ -30,7 +30,7 @@ public class SpawnEvent extends EventSet {
 		}
 		fields.put("minintensity", "0.0");
 		fields.put("maxintensity", Double.toString(maxintensity));
-		fields.put("delaywhencrewaway", "false");
+		fields.put("delaywhencrewaway", "true");
 		
 		if (mindistancetraveled != null && minmissiontime != null) {
 			this.comment = String.format("<!-- %s%% or %s min -->\n", new BigDecimal(mindistancetraveled).setScale(2, RoundingMode.HALF_UP).toString().replaceFirst(".*[.]0?([0-9]+)", "$1"), minmissiontime / 60);

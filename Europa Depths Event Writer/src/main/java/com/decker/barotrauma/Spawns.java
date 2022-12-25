@@ -230,31 +230,41 @@ public class Spawns {
 				new MonsterSet("Crawlerhusk", false, 10).monsters(
 						new MonsterEvent(Charactor.Crawlerhusk, 15, 18).scatter(1000)),
 				new MonsterSet("mudraptors", false, 40).monsters(
-						new MonsterEvent(Charactor.Mudraptor_veteran, 10, 12)),
+						new MonsterEvent(Charactor.Mudraptor, 8, 10),
+						new MonsterEvent(Charactor.Mudraptor_veteran, 3, 4)),
 				new MonsterSet("watcher", 10).monsters(
 						new MonsterEvent(Charactor.Watcher, 1, 1).triggereventcooldown(false),
 						new MonsterSet(true).monsters(
 								new MonsterSet("crawlers").monsters(
 										new MonsterEvent(Charactor.Crawler_veteran, 8, 15)),
 								new MonsterSet("mudraptors").monsters(
-										new MonsterEvent(Charactor.Mudraptor_veteran, 5, 7)),
+										new MonsterEvent(Charactor.Mudraptor, 5, 7),
+										new MonsterEvent(Charactor.Mudraptor_veteran, 2, 3)),
 								new MonsterSet("threshers").monsters(
-										new MonsterEvent(Charactor.Bonethresher_veteran, 2, 3),
-										new MonsterEvent(Charactor.Tigerthresher_veteran, 3, 8)))),
+										new MonsterEvent(Charactor.Bonethresher_veteran, 1, 2),
+										new MonsterEvent(Charactor.Bonethresher_veteran, 1, 1),
+										new MonsterEvent(Charactor.Tigerthresher, 2, 7),
+										new MonsterEvent(Charactor.Tigerthresher_veteran, 1, 1)))),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Charactor.Spineling, 10, 20),
 						new MonsterEvent(Charactor.Spineling_giant, 2, 3)),
 				new MonsterSet("threshers", false, 40).monsters(
-						new MonsterEvent(Charactor.Bonethresher_veteran, 3, 5).scatter(1000),
-						new MonsterEvent(Charactor.Tigerthresher_veteran, 5, 6)),
+						new MonsterEvent(Charactor.Bonethresher, 3, 4).scatter(1000),
+						new MonsterEvent(Charactor.Bonethresher_veteran, 1, 1).scatter(1000),
+						new MonsterEvent(Charactor.Tigerthresher, 5, 5),
+						new MonsterEvent(Charactor.Tigerthresher_veteran, 1, 1)),
 				new MonsterSet("hammerheads", true, 30).monsters(
 						new MonsterSet("nomatriarch").monsters(
-								new MonsterEvent(Charactor.Hammerhead_veteran, 3, 6),
-								new MonsterEvent(Charactor.Hammerheadgold_veteran, 3, 4),
+								new MonsterEvent(Charactor.Hammerhead, 3, 45),
+								new MonsterEvent(Charactor.Hammerhead_veteran, 1, 1),
+								new MonsterEvent(Charactor.Hammerheadgold, 2, 3),
+								new MonsterEvent(Charactor.Hammerheadgold_veteran, 1, 1),
 								new MonsterEvent(Charactor.Hammerheadblack, 1, 3).spawnprobability(0.5)),
 						new MonsterSet("matriarch").monsters(
-								new MonsterEvent(Charactor.Hammerhead_veteran, 3, 6),
-								new MonsterEvent(Charactor.Hammerheadgold_veteran, 3, 4),
+								new MonsterEvent(Charactor.Hammerhead, 3, 6),
+								new MonsterEvent(Charactor.Hammerhead_veteran, 1, 1),
+								new MonsterEvent(Charactor.Hammerheadgold, 3, 4),
+								new MonsterEvent(Charactor.Hammerhead_veteran, 1, 1),
 								new MonsterEvent(Charactor.Hammerhead_juvenile, 3, 4),
 								new MonsterEvent(Charactor.Hammerheadmatriarch, 1, 2),
 								new MonsterEvent(Charactor.Hammerheadspawn, 5, 10),

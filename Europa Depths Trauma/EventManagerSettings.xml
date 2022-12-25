@@ -20,7 +20,7 @@
     <Easiest
       DefaultEventThreshold="0.2"
       EventThresholdIncrease="0.005"
-      EventCooldown="30.0"
+      EventCooldown="60.0"
       MinLevelDifficulty="0.0"
       MaxLevelDifficulty="15.0"
       FreezeDurationWhenCrewAway="120"/>
@@ -28,7 +28,7 @@
     <Easy
       DefaultEventThreshold="0.3"
       EventThresholdIncrease="0.006"
-      EventCooldown="30.0"
+      EventCooldown="60.0"
       MinLevelDifficulty="15.0"
       MaxLevelDifficulty="35.0"
       FreezeDurationWhenCrewAway="120"/>
@@ -36,7 +36,7 @@
     <Medium
       DefaultEventThreshold="0.35"
       EventThresholdIncrease="0.007"
-      EventCooldown="20.0"
+      EventCooldown="60.0"
       MinLevelDifficulty="35.0"
       MaxLevelDifficulty="50.0"
       FreezeDurationWhenCrewAway="60"/>
@@ -44,7 +44,7 @@
     <Challenging
       DefaultEventThreshold="0.4"
       EventThresholdIncrease="0.008"
-      EventCooldown="20.0"
+      EventCooldown="60.0"
       MinLevelDifficulty="50.0"
       MaxLevelDifficulty="65.0"
       FreezeDurationWhenCrewAway="60"/>
@@ -52,18 +52,18 @@
     <Hard
       DefaultEventThreshold="0.45"
       EventThresholdIncrease="0.009"
-      EventCooldown="20.0"
+      EventCooldown="60.0"
       MinLevelDifficulty="65.0"
       MaxLevelDifficulty="80.0"
-      FreezeDurationWhenCrewAway="30"/>
+      FreezeDurationWhenCrewAway="60"/>
 
     <Hellish
       DefaultEventThreshold="0.5"
       EventThresholdIncrease="0.01"
-      EventCooldown="15.0"
+      EventCooldown="60.0"
       MinLevelDifficulty="80.0"
       MaxLevelDifficulty="100.0"
-      FreezeDurationWhenCrewAway="30"/>
+      FreezeDurationWhenCrewAway="60"/>
 
 </Override>
 </EventManagerSettings>
