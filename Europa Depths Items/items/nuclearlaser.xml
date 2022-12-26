@@ -85,9 +85,9 @@
         </ConnectionPanel>
     </Item>
 
-    <Item name="" identifier="nuclearlaserammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="20">
+    <Item name="" identifier="nuclearlaserammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="40">
         <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.05"/>
-        <Price baseprice="600" sold="false" displaynonempty="true">
+        <Price baseprice="310"  displaynonempty="true">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
             <Price storeidentifier="merchantcity" multiplier="1.2"/>
             <Price storeidentifier="merchantresearch" multiplier="1.3" />
@@ -127,9 +127,9 @@
         </ItemContainer>
     </Item>
 
-    <Item name="" identifier="nuclearlaserthoriumammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="20">
+    <Item name="" identifier="nuclearlaserthoriumammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="40">
         <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.03"/>
-        <Price baseprice="600" sold="false" displaynonempty="true">
+        <Price baseprice="400" displaynonempty="true">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
             <Price storeidentifier="merchantcity" multiplier="1.2"/>
             <Price storeidentifier="merchantresearch" multiplier="1.3" />
@@ -146,7 +146,7 @@
         <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
             <RequiredSkill identifier="electrical" level="25"/>
             <RequiredItem identifier="thorium" amount="2" />
-            <RequiredItem identifier="nuclearlaserammobox" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
+            <RequiredItem identifier="nuclearlaserthoriumammobox" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
         </Fabricate>
         <Deconstruct time="10">
             <Item identifier="steel" mincondition="0.95"/>
@@ -168,7 +168,7 @@
         </ItemContainer>
     </Item>
 
-    <Item name="" identifier="nuclearlaserfulguriumammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="20">
+    <Item name="" identifier="nuclearlaserfulguriumammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="40">
         <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.02"/>
         <Price baseprice="600" sold="false" displaynonempty="true">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -187,7 +187,7 @@
         <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
             <RequiredSkill identifier="electrical" level="25"/>
             <RequiredItem identifier="fulgurium" amount="2" />
-            <RequiredItem identifier="nuclearlaserammobox" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
+            <RequiredItem identifier="nuclearlaserfulguriumammobox" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
         </Fabricate>
         <Deconstruct time="10">
             <Item identifier="steel" mincondition="0.95"/>
@@ -231,7 +231,7 @@
             </StatusEffect>
             <StatusEffect type="OnUse" target="This">
                 <Explosion range="300.0" ballastfloradamage="100" structuredamage="10" itemdamage="10" force="25.0" flames="false" smoke="false" sparks="false" underwaterbubble="true" flashcolor="0,255,0,255" penetration="1">
-                    <Affliction identifier="burn" strength="25" />
+                    <Affliction identifier="burn" strength="75" />
                     <Affliction identifier="stun" strength="1" />
                     <Affliction identifier="radiationsickness" strength="40" />
                 </Explosion>
@@ -264,7 +264,7 @@
             </StatusEffect>
             <StatusEffect type="OnUse" target="This">
                 <Explosion range="350.0" ballastfloradamage="100" structuredamage="10" itemdamage="10" force="25.0" flames="false" smoke="false" sparks="false" underwaterbubble="true" flashcolor="0,255,0,255" penetration="1">
-                    <Affliction identifier="burn" strength="25" />
+                    <Affliction identifier="burn" strength="100" />
                     <Affliction identifier="stun" strength="1" />
                     <Affliction identifier="radiationsickness" strength="40" />
                 </Explosion>
@@ -297,7 +297,7 @@
             </StatusEffect>
             <StatusEffect type="OnUse" target="This">
                 <Explosion range="400.0" ballastfloradamage="100" structuredamage="10" itemdamage="10" force="25.0" flames="false" smoke="false" sparks="false" underwaterbubble="true" flashcolor="0,255,0,255" penetration="1">
-                    <Affliction identifier="burn" strength="25" />
+                    <Affliction identifier="burn" strength="125" />
                     <Affliction identifier="stun" strength="1" />
                     <Affliction identifier="radiationsickness" strength="40" />
                 </Explosion>
