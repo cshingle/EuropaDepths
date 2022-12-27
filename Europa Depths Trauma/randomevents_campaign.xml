@@ -2531,7 +2531,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -2606,7 +2606,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -2681,7 +2681,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -2756,7 +2756,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -2831,7 +2831,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -2906,7 +2906,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -2981,7 +2981,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -3289,7 +3289,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -3364,7 +3364,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -3439,7 +3439,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -3514,7 +3514,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -3589,7 +3589,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -3664,7 +3664,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
@@ -3739,7 +3739,7 @@
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="true" commonness="30">
 					<EventSet identifier="nomatriarch">
-						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="45" spawntype="mainpath,sidepath" />
+						<MonsterEvent characterfile="Hammerhead" minamount="3" maxamount="5" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerhead_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold" minamount="2" maxamount="3" spawntype="mainpath,sidepath" />
 						<MonsterEvent characterfile="Hammerheadgold_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" />
