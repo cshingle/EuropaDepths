@@ -1,6 +1,6 @@
 package com.decker.barotrauma;
 
-import com.decker.barotrauma.campaign.Charactor;
+import com.decker.barotrauma.campaign.Character;
 import com.decker.barotrauma.campaign.Comment;
 import com.decker.barotrauma.campaign.CommonnessEvent;
 import com.decker.barotrauma.campaign.DifficultySet;
@@ -312,9 +312,9 @@ public class Difficulties {
 				.biome("endzone")
 				.extend(
 						new SpawnEvent("boss", null, null, 1).monsters(
-								new MonsterEvent(Charactor.Doomworm, 1, 1)).spawntype("mainpath"),
+								new MonsterEvent(Character.Doomworm, 1, 1)).spawntype("mainpath"),
 						new SpawnEvent("lastwave", 0.60D, null, 1).monsters(
-								new MonsterEvent(Charactor.Fractalbrain1, 6, 6)).spawntype("mainpath")
+								new MonsterEvent(Character.Fractalbrain1, 6, 6)).spawntype("mainpath")
 				);
 	}
 }

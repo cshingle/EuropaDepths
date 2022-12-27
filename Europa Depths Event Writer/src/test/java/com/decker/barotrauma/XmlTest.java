@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import com.decker.barotrauma.campaign.BeaconStationEncountersEvent;
 import com.decker.barotrauma.campaign.BeaconStationEvent;
 import com.decker.barotrauma.campaign.CaveEvent;
-import com.decker.barotrauma.campaign.Charactor;
+import com.decker.barotrauma.campaign.Character;
 import com.decker.barotrauma.campaign.MonsterEvent;
 import com.decker.barotrauma.campaign.MonsterSet;
 import com.decker.barotrauma.campaign.RuinEncounters;
@@ -41,11 +41,11 @@ class XmlTest {
 	// @formatter:on
 		
 		CaveEvent caveEvent = new CaveEvent().monsters(
-				new MonsterEvent(Charactor.Crawler, 3, 4),
-				new MonsterEvent(Charactor.Crawlerhusk, 3, 4),
-				new MonsterEvent(Charactor.Spineling, 3, 4),
-				new MonsterEvent(Charactor.Mudraptor, 2, 3),
-				new MonsterEvent(Charactor.Tigerthresher, 2, 3));
+				new MonsterEvent(Character.Crawler, 3, 4),
+				new MonsterEvent(Character.Crawlerhusk, 3, 4),
+				new MonsterEvent(Character.Spineling, 3, 4),
+				new MonsterEvent(Character.Mudraptor, 2, 3),
+				new MonsterEvent(Character.Tigerthresher, 2, 3));
 		
 		StringWriter writer = new StringWriter();
 		caveEvent.render(1, writer);
@@ -82,15 +82,15 @@ class XmlTest {
 		
 		BeaconStationEncountersEvent beaconEncounters = new BeaconStationEncountersEvent().monsters(
 				new MonsterSet("husks", false, 10).monsters(
-						new MonsterEvent(Charactor.Husk, 1, 2),
-						new MonsterEvent(Charactor.Husk, 1, 2)),
+						new MonsterEvent(Character.Husk, 1, 2),
+						new MonsterEvent(Character.Husk, 1, 2)),
 				new MonsterSet("husk_crawlers", false, 10).monsters(
-						new MonsterEvent(Charactor.Crawlerhusk, 1, 2),
-						new MonsterEvent(Charactor.Crawlerhusk, 1, 2)),
+						new MonsterEvent(Character.Crawlerhusk, 1, 2),
+						new MonsterEvent(Character.Crawlerhusk, 1, 2)),
 				new MonsterSet("mudraptors", false, 15).monsters(
-						new MonsterEvent(Charactor.Mudraptor, 1, 2)),
+						new MonsterEvent(Character.Mudraptor, 1, 2)),
 				new MonsterSet("threshers", false, 10).monsters(
-						new MonsterEvent(Charactor.Tigerthresher, 1, 2)),
+						new MonsterEvent(Character.Tigerthresher, 1, 2)),
 				new MonsterSet("clown", false, 5).monsters(
 						new ScriptedEvent("beaconclown")));
 		
@@ -118,9 +118,9 @@ class XmlTest {
 	// @formatter:on
 		
 		BeaconStationEvent beaconEvent = new BeaconStationEvent().monsters(
-				new MonsterEvent(Charactor.Crawler, 3, 4),
-				new MonsterEvent(Charactor.Mudraptor_unarmored, 2, 3),
-				new MonsterEvent(Charactor.Mudraptor, 2, 3).spawnprobability(0.5),
+				new MonsterEvent(Character.Crawler, 3, 4),
+				new MonsterEvent(Character.Mudraptor_unarmored, 2, 3),
+				new MonsterEvent(Character.Mudraptor, 2, 3).spawnprobability(0.5),
 				new ScriptedEvent("beaconbandit").actions(
 						new SpawnAction("abandonedoutpostnpcs", "banditleader", "beacon_bandit", "beacon_bandit"),
 						new SpawnAction("abandonedoutpostnpcs", "bandit", "beacon_bandit", "beacon_bandit")));
@@ -167,26 +167,26 @@ class XmlTest {
 	// @formatter:on
 		
 		RuinEvent ruinsEvent = new RuinEvent().monsters(
-				new MonsterEvent(Charactor.Swarmfeeder, 5, 7).spawnpointtag("swarmfeeder"),
-				new MonsterEvent(Charactor.Swarmfeeder, 3, 5).spawnprobability(0.2).spawnpointtag("swarmfeeder"),
-				new MonsterEvent(Charactor.Fractalguardian2, 2, 3).spawnprobability(0.8).spawnpointtag("fractalguardian"),
-				new MonsterEvent(Charactor.Fractalguardian, 2, 3).spawnprobability(0.3).spawnpointtag("fractalguardian"),
-				new MonsterEvent(Charactor.Husk, 2, 3).spawnprobability(0.5).spawnpointtag("husk"),
-				new MonsterEvent(Charactor.Husk, 2, 3).spawnprobability(0.2).spawnpointtag("husk"),
-				new MonsterEvent(Charactor.Husk, 2, 3).spawnprobability(0.1).spawnpointtag("husk"),
+				new MonsterEvent(Character.Swarmfeeder, 5, 7).spawnpointtag("swarmfeeder"),
+				new MonsterEvent(Character.Swarmfeeder, 3, 5).spawnprobability(0.2).spawnpointtag("swarmfeeder"),
+				new MonsterEvent(Character.Fractalguardian2, 2, 3).spawnprobability(0.8).spawnpointtag("fractalguardian"),
+				new MonsterEvent(Character.Fractalguardian, 2, 3).spawnprobability(0.3).spawnpointtag("fractalguardian"),
+				new MonsterEvent(Character.Husk, 2, 3).spawnprobability(0.5).spawnpointtag("husk"),
+				new MonsterEvent(Character.Husk, 2, 3).spawnprobability(0.2).spawnpointtag("husk"),
+				new MonsterEvent(Character.Husk, 2, 3).spawnprobability(0.1).spawnpointtag("husk"),
 				new RuinEncounters().monsters(
 						new MonsterSet("entrance1", false).monsters(
-								new MonsterEvent(Charactor.Fractalguardian, 2, 3),
-								new MonsterEvent(Charactor.Crawler, 2, 3)).spawnpointtag("encounter_entrance1"),
+								new MonsterEvent(Character.Fractalguardian, 2, 3),
+								new MonsterEvent(Character.Crawler, 2, 3)).spawnpointtag("encounter_entrance1"),
 						new MonsterSet("entrance2", false).monsters(
-								new MonsterEvent(Charactor.Fractalguardian, 2, 3),
-								new MonsterEvent(Charactor.Crawler, 2, 3)).spawndistance(1000).spawnpointtag("encounter_entrance2"),
+								new MonsterEvent(Character.Fractalguardian, 2, 3),
+								new MonsterEvent(Character.Crawler, 2, 3)).spawndistance(1000).spawnpointtag("encounter_entrance2"),
 						new MonsterSet("entrance3", false).monsters(
-								new MonsterEvent(Charactor.Fractalguardian, 2, 3),
-								new MonsterEvent(Charactor.Crawler, 2, 3)).spawnpointtag("encounter_entrance3"),
+								new MonsterEvent(Character.Fractalguardian, 2, 3),
+								new MonsterEvent(Character.Crawler, 2, 3)).spawnpointtag("encounter_entrance3"),
 						new MonsterSet("chambers1", false).monsters(
-								new MonsterEvent(Charactor.Fractalguardian, 2, 3),
-								new MonsterEvent(Charactor.Crawler, 2, 3)).spawnpointtag("encounter_chambers1")));
+								new MonsterEvent(Character.Fractalguardian, 2, 3),
+								new MonsterEvent(Character.Crawler, 2, 3)).spawnpointtag("encounter_chambers1")));
 		
 		StringWriter writer = new StringWriter();
 		ruinsEvent.render(1, writer);
@@ -226,20 +226,20 @@ class XmlTest {
 		
 		WreckEncountersEvent wreckEncounters = new WreckEncountersEvent().monsters(
 				new MonsterSet("crawler_vs_husk", false, 15).allowatstart(true).monsters(
-						new MonsterEvent(Charactor.Crawler, 2, 3),
-						new MonsterEvent(Charactor.Crawlerhusk, 1, 2)),
+						new MonsterEvent(Character.Crawler, 2, 3),
+						new MonsterEvent(Character.Crawlerhusk, 1, 2)),
 				new MonsterSet("crawler_vs_mudraptor", false, 15).allowatstart(true).monsters(
-						new MonsterEvent(Charactor.Crawler, 2, 3),
-						new MonsterEvent(Charactor.Mudraptor_unarmored, 1, 2)),
+						new MonsterEvent(Character.Crawler, 2, 3),
+						new MonsterEvent(Character.Mudraptor_unarmored, 1, 2)),
 				new MonsterSet("crawler_vs_thresher", false, 15).allowatstart(true).monsters(
-						new MonsterEvent(Charactor.Crawler, 2, 3),
-						new MonsterEvent(Charactor.Tigerthresher, 1, 2)),
+						new MonsterEvent(Character.Crawler, 2, 3),
+						new MonsterEvent(Character.Tigerthresher, 1, 2)),
 				new MonsterSet("mudraptor_vs_thresher", false, 15).allowatstart(true).monsters(
-						new MonsterEvent(Charactor.Mudraptor, 1, 2),
-						new MonsterEvent(Charactor.Tigerthresher, 1, 2)),
+						new MonsterEvent(Character.Mudraptor, 1, 2),
+						new MonsterEvent(Character.Tigerthresher, 1, 2)),
 				new MonsterSet("husks", false, 10).allowatstart(true).monsters(
-						new MonsterEvent(Charactor.Husk, 1, 3),
-						new MonsterEvent(Charactor.Crawlerhusk, 0, 2)));
+						new MonsterEvent(Character.Husk, 1, 3),
+						new MonsterEvent(Character.Crawlerhusk, 0, 2)));
 		
 		StringWriter writer = new StringWriter();
 		wreckEncounters.render(1, writer);
@@ -280,25 +280,25 @@ class XmlTest {
 		
 		WreckEvent wreckEvent = new WreckEvent().monsters(
 				new MonsterSet("husks", false, 50).allowatstart(true).monsters(
-						new MonsterEvent(Charactor.Husk, 1, 2).spawndistance(1000),
-						new MonsterEvent(Charactor.Husk, 1, 2).spawndistance(1000),
-						new MonsterEvent(Charactor.Husk, 1, 2).spawnprobability(0.5).spawndistance(1000),
-						new MonsterEvent(Charactor.Husk, 1, 2).spawnprobability(0.5).spawndistance(1000),
-						new MonsterEvent(Charactor.Crawlerhusk, 1, 2).spawndistance(1000),
-						new MonsterEvent(Charactor.Crawlerhusk, 1, 2).spawnprobability(0.5).spawndistance(1000)),
+						new MonsterEvent(Character.Husk, 1, 2).spawndistance(1000),
+						new MonsterEvent(Character.Husk, 1, 2).spawndistance(1000),
+						new MonsterEvent(Character.Husk, 1, 2).spawnprobability(0.5).spawndistance(1000),
+						new MonsterEvent(Character.Husk, 1, 2).spawnprobability(0.5).spawndistance(1000),
+						new MonsterEvent(Character.Crawlerhusk, 1, 2).spawndistance(1000),
+						new MonsterEvent(Character.Crawlerhusk, 1, 2).spawnprobability(0.5).spawndistance(1000)),
 				new MonsterSet("crawlers", false, 30).allowatstart(true).monsters(
-						new MonsterEvent(Charactor.Crawler, 1, 2).spawndistance(1000),
-						new MonsterEvent(Charactor.Crawler, 1, 2).spawndistance(1000),
-						new MonsterEvent(Charactor.Crawler, 1, 2).spawndistance(1000),
-						new MonsterEvent(Charactor.Crawler, 1, 2).spawnprobability(0.5).spawndistance(1000),
-						new MonsterEvent(Charactor.Crawlerhusk, 1, 2).spawnprobability(0.5).spawndistance(1000),
-						new MonsterEvent(Charactor.Crawlerhusk, 1, 2).spawnprobability(0.5).spawndistance(1000)),
+						new MonsterEvent(Character.Crawler, 1, 2).spawndistance(1000),
+						new MonsterEvent(Character.Crawler, 1, 2).spawndistance(1000),
+						new MonsterEvent(Character.Crawler, 1, 2).spawndistance(1000),
+						new MonsterEvent(Character.Crawler, 1, 2).spawnprobability(0.5).spawndistance(1000),
+						new MonsterEvent(Character.Crawlerhusk, 1, 2).spawnprobability(0.5).spawndistance(1000),
+						new MonsterEvent(Character.Crawlerhusk, 1, 2).spawnprobability(0.5).spawndistance(1000)),
 				new MonsterSet("mudraptors", false, 20).allowatstart(true).monsters(
-						new MonsterEvent(Charactor.Mudraptor_unarmored, 1, 2).spawndistance(1000),
-						new MonsterEvent(Charactor.Mudraptor_unarmored, 1, 2).spawndistance(1000),
-						new MonsterEvent(Charactor.Mudraptor, 1, 2).spawndistance(1000),
-						new MonsterEvent(Charactor.Mudraptor, 1, 2).spawnprobability(0.5).spawndistance(1000),
-						new MonsterEvent(Charactor.Mudraptor, 1, 2).spawnprobability(0.5).spawndistance(1000)));
+						new MonsterEvent(Character.Mudraptor_unarmored, 1, 2).spawndistance(1000),
+						new MonsterEvent(Character.Mudraptor_unarmored, 1, 2).spawndistance(1000),
+						new MonsterEvent(Character.Mudraptor, 1, 2).spawndistance(1000),
+						new MonsterEvent(Character.Mudraptor, 1, 2).spawnprobability(0.5).spawndistance(1000),
+						new MonsterEvent(Character.Mudraptor, 1, 2).spawnprobability(0.5).spawndistance(1000)));
 		
 		StringWriter writer = new StringWriter();
 		wreckEvent.render(1, writer);
@@ -368,41 +368,41 @@ class XmlTest {
 		
 		SpawnEvent spawnEvent = new SpawnEvent("first", 0.15D, 120, 0.7D).monsters(
 				new MonsterSet("hammerheads", false, 20).monsters(
-						new MonsterEvent(Charactor.Hammerhead, 3, 4),
-						new MonsterEvent(Charactor.Hammerheadgold, 1, 2),
-						new MonsterEvent(Charactor.Hammerheadmatriarch, 1, 2)),
+						new MonsterEvent(Character.Hammerhead, 3, 4),
+						new MonsterEvent(Character.Hammerheadgold, 1, 2),
+						new MonsterEvent(Character.Hammerheadmatriarch, 1, 2)),
 				new MonsterSet("molochs", true, 20).monsters(
 						new MonsterSet("nobabies").monsters(
-								new MonsterEvent(Charactor.Moloch, 1, 2).scatter(3000),
-								new MonsterEvent(Charactor.Molochblack, 1, 2).spawnprobability(0.75D)),
+								new MonsterEvent(Character.Moloch, 1, 2).scatter(3000),
+								new MonsterEvent(Character.Molochblack, 1, 2).spawnprobability(0.75D)),
 						new MonsterSet("babies").monsters(
-								new MonsterEvent(Charactor.Moloch, 1, 2).offset(10000).scatter(3000),
-								new MonsterEvent(Charactor.Molochbaby, 10, 20).scatter(3000))),
+								new MonsterEvent(Character.Moloch, 1, 2).offset(10000).scatter(3000),
+								new MonsterEvent(Character.Molochbaby, 10, 20).scatter(3000))),
 				new MonsterSet("spinelings", false, 20).monsters(
-						new MonsterEvent(Charactor.Spineling, 10, 12),
-						new MonsterEvent(Charactor.Spineling_giant, 1, 2)),
+						new MonsterEvent(Character.Spineling, 10, 12),
+						new MonsterEvent(Character.Spineling_giant, 1, 2)),
 				new MonsterSet("threshers", false, 10).monsters(
-						new MonsterEvent(Charactor.Bonethresher, 2, 3),
-						new MonsterEvent(Charactor.Tigerthresher, 6, 9)),
+						new MonsterEvent(Character.Bonethresher, 2, 3),
+						new MonsterEvent(Character.Tigerthresher, 6, 9)),
 				new MonsterSet("mudraptors", false, 10).monsters(
-						new MonsterEvent(Charactor.Mudraptor, 3, 4),
-						new MonsterEvent(Charactor.Mudraptor_veteran, 2, 2)),
+						new MonsterEvent(Character.Mudraptor, 3, 4),
+						new MonsterEvent(Character.Mudraptor_veteran, 2, 2)),
 				new MonsterSet("crawlers", true, 10).monsters(
 						new MonsterSet("crawlerswarm").monsters(
-								new MonsterEvent(Charactor.Crawler, 10, 12),
-								new MonsterEvent(Charactor.Crawlerbroodmother, 1, 1)),
+								new MonsterEvent(Character.Crawler, 10, 12),
+								new MonsterEvent(Character.Crawlerbroodmother, 1, 1)),
 						new MonsterSet("Crawlerhusk").monsters(
-								new MonsterEvent(Charactor.Crawlerhusk, 10, 12))),
+								new MonsterEvent(Character.Crawlerhusk, 10, 12))),
 				new MonsterSet("watcher", 10).monsters(
-						new MonsterEvent(Charactor.Watcher, 1, 1).triggereventcooldown(false),
+						new MonsterEvent(Character.Watcher, 1, 1).triggereventcooldown(false),
 						new MonsterSet(true).monsters(
 								new MonsterSet("crawlers").monsters(
-										new MonsterEvent(Charactor.Crawler, 9, 11)),
+										new MonsterEvent(Character.Crawler, 9, 11)),
 								new MonsterSet("mudraptors").monsters(
-										new MonsterEvent(Charactor.Mudraptor, 5, 5)),
+										new MonsterEvent(Character.Mudraptor, 5, 5)),
 								new MonsterSet("threshers").monsters(
-										new MonsterEvent(Charactor.Bonethresher, 2, 3),
-										new MonsterEvent(Charactor.Tigerthresher, 5, 8)))));
+										new MonsterEvent(Character.Bonethresher, 2, 3),
+										new MonsterEvent(Character.Tigerthresher, 5, 8)))));
 		
 		StringWriter writer = new StringWriter();
 		spawnEvent.render(1, writer);

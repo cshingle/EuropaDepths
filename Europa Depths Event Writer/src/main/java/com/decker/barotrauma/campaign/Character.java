@@ -1,6 +1,6 @@
 package com.decker.barotrauma.campaign;
 
-public enum Charactor {
+public enum Character {
 	Bonethresher,
 	Bonethresher_cave,
 	Bonethresher_veteran,

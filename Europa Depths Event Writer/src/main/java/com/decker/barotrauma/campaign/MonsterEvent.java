@@ -9,7 +9,7 @@ public class MonsterEvent implements Monster {
 	
 	Map<String, Object> fields = new TreeMap<>(new FieldComparator());
 	
-	public MonsterEvent(Charactor characterfile, int minamount, int maxamount) {
+	public MonsterEvent(Character characterfile, int minamount, int maxamount) {
 		fields.put("characterfile", characterfile.toString());
 		fields.put("minamount", Integer.valueOf(minamount));
 		fields.put("maxamount", Integer.valueOf(maxamount));
