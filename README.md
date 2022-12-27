@@ -62,6 +62,7 @@ Short list of current features:
 [*]Made loot items like Crawler Mask, Mudraptor Shell and Husk Stinger deconstructable and sellable
 [*]Husk Stinger has a small chance to cause husk infection on attack
 [*]Diver remains now deconstructs to 3 items and can produce magnesium
+[*]Hydroxyapatite now deconstructs into Magnesium as well as Calcium and Phosphorus
 [/list]
 
 Now with Chinese Traditional translation that is already out of date.
