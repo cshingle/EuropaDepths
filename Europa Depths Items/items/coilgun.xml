@@ -399,7 +399,7 @@
   </Item>
 
   <Item name="Overvolted Double Coilgun" description="An overvolted double coilgun with more coils, but also higher power demands." identifier="doublecoilgun_overvolted" variantof="doublecoilgun">
-    <Sprite texture="Turrets.png" depth="0.01" sourcerect="0,0,512,512" canflipy="false" />
+    <Sprite texture="Content/Items/Weapons/Turrets.png" depth="0.01" sourcerect="0,0,512,512" canflipy="false" />
     <SwappableItem price="9500" replacementonuninstall="largeturrethardpoint" origin="256,438" swapidentifier="largeturret">
       <SchematicSprite texture="Content/UI/WeaponUI.png" sourcerect="512,389,256,389"/>
       <SwapConnectedItem tag="periscope" swapto="periscope"/>

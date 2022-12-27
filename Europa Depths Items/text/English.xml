@@ -57,9 +57,11 @@
   <entityname.materialcrate>Materials Crate</entityname.materialcrate>
   <entitydescription.materialcrate>A crate for safely storing materials.</entitydescription.materialcrate>
   <afflictionname.cowboy>Cowboy</afflictionname.cowboy>
-  <afflictiondescription.cowboy>Cowboys and men are two totally different breeds.</afflictiondescription.cowboy>
+  <afflictiondescription.cowboy>Cowboys and men are two totally different breeds. Cowboys shoot faster and are more resistant to stun.</afflictiondescription.cowboy>
   <afflictionname.minorhealing>Minor Healing</afflictionname.minorhealing>
   <afflictiondescription.minorhealing>Provides a healing effect over time.</afflictiondescription.minorhealing>
+  <afflictionname.mothersembrace>Mother's Embrace</afflictionname.mothersembrace>
+  <afflictiondescription.mothersembrace>Mother's Embrace provides bleeding and blood loss resistance for true believers.</afflictiondescription.mothersembrace>
   <entityname.minorhealingtonic>Dr. Neon's Healing Tonic</entityname.minorhealingtonic>
   <entitydescription.minorhealingtonic>Provides a healing effect over time with no known side effects.</entitydescription.minorhealingtonic>
   <entityname.coilgun_overvolted>Overvolted Coilgun</entityname.coilgun_overvolted>

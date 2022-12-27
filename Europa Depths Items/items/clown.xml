@@ -59,7 +59,7 @@
         <damagemodifier afflictiontypes="damage" armorsector="0.0,360.0" damagesound="LimbClown" />
       </Wearable>
     </Item>
-    <Item name="" identifier="clownmaskunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmaskunique" description="" hideinmenus="true" scale="0.5">
+    <Item name="" identifier="clownmaskunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask,clownmaskunique" description="" hideinmenus="true" scale="0.5">
       <Price baseprice="40" sold="false" canbespecial="false" />
       <PreferredContainer primary="wreckstoragecab" spawnprobability="0.01" />
       <PreferredContainer primary="crewcab"/>
@@ -107,7 +107,7 @@
     </Item>
   </Override>
 
-  <Item name="" identifier="clowndivingmaskunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask,diving,lightdiving" description="" scale="0.5">
+  <Item name="" identifier="clowndivingmaskunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask,clownmaskunique,diving,lightdiving" description="" scale="0.5">
     <PreferredContainer primary="divingcab,supplycab" />
     <Price baseprice="150" sold="false" canbespecial="false" />
     <Sprite name="Clown Mask" texture="Content/Items/JobGear/TalentGear.png" depth="0.6" sourcerect="328,304,51,51" origin="0.5,0.5" scale="0.5" />

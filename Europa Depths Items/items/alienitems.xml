@@ -221,6 +221,10 @@
       <PreferredContainer primary="ruinstoragelarge" amount="1" spawnprobability="0.2" />
       <PreferredContainer primary="ruintreasure" amount="1" spawnprobability="0.5" />
       <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="0,1952,34,77" depth="0.7" origin="0.5,0.5" />
+      <Deconstruct time="20">
+        <Item identifier="dementonite" />
+        <Item identifier="fulgurium" mincondition="0.90" />
+      </Deconstruct>
       <LightComponent AllowInGameEditing="false" lightcolor="112,146,190,30" canbeselected="false" range="100.0" IsOn="true" castshadows="false" />
       <Body radius="15" height="40" density="20" />
       <Holdable slots="RightHand,LeftHand,Any" canBeCombined="true" msg="ItemMsgPickUpSelect">

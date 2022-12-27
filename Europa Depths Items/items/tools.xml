@@ -1105,7 +1105,7 @@
       </Attack>
     </MeleeWeapon>
     <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
-      <Containable items="chem,medical" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+      <Containable items="chem,medical,unidentifiedgeneticmaterial,geneticmaterial" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
     </ItemContainer>
     <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
     <Upgrade gameversion="0.10.0.0" scale="0.5" />

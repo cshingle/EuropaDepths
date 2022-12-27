@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <TonicLiquid name="Dr. Neon's Healing Tonic" identifier="minorhealingtonic" category="Medical,Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <TonicLiquid name="Dr. Neon's Healing Tonic" identifier="minorhealingtonic" category="Medical,Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
         <Upgrade gameversion="0.10.0.0" scale="0.5" />
         <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
         <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.1" />

@@ -3,7 +3,7 @@ Europa Depths is a balance mod for Barotrauma. It is split up into several optio
 
 ## Europa Depths Items
 
-Now updated for version 0.20.14
+Now updated for version 0.20.16
 
 [h1]Europa Depths[/h1]
 [h2]Now with %100 More Pressure Resistent Clowns[h2]
@@ -45,18 +45,23 @@ Short list of current features:
 [*]Added Medic Helmet
 [*]Added Lever Action Rifle and 30-30 Rounds.
 [*]Added Cowboy Hat (Has Cowboy Affliction)
-[*]Replaced the graphics for several types of ammo with a better one. The new rifle rounds still look like crap.
+[*]Replaced the graphics for several types of ammo with better looking versions.
 [*]Added Mining Laser recipe to Mechanic Miner trait
 [*]Added Thermal Helmet
 [*]Added Hammer for destorying things and opening doors
 [*]Made the Alien Flare light when thrown
 [*]Made the Alien Flare buoyant to differentiate it from the normal ones
 [*]Made flairs very cheap
-[*]Made Alien Power Cells, Coilgun, Chaingun, flak and Laser ammo boxes combinable
+[*]Made Alien Power Cells, Coilgun, Chaingun, flak and Laser ammo boxes combinable and deconstructable into their full ingredents (If not used)
 [*]Added new alian artifact variant
 [*]Added Dirtybomb to Military Applications talant since the old talant it was connected to was removed
 [*]Buff Blooddonor talant to drop 3 blood bags
 [*]Allow the 40MM Grenade Launcher to hold 4 rounds to make it not useless with the new weapons
+[*]Buff depthcharge
+[*]Added Medical Case that can hold medical items
+[*]Made loot items like Crawler Mask, Mudraptor Shell and Husk Stinger deconstructable and sellable
+[*]Husk Stinger has a small chance to cause husk infection on attack
+[*]Diver remains now deconstructs to 3 items and can produce magnesium
 [/list]
 
 Now with Chinese Traditional translation that is already out of date.
