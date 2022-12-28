@@ -63,6 +63,7 @@ Short list of current features:
 [*]Husk Stinger has a small chance to cause husk infection on attack
 [*]Diver remains now deconstructs to 3 items and can produce magnesium
 [*]Hydroxyapatite now deconstructs into Magnesium as well as Calcium and Phosphorus
+[*]Replace Camaraderie Captain talent with custom Commendations talent
 [/list]
 
 Now with Chinese Traditional translation that is already out of date.

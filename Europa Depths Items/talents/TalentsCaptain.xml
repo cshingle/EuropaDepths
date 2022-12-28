@@ -11,5 +11,23 @@
       <AddedRecipe itemidentifier="3030round"/>
       <AddedRecipe itemidentifier="leveractionrifle"/>
     </Talent>
+
+    <Talent identifier="camaraderie">
+      <Description tag="talentdescription.commendations">
+        <Replace tag="[selfxpgain]" value="275" color="gui.green"/>
+      </Description>
+      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="1,1" sheetelementsize="128,128"/>
+      <AbilityGroupEffect abilityeffecttype="OnAnyMissionCompleted">
+        <Abilities>
+          <CharacterAbilityPutItem itemidentifier="coalitioncommendation"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnAllMissionsCompleted">
+        <Abilities>
+          <CharacterAbilityPutItem itemidentifier="coalitioncommendation"/>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+
   </Override>
 </Talents>
