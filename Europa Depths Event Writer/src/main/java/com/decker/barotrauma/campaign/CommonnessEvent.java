@@ -13,7 +13,7 @@ public class CommonnessEvent implements Event {
 	
 	public CommonnessEvent(String... biomes) {
 		for (String biome : Arrays.asList(biomes)) {
-			this.leveltype(biome, 1.0);
+			this.leveltype(biome, 1d);
 		}
 	}
 	
@@ -30,7 +30,7 @@ public class CommonnessEvent implements Event {
 			
 			for (Entry<String, Double> entry : biomes.entrySet()) {
 				writer.write(this.indent(depth + 1));
-				writer.write(String.format("<Override leveltype=\"%s\" commonness=\"%s\" />\n", entry.getKey(), entry.getValue()));
+				writer.write(String.format("<Override leveltype=\"%s\" commonness=\"%s\" />\n", entry.getKey(), Double.toString(entry.getValue()).replaceAll("[.]0", "")));
 			}
 			
 			writer.write(this.indent(depth));

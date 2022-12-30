@@ -17,6 +17,7 @@ public class CampaignEvents {
 		return new RandomEvents().extend(
 				new OverrideSet().extend(
 						new EventPrefabs().extend(new BeaconClownEvent()),
+						Difficulties.coldCaverns0(),
 						Difficulties.coldCaverns1(),
 						Difficulties.coldCaverns2(),
 						Difficulties.coldCavernsTransition(),

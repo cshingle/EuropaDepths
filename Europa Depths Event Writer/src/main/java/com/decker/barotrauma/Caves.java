@@ -8,7 +8,7 @@ public class Caves {
 	
 	public static CaveEvent coldCaverns() {
 		return new CaveEvent().monsters(
-				new MonsterEvent(Character.Crawler, 2, 4),
+				new MonsterEvent(Character.Crawler, 2, 3),
 				new MonsterEvent(Character.Crawlerhusk, 2, 3),
 				new MonsterEvent(Character.Spineling, 2, 3),
 				new MonsterEvent(Character.Mudraptor_unarmored, 1, 2));

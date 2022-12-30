@@ -10,21 +10,35 @@ import com.decker.barotrauma.campaign.SpawnEvent;
 
 public class Difficulties {
 	
+	public static EventSet coldCaverns0() {
+		double maxIntensity = 0.25;
+		
+		return new DifficultySet(0)
+				.identifier("Caverns entry")
+				.biome("coldcaverns")
+				.maxleveldifficulty(1)
+				.extend(
+						new CommonnessEvent(),
+						
+						new Comment(),
+						new SpawnEvent("1_fifty", 0.50D, 300, maxIntensity).monsters(Spawns.coldCaverns1()));
+	}
+	
 	public static EventSet coldCaverns1() {
 		double maxIntensity = 0.25;
 		
 		return new DifficultySet(1)
 				.identifier("Caverns1")
 				.biome("coldcaverns")
-				.maxleveldifficulty(1)
+				.minleveldifficulty(1)
 				.extend(
 						new CommonnessEvent("ColdCavernsBasic"),
 						
 						new Comment(),
-						new SpawnEvent("1_twenty", 0.20D, 180, maxIntensity).monsters(Spawns.coldCaverns1()),
+						new SpawnEvent("1_twenty", 0.20D, 300, maxIntensity).monsters(Spawns.coldCaverns1()),
 						new SpawnEvent("1_forty", 0.40D, 600, maxIntensity).monsters(Spawns.coldCaverns1()),
 						new SpawnEvent("1_sixty", 0.60D, 900, maxIntensity).monsters(Spawns.coldCaverns1()),
-						new SpawnEvent("1_eighty", 0.80D, 1200, maxIntensity).monsters(Spawns.coldCaverns1()));
+						new SpawnEvent("1_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.coldCaverns1()));
 	}
 	
 	public static EventSet coldCaverns2() {
@@ -46,11 +60,11 @@ public class Difficulties {
 						
 						new Comment(),
 						new SpawnEvent("2_five", 0.05D, 60, maxIntensity).monsters(Spawns.coldCaverns2()),
-						new SpawnEvent("2_twenty", 0.20D, 300, maxIntensity).monsters(Spawns.coldCaverns2()),
-						new SpawnEvent("2_forty", 0.40D, 600, maxIntensity).monsters(Spawns.coldCaverns2()),
-						new SpawnEvent("2_fifty", 0.50D, 900, maxIntensity).monsters(Spawns.coldCaverns2()),
-						new SpawnEvent("2_sixty", 0.60D, 900, maxIntensity).monsters(Spawns.coldCaverns2()),
-						new SpawnEvent("2_eighty", 0.80D, 1800, maxIntensity).monsters(Spawns.coldCaverns2()));
+						new SpawnEvent("2_twenty", 0.20D, 360, maxIntensity).monsters(Spawns.coldCaverns2()),
+						new SpawnEvent("2_forty", 0.40D, 660, maxIntensity).monsters(Spawns.coldCaverns2()),
+						new SpawnEvent("2_fifty", 0.50D, 960, maxIntensity).monsters(Spawns.coldCaverns2()),
+						new SpawnEvent("2_sixty", 0.60D, 1260, maxIntensity).monsters(Spawns.coldCaverns2()),
+						new SpawnEvent("2_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.coldCaverns2()));
 	}
 	
 	public static EventSet coldCavernsTransition() {
@@ -75,12 +89,12 @@ public class Difficulties {
 						
 						new Comment(),
 						new SpawnEvent("3_five", 0.05D, 60, maxIntensity).monsters(Spawns.coldCavernsTransition()),
-						new SpawnEvent("3_fifteen", 0.15D, 300, maxIntensity).monsters(Spawns.coldCavernsTransition()),
-						new SpawnEvent("3_thirty", 0.30D, 600, maxIntensity).monsters(Spawns.coldCavernsTransition()),
-						new SpawnEvent("3_forty", 0.40D, 900, maxIntensity).monsters(Spawns.coldCavernsTransition()),
-						new SpawnEvent("3_fifty", 0.50D, 1200, maxIntensity).monsters(Spawns.coldCavernsTransition()),
-						new SpawnEvent("3_sixty", 0.60D, 1500, maxIntensity).monsters(Spawns.coldCavernsTransition()),
-						new SpawnEvent("3_eighty", 0.80D, 2000, maxIntensity).monsters(Spawns.coldCavernsTransition()));
+						new SpawnEvent("3_fifteen", 0.15D, 360, maxIntensity).monsters(Spawns.coldCavernsTransition()),
+						new SpawnEvent("3_thirty", 0.30D, 660, maxIntensity).monsters(Spawns.coldCavernsTransition()),
+						new SpawnEvent("3_forty", 0.40D, 960, maxIntensity).monsters(Spawns.coldCavernsTransition()),
+						new SpawnEvent("3_fifty", 0.50D, 1560, maxIntensity).monsters(Spawns.coldCavernsTransition()),
+						new SpawnEvent("3_sixty", 0.60D, 1860, maxIntensity).monsters(Spawns.coldCavernsTransition()),
+						new SpawnEvent("3_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.coldCavernsTransition()));
 	}
 	
 	public static EventSet europanRidge() {
@@ -106,12 +120,12 @@ public class Difficulties {
 						
 						new Comment(),
 						new SpawnEvent("4_five", 0.05D, 60, maxIntensity).monsters(Spawns.europanRidge()),
-						new SpawnEvent("4_fifteen", 0.15D, 300, maxIntensity).monsters(Spawns.europanRidge()),
-						new SpawnEvent("4_thirty", 0.30D, 600, maxIntensity).monsters(Spawns.europanRidge()),
-						new SpawnEvent("4_forty", 0.40D, 900, maxIntensity).monsters(Spawns.europanRidge()),
-						new SpawnEvent("4_fifty", 0.50D, 1200, maxIntensity).monsters(Spawns.europanRidge()),
-						new SpawnEvent("4_sixty", 0.60D, 1500, maxIntensity).monsters(Spawns.europanRidge()),
-						new SpawnEvent("4_eighty", 0.80D, 2000, maxIntensity).monsters(Spawns.europanRidge()));
+						new SpawnEvent("4_fifteen", 0.15D, 360, maxIntensity).monsters(Spawns.europanRidge()),
+						new SpawnEvent("4_thirty", 0.30D, 660, maxIntensity).monsters(Spawns.europanRidge()),
+						new SpawnEvent("4_forty", 0.40D, 960, maxIntensity).monsters(Spawns.europanRidge()),
+						new SpawnEvent("4_fifty", 0.50D, 1560, maxIntensity).monsters(Spawns.europanRidge()),
+						new SpawnEvent("4_sixty", 0.60D, 1860, maxIntensity).monsters(Spawns.europanRidge()),
+						new SpawnEvent("4_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.europanRidge()));
 	}
 	
 	public static EventSet europanRidgeToPlateau() {
@@ -136,12 +150,12 @@ public class Difficulties {
 						
 						new Comment(),
 						new SpawnEvent("5_five", 0.05D, 60, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
-						new SpawnEvent("5_fifteen", 0.15D, 300, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
-						new SpawnEvent("5_twentyfive", 0.25D, 600, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
-						new SpawnEvent("5_forty", 0.40D, 900, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
-						new SpawnEvent("5_fifty", 0.50D, 1200, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
-						new SpawnEvent("5_sixty", 0.60D, 1500, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
-						new SpawnEvent("5_eighty", 0.80D, 2000, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
+						new SpawnEvent("5_fifteen", 0.15D, 360, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
+						new SpawnEvent("5_twentyfive", 0.25D, 660, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
+						new SpawnEvent("5_forty", 0.40D, 960, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
+						new SpawnEvent("5_fifty", 0.50D, 1560, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
+						new SpawnEvent("5_sixty", 0.60D, 1860, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
+						new SpawnEvent("5_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.europanRidgeToPlateau()),
 						new SpawnEvent("5_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.aphoticPlateau1NearStation()));
 	}
 	
@@ -169,12 +183,11 @@ public class Difficulties {
 
 						new Comment(),
 						new SpawnEvent("6_five", 0.05D, 60, maxIntensity).monsters(Spawns.aphoticPlateau1NearStation()),
-						new SpawnEvent("6_fifteen", 0.15D, 300, maxIntensity).monsters(Spawns.aphoticPlateau1()),
-						new SpawnEvent("6_twentyfive", 0.25D, 600, maxIntensity).monsters(Spawns.aphoticPlateau1()),
-						new SpawnEvent("6_forty", 0.40D, 900, maxIntensity).monsters(Spawns.aphoticPlateau1()),
-						new SpawnEvent("6_fifty", 0.50D, 1200, maxIntensity).monsters(Spawns.aphoticPlateau1()),
-						new SpawnEvent("6_sixty", 0.60D, 1500, maxIntensity).monsters(Spawns.aphoticPlateau1()),
-						new SpawnEvent("6_eighty", 0.80D, 2000, maxIntensity).monsters(Spawns.aphoticPlateau1()),
+						new SpawnEvent("6_fifteen", 0.15D, 360, maxIntensity).monsters(Spawns.aphoticPlateau1()),
+						new SpawnEvent("6_twentyfive", 0.25D, 660, maxIntensity).monsters(Spawns.aphoticPlateau1()),
+						new SpawnEvent("6_forty", 0.40D, 960, maxIntensity).monsters(Spawns.aphoticPlateau1()),
+						new SpawnEvent("6_sixty", 0.60D, 1560, maxIntensity).monsters(Spawns.aphoticPlateau1()),
+						new SpawnEvent("6_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.aphoticPlateau1()),
 						new SpawnEvent("6_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.aphoticPlateau1NearStation()));
 	}
 	
@@ -201,12 +214,11 @@ public class Difficulties {
 						
 						new Comment(),
 						new SpawnEvent("7_five", 0.05D, 60, maxIntensity).monsters(Spawns.aphoticPlateau2NearStation()),
-						new SpawnEvent("7_fifteen", 0.15D, 300, maxIntensity).monsters(Spawns.aphoticPlateau2()),
-						new SpawnEvent("7_twentyfive", 0.25D, 600, maxIntensity).monsters(Spawns.aphoticPlateau2()),
-						new SpawnEvent("7_forty", 0.40D, 900, maxIntensity).monsters(Spawns.aphoticPlateau2()),
-						new SpawnEvent("7_fifty", 0.50D, 1200, maxIntensity).monsters(Spawns.aphoticPlateau2()),
-						new SpawnEvent("7_sixty", 0.60D, 1500, maxIntensity).monsters(Spawns.aphoticPlateau2()),
-						new SpawnEvent("7_eighty", 0.80D, 2400, maxIntensity).monsters(Spawns.aphoticPlateau2()),
+						new SpawnEvent("7_fifteen", 0.15D, 360, maxIntensity).monsters(Spawns.aphoticPlateau2()),
+						new SpawnEvent("7_twentyfive", 0.25D, 660, maxIntensity).monsters(Spawns.aphoticPlateau2()),
+						new SpawnEvent("7_forty", 0.40D, 1260, maxIntensity).monsters(Spawns.aphoticPlateau2()),
+						new SpawnEvent("7_sixty", 0.60D, 1560, maxIntensity).monsters(Spawns.aphoticPlateau2()),
+						new SpawnEvent("7_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.aphoticPlateau2()),
 						new SpawnEvent("7_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.aphoticPlateau2NearStation()));
 	}
 	
@@ -233,13 +245,12 @@ public class Difficulties {
 						
 						new Comment(),
 						new SpawnEvent("8_five", 0.05D, 60, maxIntensity).monsters(Spawns.aphoticPlateau2NearStation()),
-						new SpawnEvent("8_ten", 0.10D, 120, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("8_twenty", 0.2D, 300, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("8_forty", 0.30D, 600, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("8_thirty", 0.40D, 900, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("8_fifty", 0.50D, 1200, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("8_sixty", 0.60D, 1500, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("8_eighty", 0.80D, 3600, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("8_fifteen", 0.15D, 360, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("8_twentyfive", 0.25D, 660, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("8_forty", 0.40D, 1260, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("8_fifty", 0.50D, 1560, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("8_sixty", 0.60D, 1860, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("8_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.greatSea()),
 						new SpawnEvent("8_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.greatSeaNearStation()));
 	}
 	
@@ -265,18 +276,17 @@ public class Difficulties {
 						
 						new Comment(),
 						new SpawnEvent("9_five", 0.05D, 60, maxIntensity).monsters(Spawns.greatSeaNearStation()),
-						new SpawnEvent("9_ten", 0.10D, 120, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("9_twenty", 0.2D, 300, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("9_forty", 0.30D, 600, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("9_thirty", 0.40D, 900, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("9_fifty", 0.50D, 1200, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("9_sixty", 0.60D, 1500, maxIntensity).monsters(Spawns.greatSea()),
-						new SpawnEvent("9_eighty", 0.80D, 3600, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("9_fifteen", 0.15D, 360, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("9_twentyfive", 0.25D, 660, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("9_forty", 0.40D, 1260, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("9_fifty", 0.50D, 1560, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("9_sixty", 0.60D, 1860, maxIntensity).monsters(Spawns.greatSea()),
+						new SpawnEvent("9_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.greatSea()),
 						new SpawnEvent("9_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.greatSeaNearStation()));
 	}
 	
 	public static EventSet wastes() {
-		double maxIntensity = 1;
+		double maxIntensity = 0.9;
 		return new DifficultySet(10)
 				.identifier("Wastes")
 				.biome("hydrothermalwastes")
@@ -296,13 +306,12 @@ public class Difficulties {
 						
 						new Comment(),
 						new SpawnEvent("10_five", 0.05D, 60, maxIntensity).monsters(Spawns.hydrothermalWastesNearStation()),
-						new SpawnEvent("10_ten", 0.10D, 120, maxIntensity).monsters(Spawns.hydrothermalWastes()),
-						new SpawnEvent("10_twenty", 0.2D, 300, maxIntensity).monsters(Spawns.hydrothermalWastes()),
-						new SpawnEvent("10_forty", 0.30D, 600, maxIntensity).monsters(Spawns.hydrothermalWastes()),
-						new SpawnEvent("10_thirty", 0.40D, 900, maxIntensity).monsters(Spawns.hydrothermalWastes()),
-						new SpawnEvent("10_fifty", 0.50D, 1200, maxIntensity).monsters(Spawns.hydrothermalWastes()),
-						new SpawnEvent("10_sixty", 0.60D, 1500, maxIntensity).monsters(Spawns.hydrothermalWastes()),
-						new SpawnEvent("10_eighty", 0.80D, 3600, maxIntensity).monsters(Spawns.hydrothermalWastes()),
+						new SpawnEvent("10_fifteen", 0.15D, 360, maxIntensity).monsters(Spawns.hydrothermalWastes()),
+						new SpawnEvent("10_twentyfive", 0.25D, 660, maxIntensity).monsters(Spawns.hydrothermalWastes()),
+						new SpawnEvent("10_forty", 0.40D, 1260, maxIntensity).monsters(Spawns.hydrothermalWastes()),
+						new SpawnEvent("10_fifty", 0.50D, 1560, maxIntensity).monsters(Spawns.hydrothermalWastes()),
+						new SpawnEvent("10_sixty", 0.60D, 1860, maxIntensity).monsters(Spawns.hydrothermalWastes()),
+						new SpawnEvent("10_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.hydrothermalWastes()),
 						new SpawnEvent("10_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.hydrothermalWastesNearStation()));
 	}
 	
@@ -311,10 +320,7 @@ public class Difficulties {
 				.identifier("End")
 				.biome("endzone")
 				.extend(
-						new SpawnEvent("boss", null, null, 1).monsters(
-								new MonsterEvent(Character.Doomworm, 1, 1)).spawntype("mainpath"),
-						new SpawnEvent("lastwave", 0.60D, null, 1).monsters(
-								new MonsterEvent(Character.Fractalbrain1, 6, 6)).spawntype("mainpath")
-				);
+						new SpawnEvent("boss", 0.05D, 60, 1).monsters(
+								new MonsterEvent(Character.Doomworm, 1, 1)).spawntype("mainpath"));
 	}
 }

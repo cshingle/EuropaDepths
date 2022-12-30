@@ -55,6 +55,7 @@ public class SpawnEvent extends EventSet {
 	
 	public SpawnEvent monsters(Monster... monsters) {
 		for (Monster monsterEvent : Arrays.asList(monsters)) {
+			monsterEvent.delaybetweenspawns(1);
 			monsterEvent.spawntype("mainpath,sidepath");
 			this.events.add(monsterEvent);
 		}
