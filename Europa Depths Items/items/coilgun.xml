@@ -389,18 +389,18 @@
   </Override>
 
   <Item name="Overvolted Coilgun" description="An overvolted version of the coilgun with a higher rate of fire, but also higher power demands." identifier="coilgun_overvolted" variantof="coilgun">
-    <SwappableItem price="7000" replacementonuninstall="turrethardpoint" origin="128,215" swapidentifier="basicturret">
+    <SwappableItem price="6500" replacementonuninstall="turrethardpoint" origin="128,215" swapidentifier="basicturret">
       <SchematicSprite texture="Content/UI/WeaponUI.png" sourcerect="256,0,256,389"/>
       <SwapConnectedItem tag="periscope" swapto="periscope"/>
       <SwapConnectedItem tag="turretammosource" swapto="coilgunloader"/>
     </SwappableItem>
-    <Turret powerconsumption="1500.0" reload="0.166" damagemultiplier="1.10">
+    <Turret powerconsumption="1500.0" reload="0.1666" damagemultiplier="1.10">
     </Turret>
   </Item>
 
   <Item name="Overvolted Double Coilgun" description="An overvolted double coilgun with more coils, but also higher power demands." identifier="doublecoilgun_overvolted" variantof="doublecoilgun">
     <Sprite texture="Content/Items/Weapons/Turrets.png" depth="0.01" sourcerect="0,0,512,512" canflipy="false" />
-    <SwappableItem price="9500" replacementonuninstall="largeturrethardpoint" origin="256,438" swapidentifier="largeturret">
+    <SwappableItem price="7500" replacementonuninstall="largeturrethardpoint" origin="256,438" swapidentifier="largeturret">
       <SchematicSprite texture="Content/UI/WeaponUI.png" sourcerect="512,389,256,389"/>
       <SwapConnectedItem tag="periscope" swapto="periscope"/>
       <SwapConnectedItem tag="turretammosource" swapto="coilgunloader"/>

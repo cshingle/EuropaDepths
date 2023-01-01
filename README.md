@@ -64,6 +64,7 @@ Short list of current features:
 [*]Diver remains now deconstructs to 3 items and can produce magnesium
 [*]Hydroxyapatite now deconstructs into Magnesium as well as Calcium and Phosphorus
 [*]Replace Camaraderie Captain talent with custom Commendations talent
+[*]Allow Exosuit to carry one heavy item (like the cargo scooter) or mountableweapon 
 [/list]
 
 Now with Chinese Traditional translation that is already out of date.

@@ -28,35 +28,6 @@
         <sprite name="Headset Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hideotherwearables="false" sourcerect="26,317,51,64" origin="0.5,0.6" />
       </Wearable>
     </Item>
-    <Item name="" identifier="autoinjectorheadset" scale="0.5" category="Equipment,Medical" tags="smallitem,mobileradio" allowasextracargo="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="medcab"/>
-      <Price baseprice="140" sold="false">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
-      <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="113,264,58,45" origin="0.5,0.5" />
-      <Sprite name="Headset" texture="Content/Items/JobGear/TalentGear.png" depth="0.6" sourcerect="253,301,76,64" origin="0.35,0.5" />
-      <Body radius="20" height="20" density="30" />
-      <Deconstruct time="10">
-        <Item identifier="plastic" />
-        <Item identifier="fpgacircuit" />
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true">
-        <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="plastic" />
-        <RequiredItem identifier="fpgacircuit" />
-      </Fabricate>
-      <WifiComponent range="36000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0" />
-      <ItemContainer capacity="1" maxstacksize="1" autoinject="true">
-        <Containable items="chem,medical" />
-      </ItemContainer>
-      <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
-        <sprite name="Headset Wearable" texture="Content/Items/JobGear/TalentGear.png" sourcerect="253,305,76,58" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hideotherwearables="false" origin="0.5,0.5" />
-      </Wearable>
-    </Item>
   </Override>
   <Item name="" identifier="engineeringheadset" scale="0.5" category="Equipment" tags="smallitem,mobileradio" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="crewcab" secondary="divingcab"/>
