@@ -8,7 +8,7 @@
   <gibemitter particle="waterblood" particleamount="2" velocitymin="0" velocitymax="100" anglemin="0" anglemax="360" scalemin="7" scalemax="15" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
   <gibemitter particle="gib" drawontop="True" particleamount="20" velocitymin="200" velocitymax="700" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
   <gibemitter particle="heavygib" particleamount="20" velocitymin="50" velocitymax="1000" anglemin="0" anglemax="360" scalemin="2" scalemax="4" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
-  <health vitality="8000" doesbleed="True" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="0" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="0" stunimmunity="true" poisonimmunity="true">
+  <health vitality="8000" doesbleed="True" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="0" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="0.25" stunimmunity="true" poisonimmunity="false" poisonvulnerability="0.2">
     <Limb />
     <Limb />
     <Limb />
@@ -62,8 +62,5 @@
   <!-- Requires a separate status effect, because there can only be one sound channel per status effect -->
   <StatusEffect type="OnActive" target="this">
     <Sound file="Content/Characters/Charybdis/CHARYBDIS_IdleLoop.ogg" loop="true" range="20000" dontmuffle="true" />
-  </StatusEffect>
-  <StatusEffect type="OnDeath" target="this">
-    <DropContainedItems />
   </StatusEffect>
 </Character></Override>
