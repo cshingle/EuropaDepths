@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OutpostGenerationParameters>
+  <Override>
+    <OutpostConfig identifier="abandonedoutpost" totalmodulecount="6" minhallwaylength="0" allowedlocationtypes="Abandoned" spawncrewinsideoutpost="false" alwaysdestructible="false" alwaysrewireable="true" allowstealing="true">
+      <modulecount flag="Airlock" count="1"/>
+      <modulecount flag="EngineeringModule" count="1"/>
+      <modulecount flag="AdminModule" count="1"/>
+      <modulecount flag="CrewModule" count="1"/>
+      <modulecount flag="ResearchModule" count="1"/>
+      <modulecount flag="SecurityModule" count="1"/>
+    </OutpostConfig>
+  </Override>
+</OutpostGenerationParameters>

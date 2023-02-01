@@ -10,7 +10,7 @@
                     <Item identifier="headset" equip="true" showpreview="false" />
                     <Item identifier="antibleeding1"/>
                     <Item identifier="antibleeding1"/>
-                    <Item identifier="revolver" equip="false">
+                    <Item identifier="revolver" equip="true">
                         <Item identifier="revolverround"/>
                         <Item identifier="revolverround"/>
                         <Item identifier="revolverround"/>
@@ -18,7 +18,7 @@
                         <Item identifier="revolverround"/>
                         <Item identifier="revolverround"/>
                     </Item>
-                    <Item identifier="revolver" equip="false">
+                    <Item identifier="revolver" equip="true">
                         <Item identifier="revolverround"/>
                         <Item identifier="revolverround"/>
                         <Item identifier="revolverround"/>
