@@ -1,7 +1,7 @@
 ﻿<Character SpeciesName="Fractalbrain1" SpeciesTranslationOverride="" DisplayName="Fractal Brain" Group="ancientalien" Humanoid="False" HasInfo="False" CanInteract="False" Husk="False" UseHuskAppendage="False" NeedsAir="False" NeedsWater="False" CanSpeak="False" UseBossHealthBar="False" Noise="100" Visibility="100" BloodDecal="blood" BleedParticleAir="blooddrop" BleedParticleWater="waterblood" BleedParticleMultiplier="1" CanEat="False" EatingSpeed="1" UsePathFinding="True" PathFinderPriority="0.5" HideInSonar="True" HideInThermalGoggles="False" SonarDisruption="0" DistantSonarRange="0" DisableDistance="25000" SoundInterval="10" DrawLast="False">
   <ragdolls folder="default" />
   <animations folder="default" />
-  <health Vitality="250" DoesBleed="True" CrushDepth="-Infinity" UseHealthWindow="False" BleedingReduction="100" BurnReduction="10" ConstantHealthRegeneration="0.3" HealthRegenerationWhenEating="0" stunimmunity="true" poisonimmunity="true" empvulnerability="1" ApplyAfflictionColors="False" />
+  <health Vitality="250" DoesBleed="False" CrushDepth="-Infinity" UseHealthWindow="False" BleedingReduction="100" BurnReduction="10" ConstantHealthRegeneration="0.3" HealthRegenerationWhenEating="0" stunimmunity="true" poisonimmunity="true" empvulnerability="1" ApplyAfflictionColors="False" />
   
   <Inventory slots="Any, Any, Any" accessiblewhenalive="False" commonness="20">
     <Item Identifier="fulguriumfuelrodvolatile"/>

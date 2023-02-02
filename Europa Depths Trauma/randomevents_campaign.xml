@@ -3,16 +3,16 @@
 	<Override>
 		<EventPrefabs>
 			<ScriptedEvent identifier="beaconclown">
-				<SpawnAction npcsetidentifier="abandonedoutpostnpcs" npcidentifier="psychoclown" targettag="psychoclown" spawnpointtag="saferoom" spawnlocation="beaconstation" requirespawnpointtag="true" team="None"/>
-				<StatusEffectAction targettag="psychoclown">
-					<StatusEffect>
-						<GiveTalentInfo giverandom="false" talentidentifiers="chonkyhonks,psychoclown,waterprankster,enrollintoclowncollege" />
-					</StatusEffect>
-				</StatusEffectAction>
-				<AfflictionAction targettag="psychoclown" affliction="psychoclown" strength="100" />
+			  <SpawnAction npcsetidentifier="abandonedoutpostnpcs" npcidentifier="psychoclown" targettag="psychoclown" spawnpointtag="saferoom" spawnlocation="beaconstation" requirespawnpointtag="true" team="None"/>
+			  <StatusEffectAction targettag="psychoclown">
+			    <StatusEffect>
+			      <GiveTalentInfo giverandom="false" talentidentifiers="chonkyhonks,psychoclown,waterprankster,enrollintoclowncollege" />
+			    </StatusEffect>
+			  </StatusEffectAction>
+			  <AfflictionAction targettag="psychoclown" affliction="psychoclown" strength="100" />
 			</ScriptedEvent>
 		</EventPrefabs>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 0                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -30,7 +30,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 1                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -80,7 +80,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 2                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -260,7 +260,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 3                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -605,7 +605,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 4                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -975,7 +975,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 5                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1377,7 +1377,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 6                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1755,7 +1755,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 7                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2208,7 +2208,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 8                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2273,6 +2273,7 @@
 				<MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian_veteran" minamount="1" maxamount="2" spawntype="ruin" offset="3000" scatter="1000" spawnprobability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
@@ -2281,19 +2282,19 @@
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance1" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance1" />
+						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance1" />
 					</EventSet>
 					<EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance2" />
 					</EventSet>
 					<EventSet identifier="entrance3" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance3" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance3" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance3" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance3" />
+						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance3" />
 					</EventSet>
 					<EventSet identifier="chambers1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_chambers1" />
@@ -2891,7 +2892,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 9                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2954,6 +2955,7 @@
 				<MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian_veteran" minamount="1" maxamount="2" spawntype="ruin" offset="3000" scatter="1000" spawnprobability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
@@ -2962,19 +2964,19 @@
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance1" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance1" />
+						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance1" />
 					</EventSet>
 					<EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance2" />
 					</EventSet>
 					<EventSet identifier="entrance3" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance3" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance3" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance3" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance3" />
+						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance3" />
 					</EventSet>
 					<EventSet identifier="chambers1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_chambers1" />
@@ -3574,7 +3576,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 10                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -3637,6 +3639,7 @@
 				<MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Fractalbrain1" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian_veteran" minamount="2" maxamount="2" spawntype="ruin" offset="3000" scatter="1000" spawnprobability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
@@ -3644,25 +3647,25 @@
 					<EventSet identifier="entrance1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
-						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance1" />
+						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance1" />
+						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance1" />
 					</EventSet>
 					<EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance2" />
 					</EventSet>
 					<EventSet identifier="entrance3" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance3" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance3" />
-						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance3" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance3" />
+						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance3" />
+						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance3" />
 					</EventSet>
 					<EventSet identifier="chambers1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_chambers1" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_chambers1" />
-						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_chambers1" />
+						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_chambers1" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_chambers1" />
 					</EventSet>
 				</EventSet>
@@ -3863,6 +3866,9 @@
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
+				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
@@ -3930,6 +3936,9 @@
 				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3999,6 +4008,9 @@
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
+				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
@@ -4066,6 +4078,9 @@
 				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4135,6 +4150,9 @@
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
+				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
@@ -4203,6 +4221,9 @@
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
+				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
@@ -4225,7 +4246,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 11                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

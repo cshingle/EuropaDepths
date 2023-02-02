@@ -9,4 +9,10 @@
     <character.Hammerhead_juvenile>Juvenile Hammerhead</character.Hammerhead_juvenile>
     <character.Tigerthresher_veteran>Veteran Tigerthresher</character.Tigerthresher_veteran>
     <character.Charybdis_juvenile>Juvenile Charybdis</character.Charybdis_juvenile>
+    <character.Fractalguardian_veteran>Veteran Fractal Guardian</character.Fractalguardian_veteran>
+    <missionname.bonethreshernest>Destroy a Bonethresher nest</missionname.bonethreshernest>
+    <missiondescription.bonethreshernest>A Bonethresher nest was recently discovered in a cave near [location1]. A reward of [reward] marks has been promised to any crew that can get rid of the nest.</missiondescription.bonethreshernest>
+    <missionsonarlabel.bonethreshernest>Tiger Thresher nest</missionsonarlabel.bonethreshernest>
+    <missionmessage0.bonethreshernest>The nest has been wiped out. Navigate the submarine out of the cavern to claim the reward.</missionmessage0.bonethreshernest>
+    <missionsuccess.bonethreshernest>The nest has been destroyed.</missionsuccess.bonethreshernest>
 </infotexts>

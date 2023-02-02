@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Charactervariant inherit="Fractalguardian" speciesname="Fractalguardian_veteran" speciestranslationoverride="Fractalguardian_veteran">
+    <health vitality="500"/>
+    <ai combatstrength="510" avoidgunfire="False">
+        <!-- Disables latching -->
+        <chooserandom>
+            <clear/>
+        </chooserandom>
+    </ai>
+    <ragdoll scalemultiplier="1.5"/>
+    <attack damagemultiplier="1.5" rangemultiplier="1.3" impactmultiplier="2"/>
+</Charactervariant>

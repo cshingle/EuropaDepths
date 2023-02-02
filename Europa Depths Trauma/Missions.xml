@@ -24,7 +24,7 @@
         <monster character="Husk" min="10" max="10" />
       </monsters>
       <monsters commonness="10">
-        <monster character="Tigerthresher" min="1" max="4" />
+        <monster character="Tigerthresher" min="3" max="4" />
         <monster character="Bonethresher" min="3" max="5" />
       </monsters>
       <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,256,256,256" color="243,146,55"/>
@@ -86,8 +86,8 @@
         <Item from="escortnpcs1" identifier="commoner" />
       </Characters>
       <TerroristItems>
-        <Item identifier="divingknife" equip="true" mindifficulty="15" MaxDifficulty="50" />
-        <Item identifier="divingknife" equip="true" mindifficulty="15" MaxDifficulty="50" />
+        <Item identifier="divingknife" equip="true" mindifficulty="15" MaxDifficulty="30" />
+        <Item identifier="divingknife" equip="true" mindifficulty="15" MaxDifficulty="30" />
         <Item identifier="revolver" equip="true" mindifficulty="25" MaxDifficulty="35">
           <Item identifier="revolverround" />
           <Item identifier="revolverround" />
@@ -149,7 +149,7 @@
         <Item identifier="crawleregg" />
       </Items>
       <Monster character="Crawler" min="2" max="5"/>
-      <Monster character="Crawler" min="2" max="5" multiplayeronly="true"/>
+      <Monster character="Crawler" min="3" max="5" multiplayeronly="true"/>
       <Reputation identifier="location" amount="10" />
       <Reputation identifier="coalition" amount="5" />
       <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
@@ -216,7 +216,7 @@
         <Item identifier="tigerthresheregg" />
         <Item identifier="tigerthresheregg" />
       </Items>
-      <Monster character="Tigerthresher" min="3" max="5"/>
+      <Monster character="Tigerthresher" min="4" max="5"/>
       <Reputation identifier="location" amount="10" />
       <Reputation identifier="coalition" amount="5" />
       <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>

@@ -148,7 +148,7 @@
       <Item identifier="tigerthresheregg" />
       <Item identifier="tigerthresheregg" />
     </Items>
-    <Monster character="Bonethresher_cave" min="3" max="5"/>
+    <Monster character="Bonethresher_cave" min="4" max="5"/>
     <Reputation identifier="location" amount="10" />
     <Reputation identifier="coalition" amount="5" />
     <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
