@@ -131,8 +131,8 @@
       <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
       <input name="power_in" displayname="connection.powerin" />
     </ConnectionPanel>
-    <ItemContainer hideitems="false" drawinventory="true" capacity="10" maxstacksize="1" itempos="27,-44" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
-      <GuiFrame relativesize="0.25,0.25" anchor="Center" slotsperrow="6" style="ItemUI" />
+    <ItemContainer hideitems="false" drawinventory="true" capacity="10" slotsperrow="5" maxstacksize="1" itempos="27,-44" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.25" anchor="Center" style="ItemUI" />
       <StatusEffect type="OnFire" target="This" tags="onfire" duration="1" stackable="false" />
       <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
         <StatusEffect type="OnContaining" targettype="Contained" Condition="1.0" Comparison="And">
@@ -148,8 +148,8 @@
     <Vent>
       <sound file="Content/Items/OxygenGenerator/Ventilation.ogg" type="OnActive" range="400.0" volumeproperty="OxygenFlow" volume="0.0005f" loop="true"/>
     </Vent>
-    <ItemContainer hideitems="false" drawinventory="true" capacity="10" maxstacksize="1" itempos="27,-44" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
-      <GuiFrame relativesize="0.25,0.25" anchor="Center" slotsperrow="6" style="ItemUI" />
+    <ItemContainer hideitems="false" drawinventory="true" capacity="10" slotsperrow="5" maxstacksize="1" itempos="27,-44" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.25,0.25" anchor="Center" style="ItemUI" />
       <StatusEffect type="OnFire" target="This" tags="onfire" duration="1" stackable="false" />
       <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
         <StatusEffect type="OnContaining" targettype="Contained" Condition="1.0" Comparison="And">
@@ -175,6 +175,39 @@
           <Conditional targetcontainer="true" HasStatusTag="!eq onfire" />
         </StatusEffect>
       </Containable>
+    </ItemContainer>
+  </Item>
+  <Item name="Charging Dock Large" identifier="chargingdocklarge" tags="chargingdock,batterycellrecharger" category="Electrical,Machine" scale="0.5" description="">
+    <UpgradePreviewSprite texture="Content/UI/WeaponUI.png" sourcerect="64,961,32,22" origin="0.5,0.45" />
+    <Sprite texture="%ModDir%/sprites/equipment.png" sourcerect="145,309,210,31" depth="0.8" />
+    <BrokenSprite texture="%ModDir%/sprites/equipment.png" sourcerect="145,309,210,31" depth="0.8" maxcondition="40" fadein="true" />
+    <BrokenSprite texture="%ModDir%/sprites/equipment.png" sourcerect="145,309,210,31" maxcondition="0" />
+    <Powered powerconsumption="200" currpowerconsumption="200" isactive="true">
+      <GuiFrame relativesize="0.18,0.15" minsize="350,160" maxsize="420,192" anchor="Center" relativeoffset="0,-0.1" style="ItemUI" msg="ItemMsgInteractSelect" />
+      <StatusEffect type="OnActive" targettype="Contained" targets="loadable" Condition="2.0">
+        <!-- the statuseffect targets the contained item (a battery cell that's being charged), but the conditional targets the container (this battery) -->
+        <Conditional Voltage="gt 0.01" targetcontainer="true" targetitemcomponent="Powered"/>
+      </StatusEffect>
+    </Powered>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredSkill identifier="electrical" level="55" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="4" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="MistSmoke" particlespersecond="60" anglemin="0" anglemax="360" distancemin="0" distancemax="10" velocitymin="0" velocitymax="20" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
+      <ParticleEmitter particle="fleshsmoke" particlespersecond="2" scalemin="1" scalemax="2" mincondition="0.0" maxcondition="50.0" />
+      <input name="power_in" displayname="connection.powerin" />
+    </ConnectionPanel>
+    <ItemContainer capacity="8" maxstacksize="1" slotsperrow="4" canbeselected="true" hideitems="false" itempos="24,10" iteminterval="23,0" itemrotation="-90" uilabel="ChargingDock" containedspritedepth="0.81">
+      <GuiFrame relativesize="0.2,0.25" anchor="Center" style="ItemUI" />
+      <Containable items="loadable" />
     </ItemContainer>
   </Item>
 </Items>
