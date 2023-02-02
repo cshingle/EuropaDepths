@@ -349,6 +349,8 @@ public class Spawns {
 								new MonsterEvent(Character.Molochblack, 1, 1).offset(10000).scatter(3000))),
 				new MonsterSet("latcher", false, 5).monsters(
 						new MonsterEvent(Character.Latcher, 1, 1)),
+				new MonsterSet("destroyer", false, 1).monsters(
+						new MonsterEvent(Character.Fractaldestroyer, 1, 1)),
 				new MonsterSet("charybdisjuvenile", false, 5).monsters(
 						new MonsterEvent(Character.Charybdis_juvenile, 1, 1))
 		};

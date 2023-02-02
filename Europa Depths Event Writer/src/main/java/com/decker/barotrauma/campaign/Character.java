@@ -15,6 +15,7 @@ public enum Character {
 	Fractaldestroyer,
 	Fractalbrain1,
 	Fractalguardian,
+	Fractalguardian_veteran,
 	Fractalguardian2,
 	Hammerhead,
 	Hammerhead_juvenile,

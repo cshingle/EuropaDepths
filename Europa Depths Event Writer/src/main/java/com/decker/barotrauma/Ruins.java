@@ -103,6 +103,7 @@ public class Ruins {
 				new MonsterEvent(Character.Fractalguardian2, 3, 6).probability(1).spawnpointtag("fractalguardian"),
 				new MonsterEvent(Character.Fractalguardian, 3, 6).probability(1).spawnpointtag("fractalguardian"),
 				new MonsterEvent(Character.Fractalbrain1, 0, 6).probability(1).spawnpointtag("fractalguardian"),
+				new MonsterEvent(Character.Fractalguardian_veteran, 1, 2).offset(3000).scatter(1000).spawnpointtag("fractalguardian"),
 				new MonsterEvent(Character.Husk, 3, 5).probability(0.5).spawnpointtag("husk"),
 				new MonsterEvent(Character.Husk, 3, 5).probability(0.5).spawnpointtag("husk"),
 				new MonsterEvent(Character.Crawlerhusk, 1, 2).probability(0.5).spawnpointtag("husk"),
@@ -112,17 +113,17 @@ public class Ruins {
 								new MonsterEvent(Character.Fractalguardian, 2, 3),
 								new MonsterEvent(Character.Fractalguardian2, 2, 3),
 								new MonsterEvent(Character.Fractalbrain1, 2, 2),
-								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_entrance1"),
+								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(3000)).spawnpointtag("encounter_entrance1"),
 						new MonsterSet("entrance2", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 2, 3),
 								new MonsterEvent(Character.Fractalguardian2, 2, 3),
 								new MonsterEvent(Character.Fractalbrain1, 2, 2),
-								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_entrance2"),
+								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(3000)).spawnpointtag("encounter_entrance2"),
 						new MonsterSet("entrance3", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 2, 3),
 								new MonsterEvent(Character.Fractalguardian2, 2, 3),
 								new MonsterEvent(Character.Fractalbrain1, 2, 2),
-								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_entrance3"),
+								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(3000)).spawnpointtag("encounter_entrance3"),
 						new MonsterSet("chambers1", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 2, 3),
 								new MonsterEvent(Character.Fractalguardian2, 2, 3),
@@ -137,6 +138,7 @@ public class Ruins {
 				new MonsterEvent(Character.Fractalguardian2, 3, 6).probability(1).spawnpointtag("fractalguardian"),
 				new MonsterEvent(Character.Fractalguardian, 3, 6).probability(1).spawnpointtag("fractalguardian"),
 				new MonsterEvent(Character.Fractalbrain1, 3, 6).probability(1).spawnpointtag("fractalguardian"),
+				new MonsterEvent(Character.Fractalguardian_veteran, 2, 2).offset(3000).scatter(1000).spawnpointtag("fractalguardian"),
 				new MonsterEvent(Character.Husk, 2, 5).probability(0.5).spawnpointtag("husk"),
 				new MonsterEvent(Character.Husk, 2, 5).probability(0.5).spawnpointtag("husk"),
 				new MonsterEvent(Character.Crawlerhusk, 1, 2).probability(0.5).spawnpointtag("husk"),
@@ -145,22 +147,22 @@ public class Ruins {
 						new MonsterSet("entrance1", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 2, 3),
 								new MonsterEvent(Character.Fractalguardian2, 2, 3),
-								new MonsterEvent(Character.Fractalbrain1, 2, 3),
-								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_entrance1"),
+								new MonsterEvent(Character.Fractalbrain1, 2, 2),
+								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(3000)).spawnpointtag("encounter_entrance1"),
 						new MonsterSet("entrance2", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 2, 3),
 								new MonsterEvent(Character.Fractalguardian2, 2, 3),
-								new MonsterEvent(Character.Fractalbrain1, 2, 3),
-								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_entrance2"),
+								new MonsterEvent(Character.Fractalbrain1, 2, 2),
+								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(3000)).spawnpointtag("encounter_entrance2"),
 						new MonsterSet("entrance3", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 2, 3),
 								new MonsterEvent(Character.Fractalguardian2, 2, 3),
-								new MonsterEvent(Character.Fractalbrain1, 2, 3),
-								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_entrance3"),
+								new MonsterEvent(Character.Fractalbrain1, 2, 2),
+								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(3000)).spawnpointtag("encounter_entrance3"),
 						new MonsterSet("chambers1", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 2, 3),
 								new MonsterEvent(Character.Fractalguardian2, 2, 3),
-								new MonsterEvent(Character.Fractalbrain1, 2, 3),
+								new MonsterEvent(Character.Fractalbrain1, 2, 2),
 								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_chambers1")));
 	}
 }
