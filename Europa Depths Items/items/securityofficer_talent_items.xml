@@ -114,7 +114,7 @@
         <QualityStat stattype="FirepowerMultiplier" value="0.1" />
       </Quality>
     </Item>
-    <Item name="" identifier="assaultriflemagazine" maxstacksize="2" scale="0.5" category="Weapon" allowasextracargo="true" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,assaultrifleammo" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="assaultriflemagazine" maxstacksize="2" scale="0.5" category="Weapon" allowasextracargo="true" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,assaultrifleammo,riflemanbonus" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="assaultrifle" minamount="1" maxamount="1" spawnprobability="1"/>
       <PreferredContainer primary="armcab" secondary="secarmcab"/>
       <Price baseprice="350" sold="false" minleveldifficulty="60" displaynonempty="true">
@@ -134,7 +134,7 @@
         <RequiredSkill identifier="weapons" level="40" />
         <RequiredItem identifier="magnesium" />
         <RequiredItem identifier="lead" />
-        <RequiredItem identifier="assaultriflemagazine" maxcondition="0.1" usecondition="false"/>
+        <RequiredItem identifier="assaultriflemagazine" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
       </Fabricate>
       <Deconstruct time="15">
         <RequiredItem identifier="magnesium" mincondition="0.95" />
@@ -280,7 +280,7 @@
       <Projectile characterusable="false" hitscan="true" hitscancount="1" removeonhit="true" spread="1">
         <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,115,95,150" scalemultiplier="1,0.9" />
         <Attack structuredamage="20" targetforce="10" itemdamage="100" severlimbsprobability="1" penetration="0.5">
-          <Affliction identifier="explosiondamage" strength="25" />
+          <Affliction identifier="explosiondamage" strength="20" />
           <Affliction identifier="bleeding" strength="20" probability="0.5"/>
           <Affliction identifier="stun" strength="0.8" />
         </Attack>
@@ -290,7 +290,7 @@
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" disabledeltatime="true">
           <Explosion range="70.0" ballastfloradamage="50" severlimbsprobability="0.5" structuredamage="8" levelwalldamage="40" itemdamage="200" force="3.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" flashcolor="255,115,95,150">
-            <Affliction identifier="burn" strength="100" />
+            <Affliction identifier="burn" strength="60" />
           </Explosion>
         </StatusEffect>
       </Projectile>
@@ -393,7 +393,7 @@
       <ContainedSprite name="Slipsuit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="Content/Items/Jobgear/Security/Slipsuit_Items.png" sourcerect="0,193,230,63" depth="0.55" origin="0.6,0.5" />
       <Body radius="45" width="34" density="15" />
       <Wearable>
-        <sprite name="Slipsuit Helmet Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="true" hideotherwearables="true" sourcerect="0,520,105,124" origin="0.5,0.4">
+        <sprite name="Slipsuit Helmet Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" alphaclipotherwearables="true" sourcerect="0,520,105,124" origin="0.5,0.4">
           <LightComponent range="300.0" lightcolor="250,224,165,255" powerconsumption="10" IsOn="true" allowingameediting="false">
             <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true" comparison="And">
               <Conditional IsDead="false" />
@@ -419,7 +419,7 @@
         <StatValue stattype="SwimmingSpeed" value="0.45" />
         <StatValue stattype="WalkingSpeed" value="-0.6" />
         <StatusEffect type="OnWearing" target="Character" OxygenAvailable="0.0" UseHullOxygen="true" />
-        <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="6000.0" SpeedMultiplier="0.95" PropulsionSpeedMultiplier="1.4" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <StatusEffect type="OnWearing" target="Character" ObstructVision="true" PressureProtection="6000.0" SpeedMultiplier="0.95" PropulsionSpeedMultiplier="1.4" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
           <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true" />
           <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true" />
         </StatusEffect>
@@ -452,10 +452,10 @@
           <Conditional IsDead="false" />
           <RequiredItem items="weldingfueltank" type="Contained" targetslot="0"/>
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" Oxygen="-20.0" Condition="-0.5" targetslot="0">
+        <StatusEffect type="OnWearing" target="Contained,Character" targetlimbs="Torso" Oxygen="-10.0" Condition="-0.5" interval="1" targetslot="0" disabledeltatime="true">
           <Conditional IsDead="false" />
-          <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0"/>
-          <Affliction identifier="burn" amount="0.1" />
+          <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0" />
+          <Affliction identifier="burn" amount="3.0" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="And">
           <Conditional IsDead="false" />
@@ -479,12 +479,10 @@
           <Conditional condition="lte 0.0" targetslot="0" />
           <Sound file="Content/Items/WarningBeep.ogg" range="500" />
         </StatusEffect>
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations" damagemultiplier="0.55" damagesound="LimbArmor" deflectprojectiles="true" />
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
-        <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.75" damagesound="" deflectprojectiles="true" />
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.75" damagesound="" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor"/>
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" damagemultiplier="0.5" probabilitymultiplier="0.25" damagesound="LimbArmor"/>
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor"/>
       </Wearable>
       <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" />
       <ItemContainer capacity="0" maxstacksize="0" slotsperrow="2" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0" autoinject="true">
@@ -508,7 +506,7 @@
       </ItemContainer>
       <aitarget maxsightrange="1500" />
     </Item>
-    <Item name="" identifier="stungundartfulgurium" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="stungundartfulgurium" category="Weapon" maxstacksize="8" interactthroughwalls="true" allowasextracargo="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="armcab" secondary="secarmcab"/>
       <Price baseprice="40" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.4" />

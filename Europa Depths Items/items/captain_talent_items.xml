@@ -33,7 +33,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item name="" identifier="handcannon" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,pistolitem,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="handcannon" category="Weapon" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,weapon,gun,pistolitem,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="secarmcab"/>
       <PreferredContainer secondary="armcab,weaponholder" />
       <Price baseprice="600" sold="false">
@@ -72,7 +72,7 @@
         <RequiredItems items="handcannonammo" type="Contained" msg="ItemMsgAmmoRequired" />
         <RequiredSkill identifier="weapons" level="60" />
       </RangedWeapon>
-      <ItemContainer capacity="1" maxstacksize="6" hideitems="true" containedstateindicatorstyle="bullet">
+      <ItemContainer capacity="1" maxstacksize="6" hideitems="true" containedstateindicatorslot="0" containedstateindicatorstyle="bullet">
         <Containable items="handcannonammo" />
       </ItemContainer>
       <aitarget sightrange="2000" soundrange="5000" fadeouttime="5" />
@@ -80,89 +80,6 @@
         <QualityStat stattype="FirepowerMultiplier" value="0.1" />
       </Quality>
     </Item>
-    <Item name="" identifier="coalitioncommendation" category="Equipment" Tags="smallitem" cargocontaineridentifier="metalcrate" allowasextracargo="true" maxstacksize="8" scale="0.5" impactsoundtag="impact_soft">
-      <PreferredContainer primary="crewcab"/>
-      <Price baseprice="300" buyingpricemodifier="5" minleveldifficulty="40">
-        <Price storeidentifier="merchantoutpost" maxavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" maxavailable="1" />
-        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.9" />
-        <Price storeidentifier="merchantmilitary" maxavailable="1" />
-        <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
-      </Price>
-      <Deconstruct time="20">
-        <Item identifier="copper" />
-      </Deconstruct>
-      <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="265,365,36,65" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="3,4,24,43" depth="0.6" origin="0.5,0.5" />
-      <Body width="19" height="40" density="20" />
-      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,5" holdangle="90" reload="1.0" msg="ItemMsgPickUpSelect">
-        <Attack targetimpulse="5">
-          <!-- empty attack so that a talent can trigger-->
-        </Attack>
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-        <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
-          <Sound file="Content/Items/Button/button.ogg" type="OnUse" range="500" />
-          <GiveExperience amount="275" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </MeleeWeapon>
-    </Item>
-    <Item name="" identifier="coalitionmedal" category="Equipment" Tags="smallitem" cargocontaineridentifier="metalcrate" allowasextracargo="true" maxstacksize="8" scale="0.5" impactsoundtag="impact_soft">
-      <PreferredContainer primary="crewcab"/>
-      <Price baseprice="600" buyingpricemodifier="5" minleveldifficulty="65">
-        <Price storeidentifier="merchantoutpost" maxavailable="0" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" maxavailable="1" />
-        <Price storeidentifier="merchantresearch" sold="false" multiplier="0.9" />
-        <Price storeidentifier="merchantmilitary" maxavailable="1" />
-        <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
-      </Price>
-      <Deconstruct time="20">
-        <Item identifier="copper" />
-        <Item identifier="tin" />
-      </Deconstruct>
-      <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="228,365,37,65" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="33,4,24,43" depth="0.6" origin="0.5,0.5" />
-      <Body width="19" height="40" density="20" />
-      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,5" holdangle="90" reload="1.0" msg="ItemMsgPickUpSelect">
-        <Attack targetimpulse="5">
-          <!-- empty attack so that a talent can trigger-->
-        </Attack>
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-        <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
-          <Sound file="Content/Items/Button/button.ogg" type="OnUse" range="500" />
-          <GiveExperience amount="550" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </MeleeWeapon>
-    </Item>
-    <Item name="" identifier="cigar" category="Misc" Tags="smallitem" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true" impactsoundtag="impact_soft" isshootable="true" requireaimtouse="true">
-      <PreferredContainer primary="crewcab"/>
-      <Price baseprice="130" sold="false" />
-      <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="true">
-        <RequiredItem identifier="pipetobacco" />
-      </Fabricate>
-      <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="174,234,42,50" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="0,60,50,12" depth="0.55" origin="0.5,0.5" />
-      <Body width="45" height="10" />
-      <Holdable slots="Any,RightHand" aimable="false" aimpos="30,14" handle1="0,-10" swingamount="0,0" swingspeed="0.5" swingwhenusing="true" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-4.0">
-          <ParticleEmitter particle="swirlysmoke" particlespersecond="2" scalemin="1" scalemax="2" anglemin="0" anglemax="360" velocitymin="0" velocitymax="10" />
-        </StatusEffect>
-        <StatusEffect tags="medical" type="OnUse" target="Character">
-          <Affliction identifier="psychosisresistance" amount="20" />
-          <ReduceAffliction identifier="psychosis" amount="6" />
-          <ReduceAffliction identifier="hallucinating" amount="10" />
-          <ReduceAffliction identifier="reaperstax" amount="1" />
-          <ReduceAffliction identifier="watchersgaze" amount="5" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-    </Item>
+
   </Override>
 </Items>

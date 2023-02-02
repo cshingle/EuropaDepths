@@ -66,9 +66,7 @@
         <SkillModifier skillidentifier="electrical" skillvalue="5" />
       </Wearable>
     </Item>
-  </Override>
-
-  <Override>
+    
     <Item name="" nameidentifier="pirateclothes" identifier="pirateclothesnovice" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing" scale="0.5" impactsoundtag="impact_soft">
       <Price baseprice="150" sold="false">
         <Price storeidentifier="merchantoutpost" />

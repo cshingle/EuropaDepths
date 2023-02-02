@@ -75,7 +75,7 @@
         <RequiredItem identifier="depletedfuel" />
         <RequiredItem identifier="depletedfuel" />
         <RequiredItem identifier="steel" />
-        <RequiredItem identifier="coilgunammoboxdepletedfuel" mincondition="0.0" maxcondition="0.0" usecondition="false" />
+        <RequiredItem identifier="coilgunammoboxdepletedfuel" mincondition="0.0" maxcondition="0.1" usecondition="false" />
       </Fabricate>
       <Deconstruct time="10">
         <Item identifier="depletedfuel" mincondition="0.95" />
@@ -105,7 +105,7 @@
           <Affliction identifier="lacerations" strength="15" />
           <Affliction identifier="bleeding" strength="1.5" />
           <Affliction identifier="stun" strength="0.025" />
-          <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+          <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
             <Conditional radiationsickness="lt 30" />
             <Affliction identifier="radiationsickness" strength="10" />
           </StatusEffect>
@@ -126,113 +126,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item name="" identifier="wrenchhardened" variantof="wrench" allowasextracargo="true" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" addedrepairspeedmultiplier="0.25">
-      <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="0" notcampaign="true"/>
-      <PreferredContainer primary="engcab" spawnprobability="0"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
-      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
-      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0"/>
-      <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
-      <Price baseprice="200" sold="false">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
-      <Deconstruct>
-        <Item identifier="iron" />
-        <Item identifier="depletedfuel" amount="2" />
-      </Deconstruct>
-      <Fabricate requiresrecipe="true">
-        <RequiredItem identifier="wrench" />
-        <RequiredItem identifier="depletedfuel" amount="2" />
-      </Fabricate>
-      <MeleeWeapon>
-        <Attack targetimpulse="8" penetration="0.25">
-          <Affliction identifier="blunttrauma" strength="10" />
-          <Affliction identifier="radiationsickness" strength="1" />
-          <Affliction identifier="stun" strength="0.3" />
-        </Attack>
-      </MeleeWeapon>
-    </Item>
-    <Item name="" identifier="crowbarhardened" variantof="crowbar" allowasextracargo="true" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" addedpickingspeedmultiplier="0.4">
-      <PreferredContainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
-      <PreferredContainer primary="engcab" spawnprobability="0"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
-      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0" />
-      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
-      <Price baseprice="200" sold="false" />
-      <Deconstruct>
-        <Item identifier="iron" />
-        <Item identifier="depletedfuel" amount="2" />
-      </Deconstruct>
-      <Fabricate requiresrecipe="true">
-        <RequiredItem identifier="crowbar" />
-        <RequiredItem identifier="depletedfuel" amount="2" />
-      </Fabricate>
-      <MeleeWeapon>
-        <Attack targetimpulse="13" penetration="0.25">
-          <Affliction identifier="blunttrauma" strength="20" />
-          <Affliction identifier="radiationsickness" strength="1" />
-          <Affliction identifier="stun" strength="0.6" />
-        </Attack>
-      </MeleeWeapon>
-    </Item>
-    <Item name="" identifier="screwdriverhardened" variantof="screwdriver" allowasextracargo="true" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" addedrepairspeedmultiplier="0.25">
-      <PreferredContainer secondary="respawncontainer" spawnprobability="0" notcampaign="true"/>
-      <PreferredContainer primary="reactorcab,engcab" spawnprobability="0"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0"/>
-      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
-      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" spawnprobability="0" />
-      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
-      <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
-      <Price baseprice="200" sold="false" />
-      <Deconstruct>
-        <Item identifier="iron" />
-        <Item identifier="depletedfuel" amount="2" />
-      </Deconstruct>
-      <Fabricate requiresrecipe="true">
-        <RequiredItem identifier="screwdriver" />
-        <RequiredItem identifier="depletedfuel" amount="2" />
-      </Fabricate>
-      <MeleeWeapon>
-        <Attack targetimpulse="8" penetration="0.25">
-          <Affliction identifier="lacerations" strength="10" />
-          <Affliction identifier="radiationsickness" strength="1" />
-          <Affliction identifier="stun" strength="0.3" />
-        </Attack>
-      </MeleeWeapon>
-    </Item>
-    <Item name="" identifier="divingknifehardened" variantof="divingknife" allowasextracargo="true" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
-      <PreferredContainer secondary="wreckarmcab,abandonedarmcab" spawnprobability="0"/>
-      <PreferredContainer secondary="abandonedstoragecab" spawnprobability="0"/>
-      <PreferredContainer secondary="beaconsupplycab" spawnprobability="0"/>
-      <PreferredContainer primary="armcab,secarmcab" spawnprobability="0" />
-      <Price baseprice="200" sold="false">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.25" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
-      <Deconstruct>
-        <Item identifier="iron" />
-        <Item identifier="depletedfuel" amount="2" />
-      </Deconstruct>
-      <Fabricate requiresrecipe="true">
-        <RequiredItem identifier="divingknife" />
-        <RequiredItem identifier="depletedfuel" amount="2" />
-      </Fabricate>
-      <MeleeWeapon>
-        <Attack targetimpulse="4" itemdamage="5" penetration="0.25">
-          <Affliction identifier="lacerations" strength="16" />
-          <Affliction identifier="bleeding" strength="5" />
-          <Affliction identifier="radiationsickness" strength="1" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-      </MeleeWeapon>
-    </Item>
+
     <Item name="" identifier="revolverrounddepletedfuel" variantof="revolverround" allowasextracargo="true" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
       <PreferredContainer primary="revolver" spawnprobability="0"/>
       <PreferredContainer primary="armcab" spawnprobability="0"/>
@@ -260,7 +154,7 @@
           <Affliction identifier="bleeding" strength="10" />
           <Affliction identifier="gunshotwound" strength="35" />
           <Affliction identifier="stun" strength="0.3" />
-          <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+          <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
             <Conditional radiationsickness="lt 30" />
             <Affliction identifier="radiationsickness" strength="10" />
           </StatusEffect>
@@ -285,7 +179,7 @@
         <RequiredSkill identifier="electrical" level="30" />
         <RequiredItem identifier="magnesium" />
         <RequiredItem identifier="depletedfuel" />
-        <RequiredItem identifier="smgmagazinedepletedfuel" mincondition="0.0" maxcondition="0.25" usecondition="false"/>
+        <RequiredItem identifier="smgmagazinedepletedfuel" mincondition="0.0" maxcondition="0.1" usecondition="false" />
       </Fabricate>
       <Deconstruct time="15">
         <Item identifier="depletedfuel" mincondition="0.95" />
@@ -306,13 +200,14 @@
           <Affliction identifier="bleeding" strength="5" />
           <Affliction identifier="gunshotwound" strength="15" />
           <Affliction identifier="stun" strength="0.15" />
-          <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+          <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
             <Conditional radiationsickness="lt 30" />
             <Affliction identifier="radiationsickness" strength="10" />
           </StatusEffect>
         </Attack>
       </Projectile>
     </Item>
+
 
     <Item name="" identifier="nucleargun" category="Weapon" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="mediumitem,weapon,gun,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_heavy">
       <PreferredContainer primary="secarmcab" secondary="weaponholder,armcab"/>
@@ -375,6 +270,7 @@
         <QualityStat stattype="FirepowerMultiplier" value="0.1" />
       </Quality>
     </Item>
+
     <Item name="nucleargunbolt" identifier="nucleargunbolt" category="Weapon" scale="0.5" sonarsize="2" hideinmenus="true">
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="143,414,113,9" depth="0.55" origin="0.5,0.5" />
       <Body width="170" height="10" density="20" />
@@ -397,7 +293,7 @@
           <Conditional hastag="eq door" />
           <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <StatusEffect type="OnImpact" target="UseTarget" disabledeltatime="true">
           <Explosion range="125.0" ballastfloradamage="50" structuredamage="0" itemdamage="0" force="5.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" flashcolor="255,0,0,255" penetration="1">
             <Affliction identifier="burn" strength="25" />
             <Affliction identifier="radiationsickness" strength="80" />
@@ -421,13 +317,13 @@
       <Deconstruct time="20">
         <Item identifier="aluminium" amount="2" />
         <Item identifier="titaniumaluminiumalloy" amount="2" />
-        <Item identifier="fpgacircuit" />
+        <Item identifier="tin" amount="2" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true">
         <RequiredSkill identifier="mechanical" level="30" />
         <RequiredItem identifier="aluminium" amount="2" />
         <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
-        <RequiredItem identifier="fpgacircuit" />
+        <RequiredItem identifier="tin" amount="2" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="131,123,53,58" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" depth="0.55" sourcerect="295,195,149,105" origin="0.5,0.5" />
@@ -608,7 +504,7 @@
         <sprite name="pucs Left Shoe" texture="Content/Items/Jobgear/Engineer/pucs.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
         <sprite name="pucs Right Shoe" texture="Content/Items/Jobgear/Engineer/pucs.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
         <StatusEffect type="OnWearing" target="Character" OxygenAvailable="0.0" UseHullOxygen="true" />
-        <StatusEffect type="OnWearing" target="Character" HideFace="true" UseHullOxygen="true" ObstructVision="true" PressureProtection="6000.0" SpeedMultiplier="0.9" PropulsionSpeedMultiplier="0.9" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <StatusEffect type="OnWearing" target="Character" UseHullOxygen="true" ObstructVision="true" PressureProtection="6000.0" SpeedMultiplier="0.9" PropulsionSpeedMultiplier="0.9" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
           <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true" />
           <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true" />
         </StatusEffect>
@@ -641,10 +537,10 @@
           <Conditional IsDead="false" />
           <RequiredItem items="weldingfueltank" type="Contained" targetslot="0"/>
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" Oxygen="-20.0" Condition="-0.5" targetslot="0">
+        <StatusEffect type="OnWearing" target="Contained,Character" targetlimbs="Torso" Oxygen="-10.0" Condition="-0.5" interval="1" targetslot="0" disabledeltatime="true">
           <Conditional IsDead="false" />
-          <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0"/>
-          <Affliction identifier="burn" amount="0.1" />
+          <RequiredItem items="incendiumfueltank" type="Contained" targetslot="0" />
+          <Affliction identifier="burn" amount="3.0" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" SpeedMultiplier="1.3" setvalue="true" comparison="And">
           <Conditional IsDead="false" />
@@ -725,7 +621,7 @@
       <Body radius="6" height="55" density="20" />
       <LightComponent allowingameediting="false" lightcolor="60,200,150,150" canbeselected="false" range="300.0" ison="true" />
       <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="1" disabledeltatime="true" comparison="And">
+        <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="0.5" disabledeltatime="true" comparison="And">
           <Conditional hastag="neq radiationproof" targetcontainer="true" />
           <Conditional hastag="neq fabricator" targetcontainer="true" />
           <Affliction identifier="radiationsickness" strength="0.7" />
@@ -747,7 +643,7 @@
       </Quality>
     </Item>
   </Override>
-  <Item name="" identifier="fuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,volatilefuel" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" health="150">
+  <Item name="" identifier="fuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,volatilefuel" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" health="120">
     <PreferredContainer primary="fuelrodcase" secondary="reactorcab" />
     <PreferredContainer secondary="nucleargun" minamount="1" maxamount="1" spawnprobability="1"/>
     <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
@@ -780,7 +676,7 @@
     <Body radius="6" height="55" density="20" />
     <LightComponent allowingameediting="false" lightcolor="128,255,0,100" canbeselected="false" range="300.0" ison="true" />
     <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="1" disabledeltatime="true" comparison="And">
+      <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="0.5" disabledeltatime="true" comparison="And">
         <Conditional hastag="neq radiationproof" targetcontainer="true" />
         <Conditional hastag="neq fabricator" targetcontainer="true" />
         <Affliction identifier="radiationsickness" strength="0.5" />
@@ -834,10 +730,10 @@
     <Body radius="6" width="21" height="71" density="20" />
     <LightComponent allowingameediting="false" lightcolor="192,192,192,100" canbeselected="false" range="300.0" ison="true" />
     <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="1" disabledeltatime="true" comparison="And">
+      <StatusEffect type="Always" target="NearbyCharacters,this" range="125" interval="0.5" disabledeltatime="true" comparison="And">
         <Conditional hastag="neq radiationproof" targetcontainer="true" />
         <Conditional hastag="neq fabricator" targetcontainer="true" />
-        <Affliction identifier="radiationsickness" strength="0.4" />
+        <Affliction identifier="radiationsickness" strength="0.6" />
       </StatusEffect>
       <StatusEffect type="Always" target="this" disabledeltatime="true" comparison="And">
         <Conditional hastag="neq radiationproof" targetcontainer="true" />

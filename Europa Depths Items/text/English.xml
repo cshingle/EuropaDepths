@@ -76,4 +76,5 @@
   <talentname.camaraderie>Commendations</talentname.camaraderie>
   <upgradedescription.increasesupercapacitorefficiency>Supercapacitors will waste less Electricity.</upgradedescription.increasesupercapacitorefficiency>
   <upgradename.increasesupercapacitorefficiency>Upgrade Supercapacitor Efficiency</upgradename.increasesupercapacitorefficiency>
+  <talentdescription.logisticsexpert>Gain [xpbonus]% bonus XP and [moneybonus]% bonus money when completing a [missiontype1] or [missiontype2] mission. Max missions increased by 2.</talentdescription.logisticsexpert>
 </infotexts>

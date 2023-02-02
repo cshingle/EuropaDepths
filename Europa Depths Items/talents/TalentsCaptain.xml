@@ -29,5 +29,36 @@
       </AbilityGroupEffect>
     </Talent>
 
+    <Talent identifier="logisticsexpert">
+      <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="0,6" sheetelementsize="128,128"/>
+      <Description tag="talentdescription.logisticsexpert">
+        <Replace tag="[xpbonus]" value="15" color="gui.green"/>
+        <Replace tag="[moneybonus]" value="15" color="gui.green"/>
+        <Replace tag="[missiontype1]" value="missiontype.cargo" color="gui.orange"/>
+        <Replace tag="[missiontype2]" value="missiontype.personneltransport" color="gui.orange"/>
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnGainMissionMoney">
+        <Conditions>
+          <AbilityConditionMission missiontype="Cargo,Escort"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyValue multiplyvalue="1.15"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+        <Conditions>
+          <AbilityConditionMission missiontype="Cargo,Escort"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyValue multiplyvalue="1.15"/>
+        </Abilities>
+      </AbilityGroupEffect>
+      <AbilityGroupEffect abilityeffecttype="None">
+        <Abilities>
+          <CharacterAbilityGiveStat stattype="ExtraMissionCount" value="2"/>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
+
   </Override>
 </Talents>

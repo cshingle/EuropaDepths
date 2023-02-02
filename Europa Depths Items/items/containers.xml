@@ -115,7 +115,7 @@
       <DecorativeSprite texture="Content/Items/Containers/containers.png" depth="0.83" sourcerect="188,682,124,33" origin="0.5,0.5" />
       <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="1" itempos="46,-47" iteminterval="0,0" itemrotation="90" containedspritedepth="0.84" canbeselected="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
-        <Containable items="mountableweapon,guitar" />
+      <Containable items="mountableweapon" />
       </ItemContainer>
       <Upgrade gameversion="0.18.3.0">
         <ItemContainer>
