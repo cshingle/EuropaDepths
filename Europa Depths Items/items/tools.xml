@@ -1123,14 +1123,15 @@
     <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,320,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,331,161,37" depth="0.55" origin="0.5,0.5" />
     <Body width="161" height="37" density="60" />
-    <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
-      <Attack structuredamage="0" itemdamage="5" targetimpulse="2">
-        <Affliction identifier="blunttrauma" strength="2" />
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-30,0" handle2="-20,5" holdangle="60" reload="1.2" range="175" combatPriority="30" msg="ItemMsgPickUpSelect" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-5.0">
+      <Attack structuredamage="35" itemdamage="20" targetimpulse="5">
+        <Affliction identifier="blunttrauma" strength="20" />
         <Affliction identifier="stun" strength="0.6" />
         <StatusEffect type="OnUse" target="UseTarget">
-          <Conditional entitytype="eq Character"/>
-          <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
-          <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbBlunt1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbBlunt2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbBlunt3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbBlunt4.ogg" range="500" />
         </StatusEffect>
       </Attack>
     </MeleeWeapon>

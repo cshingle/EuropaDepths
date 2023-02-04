@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <Override>
-  
-    <Item name="" identifier="alienblood" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" scale="0.5" RequireAimToUse="True">
+
+    <Item name="" identifier="alienblood" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5" RequireAimToUse="True">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
       <PreferredContainer secondary="storageorgan" minamount="1" maxamount="2" spawnprobability="1"/>
@@ -17,22 +17,24 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,771,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="1,128,30,58" depth="0.6" origin="0.5,0.5" />
       <Body width="30" height="55" density="20" />
-      <MeleeWeapon canbecombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-        <RequiredSkill identifier="medical" level="40" />
-        <StatusEffect tags="medical" type="OnSuccess" target="Character" duration="15.0">
-          <Affliction identifier="psychosis" amount="3" />
-          <ReduceAffliction identifier="bloodloss" amount="8" />
+      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="10" handle1="0,0" msg="ItemMsgPickUpSelect">
+        <RequiredSkill identifier="medical" level="35" />
+        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
-        <StatusEffect tags="medical" type="OnFailure" target="Character" duration="15.0">
-          <Affliction identifier="psychosis" amount="5" />
+        <StatusEffect tags="medical" type="OnSuccess" target="UseTarget, This" duration="15">
+          <ReduceAffliction identifier="bloodloss" amount="8" />
+          <Affliction identifier="psychosis" amount="3" />
+        </StatusEffect>
+        <StatusEffect tags="medical" type="OnFailure" target="UseTarget, This" duration="15">
           <ReduceAffliction identifier="bloodloss" amount="4" />
+          <Affliction identifier="psychosis" amount="5" />
         </StatusEffect>
         <!-- Remove the item when fully used -->
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
-      </MeleeWeapon>
+      </Holdable>
     </Item>
 
     <Item name="" identifier="crawlermask" category="Equipment" tags="smallitem,clothing" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true">
@@ -75,7 +77,8 @@
           <Affliction identifier="bleeding" strength="10" />
           <Affliction identifier="stun" strength="0.2" />
           <Affliction identifier="huskinfection" amount="0.01" probability="0.10" />
-          <StatusEffect type="OnUse" target="Character">
+          <StatusEffect type="OnUse" target="UseTarget">
+            <Conditional entitytype="eq Character"/>
             <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
             <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
             <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />

@@ -1,59 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <Override>
-    <Item name="" identifier="combatstimulantsyringe" category="Medical" maxstacksize="8" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="pressurestabilizer" category="Medical" maxstacksize="8" Tags="smallitem,chem,medical,syringe" allowasextracargo="true" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
-      <Price baseprice="340" sold="false">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" />
-        <Price storeidentifier="merchantresearch" multiplier="0.9" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" />
-        <Price storeidentifier="merchantmine" multiplier="1.1" />
-      </Price>
-      <Fabricate suitablefabricators="medicalfabricator" requiredtime="55" requiresrecipe="true">
-        <RequiredSkill identifier="medical" level="40" />
-        <RequiredItem identifier="sulphuriteshard" />
-        <RequiredItem identifier="antidama1" />
-      </Fabricate>
-      <Deconstruct time="20">
-        <Item identifier="sulphuriteshard" />
-        <Item identifier="antidama1" />
-      </Deconstruct>
-      <InventoryIcon texture="Content/Items/Medical/Medicines.png" sourcerect="448,320,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="264,309,37,68" depth="0.6" origin="0.5,0.5" />
-      <Body width="35" height="65" density="15" />
-      <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-        <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
-        <RequiredSkill identifier="medical" level="35" />
-        <StatusEffect tags="medical" type="OnUse" target="Character" duration="5.0">
-          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-          <Affliction identifier="combatstimulant" amount="15.0" />
-          <Affliction identifier="chemaddiction" amount="4.0" />
-        </StatusEffect>
-        <StatusEffect tags="medical" type="OnFailure" target="Character" duration="5.0">
-          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-          <Sound file="Content/Items/Button/button.ogg" type="OnUse" range="500" />
-          <Affliction identifier="combatstimulant" amount="15.0" />
-          <Affliction identifier="chemaddiction" amount="8.0" />
-        </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <Remove />
-        </StatusEffect>
-      </MeleeWeapon>
-      <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90">
-        <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
-          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        </StatusEffect>
-        <StatusEffect tags="medical" type="OnImpact" target="Character" duration="5.0">
-          <Affliction identifier="combatstimulant" amount="15.0" />
-          <Affliction identifier="chemaddiction" amount="8.0" />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-    <Item name="" identifier="pressurestabilizer" category="Medical" maxstacksize="8" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="medcab"/>
-      <Price baseprice="200" buyingpricemodifier="5">
+      <Price baseprice="200" sold="false">
         <Price storeidentifier="merchantoutpost" />
         <Price storeidentifier="merchantcity" multiplier="0.9" />
         <Price storeidentifier="merchantresearch" multiplier="0.9" />
@@ -65,65 +15,38 @@
         <RequiredItem identifier="oxygeniteshard" />
         <RequiredItem identifier="stabilozine" />
       </Fabricate>
+      <Deconstruct time="20">
+        <Item identifier="oxygeniteshard" />
+      </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,640,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="3,308,37,69" depth="0.6" origin="0.5,0.5" />
-      <Body width="35" height="65" density="15" />
-      <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-        <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <Body width="35" height="65" density="10.2" />
+      <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
         <RequiredSkill identifier="medical" level="35" />
-        <StatusEffect tags="medical" type="OnUse" target="Character" duration="10.0">
-          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
+        <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
+        <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="10.0">
           <Affliction identifier="pressurestabilized" amount="100.0" />
         </StatusEffect>
-        <StatusEffect tags="medical" type="OnFailure" target="Character" duration="10.0">
-          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-          <Sound file="Content/Items/Button/button.ogg" type="OnUse" range="500" />
+        <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="10.0">
           <Affliction identifier="pressurestabilized" amount="50.0" />
+        </StatusEffect>
+        <StatusEffect type="OnSuccess" target="UseTarget">
+          <Conditional entitytype="eq Character"/>
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnFailure" target="UseTarget">
+          <Conditional entitytype="eq Character"/>
+          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
+          <Affliction identifier="stun" amount="0.1" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
       </MeleeWeapon>
-      <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90">
-        <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
-          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        </StatusEffect>
-        <StatusEffect tags="medical" type="OnImpact" target="Character" duration="10.0">
-          <Affliction identifier="pressurestabilized" amount="50.0" />
-        </StatusEffect>
-      </Projectile>
-    </Item>
-    <Item identifier="advancedgenesplicer" variantof="genesplicer" descriptionidentifier="advancedgenesplicer">
-      <PreferredContainer primary="medcab" secondary="medcab"/>
-      <PreferredContainer secondary="abandonedmedcab,wreckmedcab,outpostmedcab" spawnprobability="0"/>
-      <Price baseprice="550" sold="false" minleveldifficulty="65">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" />
-        <Price storeidentifier="merchantresearch" multiplier="1.1" sold="true" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.1" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
-      <Deconstruct time="10">
-        <RequiredItem identifier="fulgurium" />
-        <RequiredItem identifier="fpgacircuit" />
-        <RequiredItem identifier="rubber" amount="2" />
-        <RequiredItem identifier="silicon" amount="2" />
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true">
-        <RequiredSkill identifier="medical" level="60" />
-        <RequiredItem identifier="fulgurium" />
-        <RequiredItem identifier="fpgacircuit" />
-        <RequiredItem identifier="rubber" amount="2" />
-        <RequiredItem identifier="silicon" amount="2" />
-      </Fabricate>
-      <InventoryIcon texture="Content/Items/Genetic/Genetic.png" sourcerect="327,62,73,65" origin="0.5,0.5" />
-      <Sprite name="Headset" texture="Content/Items/Genetic/Genetic.png" depth="0.6" sourcerect="148,85,73,35" origin="0.5,0.5" />
-      <Body radius="8" width="48" density="30" />
-      <ItemContainer capacity="2" />
-      <Wearable>
-        <sprite name="Gene Splicer Wearable" texture="Content/Items/Genetic/Genetic.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.5" hideotherwearables="false" sourcerect="326,131,67,55" origin="0.6,0.0" />
-      </Wearable>
+      <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon"/>
     </Item>
   </Override>
 </Items>

@@ -33,11 +33,11 @@
             <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
                 <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
             </StatusEffect>
-            <StatusEffect tags="medical" type="OnSuccess" target="Character">
+            <StatusEffect tags="medical" type="OnSuccess" target="UseTarget, This">
                 <affliction identifier="minorhealing" strength="100"/>
                 <Affliction identifier="drunk" amount="40" />
             </StatusEffect>
-            <StatusEffect tags="medical" type="OnFailure" target="Character">
+            <StatusEffect tags="medical" type="OnFailure" target="UseTarget, This">
                 <affliction identifier="minorhealing" strength="33"/>
                 <Affliction identifier="drunk" amount="90" />
                 <affliction identifier="nausea" strength="40"/>

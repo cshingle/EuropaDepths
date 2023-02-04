@@ -32,9 +32,9 @@
     </Affliction>
 
     <Affliction name="Mother's Embrace" identifier="mothersembrace" description="Mother's Embrace" type="resistance" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
-        <Effect minstrength="0" maxstrength="1" resistancefor="bleeding,bloodloss" minresistance="0.20" maxresistance="0.20">
+        <Effect minstrength="0" maxstrength="1" resistancefor="bleeding,bloodloss" minresistance="0.3" maxresistance="0.3">
             <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
-                <reduceaffliction type="bleeding" strength="0.1" />
+                <reduceaffliction type="bleeding" strength="0.2" />
                 <reduceaffliction type="bloodloss" strength="0.1" />
             </StatusEffect>
         </Effect>

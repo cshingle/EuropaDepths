@@ -480,7 +480,7 @@
       <ContainedSprite name="PUCS In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="Content/Items/Jobgear/Engineer/PUCS_Items.png" sourcerect="0,191,225,66" depth="0.55" origin="0.6,0.5" />
       <Body radius="45" width="34" density="15" />
       <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
-        <sprite name="PUCS Helmet Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="true" hideotherwearables="true" sourcerect="127,520,105,124" origin="0.5,0.35">
+        <sprite name="PUCS Helmet Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" hideotherwearables="true" sourcerect="127,520,105,124" origin="0.5,0.35">
           <LightComponent range="300.0" lightcolor="250,224,165,255" powerconsumption="10" IsOn="true" allowingameediting="false">
             <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true" comparison="And">
               <Conditional IsDead="false"/>
@@ -776,7 +776,7 @@
         <Affliction identifier="bleeding" strength="35" />
         <Affliction identifier="stun" strength="0.6" />
         <Affliction identifier="blunttrauma" strength="5" />
-        <StatusEffect type="OnUse" target="Character" disabledeltatime="true">
+        <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
           <Conditional radiationsickness="lt 30" />
           <Affliction identifier="radiationsickness" strength="10" />
         </StatusEffect>

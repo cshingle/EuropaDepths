@@ -61,9 +61,6 @@
         <Price storeidentifier="merchantmilitary" multiplier="0.9" />
         <Price storeidentifier="merchantmine" multiplier="1.25" />
       </Price>
-      <Deconstruct time="5">
-        <Item identifier="physicorium" outcondition="0.16666666"/>
-      </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="6">
         <RequiredSkill identifier="weapons" level="30" />
         <RequiredItem identifier="physicorium" />
@@ -162,11 +159,12 @@
         <Affliction identifier="lacerations" strength="60" />
         <Affliction identifier="bleeding" strength="60" />
         <Affliction identifier="stun" strength="0.5" />
-        <StatusEffect tags="poison" type="OnUse" target="Character" duration="20">
+        <StatusEffect tags="poison" type="OnUse" target="UseTarget" duration="20">
           <Affliction identifier="nausea" amount="5" />
         </StatusEffect>
-        <StatusEffect tags="poison" type="OnUse" target="Character" duration="20">
-          <Conditional speciesgroup="mudraptor" />
+        <StatusEffect tags="poison" type="OnUse" target="UseTarget" duration="20">
+          <Conditional speciesgroup="mudraptor"/>
+          <Conditional speciesname="Mudraptor_pet"/>
           <Affliction identifier="organdamage" amount="8" />
         </StatusEffect>
       </Attack>
@@ -954,7 +952,7 @@
       <Fabricate suitablefabricators="fabricator" requiredtime="20" amount="12">
         <RequiredSkill identifier="weapons" level="30" />
         <RequiredItem identifier="magnesium" />
-      <RequiredItem identifier="rubber" amount="2" />
+        <RequiredItem identifier="rubber" amount="2" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="384,640,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="189,269,22,10" depth="0.55" origin="0.5,0.5" />
@@ -1087,7 +1085,7 @@
         <Attack targetimpulse="2">
           <Affliction identifier="stun" strength="0.2" />
         </Attack>
-      <StatusEffect type="OnUse" forceplaysounds="true">
+        <StatusEffect type="OnUse" forceplaysounds="true">
           <Sound type="OnUse" file="Content/Items/Weapons/ToyHammerHit1.ogg" range="800" selectionmode="Random"/>
           <Sound type="OnUse" file="Content/Items/Weapons/ToyHammerHit2.ogg" range="800" />
           <Sound type="OnUse" file="Content/Items/Weapons/ToyHammerHit3.ogg" range="800" />
@@ -1196,41 +1194,6 @@
           <Affliction identifier="drag" strength="1"/>
         </StatusEffect>
       </Projectile>
-    </Item>
-
-    <Item name="" identifier="divingknifeunique" category="Weapon" Tags="smallitem,weapon,mountableweapon" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true" RequireAimToUse="True">
-      <PreferredContainer primary="secarmcab" secondary="armcab"/>
-      <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.05"/>
-      <Price baseprice="770" sold="false" canbespecial="false" />
-      <Deconstruct time="10">
-        <Item identifier="iron" />
-        <Item identifier="morbusine" />
-      </Deconstruct>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="448,320,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="186,183,63,16" depth="0.55" origin="0.5,0.5" />
-      <Body width="65" height="15" density="25" />
-      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-10,0" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
-        <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="2" structuredamage="2" structuresoundtype="StructureSlash">
-          <Affliction identifier="lacerations" strength="10" />
-          <Affliction identifier="bleeding" strength="10" />
-          <Affliction identifier="stun" strength="0.2" />
-          <Affliction identifier="morbusinepoisoning" strength="1" />
-        <StatusEffect type="OnUse" target="UseTarget">
-          <Conditional entitytype="eq Character"/>
-            <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
-            <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
-            <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
-            <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
-            <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
-            <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
-          </StatusEffect>
-        </Attack>
-      </MeleeWeapon>
-      <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
-      <Quality>
-        <QualityStat stattype="StrikingPowerMultiplier" value="0.1"/>
-      </Quality>
-      <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
     <Item name="" identifier="smgunique" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallautoweapon,smallitem,weapon,gun,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true">

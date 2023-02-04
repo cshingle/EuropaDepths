@@ -4,7 +4,7 @@
 
     <Item name="" identifier="batterycell" category="Equipment,Electrical" maxstacksize="8" tags="smallitem,loadable,mobilebattery" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="batterycellrecharger" maxcondition="80"/>
-      <PreferredContainer primary="stunbaton,scooter,handheldsonar,sonarbeacon,flashlight,portablepump" spawnprobability="1.0" mincondition="25"/>
+      <PreferredContainer primary="stunbaton,scooter,handheldsonar,sonarbeacon,flashlight,portablepump,divingsuit,abyssdivingsuit,combatdivingsuit" spawnprobability="1.0" mincondition="25"/>
       <PreferredContainer secondary="divingcab" amount="3" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer secondary="abandonedengcab,wreckengcab,outpostengcab" minamount="1" maxamount="2" spawnprobability="0.1"/>
       <PreferredContainer secondary="abandonedstoragecab,wreckstoragecabcab" minamount="1" maxamount="2" spawnprobability="0.05"/>

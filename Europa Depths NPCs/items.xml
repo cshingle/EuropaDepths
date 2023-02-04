@@ -64,7 +64,8 @@
                 <Affliction identifier="bleeding" strength="10" />
                 <Affliction identifier="stun" strength="0.5" />
                 <Affliction identifier="morbusinepoisoning" strength="2" />
-                <StatusEffect type="OnUse" target="Character">
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
                     <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
                     <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
                     <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
