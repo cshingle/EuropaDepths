@@ -38,7 +38,7 @@
     <Reputation identifier="coalition" amount="5" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48" />
   </MonsterMission>
-  <MonsterMission identifier="killmatriarch3" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="50" reward="6000" maxsonarmarkerdistance="10000">
+  <MonsterMission identifier="killmatriarch3" textidentifier="killmatriarch2" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="50" reward="6000" maxsonarmarkerdistance="10000">
     <monster character="hammerheadmatriarch" count="2" delaybetweenspawns="1" />
     <monster character="hammerhead_veteran" min="5" max="10" delaybetweenspawns="2" />
     <monster character="hammerheadgold_veteran" min="3" max="3" delaybetweenspawns="2" />
@@ -48,7 +48,7 @@
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48" />
   </MonsterMission>
 
-  <MonsterMission identifier="killcrawlerswarm2huge" sonarlabel="character.crawler" name="missionname.killcrawlerswarm1huge" description="missiondescription.killcrawlerswarm1huge" tags="killmonster,killswarm,killswarm_set2" type="Monster" difficulty="4" commonness="10" reward="5000" successmessage="missionsuccess.killcrawlerswarm1" maxsonarmarkerdistance="10000">
+  <MonsterMission identifier="killcrawlerswarm2huge" textidentifier="killcrawlerswarm1huge" sonarlabel="character.crawler" name="missionname.killcrawlerswarm1huge" description="missiondescription.killcrawlerswarm1huge" tags="killmonster,killswarm,killswarm_set2" type="Monster" difficulty="4" commonness="10" reward="5000" successmessage="missionsuccess.killcrawlerswarm1" maxsonarmarkerdistance="10000">
     <monster character="crawlerhusk" min="10" max="15" scatter="2000" delaybetweenspawns="1"/>
     <monster character="crawlerhusk" min="10" max="15" scatter="2000" delaybetweenspawns="4"/>
     <Reputation identifier="location" amount="10" />
@@ -56,13 +56,13 @@
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
     <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killcrawlerswarm1"/>
   </MonsterMission>
-  <MonsterMission identifier="killcrawlerbroodmother4" tags="killmonster,killmonster_set3" textidentifier="killcrawlerbroodmother1" type="Monster" difficulty="4" commonness="90" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother">
+  <MonsterMission identifier="killcrawlerbroodmother4" textidentifier="killcrawlerbroodmother1" tags="killmonster,killmonster_set3" type="Monster" difficulty="4" commonness="90" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother">
     <monster character="Crawler_veteran" min="12" max="16" delaybetweenspawns="1" />
     <Reputation identifier="location" amount="10" delaybetweenspawns="1" />
     <Reputation identifier="coalition" amount="5" delaybetweenspawns="1" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48" />
   </MonsterMission>
-  <MonsterMission identifier="killcrawlerbroodmother5" tags="killmonster,killmonster_set4" textidentifier="killcrawlerbroodmother1" type="Monster" difficulty="4" commonness="90" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother">
+  <MonsterMission identifier="killcrawlerbroodmother5" textidentifier="killcrawlerbroodmother1" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="90" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother">
     <monster character="Crawler_veteran" min="15" max="20" delaybetweenspawns="1" />
     <Reputation identifier="location" amount="10" delaybetweenspawns="1" />
     <Reputation identifier="coalition" amount="5" delaybetweenspawns="1" />
@@ -114,14 +114,14 @@
     <message header="missionheader0.killmudraptors1" text="missionmessage0.killmudraptors1"/>
   </MonsterMission>
 
-  <MonsterMission identifier="killmoloch2" tags="killmonster,killmonster_set3" type="Monster" difficulty="3" commonness="100" reward="4000" maxsonarmarkerdistance="10000" monsterfile="Moloch_m">
+  <MonsterMission identifier="killmoloch2" textidentifier="killmoloch" tags="killmonster,killmonster_set3" type="Monster" difficulty="3" commonness="100" reward="4000" maxsonarmarkerdistance="10000" monsterfile="Moloch_m">
     <monster character="Moloch_m" min="3" max="5" scatter="3000" delaybetweenspawns="5" />
     <Reputation identifier="location" amount="10" />
     <Reputation identifier="coalition" amount="5" />
     <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,512,256,256" color="214,50,48"/>
     <message header="missionheader0.killmoloch" text="missionmessage0.killmoloch"/>
   </MonsterMission>
-  <MonsterMission identifier="killmolochblack2" tags="killmonsterrare,killmonster_set4" textidentifier="killmoloch" type="Monster" difficulty="4" commonness="100" reward="7000" maxsonarmarkerdistance="10000" monsterfile="Molochblack_m">
+  <MonsterMission identifier="killmolochblack2" textidentifier="killmoloch"  tags="killmonsterrare,killmonster_set4" type="Monster" difficulty="4" commonness="100" reward="7000" maxsonarmarkerdistance="10000" monsterfile="Molochblack_m">
     <monster character="Molochblack_m" min="2" max="3" scatter="3000" delaybetweenspawns="30" />
     <monster character="Moloch_m" min="2" max="3" scatter="3000" delaybetweenspawns="5" />
     <Reputation identifier="location" amount="10" />
@@ -130,7 +130,7 @@
     <message header="missionheader0.killmoloch" text="missionmessage0.killmoloch"/>
   </MonsterMission>
 
-  <NestMission identifier="bonethreshernest" tags="nest,tigerthreshernest" type="Nest" spawntype="cave" reward="5000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="20">
+  <NestMission identifier="bonethreshernest" textidentifier="killtigerthresher" tags="nest,tigerthreshernest" type="Nest" spawntype="cave" reward="5000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="20">
     <Items>
       <Item identifier="tigerthresheregg">
         <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>

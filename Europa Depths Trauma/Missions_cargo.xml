@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Missions>
-    <CargoMission identifier="cargoconstructionminerals2" translationidentifier="cargoconstructionminerals" tags="cargo,cargomaterials,cargocampaignstart" type="Cargo" difficulty="1" commonness="50" reward="500" achievementidentifier="cargomission" requireddeliveryamount="0.98">
+    <CargoMission identifier="cargoconstructionminerals2" textidentifier="cargoconstructionminerals" tags="cargo,cargomaterials,cargocampaignstart" type="Cargo" difficulty="1" commonness="50" reward="500" achievementidentifier="cargomission" requireddeliveryamount="0.98">
       <Items>
         <Item identifier="metalcrate" reward="100" maxcount="75">
           <Item identifier="iron" amount="10"/>
@@ -11,7 +11,7 @@
       <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
       <LocationType from="AnyOutpost" to="AnyOutpost" />
     </CargoMission>
-    <CargoMission identifier="cargoconstructionminerals3" translationidentifier="cargoconstructionminerals" tags="cargo,cargomaterials,cargocampaignstart" type="Cargo" difficulty="1" commonness="50" reward="500" achievementidentifier="cargomission" requireddeliveryamount="0.98">
+    <CargoMission identifier="cargoconstructionminerals3" textidentifier="cargoconstructionminerals" tags="cargo,cargomaterials,cargocampaignstart" type="Cargo" difficulty="1" commonness="50" reward="500" achievementidentifier="cargomission" requireddeliveryamount="0.98">
       <Items>
         <Item identifier="metalcrate" reward="100" maxcount="75">
           <Item identifier="carbon" amount="10"/>
@@ -22,7 +22,7 @@
       <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
       <LocationType from="AnyOutpost" to="AnyOutpost" />
     </CargoMission>
-    <CargoMission identifier="cargoconstructionminerals4" translationidentifier="cargoconstructionminerals" tags="cargo,cargomaterials,cargocampaignstart" type="Cargo" difficulty="1" commonness="50" reward="500" achievementidentifier="cargomission" requireddeliveryamount="0.98">
+    <CargoMission identifier="cargoconstructionminerals4" textidentifier="cargoconstructionminerals" tags="cargo,cargomaterials,cargocampaignstart" type="Cargo" difficulty="1" commonness="50" reward="500" achievementidentifier="cargomission" requireddeliveryamount="0.98">
       <Items>
         <Item identifier="metalcrate" reward="100" maxcount="75">
           <Item identifier="tin" amount="10"/>
@@ -33,7 +33,7 @@
       <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
       <LocationType from="AnyOutpost" to="AnyOutpost" />
     </CargoMission>
-    <CargoMission identifier="cargoconstructionminerals5" translationidentifier="cargoconstructionminerals" tags="cargo,cargomaterials,cargocampaignstart" type="Cargo" difficulty="1" commonness="50" reward="500" achievementidentifier="cargomission" requireddeliveryamount="0.98">
+    <CargoMission identifier="cargoconstructionminerals5" textidentifier="cargoconstructionminerals" tags="cargo,cargomaterials,cargocampaignstart" type="Cargo" difficulty="1" commonness="50" reward="500" achievementidentifier="cargomission" requireddeliveryamount="0.98">
       <Items>
         <Item identifier="metalcrate" reward="100" maxcount="75">
           <Item identifier="chlorine" amount="10"/>

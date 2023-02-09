@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Charactervariant inherit="Charybdis" speciesname="Charybdis_juvenile" speciestranslationoverride="Charybdis_juvenile" usebosshealthbar="true">
+  <health Vitality="6000" />
   <ragdoll scalemultiplier="0.6"/>
   <attack damagemultiplier="0.7" rangemultiplier="0.6" impactmultiplier="0.7"/>
   <ai CombatStrength="3000" StayInAbyss="False"/>
