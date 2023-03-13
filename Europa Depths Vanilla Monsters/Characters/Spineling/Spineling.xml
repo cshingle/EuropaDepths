@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Override>
-<Character speciesname="Spineling" humanoid="False" husk="False" needsair="False" needswater="True" canspeak="False" noise="100" visibility="100" blooddecal="blackblood" group="spineling" eatingspeed="20" displayname="" hasinfo="False" usehuskappendage="False" bleedparticleair="blackblooddrop" bleedparticlewater="blackwaterblood" pathfinderpriority="1" hideinsonar="False" speciestranslationoverride="" sonardisruption="0" caneat="False">
+<Character speciesname="Spineling" humanoid="False" husk="False" needsair="False" needswater="True" canspeak="False" noise="100" visibility="100" blooddecal="blackblood" group="spineling" eatingspeed="20" displayname="" hasinfo="False" usehuskappendage="False" bleedparticleair="blackblooddrop" bleedparticlewater="blackwaterblood" pathfinderpriority="1" hideinsonar="False" speciestranslationoverride="" sonardisruption="0" caneat="False" AISlowTurretPriority="0">
   <ragdolls folder="%ModDir%/Characters/Spineling/Ragdolls/" />
   <animations folder="Content/Characters/Spineling/Animations"/>
-  <health vitality="50" doesbleed="True" crushdepth="-Infinity" usehealthwindow="False" bleedingreduction="0" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="0" />
+  <health vitality="50" doesbleed="True" crushdepth="Infinity" usehealthwindow="False" bleedingreduction="0" burnreduction="0" constanthealthregeneration="0" healthregenerationwheneating="0" />
   <ai combatstrength="120" sight="2" hearing="2" aggressionhurt="200" aggressiongreed="0" fleehealththreshold="0" attackwhenprovoked="False" aggressiveboarding="False" targetouterwalls="True" avoidgunfire="True" DamageThreshold="10" enforceaggressivebehaviorformissions="True" randomattack="False" avoidtime="3" minfleetime="20">
     <target tag="decoy" state="Attack" priority="100" reactdistance="0" attackdistance="0" timer="0" ignorecontained="False" attackpattern="Sweep" sweepdistance="1000" sweepstrength="10" sweepspeed="0.5" ignoreifnotinsamesub="True"/>
     <target tag="provocative" state="Attack" priority="100" reactdistance="0" attackdistance="0" timer="0" ignorecontained="False" attackpattern="Sweep" sweepdistance="1000" sweepstrength="10" sweepspeed="0.5" ignoreifnotinsamesub="True"/>
