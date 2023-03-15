@@ -16,25 +16,27 @@
       <SuitableTreatment type="bloodloss" suitability="20" />
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,771,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="1,128,30,58" depth="0.6" origin="0.5,0.5" />
-      <Body width="30" height="55" density="20" />
+      <Body width="30" height="55" density="11" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="10" handle1="0,0" msg="ItemMsgPickUpSelect">
         <RequiredSkill identifier="medical" level="35" />
         <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
         <StatusEffect tags="medical" type="OnSuccess" target="UseTarget, This" duration="15">
-          <ReduceAffliction identifier="bloodloss" amount="8" />
+          <ReduceAffliction identifier="bloodloss" amount="6" />
           <Affliction identifier="psychosis" amount="3" />
         </StatusEffect>
         <StatusEffect tags="medical" type="OnFailure" target="UseTarget, This" duration="15">
-          <ReduceAffliction identifier="bloodloss" amount="4" />
-          <Affliction identifier="psychosis" amount="5" />
+          <ReduceAffliction identifier="bloodloss" amount="3" />
+          <Affliction identifier="psychosis" amount="3" />
         </StatusEffect>
         <!-- Remove the item when fully used -->
         <StatusEffect type="OnBroken" target="This">
           <Remove />
         </StatusEffect>
       </Holdable>
+      <SkillRequirementHint identifier="medical" level="35"/>
+
     </Item>
 
     <Item name="" identifier="crawlermask" category="Equipment" tags="smallitem,clothing" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true">
@@ -43,7 +45,7 @@
       <PreferredContainer primary="locker"/>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" depth="0.6" sourcerect="962,450,59,61" origin="0.5,0.5" />
       <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.6" sourcerect="245,0,118,122" origin="0.5,0.5" />
-      <Body radius="40" width="20" density="30" />
+      <Body radius="40" width="20" density="20" />
       <Deconstruct time="10">
         <Item identifier="carbon" amount="2" />
         <Item identifier="liquidoxygenite" />
@@ -62,11 +64,16 @@
 
     <Item name="" identifier="huskstinger" category="Weapon" Tags="smallitem" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" scale="0.5" allowasextracargo="true" RequireAimToUse="True">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
-      <Price baseprice="100" sold="false" canbespecial="false" />
+      <Price baseprice="1" sold="false" canbespecial="false" />
+      <Price baseprice="500" sold="false">
+        <Price storeidentifier="merchanthusk" minavailable="1" maxavailable="2" sold="true">
+          <Reputation faction="huskcult" min="70"/>
+        </Price>
+      </Price>
       <PreferredContainer primary="armcab"/>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,576,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="425,232,86,23" depth="0.55" origin="0.44,0.6" />
-      <Body radius="10" width="60" density="50" />
+      <Body radius="10" width="60" density="20" />
       <Deconstruct time="10">
         <Item identifier="carbon" amount="2" />
         <Item identifier="liquidoxygenite" />
@@ -96,7 +103,7 @@
       <PreferredContainer primary="locker"/>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,384,64,64" />
       <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="363,0,100,165" depth="0.6" />
-      <Body radius="40" height="60" density="40" />
+      <Body radius="40" height="60" density="20" />
       <Deconstruct time="10">
         <Item identifier="carbon" />
         <Item identifier="phosphorus" amount="2" />
@@ -121,7 +128,7 @@
         <Price storeidentifier="merchantmilitary" multiplier="1" />
         <Price storeidentifier="merchantmine" multiplier="1" />
       </Price>
-      <Deconstruct time="10" chooserandom="true" amount="3">
+      <Deconstruct time="10" chooserandom="true" amount="2">
         <Item identifier="rubber" commonness="0.5"/>
         <Item identifier="iron" commonness="0.2"/>
         <Item identifier="steel" commonness="0.1"/>
@@ -131,7 +138,7 @@
       </Deconstruct>
       <AiTarget sightrange="1000" static="true" />
       <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.18" sourcerect="289,450,190,62" origin="0.5,0.5" />
-      <Body width="180" height="56" density="10.05" friction="1.0" restitution="0.01" angulardamping="1.0" />
+      <Body width="180" height="56" density="20" friction="1.0" restitution="0.01" angulardamping="1.0" />
       <Holdable slots="Any,RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
     </Item>
 

@@ -5,12 +5,10 @@
       <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,3" sheetelementsize="128,128"/>
       <Description tag="talentdescription.miner">
         <Replace tag="[probability]" value="20" color="gui.green"/>
+        <Replace tag="[itemname]" value="entityname.mininglaser" color="gui.orange"/>
       </Description>
       <Description tag="talentdescription.gainoredetachspeed">
         <Replace tag="[amount]" value="100" color="gui.green"/>
-      </Description>
-      <Description tag="talentdescription.unlockrecipe">
-        <Replace tag="[itemname]" value="entityname.mininglaser" color="gui.orange"/>
       </Description>
       <AbilityGroupEffect abilityeffecttype="None">
         <Abilities>

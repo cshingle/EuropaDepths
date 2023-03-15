@@ -21,7 +21,7 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="130,183,61,52" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="64,3,36,28" depth="0.55" origin="0.5,0.5" />
-      <Body width="40" height="22" density="25" />
+      <Body width="40" height="22" density="15" />
       <AiTarget sight="500" staticsight="true" />
       <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect" />
       <MiniMap enableitemfinder="false" enablehullcondition="false" enableelectricalview="false" drawhudwhenequipped="true" displaybordersize="-0.1" characterusable="false" allowuioverlap="true">
@@ -44,7 +44,7 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="251,1,56,57" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="113,239,57,19" depth="0.55" origin="0.5,0.5" />
-      <Body width="60" height="15" density="25" />
+      <Body width="60" height="15" density="30" />
       <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" holdangle="-80" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSuccess" target="This">
           <Remove />
@@ -94,9 +94,9 @@
       <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
         <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
         <RequiredSkill identifier="electrical" level="55" />
-        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
           <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
-          <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+          <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
           <Affliction identifier="stun" strength="4" />
           <Affliction identifier="burn" strength="5" />
         </StatusEffect>
@@ -111,6 +111,7 @@
       </Holdable>
       <ItemContainer capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5,0.6" uilabel="entityname.portablepump">
         <GuiFrame relativesize="0.2,0.2" anchor="Center" relativeoffset="0,0.2" style="ItemUI" />
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
         <Containable items="mobilebattery">
           <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
         </Containable>
@@ -153,134 +154,7 @@
         <StatValue stattype="FlowResistance" value="0.9" />
       </Wearable>
     </Item>
-    <Item name="" identifier="wrenchdementonite" descriptionidentifier="dementonitetool" variantof="wrench" allowasextracargo="true" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4">
-      <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="0" notcampaign="true"/>
-      <PreferredContainer primary="engcab" spawnprobability="0"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
-      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
-      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0"/>
-      <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
-      <Price baseprice="450" sold="false">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
-      <Deconstruct>
-        <Item identifier="iron" />
-        <Item identifier="dementonite" amount="2" />
-      </Deconstruct>
-      <Fabricate requiresrecipe="true">
-        <RequiredItem identifier="dementonite" amount="2" />
-        <RequiredItem identifier="wrench" />
-      </Fabricate>
-      <MeleeWeapon reload="*0.9">
-        <Attack targetimpulse="8">
-          <Affliction identifier="blunttrauma" strength="8.5" />
-          <Affliction identifier="psychosis" strength="5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnFailure" target="Character">
-          <Sound file="Content/Items/Alien/AlienTurret1.ogg" range="500" />
-          <Affliction identifier="psychosis" strength="10" />
-        </StatusEffect>
-      </MeleeWeapon>
-    </Item>
-    <Item name="" identifier="crowbardementonite" descriptionidentifier="dementonitetool" variantof="crowbar" allowasextracargo="true" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedpickingspeedmultiplier="0.6">
-      <PreferredContainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
-      <PreferredContainer primary="engcab" spawnprobability="0"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
-      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0" />
-      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
-      <Price baseprice="450" sold="false" />
-      <Deconstruct>
-        <Item identifier="iron" />
-        <Item identifier="dementonite" amount="2" />
-      </Deconstruct>
-      <Fabricate requiresrecipe="true">
-        <RequiredItem identifier="crowbar" />
-        <RequiredItem identifier="dementonite" amount="2" />
-      </Fabricate>
-      <MeleeWeapon reload="*0.9">
-        <Attack targetimpulse="13">
-          <Affliction identifier="blunttrauma" strength="18" />
-          <Affliction identifier="psychosis" strength="5" />
-          <Affliction identifier="stun" strength="0.5" />
-        </Attack>
-        <StatusEffect type="OnFailure" target="Character">
-          <Sound file="Content/Items/Alien/AlienTurret1.ogg" range="500" />
-          <Affliction identifier="psychosis" strength="10" />
-        </StatusEffect>
-        <StatusEffect type="OnSuccess" target="Character">
-          <Sound file="Content/Items/Alien/AlienTurret2.ogg" range="500" />
-          <Affliction identifier="psychosis" strength="5" probability="0.05" />
-        </StatusEffect>
-      </MeleeWeapon>
-    </Item>
-    <Item name="" identifier="screwdriverdementonite" descriptionidentifier="dementonitetool" variantof="screwdriver" allowasextracargo="true" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4">
-      <PreferredContainer secondary="respawncontainer" spawnprobability="0" notcampaign="true"/>
-      <PreferredContainer primary="reactorcab,engcab" spawnprobability="0"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0"/>
-      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
-      <PreferredContainer primary="wreckreactorcab,abandonedreactorcab" spawnprobability="0" />
-      <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0" />
-      <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
-      <Price baseprice="450" sold="false" />
-      <Deconstruct>
-        <Item identifier="iron" />
-        <Item identifier="dementonite" amount="2" />
-      </Deconstruct>
-      <Fabricate requiresrecipe="true">
-        <RequiredItem identifier="screwdriver" />
-        <RequiredItem identifier="dementonite" amount="2" />
-      </Fabricate>
-      <MeleeWeapon reload="*0.9">
-        <Attack targetimpulse="8">
-          <Affliction identifier="lacerations" strength="7.5" />
-          <Affliction identifier="psychosis" strength="5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnFailure" target="Character">
-          <Sound file="Content/Items/Alien/AlienTurret1.ogg" range="500" />
-          <Affliction identifier="psychosis" strength="10" />
-        </StatusEffect>
-      </MeleeWeapon>
-    </Item>
-    <Item name="" identifier="divingknifedementonite" descriptionidentifier="dementonitetool" variantof="divingknife" allowasextracargo="true" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166">
-      <PreferredContainer secondary="wreckarmcab,abandonedarmcab" spawnprobability="0"/>
-      <PreferredContainer secondary="abandonedstoragecab" spawnprobability="0"/>
-      <PreferredContainer secondary="beaconsupplycab" spawnprobability="0"/>
-      <PreferredContainer primary="armcab,secarmcab" spawnprobability="0" />
 
-      <Price baseprice="450" sold="false">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" />
-        <Price storeidentifier="merchantresearch" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.25" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
-      <Deconstruct>
-        <Item identifier="iron" />
-        <Item identifier="dementonite" amount="2" />
-      </Deconstruct>
-      <Fabricate requiresrecipe="true">
-        <RequiredItem identifier="divingknife" />
-        <RequiredItem identifier="dementonite" amount="2" />
-      </Fabricate>
-      <MeleeWeapon reload="*0.9">
-        <Attack targetimpulse="4" itemdamage="5">
-          <Affliction identifier="lacerations" strength="10" />
-          <Affliction identifier="bleeding" strength="10" />
-          <Affliction identifier="psychosis" strength="5" />
-          <Affliction identifier="stun" strength="0.2" />
-        </Attack>
-        <StatusEffect type="OnUse" target="Character">
-          <Sound file="Content/Items/Alien/AlienTurret2.ogg" range="500" />
-          <Affliction identifier="psychosis" strength="5" probability="0.05" />
-        </StatusEffect>
-      </MeleeWeapon>
-    </Item>
     <Item name="" identifier="fixfoamgrenade" category="Equipment" maxstacksize="8" cargocontaineridentifier="explosivecrate" allowasextracargo="true" tags="smallitem,weapon,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="engcab" secondary="locker"/>
       <Price baseprice="95" sold="false">
@@ -308,7 +182,7 @@
         <!-- statuseffect that explodes the grenade when used by something else than a character (e.g. a detonator) -->
         <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
         <StatusEffect type="OnBroken" target="This">
-          <sound file="Content/Items/Weapons/StunGrenade.ogg" />
+          <sound file="Content/Items/Weapons/StunGrenade.ogg" range="2000"/>
           <Explosion range="200" force="0.5" smoke="false" flames="false" underwaterbubble="false" sparks="false" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This" delay="0.5">
@@ -322,25 +196,25 @@
           <ParticleEmitter particle="fixfoamgoosplash" anglemax="360" distancemax="10" scalemultiplier="2.0,2.0" particlespersecond="20" />
         </StatusEffect>
       </ItemComponent>
-      <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="4.0" msg="ItemMsgPickUpSelect">
+      <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="3.5" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="0.5" disabledeltatime="true" checkconditionalalways="true" />
       </Throwable>
     </Item>
 
-    <Item name="" identifier="exosuit" category="Diving,Equipment" tags="diving,deepdiving,deepdivinglarge" scale="0.605" fireproof="true" description="" isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
-      <Price baseprice="80" canbespecial="false" sold="false"/>
+    <Item name="" identifier="exosuit" category="Diving,Equipment" tags="diving,deepdiving,deepdivinglarge,radiationproof" scale="0.605" fireproof="true" description="" isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy">
+      <Price baseprice="80" canbespecial="false" sold="false" />
       <Deconstruct time="30">
         <Item identifier="titaniumaluminiumalloy" amount="4" />
         <Item identifier="rubber" amount="3" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="45" requiresrecipe="true">
-        <RequiredSkill identifier="mechanical" level="60"/>
-        <RequiredItem identifier="titaniumaluminiumalloy" amount="4"/>
-        <RequiredItem identifier="rubber" amount="3"/>
+        <RequiredSkill identifier="mechanical" level="60" />
+        <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
+        <RequiredItem identifier="rubber" amount="3" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/Jobgear/Mechanic/Exosuit.png" sourcerect="384,384,128,128" origin="0.5,0.5" />
       <Sprite name="Exosuit Item" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" sourcerect="2,266,203,244" depth="0.55" origin="0.5,0.5" />
-      <Body width="150" height="230" density="15" />
+      <Body width="150" height="230" density="30" />
       <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select" allowusewhenworn="true">
         <sprite name="Exosuit Helmet Wearable" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="Head" hidelimb="true" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hideotherwearables="true" hidewearablesoftype="" sourcerect="0,0,1,1" origin="0.5,0.5" />
         <sprite name="Exosuit Torso" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="Torso" scale="1.2" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.8" inheritlimbdepth="true" inheritsourcerect="false" sourcerect="167,1,203,193">
@@ -363,8 +237,8 @@
         <sprite name="Exosuit Right Shoe" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
         <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
         <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="10000.0" SpeedMultiplier="0.4" PropulsionSpeedMultiplier="0.25" setvalue="true" disabledeltatime="true">
-          <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" loop="true"/>
-          <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" loop="true"/>
+          <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="250" loop="true"/>
+          <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="250" loop="true"/>
         </StatusEffect>
         <!-- no HMG stun -->
         <StatusEffect type="OnWearing" target="Character" interval="0.9" disabledeltatime="true">
@@ -374,8 +248,9 @@
         <StatusEffect type="OnWearing" target="This,Character" SpeedMultiplier="0.4" setvalue="true" disabledeltatime="true">
           <Conditional Voltage="gt 0.5" />
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained" Condition="-0.1" interval="1" disabledeltatime="true" targetslot="1">
-          <RequiredItem items="mobilebattery" targetslot="1" type="Contained" />
+        <StatusEffect type="OnWearing" target="Contained,Character" Condition="-0.1" interval="1" disabledeltatime="true" targetslot="1" comparison="Or">
+          <Conditional IsDead="false" />
+          <RequiredItem items="reactorfuel" targetslot="1" type="Contained" />
         </StatusEffect>
         <!-- 0 movement speed when out of fuel-->
         <StatusEffect type="OnWearing" target="This,Character" SpeedMultiplier="-10.0" setvalue="true" disabledeltatime="true">
@@ -401,29 +276,32 @@
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.5" damagesound="" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor"/>
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="acidburn" damagemultiplier="0.1" damagesound=""/>
+        <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.7" damagesound=""/>
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor"/>
         <sound file="Content/Items/Weapons/WEAPONS_chargeUp.ogg" type="OnWearing" range="500.0" volumeproperty="Speed" volume="0.2" loop="true" frequencymultiplier="0.5" />
+        <StatValue stattype="FlowResistance" value="0.9" />
         <StatValue stattype="MeleeAttackMultiplier" value="0.25" />
-        <StatusEffect type="OnWearing" target="Contained,Character" comparison="And" targetslot="0">
-          <RequiredItem items="oxygensource" type="Contained" />
-          <Conditional condition="lt 5.0" targetslot="0" />
-          <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" />
-        </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
-          <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
-          <Conditional condition="lte 0.0" targetslot="0" />
-          <Sound file="Content/Items/WarningBeep.ogg" range="500" />
-        </StatusEffect>
       </Wearable>
       <ItemContainer capacity="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
-        <SlotIcon slotindex="0" texture="Content/UI/ContainerIndicators.png" sourcerect="1,93,120,29" origin="0.5,0.45"/>
-        <SlotIcon slotindex="1" texture="Content/UI/ContainerIndicators.png" sourcerect="2,184,120,32" origin="0.5,0.5"/>
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="192,448,64,64" origin="0.5,0.5" />
         <SlotIcon slotindex="2" texture="%ModDir%/sprites/items.png" sourcerect="335,10,64,44" scale="0.5" origin="0.5,0.45" />
+        <StatusEffect type="OnWearing" target="Contained" targetslot="0">
+          <RequiredItem items="oxygensource" type="Contained" targetslot="0" />
+          <Conditional condition="lt 5.0" />
+          <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" loop="true"/>
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained" targetslot="0" playsoundonrequireditemfailure="true">
+          <RequiredItem items="oxygensource" type="Contained" targetslot="0" matchonempty="true" />
+          <Conditional condition="lte 0.0" />
+          <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true"/>
+        </StatusEffect>
         <SubContainer capacity="1" maxstacksize="1">
           <Containable items="oxygensource,weldingtoolfuel"/>
         </SubContainer>
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="mobilebattery">
+          <Containable items="reactorfuel">
             <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
           </Containable>
         </SubContainer>
@@ -434,7 +312,7 @@
           <Containable items="smallitem"/>
         </SubContainer>
       </ItemContainer>
-      <aitarget maxsightrange="1500"/>
+      <aitarget maxsightrange="1500" />
     </Item>
 
   </Override>
@@ -495,6 +373,8 @@
       </LightComponent>
     </RepairTool>
     <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-30,-10" containedspritedepth="0.60" itemrotation="90" containedstateindicatorstyle="battery">
+    <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+
       <Containable items="mobilebattery" />
     </ItemContainer>
     <aitarget sightrange="2000" soundrange="500" fadeouttime="3" />

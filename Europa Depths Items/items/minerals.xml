@@ -29,7 +29,7 @@
       <DecorativeSprite texture="Content/Items/Materials/MineralEnvironment.png" depth="0.491" sourcerect="341,292,86,147" offset="0,-30" randomrotation="-20,20" randomscale="0.8,1.5" randomoffset="30,10" origin="0.5,0.5" randomgroupid="3" />
       <DecorativeSprite texture="Content/Items/Materials/MineralEnvironment.png" depth="0.53" sourcerect="256,293,86,146" offset="0,-30" randomrotation="-20,20" randomscale="0.8,1.5" randomoffset="30,10" origin="0.5,0.5" randomgroupid="3" />
       <DecorativeSprite texture="Content/Items/Materials/Minerals.png" depth="0.4" sourcerect="810,893,173,131" offset="0,-40" randomrotation="-20,20" origin="0.5,0.5" />
-      <Body radius="40" width="20" density="50" />
+      <Body radius="40" width="20" density="25" />
       <LevelResource deattachduration="4" randomoffsetfromwall="80">
         <Commonness commonness="0.45" abysscommonness="25" />
         <Commonness commonness="0.55" abysscommonness="10" leveltype="europanridge" />

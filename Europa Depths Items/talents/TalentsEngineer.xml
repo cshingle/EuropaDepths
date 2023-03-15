@@ -11,6 +11,7 @@
             <AddedRecipe itemidentifier="3030rounddepletedfuel"/>
             <AddedRecipe itemidentifier="depletedshotgunslugshell"/>
         </Talent>
+
         <Talent identifier="dangerzone">
             <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,0" sheetelementsize="128,128"/>
             <Description tag="talentdescription.dangerzone">
@@ -31,6 +32,7 @@
                 </Abilities>
             </AbilityGroupInterval>
         </Talent>
+        
         <Talent identifier="militaryapplications">
             <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="7,6" sheetelementsize="128,128"/>
             <Description tag="talentdescription.skillbonus">

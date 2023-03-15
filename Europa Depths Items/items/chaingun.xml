@@ -30,7 +30,7 @@
         <RequiredSkill identifier="weapons" level="35" />
         <RequiredItem identifier="lead" />
         <RequiredItem identifier="titanium" />
-        <RequiredItem identifier="chaingunammobox" mincondition="0.0" maxcondition="0.0" usecondition="false"/>
+        <RequiredItem identifier="chaingunammobox" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
       </Fabricate>
       <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
     <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="680,687,95,78" origin="0.5,0.5" />
@@ -118,7 +118,7 @@
       </Fabricate>
       <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
     <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="747,602,95,78" origin="0.5,0.5" />d
-      <Body width="115" height="88" density="50" />
+      <Body width="115" height="88" density="30" />
       <Holdable slots="RightHand+LeftHand" canBeCombined="true" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect" />
       <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" canbecombined="true" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
         <StatusEffect type="OnUse" target="This" disabledeltatime="true">

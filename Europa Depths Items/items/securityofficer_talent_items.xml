@@ -396,10 +396,6 @@
       <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
         <sprite name="Slipsuit Helmet Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" alphaclipotherwearables="true" sourcerect="0,520,105,124" origin="0.5,0.4">
           <LightComponent range="300.0" lightcolor="250,224,165,255" powerconsumption="10" IsOn="true" allowingameediting="false">
-            <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true" comparison="And">
-              <Conditional IsDead="false" />
-              <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" targetslot="1"/>
-            </StatusEffect>
             <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.2"/>
           </LightComponent>
         </sprite>
@@ -461,19 +457,23 @@
           <Conditional IsDead="false" />
           <RequiredItem items="oxygenitetank" type="Contained" targetslot="0"/>
         </StatusEffect>
-        <StatusEffect type="OnWearing" targettype="Contained,Character" targetslot="1" Condition="-0.1" comparison="And">
+        <StatusEffect type="OnWearing" targettype="Contained,Character" targetslot="1" Condition="-0.1" interval="1" disabledeltatime="true" comparison="And">
           <Conditional IsPlayer="True"/>
           <RequiredItem items="mobilebattery" type="Contained" targetslot="1"/>
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" comparison="And" targetslot="0">
+        <StatusEffect type="OnWearing" targettype="Contained,Character" Condition="-0.1" interval="1" targetslot="1" disabledeltatime="true" comparison="And">
+          <Conditional IsDead="true" />
+          <RequiredItem items="mobilebattery" type="Contained" targetslot="1"/>
+        </StatusEffect>
+        <StatusEffect type="OnWearing" target="Contained,Character" interval="0.5" comparison="And" targetslot="0">
           <RequiredItem items="oxygensource" type="Contained" />
           <Conditional condition="lt 5.0" targetslot="0" />
-          <Sound file="Content/Items/WarningBeepSlow.ogg" range="500" />
+          <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" />
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+        <StatusEffect type="OnWearing" target="Contained" interval="0.5" playsoundonrequireditemfailure="true" targetslot="0">
           <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
           <Conditional condition="lte 0.0" targetslot="0" />
-          <Sound file="Content/Items/WarningBeep.ogg" range="500" />
+          <Sound file="Content/Items/WarningBeep.ogg" range="250" />
         </StatusEffect>
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.75" damagesound="" deflectprojectiles="true" />
@@ -483,8 +483,8 @@
       <Holdable slots="RightHand+LeftHand" controlpose="true" holdpos="0,-50" handle1="-10,-20" handle2="10,-20" holdangle="45" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" />
       <ItemContainer capacity="0" maxstacksize="0" slotsperrow="2" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0" autoinject="true">
         <Containable items="none" />
-        <SlotIcon slotindex="0" texture="Content/UI/ContainerIndicators.png" sourcerect="1,93,120,29" origin="0.5,0.45" />
-        <SlotIcon slotindex="1" texture="Content/UI/WeaponUI.png" sourcerect="64,961,32,22" origin="0.5,0.45" />
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+        <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
         <SlotIcon slotindex="2" texture="Content/UI/ContainerIndicators.png" sourcerect="2,155,120,29" origin="0.5,0.5" />
         <SlotIcon slotindex="3" texture="Content/UI/ContainerIndicators.png" sourcerect="2,155,120,29" origin="0.5,0.5" />
         <SubContainer capacity="1" maxstacksize="1">

@@ -73,7 +73,6 @@
   <talentdescription.commendations>Whenever you finish at least one mission, gain a ‖color:gui.orange‖Commendation‖end‖.\nWhenever you complete all missions gain a ‖color:gui.orange‖Commendation‖end‖.\nWhen you apply a ‖color:gui.orange‖Commendation‖end‖ on another character, give them [selfxpgain] experience.</talentdescription.commendations>
   <talentdescription.miner>Unlock recipe: [itemname].\nWhenever you deconstruct an ore, you have a [probability]% chance to gain double the output.</talentdescription.miner>
   <talentdescription.waterprankster>Clown Power gives you immunity to pressure and allows you to swim [swimspeedvalue]% faster.</talentdescription.waterprankster>
-  <talentname.camaraderie>Commendations</talentname.camaraderie>
   <upgradedescription.increasesupercapacitorefficiency>Supercapacitors will waste less Electricity.</upgradedescription.increasesupercapacitorefficiency>
   <upgradename.increasesupercapacitorefficiency>Upgrade Supercapacitor Efficiency</upgradename.increasesupercapacitorefficiency>
   <talentdescription.logisticsexpert>Gain [xpbonus]% bonus XP and [moneybonus]% bonus money when completing a [missiontype1] or [missiontype2] mission. Max missions increased by 2.</talentdescription.logisticsexpert>
