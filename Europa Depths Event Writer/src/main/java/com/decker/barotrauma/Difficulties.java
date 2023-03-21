@@ -1,11 +1,9 @@
 package com.decker.barotrauma;
 
-import com.decker.barotrauma.campaign.Character;
 import com.decker.barotrauma.campaign.Comment;
 import com.decker.barotrauma.campaign.CommonnessEvent;
 import com.decker.barotrauma.campaign.DifficultySet;
 import com.decker.barotrauma.campaign.EventSet;
-import com.decker.barotrauma.campaign.MonsterEvent;
 import com.decker.barotrauma.campaign.SpawnEvent;
 
 public class Difficulties {
@@ -315,12 +313,4 @@ public class Difficulties {
 						new SpawnEvent("10_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.hydrothermalWastesNearStation()));
 	}
 	
-	public static EventSet end() {
-		return new DifficultySet(11)
-				.identifier("End")
-				.biome("endzone")
-				.extend(
-						new SpawnEvent("boss", 0.05D, 60, 1).monsters(
-								new MonsterEvent(Character.Doomworm, 1, 1)).spawntype("mainpath"));
-	}
 }

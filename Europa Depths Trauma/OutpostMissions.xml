@@ -1,13 +1,11 @@
 <Missions>
     <Override>
-        <OutpostNestMission name="Outpost Recovery" identifier="abandonedoutpostmudraptor" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MaxDifficulty="50" type="OutpostDestroy" reward="3000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
-            <Reputation identifier="location" amount="10"/>
-            <Reputation identifier="coalition" amount="5"/>
+        <AbandonedOutpostMission identifier="abandonedoutpostmudraptor" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MaxDifficulty="35" achievementidentifier="abandonedoutpostdestroymonsters" type="OutpostDestroy" reward="3000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
             <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
-            <LocationType identifier="Abandoned"/>
-            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
+            <LocationType identifier="Abandoned" />
+            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
             <Characters>
-                <Character identifier="husk" min="0" max="2"/>
+                <Character identifier="husk" min="-2" max="2" />
                 <Character identifier="mudraptor" min="6" max="8"/>
                 <Character identifier="mudraptor_veteran" min="3" max="5"/>
                 <Character identifier="mudraptor" min="4" max="6" multiplayeronly="true"/>
@@ -17,47 +15,22 @@
                     <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
                 </Item>
                 <Item identifier="largemudraptoregg" spawnpointtags="nest">
-                    <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9"/>
+                    <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
                 </Item>
-                <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
-                <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
-                <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
-                <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
-            </Items>
-            <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
-        </OutpostNestMission>
-        <OutpostNestMission name="Outpost Recovery" identifier="abandonedoutpostcrawler" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MaxDifficulty="50" type="OutpostDestroy" reward="3000" difficulty="3" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
-            <Reputation identifier="location" amount="10"/>
-            <Reputation identifier="coalition" amount="5"/>
-            <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
-            <LocationType identifier="Abandoned"/>
-            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
-            <Characters>
-                <Character identifier="husk" min="1" max="2"/>
-                <Character identifier="crawler" min="10" max="15"/>
-            </Characters>
-            <Items>
-                <Item identifier="crawleregg" spawnpointtags="nest">
-                    <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
-                </Item>
-                <Item identifier="crawleregg" spawnpointtags="nest">
-                    <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9"/>
-                </Item>
-                <Item identifier="crawleregg" spawnpointtags="nest"/>
-                <Item identifier="crawleregg" spawnpointtags="nest"/>
-                <Item identifier="crawleregg" spawnpointtags="nest"/>
-                <Item identifier="crawleregg" spawnpointtags="nest"/>
+                <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+                <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+                <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+                <Item identifier="largemudraptoregg" spawnpointtags="nest" />
             </Items>
             <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
             <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
-        </OutpostNestMission>
+        </AbandonedOutpostMission>
+
     </Override>
-    <OutpostNestMission name="Outpost Recovery Dire" identifier="abandonedoutpostmudraptordire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="50" type="OutpostDestroy" reward="5000" difficulty="4" commonness="15" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
-        <Reputation identifier="location" amount="10"/>
-        <Reputation identifier="coalition" amount="5"/>
+    <AbandonedOutpostMission identifier="abandonedoutpostmudraptordire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="35" achievementidentifier="abandonedoutpostdestroymonsters" type="OutpostDestroy" reward="3000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
-        <LocationType identifier="Abandoned"/>
-        <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
+        <LocationType identifier="Abandoned" />
+        <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
         <Characters>
             <Character identifier="husk" min="0" max="2"/>
             <Character identifier="mudraptor" min="1" max="3"/>
@@ -68,21 +41,47 @@
                 <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
             </Item>
             <Item identifier="largemudraptoregg" spawnpointtags="nest">
-                <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9"/>
+                <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
             </Item>
-            <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
-            <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
-            <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
-            <Item identifier="largemudraptoregg" spawnpointtags="nest"/>
+            <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+            <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+            <Item identifier="largemudraptoregg" spawnpointtags="nest" />
+            <Item identifier="largemudraptoregg" spawnpointtags="nest" />
         </Items>
         <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
-    </OutpostNestMission>
-    <OutpostNestMission name="Outpost Recovery Dire" identifier="abandonedoutpostcrawlerdire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="50" type="OutpostDestroy" reward="5000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
-        <Reputation identifier="location" amount="10"/>
-        <Reputation identifier="coalition" amount="5"/>
+        <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
+    </AbandonedOutpostMission>
+
+    <Override>
+        <AbandonedOutpostMission identifier="abandonedoutpostcrawler" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MaxDifficulty="35" achievementidentifier="abandonedoutpostdestroymonsters" type="OutpostDestroy" reward="3000" difficulty="3" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+            <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
+            <LocationType identifier="Abandoned" />
+            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+            <Characters>
+                <Character identifier="husk" min="-2" max="2" />
+                <Character identifier="crawler" min="8" max="10"/>
+            </Characters>
+            <Items>
+                <Item identifier="crawleregg" spawnpointtags="nest">
+                    <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
+                </Item>
+                <Item identifier="crawleregg" spawnpointtags="nest">
+                    <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+                </Item>
+                <Item identifier="crawleregg" spawnpointtags="nest" />
+                <Item identifier="crawleregg" spawnpointtags="nest" />
+                <Item identifier="crawleregg" spawnpointtags="nest" />
+                <Item identifier="crawleregg" spawnpointtags="nest" />
+            </Items>
+            <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
+            <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
+        </AbandonedOutpostMission>
+    </Override>
+
+    <AbandonedOutpostMission identifier="abandonedoutpostcrawlerdire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="35" achievementidentifier="abandonedoutpostdestroymonsters" type="OutpostDestroy" reward="3000" difficulty="3" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
-        <LocationType identifier="Abandoned"/>
-        <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
+        <LocationType identifier="Abandoned" />
+        <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
         <Characters>
             <Character identifier="husk" min="0" max="5"/>
             <Character identifier="crawler_veteran" min="20" max="25"/>
@@ -92,39 +91,14 @@
                 <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
             </Item>
             <Item identifier="crawleregg" spawnpointtags="nest">
-                <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9"/>
+                <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
             </Item>
-            <Item identifier="crawleregg" spawnpointtags="nest"/>
-            <Item identifier="crawleregg" spawnpointtags="nest"/>
-            <Item identifier="crawleregg" spawnpointtags="nest"/>
-            <Item identifier="crawleregg" spawnpointtags="nest"/>
+            <Item identifier="crawleregg" spawnpointtags="nest" />
+            <Item identifier="crawleregg" spawnpointtags="nest" />
+            <Item identifier="crawleregg" spawnpointtags="nest" />
+            <Item identifier="crawleregg" spawnpointtags="nest" />
         </Items>
         <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
         <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
-    </OutpostNestMission>
-    <OutpostNestMission name="Outpost Recovery Dire" identifier="abandonedoutposthuskcrawlerdire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="50" type="OutpostDestroy" reward="5000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
-        <Reputation identifier="location" amount="10"/>
-        <Reputation identifier="coalition" amount="5"/>
-        <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
-        <LocationType identifier="Abandoned"/>
-        <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
-        <Characters>
-            <Character identifier="husk" min="0" max="5"/>
-            <Character identifier="Crawlerhusk" min="20" max="25"/>
-        </Characters>
-        <Items>
-            <Item identifier="crawleregg" spawnpointtags="nest">
-                <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
-            </Item>
-            <Item identifier="crawleregg" spawnpointtags="nest">
-                <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9"/>
-            </Item>
-            <Item identifier="crawleregg" spawnpointtags="nest"/>
-            <Item identifier="crawleregg" spawnpointtags="nest"/>
-            <Item identifier="crawleregg" spawnpointtags="nest"/>
-            <Item identifier="crawleregg" spawnpointtags="nest"/>
-        </Items>
-        <TriggerEvent state="0" delay="5" eventidentifier="assassinationofjacovsubra1" campaignonly="true"/>
-        <message header="missionheader0.abandonedoutpostmonsters" text="missionmessage0.abandonedoutpostmonsters"/>
-    </OutpostNestMission>
+    </AbandonedOutpostMission>
 </Missions>

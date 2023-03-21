@@ -1,136 +1,314 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Missions>
   <Override>
-    <BeaconMission identifier="beacon" textidentifier="beaconmission" tags="beacon" type="Beacon" difficulty="3" MaxDifficulty="50" commonness="200" reward="2800">
+    <BeaconMission identifier="beacon" textidentifier="beaconmission" tags="beacon" type="Beacon" difficulty="3" MaxDifficulty="40" commonness="200" reward="2800">
       <monsters commonness="100">
-        <monster character="Crawler" min="6" max="10" />
+        <monster character="Crawler" min="6" max="10" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="60">
-        <monster character="Mudraptor" min="4" max="6" />
-        <monster character="Mudraptor_unarmored" min="4" max="8" />
+        <monster character="Mudraptor" min="4" max="6" delaybetweenspawns="1" />
+        <monster character="Mudraptor_unarmored" min="4" max="8" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="50">
-        <monster character="Husk" min="6" max="10" />
+        <monster character="Husk" min="6" max="10" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="10">
-        <monster character="Mudraptor" min="4" max="6" />
-        <monster character="mudraptor_veteran" min="2" max="4" />
+        <monster character="Mudraptor" min="4" max="6" delaybetweenspawns="1" />
+        <monster character="mudraptor_veteran" min="2" max="4" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="30">
-        <monster character="Tigerthresher" min="4" max="8" />
-        <monster character="Bonethresher" min="0" max="6" />
+        <monster character="Tigerthresher" min="4" max="8" delaybetweenspawns="1" />
+        <monster character="Bonethresher" min="0" max="6" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="30">
-        <monster character="Husk" min="10" max="10" />
+        <monster character="Husk" min="10" max="10" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="10">
-        <monster character="Tigerthresher" min="3" max="4" />
-        <monster character="Bonethresher" min="3" max="5" />
+        <monster character="Tigerthresher" min="3" max="4" delaybetweenspawns="1" />
+        <monster character="Bonethresher" min="3" max="5" delaybetweenspawns="1" />
       </monsters>
       <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,256,256,256" color="243,146,55"/>
-      <Reputation identifier="coalition" amount="5" />
       <message text="missionmessage0.beaconmission" />
     </BeaconMission>
 
-    <BeaconMission identifier="beaconnoreward" tags="beacon,beaconnoreward" type="Beacon" difficulty="3" MaxDifficulty="50" commonness="0" reward="2200" sideobjective="true">
+    <BeaconMission identifier="beaconnoreward" tags="beacon,beaconnoreward" type="Beacon" difficulty="3" MaxDifficulty="40" commonness="0" reward="2200" sideobjective="true">
       <monsters commonness="100">
-        <monster character="Crawler" min="6" max="8" />
+        <monster character="Crawler" min="6" max="8" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="60">
-        <monster character="Mudraptor" min="1" max="5" />
-        <monster character="Mudraptor_unarmored" min="0" max="3" />
+        <monster character="Mudraptor" min="2" max="5" delaybetweenspawns="1" />
+        <monster character="Mudraptor_unarmored" min="2" max="5" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="50">
-        <monster character="Husk" min="1" max="8" />
+        <monster character="Husk" min="3" max="8" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="40">
-        <monster character="Mudraptor" min="1" max="6" />
-        <monster character="mudraptor_veteran" min="0" max="4" />
+        <monster character="Mudraptor" min="4" max="6" delaybetweenspawns="1" />
+        <monster character="mudraptor_veteran" min="0" max="4" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="30">
-        <monster character="Tigerthresher" min="1" max="4" />
-        <monster character="Bonethresher" min="0" max="4" />
+        <monster character="Tigerthresher" min="1" max="4" delaybetweenspawns="1" />
+        <monster character="Bonethresher" min="0" max="4" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="20">
-        <monster character="Hammerhead" min="4" max="7" />
-        <monster character="Hammerheadgold" min="1" max="3" />
-        <monster character="Hammerheadblack" min="1" max="3" />
+        <monster character="Hammerhead" min="4" max="7" delaybetweenspawns="1" />
+        <monster character="Hammerheadgold" min="1" max="3" delaybetweenspawns="1" />
+        <monster character="Hammerheadblack" min="1" max="3" delaybetweenspawns="1" />
       </monsters>
       <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,256,256,256" color="243,146,55"/>
-      <Reputation identifier="coalition" amount="5" />
       <message text="missionmessage0.beaconmission" />
     </BeaconMission>
 
-    <AlienRuinClearMission identifier="clearruin" tags="alienruin,alienruinclear" type="ClearAlienRuins" difficulty="4" commonness="25" reward="7000" sonarlabel="target" targetitems="guardianpod" targetenemies="fractalguardian,fractalguardian2" minenemycount="6" requireruin="true">
-      <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,768,256,256" color="214,50,48" />
-      <Reputation identifier="location" amount="10" />
-      <Reputation identifier="coalition" amount="5" />
-      <LocationType from="City" to="Research" />
-      <LocationType from="City" to="None" />
-      <LocationType from="City" to="Lair" />
-      <LocationType from="Outpost" to="Research" />
-      <LocationType from="Outpost" to="None" />
-      <LocationType from="Outpost" to="Lair" />
-      <LocationType from="Research" to="None" />
-      <LocationType from="Research" to="City" />
-      <LocationType from="Research" to="Outpost" />
-      <LocationType from="Research" to="Military" />
-      <LocationType from="Research" to="Research" />
-      <LocationType from="Research" to="Mine" />
-      <LocationType from="Research" to="Lair" />
+    <AlienRuinClearMission identifier="clearruin" tags="alienruin,alienruinclear" achievementidentifier="clearruin" type="ClearAlienRuins" difficulty="4" commonness="25" reward="7000" sonarlabel="target" targetitems="guardianpod" targetenemies="fractalguardian,fractalguardian2" minenemycount="6" requireruin="true">
+      <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,768,256,256" color="214,50,48"/>
+      <Portrait texture="Content/Map/LocationPortraits/AlienRuins.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+      <Portrait texture="Content/Map/LocationPortraits/AlienRuins2.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+      <Portrait texture="Content/Map/LocationPortraits/AlienRuins3.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+      <Portrait texture="Content/Map/LocationPortraits/AlienRuins4.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+      <Reputation identifier="location" amount="2" />
+      <LocationType from="City" to="Research"/>
+      <LocationType from="City" to="None"/>
+      <LocationType from="City" to="Lair"/>
+      <LocationType from="Outpost" to="Research"/>
+      <LocationType from="Outpost" to="None"/>
+      <LocationType from="Outpost" to="Lair"/>
+      <LocationType from="Research" to="None"/>
+      <LocationType from="Research" to="City"/>
+      <LocationType from="Research" to="Outpost"/>
+      <LocationType from="Research" to="Military"/>
+      <LocationType from="Research" to="Research"/>
+      <LocationType from="Research" to="Mine"/>
+      <LocationType from="Research" to="Lair"/>
     </AlienRuinClearMission>
-    <EscortMission name="Terrorist Stakeout" identifier="escort4" tags="escortterrorists, escort" type="Escort" description="Separatist terrorists have been hijacking ships in this sector. Our reports suggest that some of them have snuck onto your ship alongside innocent passengers. Make sure the innocent passengers make it to [location2] alive, and be ready for any hostile takeover. Get rid of any terrorists you come across." difficulty="4" commonness="20" reward="3500" achievementidentifier="escortmission" successmessage="Personnel transport successful and the terrorists have been dealt with." baseescortedcharacters="3" scalingescortedcharacters="0.5" terroristchance="0.5">
-      <message header="Personnel died" text="" />
-      <message header="Terrorists defeated" text="" />
-      <Characters>
-        <Item from="escortnpcs1" identifier="commoner" />
-      </Characters>
-      <TerroristItems>
-        <Item identifier="divingknife" equip="true" mindifficulty="15" MaxDifficulty="30" />
-        <Item identifier="divingknife" equip="true" mindifficulty="15" MaxDifficulty="30" />
-        <Item identifier="revolver" equip="true" mindifficulty="25" MaxDifficulty="35">
-          <Item identifier="revolverround" />
-          <Item identifier="revolverround" />
-          <Item identifier="revolverround" />
-          <Item identifier="revolverround" />
-          <Item identifier="revolverround" />
-          <Item identifier="revolverround" />
+
+    <AlienRuinScanMission identifier="scanruin" tags="alienruin,alienruinscan" achievementidentifier="scanruin" type="ScanAlienRuins" description="" difficulty="4" commonness="30" reward="5000" sonarlabel="scantarget" targets="4" mintargetdistance="4000" displaytargethudicons="true" hudiconmaxdistance="1500" requireruin="true">
+      <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,768,256,256" color="243,146,55"/>
+      <HudIcon texture="Content/UI/InventoryUIAtlas.png" sourcerect="565,269,64,64"/>
+      <Portrait texture="Content/Map/LocationPortraits/AlienRuins.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+      <Portrait texture="Content/Map/LocationPortraits/AlienRuins2.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+      <Portrait texture="Content/Map/LocationPortraits/AlienRuins3.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+      <Portrait texture="Content/Map/LocationPortraits/AlienRuins4.png" sourcerect="0,0,2160,1080" premultiplyalpha="false"/>
+      <Reputation identifier="location" amount="2" />
+      <Items>
+        <Item identifier="metalcrate">
+          <Item identifier="ruinscanner" amount="4"/>
         </Item>
-        <Item identifier="smg" equip="true" mindifficulty="35" MaxDifficulty="45">
-          <Item identifier="smgmagazinedepletedfuel" />
-        </Item>
-        <Item identifier="shotgun" mindifficulty="45" MaxDifficulty="65">
-          <Item identifier="shotgunshell"/>
-          <Item identifier="shotgunshell"/>
-          <Item identifier="shotgunshell"/>
-          <Item identifier="shotgunshell"/>
-          <Item identifier="shotgunshell"/>
-          <Item identifier="shotgunshell"/>
-        </Item>
-        <Item identifier="boardingaxe" mindifficulty="50" />
-        <Item identifier="shotgun" mindifficulty="65">
-          <Item identifier="shotgunslugexplosive"/>
-          <Item identifier="shotgunslugexplosive"/>
-          <Item identifier="shotgunslugexplosive"/>
-          <Item identifier="shotgunslugexplosive"/>
-          <Item identifier="shotgunslugexplosive"/>
-          <Item identifier="shotgunslugexplosive"/>
-        </Item>
-        <Item identifier="incendiumgrenade" equip="true" mindifficulty="60" />
-        <Item identifier="incendiumgrenade" equip="true" mindifficulty="60" />
-      </TerroristItems>
-      <Reputation identifier="location" amount="20" />
-      <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,0,256,256" color="243,146,55" />
-      <LocationType from="AnyOutpost" to="AnyOutpost" />
-    </EscortMission>
-    <MonsterMission identifier="killhammerhead2" textidentifier="killhammerhead" tags="killmonster,killmonsterrare" type="Monster" difficulty="3" commonness="100" reward="3000" maxsonarmarkerdistance="10000" monsterfile="Hammerheadgold_m">
-      <monster character="Hammerhead_m" min="4" max="6" />
-      <monster character="Hammerheadgold_m" min="1" max="3" />
-      <Reputation identifier="location" amount="10" />
-      <Reputation identifier="coalition" amount="5" />
-      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48" />
+      </Items>
+      <LocationType from="City" to="Research"/>
+      <LocationType from="City" to="None"/>
+      <LocationType from="City" to="Lair"/>
+      <LocationType from="Outpost" to="Research"/>
+      <LocationType from="Outpost" to="None"/>
+      <LocationType from="Outpost" to="Lair"/>
+      <LocationType from="Research" to="None"/>
+      <LocationType from="Research" to="City"/>
+      <LocationType from="Research" to="Outpost"/>
+      <LocationType from="Research" to="Military"/>
+      <LocationType from="Research" to="Research"/>
+      <LocationType from="Research" to="Mine"/>
+      <LocationType from="Research" to="Lair"/>
+    </AlienRuinScanMission>
+
+    <MonsterMission identifier="killhammerhead" tags="killmonster,killmonster_set2" type="Monster" difficulty="2" commonness="100" reward="1800" maxsonarmarkerdistance="10000">
+      <monster character="Hammerhead_m" min="3" max="4" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="1" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killhammerhead" text="missionmessage0.killhammerhead"/>
     </MonsterMission>
-    <NestMission identifier="crawlernest" tags="nest,crawlernest" type="Nest" spawntype="cave" reward="3000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="3" commonness="20">
+
+    <MonsterMission identifier="killhammerhead2" textidentifier="killhammerhead" tags="killmonster,killmonster_set3" type="Monster" difficulty="3" commonness="100" reward="3000" maxsonarmarkerdistance="10000" monsterfile="Hammerheadgold_m">
+      <monster character="Hammerhead_m" min="4" max="5" delaybetweenspawns="1" />
+      <monster character="Hammerheadgold_m" min="1" max="2"/>
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killhammerhead" text="missionmessage0.killhammerhead"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killhammerhead_basic" textidentifier="killhammerhead" tags="killmonster,killmonster_set1" type="Monster" difficulty="2" commonness="100" reward="1000" maxsonarmarkerdistance="10000">
+      <monster character="Hammerhead_m" min="1" max="2" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="1" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killhammerhead" text="missionmessage0.killhammerhead"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killlargecrawler" tags="killmonster,killmonster_set1" type="Monster" difficulty="2" commonness="100" reward="1200" maxsonarmarkerdistance="10000" monsterfile="Crawler_large">
+      <monster character="crawler" min="4" max="6" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="1" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killlargecrawler"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killmoloch" tags="killmonster,killmonster_set3" type="Monster" difficulty="3" commonness="100" reward="2800" maxsonarmarkerdistance="10000" monsterfile="Moloch_m">
+      <monster character="Moloch_m" min="1" max="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,512,256,256" color="214,50,48"/>
+      <message header="missionheader0.killmoloch" text="missionmessage0.killmoloch"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killmolochblack" tags="killmonster,killmonster_set4" textidentifier="killmoloch" type="Monster" difficulty="4" commonness="100" reward="5000" maxsonarmarkerdistance="10000" monsterfile="Molochblack_m">
+      <monster character="Moloch_m" min="1" max="2" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,512,256,256" color="214,50,48"/>
+      <message header="missionheader0.killmoloch" text="missionmessage0.killmoloch"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killcrawlerbroodmother1" tags="killmonster,killmonster_set2" type="Monster" difficulty="3" commonness="50" reward="3500" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother_m">
+      <monster character="crawler" min="4" max="8" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killcrawlerbroodmother1" text="missionmessage0.killcrawlerbroodmother1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killcrawlerbroodmother2" tags="killmonster,killmonster_set3" textidentifier="killcrawlerbroodmother1" type="Monster" difficulty="3" commonness="50" reward="4000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother_m">
+      <monster character="crawler" min="10" max="14" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killcrawlerbroodmother3" tags="killmonster,killmonster_set4" textidentifier="killcrawlerbroodmother1" type="Monster" difficulty="4" commonness="100" reward="5000" maxsonarmarkerdistance="10000" sonarlabel="character.crawler" monsterfile="crawlerbroodmother_m">
+      <monster character="crawler" min="10" max="12" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killcrawlerbroodmother1" text="missionmessage0.killcrawlerbroodmother1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killmatriarch1" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="100" reward="5000" maxsonarmarkerdistance="10000">
+      <monster character="hammerheadmatriarch" min="1" max="2"/>
+      <monster character="hammerhead" min="3" max="6" delaybetweenspawns="1" />
+      <monster character="hammerheadgold" min="2" max="3" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killmatriarch1" text="missionmessage0.killmatriarch1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killmatriarch2" tags="killmonster,killmonster_set3" type="Monster" difficulty="3" commonness="50" reward="3500" maxsonarmarkerdistance="10000">
+      <monster character="hammerheadmatriarch" count="1"/>
+      <monster character="hammerhead" min="2" max="5" delaybetweenspawns="1" />
+      <monster character="hammerheadgold" min="2" max="2" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killmatriarch2" text="missionmessage0.killmatriarch2"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killgiantspineling1" tags="killmonster,killmonster_set2" type="Monster" difficulty="3" commonness="50" reward="3500" maxsonarmarkerdistance="10000" sonarlabel="character.spineling" monsterfile="spineling_giant">
+      <monster character="spineling" min="5" max="8" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killgiantspineling1" text="missionmessage0.killgiantspineling1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killgiantspineling2" textidentifier="killgiantspineling1" tags="killmonster,killmonster_set3" type="Monster" difficulty="4" commonness="100" reward="5000" maxsonarmarkerdistance="10000" sonarlabel="character.spineling" monsterfile="spineling_giant">
+      <monster character="spineling" min="12" max="20" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killgiantspineling1" text="missionmessage0.killgiantspineling1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killthresherswarm1" tags="killmonster,killswarm,killswarm_set4" type="Monster" difficulty="4" commonness="100" reward="5000" maxsonarmarkerdistance="10000">
+      <monster character="tigerthresher" min="8" max="12" delaybetweenspawns="1" />
+      <monster character="bonethresher" min="3" max="6" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,256,256,256" color="214,50,48"/>
+      <message header="missionheader0.killthresherswarm1" text="missionmessage0.killthresherswarm1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killthresherswarm2" textidentifier="killthresherswarm1" tags="killmonster,killswarm,killswarm_set3" type="Monster" difficulty="3" commonness="100" reward="3000" maxsonarmarkerdistance="10000">
+      <monster character="tigerthresher" min="6" max="8" delaybetweenspawns="1" />
+      <monster character="bonethresher" min="3" max="4" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,256,256,256" color="214,50,48"/>
+      <message header="missionheader0.killthresherswarm1" text="missionmessage0.killthresherswarm1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killcrawlerswarm1" tags="killmonster,killswarm,killswarm_set1" type="Monster" difficulty="2" commonness="100" reward="2500" maxsonarmarkerdistance="10000">
+      <monster character="crawler" min="8" max="10" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="1" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killcrawlerswarm1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killcrawlerswarm1large" sonarlabel="character.crawler" name="missionname.killcrawlerswarm1large" description="missiondescription.killcrawlerswarm1large" tags="killmonster,killswarm,killswarm_set1" type="Monster" difficulty="3" commonness="40" reward="3000" successmessage="missionsuccess.killcrawlerswarm1" maxsonarmarkerdistance="10000">
+      <monster character="crawler" min="10" max="14" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killcrawlerswarm1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killcrawlerswarm1huge" sonarlabel="character.crawler" name="missionname.killcrawlerswarm1huge" description="missiondescription.killcrawlerswarm1huge" tags="killmonster,killswarm,killswarm_set2" type="Monster" difficulty="4" commonness="10" reward="4000" successmessage="missionsuccess.killcrawlerswarm1" maxsonarmarkerdistance="10000">
+      <monster character="crawler" min="16" max="20" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killcrawlerswarm1" text="missionmessage0.killcrawlerswarm1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killcrawlerswarm2" name="missionname.killcrawlerswarm1large" tags="killmonster,killswarm,killswarm_set2" type="Monster" difficulty="3" commonness="100" reward="3500" maxsonarmarkerdistance="10000">
+      <monster character="crawler" min="10" max="12" delaybetweenspawns="1" />
+      <monster character="crawlerbroodmother" min="0" max="1"/>
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killcrawlerswarm2" text="missionmessage0.killcrawlerswarm2"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killcrawlerswarm2b" textidentifier="killcrawlerswarm2" name="missionname.killcrawlerswarm1large" tags="killmonster,killswarm,killswarm_set2" type="Monster" difficulty="3" commonness="75" reward="3500" maxsonarmarkerdistance="10000">
+      <monster character="crawlerhusk" min="10" max="16" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.killcrawlerswarm2" text="missionmessage0.killcrawlerswarm2"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killspinelingswarm1" textidentifier="killcrawlerswarm1" name="missionname.killspinelingswarm1" description="missiondescription.killspinelingswarm1" tags="killmonster,killswarm,killswarm_set1" type="Monster" difficulty="2" commonness="40" reward="2000" maxsonarmarkerdistance="10000">
+      <monster character="Spineling" min="6" max="8" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="1" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="768,768,256,256" color="214,50,48"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killmudraptors1" tags="killmonster,killswarm,killswarm_set2" type="Monster" difficulty="3" commonness="100" reward="3500" sonarlabel="character.mudraptor" maxsonarmarkerdistance="10000">
+      <monster character="mudraptor_unarmored" min="4" max="6" delaybetweenspawns="1" />
+      <monster character="mudraptor" min="2" max="4"/>
+      <monster character="mudraptor_veteran" min="1" max="3"/>
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48"/>
+      <message header="missionheader0.killmudraptors1" text="missionmessage0.killmudraptors1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killmudraptors_basic" textidentifier="killmudraptors1" tags="killmonster,killswarm,killswarm_set1" type="Monster" difficulty="2" commonness="70" reward="1500" sonarlabel="character.mudraptor" maxsonarmarkerdistance="10000">
+      <monster character="mudraptor_unarmored" min="4" max="6" delaybetweenspawns="1"/>
+      <Reputation identifier="location" amount="1" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="killmudraptors2" textidentifier="killmudraptors1" tags="killmonster,killswarm,killswarm_set3" type="Monster" difficulty="4" commonness="100" reward="5000" sonarlabel="character.mudraptor" maxsonarmarkerdistance="10000">
+      <monster character="mudraptor_unarmored" min="4" max="5" delaybetweenspawns="1" />
+      <monster character="mudraptor" min="5" max="6" delaybetweenspawns="1" />
+      <monster character="mudraptor_veteran" min="3" max="5" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="512,512,256,256" color="214,50,48"/>
+      <message header="missionheader0.killmudraptors1" text="missionmessage0.killmudraptors1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="huntinggrounds1" textidentifier="huntinggrounds" tags="huntinggrounds,hard" type="Monster" sideobjective="true" difficulty="4" commonness="0" reward="8500" sonarlabel="target" spawntype="Abyss" maxsonarmarkerdistance="20000" successmessage="" monsterfile="Endworm">
+      <monster character="Endworm" min="2" max="2" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.huntinggrounds1" text="missionmessage0.huntinggrounds1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="huntinggrounds2" textidentifier="huntinggrounds" tags="huntinggrounds" type="Monster" sideobjective="true" difficulty="4" commonness="0" reward="8500" sonarlabel="target" spawntype="Abyss" maxsonarmarkerdistance="20000" successmessage="" monsterfile="Charybdis">
+      <monster character="Charybdis" min="2" max="2" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.huntinggrounds1" text="missionmessage0.huntinggrounds1"/>
+    </MonsterMission>
+
+    <MonsterMission identifier="huntinggrounds3" textidentifier="huntinggrounds" tags="huntinggrounds,easy" type="Monster" sideobjective="true" difficulty="4" commonness="0" reward="8500" sonarlabel="target" spawntype="Abyss" maxsonarmarkerdistance="20000" successmessage="" monsterfile="Latcher">
+      <monster character="Latcher" min="2" max="3" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
+      <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,768,256,256" color="214,50,48"/>
+      <message header="missionheader0.huntinggrounds1" text="missionmessage0.huntinggrounds1"/>
+    </MonsterMission>
+
+
+    <NestMission identifier="crawlernest" tags="nest,crawlernest" achievementidentifier="nestmission" type="Nest" spawntype="cave" reward="3000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="3" commonness="20">
       <Items>
         <Item identifier="crawleregg">
           <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
@@ -148,10 +326,8 @@
         <Item identifier="crawleregg" />
         <Item identifier="crawleregg" />
       </Items>
-      <Monster character="Crawler" min="2" max="5"/>
-      <Monster character="Crawler" min="3" max="5" multiplayeronly="true"/>
-      <Reputation identifier="location" amount="10" />
-      <Reputation identifier="coalition" amount="5" />
+      <Monster character="Crawler" min="4" max="6" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
       <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
       <LocationType from="City" to="Research"/>
       <LocationType from="City" to="None"/>
@@ -168,7 +344,8 @@
       <LocationType from="Research" to="Lair"/>
       <message text="missionmessage0.crawlernest"/>
     </NestMission>
-    <NestMission identifier="mudraptornest" tags="nest,mudraptornest" type="Nest" spawntype="cave" reward="5000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="20">
+
+    <NestMission identifier="mudraptornest" tags="nest,mudraptornest" achievementidentifier="nestmission" type="Nest" spawntype="cave" reward="5000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="20">
       <Items>
         <Item identifier="largemudraptoregg">
           <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
@@ -179,9 +356,8 @@
         <Item identifier="largemudraptoregg" />
         <Item identifier="largemudraptoregg" />
       </Items>
-      <Monster character="Mudraptor" min="3" max="5"/>
-      <Reputation identifier="location" amount="10" />
-      <Reputation identifier="coalition" amount="5" />
+      <Monster character="Mudraptor" min="4" max="6" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
       <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
       <LocationType from="City" to="Research"/>
       <LocationType from="City" to="None"/>
@@ -198,7 +374,8 @@
       <LocationType from="Research" to="Lair"/>
       <message text="missionmessage0.mudraptornest"/>
     </NestMission>
-    <NestMission identifier="tigerthreshernest" tags="nest,tigerthreshernest" type="Nest" spawntype="cave" reward="5000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="20">
+
+    <NestMission identifier="tigerthreshernest" tags="nest,tigerthreshernest" achievementidentifier="nestmission" type="Nest" spawntype="cave" reward="5000" itemspawnradius="200" approachitemsradius="800" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="4" commonness="20">
       <Items>
         <Item identifier="tigerthresheregg">
           <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
@@ -216,9 +393,8 @@
         <Item identifier="tigerthresheregg" />
         <Item identifier="tigerthresheregg" />
       </Items>
-      <Monster character="Tigerthresher" min="4" max="5"/>
-      <Reputation identifier="location" amount="10" />
-      <Reputation identifier="coalition" amount="5" />
+      <Monster character="Tigerthresher" min="4" max="6" delaybetweenspawns="1" />
+      <Reputation identifier="location" amount="2" />
       <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
       <LocationType from="City" to="Research"/>
       <LocationType from="City" to="None"/>
@@ -235,5 +411,6 @@
       <LocationType from="Research" to="Lair"/>
       <message text="missionmessage0.tigerthreshernest"/>
     </NestMission>
+
   </Override>
 </Missions>

@@ -27,8 +27,7 @@ public class CampaignEvents {
 						Difficulties.aphoticPlateau2(),
 						Difficulties.plateauToSea(),
 						Difficulties.greatSea(),
-						Difficulties.wastes(),
-						Difficulties.end()));
+						Difficulties.wastes()));
 	}
 	
 	public static void main(String[] args) throws IOException {

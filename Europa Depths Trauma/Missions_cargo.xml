@@ -6,8 +6,7 @@
           <Item identifier="iron" amount="10"/>
         </Item>
       </Items>
-      <Reputation identifier="location" amount="10" />
-      <Reputation identifier="coalition" amount="5" />
+      <Reputation identifier="location" amount="1" />
       <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
       <LocationType from="AnyOutpost" to="AnyOutpost" />
     </CargoMission>
@@ -17,8 +16,7 @@
           <Item identifier="carbon" amount="10"/>
         </Item>
       </Items>
-      <Reputation identifier="location" amount="10" />
-      <Reputation identifier="coalition" amount="5" />
+      <Reputation identifier="location" amount="1" />
       <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
       <LocationType from="AnyOutpost" to="AnyOutpost" />
     </CargoMission>
@@ -28,8 +26,7 @@
           <Item identifier="tin" amount="10"/>
         </Item>
       </Items>
-      <Reputation identifier="location" amount="10" />
-      <Reputation identifier="coalition" amount="5" />
+      <Reputation identifier="location" amount="1" />
       <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
       <LocationType from="AnyOutpost" to="AnyOutpost" />
     </CargoMission>
@@ -39,8 +36,7 @@
           <Item identifier="chlorine" amount="10"/>
         </Item>
       </Items>
-      <Reputation identifier="location" amount="10" />
-      <Reputation identifier="coalition" amount="5" />
+      <Reputation identifier="location" amount="1" />
       <Icon texture="Content/UI/MissionIcons2.png" sourcerect="256,0,256,256" color="243,146,55"/>
       <LocationType from="AnyOutpost" to="AnyOutpost" />
     </CargoMission>

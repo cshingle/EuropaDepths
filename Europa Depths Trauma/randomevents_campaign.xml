@@ -1818,9 +1818,10 @@
 			<EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
 				<MonsterEvent characterfile="Swarmfeeder" minamount="5" maxamount="8" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
 				<MonsterEvent characterfile="Swarmfeeder" minamount="4" maxamount="6" spawntype="ruin" probability="0.3" spawnpointtag="swarmfeeder" />
-				<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
-				<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
-				<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian2" minamount="1" maxamount="2" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian3" minamount="0" maxamount="2" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.8" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.6" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.4" spawnpointtag="husk" />
@@ -1977,7 +1978,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="15">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2023,7 +2024,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="15">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2069,7 +2070,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="15">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2115,7 +2116,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="15">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2161,7 +2162,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="15">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2270,9 +2271,10 @@
 			<EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
 				<MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
 				<MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="0.3" spawnpointtag="swarmfeeder" />
-				<MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
-				<MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
-				<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian3" minamount="1" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Fractalguardian_veteran" minamount="1" maxamount="2" spawntype="ruin" offset="3000" scatter="1000" spawnprobability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
@@ -2439,7 +2441,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2514,7 +2516,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2589,7 +2591,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2664,7 +2666,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2739,7 +2741,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2814,7 +2816,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -2952,9 +2954,10 @@
 			<EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
 				<MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
 				<MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="0.3" spawnpointtag="swarmfeeder" />
-				<MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
-				<MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
-				<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian3" minamount="1" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Fractalguardian_veteran" minamount="1" maxamount="2" spawntype="ruin" offset="3000" scatter="1000" spawnprobability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
@@ -3123,7 +3126,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -3198,7 +3201,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -3273,7 +3276,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -3348,7 +3351,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -3423,7 +3426,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -3498,7 +3501,7 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -3636,9 +3639,10 @@
 			<EventSet identifier="ruins" chooserandom="false" perruin="true" triggereventcooldown="false" allowatstart="true">
 				<MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="1" spawnpointtag="swarmfeeder" />
 				<MonsterEvent characterfile="Swarmfeeder" minamount="6" maxamount="9" spawntype="ruin" probability="0.3" spawnpointtag="swarmfeeder" />
-				<MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
-				<MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
-				<MonsterEvent characterfile="Fractalbrain1" minamount="3" maxamount="6" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian2" minamount="3" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian" minamount="3" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
+				<MonsterEvent characterfile="Fractalguardian3" minamount="2" maxamount="3" spawntype="ruin" probability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Fractalguardian_veteran" minamount="2" maxamount="2" spawntype="ruin" offset="3000" scatter="1000" spawnprobability="1" spawnpointtag="fractalguardian" />
 				<MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
 				<MonsterEvent characterfile="Husk" minamount="2" maxamount="5" spawntype="ruin" probability="0.5" spawnpointtag="husk" />
@@ -3648,25 +3652,25 @@
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance1" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance1" />
+						<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance1" />
 					</EventSet>
 					<EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance2" />
 					</EventSet>
 					<EventSet identifier="entrance3" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance3" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance3" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance3" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance3" />
+						<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance3" />
 					</EventSet>
 					<EventSet identifier="chambers1" chooserandom="false" triggereventcooldown="false" allowatstart="true">
 						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_chambers1" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_chambers1" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_chambers1" />
-						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_chambers1" />
+						<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_chambers1" />
 					</EventSet>
 				</EventSet>
 			</EventSet>
@@ -3814,7 +3818,7 @@
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -3863,11 +3867,14 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
+					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
-					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Ed_Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3885,7 +3892,7 @@
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -3934,11 +3941,14 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
+					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
-					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Ed_Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3956,7 +3966,7 @@
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -4005,11 +4015,14 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
+					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
-					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Ed_Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4027,7 +4040,7 @@
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -4076,11 +4089,14 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
+					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
-					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Ed_Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4098,7 +4114,7 @@
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -4147,11 +4163,14 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
+					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
-					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Ed_Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4169,7 +4188,7 @@
 				<EventSet identifier="mudraptors" chooserandom="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" commonness="10">
+				<EventSet identifier="watcher" commonness="20">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<EventSet chooserandom="true">
 						<EventSet identifier="crawlers">
@@ -4218,11 +4237,14 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
+					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="destroyer" chooserandom="false" commonness="1">
-					<MonsterEvent characterfile="Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Ed_Fractaldestroyer" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4244,16 +4266,6 @@
 					<MonsterEvent characterfile="Molochbaby" minamount="10" maxamount="20" spawntype="mainpath,sidepath" scatter="3000" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 				</EventSet>
-			</EventSet>
-		</EventSet>
-		
-		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<!--                               Set 11                                       -->
-		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-		<EventSet identifier="End" biome="endzone" chooserandom="false" allowatstart="true" campaign="true">
-			<!-- 5% or 1 min -->
-			<EventSet identifier="boss" chooserandom="true" mindistancetraveled="0.05" minmissiontime="60" delaywhencrewaway="true" minintensity="0.0" maxintensity="1.0">
-				<MonsterEvent characterfile="Doomworm" minamount="1" maxamount="1" spawntype="mainpath" delaybetweenspawns="1" />
 			</EventSet>
 		</EventSet>
 	</Override>
