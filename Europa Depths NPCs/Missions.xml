@@ -1,11 +1,9 @@
 <Missions>
     <Override>
-        <OutpostDestroyMission name="Outpost Recovery" identifier="abandonedoutposthumans" tags="abandonedoutpost" MaxDifficulty="50" type="OutpostDestroy" reward="3000" difficulty="4" commonness="20" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedhuman">
-            <Reputation identifier="location" amount="10"/>
-            <Reputation identifier="coalition" amount="5"/>
+        <AbandonedOutpostMission identifier="abandonedoutposthumans" tags="abandonedoutpost" MaxDifficulty="40" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="3000" difficulty="4" commonness="20" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedhuman">
             <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
-            <LocationType identifier="Abandoned"/>
-            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
+            <LocationType identifier="Abandoned" />
+            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
             <Characters>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
@@ -13,180 +11,318 @@
                 <Character identifier="banditmedic" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="engineeringmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
                 <Character identifier="banditleader" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
             </Characters>
             <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true"/>
             <message header="missionheader0.abandonedoutposthumans" text="missionmessage0.abandonedoutposthumans"/>
-        </OutpostDestroyMission>
-        <OutpostDestroyMission name="Outpost Recovery" identifier="abandonedoutpostrescue" tags="abandonedoutpost" MaxDifficulty="50" type="OutpostRescue" reward="3000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
-            <Reputation identifier="location" amount="10"/>
-            <Reputation identifier="coalition" amount="5"/>
+        </AbandonedOutpostMission>
+
+        <AbandonedOutpostMission identifier="abandonedoutpostrescue" tags="abandonedoutpost" type="AbandonedOutpost" MaxDifficulty="40" achievementidentifier="abandonedoutpostrescue" reward="3000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
             <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
-            <LocationType identifier="Abandoned"/>
-            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
+            <LocationType identifier="Abandoned" />
+            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
             <Characters>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
                 <Character identifier="banditmedic" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
-                <Character identifier="banditmedic" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="engineeringmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule" multiplayeronly="true"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule" multiplayeronly="true"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule" />
+                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule" multiplayeronly="true"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
                 <Character identifier="banditleader" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
+                <Character identifier="bandit" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
                 <Character identifier="hostage" from="abandonedoutpostnpcs" asfaraspossible="true" requirerescue="true"/>
                 <Character identifier="hostage" from="abandonedoutpostnpcs" asfaraspossible="true" requirerescue="true"/>
                 <Character identifier="hostage" from="abandonedoutpostnpcs" asfaraspossible="true" requirerescue="true" multiplayeronly="true"/>
             </Characters>
             <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
-        </OutpostDestroyMission>
-        <OutpostDestroyMission name="Outpost Recovery" identifier="abandonedoutpostrescuedire" tags="abandonedoutpost" MinDifficulty="50" type="OutpostRescue" reward="5000" difficulty="4" commonness="30" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
-            <Reputation identifier="location" amount="10"/>
-            <Reputation identifier="coalition" amount="5"/>
-            <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
-            <LocationType identifier="Abandoned"/>
-            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
-            <Characters>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule" multiplayeronly="true"/>
-                <Character identifier="banditleader" from="abandonedoutpostnpcsdire" spawnpointtags="banditleader"/>
-                <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" asfaraspossible="true"/>
-                <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true"/>
-                <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true"/>
-                <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true" multiplayeronly="true"/>
-            </Characters>
-            <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
-        </OutpostDestroyMission>
-        <OutpostDestroyMission name="Outpost assassination" identifier="abandonedoutpostassassinate" tags="abandonedoutpost" type="OutpostDestroy" MaxDifficulty="50" reward="3000" difficulty="4" commonness="20" allowretry="true" sonarlabel="target" unhideentitysubcategories="abandonedhuman">
-            <Reputation identifier="location" amount="10"/>
-            <Reputation identifier="coalition" amount="5"/>
-            <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,512,256,256" color="214,50,48"/>
-            <LocationType identifier="Abandoned"/>
-            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
-            <Characters>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
-                <Character identifier="banditmedic" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="engineeringmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule" multiplayeronly="true"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule" multiplayeronly="true"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule" multiplayeronly="true"/>
-                <Character identifier="banditmedic" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
-                <Character identifier="banditbrute" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
-                <Character identifier="banditbrute" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule" multiplayeronly="true"/>
-                <Character identifier="banditleader_heavy" from="abandonedoutpostnpcs" asfaraspossible="true" requirekill="true"/>
-            </Characters>
-            <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true"/>
-            <message header="missionheader0.abandonedoutpostassassinate" text="missionmessage0.abandonedoutpostassassinate"/>
-        </OutpostDestroyMission>
-        <OutpostDestroyMission name="Outpost assassination Dire" identifier="abandonedoutpostassassinatedire" tags="abandonedoutpost" type="OutpostDestroy" MinDifficulty="50" reward="5000" difficulty="4" commonness="20" allowretry="true" sonarlabel="target" unhideentitysubcategories="abandonedhuman">
-            <Reputation identifier="location" amount="10"/>
-            <Reputation identifier="coalition" amount="5"/>
-            <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,512,256,256" color="214,50,48"/>
-            <LocationType identifier="Abandoned"/>
-            <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5"/>
-            <Characters>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
-                <Character identifier="banditbrute" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
-                <Character identifier="banditbrute" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
-                <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule" multiplayeronly="true"/>
-                <Character identifier="banditleader_heavy" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirekill="true"/>
-            </Characters>
-            <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true"/>
-            <message header="missionheader0.abandonedoutpostassassinate" text="missionmessage0.abandonedoutpostassassinate"/>
-        </OutpostDestroyMission>
-        <PirateMission type="Pirate" identifier="pirate1" tags="piratehumpback" difficulty="4" commonness="20" reward="4000" achievementidentifier="piratemission" addedmissiondifficultyperplayer="10">
-            <message header="Pirates detected" text=""/>
-            <message header="Pirates eliminated" text=""/>
-            <Reputation identifier="location" amount="30"/>
+        </AbandonedOutpostMission>
+    </Override>
+
+    <AbandonedOutpostMission name="Dire Outpost Assassination" identifier="abandonedoutposthumansdire" tags="abandonedoutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="3000" difficulty="4" commonness="20" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedhuman">
+        <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
+        <LocationType identifier="Abandoned" />
+        <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+        <Characters>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="banditbrute" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="banditbrute" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+            <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule" multiplayeronly="true"/>
+            <Character identifier="banditleader_heavy" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirekill="true"/>
+        </Characters>
+        <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true"/>
+        <message header="missionheader0.abandonedoutposthumans" text="missionmessage0.abandonedoutposthumans"/>
+    </AbandonedOutpostMission>
+
+    <AbandonedOutpostMission name="Dire Outpost Recovery" identifier="abandonedoutpostrescuedire" tags="abandonedoutpost" type="AbandonedOutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostrescue" reward="3000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
+        <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
+        <LocationType identifier="Abandoned" />
+        <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+        <Characters>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="banditmedic" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule" multiplayeronly="true"/>
+            <Character identifier="banditleader" from="abandonedoutpostnpcsdire" spawnpointtags="banditleader"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" asfaraspossible="true"/>
+            <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true"/>
+            <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true"/>
+            <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true" multiplayeronly="true"/>
+        </Characters>
+        <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
+    </AbandonedOutpostMission>
+
+    <Override>
+        <PirateMission type="Pirate" identifier="pirate1" tags="combatcoalitionvsseparatists" difficulty="4" commonness="20" reward="4000" achievementidentifier="combatmissioncoalitionvsseparatists" addedmissiondifficultyperplayer="8">
+            <Reputation identifier="coalition" amount="10" />
+            <Reputation identifier="separatists" amount="-10" />
             <SubmarineTypes>
                 <Submarine path="Content/Map/EnemySubmarines/DugongPirate.sub" preferreddifficulty="10" alternatereward="3200"/>
                 <Submarine path="Content/Map/EnemySubmarines/HumpbackPirate.sub" preferreddifficulty="40" alternatereward="4400"/>
                 <Submarine path="Content/Map/EnemySubmarines/Typhon2Pirate.sub" preferreddifficulty="70" alternatereward="5600"/>
             </SubmarineTypes>
             <Characters>
-                <Character typeidentifier="piratecaptain" minamount="1" maxamount="1"/>
-                <Character typeidentifier="piratesecurity" minamount="3" maxamount="7"/>
-                <Character typeidentifier="piratemechanic" minamount="1" maxamount="3"/>
-                <Character typeidentifier="pirateengineer" minamount="1" maxamount="3"/>
+                <Character typeidentifier="separatistcaptain" minamount="1" maxamount="1"/>
+                <Character typeidentifier="separatistsecurity" minamount="4" maxamount="7" />
+                <Character typeidentifier="separatistmechanic" minamount="2" maxamount="4" />
+                <Character typeidentifier="separatistengineer" minamount="2" maxamount="4" />
             </Characters>
             <CharacterTypes>
-                <CharacterType typeidentifier="piratecaptain">
-                    <Character identifier="piratecaptain" from="piratenpcs1" preferreddifficulty="50" iscommander="true"/>
-                    <Character identifier="piratecaptainlord" from="piratenpcs1" preferreddifficulty="90" iscommander="true"/>
+                <CharacterType typeidentifier="separatistcaptain">
+                    <Character identifier="separatistcaptain" from="combatmissionseparatistnpcs" preferreddifficulty="50" iscommander="true" />
+                    <Character identifier="separatistcaptainlord" from="combatmissionseparatistnpcs" preferreddifficulty="90" iscommander="true" />
                 </CharacterType>
-                <CharacterType typeidentifier="piratesecurity">
-                    <Character identifier="piratesecurityrecruit" from="piratenpcs1" preferreddifficulty="40"/>
-                    <Character identifier="piratesecuritygunner" from="piratenpcs1" preferreddifficulty="50"/>
-                    <Character identifier="piratesecuritybrute" from="piratenpcs1" preferreddifficulty="70"/>
-                    <Character identifier="piratesecurityelite" from="piratenpcs1" preferreddifficulty="100"/>
-                    <Character identifier="piratesecuritybruteelite" from="piratenpcs1" preferreddifficulty="100"/>
+                <CharacterType typeidentifier="separatistsecurity">
+                    <Character identifier="separatistsecurityrecruit" from="combatmissionseparatistnpcs" preferreddifficulty="40"/>
+                    <Character identifier="separatistsecuritygunner" from="combatmissionseparatistnpcs" preferreddifficulty="60"/>
+                    <Character identifier="separatistsecuritybrute" from="combatmissionseparatistnpcs" preferreddifficulty="70"/>
+                    <Character identifier="separatistsecurityelite" from="combatmissionseparatistnpcs" preferreddifficulty="100"/>
                 </CharacterType>
-                <CharacterType typeidentifier="piratemechanic">
-                    <Character identifier="piratemechanicrecruit" from="piratenpcs1" preferreddifficulty="40"/>
-                    <Character identifier="piratemechanicveteran" from="piratenpcs1" preferreddifficulty="70"/>
+                <CharacterType typeidentifier="separatistmechanic">
+                    <Character identifier="separatistmechanicrecruit" from="combatmissionseparatistnpcs" preferreddifficulty="40"/>
+                    <Character identifier="separatistmechanicveteran" from="combatmissionseparatistnpcs" preferreddifficulty="70"/>
                 </CharacterType>
-                <CharacterType typeidentifier="pirateengineer">
-                    <Character identifier="pirateengineerrecruit" from="piratenpcs1" preferreddifficulty="40"/>
-                    <Character identifier="pirateengineerveteran" from="piratenpcs1" preferreddifficulty="70"/>
+                <CharacterType typeidentifier="separatistengineer">
+                    <Character identifier="separatistengineerrecruit" from="combatmissionseparatistnpcs" preferreddifficulty="40"/>
+                    <Character identifier="separatistengineerveteran" from="combatmissionseparatistnpcs" preferreddifficulty="70"/>
                 </CharacterType>
             </CharacterTypes>
             <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,768,256,256" color="243,146,55"/>
             <message header="missionheader0.pirate1" text="missionmessage0.pirate1"/>
             <message header="missionheader1.pirate1" text="missionmessage1.pirate1"/>
         </PirateMission>
+
+        <PirateMission type="Pirate" identifier="pirate1separatists" tags="combatseparatistsvscoalition" difficulty="4" commonness="20" reward="4000" achievementidentifier="combatmissionseparatistsvscoalition" addedmissiondifficultyperplayer="8">
+            <Reputation identifier="separatists" amount="10" />
+            <Reputation identifier="coalition" amount="-10" />
+            <SubmarineTypes>
+                <Submarine path="Content/Submarines/Dugong.sub" preferreddifficulty="10" alternatereward="3200"/>
+                <Submarine path="Content/Submarines/Humpback.sub" preferreddifficulty="40" alternatereward="4400"/>
+                <Submarine path="Content/Submarines/Typhon2.sub" preferreddifficulty="70" alternatereward="5600"/>
+            </SubmarineTypes>
+            <Characters>
+                <Character typeidentifier="coalitioncaptain" minamount="1" maxamount="1"/>
+                <Character typeidentifier="coalitionsecurity" minamount="4" maxamount="7" />
+                <Character typeidentifier="coalitionmechanic" minamount="2" maxamount="4" />
+                <Character typeidentifier="coalitionengineer" minamount="2" maxamount="4" />
+            </Characters>
+            <CharacterTypes>
+                <CharacterType typeidentifier="coalitioncaptain">
+                    <Character identifier="coalitioncaptain" from="combatmissioncoalitionnpcs" preferreddifficulty="50" iscommander="true" />
+                    <Character identifier="coalitioncaptainlord" from="combatmissioncoalitionnpcs" preferreddifficulty="90" iscommander="true" />
+                </CharacterType>
+                <CharacterType typeidentifier="coalitionsecurity">
+                    <Character identifier="coalitionsecurityrecruit" from="combatmissioncoalitionnpcs" preferreddifficulty="40"/>
+                    <Character identifier="coalitionsecuritygunner" from="combatmissioncoalitionnpcs" preferreddifficulty="60"/>
+                    <Character identifier="coalitionsecuritybrute" from="combatmissioncoalitionnpcs" preferreddifficulty="70"/>
+                    <Character identifier="coalitionsecurityelite" from="combatmissioncoalitionnpcs" preferreddifficulty="100"/>
+                </CharacterType>
+                <CharacterType typeidentifier="coalitionmechanic">
+                    <Character identifier="coalitionmechanicrecruit" from="combatmissioncoalitionnpcs" preferreddifficulty="40"/>
+                    <Character identifier="coalitionmechanicveteran" from="combatmissioncoalitionnpcs" preferreddifficulty="70"/>
+                </CharacterType>
+                <CharacterType typeidentifier="coalitionengineer">
+                    <Character identifier="coalitionengineerrecruit" from="combatmissioncoalitionnpcs" preferreddifficulty="40"/>
+                    <Character identifier="coalitionengineerveteran" from="combatmissioncoalitionnpcs" preferreddifficulty="70"/>
+                </CharacterType>
+            </CharacterTypes>
+            <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,768,256,256" color="243,146,55"/>
+            <message header="missionheader0.pirate1" text="missionmessage0.pirate1"/>
+            <message header="missionheader1.pirate1" text="missionmessage1.pirate1"/>
+        </PirateMission>
+
+        <PirateMission type="Pirate" identifier="coalitionattack1" tags="coalitionattack" showinmenus="false" showstartmessage="false" issideobjective="true" achievementidentifier="combatmissionseparatistsvscoalition" difficulty="4" commonness="0" reward="0" addedmissiondifficultyperplayer="8">
+            <Reputation identifier="separatists" amount="5" />
+            <Reputation identifier="coalition" amount="-5" />
+            <SubmarineTypes>
+                <Submarine path="Content/Submarines/Dugong.sub" preferreddifficulty="10"/>
+                <Submarine path="Content/Submarines/Humpback.sub" preferreddifficulty="40"/>
+                <Submarine path="Content/Submarines/Typhon2.sub" preferreddifficulty="70"/>
+            </SubmarineTypes>
+            <Characters>
+                <Character typeidentifier="coalitioncaptain" minamount="1" maxamount="1"/>
+                <Character typeidentifier="coalitionsecurity" minamount="4" maxamount="7" />
+                <Character typeidentifier="coalitionmechanic" minamount="2" maxamount="4" />
+                <Character typeidentifier="coalitionengineer" minamount="2" maxamount="4" />
+            </Characters>
+            <CharacterTypes>
+                <CharacterType typeidentifier="coalitioncaptain">
+                    <Character identifier="coalitioncaptain" from="combatmissioncoalitionnpcs" preferreddifficulty="50" iscommander="true" />
+                    <Character identifier="coalitioncaptainlord" from="combatmissioncoalitionnpcs" preferreddifficulty="90" iscommander="true" />
+                </CharacterType>
+                <CharacterType typeidentifier="coalitionsecurity">
+                    <Character identifier="coalitionsecurityrecruit" from="combatmissioncoalitionnpcs" preferreddifficulty="40"/>
+                    <Character identifier="coalitionsecuritygunner" from="combatmissioncoalitionnpcs" preferreddifficulty="60"/>
+                    <Character identifier="coalitionsecuritybrute" from="combatmissioncoalitionnpcs" preferreddifficulty="70"/>
+                    <Character identifier="coalitionsecurityelite" from="combatmissioncoalitionnpcs" preferreddifficulty="100"/>
+                </CharacterType>
+                <CharacterType typeidentifier="coalitionmechanic">
+                    <Character identifier="coalitionmechanicrecruit" from="combatmissioncoalitionnpcs" preferreddifficulty="40"/>
+                    <Character identifier="coalitionmechanicveteran" from="combatmissioncoalitionnpcs" preferreddifficulty="70"/>
+                </CharacterType>
+                <CharacterType typeidentifier="coalitionengineer">
+                    <Character identifier="coalitionengineerrecruit" from="combatmissioncoalitionnpcs" preferreddifficulty="40"/>
+                    <Character identifier="coalitionengineerveteran" from="combatmissioncoalitionnpcs" preferreddifficulty="70"/>
+                </CharacterType>
+            </CharacterTypes>
+            <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,768,256,256" color="243,146,55"/>
+            <message header="missionheader0.coalitionattack1" text="missionmessage0.coalitionattack1"/>
+        </PirateMission>
+
+        <PirateMission type="Pirate" identifier="separatistattack1" tags="separatistattack" showinmenus="false" showstartmessage="false" issideobjective="true" achievementidentifier="combatmissioncoalitionvsseparatists" difficulty="4" commonness="20" reward="0" addedmissiondifficultyperplayer="8">
+            <Reputation identifier="coalition" amount="5" />
+            <Reputation identifier="separatists" amount="-10" />
+            <SubmarineTypes>
+                <Submarine path="Content/Map/EnemySubmarines/DugongPirate.sub" preferreddifficulty="10"/>
+                <Submarine path="Content/Map/EnemySubmarines/HumpbackPirate.sub" preferreddifficulty="40"/>
+                <Submarine path="Content/Map/EnemySubmarines/Typhon2Pirate.sub" preferreddifficulty="70"/>
+            </SubmarineTypes>
+            <Characters>
+                <Character typeidentifier="separatistcaptain" minamount="1" maxamount="1"/>
+                <Character typeidentifier="separatistsecurity" minamount="4" maxamount="7" />
+                <Character typeidentifier="separatistmechanic" minamount="2" maxamount="4" />
+                <Character typeidentifier="separatistengineer" minamount="2" maxamount="4" />
+            </Characters>
+            <CharacterTypes>
+                <CharacterType typeidentifier="separatistcaptain">
+                    <Character identifier="separatistcaptain" from="combatmissionseparatistnpcs" preferreddifficulty="50" iscommander="true" />
+                    <Character identifier="separatistcaptainlord" from="combatmissionseparatistnpcs" preferreddifficulty="90" iscommander="true" />
+                </CharacterType>
+                <CharacterType typeidentifier="separatistsecurity">
+                    <Character identifier="separatistsecurityrecruit" from="combatmissionseparatistnpcs" preferreddifficulty="40"/>
+                    <Character identifier="separatistsecuritygunner" from="combatmissionseparatistnpcs" preferreddifficulty="60"/>
+                    <Character identifier="separatistsecuritybrute" from="combatmissionseparatistnpcs" preferreddifficulty="70"/>
+                    <Character identifier="separatistsecurityelite" from="combatmissionseparatistnpcs" preferreddifficulty="100"/>
+                </CharacterType>
+                <CharacterType typeidentifier="separatistmechanic">
+                    <Character identifier="separatistmechanicrecruit" from="combatmissionseparatistnpcs" preferreddifficulty="40"/>
+                    <Character identifier="separatistmechanicveteran" from="combatmissionseparatistnpcs" preferreddifficulty="70"/>
+                </CharacterType>
+                <CharacterType typeidentifier="separatistengineer">
+                    <Character identifier="separatistengineerrecruit" from="combatmissionseparatistnpcs" preferreddifficulty="40"/>
+                    <Character identifier="separatistengineerveteran" from="combatmissionseparatistnpcs" preferreddifficulty="70"/>
+                </CharacterType>
+            </CharacterTypes>
+            <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,768,256,256" color="243,146,55"/>
+            <message header="missionheader0.separatistattack1" text="missionmessage0.separatistattack1"/>
+        </PirateMission>
     </Override>
-    <PirateMission type="Pirate" identifier="piratesecondary" tags="piratehumpback" difficulty="4" commonness="20" reward="4000" sideobjective="true" achievementidentifier="piratemission" addedmissiondifficultyperplayer="10">
+
+    <PirateMission type="Pirate" identifier="classicpirate1" tags="combatcoalitionvsseparatists,combatseparatistsvscoalition" difficulty="4" commonness="20" reward="4000" addedmissiondifficultyperplayer="10">
+        <message header="Pirates detected" text=""/>
+        <message header="Pirates eliminated" text=""/>
+        <Reputation identifier="coalition" amount="2" />
+        <Reputation identifier="separatists" amount="2" />
+        <SubmarineTypes>
+            <Submarine path="Content/Map/EnemySubmarines/DugongPirate.sub" preferreddifficulty="10" alternatereward="3200"/>
+            <Submarine path="Content/Map/EnemySubmarines/HumpbackPirate.sub" preferreddifficulty="40" alternatereward="4400"/>
+            <Submarine path="Content/Map/EnemySubmarines/Typhon2Pirate.sub" preferreddifficulty="70" alternatereward="5600"/>
+        </SubmarineTypes>
+        <Characters>
+            <Character typeidentifier="piratecaptain" minamount="1" maxamount="1"/>
+            <Character typeidentifier="piratesecurity" minamount="3" maxamount="7"/>
+            <Character typeidentifier="piratemechanic" minamount="1" maxamount="3"/>
+            <Character typeidentifier="pirateengineer" minamount="1" maxamount="3"/>
+        </Characters>
+        <CharacterTypes>
+            <CharacterType typeidentifier="piratecaptain">
+                <Character identifier="piratecaptain" from="piratenpcs1" preferreddifficulty="50" iscommander="true"/>
+                <Character identifier="piratecaptainlord" from="piratenpcs1" preferreddifficulty="90" iscommander="true"/>
+            </CharacterType>
+            <CharacterType typeidentifier="piratesecurity">
+                <Character identifier="piratesecurityrecruit" from="piratenpcs1" preferreddifficulty="40"/>
+                <Character identifier="piratesecuritygunner" from="piratenpcs1" preferreddifficulty="50"/>
+                <Character identifier="piratesecuritybrute" from="piratenpcs1" preferreddifficulty="70"/>
+                <Character identifier="piratesecurityelite" from="piratenpcs1" preferreddifficulty="100"/>
+                <Character identifier="piratesecuritybruteelite" from="piratenpcs1" preferreddifficulty="100"/>
+            </CharacterType>
+            <CharacterType typeidentifier="piratemechanic">
+                <Character identifier="piratemechanicrecruit" from="piratenpcs1" preferreddifficulty="40"/>
+                <Character identifier="piratemechanicveteran" from="piratenpcs1" preferreddifficulty="70"/>
+            </CharacterType>
+            <CharacterType typeidentifier="pirateengineer">
+                <Character identifier="pirateengineerrecruit" from="piratenpcs1" preferreddifficulty="40"/>
+                <Character identifier="pirateengineerveteran" from="piratenpcs1" preferreddifficulty="70"/>
+            </CharacterType>
+        </CharacterTypes>
+        <Icon texture="Content/UI/MissionIcons.png" sourcerect="0,768,256,256" color="243,146,55"/>
+        <message header="missionheader0.pirate1" text="missionmessage0.pirate1"/>
+        <message header="missionheader1.pirate1" text="missionmessage1.pirate1"/>
+    </PirateMission>
+    
+    <PirateMission type="Pirate" identifier="piratesecondary" tags="piratehumpback" difficulty="4" commonness="20" reward="4000" issideobjective="true" addedmissiondifficultyperplayer="10">
         <message header="Pirates detected" text=""/>
         <message header="Pirates eliminated" text=""/>
         <SubmarineTypes>

@@ -3,7 +3,7 @@
     <Override>
         <npcset identifier="abandonedoutpostnpcs">
 
-            <npc identifier="bandit" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="0.6" healthmultiplierinmultiplayer="1.5" aimspeed="0.8" aimaccuracy="0.25" reportrange="500">
+            <npc identifier="bandit" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="1.5" aimspeed="1" aimaccuracy="0.75" reportrange="500">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
                     <Item identifier="banditclothes2" equip="true" />
@@ -191,7 +191,7 @@
                     <Item identifier="toolbelt" equip="true" />
                 </ItemSet>
             </npc>
-            <npc identifier="banditleader" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="2" aimspeed="1.0" aimaccuracy="0.75" reportrange="750">
+            <npc identifier="banditleader" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1.2" healthmultiplierinmultiplayer="2" aimspeed="1.0" aimaccuracy="0.75" reportrange="750">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
                     <Item identifier="antidama1" />
@@ -404,7 +404,7 @@
                     <Item identifier="toolbelt" equip="true"/>
                 </ItemSet>
             </npc>
-            <npc identifier="banditmedic" commonness="0" moduleflags="crewmodule,engineeringmodule" job="medicaldoctor" behavior="Patrol" healthmultiplier="0.75" healthmultiplierinmultiplayer="1.0" aimspeed="0.5" aimaccuracy="0.85" reportrange="1000">
+            <npc identifier="banditmedic" commonness="0" moduleflags="crewmodule,engineeringmodule" job="medicaldoctor" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="1.0" aimspeed="1" aimaccuracy="0.85" reportrange="1000">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
                     <Item identifier="banditclothes2" equip="true" />
