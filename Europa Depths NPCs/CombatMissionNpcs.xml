@@ -6,6 +6,7 @@
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <Override>
     <npcset identifier="combatmissionseparatistnpcs">
+
       <npc identifier="separatistcaptain" job="captain" moduleflags="none" behavior="Patrol" healthmultiplier="1" aimspeed="1" aimaccuracy="0.50">
         <ItemSet commonness="1">
           <Item identifier="idcard" equip="true" showpreview="false" />
@@ -361,15 +362,13 @@
           </Item>
         </ItemSet>
       </npc>
-    </Override>
-  </npcset>
+    </npcset>
 
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!--                     Combat Mission Coalition  NPCs                        -->
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!--                     Combat Mission Coalition  NPCs                        -->
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-  <npcset identifier="combatmissioncoalitionnpcs">
-    <Override>
+    <npcset identifier="combatmissioncoalitionnpcs">
       <npc identifier="coalitioncaptain" job="captain" moduleflags="none" behavior="Patrol" healthmultiplier="1" aimspeed="0.8" aimaccuracy="0.75">
         <ItemSet commonness="1">
           <Item identifier="idcard" equip="true" showpreview="false" />
@@ -678,7 +677,6 @@
           </Item>
         </ItemSet>
       </npc>
-    </Override>
-  </npcset>
-
+    </npcset>
+  </Override>
 </npcsets>

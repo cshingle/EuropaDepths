@@ -4,11 +4,10 @@
         <Upgrade gameversion="0.10.0.0" scale="0.5" />
         <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
         <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.1" />
-        <SuitableTreatment type="alieninfection" suitability="1" />
         <SuitableTreatment type="bloodloss" suitability="1" />
+        <SuitableTreatment type="bloodpoisoning" suitability="1" />
         <SuitableTreatment type="burn" suitability="1" />
         <SuitableTreatment type="damage" suitability="1" />
-        <SuitableTreatment type="poison" suitability="1" />
         <SuitableTreatment type="psychosis" suitability="1" />
         <SuitableTreatment type="respawnpenalty" suitability="1" />
         <Price baseprice="30" minavailable="3">
@@ -35,7 +34,7 @@
             </StatusEffect>
             <StatusEffect tags="medical" type="OnSuccess" target="UseTarget">
                 <affliction identifier="minorhealing" strength="100"/>
-                <Affliction identifier="drunk" amount="40" />
+                <Affliction identifier="drunk" amount="50" />
             </StatusEffect>
             <StatusEffect tags="medical" type="OnFailure" target="UseTarget">
                 <affliction identifier="minorhealing" strength="33"/>
