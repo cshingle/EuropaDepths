@@ -66,15 +66,12 @@
         </Effect>
         <Effect minstrength="99" maxstrength="100" strengthchange="0.15" minscreenblur="2.0" maxscreenblur="2.0" minscreendistort="1.0" maxscreendistort="1.0" minfacetint="255,255,0,80" maxfacetint="255,255,0,80" minbodytint="255,255,0,60" maxbodytint="255,255,0,60" minspeedmultiplier="0.25" maxspeedmultiplier="0.25" tag="poisoned">
             <StatusEffect target="Character" setvalue="true">
-                <Conditional healthpercentage="lt 90"/>
                 <Affliction identifier="stun" amount="1" />
-            </StatusEffect>
-            <StatusEffect target="Character">
-                <Affliction identifier="organdamage" amount="1" />
+                <Affliction identifier="organdamage" amount="0.5" />
             </StatusEffect>
             <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true" ConditionalComparison="And">
-                <Conditional healthpercentage="gt 75"/>
-                <Affliction identifier="bloodpoisoning" amount="-25" probability="0.05" />
+                <Conditional healthpercentage="gt 50"/>
+                <Affliction identifier="bloodpoisoning" amount="-25" probability="0.15" />
             </StatusEffect>
         </Effect>
         <PeriodicEffect mininterval="5" maxinterval="15" minstrength="35" maxstrength="99">
@@ -98,28 +95,27 @@
         <InternalDamage name="Bite wounds" identifier="bitewounds" description="" type="damage" causeofdeathdescription="Mauled to death" selfcauseofdeathdescription="You have been mauled to death." limbspecific="true" maxstrength="200" damageoverlayalpha="2">
             <Description textidentifier="afflictiondescription.bitewounds.low" minstrength="0" maxstrength="40"/>
             <Description textidentifier="afflictiondescription.bitewounds" minstrength="40" maxstrength="200"/>
-            <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="2">
-                <StatusEffect target="Character" interval="1" disabledeltatime="true">
-                    <Affliction identifier="bloodpoisoning" strength="0.05" />
+            <Effect minstrength="0" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="2"/>
+            <PeriodicEffect mininterval="5" maxinterval="15" minstrength="20" maxstrength="100">
+                <StatusEffect target="Character" multiplybymaxvitality="true" ConditionalComparison="And">
+                    <Conditional bloodpoisoning="lt 10" />
+                    <Affliction identifier="bloodpoisoning" amount="1" probability="0.33" />
                 </StatusEffect>
-            </Effect>
-            <Effect minstrength="10" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="2">
-                <StatusEffect target="Character" interval="1" disabledeltatime="true">
-                    <Affliction identifier="bloodpoisoning" strength="0.1" probability="0.75" />
-                </StatusEffect>
-            </Effect>
+            </PeriodicEffect>
             <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,512,128,128" color="195,136,60,255" origin="0,0"/>
         </InternalDamage>
 
         <Bleeding name="Bleeding" identifier="bleedingnonstop" translationoverride="bleeding" description="Blood pours freely from this ragged and particularly nasty open wound" type="bleeding" causeofdeathdescription="Bled to death" selfcauseofdeathdescription="You have bled to death." limbspecific="true" maxstrength="100" karmachangeonapplied="-1" damageoverlayalpha="0.6">
-            <Effect minstrength="0" maxstrength="5" minvitalitydecrease="0" maxvitalitydecrease="10" strengthchange="0"/>
-            <Effect minstrength="5" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="10" strengthchange="0">
-                <StatusEffect target="Character" interval="1" disabledeltatime="true">
-                    <Affliction identifier="bloodpoisoning" strength="0.1" probability="0.75" />
+            <Effect minstrength="0" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="10" strengthchange="0"/>
+            <PeriodicEffect mininterval="5" maxinterval="15" minstrength="20" maxstrength="100">
+                <StatusEffect target="Character" multiplybymaxvitality="true" ConditionalComparison="And">
+                    <Conditional bloodpoisoning="lt 10" />
+                    <Affliction identifier="bloodpoisoning" amount="1" probability="0.33" />
                 </StatusEffect>
-            </Effect>
+            </PeriodicEffect>
             <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
         </Bleeding>
+
 
         <Affliction identifier="drunk" description="The smell of alcohol rises from them like a vapor, their speech slurs a little, and their eyes fail to focus." type="debuff" causeofdeathdescription="Alcohol poisoning" selfcauseofdeathdescription="You have died of alcohol poisoning." limbspecific="false" indicatorlimb="Head" activationthreshold="20" treatmentthreshold="1000" maxstrength="100" affectmachines="false">
             <Description textidentifier="afflictiondescription.drunk.self" target="Self" minstrength="0" maxstrength="80"/>
@@ -130,14 +126,14 @@
             <!-- no effects at this point -->
             <Effect minstrength="0" maxstrength="20" strengthchange="-0.1" />
             <!-- Low level of drunkenness decreases vitality and speed slightly -->
-            <Effect minstrength="20" maxstrength="40" resistancefor="bloodpoisoning" minresistance="0.1" maxresistance="0.1" minvitalitydecrease="0" maxvitalitydecrease="10" minscreendistort="0" maxscreendistort="0.1" strengthchange="-0.1" minfacetint="255,0,0,0" maxfacetint="255,0,0,50" minspeedmultiplier="1.0" maxspeedmultiplier="0.8">
-            <StatusEffect target="Character" interval="1" disabledeltatime="true">
-                <reduceaffliction identifier="bloodpoisoning" strength="0.05" />
-            </StatusEffect>
+            <Effect minstrength="20" maxstrength="40" resistancefor="bloodpoisoning" minresistance="0.2" maxresistance="0.3" minvitalitydecrease="0" maxvitalitydecrease="10" minscreendistort="0" maxscreendistort="0.1" strengthchange="-0.1" minfacetint="255,0,0,0" maxfacetint="255,0,0,50" minspeedmultiplier="1.0" maxspeedmultiplier="0.8">
+                <StatusEffect target="Character" interval="1" disabledeltatime="true">
+                    <reduceaffliction identifier="bloodpoisoning" strength="0.05" />
+                </StatusEffect>
             </Effect>
 
             <!-- Heavier drunkenness decreases vitality and speed more -->
-            <Effect minstrength="40" maxstrength="80" resistancefor="bloodpoisoning" minresistance="0.2" maxresistance="0.3" minvitalitydecrease="10" maxvitalitydecrease="30" minscreendistort="0.1" maxscreendistort="1.0" minscreenblur="0.1" maxscreenblur="1.0" strengthchange="-0.2" minradialdistort="0.0" maxradialdistort="2.0" dialogflag="DrunkMedium" minfacetint="255,0,0,50" maxfacetint="255,0,0,100" minspeedmultiplier="0.8" maxspeedmultiplier="0.7">
+            <Effect minstrength="40" maxstrength="80" resistancefor="bloodpoisoning" minresistance="0.3" maxresistance="0.4" minvitalitydecrease="10" maxvitalitydecrease="30" minscreendistort="0.1" maxscreendistort="1.0" minscreenblur="0.1" maxscreenblur="1.0" strengthchange="-0.2" minradialdistort="0.0" maxradialdistort="2.0" dialogflag="DrunkMedium" minfacetint="255,0,0,50" maxfacetint="255,0,0,100" minspeedmultiplier="0.8" maxspeedmultiplier="0.7">
                 <StatusEffect target="Character" interval="1" disabledeltatime="true">
                     <Affliction identifier="nausea" strength="10" probability="0.05" />
                     <reduceaffliction identifier="bloodpoisoning" strength="0.07" />
@@ -145,7 +141,7 @@
             </Effect>
 
             <!-- After drinking enough the effect starts to get lethal -->
-            <Effect minstrength="80" maxstrength="100" resistancefor="bloodpoisoning" minresistance="0.3" maxresistance="0.3" minvitalitydecrease="30" maxvitalitydecrease="100" minscreendistort="1.0" maxscreendistort="3.0" minscreenblur="1.0" maxscreenblur="3.0" strengthchange="-0.2" minradialdistort="2.0" maxradialdistort="3.0" dialogflag="DrunkHigh" minfacetint="255,0,0,150" maxfacetint="255,0,0,150" minspeedmultiplier="0.8" maxspeedmultiplier="0.5">
+            <Effect minstrength="80" maxstrength="100" resistancefor="bloodpoisoning" minresistance="0.4" maxresistance="0.5" minvitalitydecrease="30" maxvitalitydecrease="100" minscreendistort="1.0" maxscreendistort="3.0" minscreenblur="1.0" maxscreenblur="3.0" strengthchange="-0.2" minradialdistort="2.0" maxradialdistort="3.0" dialogflag="DrunkHigh" minfacetint="255,0,0,150" maxfacetint="255,0,0,150" minspeedmultiplier="0.8" maxspeedmultiplier="0.5">
                 <StatusEffect target="Character" interval="1" disabledeltatime="true">
                     <Affliction identifier="nausea" strength="20" probability="0.15" />
                     <reduceaffliction identifier="bloodpoisoning" strength="0.1" />
