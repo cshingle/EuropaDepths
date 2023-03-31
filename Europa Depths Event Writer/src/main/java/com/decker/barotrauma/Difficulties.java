@@ -195,7 +195,7 @@ public class Difficulties {
 		return new DifficultySet(7)
 				.identifier("Plateau2")
 				.biome("theaphoticplateau")
-				.maxleveldifficulty(40)
+				.minleveldifficulty(40)
 				.comment("Introduces Watcher")
 				.extend(
 						new CommonnessEvent(),

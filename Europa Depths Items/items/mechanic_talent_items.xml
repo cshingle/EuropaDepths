@@ -361,7 +361,7 @@
       <sound file="%ModDir%/sounds/tesla.ogg" type="OnUse" range="500.0" loop="true" />
       <Fixable identifier="structure" />
       <RequiredSkill identifier="mechanical" level="50" />
-      <StatusEffect type="OnFailure" targettype="Contained" targets="batterycell" Condition="-8.0" />
+      <StatusEffect type="OnFailure" targettype="Contained" targets="batterycell" Condition="-4.0" />
       <StatusEffect type="OnFailure" targettype="Contained" targets="fulguriumbatterycell" Condition="-2" />
       <StatusEffect type="OnFailure" target="Character">
         <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />

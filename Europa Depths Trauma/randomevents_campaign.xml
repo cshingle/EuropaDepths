@@ -3,16 +3,16 @@
 	<Override>
 		<EventPrefabs>
 			<ScriptedEvent identifier="beaconclown">
-			  <SpawnAction npcsetidentifier="abandonedoutpostnpcs" npcidentifier="psychoclown" targettag="psychoclown" spawnpointtag="saferoom" spawnlocation="beaconstation" requirespawnpointtag="true" team="None"/>
-			  <StatusEffectAction targettag="psychoclown">
-			    <StatusEffect>
-			      <GiveTalentInfo giverandom="false" talentidentifiers="chonkyhonks,psychoclown,waterprankster,enrollintoclowncollege" />
-			    </StatusEffect>
-			  </StatusEffectAction>
-			  <AfflictionAction targettag="psychoclown" affliction="psychoclown" strength="100" />
+				<SpawnAction npcsetidentifier="abandonedoutpostnpcs" npcidentifier="psychoclown" targettag="psychoclown" spawnpointtag="saferoom" spawnlocation="beaconstation" requirespawnpointtag="true" team="None"/>
+				<StatusEffectAction targettag="psychoclown">
+					<StatusEffect>
+						<GiveTalentInfo giverandom="false" talentidentifiers="chonkyhonks,psychoclown,waterprankster,enrollintoclowncollege" />
+					</StatusEffect>
+				</StatusEffectAction>
+				<AfflictionAction targettag="psychoclown" affliction="psychoclown" strength="100" />
 			</ScriptedEvent>
 		</EventPrefabs>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 0                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -30,7 +30,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 1                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -80,7 +80,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 2                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -260,7 +260,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 3                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -605,7 +605,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 4                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -975,7 +975,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 5                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1377,7 +1377,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 6                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1755,12 +1755,12 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 7                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!-- Introduces Watcher -->
-		<EventSet identifier="Plateau2" biome="theaphoticplateau" maxleveldifficulty="40" chooserandom="false" allowatstart="true" campaign="true">
+		<EventSet identifier="Plateau2" biome="theaphoticplateau" minleveldifficulty="40" chooserandom="false" allowatstart="true" campaign="true">
 			<Commonness commonness="1"/>
 
 			<!-- Populate the caves -->
@@ -2209,7 +2209,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 8                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2894,7 +2894,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 9                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -3579,7 +3579,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 10                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -3867,8 +3867,8 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
-				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
-					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3941,8 +3941,8 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
-				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
-					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4015,8 +4015,8 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
-				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
-					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4089,8 +4089,8 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
-				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
-					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4163,8 +4163,8 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
-				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
-					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4237,8 +4237,8 @@
 						<MonsterEvent characterfile="Molochblack" minamount="1" maxamount="1" spawntype="mainpath,sidepath" offset="10000" scatter="3000" delaybetweenspawns="1" />
 					</EventSet>
 				</EventSet>
-				<EventSet identifier="portalguardians" chooserandom="false" commonness="20">
-					<MonsterEvent characterfile="Portalguardian" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="portalguardians" chooserandom="false" commonness="1">
+					<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="latcher" chooserandom="false" commonness="5">
 					<MonsterEvent characterfile="Latcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />

@@ -347,8 +347,8 @@ public class Spawns {
 								new MonsterEvent(Character.Moloch, 2, 3).offset(10000).scatter(3000),
 								new MonsterEvent(Character.Molochbaby, 10, 20).scatter(3000),
 								new MonsterEvent(Character.Molochblack, 1, 1).offset(10000).scatter(3000))),
-				new MonsterSet("portalguardians", false, 20).monsters(
-						new MonsterEvent(Character.Portalguardian, 4, 6)),
+				new MonsterSet("portalguardians", false, 1).monsters(
+						new MonsterEvent(Character.Portalguardian, 1, 1)),
 				new MonsterSet("latcher", false, 5).monsters(
 						new MonsterEvent(Character.Latcher, 1, 1)),
 				new MonsterSet("destroyer", false, 1).monsters(

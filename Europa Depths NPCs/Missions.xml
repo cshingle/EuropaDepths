@@ -1,6 +1,6 @@
 <Missions>
     <Override>
-        <AbandonedOutpostMission identifier="abandonedoutposthumans" tags="abandonedoutpost" MaxDifficulty="40" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="3000" difficulty="4" commonness="20" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedhuman">
+        <AbandonedOutpostMission identifier="abandonedoutposthumans" tags="abandonedoutpost" MaxDifficulty="40" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="3000" difficulty="4" commonness="20" allowretry="true" unhideentitysubcategories="abandonedhuman">
             <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
             <LocationType identifier="Abandoned" />
             <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
@@ -16,7 +16,7 @@
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
-                <Character identifier="banditleader" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
+                <Character identifier="banditleader" from="abandonedoutpostnpcs" spawnpointtags="banditleader" requirekill="true"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
             </Characters>
@@ -52,7 +52,7 @@
         </AbandonedOutpostMission>
     </Override>
 
-    <AbandonedOutpostMission name="Dire Outpost Assassination" identifier="abandonedoutposthumansdire" tags="abandonedoutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="3000" difficulty="4" commonness="20" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedhuman">
+    <AbandonedOutpostMission name="Dire Outpost Assassination" identifier="abandonedoutposthumansdire" tags="abandonedoutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="3000" difficulty="4" commonness="20" allowretry="true" unhideentitysubcategories="abandonedhuman">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
         <LocationType identifier="Abandoned" />
         <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
