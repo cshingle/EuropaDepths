@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Europa Depths Suits" modversion="1.0" corepackage="False" steamworkshopid="2957319430" gameversion="1.0.8.0">
+  <Item file="%ModDir%/items/suits.xml" />
+  <Item file="%ModDir%/items/poweritems.xml" />
+</contentpackage>
