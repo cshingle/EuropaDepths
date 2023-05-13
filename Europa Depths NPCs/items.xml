@@ -142,14 +142,6 @@
     <PreferredContainer primary="crewcab" secondary="armcab"/>
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" spawnprobability="0.06"/>
     <Price baseprice="80" sold="false" canbespecial="false" />
-    <Deconstruct time="10">
-      <Item identifier="bikehorn"/>
-    </Deconstruct>
-    <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredItem identifier="bikehorn"/>
-      <RequiredItem identifier="plastic"/>
-      <RequiredItem identifier="lead"/>
-    </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="641,960,64,64" origin="0.5,0.5"/>
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,311,121,55" depth="0.55" origin="0.5,0.5"/>
     <Body width="120" height="48" density="20"/>

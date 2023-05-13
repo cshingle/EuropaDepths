@@ -22,7 +22,7 @@
   <entitydescription.fuelrodcase>A case for safely storing volatile fuel rods.</entitydescription.fuelrodcase>
   <entitydescription.fuelrodvolatile>A fuel rod that has been further refined to supply power for much longer than normal. However, its radiation shielding can only partially limit the emitted ambient radiation, so the rod must be handled with care.</entitydescription.fuelrodvolatile>
   <entitydescription.hammer>Useful for removing unwanted walls.</entitydescription.hammer>
-  <entitydescription.leveractionrifle>Effective against unarmored targets. No Cowboy should leave how without it.</entitydescription.leveractionrifle>
+  <entitydescription.leveractionrifle>Effective against unarmored targets. No Cowboy should leave home without it.</entitydescription.leveractionrifle>
   <entitydescription.materialcrate>A crate for safely storing materials.</entitydescription.materialcrate>
   <entitydescription.medicalcase>A case for safely storing medical supplies.</entitydescription.medicalcase>
   <entitydescription.medicalhelmet>While the helmet won't offer adequate protection against most of the inhabitants of the subsurface ocean, it is better than no protection.</entitydescription.medicalhelmet>

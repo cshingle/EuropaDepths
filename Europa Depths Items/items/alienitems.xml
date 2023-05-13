@@ -124,10 +124,9 @@
       <AiTarget sightrange="10000.0" soundrange="10000" static="True" />
       <Body radius="45" density="40" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="Always" target="This">
+        <StatusEffect type="Always" target="This" stackable="false" delay="15" checkconditionalalways="true">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
-          <ParticleEmitter particle="nasonovsparkles" anglemax="360" distancemax="10" velocitymin="10" velocitymax="60" emitinterval="0.55" particleamount="5" particlespersecond="5" />
-          <sound file="Content/Items/Alien/AlienArtifactLoop1.ogg" range="500.0" loop="true" />
+          <SpawnCharacter speciesname="Crawler" count="1" offset="500,1000" spread="50" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="0" delay="1.1" stackable="false" setvalue="true" />
         <StatusEffect type="OnBroken" target="This" Condition="100" delay="0.4" setvalue="true">
@@ -158,10 +157,9 @@
       </Deconstruct>
       <Body radius="45" density="40" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="Always" target="This">
+        <StatusEffect type="Always" target="NearbyCharacters,this" range="400" interval="0.5" disabledeltatime="true" comparison="And">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
-          <sound file="Content/Items/Alien/AlienArtifactLoop1.ogg" range="500.0" loop="true" />
-          <ParticleEmitter particle="psychosisfx" scalemultiplier="0.7,0.7" anglemax="360" emitinterval="1.1" particleamount="1" particlespersecond="1" />
+          <SpawnCharacter speciesname="Terminalcell" count="3" offset="0,750" spread="50" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="Character,This">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
@@ -196,12 +194,10 @@
     <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="Always" target="This" comparison="And">
         <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
-        <Conditional hastag="neq fabricator" targetcontainer="true" />
         <sound file="%ModDir%/sounds/geigercounter.ogg" range="500.0" loop="true" />
       </StatusEffect>
       <StatusEffect type="Always" target="NearbyCharacters,this" range="400" interval="0.5" disabledeltatime="true" comparison="And">
         <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
-        <Conditional hastag="neq fabricator" targetcontainer="true" />
         <Affliction identifier="radiationsickness" strength="0.7" />
       </StatusEffect>
     </Holdable>
