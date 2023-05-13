@@ -1,9 +1,5 @@
 ﻿<Items>
   <Override>
-
-
-
-
     <Item name="" identifier="pulselaserammobox" scale="0.5" tags="pulselaserequipment,pulselaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy">
       <PreferredContainer primary="pulselaserammosource" amount="1" mincondition="1"/>
       <PreferredContainer primary="ammoboxcontainer" mincondition="1"/>

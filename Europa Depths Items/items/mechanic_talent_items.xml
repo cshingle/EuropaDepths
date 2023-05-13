@@ -343,7 +343,7 @@
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,372,159,57" depth="0.55" origin="0.4,0.5" />
     <Body radius="40" width="60" density="40" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-10,0" handle2="50,-10" msg="ItemMsgPickUpSelect" />
-    <RepairTool firedamage="20.0" structurefixamount="-0.5" range="305" barrelpos="62,0" combatpriority="25" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-20.0" targetforce="12">
+    <RepairTool firedamage="20.0" structurefixamount="-0.5" range="360" barrelpos="62,0" fireprobability="0.05" combatpriority="25" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-20.0" targetforce="12">
       <RequiredItems items="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
       <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-4.0" />
       <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-1" />
@@ -368,7 +368,7 @@
         <Affliction identifier="stun" strength="5" />
         <Affliction identifier="burn" strength="2" />
       </StatusEffect>
-      <LightComponent LightColor="1.0,1.0,1.0,1" range="650" Flicker="1" flickerspeed="0.2">
+      <LightComponent LightColor="1.0,1.0,1.0,1" range="850" Flicker="1" flickerspeed="0.2">
         <LightTexture texture="%ModDir%/sprites/beam.png" origin="-0.01, 0.471" size="0.3,0.3" />
       </LightComponent>
     </RepairTool>

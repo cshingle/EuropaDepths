@@ -524,29 +524,37 @@
                 </ItemSet>
             </npc>
             <npc identifier="psychoclown" commonness="0" moduleflags="none" job="killer" behavior="Passive" healthmultiplier="1.5" healthmultiplierinmultiplayer="3" aimspeed="1" aimaccuracy="1" reportrange="500">
-                <ItemSet commonness="10">
+                <ItemSet commonness="3">
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="clowncostume" equip="true"/>
                     <Item identifier="clownmask" equip="true"/>
-                    <Item identifier="clowndivingmask">
-                        <Item identifier="oxygentank" />
+                    <Item identifier="killertoyhammer" equip="true"/>
+                    <Item identifier="bikehorn" />
+                    <Item identifier="killerhorn" />
+                </ItemSet>
+                <ItemSet commonness="3">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="clowncostume" equip="true"/>
+                    <Item identifier="clownmask" equip="true"/>
+                    <Item identifier="killertoyhammer" equip="true"/>
+                    <Item identifier="shotgununique">
+                        <Item identifier="shotgunslugexplosive"/>
+                        <Item identifier="shotgunslugexplosive"/>
                     </Item>
-                    <Item identifier="oxygentank" />
-                    <Item identifier="pressurestabilizer" />
-                    <Item identifier="divingknife" equip="true"/>
-                    <Item identifier="bikehorn" equip="true"/>
+                    <Item identifier="shotgunshell" />
+                    <Item identifier="shotgunshell" />
+                    <Item identifier="shotgunshell" />
+                    <Item identifier="shotgunshell" />
+                    <Item identifier="bikehorn" />
+                    <Item identifier="killerhorn" />
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="clownsuitunique" equip="true"/>
                     <Item identifier="clownmaskunique" equip="true"/>
-                    <Item identifier="clowndivingmask">
-                        <Item identifier="oxygentank" />
-                    </Item>
-                    <Item identifier="oxygentank" />
-                    <Item identifier="pressurestabilizer" />
                     <Item identifier="divingknifeunique" equip="true"/>
                     <Item identifier="bikehorn" equip="true"/>
+                    <Item identifier="killerhorn" equip="true"/>
                 </ItemSet>
             </npc>
         </npcset>

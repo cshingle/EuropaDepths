@@ -177,6 +177,54 @@
     </Projectile>
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
+  <Item name="Depleted Fuel Harpoon" identifier="spearepletedfuel" category="Weapon" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="harpoongun" amount="6" spawnprobability="0.05" />
+    <PreferredContainer primary="armcab" minamount="3" maxamount="6" spawnprobability="0.05" />
+    <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="4" spawnprobability="0.05" />
+    <PreferredContainer primary="secarmcab" />
+    <Price baseprice="50" sold="false">
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" />
+    </Price>
+    <Deconstruct time="5">
+      <Item identifier="depletedfuel" outcondition="0.25" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="4">
+      <RequiredSkill identifier="electrical" level="45" />
+      <RequiredItem identifier="depletedfuel" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,968,55,55" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="85,368,168,11" depth="0.55" origin="0.5,0.5" />
+    <Body width="160" height="10" density="30" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Rope sourcepullforce="300" targetpullforce="100" projectilepullforce="5" maxlength="1500" snaponcollision="false" spritewidth="3" tile="true" origin="0.05,0.5" targetminmass="30" lerpforces="true" snapanimduration="0.5">
+      <Sprite texture="Content/Map/Thalamus/thalamus.png" sourcerect="617,352,174,32" depth="0.57" origin="0.5,0.5" />
+      <!-- Snap after 1 seconds if not stuck to anything -->
+      <StatusEffect type="OnUse" target="This" Snapped="true" delay="1" checkconditionalalways="true">
+        <Conditional targetitemcomponent="Projectile" IsStuckToTarget="false" />
+      </StatusEffect>
+    </Rope>
+    <Projectile characterusable="false" launchimpulse="5.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
+      <Attack structuredamage="25" itemdamage="55" targetforce="20" severlimbsprobability="0.2">
+        <Affliction identifier="lacerations" strength="55" />
+        <Affliction identifier="bleeding" strength="55" />
+        <Affliction identifier="stun" strength="0.5" />
+        <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
+          <Conditional radiationsickness="lt 30" />
+          <Affliction identifier="radiationsickness" strength="10" />
+        </StatusEffect>
+      </Attack>
+      <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
+        <Conditional Snapped="false" />
+        <Conditional mass="lt 30" />
+        <Affliction identifier="drag" strength="1" />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
   <Override>
     <Item name="" identifier="harpoongun" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer secondary="wreckweaponholder" spawnprobability="0.05" />

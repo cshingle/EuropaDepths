@@ -13,7 +13,7 @@
         <Price storeidentifier="merchantmine" multiplier="0.75" />
       </Price>
       <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="30" fabricationlimitmin="3" fabricationlimitmax="5"/>
-      <Deconstruct time="35">
+      <Deconstruct time="20">
         <Item identifier="carbon" mincondition="0.5" />
         <Item identifier="creepingorangevineseed" mincondition="0.5" />
       </Deconstruct>
@@ -44,7 +44,7 @@
         <Price storeidentifier="merchantmilitary" multiplier="0.8" />
         <Price storeidentifier="merchantmine" multiplier="0.75" />
       </Price>
-      <Deconstruct time="35">
+      <Deconstruct time="20">
         <Item identifier="carbon" mincondition="0.5" />
         <Item identifier="tobaccovineseed" mincondition="0.5" />
       </Deconstruct>
@@ -66,7 +66,7 @@
       <PreferredContainer primary="plantcab" secondary="medfabcab,medcontainer"/>
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="907,838,44,50" origin="0.5,0.5" />
       <Body radius="30" density="7" />
-      <Deconstruct time="35">
+      <Deconstruct time="20">
         <Item identifier="carbon" mincondition="0.5" />
         <Item identifier="raptorbaneseed" mincondition="0.5" />
       </Deconstruct>
@@ -107,7 +107,7 @@
         <Price storeidentifier="merchantmilitary" multiplier="0.8" />
         <Price storeidentifier="merchantmine" multiplier="0.75" />
       </Price>
-      <Deconstruct time="35">
+      <Deconstruct time="20">
         <Item identifier="sodium" />
         <Item identifier="saltvineseed" />
       </Deconstruct>
@@ -194,7 +194,7 @@
     <PreferredContainer primary="plantcontainer"/>
   </Item>
 
-  <Item name="Slime Bacteria Spore" identifier="slimebacteriaspore" category="Material" maxstacksize="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3,opium" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" allowasextracargo="true">
+  <Item name="Slime Bacteria Spore" identifier="slimebacteriaspore" category="Material" maxstacksize="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" allowasextracargo="true">
     <PreferredContainer primary="plantcab" secondary="medfabcab,medcontainer"/>
     <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="965,960,46,50" origin="0.5,0.5" />
     <Body radius="30" density="5" />
@@ -215,6 +215,60 @@
         <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
         <Remove />
       </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-50.0" />
+      <StatusEffect type="OnBroken" target="This" Condition="-100.0">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+    <AiTarget sightrange="1000" static="true" />
+    <PreferredContainer primary="plantcontainer"/>
+  </Item>
+
+  <Item name="Sea Wheat bloom" identifier="seawheatbloom" category="Material" maxstacksize="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" allowasextracargo="true">
+    <PreferredContainer primary="plantcab" secondary="medfabcab,medcontainer"/>
+    <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" depth="0.2" sourcerect="903,903,46,56" origin="0.5,0.5" />
+    <Body radius="30" density="5" />
+    <Price baseprice="20" sold="false">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" />
+      <Price storeidentifier="merchantresearch" multiplier="1.1" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
+      <Price storeidentifier="merchantmine" multiplier="0.75" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="ethanol" mincondition="0.5" />
+    </Deconstruct>
+    <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+        <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
+        <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnFire" target="This" Condition="-50.0" />
+      <StatusEffect type="OnBroken" target="This" Condition="-100.0">
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+    <AiTarget sightrange="1000" static="true" />
+    <PreferredContainer primary="plantcontainer"/>
+  </Item>
+
+  <Item name="Fiber" identifier="fiber" category="Material" maxstacksize="8" Tags="smallitem,plantitem,petfood1,petfood2,petfood3" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" impacttolerance="5.5" allowasextracargo="true">
+    <PreferredContainer primary="plantcab" secondary="medfabcab,medcontainer"/>
+    <Sprite texture="Content/Items/Materials/Minerals.png" depth="0.2" sourcerect="545,386,54,78" origin="0.5,0.5" />
+    <Body radius="30" density="5" />
+    <Price baseprice="10" sold="false">
+      <Price storeidentifier="merchantoutpost" />
+      <Price storeidentifier="merchantcity" multiplier="1.2" />
+      <Price storeidentifier="merchantresearch" multiplier="1.1" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.8" />
+      <Price storeidentifier="merchantmine" multiplier="0.75" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" mincondition="0.5" />
+    </Deconstruct>
+    <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFire" target="This" Condition="-50.0" />
       <StatusEffect type="OnBroken" target="This" Condition="-100.0">
         <Remove />

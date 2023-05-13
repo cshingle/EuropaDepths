@@ -148,7 +148,7 @@
 
     <Item name="" identifier="coilgunammobox" scale="0.5" tags="coilgunequipment,coilgunammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy">
       <PreferredContainer primary="coilgunammoloader" amount="2" mincondition="1"/>
-      <PreferredContainer primary="ammoboxcontainer" amount="2" mincondition="1"/>
+      <PreferredContainer primary="ammoboxcontainer" minamount="1" maxamount="2" mincondition="1" spawnprobability="0.5"/>
       <!--Ensure that Thalamus always has at least one coilgun ammo box to use-->
       <PreferredContainer secondary="wreckcoilgunloader" amount="1" />
       <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.5"/>

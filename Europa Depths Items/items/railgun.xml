@@ -326,4 +326,156 @@
       <Containable items="railgunshrapnelshellpellet" />
     </ItemContainer>
   </Item>
+
+  <Item name="Mag Fead Railgun" identifier="railgunmag" description="" Tags="turret,slowturret" category="Machine,Weapon" interactthroughwalls="true" Scale="0.5" interactdistance="10" focusonselected="true" offsetonselected="800" linkable="true" allowedlinks="railgunmagsource">
+    <Sprite texture="Content/Items/Weapons/Turrets.png" depth="0.01" sourcerect="4,4,504,504" canflipy="false" />
+    <MinimapIcon name="Command_Weapons_Railgun" texture="Content/UI/CommandUIAtlas.png" sourcerect="640,0,128,128" />
+    <SwappableItem price="7500" replacementonuninstall="largeturrethardpoint" origin="256,438" swapidentifier="largeturret">
+      <SchematicSprite texture="Content/UI/WeaponUI.png" sourcerect="0,0,256,389" />
+      <SwapConnectedItem tag="periscope" swapto="periscope" />
+      <SwapConnectedItem tag="turretammosource" swapto="railgunmagloader" />
+    </SwappableItem>
+    <UpgradePreviewSprite scale="3.5" texture="Content/UI/WeaponUI.png" sourcerect="140,805,102,70" origin="0.5,0.5" />
+    <StaticBody width="80" radius="80" />
+    <Turret launchimpulse="200.0" canbeselected="false" characterusable="false" linkable="true" barrelpos="250, 180" firingoffset="0,-150" rotationlimits="180,360" powerconsumption="16000.0" recoiltime="0.5" reload="2" showchargeindicator="true" showprojectileindicator="true" recoildistance="100" springstiffnesslowskill="2" springstiffnesshighskill="50" springdampinglowskill="0.5" springdampinghighskill="10" rotationspeedlowskill="1" rotationspeedhighskill="8">
+      <StatusEffect type="OnUse" target="This">
+        <sound file="Content/Items/Weapons/Railgun1.ogg" range="10000" type="OnUse" volume="3" />
+        <sound file="Content/Items/Weapons/Railgun2.ogg" range="10000" type="OnUse" volume="3" />
+        <sound file="Content/Items/Weapons/Railgun3.ogg" range="10000" type="OnUse" volume="3" />
+        <Explosion range="1000.0" structuredamage="0" force="0.01" camerashake="10.0" flames="false" smoke="false" sparks="false" underwaterbubble="false" />
+      </StatusEffect>
+      <WeaponIndicator texture="Content/UI/WeaponUI.png" sourcerect="343,913,66,36" origin="0.227, 0.5" />
+      <RailSprite texture="Content/Items/Weapons/Turrets.png" origin="0.51, 0.6" sourcerect="0,512,328,512" depth="0.011" />
+      <BarrelSprite texture="Content/Items/Weapons/Turrets.png" origin="0.5, 0.85" sourcerect="512,0,250,672" depth="0.012" />
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,0,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,0,256,256" />
+      <MoveSound file="Content/Items/Weapons/RailgunLoop.ogg" />
+      <StartMoveSound file="Content/Items/Weapons/RailgunStart.ogg" />
+      <EndMoveSound file="Content/Items/Weapons/RailgunStop.ogg" />
+      <RequiredSkill identifier="weapons" level="50" />
+      <LightComponent LightColor="1.0,0.8,0.8,1.0" Flicker="0.0" range="2048" IsOn="true" drawbehindsubs="true" ignorecontinuoustoggle="true">
+        <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.0,1.0" />
+      </LightComponent>
+      <ParticleEmitter particle="muzzleflashrailgun" particleamount="1" velocitymin="90" velocitymax="150" />
+      <Upgrade gameversion="0.15.9.0" powerconsumption="16000.0" />
+    </Turret>
+    <aitarget maxsightrange="3000" maxsoundrange="10000" fadeouttime="5" />
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power_in" displayname="connection.powerin" />
+      <input name="position_in" displayname="connection.turretaimingin" />
+      <input name="trigger_in" displayname="connection.turrettriggerin" />
+      <input name="toggle_light" displayname="connection.togglelight"/>
+      <input name="set_light" displayname="connection.setlight" />
+    </ConnectionPanel>
+    <Upgrade gameversion="0.10.0.0" scale="*0.5" barrelpos="256,178" />
+    <SkillRequirementHint identifier="weapons" level="50" />
+  </Item>
+
+  <Item name="" identifier="railgunmagloader" tags="railgunmagequipment,railgunmagsource,turretammosource" category="Machine,Weapon" linkable="true" allowedlinks="railgunmag" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
+    <SwappableItem canbebought="false" origin="82,352" spawnwithid="railgunmagammobox"/>
+    <Sprite name="Railgun Loader Front" texture="Content/Items/Weapons/Loaders.png" depth="0.78" sourcerect="709,370,220,353" origin="0.5,0.5" />
+    <UpgradePreviewSprite texture="Content/UI/WeaponUI.png" sourcerect="208,968,32,46" origin="0.5,0.5" />
+    <DecorativeSprite name="Railgun Loader Frame Front" texture="Content/Items/Weapons/Loaders.png" depth="0.8" sourcerect="31,569,117,200" origin="0.5,0.5" offset="0,-30" />
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="10" mindeteriorationdelay="60" maxdeteriorationdelay="300" MinDeteriorationCondition="0" RepairThreshold="50" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+      <StatusEffect type="InWater" target="This" condition="-0.25" />
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
+      <RequiredSkill identifier="mechanical" level="55" />
+      <RequiredItem items="wrench" type="Equipped" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="stun" strength="4" />
+      </StatusEffect>
+    </Repairable>
+    <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="6" itempos="111,-262" iteminterval="0,0" itemrotation="0" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.79">
+      <GuiFrame relativesize="0.18,0.23" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
+      <Containable items="railgunmagammo" />
+      <StatusEffect type="OnUse" target="Contained">
+        <RequiredItem items="railgunmagammo" type="Contained" />
+        <Use />
+      </StatusEffect>
+    </ItemContainer>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <output name="condition_out" displayname="connection.conditionout" />
+    </ConnectionPanel>
+  </Item>
+
+  <Item name="" identifier="railgunbolt" category="Weapon" scale="0.5" sonarsize="3" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="144,447,112,12" depth="0.55" />
+    <Body width="160" height="10" density="20" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
+    <Projectile characterusable="false" launchimpulse="0" maxtargetstohit="5" damagedoors="true">
+      <Attack structuredamage="40" itemdamage="40" severlimbsprobability="5" penetration="2" targetforce="750">
+        <Affliction identifier="explosiondamage" strength="115" />
+        <Addliction identifier="bleeding" strength="40" />
+        <Affliction identifier="stun" strength="15" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="2">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="-5" anglemax="5" particleamount="5" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="5">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" condition="-25" />
+      <StatusEffect type="OnBroken" target="This">
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="10" velocitymin="100" velocitymax="2000" scalemin="0.5" scalemax="0.75" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <Upgrade gameversion="0.10.0.0" scale="*0.5" />
+  </Item>
+
+  <Item name="Railgun Ammo Box" identifier="railgunmagammobox" scale="0.5" tags="railgunmagequipment,railgunmagammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy">
+    <PreferredContainer primary="railgunmagloader" amount="1" mincondition="1"/>
+    <PreferredContainer primary="ammoboxcontainer" mincondition="1"/>
+    <!--Ensure that Thalamus always has at least one coilgun ammo box to use-->
+    <PreferredContainer secondary="wreckcoilgunloader" amount="1" />
+    <PreferredContainer secondary="wreckammoboxcontainer" amount="1" spawnprobability="0.1"/>
+    <Price baseprice="170" displaynonempty="true">
+      <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="3"/>
+      <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="6" sold="false"/>
+      <Price storeidentifier="merchantresearch" multiplier="1.3" minavailable="3"/>
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="15"/>
+      <Price storeidentifier="merchantmine" multiplier="1.2" minavailable="3"/>
+      <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="15"/>
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" mincondition="0.95"/>
+      <Item identifier="steel" mincondition="0.95"/>
+      <Item identifier="aluminium"/>
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredSkill identifier="weapons" level="25" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="aluminium" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
+      <RequiredSkill identifier="weapons" level="20" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="railgunmagammobox" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
+    </Fabricate>
+    <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
+    <Sprite texture="%ModDir%/sprites/items.png" depth="0.54" sourcerect="127,712,95,78" origin="0.5,0.5" />
+    <Body width="115" height="88" density="30" />
+    <Holdable slots="RightHand+LeftHand" canBeCombined="true" holdpos="0,-80" handle1="-40,30" handle2="40,30" aimable="false" msg="ItemMsgPickUpSelect"/>
+    <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" canbecombined="true" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
+      <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+        <SpawnItem identifiers="railgunbolt" spawnposition="ThisInventory" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" condition="-12.5" disabledeltatime="true">
+        <RequiredItem items="railgunbolt" type="Contained" />
+      </StatusEffect>
+      <Containable items="railgunbolt" />
+    </ItemContainer>
+  </Item>
+
 </Items>

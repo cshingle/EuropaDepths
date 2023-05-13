@@ -10,7 +10,7 @@ Contains:
 - Aquatic Poppy - Produces Poppy Fruit which deconstructs into opium
 - Elastin Plant - Produces Elastin
 - Fiber Plant   - Produces Organic Fiber
-- Sea Yeast Shroom - Produces Ethanol
+- Sea Wheat - Produces Ethanol
 - Slime Bacteria - Produces Slime Bacteria Spore which deconstructs into Antibiotics
 
 ### Quality of Life changes include

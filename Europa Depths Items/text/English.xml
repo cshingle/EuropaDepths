@@ -9,8 +9,11 @@
   <entitydescription.3030round>.30 caliber round for a Lever Action Rifle. Putting down targets since 1895.</entitydescription.3030round>
   <entitydescription.3030rounddepletedfuel>.30 caliber round for a Lever Action Rifle. Along with increased penetration, the ammo has been special-made to also inflict radiation sickness on the target.</entitydescription.3030rounddepletedfuel>
   <entitydescription.40mmempgrenade>Ammunition for grenade launcher. Effective against Guardians.</entitydescription.40mmempgrenade>
+  <entitydescription.chaingunammoboxcopper>A heavy box of Copper ammo for the Chaingun.</entitydescription.chaingunammoboxcopper>
+  <entitydescription.railgunmagammobox>A heavy box of Steel ammo for the Mag Railgun. They do less damage than their larger counterparts, but have significantly better penetration</entitydescription.railgunmagammobox>
   <entitydescription.clowndivingmaskunique>Nothing is out of mother's reach.</entitydescription.clowndivingmaskunique>
   <entitydescription.coilgun_overvolted>An overvolted version of the coilgun with a higher rate of fire, but also higher power demands.</entitydescription.coilgun_overvolted>
+  <entitydescription.railgunmagloader>An Mag fead Railgun. Less powerful but more resource efficient than standard railgun.</entitydescription.railgunmagloader>
   <entitydescription.coilgunammoboxcopper>Ammunition for the coilgun that higher penetration then lead, but less than piercing.</entitydescription.coilgunammoboxcopper>
   <entitydescription.depletedshotgunslugshell>A shotgun slug round made from depleted fuel.</entitydescription.depletedshotgunslugshell>
   <entitydescription.doublecoilgun_overvolted>An overvolted double coilgun with a higher rate of fire, but also higher power demands..</entitydescription.doublecoilgun_overvolted>
@@ -29,6 +32,7 @@
   <entitydescription.nuclearlaserammobox>A heavly shielded box containing uranium based nuclear fuel. Used as ammo by the Nuclear Laser</entitydescription.nuclearlaserammobox>
   <entitydescription.nuclearlaserfulguriumammobox>A heavly shielded box containing fulgurium based nuclear fuel. Used as ammo by the Nuclear Laser</entitydescription.nuclearlaserfulguriumammobox>
   <entitydescription.nuclearlaserloader>Feeds nuclear ammunition into a linked Nuclear Laser.</entitydescription.nuclearlaserloader>
+  <entitydescription.railgunmag>Feeds Mag attached Railgun.</entitydescription.railgunmag>
   <entitydescription.nuclearlaserthoriumammobox>A heavly shielded box containing thorium based nuclear fuel. Used as ammo by the Nuclear Laser</entitydescription.nuclearlaserthoriumammobox>
   <entitydescription.radiantartifact>Artifact found in alien ruins.</entitydescription.radiantartifact>
   <entitydescription.railgunshrapnelshell>A reloadable burst-type munition for the railgun that fires a large number of blunt pellets in a wide spread.</entitydescription.railgunshrapnelshell>
@@ -40,10 +44,13 @@
   <entityname.3030round>30-30 Round</entityname.3030round>
   <entityname.3030rounddepletedfuel>30-30 Depleted Fuel Round</entityname.3030rounddepletedfuel>
   <entityname.40mmempgrenade>40mm EMP Grenade</entityname.40mmempgrenade>
-  <entityname.captainscap4>A Nice Hat</entityname.captainscap4>
-  <entityname.captainscap5>Cowboy Hat</entityname.captainscap5>
+  <entityname.ed_captainscap4>A Nice Hat</entityname.ed_captainscap4>
+  <entityname.ed_captainscap5>Cowboy Hat</entityname.ed_captainscap5>
+  <entityname.chaingunammoboxcopper>Chaingun Copper Ammunition Box</entityname.chaingunammoboxcopper>
+  <entityname.railgunmagammobox>Mag Fead Railgun Ammunition Box</entityname.railgunmagammobox>
   <entityname.clowndivingmaskunique>Mother's Tangency</entityname.clowndivingmaskunique>
   <entityname.coilgun_overvolted>Overvolted Coilgun</entityname.coilgun_overvolted>
+  <entityname.railgunmag>Mag Fead Railgun</entityname.railgunmag>
   <entityname.coilgunammoboxcopper>Coilgun Copper Ammunition Box</entityname.coilgunammoboxcopper>
   <entityname.depletedshotgunslugshell>Depleted Rifled Slug</entityname.depletedshotgunslugshell>
   <entityname.doublecoilgun_overvolted>Overvolted Double Coilgun</entityname.doublecoilgun_overvolted>
@@ -62,6 +69,7 @@
   <entityname.nuclearlaserammobox>Nuclear Laser Ammo Box</entityname.nuclearlaserammobox>
   <entityname.nuclearlaserfulguriumammobox>Nuclear Laser Fulgurium Ammo Box</entityname.nuclearlaserfulguriumammobox>
   <entityname.nuclearlaserloader>Nuclear Laser Loader</entityname.nuclearlaserloader>
+  <entityname.railgunmagloader>Railgun Mag Loader</entityname.railgunmagloader>
   <entityname.nuclearlaserthoriumammobox>Nuclear Laser Thorium Ammo Box</entityname.nuclearlaserthoriumammobox>
   <entityname.radiantartifact>Radiant Alien Artifact</entityname.radiantartifact>
   <entityname.railgunshrapnelshell>Shrapnel Shell</entityname.railgunshrapnelshell>
@@ -71,9 +79,9 @@
   <entityname.thermalhelmet>Thermal Helmet</entityname.thermalhelmet>
   <entityname.thoriumfuelrodvolatile>Volatile Thorium Fuel Rod</entityname.thoriumfuelrodvolatile>
   <talentdescription.commendations>Whenever you finish at least one mission, gain a ‖color:gui.orange‖Commendation‖end‖.\nWhenever you complete all missions gain a ‖color:gui.orange‖Commendation‖end‖.\nWhen you apply a ‖color:gui.orange‖Commendation‖end‖ on another character, give them [selfxpgain] experience.</talentdescription.commendations>
+  <talentdescription.logisticsexpert>Gain [xpbonus]% bonus XP and [moneybonus]% bonus money when completing a [missiontype1] or [missiontype2] mission. Max missions increased by 2.</talentdescription.logisticsexpert>
   <talentdescription.miner>Unlock recipe: [itemname].\nWhenever you deconstruct an ore, you have a [probability]% chance to gain double the output.</talentdescription.miner>
   <talentdescription.waterprankster>Clown Power gives you immunity to pressure and allows you to swim [swimspeedvalue]% faster.</talentdescription.waterprankster>
   <upgradedescription.increasesupercapacitorefficiency>Supercapacitors will waste less Electricity.</upgradedescription.increasesupercapacitorefficiency>
   <upgradename.increasesupercapacitorefficiency>Upgrade Supercapacitor Efficiency</upgradename.increasesupercapacitorefficiency>
-  <talentdescription.logisticsexpert>Gain [xpbonus]% bonus XP and [moneybonus]% bonus money when completing a [missiontype1] or [missiontype2] mission. Max missions increased by 2.</talentdescription.logisticsexpert>
 </infotexts>

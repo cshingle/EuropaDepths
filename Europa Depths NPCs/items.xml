@@ -120,4 +120,59 @@
     </Quality>
     <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
   </Item>
+  <Item name="Killer Horn" identifier="killerhorn" category="Misc" tags="smallitem,hornitem,clowns" scale="0.5" cargocontaineridentifier="metalcrate" description="HONK">
+    <Price baseprice="5" sold="false" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="769,385,64,64" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Misc/Misc.png" sourcerect="101,45,53,22" depth="0.55" />
+    <Body width="50" height="20" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" aimpos="100,0" handle1="-15,-3" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="2">
+      <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" />
+      <StatusEffect type="Always" target="NearbyCharacters,this" range="50" interval="0.5" disabledeltatime="true">
+        <Affliction identifier="killerclown" strength="100" />
+      </StatusEffect>
+      <StatusEffect type="Always" target="This" stackable="false" delay="2">
+        <Remove />
+      </StatusEffect>
+    </RangedWeapon>
+    <aitarget soundrange="1000" fadeouttime="5" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+  <Item name="Lead Hammer" identifier="killertoyhammer" category="Weapon" Tags="smallitem,mountableweapon,clowns,stunner" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" RequireAimToUse="True" hideinmenus="true" nonplayerteaminteractable="True">
+    <PreferredContainer primary="crewcab" secondary="armcab"/>
+    <PreferredContainer secondary="wreckarmcab,abandonedarmcab" spawnprobability="0.06"/>
+    <Price baseprice="80" sold="false" canbespecial="false" />
+    <Deconstruct time="10">
+      <Item identifier="bikehorn"/>
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+      <RequiredItem identifier="bikehorn"/>
+      <RequiredItem identifier="plastic"/>
+      <RequiredItem identifier="lead"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="641,960,64,64" origin="0.5,0.5"/>
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,311,121,55" depth="0.55" origin="0.5,0.5"/>
+    <Body width="120" height="48" density="20"/>
+    <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-20,0" handle2="-10,5" holdangle="60" reload="1" range="100" combatpriority="25" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="UseTarget" delay="1" comparison="Or">
+        <Conditional speciesname="latcher"/>
+        <Conditional speciesname="endworm"/>
+        <Conditional speciesname="charybdis"/>
+        <TriggerEvent identifier="toyhammeronabyssmonster"/>
+      </StatusEffect>
+      <Attack targetimpulse="10">
+        <Affliction identifier="stun" strength="2"/>
+        <Affliction identifier="blunttrauma" strength="4" />
+      </Attack>
+      <StatusEffect type="OnUse" forceplaysounds="true">
+        <Sound type="OnUse" file="Content/Items/Weapons/ToyHammerHit1.ogg" range="800" selectionmode="Random"/>
+        <Sound type="OnUse" file="Content/Items/Weapons/ToyHammerHit2.ogg" range="800"/>
+        <Sound type="OnUse" file="Content/Items/Weapons/ToyHammerHit3.ogg" range="800"/>
+        <Sound type="OnUse" file="Content/Items/Weapons/ToyHammerHit4.ogg" range="800"/>
+        <Sound type="OnUse" file="Content/Items/Weapons/ToyHammerHit5.ogg" range="800"/>
+        <Sound type="OnUse" file="Content/Items/Weapons/ToyHammerHit6.ogg" range="800"/>
+      </StatusEffect>
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="1000" fadeouttime="3"/>
+  </Item>
 </Items>

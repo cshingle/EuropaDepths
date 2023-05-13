@@ -514,7 +514,7 @@
           <Conditional IsDead="false" />
           <RequiredItem items="oxygenitetank" type="Contained" targetslot="0"/>
         </StatusEffect>
-        <StatusEffect type="OnWearing" targettype="Contained,Character" targetslot="1" interval="1" Condition="-0.1" disabledeltatime="true" comparison="And" >
+        <StatusEffect type="OnWearing" targettype="Contained,Character" targetslot="1" interval="1" Condition="-0.1" disabledeltatime="true" comparison="And">
           <Conditional IsPlayer="True"/>
           <RequiredItem items="mobilebattery" type="Contained" targetslot="1"/>
         </StatusEffect>

@@ -52,6 +52,33 @@
         </AbandonedOutpostMission>
     </Override>
 
+    <AbandonedOutpostMission identifier="abandonedoutpostrescuekillerclown" tags="abandonedoutpost" type="AbandonedOutpost" MaxDifficulty="40" achievementidentifier="abandonedoutpostrescue" reward="3000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
+        <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
+        <LocationType identifier="Abandoned" />
+        <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+        <Characters>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="engineeringmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="engineeringmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="engineeringmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
+            <Character identifier="hostage" from="abandonedoutpostnpcs" asfaraspossible="true" requirerescue="true"/>
+            <Character identifier="hostage" from="abandonedoutpostnpcs" asfaraspossible="true" requirerescue="true"/>
+            <Character identifier="hostage" from="abandonedoutpostnpcs" asfaraspossible="true" requirerescue="true" multiplayeronly="true"/>
+        </Characters>
+        <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
+    </AbandonedOutpostMission>
+
     <AbandonedOutpostMission name="Dire Outpost Assassination" identifier="abandonedoutposthumansdire" tags="abandonedoutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="3000" difficulty="4" commonness="20" allowretry="true" unhideentitysubcategories="abandonedhuman">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
         <LocationType identifier="Abandoned" />
@@ -116,6 +143,30 @@
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule" multiplayeronly="true"/>
             <Character identifier="banditleader" from="abandonedoutpostnpcsdire" spawnpointtags="banditleader"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" asfaraspossible="true"/>
+            <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true"/>
+            <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true"/>
+            <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true" multiplayeronly="true"/>
+        </Characters>
+        <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
+    </AbandonedOutpostMission>
+
+    <AbandonedOutpostMission name="Dire Outpost Recovery" identifier="abandonedoutpostrescuekillerclowndire" tags="abandonedoutpost" type="AbandonedOutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostrescue" reward="3000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
+        <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
+        <LocationType identifier="Abandoned" />
+        <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+        <Characters>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" asfaraspossible="true"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" asfaraspossible="true"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" asfaraspossible="true"/>
             <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true"/>
             <Character identifier="hostage" from="abandonedoutpostnpcsdire" asfaraspossible="true" requirerescue="true"/>
@@ -321,7 +372,7 @@
         <message header="missionheader0.pirate1" text="missionmessage0.pirate1"/>
         <message header="missionheader1.pirate1" text="missionmessage1.pirate1"/>
     </PirateMission>
-    
+
     <PirateMission type="Pirate" identifier="piratesecondary" tags="piratehumpback" difficulty="4" commonness="20" reward="4000" issideobjective="true" addedmissiondifficultyperplayer="10">
         <message header="Pirates detected" text=""/>
         <message header="Pirates eliminated" text=""/>

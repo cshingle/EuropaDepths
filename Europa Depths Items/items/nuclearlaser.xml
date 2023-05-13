@@ -85,7 +85,7 @@
         </ConnectionPanel>
     </Item>
 
-    <Item name="" identifier="nuclearlaserammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="40">
+    <Item name="" identifier="nuclearlaserammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="42">
         <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.05"/>
         <Price baseprice="310"  displaynonempty="true">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -120,14 +120,14 @@
             <StatusEffect type="OnUse" target="This" disabledeltatime="true">
                 <SpawnItem identifiers="nuclearlaserbolt" spawnposition="ThisInventory" />
             </StatusEffect>
-            <StatusEffect type="OnUse" target="This" condition="-2" disabledeltatime="true">
+            <StatusEffect type="OnUse" target="This" condition="-3" disabledeltatime="true">
                 <RequiredItem items="nuclearlaserbolt" type="Contained" />
             </StatusEffect>
             <Containable items="nuclearlaserbolt" />
         </ItemContainer>
     </Item>
 
-    <Item name="" identifier="nuclearlaserthoriumammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="40">
+    <Item name="" identifier="nuclearlaserthoriumammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="42">
         <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.03"/>
         <Price baseprice="400" displaynonempty="true">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -161,14 +161,14 @@
             <StatusEffect type="OnUse" target="This" disabledeltatime="true">
                 <SpawnItem identifiers="nuclearlaserthoriumbolt" spawnposition="ThisInventory" />
             </StatusEffect>
-            <StatusEffect type="OnUse" target="This" condition="-2" disabledeltatime="true">
+            <StatusEffect type="OnUse" target="This" condition="-3" disabledeltatime="true">
                 <RequiredItem items="nuclearlaserthoriumbolt" type="Contained" />
             </StatusEffect>
             <Containable items="nuclearlaserthoriumbolt" />
         </ItemContainer>
     </Item>
 
-    <Item name="" identifier="nuclearlaserfulguriumammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="40">
+    <Item name="" identifier="nuclearlaserfulguriumammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="42">
         <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.02"/>
         <Price baseprice="600" sold="false" displaynonempty="true">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -202,7 +202,7 @@
             <StatusEffect type="OnUse" target="This" disabledeltatime="true">
                 <SpawnItem identifiers="nuclearlaserfulguriumbolt" spawnposition="ThisInventory" />
             </StatusEffect>
-            <StatusEffect type="OnUse" target="This" condition="-2" disabledeltatime="true">
+            <StatusEffect type="OnUse" target="This" condition="-3" disabledeltatime="true">
                 <RequiredItem items="nuclearlaserfulguriumbolt" type="Contained" />
             </StatusEffect>
             <Containable items="nuclearlaserfulguriumbolt" />

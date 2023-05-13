@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+    <Affliction name="Killer Clown" identifier="killerclown" type="psychoclown" isbuff="true" hideiconafterdelay="true" limbspecific="false" maxstrength="100" showiconthreshold="1" treatmentthreshold="1" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+        <Effect minstrength="0" maxstrength="100" strengthchange="0" resistancefor="oxygenlow" minresistance="1" maxresistance="1">
+            <AbilityFlag flagtype="ImmuneToPressure" />
+            <StatusEffect target="Character" usehulloxygen="false" setvalue="true">
+                <ReduceAffliction identifier="oxygenlow" strength="0.5"/>
+            </StatusEffect>
+            <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
+                <Affliction identifier="psychosis" strength="100" />
+                <reduceaffliction type="bloodloss" strength="1" />
+                <reduceaffliction type="burn" strength="1" />
+                <reduceaffliction type="damage" strength="2" />
+                <reduceaffliction type="slow" strength="5" />
+                <reduceaffliction type="stun" strength="5" />
+                <reduceaffliction identifier="nausea" strength="25" />
+            </StatusEffect>
+            <StatusEffect target="Character" interval="10" disabledeltatime="true">
+                <Conditional IsPlayer="True"/>
+                <reduceaffliction identifier="killerclown" strength="25" />
+            </StatusEffect>
+        </Effect>
+        <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,7" sheetelementsize="128,128" color="255,0,0,255" origin="0,0"/>
+    </Affliction>
+</Afflictions>

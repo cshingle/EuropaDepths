@@ -7,7 +7,7 @@
         <Price storeidentifier="merchantoutpost" multiplier="0.85" />
         <Price storeidentifier="merchantcity" multiplier="0.85" />
         <Price storeidentifier="merchantresearch" multiplier="2" />
-      <Price storeidentifier="merchantmilitary" multiplier="1.25 " />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25 " />
         <Price storeidentifier="merchantmine" />
       </Price>
       <PreferredContainer primary="artifactholder" amount="1" spawnprobability="0.3" />
@@ -20,7 +20,7 @@
         <Item identifier="oxygeniteshard" />
         <Item identifier="oxygeniteshard" />
       </Deconstruct>
-    <Body radius="45" density="40" friction="0.95" />
+      <Body radius="45" density="40" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This,Hull" oxygen="-100000.0">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
@@ -36,7 +36,7 @@
         <Price storeidentifier="merchantoutpost" multiplier="0.85" />
         <Price storeidentifier="merchantcity" multiplier="0.85" />
         <Price storeidentifier="merchantresearch" multiplier="2" />
-      <Price storeidentifier="merchantmilitary" multiplier="1.25 " />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25 " />
         <Price storeidentifier="merchantmine" />
       </Price>
       <PreferredContainer primary="artifactholder" amount="1" spawnprobability="0.3" />
@@ -49,7 +49,7 @@
         <Item identifier="incendium" />
         <Item identifier="incendium" />
       </Deconstruct>
-    <Body radius="45" density="40" friction="0.95" />
+      <Body radius="45" density="40" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="NotInWater" target="This" stackable="false" delay="15" checkconditionalalways="true">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
@@ -70,7 +70,7 @@
         <Price storeidentifier="merchantoutpost" multiplier="0.85" />
         <Price storeidentifier="merchantcity" multiplier="0.85" />
         <Price storeidentifier="merchantresearch" multiplier="2" />
-      <Price storeidentifier="merchantmilitary" multiplier="1.25 " />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25 " />
         <Price storeidentifier="merchantmine" />
       </Price>
       <PreferredContainer primary="artifactholder" amount="1" spawnprobability="0.3" />
@@ -83,7 +83,7 @@
         <Item identifier="fulgurium" />
         <Item identifier="fulgurium" />
       </Deconstruct>
-    <Body radius="45" density="40" friction="0.95" />
+      <Body radius="45" density="40" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
         <!-- EMP explosion every 15 seconds -->
         <StatusEffect type="Always" target="This" Condition="0" delay="15" stackable="false" setvalue="true" />
@@ -122,7 +122,7 @@
         <Item identifier="physicorium" />
       </Deconstruct>
       <AiTarget sightrange="10000.0" soundrange="10000" static="True" />
-    <Body radius="45" density="40" friction="0.95" />
+      <Body radius="45" density="40" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
@@ -143,7 +143,7 @@
         <Price storeidentifier="merchantoutpost" multiplier="0.85" />
         <Price storeidentifier="merchantcity" multiplier="0.85" />
         <Price storeidentifier="merchantresearch" multiplier="2" />
-      <Price storeidentifier="merchantmilitary" multiplier="1.25 " />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25 " />
         <Price storeidentifier="merchantmine" />
       </Price>
       <PreferredContainer primary="artifactholder" amount="1" spawnprobability="0.3" />
@@ -156,7 +156,7 @@
         <Item identifier="dementonite" />
         <Item identifier="dementonite" />
       </Deconstruct>
-    <Body radius="45" density="40" friction="0.95" />
+      <Body radius="45" density="40" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
@@ -222,9 +222,9 @@
       <PreferredContainer primary="ruinstoragelarge" amount="1" spawnprobability="0.2" />
       <PreferredContainer primary="ruintreasure" amount="1" spawnprobability="0.5" />
       <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="0,1952,34,77" depth="0.7" origin="0.5,0.5" />
-      <Deconstruct time="20">
-        <Item identifier="dementonite" />
-        <Item identifier="fulgurium" mincondition="0.90" />
+      <Deconstruct time="10">
+        <Item identifier="lead" />
+        <Item identifier="fulgurium" />
       </Deconstruct>
       <LightComponent AllowInGameEditing="false" lightcolor="112,146,190,30" canbeselected="false" range="100.0" IsOn="true" castshadows="false" />
       <Body radius="15" height="40" density="30" />
@@ -258,14 +258,14 @@
         <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1">
           <Remove />
         </StatusEffect>
-      <StatusEffect type="OnImpact" target="This" condition="-34" />
+        <StatusEffect type="OnImpact" target="This" condition="-34" />
         <StatusEffect type="OnImpact" target="UseTarget">
-        <Conditional entitytype="eq Structure" />
+          <Conditional entitytype="eq Structure" />
           <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="5" velocitymin="100" velocitymax="2000" scalemin="0.1" scalemax="0.2" />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="UseTarget">
-        <Conditional entitytype="eq Structure" />
-        <Conditional hastag="eq door" />
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
           <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
@@ -280,7 +280,7 @@
     <Item name="" identifier="giantspinelingspike" nameidentifier="spinelingspike" translationidentifier="spinelingspike" category="Misc" scale="0.5" sonarsize="6" hideinmenus="true">
       <Sprite texture="Content/Characters/Spineling_giant/Spineling_giant.png" sourcerect="0,860,720,72" depth="0.55" />
       <Body width="600" height="35" density="20" />
-    <Projectile characterusable="false" launchimpulse="400" maxtargetstohit="10" sticktocharacters="false" sticktoitems="false" sticktodoors="false" sticktostructures="true" friendlyfire="false" damagedoors="true">
+      <Projectile characterusable="false" launchimpulse="400" maxtargetstohit="10" sticktocharacters="false" sticktoitems="false" sticktodoors="false" sticktostructures="true" friendlyfire="false" damagedoors="true">
         <Attack structuredamage="100" itemdamage="100" severlimbsprobability="2.0" penetration="0.5">
           <!--Hits up to 10 limbs, so the actual damage can be 10x-->
           <Affliction identifier="lacerations" strength="15" />
@@ -296,7 +296,7 @@
           <Remove />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="UseTarget">
-        <Conditional entitytype="eq Structure" />
+          <Conditional entitytype="eq Structure" />
           <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="5" velocitymin="100" velocitymax="2000" scalemin="0.1" scalemax="0.2" />
           <!--Add some impact effect-->
           <Explosion ignorecover="true" onlyinside="true" range="600" force="10" playtinnitus="false" showeffects="false" applyfireeffects="false">
@@ -304,8 +304,8 @@
           </Explosion>
         </StatusEffect>
         <StatusEffect type="OnImpact" target="UseTarget">
-        <Conditional entitytype="eq Structure" />
-        <Conditional hastag="eq door" />
+          <Conditional entitytype="eq Structure" />
+          <Conditional hastag="eq door" />
           <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This">
