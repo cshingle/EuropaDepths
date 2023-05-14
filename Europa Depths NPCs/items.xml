@@ -140,7 +140,7 @@
   </Item>
   <Item name="Lead Hammer" identifier="killertoyhammer" category="Weapon" Tags="smallitem,mountableweapon,clowns,stunner" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" RequireAimToUse="True" hideinmenus="true" nonplayerteaminteractable="True">
     <PreferredContainer primary="crewcab" secondary="armcab"/>
-    <PreferredContainer secondary="wreckarmcab,abandonedarmcab" spawnprobability="0.06"/>
+    <PreferredContainer secondary="wreckarmcab,abandonedarmcab"/>
     <Price baseprice="80" sold="false" canbespecial="false" />
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="641,960,64,64" origin="0.5,0.5"/>
     <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,311,121,55" depth="0.55" origin="0.5,0.5"/>
