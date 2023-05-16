@@ -193,7 +193,7 @@
       <Item identifier="depletedfuel" outcondition="0.25" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="10" amount="4">
-      <RequiredSkill identifier="electrical" level="45" />
+      <RequiredSkill identifier="electrical" level="50" />
       <RequiredItem identifier="depletedfuel" />
     </Fabricate>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,968,55,55" origin="0.5,0.5" />

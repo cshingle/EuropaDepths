@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Items" modversion="1.4.13" corepackage="False" steamworkshopid="2821614540" gameversion="1.0.13.2">
+<contentpackage name="Europa Depths Items" modversion="1.4.14" corepackage="False" steamworkshopid="2821614540" gameversion="1.0.13.2">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Item file="%ModDir%/items/alienitems.xml" />
   <Item file="%ModDir%/items/assistant_gear.xml" />

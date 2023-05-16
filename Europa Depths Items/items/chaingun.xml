@@ -149,7 +149,7 @@
       <Item identifier="aluminium" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="20">
-      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredSkill identifier="weapons" level="50" />
       <RequiredItem identifier="copper" />
       <RequiredItem identifier="titanium" />
       <RequiredItem identifier="aluminium" />

@@ -221,7 +221,7 @@
       <RequiredItem identifier="aluminium"/>
     </Fabricate>
     <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="15">
-      <RequiredSkill identifier="weapons" level="50"/>
+      <RequiredSkill identifier="weapons" level="35"/>
       <RequiredItem identifier="copper"/>
       <RequiredItem identifier="steel"/>
       <RequiredItem identifier="coilgunammoboxcopper" mincondition="0.0" maxcondition="0.1" usecondition="false"/>

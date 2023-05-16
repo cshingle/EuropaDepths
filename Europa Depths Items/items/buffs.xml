@@ -12,7 +12,7 @@
       <PreferredContainer secondary="abandonedcrewcab" minamount="1" maxamount="2" spawnprobability="0.3" />
       <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.5" notcampaign="true"/>
       <PreferredContainer primary="medfabcab" secondary="medcab"/>
-      <Price baseprice="60" minavailable="6">
+      <Price baseprice="30" minavailable="10">
         <Price storeidentifier="merchantoutpost" />
         <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="8" />
         <Price storeidentifier="merchantresearch" multiplier="0.9" minavailable="10" />
@@ -20,7 +20,7 @@
         <Price storeidentifier="merchantmine" multiplier="1.1" />
         <Price storeidentifier="merchantclown" minavailable="0" maxavailable="2" />
       </Price>
-      <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="80" fabricationlimitmin="5" fabricationlimitmax="10"/>
+      <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="40" fabricationlimitmin="8" fabricationlimitmax="12"/>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,768,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.6" origin="0.5,0.5" />
       <Body width="30" height="55" density="20" />
