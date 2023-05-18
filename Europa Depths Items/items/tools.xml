@@ -351,12 +351,6 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-
-
-
-
-
-
     <Item name="" identifier="flare" category="Equipment" maxstacksize="12" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,light,provocative" impactsoundtag="impact_soft" isshootable="true">
       <PreferredContainer primary="divingcab" minamount="2" maxamount="5" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer secondary="abandonedstoragecab,wreckstoragecab" amount="1" spawnprobability="0.05"/>
@@ -491,6 +485,32 @@
       <SkillRequirementHint identifier="weapons" level="50" />
     </Item>
 
+  </Override>
+  <Item name="Wrecked Oxygen Tank" identifier="wreckoxygentank" category="Diving,Equipment" maxstacksize="8" Tags="smallitem,oxygensource,refillableoxygensource" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" health="15" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
+    <PreferredContainer primary="divingcab" />
+    <PreferredContainer secondary="wrecksupplycab" amount="1" spawnprobability="0.2"/>
+    <PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
+    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
+    <Deconstruct time="5">
+      <Item identifier="aluminium" amount="1" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
+    <Body width="22" height="64" density="9.7" />
+    <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
+      <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
+        <Conditional HasStatusTag="onfire" />
+        <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+        <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="2000" />
+        <Explosion range="50.0" force="3">
+          <Affliction identifier="burn" strength="25" />
+          <Affliction identifier="stun" strength="5" />
+        </Explosion>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Override>
 
     <Item name="" identifier="oxygentank" category="Diving,Equipment" maxstacksize="8" Tags="smallitem,oxygensource,refillableoxygensource" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" allowdroppingonswap="true">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -508,10 +528,8 @@
       <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
       <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
       <PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
-      <PreferredContainer secondary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.2"/>
-      <PreferredContainer secondary="wreckoxygentankcontainer" minamount="1" maxamount="3" spawnprobability="0.3"/>
+      <PreferredContainer secondary="beaconsupplycab" amount="1" spawnprobability="0.2"/>
       <PreferredContainer secondary="outpostcrewcabinet" minamount="1" maxamount="3" spawnprobability="0.2"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="3" spawnprobability="0.1"/>
       <Deconstruct time="10">
         <Item identifier="aluminium" amount="2" />
       </Deconstruct>
@@ -579,7 +597,7 @@
         </StatusEffect>
       </Holdable>
       <Quality>
-        <QualityStat stattype="Condition" value="0.1"/>
+        <QualityStat stattype="Condition" value="0.15"/>
       </Quality>
     </Item>
 

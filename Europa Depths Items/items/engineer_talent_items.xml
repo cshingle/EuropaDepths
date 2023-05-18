@@ -501,9 +501,10 @@
           <Conditional IsDead="false" />
           <RequiredItem items="oxygenitetank" type="Contained" />
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" Oxygen="-20.0" Condition="-0.5" targetslot="0">
+        <StatusEffect type="OnWearing" target="Contained,Character" targetlimbs="Torso" UseHullOxygen="false" Oxygen="-20.0" Condition="-0.5" interval="1" targetslot="0" disabledeltatime="true">
           <Conditional IsDead="false" />
-          <RequiredItem items="weldingfueltank" type="Contained" targetslot="0"/>
+          <RequiredItem items="weldingfueltank,wreckoxygentank" type="Contained" targetslot="0"/>
+          <Affliction identifier="burn" amount="0.5" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" targetlimbs="Torso" Oxygen="-10.0" Condition="-0.5" interval="1" targetslot="0" disabledeltatime="true">
           <Conditional IsDead="false" />

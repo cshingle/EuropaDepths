@@ -91,10 +91,6 @@
       <Price storeidentifier="merchantmilitary" multiplier="0.9" />
       <Price storeidentifier="merchantmine" multiplier="1.25" />
     </Price>
-    <Deconstruct time="20">
-      <Item identifier="dementonite" />
-      <Item identifier="titaniumaluminiumalloy" />
-    </Deconstruct>
     <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="165,366,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="1,425,164,53" depth="0.55" origin="0.5,0.2" />
     <Body width="161" height="20" density="25" />
@@ -120,7 +116,7 @@
     </Quality>
     <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
   </Item>
-  <Item name="Killer Horn" identifier="killerhorn" category="Misc" tags="smallitem,hornitem,clowns" scale="0.5" cargocontaineridentifier="metalcrate" description="HONK">
+  <Item name="Killer Horn" identifier="killerhorn" category="Misc" tags="smallitem,hornitem,clowns" scale="0.5" hideinmenus="true" cargocontaineridentifier="metalcrate" description="HONK">
     <Price baseprice="5" sold="false" />
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="769,385,64,64" depth="0.55" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Misc/Misc.png" sourcerect="101,45,53,22" depth="0.55" />

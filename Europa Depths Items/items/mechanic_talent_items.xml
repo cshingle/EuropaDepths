@@ -235,8 +235,7 @@
         <sprite name="Exosuit Left Leg" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
         <sprite name="Exosuit Left Shoe" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
         <sprite name="Exosuit Right Shoe" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
-        <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
-        <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="10000.0" SpeedMultiplier="0.4" PropulsionSpeedMultiplier="0.25" setvalue="true" disabledeltatime="true">
+        <StatusEffect type="OnWearing" target="Character" HideFace="true" UseHullOxygen="true" ObstructVision="true" PressureProtection="10000.0" SpeedMultiplier="0.4" PropulsionSpeedMultiplier="0.25" setvalue="true" disabledeltatime="true">
           <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="250" loop="true"/>
           <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="250" loop="true"/>
         </StatusEffect>
@@ -256,18 +255,21 @@
         <StatusEffect type="OnWearing" target="This,Character" SpeedMultiplier="-10.0" setvalue="true" disabledeltatime="true">
           <Conditional Voltage="lte 0.5" />
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true" targetslot="0">
+        <StatusEffect type="OnWearing" target="Contained,Character" targetlimbs="Torso" UseHullOxygen="false" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true" targetslot="0">
           <Conditional IsDead="false" />
-          <RequiredItem items="weldingfueltank" targetslot="0" type="Contained" />
+          <RequiredItem items="weldingfueltank,wreckoxygentank" targetslot="0" type="Contained" />
+          <Affliction identifier="burn" amount="0.5" />
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" targetlimbs="Torso" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true" targetslot="0">
+        <StatusEffect type="OnWearing" target="Contained,Character" targetlimbs="Torso" UseHullOxygen="false" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true" targetslot="0">
           <Conditional IsDead="false" />
           <RequiredItem items="incendiumfueltank" targetslot="0" type="Contained" />
           <Affliction identifier="burn" amount="0.05" />
         </StatusEffect>
-        <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.3" comparison="Or" targetslot="0">
+        <StatusEffect type="OnWearing" target="Contained,Character" UseHullOxygen="false" OxygenAvailable="1000.0" Condition="-0.3" comparison="And" targetslot="0">
           <Conditional IsDead="false" />
-          <RequiredItem items="oxygentank" targetslot="0" type="Contained" />
+          <Conditional HullOxygenPercentage="lt 50" />
+          <Conditional InWater="false" />
+          <RequiredItem items="oxygensource" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.05" comparison="Or" targetslot="0">
           <Conditional IsDead="false" />
@@ -373,7 +375,7 @@
       </LightComponent>
     </RepairTool>
     <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-30,-10" containedspritedepth="0.60" itemrotation="90" containedstateindicatorstyle="battery">
-    <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
 
       <Containable items="mobilebattery" />
     </ItemContainer>

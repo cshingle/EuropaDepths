@@ -249,12 +249,12 @@
                 <Item identifier="steroids" />
                 <Item identifier="divingknife" />
                 <Item identifier="fraggrenade" />
-                <Item identifier="hmgammo" />
+                <Item identifier="hmgmagazine" />
                 <Item identifier="divingmask">
                     <Item identifier="oxygentank" />
                 </Item>
                 <Item identifier="hmg">
-                    <Item identifier="hmgammo" />
+                    <Item identifier="hmgmagazine" />
                 </Item>
                 <Item identifier="toolbelt" />
             </ItemSet>
@@ -366,12 +366,12 @@
                 <Item identifier="divingmask">
                     <Item identifier="oxygentank" />
                 </Item>
-                <Item identifier="hmgammo" />
+                <Item identifier="hmgmagazine" />
                 <Item identifier="divingmask">
                     <Item identifier="oxygentank" />
                 </Item>
                 <Item identifier="hmg">
-                    <Item identifier="hmgammo" />
+                    <Item identifier="hmgmagazine" />
                 </Item>
                 <Item identifier="fraggrenade" equip="true" />
                 <Item identifier="pressurestabilizer" equip="false" />
@@ -599,7 +599,7 @@
                 <Item identifier="pressurestabilizer" equip="false" />
             </ItemSet>
         </npc>
-        <npc identifier="psychoclown" commonness="0" moduleflags="none" job="killer" behavior="Patrol" healthmultiplier="3" healthmultiplierinmultiplayer="3.5" aimspeed="2.5" aimaccuracy="1" reportrange="500">
+        <npc identifier="psychoclown" commonness="0" moduleflags="none" job="killer" behavior="Patrol" healthmultiplier="1.2" healthmultiplierinmultiplayer="1.5" aimspeed="2.5" aimaccuracy="1" reportrange="500">
             <ItemSet commonness="2">
                 <Item identifier="idcard" equip="true"/>
                 <Item identifier="clowncostume" equip="true"/>
@@ -622,9 +622,9 @@
                 <Item identifier="clownmaskunique" equip="true"/>
                 <Item identifier="killertoyhammer" />
                 <Item identifier="hmg" equip="true">
-                    <Item identifier="hmgammo" />
+                    <Item identifier="hmgmagazine" />
                 </Item>
-                <Item identifier="hmgammo" />
+                <Item identifier="hmgmagazine" />
                 <Item identifier="bikehorn" equip="true"/>
                 <Item identifier="killerhorn" equip="true"/>
             </ItemSet>

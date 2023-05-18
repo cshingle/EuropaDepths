@@ -11,9 +11,9 @@
                 <reduceaffliction type="bloodloss" strength="1" />
                 <reduceaffliction type="burn" strength="1" />
                 <reduceaffliction type="damage" strength="2" />
-                <reduceaffliction type="slow" strength="5" />
-                <reduceaffliction type="stun" strength="5" />
-                <reduceaffliction identifier="nausea" strength="25" />
+                <reduceaffliction type="slow" strength="0.2" />
+                <reduceaffliction type="stun" strength="0.2" />
+                <reduceaffliction identifier="nausea" strength="1" />
             </StatusEffect>
             <StatusEffect target="Character" interval="10" disabledeltatime="true">
                 <Conditional IsPlayer="True"/>

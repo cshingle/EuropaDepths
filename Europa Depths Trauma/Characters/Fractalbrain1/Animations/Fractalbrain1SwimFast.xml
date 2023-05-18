@@ -15,7 +15,7 @@
   TailAngle="NaN"
   SteerTorque="25"
   LegTorque="25"
-  MovementSpeed="4"
+  MovementSpeed="3.5"
   CycleSpeed="1"
   HeadAngle="NaN"
   TorsoAngle="NaN"
