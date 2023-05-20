@@ -1345,7 +1345,7 @@
         <Sound file="Content/Items/Weapons/WEAPON_rifleReload0-20_2.ogg" type="OnUse" range="3000" />
       </StatusEffect>
       <RequiredItems items="3030round" type="Contained" msg="ItemMsgAmmoRequired" />
-      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredSkill identifier="weapons" level="30" />
     </RangedWeapon>
     <ItemContainer capacity="0" maxstacksize="0" hideitems="false" containedstateindicatorstyle="bullet" containedstateindicatorslot="0" containedspritedepth="0.56">
       <Containable items="3030round" hide="true" />
