@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Europa Depths Better Genetics" modversion="1.0.0" corepackage="False" steamworkshopid="2978562478" gameversion="1.0.13.2">
+  <Character file="%ModDir%/Characters/Humanhusk/Humanhusk.xml" />
+</contentpackage>
