@@ -45,7 +45,7 @@
         <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,7" sheetelementsize="128,128" color="255,165,0,255" origin="0,0"/>
     </Affliction>
 
-    <Affliction name="Sepsis" identifier="bloodpoisoning" description="Sepsis is a serious condition in which the body responds improperly to an infection." type="poison" causeofdeathdescription="Died of Sepsis." selfcauseofdeathdescription="You have died of blood poisoning." limbspecific="false" indicatorlimb="Torso" showiconthreshold="75" showinhealthscannerthreshold="25" treatmentthreshold="100" karmachangeonapplied="0" maxstrength="100" affectmachines="false" healcostmultiplier="0" basehealcost="25" MedicalSkillGain="1.5">
+    <Affliction name="Sepsis" identifier="bloodpoisoning" description="Sepsis is a serious condition in which the body responds improperly to an infection." type="poison" causeofdeathdescription="Died of Sepsis." selfcauseofdeathdescription="You have died of Sepsis." limbspecific="false" indicatorlimb="Torso" showiconthreshold="75" showinhealthscannerthreshold="25" treatmentthreshold="100" karmachangeonapplied="0" maxstrength="100" affectmachines="false" healcostmultiplier="0" basehealcost="25" MedicalSkillGain="1.5">
         <Description textidentifier="afflictiondescription.sufforinpoisoning.medium.self" target="Self" minstrength="0" maxstrength="100"/>
         <Description textidentifier="afflictiondescription.nausea.low" target="OtherCharacter" minstrength="0" maxstrength="25"/>
         <Description textidentifier="afflictiondescription.sufforinpoisoning" target="OtherCharacter" minstrength="50" maxstrength="100"/>

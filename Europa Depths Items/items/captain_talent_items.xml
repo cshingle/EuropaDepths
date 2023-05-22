@@ -9,16 +9,16 @@
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="12">
         <RequiredSkill identifier="weapons" level="45" />
         <RequiredItem identifier="magnesium" />
-        <RequiredItem identifier="lead" amount="2" />
-        <RequiredItem identifier="titaniumaluminiumalloy" />
+        <RequiredItem identifier="lead" />
+        <RequiredItem identifier="copper" />
       </Fabricate>
-      <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="166,430,43,43" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Jobgear/TalentGear.png" sourcerect="3,118,24,9" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="496,192,64,64" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,162,60,18" depth="0.55" origin="0.5,0.5" />
       <Body width="34" height="14" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,115,200" scalemultiplier="1,1" />
-        <Attack structuredamage="20" targetforce="20" itemdamage="20" severlimbsprobability="1.0" penetration="0.5">
+        <Attack structuredamage="20" targetforce="30" itemdamage="20" severlimbsprobability="1.0" penetration="0.5">
           <Affliction identifier="gunshotwound" strength="70" />
           <Affliction identifier="bleeding" strength="50" />
           <Affliction identifier="stun" strength="1.5" />
