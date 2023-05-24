@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item name="Aluminum Case" identifier="aluminiumstorage" category="Equipment" tags="mediumitem,mobilecontainer,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" health="96" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05"/>
+        <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.1"/>
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="60" />
+            <Item identifier="aluminium" amount="48" />
+            <Item identifier="plastic" amount="1" />
+        </Fabricate>
+        <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="30">
+            <RequiredSkill identifier="weapons" level="30"/>
+            <Item identifier="aluminium" amount="48" />
+            <RequiredItem identifier="aluminiumstorage" maxcondition="0.0" usecondition="false"/>
+        </Fabricate>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="0,0,64,64" origin="0.5,0.6" />
+        <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" origin="0.5,0.5" depth="0.6" />
+        <!--<Sprite texture="Content/Items/Containers/crates.png" depth="0.54" sourcerect="1,0,68,39"/>-->
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="2" ShowConditionInContainedStateIndicator="true">
+            <StatusEffect type="OnActive" target="This" condition="-1" disabledeltatime="true" targetslot="0" comparison="And">
+                <Conditional HasTag="!eq material" />
+                <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" targetslot="0" />
+            </StatusEffect>
+            <Containable items="aluminium" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+    <Item name="Organic Fiber Case" identifier="organicfiberstorage" category="Equipment" tags="mediumitem,mobilecontainer,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" health="96" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05"/>
+        <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.1"/>
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="60" />
+            <Item identifier="organicfiber" amount="48" />
+            <Item identifier="plastic" amount="1" />
+        </Fabricate>
+        <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="30">
+            <RequiredSkill identifier="weapons" level="30"/>
+            <Item identifier="organicfiber" amount="48" />
+            <RequiredItem identifier="organicfiberstorage" maxcondition="0.0" usecondition="false"/>
+        </Fabricate>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="64,0,64,64" origin="0.5,0.6" />
+        <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" origin="0.5,0.5" depth="0.6" />
+        <!--<Sprite texture="Content/Items/Containers/crates.png" depth="0.54" sourcerect="1,0,68,39"/>-->
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer hideitems="false" capacity="1" drawinventory="true" canbeselected="true" canbecombined="true" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
+            <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+                <SpawnItem identifiers="organicfiber" spawnposition="ThisInventory" />
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="This" condition="-1" disabledeltatime="true">
+                <RequiredItem items="organicfiber" type="Contained" />
+            </StatusEffect>
+            <Containable items="organicfiber" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+</Items>

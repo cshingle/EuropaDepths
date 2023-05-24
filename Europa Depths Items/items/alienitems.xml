@@ -124,7 +124,7 @@
       <AiTarget sightrange="10000.0" soundrange="10000" static="True" />
       <Body radius="45" density="40" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="Always" target="NearbyCharacters,this" range="2000" stackable="false" interval="15" comparison="And" >
+        <StatusEffect type="Always" target="NearbyCharacters,this" range="2000" stackable="false" interval="15" comparison="And">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
           <Conditional IsPlayer="True"/>
           <SpawnCharacter speciesname="Crawler" count="1" offset="500,1000" spread="50" />
@@ -158,9 +158,10 @@
       </Deconstruct>
       <Body radius="45" density="40" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="Always" target="NearbyCharacters,this" range="400" interval="0.5" disabledeltatime="true" comparison="And">
+        <StatusEffect type="Always" target="This">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
-          <SpawnCharacter speciesname="Terminalcell" count="3" offset="0,750" spread="50" />
+          <sound file="Content/Items/Alien/AlienArtifactLoop1.ogg" range="1000.0" loop="true" />
+          <ParticleEmitter particle="psychosisfx" scalemultiplier="0.7,0.7" anglemax="360" emitinterval="1.1" particleamount="1" particlespersecond="1" />
         </StatusEffect>
         <StatusEffect type="OnContained" target="Character,This">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
