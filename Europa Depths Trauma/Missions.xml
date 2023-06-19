@@ -51,6 +51,9 @@
         <monster character="Bonethresher" min="0" max="4" delaybetweenspawns="1" />
       </monsters>
       <monsters commonness="20">
+        <monster character="Spineling" min="10" max="20" delaybetweenspawns="1" />
+      </monsters>
+      <monsters commonness="20">
         <monster character="Hammerhead" min="4" max="7" delaybetweenspawns="1" />
         <monster character="Hammerheadgold" min="1" max="3" delaybetweenspawns="1" />
         <monster character="Hammerheadblack" min="1" max="3" delaybetweenspawns="1" />

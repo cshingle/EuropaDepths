@@ -599,7 +599,7 @@
                 <Item identifier="pressurestabilizer" equip="false" />
             </ItemSet>
         </npc>
-        <npc identifier="psychoclown" commonness="0" moduleflags="none" job="killer" behavior="Patrol" healthmultiplier="1.2" healthmultiplierinmultiplayer="1.5" aimspeed="2.5" aimaccuracy="1" reportrange="500">
+        <npc identifier="psychoclown" commonness="0" moduleflags="none" job="killer" behavior="Patrol" healthmultiplier="2" healthmultiplierinmultiplayer="1.5" aimspeed="2.5" aimaccuracy="1" reportrange="500">
             <ItemSet commonness="2">
                 <Item identifier="idcard" equip="true"/>
                 <Item identifier="clowncostume" equip="true"/>

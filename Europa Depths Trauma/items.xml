@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="spinelingincendiumspike" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+    <Sprite texture="Content/Characters/Spineling/Spineling.png" sourcerect="0,215,180,18" depth="0.55" />
+    <Body width="160" height="10" density="20" />
+    <Projectile characterusable="false" launchimpulse="200" maxtargetstohit="3" sticktocharacters="true" sticktoitems="false" sticktodoors="false" sticktostructures="true" penetration="0.25" friendlyfire="false" damagedoors="true">
+      <Attack structuredamage="20" itemdamage="20" severlimbsprobability="0.5" penetration="0.2">
+        <!--Hits up to 3 limbs, so the actual damage can be 3x-->
+        <Affliction identifier="stun" strength="0.25" />
+      </Attack>
+      <StatusEffect type="OnActive" target="This" lifetime="0.5">
+        <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="0" anglemax="0" particleamount="10" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="This" condition="-34" />
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="5" velocitymin="100" velocitymax="2000" scalemin="0.1" scalemax="0.2" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Explosion range="250.0" ballastfloradamage="200" structuredamage="0" itemdamage="100" force="10.0" severlimbsprobability="0" underwaterbubble="false">
+          <Affliction identifier="burn" strength="10" />
+          <Affliction identifier="stun" strength="0.5" />
+        </Explosion>
+        <Fire size="50" probability="0.75" />
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+    <LightComponent range="200" castshadows="False" drawbehindsubs="False" ison="True" blinkfrequency="0" lightcolor="200,200,255,20" isactive="True" minvoltage="0" powerconsumption="0" vulnerabletoemp="False" pickingtime="0" canbepicked="False" allowingameediting="False" msg="">
+      <Sprite texture="Content/Characters/Spineling/Spineling.png" sourcerect="0,230,180,23" origin="0.5,0.6" alpha="0.5"/>
+    </LightComponent>
+  </Item>
+
+</Items>

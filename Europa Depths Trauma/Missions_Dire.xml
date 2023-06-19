@@ -66,6 +66,13 @@
     <Reputation identifier="location" amount="1" />
     <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48" />
   </MonsterMission>
+  <MonsterMission identifier="killgiantspineling5" textidentifier="killgiantspineling1" tags="killmonster,killmonster_set4" type="Monster" difficulty="4" commonness="100" reward="6000" maxsonarmarkerdistance="10000" sonarlabel="character.spineling" monsterfile="spineling_giant">
+    <monster character="spineling_giant" min="2" max="3" delaybetweenspawns="1" />
+    <monster character="spineling_red" min="3" max="4" delaybetweenspawns="1" />
+    <monster character="spineling" min="10" max="15" delaybetweenspawns="2" />
+    <Reputation identifier="location" amount="1" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="768,768,256,256" color="214,50,48" />
+  </MonsterMission>
 
   <MonsterMission identifier="killthresherswarm3" textidentifier="killthresherswarm1" tags="killmonster,killmonster_set3" type="Monster" difficulty="4" commonness="100" reward="6000" maxsonarmarkerdistance="10000">
     <monster character="tigerthresher_veteran" min="6" max="10" delaybetweenspawns="1" />
@@ -202,11 +209,15 @@
     </monsters>
     <monsters commonness="30">
       <monster character="Tigerthresher" min="4" max="6" delaybetweenspawns="1" />
-      <monster character="Bonethresher" min="2" max="4" delaybetweenspawns="1" />
+      <monster character="Bonethresher" min="3" max="4" delaybetweenspawns="1" />
     </monsters>
     <monsters commonness="30">
       <MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="5" scatter="1000" delaybetweenspawns="1" />
       <MonsterEvent characterfile="Tigerthresher_veteran" minamount="4" maxamount="6" delaybetweenspawns="1" />
+    </monsters>
+    <monsters commonness="20">
+      <monster character="Spineling" min="15" max="20" delaybetweenspawns="1" />
+      <monster character="Spineling_red" min="2" max="5" delaybetweenspawns="1" />
     </monsters>
     <monsters commonness="20">
       <monster character="Moloch" min="1" max="2" delaybetweenspawns="1" />

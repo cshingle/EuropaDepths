@@ -363,7 +363,7 @@
                     <Item identifier="toolbelt" equip="true"/>
                 </ItemSet>
             </npc>
-            <npc identifier="banditmedic" commonness="0" moduleflags="crewmodule,engineeringmodule" job="medicaldoctor" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="1.0" aimspeed="1" aimaccuracy="0.85" reportrange="750">
+            <npc identifier="banditmedic" commonness="0" moduleflags="crewmodule,engineeringmodule" job="medicaldoctor" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="1.5" aimspeed="1" aimaccuracy="0.85" reportrange="750">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
                     <Item identifier="banditclothes2" equip="true" />

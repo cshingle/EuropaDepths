@@ -6,7 +6,9 @@
             <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
             <Characters>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
+                <Character identifier="banditbrute" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
+                <Character identifier="banditbrute" from="abandonedoutpostnpcs" moduleflags="crewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
                 <Character identifier="banditmedic" from="abandonedoutpostnpcs" moduleflags="researchmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="engineeringmodule"/>
@@ -14,7 +16,8 @@
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
-                <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+                <Character identifier="banditbrute" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+                <Character identifier="banditbrute" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
                 <Character identifier="banditleader" from="abandonedoutpostnpcs" spawnpointtags="banditleader" requirekill="true"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
@@ -40,6 +43,8 @@
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="securitymodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+                <Character identifier="banditbrute" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
+                <Character identifier="banditbrute" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" moduleflags="seccrewmodule"/>
                 <Character identifier="banditleader" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
                 <Character identifier="bandit" from="abandonedoutpostnpcs" spawnpointtags="banditleader"/>
@@ -52,7 +57,7 @@
         </AbandonedOutpostMission>
     </Override>
 
-    <AbandonedOutpostMission identifier="abandonedoutpostrescuekillerclown" tags="abandonedoutpost" type="AbandonedOutpost" MaxDifficulty="40" achievementidentifier="abandonedoutpostrescue" reward="4000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
+    <AbandonedOutpostMission identifier="abandonedoutpostrescuekillerclown" tags="abandonedoutpost" type="AbandonedOutpost" MaxDifficulty="50" achievementidentifier="abandonedoutpostrescue" reward="3000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
         <LocationType identifier="Abandoned" />
         <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
@@ -79,7 +84,7 @@
         <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
     </AbandonedOutpostMission>
 
-    <AbandonedOutpostMission name="Dire Outpost Assassination" identifier="abandonedoutposthumansdire" tags="abandonedoutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="3000" difficulty="4" commonness="20" allowretry="true" unhideentitysubcategories="abandonedhuman">
+    <AbandonedOutpostMission name="Dire Outpost Assassination" identifier="abandonedoutposthumansdire" tags="abandonedoutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="4000" difficulty="4" commonness="20" allowretry="true" unhideentitysubcategories="abandonedhuman">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
         <LocationType identifier="Abandoned" />
         <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
@@ -100,6 +105,7 @@
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="banditbrute" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
@@ -114,7 +120,7 @@
         <message header="missionheader0.abandonedoutposthumans" text="missionmessage0.abandonedoutposthumans"/>
     </AbandonedOutpostMission>
 
-    <AbandonedOutpostMission name="Dire Outpost Recovery" identifier="abandonedoutpostrescuedire" tags="abandonedoutpost" type="AbandonedOutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostrescue" reward="3000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
+    <AbandonedOutpostMission name="Dire Outpost Recovery" identifier="abandonedoutpostrescuedire" tags="abandonedoutpost" type="AbandonedOutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostrescue" reward="4000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
         <LocationType identifier="Abandoned" />
         <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
@@ -135,12 +141,12 @@
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
-            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
+            <Character identifier="banditbrute" from="abandonedoutpostnpcsdire" moduleflags="securitymodule" multiplayeronly="true"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
-            <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
+            <Character identifier="banditbrute" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
             <Character identifier="bandit" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule" multiplayeronly="true"/>
             <Character identifier="banditleader" from="abandonedoutpostnpcsdire" spawnpointtags="banditleader"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" asfaraspossible="true"/>
@@ -151,18 +157,24 @@
         <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
     </AbandonedOutpostMission>
 
-    <AbandonedOutpostMission name="Dire Outpost Recovery" identifier="abandonedoutpostrescuekillerclowndire" tags="abandonedoutpost" type="AbandonedOutpost" MinDifficulty="40" achievementidentifier="abandonedoutpostrescue" reward="4000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
+    <AbandonedOutpostMission name="Dire Outpost Recovery" identifier="abandonedoutpostrescuekillerclowndire" tags="abandonedoutpost" type="AbandonedOutpost" MinDifficulty="50" achievementidentifier="abandonedoutpostrescue" reward="4000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
         <LocationType identifier="Abandoned" />
         <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
         <Characters>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="crewmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="researchmodule"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="engineeringmodule"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="securitymodule"/>
+            <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" moduleflags="seccrewmodule"/>
             <Character identifier="psychoclown" from="abandonedoutpostnpcsdire" asfaraspossible="true"/>

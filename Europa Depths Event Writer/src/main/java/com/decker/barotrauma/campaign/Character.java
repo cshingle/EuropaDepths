@@ -37,6 +37,7 @@ public enum Character {
 	Portalguardian,
 	Spineling,
 	Spineling_giant,
+	Spinling_red,
 	Swarmfeeder,
 	Tigerthresher,
 	Tigerthresher_veteran,

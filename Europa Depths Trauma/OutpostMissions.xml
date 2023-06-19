@@ -27,7 +27,7 @@
         </AbandonedOutpostMission>
 
     </Override>
-    <AbandonedOutpostMission identifier="abandonedoutpostmudraptordire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="35" achievementidentifier="abandonedoutpostdestroymonsters" type="OutpostDestroy" reward="3000" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+    <AbandonedOutpostMission identifier="abandonedoutpostmudraptordire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="30" MaxDifficulty="50" achievementidentifier="abandonedoutpostdestroymonsters" type="OutpostDestroy" reward="3500" difficulty="4" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
         <LocationType identifier="Abandoned" />
         <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
@@ -53,7 +53,7 @@
     </AbandonedOutpostMission>
 
     <Override>
-        <AbandonedOutpostMission identifier="abandonedoutpostcrawler" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MaxDifficulty="35" achievementidentifier="abandonedoutpostdestroymonsters" type="OutpostDestroy" reward="3000" difficulty="3" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+        <AbandonedOutpostMission identifier="abandonedoutpostcrawler" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MaxDifficulty="30" achievementidentifier="abandonedoutpostdestroymonsters" type="OutpostDestroy" reward="3000" difficulty="3" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
             <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
             <LocationType identifier="Abandoned" />
             <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
@@ -78,7 +78,7 @@
         </AbandonedOutpostMission>
     </Override>
 
-    <AbandonedOutpostMission identifier="abandonedoutpostcrawlerdire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="35" achievementidentifier="abandonedoutpostdestroymonsters" type="OutpostDestroy" reward="3000" difficulty="3" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
+    <AbandonedOutpostMission identifier="abandonedoutpostcrawlerdire" textidentifier="abandonedoutpostmonsters" tags="abandonedoutpost" MinDifficulty="35" MaxDifficulty="50" achievementidentifier="abandonedoutpostdestroymonsters" type="OutpostDestroy" reward="3000" difficulty="3" commonness="10" allowretry="true" sonarlabel="nest" unhideentitysubcategories="abandonedmonster">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
         <LocationType identifier="Abandoned" />
         <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
