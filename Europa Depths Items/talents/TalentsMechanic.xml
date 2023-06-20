@@ -26,5 +26,21 @@
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="mininglaser"/>
     </Talent>
+    <Talent identifier="residualwaste">
+      <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="6,5" sheetelementsize="128,128"/>
+      <Description tag="talentdescription.residualwaste">
+        <Replace tag="[chance]" value="20" color="gui.green"/>
+      </Description>
+      <AbilityGroupEffect abilityeffecttype="OnItemDeconstructedMaterial">
+        <Conditions>
+          <AbilityConditionServerRandom randomChance="0.2"/>
+          <!--  don't allow duplicating genetic materials  -->
+          <AbilityConditionItem tags="geneticmaterial,unidentifiedgeneticmaterial,bulkstorage" invert="true"/>
+        </Conditions>
+        <Abilities>
+          <CharacterAbilityModifyValue multiplyvalue="2"/>
+        </Abilities>
+      </AbilityGroupEffect>
+    </Talent>
   </Override>
 </Talents>

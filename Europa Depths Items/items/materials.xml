@@ -3,7 +3,7 @@
   <Override>
     <!-- Elements ************************************************************************************************ -->
     <Item name="" identifier="carbon" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="carbonstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="10" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -24,7 +24,7 @@
     </Item>
 
     <Item name="" identifier="iron" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="ironstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="8" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -63,7 +63,7 @@
     </Item>
 
     <Item name="" identifier="tin" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="tinstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="11" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -85,7 +85,7 @@
     </Item>
 
     <Item name="" identifier="lead" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="leadstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="18" sold="true" minavailable="3">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -128,7 +128,7 @@
     </Item>
 
     <Item name="" identifier="copper" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="carboncopper,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="22" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -150,7 +150,7 @@
     </Item>
 
     <Item name="" identifier="zinc" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="zincstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="26" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -211,7 +211,7 @@
     </Item>
 
     <Item name="" identifier="silicon" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="siliconstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="17" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -253,7 +253,7 @@
     </Item>
 
     <Item name="" identifier="aluminium" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="aluminiumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="42" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -275,8 +275,8 @@
     </Item>
 
     <Item name="" identifier="uranium" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="uraniumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
-      <PreferredContainer primary="materialcab,storagecab" />
       <Price baseprice="50" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -335,7 +335,7 @@
     </Item>
 
     <Item name="" identifier="titanium" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="titaniumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.02" />
       <Price baseprice="65" sold="false" minleveldifficulty="15">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -439,7 +439,7 @@
     </Item>
 
     <Item name="" identifier="thorium" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="thoriumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.02" />
       <Price baseprice="125" sold="false" minleveldifficulty="15">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -461,7 +461,7 @@
 
     <!-- Compounds ************************************************************************************************ -->
     <Item name="" identifier="steel" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.4" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="steelstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="28">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="7" />
@@ -510,7 +510,7 @@
     </Item>
 
     <Item name="" identifier="titaniumaluminiumalloy" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.4" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="titaniumaluminiumalloystorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.02" />
       <Price baseprice="150" minleveldifficulty="15">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -542,7 +542,7 @@
     </Item>
 
     <Item name="" identifier="plastic" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.4" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="plasticstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="45">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="7" />
@@ -573,7 +573,7 @@
     </Item>
 
     <Item name="" identifier="ballisticfiber" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_soft">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="ballisticfiberstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <Price baseprice="160" minleveldifficulty="15">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -604,8 +604,8 @@
     </Item>
 
     <Item name="" identifier="organicfiber" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_soft">
+      <PreferredContainer primary="organicfiberstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
-      <PreferredContainer primary="materialcab,medfabcab" />
       <Price baseprice="30">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="4" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="8" />
@@ -625,7 +625,7 @@
     </Item>
 
     <Item name="" identifier="rubber" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_soft">
-      <PreferredContainer primary="materialcab,storagecab" />
+      <PreferredContainer primary="rubberstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <Price baseprice="20">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="9" />

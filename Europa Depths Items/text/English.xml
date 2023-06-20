@@ -11,6 +11,7 @@
   <entitydescription.3030round>.30 caliber round for a Lever Action Rifle. Putting down targets since 1895.</entitydescription.3030round>
   <entitydescription.3030rounddepletedfuel>.30 caliber round for a Lever Action Rifle. Along with increased penetration, the ammo has been special-made to also inflict radiation sickness on the target.</entitydescription.3030rounddepletedfuel>
   <entitydescription.40mmempgrenade>Ammunition for grenade launcher. Effective against Guardians.</entitydescription.40mmempgrenade>
+  <entitydescription.40mmincendiumgrenade>Ammunition for grenade launcher. Explosive round that starts fires.</entitydescription.40mmincendiumgrenade>
   <entitydescription.chaingunammoboxcopper>A heavy box of Copper ammo for the Chaingun.</entitydescription.chaingunammoboxcopper>
   <entitydescription.clowndivingmaskunique>Nothing is out of mother's reach.</entitydescription.clowndivingmaskunique>
   <entitydescription.coilgun_overvolted>An overvolted version of the coilgun with a higher rate of fire, but also higher power demands.</entitydescription.coilgun_overvolted>
@@ -47,6 +48,7 @@
   <entityname.3030round>30-30 Round</entityname.3030round>
   <entityname.3030rounddepletedfuel>30-30 Depleted Fuel Round</entityname.3030rounddepletedfuel>
   <entityname.40mmempgrenade>40mm EMP Grenade</entityname.40mmempgrenade>
+  <entityname.40mmincendiumgrenade>40mm Incenium Grenade</entityname.40mmincendiumgrenade>
   <entityname.chaingunammoboxcopper>Chaingun Copper Ammunition Box</entityname.chaingunammoboxcopper>
   <entityname.clowndivingmaskunique>Mother's Tangency</entityname.clowndivingmaskunique>
   <entityname.coilgun_overvolted>Overvolted Coilgun</entityname.coilgun_overvolted>

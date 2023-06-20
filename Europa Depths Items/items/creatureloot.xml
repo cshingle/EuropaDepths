@@ -41,7 +41,7 @@
 
     <Item name="" identifier="crawlermask" category="Equipment" tags="smallitem,clothing" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
-      <Price baseprice="50" sold="false" canbespecial="false" />
+      <Price baseprice="100" sold="false" canbespecial="false" />
       <PreferredContainer primary="locker"/>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" depth="0.6" sourcerect="962,450,59,61" origin="0.5,0.5" />
       <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" depth="0.6" sourcerect="245,0,118,122" origin="0.5,0.5" />

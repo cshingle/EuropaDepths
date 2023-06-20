@@ -127,7 +127,7 @@
         <StatusEffect type="Always" target="NearbyCharacters,this" range="2000" stackable="false" interval="15" comparison="And">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
           <Conditional IsPlayer="True"/>
-          <SpawnCharacter speciesname="Crawler" count="1" offset="500,1000" spread="50" />
+          <SpawnCharacter speciesname="Crawler" minamount="1" maxamount="3" spread="500" scatter="500" maxamountperlevel="150" />
         </StatusEffect>
         <StatusEffect type="Always" target="This" Condition="0" delay="1.1" stackable="false" setvalue="true" />
         <StatusEffect type="OnBroken" target="This" Condition="100" delay="0.4" setvalue="true">

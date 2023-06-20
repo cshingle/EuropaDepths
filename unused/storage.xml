@@ -1,0 +1,103 @@
+<Item name="Loader Crate" identifier="loadercrate" tags="crate,allowcleanup" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy">
+    <Deconstruct time="20">
+        <Item identifier="steel" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="20" />
+        <Item identifier="steel" />
+    </Fabricate>
+    <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,128,64,64" />-->
+    <Sprite texture="Content/Items/Containers/containers.png" depth="0.54" sourcerect="407,376,152,89" origin="0.5,0.5" />
+    <Body width="150" height="80" density="25" />
+    <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
+    <CustomInterface drawhudwhenequipped="true" canbeselected="false">
+        <GuiFrame style="ItemUI" absoluteoffset="0,150" anchor="BottomCenter" relativesize="0.06,0.08" />
+        <Button text="Load">
+            <StatusEffect type="OnUse" target="Contained" Condition="1" disabledeltatime="true" comparison="And" targetslot="0">
+                <RequiredItem items="aluminiumstorage" type="Contained" excludebroken="false" excludefullcondition="true" targetslot="0" />
+                <RequiredItem items="aluminium" type="Contained" targetslot="1" />
+                <Sound file="Content/Sounds/DropItem.ogg" type="OnUse" range="250" />
+            </StatusEffect>
+            <StatusEffect type="OnUse" target="Contained" Condition="-100" disabledeltatime="true" comparison="And" targetslot="1">
+                <RequiredItem items="aluminiumstorage" type="Contained" excludebroken="false" excludefullcondition="true" targetslot="0" />
+                <RequiredItem items="aluminium" type="Contained" targetslot="1" />
+            </StatusEffect>
+        </Button>
+    </CustomInterface>
+    <ItemContainer capacity="1" canbeselected="false" hideitems="true" keepopenwhenequipped="true" movableframe="true">
+        <Containable items="bulkstorage" />
+        <SubContainer capacity="1" maxstacksize="1">
+            <Containable items="aluminium" />
+        </SubContainer>
+    </ItemContainer>
+</Item>
+
+
+<Item name="Aluminum Case" identifier="aluminiumstorage" category="Equipment" tags="mediumitem,mobilecontainer,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" health="100" RequireAimToUse="True">
+    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05"/>
+    <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.1"/>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+        <RequiredSkill identifier="mechanical" level="60" outcondition="0.0" />
+        <Item identifier="aluminium" amount="50" />
+        <Item identifier="plastic" amount="1" />
+    </Fabricate>
+    <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="30" outcondition="0.0">
+        <RequiredSkill identifier="mechanical" level="30"/>
+        <Item identifier="aluminium" amount="50" />
+        <RequiredItem identifier="aluminiumstorage" maxcondition="0.0" usecondition="false"/>
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="0,0,64,64" origin="0.5,0.6" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" origin="0.5,0.5" depth="0.6" />
+    <!--<Sprite texture="Content/Items/Containers/crates.png" depth="0.54" sourcerect="1,0,68,39"/>-->
+    <Body width="90" height="60" density="20" />
+    <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+        <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+            <Affliction identifier="blunttrauma" strength="2" />
+            <Affliction identifier="stun" strength="0.6" />
+            <StatusEffect type="OnUse" target="UseTarget">
+                <Conditional entitytype="eq Character"/>
+                <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+            </StatusEffect>
+        </Attack>
+        <CustomInterface drawhudwhenequipped="true" canbeselected="false">
+            <GuiFrame style="ItemUI" absoluteoffset="0,150" anchor="BottomCenter" relativesize="0.06,0.08" />
+            <Button text="Take">
+                <StatusEffect type="OnUse" target="this,Contained" Condition="-1" disabledeltatime="true" comparison="And">
+                    <Conditional Condition="gte 1" />
+                    <RequiredItem items="aluminium" type="Contained" requireempty="true" matchonempty="true" targetslot="0" />
+                    <Sound file="Content/Sounds/DropItem.ogg" type="OnUse" range="250" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                </StatusEffect>
+                <StatusEffect type="OnUse" target="this,Contained" Condition="-2" disabledeltatime="true" comparison="And">
+                    <Conditional Condition="gte 3" />
+                    <RequiredItem items="aluminium" type="Contained" requireempty="true" matchonempty="true" targetslot="0" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                </StatusEffect>
+                <StatusEffect type="OnUse" target="this,Contained" Condition="-3" disabledeltatime="true" comparison="And">
+                    <Conditional Condition="gte 6" />
+                    <RequiredItem items="aluminium" type="Contained" requireempty="true" matchonempty="true" targetslot="0" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                </StatusEffect>
+                <StatusEffect type="OnUse" target="this,Contained" Condition="-6" disabledeltatime="true" comparison="And">
+                    <Conditional Condition="gte 12" />
+                    <RequiredItem items="aluminium" type="Contained" requireempty="true" matchonempty="true" targetslot="0" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                    <SpawnItem identifiers="aluminium" spawnposition="ThisInventory" />
+                </StatusEffect>
+            </Button>
+        </CustomInterface>
+    </MeleeWeapon>
+    <ItemContainer capacity="6" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <Containable items="aluminium" />
+    </ItemContainer>
+    <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+</Item>

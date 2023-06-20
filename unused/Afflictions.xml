@@ -1,0 +1,34 @@
+<Affliction name="Shock" identifier="shock" description="" type="stun"" causeofdeathdescription="Died of Shock." selfcauseofdeathdescription="You have died of Shock." limbspecific="false" indicatorlimb="Torso" showiconthreshold="1000" showinhealthscannerthreshold="15" treatmentthreshold="100" karmachangeonapplied="0" maxstrength="100" affectmachines="false" healcostmultiplier="0" basehealcost="25" MedicalSkillGain="1.5">
+    <Description textidentifier="afflictiondescription.sufforinpoisoning.medium.self" target="Self" minstrength="0" maxstrength="100"/>
+    <Description textidentifier="afflictiondescription.nausea.low" target="OtherCharacter" minstrength="0" maxstrength="25"/>
+    <Description textidentifier="afflictiondescription.sufforinpoisoning" target="OtherCharacter" minstrength="50" maxstrength="100"/>
+    <Effect minstrength="0" maxstrength="5" strengthchange="-0.05" minscreenblur="0.0" maxscreenblur="0.0">
+    </Effect>
+    <Effect minstrength="5" maxstrength="50" strengthchange="0.05" minscreenblur="0" maxscreenblur="0">
+    </Effect>
+    <Effect minstrength="50" maxstrength="80" strengthchange="0.1" minscreenblur="0.1" maxscreenblur="0.5" minfacetint="255,255,0,0" maxfacetint="255,255,0,80" minbodytint="255,255,0,0" maxbodytint="255,255,0,60" minspeedmultiplier="1.0" maxspeedmultiplier="0.8" tag="poisoned">
+    </Effect>
+    <Effect minstrength="80" maxstrength="99" strengthchange="0.1" minscreenblur="0.75" maxscreenblur="1.0" minscreendistort="0.0" maxscreendistort="1.0" minfacetint="255,255,0,80" maxfacetint="255,255,0,80" minbodytint="255,255,0,60" maxbodytint="255,255,0,60" minspeedmultiplier="0.25" maxspeedmultiplier="0.25" tag="poisoned">
+        <StatusEffect target="Character">
+            <Affliction identifier="organdamage" amount="0.25" probability="0.75" />
+        </StatusEffect>
+        <StatusEffect target="Character" setvalue="true">
+            <Conditional healthpercentage="lt 40"/>
+            <Affliction identifier="stun" amount="1" />
+        </StatusEffect>
+    </Effect>
+    <Effect minstrength="99" maxstrength="100" strengthchange="0.15" minscreenblur="2.0" maxscreenblur="2.0" minscreendistort="1.0" maxscreendistort="1.0" minfacetint="255,255,0,80" maxfacetint="255,255,0,80" minbodytint="255,255,0,60" maxbodytint="255,255,0,60" minspeedmultiplier="0.25" maxspeedmultiplier="0.25" tag="poisoned">
+        <StatusEffect target="Character" interval="1" disabledeltatime="true" multiplyafflictionsbymaxvitality="true">
+            <Conditional healthpercentage="lt 0"/>
+            <Affliction identifier="incrementalstun" amount="1" />
+        </StatusEffect>
+        <StatusEffect target="Character" resistancefor="bleedingnonstop,bleeding,bloodloss" minresistance="0.75" maxresistance="0.90" multiplyafflictionsbymaxvitality="true">
+            <Conditional healthpercentage="lt 0"/>
+            <Affliction identifier="bleedingnonstop" amount="-1" />
+            <Affliction identifier="bleeding" amount="-1" />
+            <Affliction identifier="incrementalstun" amount="1" />
+            <Affliction identifier="shock" amount="1" />
+        </StatusEffect>
+    </Effect>
+    <icon texture="%ModDir%/sprites/icons.png" sourcerect="0,0,128,128" color="101,100,50,255" origin="0,0"/>
+</Affliction>
