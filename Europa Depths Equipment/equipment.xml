@@ -150,7 +150,7 @@
     </Vent>
     <ItemContainer hideitems="false" drawinventory="true" capacity="10" slotsperrow="5" maxstacksize="1" itempos="27,-44" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.25,0.25" anchor="Center" style="ItemUI" />
-      <StatusEffect type="OnFire" target="This" tags="onfire" duration="1" stackable="false" />
+      <StatusEffect type="OnFire" target="This" tags="onfire" duration="30" stackable="false" />
       <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
         <StatusEffect type="OnContaining" targettype="Contained" Condition="1.0" Comparison="And">
           <Conditional OxygenFlow="gt 10" targetitemcomponent="Vent" targetcontainer="true"/>
@@ -167,7 +167,7 @@
     </Vent>
     <ItemContainer hideitems="false" drawinventory="true" capacity="3" maxstacksize="1" slotsperrow="3" itempos="27,-42" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.16,0.18" anchor="Center" style="ItemUI" />
-      <StatusEffect type="OnFire" target="This" tags="onfire" duration="1" stackable="false" />
+      <StatusEffect type="OnFire" target="This" tags="onfire" duration="30" stackable="false" />
       <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
         <StatusEffect type="OnContaining" targettype="Contained" Condition="1.0" Comparison="And">
           <Conditional OxygenFlow="gt 10" targetitemcomponent="Vent" targetcontainer="true"/>
@@ -210,4 +210,25 @@
       <Containable items="loadable" />
     </ItemContainer>
   </Item>
+  <Override>
+    <Item name="" identifier="opdeco_wheelchair2" nameidentifier="opdeco_wheelchair1" tags="chair" allowattachitems="false" texturescale="1.0,1.0" scale="0.5" category="Decorative" canflipy="false">
+      <sprite texture="Content/Map/Outposts/Art/MedicalColonyAssets.png" sourcerect="452,781,249,225" depth="0.55" premultiplyalpha="false" origin="0.5,0.5" />
+      <Controller UserPos="10,30" direction="Right" hidehud="false" canbeselected="true" issecondaryitem="true" drawuserbehind="true">
+        <limbposition limb="Head" position="70,45" />
+        <limbposition limb="Torso" position="90,-30" />
+        <limbposition limb="Waist" position="95,-85" />
+        <limbposition limb="RightFoot" position="180,-220" />
+        <limbposition limb="LeftFoot" position="180,-220" />
+        <limbposition limb="RightHand" position="130,-100" allowusinglimb="true" />
+        <limbposition limb="LeftHand" position="130,-100" allowusinglimb="true" />
+        <StatusEffect type="OnActive" target="Character">
+          <reduceaffliction type="damage" strength="0.02" />
+          <reduceaffliction identifier="bloodloss" strength="0.02" />
+          <reduceaffliction identifier="concussion" strength="0.02" />
+          <reduceaffliction identifier="nausea" strength="0.02" />
+        </StatusEffect>
+      </Controller>
+    </Item>
+
+  </Override>
 </Items>
