@@ -52,7 +52,7 @@
       <RequiredItem identifier="fpgacircuit" />
       <RequiredItem identifier="copper" />
     </Fabricate>
-    <WifiComponent range="38000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0">
+    <WifiComponent range="75000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0">
       <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01"/>
     </WifiComponent>
     <ItemContainer capacity="1" maxstacksize="1" hideitems="true">
