@@ -1068,6 +1068,47 @@
       <AiTarget sightrange="4000"/>
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
+
+    <Item name="" identifier="ruinscanner" description="" category="Equipment" Tags="smallitem,scanner,provocative" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" isshootable="true">
+      <PreferredContainer primary="divingcab"/>
+      <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" depth="0.8" sourcerect="966,353,52,62" origin="0.5,0.5" />
+      <Body width="48" height="62" density="20" />
+      <Holdable selectkey="Action" pickkey="Select" slots="Any,RightHand,LeftHand" msg="itemmsgpickupselect" aimpos="35,-10" handle1="0,0" attachable="true" aimable="true">
+        <!--<RequiredItem items="wrench" type="Equipped" />-->
+      </Holdable>
+      <Scanner scanduration="30" scanradius="1000" alwaysdisplayprogressbar="false">
+        <StatusEffect type="OnActive" targettype="This">
+          <Conditional scantimer="gt 0"/>
+          <ParticleEmitter particle="scannerwavefx" anglemax="360" particlespersecond="0.5" />
+          <ParticleEmitter particle="scannerdot" particlespersecond="0.9"/>
+        </StatusEffect>
+      </Scanner>
+      <AITarget sightrange="50" soundrange="10000" staticsight="true" fadeouttime="5" />
+      <Sonar range="6000.0" powerconsumption="0" drawhudwhenequipped="true" detectsubmarinewalls="true" displaybordersize="-0.1" characterusable="false" hasmineralscanner="false" allowuioverlap="true">
+        <sound file="Content/Items/Command/SonarPing.ogg" type="OnUse" range="1000.0" />
+        <GuiFrame relativesize="0.4,0.4" anchor="CenterLeft" relativeoffset="0.006,-0.01"/>
+        <PingCircle texture="Content/Items/Command/pingCircle.png" origin="0.5,0.5" />
+        <DirectionalPingCircle texture="Content/Items/Command/directionalPingCircle.png" origin="0.0,0.5" />
+        <ScreenOverlay texture="Content/Items/Command/sonarOverlay.png" origin="0.5,0.5" />
+        <ScreenBackground texture="Content/Items/Command/sonarBackground.png" origin="0.5,0.5" />
+        <DirectionalPingBackground texture="Content/Items/Command/directionalPingBackground.png" origin="0.5,0.5" />
+        <DirectionalPingButton index="0" texture="Content/Items/Command/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
+        <DirectionalPingButton index="1" texture="Content/Items/Command/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
+        <DirectionalPingButton index="2" texture="Content/Items/Command/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
+        <Blip texture="Content/Items/Command/sonarBlip.png" origin="0.5,0.5" />
+        <LineSprite texture="Content/Items/Command/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5"/>
+        <icon identifier="outpost" texture="Content/UI/MainIconsAtlas.png" sourcerect="352,398,16,8" origin="0.5,0.5"/>
+        <icon identifier="submarine" texture="Content/UI/MainIconsAtlas.png" sourcerect="353,407,14,6" origin="0.5,0.5"/>
+        <icon identifier="shuttle" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,407,8,6" origin="0.5,0.5"/>
+        <icon identifier="artifact" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,414,8,8" origin="0.5,0.5"/>
+        <icon identifier="location" texture="Content/UI/MainIconsAtlas.png" sourcerect="349,435,11,11" origin="0.5,0.5"/>
+        <icon identifier="mineral" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,434,7,12" origin="0.5,0.5"/>
+        <icon identifier="" texture="Content/UI/MainIconsAtlas.png" sourcerect="346,416,4,4" origin="0.5,0.5"/>
+      </Sonar>
+      <LightComponent LightColor="1.0,1.0,1.0,0.4" range="140" ison="true">
+        <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5, 0.5" size="1.0,1.0" />
+      </LightComponent>
+    </Item>
   </Override>
 
   <Item name="" identifier="fuelrodcase" category="Equipment" tags="mediumitem,mobilecontainer,tool,toolbox,radiationproof" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
