@@ -155,7 +155,7 @@ public class Wrecks {
 						new MonsterEvent(Character.Tigerthresher, 2, 3)),
 				new MonsterSet("spinlings", false, 10).allowatstart(true).monsters(
 						new MonsterEvent(Character.Spineling, 6, 8),
-						new MonsterEvent(Character.Spinling_red, 1, 2)),
+						new MonsterEvent(Character.Spineling_red, 1, 2)),
 				new MonsterSet("husks", false, 10).allowatstart(true).monsters(
 						new MonsterEvent(Character.Husk, 2, 5),
 						new MonsterEvent(Character.Crawlerhusk, 2, 5)),
@@ -225,7 +225,7 @@ public class Wrecks {
 						new MonsterEvent(Character.Mudraptor, 2, 4)),
 				new MonsterSet("spinlings", false, 10).allowatstart(true).monsters(
 						new MonsterEvent(Character.Spineling, 8, 10),
-						new MonsterEvent(Character.Spinling_red, 2, 3)),
+						new MonsterEvent(Character.Spineling_red, 2, 3)),
 				new MonsterSet("husks", false, 10).allowatstart(true).monsters(
 						new MonsterEvent(Character.Husk, 4, 5),
 						new MonsterEvent(Character.Crawlerhusk, 2, 5)),
@@ -299,7 +299,7 @@ public class Wrecks {
 						new MonsterEvent(Character.Mudraptor_veteran, 2, 4)),
 				new MonsterSet("spinlings", false, 10).allowatstart(true).monsters(
 						new MonsterEvent(Character.Spineling, 10, 15),
-						new MonsterEvent(Character.Spinling_red, 2, 4)),
+						new MonsterEvent(Character.Spineling_red, 2, 4)),
 				new MonsterSet("husks", false, 10).allowatstart(true).monsters(
 						new MonsterEvent(Character.Husk, 5, 6),
 						new MonsterEvent(Character.Crawlerhusk, 6, 10)),

@@ -137,7 +137,7 @@ public class Spawns {
 						new MonsterEvent(Character.Mudraptor, 1, 2)),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Character.Spineling, 10, 15),
-						new MonsterEvent(Character.Spinling_red, 1, 1),
+						new MonsterEvent(Character.Spineling_red, 1, 1),
 						new MonsterEvent(Character.Spineling_giant, 1, 2)),
 				new MonsterSet("hammerheads", false, 30).monsters(
 						new MonsterEvent(Character.Hammerhead, 2, 4),
@@ -191,7 +191,7 @@ public class Spawns {
 										new MonsterEvent(Character.Tigerthresher, 3, 5)))),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Character.Spineling, 10, 18),
-						new MonsterEvent(Character.Spinling_red, 1, 1),
+						new MonsterEvent(Character.Spineling_red, 1, 1),
 						new MonsterEvent(Character.Spineling_giant, 1, 2)),
 				new MonsterSet("hammerheads", false, 30).monsters(
 						new MonsterEvent(Character.Hammerhead, 2, 6),
@@ -249,7 +249,7 @@ public class Spawns {
 										new MonsterEvent(Character.Tigerthresher_veteran, 1, 1)))),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Character.Spineling, 10, 20),
-						new MonsterEvent(Character.Spinling_red, 2, 2),
+						new MonsterEvent(Character.Spineling_red, 2, 2),
 						new MonsterEvent(Character.Spineling_giant, 2, 2)),
 				new MonsterSet("threshers", false, 40).monsters(
 						new MonsterEvent(Character.Bonethresher, 2, 3),
@@ -326,7 +326,7 @@ public class Spawns {
 										new MonsterEvent(Character.Tigerthresher_veteran, 3, 5)))),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Character.Spineling, 10, 20),
-						new MonsterEvent(Character.Spinling_red, 2, 3),
+						new MonsterEvent(Character.Spineling_red, 2, 3),
 						new MonsterEvent(Character.Spineling_giant, 2, 3)),
 				new MonsterSet("threshers", false, 40).monsters(
 						new MonsterEvent(Character.Bonethresher_veteran, 3, 4).scatter(1000),
