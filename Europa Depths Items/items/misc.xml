@@ -29,7 +29,7 @@
       </Wearable>
     </Item>
   </Override>
-  <Item name="" identifier="engineeringheadset" scale="0.5" category="Equipment" tags="smallitem,mobileradio" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+  <Item name="Engineering Headset" identifier="engineeringheadset" scale="0.5" category="Equipment" tags="smallitem,mobileradio" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="crewcab" secondary="divingcab"/>
     <Price baseprice="190">
       <Price storeidentifier="merchantoutpost" minavailable="1" />
@@ -60,7 +60,14 @@
       <Containable items="mobilebattery"/>
     </ItemContainer>
     <Wearable limbtype="Head" slots="Any,Headset" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
-      <sprite name="Headset Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hideotherwearables="false" sourcerect="26,317,51,64" origin="0.5,0.6" />
+      <sprite name="Headset Wearable" texture="Content/Items/Jobgear/headgears.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hideotherwearables="false" sourcerect="26,317,51,64" origin="0.5,0.6">
+        <LightComponent LightColor="1.0,1.0,1.0,0.4" range="140" powerconsumption="1" ison="true" allowingameediting="true">
+          <StatusEffect type="OnWearing" target="This" Voltage="1.0" Interval="0.1" setvalue="true">
+            <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" targetslot="0"/>
+          </StatusEffect>
+          <LightTexture texture="Content/Lights/pointlight_rays.png" origin="0.5, 0.5" size="1.0,1.0" />
+        </LightComponent>
+      </sprite>
       <StatusEffect type="OnWearing" targettype="Contained,Character" Condition="-0.04" comparison="And">
         <Conditional IsPlayer="True"/>
         <RequiredItem items="mobilebattery" type="Contained"/>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Items" modversion="1.4.28" corepackage="False" steamworkshopid="2821614540" gameversion="1.0.21.0">
+<contentpackage name="Europa Depths Items" modversion="1.4.30" corepackage="False" steamworkshopid="2821614540" gameversion="1.0.21.0">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Item file="%ModDir%/items/alienitems.xml" />
   <Item file="%ModDir%/items/assistant_gear.xml" />
@@ -29,6 +29,7 @@
   <Item file="%ModDir%/items/misc.xml" />
   <Item file="%ModDir%/items/nuclearlaser.xml" />
   <Item file="%ModDir%/items/PirateItems.xml" />
+  <Item file="%ModDir%/items/poisons.xml" />
   <Item file="%ModDir%/items/poweritems.xml" />
   <Item file="%ModDir%/items/pulselaser.xml" />
   <Item file="%ModDir%/items/railgun.xml" />
@@ -39,10 +40,14 @@
   <Item file="%ModDir%/items/storage2.xml" />
   <Item file="%ModDir%/items/tools.xml" />
   <Item file="%ModDir%/items/weapons.xml" />
+  <Item file="%ModDir%/plants//plantproducts.xml" />
+  <Item file="%ModDir%/plants/gardeningtools.xml" />
+  <Item file="%ModDir%/plants/Plants.xml" />
   <Jobs file="%ModDir%/Jobs.xml" />
   <Other file="%ModDir%/sprites/beam.png" />
   <Other file="%ModDir%/sprites/classic.png" />
   <Other file="%ModDir%/sprites/items.png" />
+  <Submarine file="%ModDir%/Europa Depths Items Tester.sub" />
   <Talents file="%ModDir%/talents/TalentsAssistant.xml" />
   <Talents file="%ModDir%/talents/TalentsCaptain.xml" />
   <Talents file="%ModDir%/talents/TalentsDoctor.xml" />
@@ -52,5 +57,4 @@
   <Text file="%ModDir%/text/English.xml" />
   <Text file="%ModDir%/text/TraditionalChinese.xml" />
   <UpgradeModules file="%ModDir%/upgrades/upgrade_modules.xml" />
-  <Submarine file="%ModDir%/Europa Depths Items Tester.sub" />
 </contentpackage>

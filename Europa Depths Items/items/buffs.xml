@@ -20,6 +20,10 @@
         <Price storeidentifier="merchantmine" multiplier="1.1" />
         <Price storeidentifier="merchantclown" minavailable="0" maxavailable="2" />
       </Price>
+      <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+        <RequiredSkill identifier="medical" level="20" />
+        <RequiredItem identifier="seawheatbloom" />
+      </Fabricate>
       <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="40" fabricationlimitmin="8" fabricationlimitmax="12"/>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,768,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="435,452,30,57" depth="0.6" origin="0.5,0.5" />

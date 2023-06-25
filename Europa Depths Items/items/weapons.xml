@@ -883,16 +883,17 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
 
-  <Item name="40mm Incenium Grenade" identifier="40mmincendiumgrenade" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="40mm Incendium Grenade" identifier="40mmincendiumgrenade" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.03" />
     <PreferredContainer primary="secarmcab" secondary="armcab" />
+    <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="4" spawnprobability="0.1" />
     <Price baseprice="200" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
       <Price storeidentifier="merchantcity" multiplier="1.25" />
       <Price storeidentifier="merchantresearch" multiplier="1.25" />
-      <Price storeidentifier="merchantmilitary" sold="true" multiplier="1" minavailable="1" />
+      <Price storeidentifier="merchantmilitary" sold="true" multiplier="1" minavailable="2" />
       <Price storeidentifier="merchantmine" multiplier="1.25" />
-      <Price storeidentifier="merchantarmory" sold="true" multiplier="1" minavailable="1" />
+      <Price storeidentifier="merchantarmory" sold="true" multiplier="1" minavailable="2" />
     </Price>
     <Deconstruct time="5">
       <Item identifier="iron" />
