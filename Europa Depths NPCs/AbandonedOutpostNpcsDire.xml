@@ -600,7 +600,7 @@
             </ItemSet>
         </npc>
         <npc identifier="psychoclown" commonness="0" moduleflags="none" job="killer" behavior="Patrol" healthmultiplier="2" healthmultiplierinmultiplayer="1.5" aimspeed="2.5" aimaccuracy="1" reportrange="500">
-            <ItemSet commonness="2">
+            <ItemSet commonness="3">
                 <Item identifier="idcard" equip="true"/>
                 <Item identifier="clowncostume" equip="true"/>
                 <Item identifier="clownmask" equip="true"/>
@@ -616,7 +616,7 @@
                 <Item identifier="bikehorn" />
                 <Item identifier="killerhorn" />
             </ItemSet>
-            <ItemSet commonness="2">
+            <ItemSet commonness="1">
                 <Item identifier="idcard" equip="true"/>
                 <Item identifier="clownsuitunique" equip="true"/>
                 <Item identifier="clownmaskunique" equip="true"/>
@@ -628,7 +628,7 @@
                 <Item identifier="bikehorn" equip="true"/>
                 <Item identifier="killerhorn" equip="true"/>
             </ItemSet>
-            <ItemSet commonness="1">
+            <ItemSet commonness="0.5">
                 <Item identifier="idcard" equip="true"/>
                 <Item identifier="clownsuitunique" equip="true"/>
                 <Item identifier="clownmaskunique" equip="true"/>
