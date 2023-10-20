@@ -31,16 +31,16 @@
   <sound file="Content/Characters/Latcher/ABYSSM_damage_3.ogg" state="Damage" range="20000" volume="1" />
   <sound file="Content/Characters/Latcher/ABYSSM_escape.ogg" state="Die" range="30000" volume="1" />
   <sound file="Content/Characters/Latcher/ABYSSM_escape_1.ogg" state="Die" range="30000" volume="1" />
-  <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="False" commonness="3">
+  <Inventory slots="Any, Any, Any, Any, Any" accessiblewhenalive="False" commonness="3">
     <Item identifier="diversremains" />
     <Item identifier="ballisticfiber" />
   </Inventory>
-  <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="False" commonness="1">
+  <Inventory slots="Any, Any, Any, Any, Any" accessiblewhenalive="False" commonness="1">
     <Item identifier="diversremains" />
     <Item identifier="diversremains" />
     <Item identifier="ballisticfiber" />
   </Inventory>
-  <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="False" commonness="1">
+  <Inventory slots="Any, Any, Any, Any, Any" accessiblewhenalive="False" commonness="1">
     <Item identifier="diversremains" />
     <Item identifier="ballisticfiber" amount="2" />
   </Inventory>
