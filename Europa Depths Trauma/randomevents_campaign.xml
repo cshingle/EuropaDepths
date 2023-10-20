@@ -3,16 +3,16 @@
 	<Override>
 		<EventPrefabs>
 			<ScriptedEvent identifier="beaconclown">
-				<SpawnAction npcsetidentifier="abandonedoutpostnpcs" npcidentifier="psychoclown" targettag="psychoclown" spawnpointtag="saferoom" spawnlocation="beaconstation" requirespawnpointtag="true" team="None"/>
-				<StatusEffectAction targettag="psychoclown">
-					<StatusEffect>
-						<GiveTalentInfo giverandom="false" talentidentifiers="chonkyhonks,psychoclown,waterprankster,enrollintoclowncollege" />
-					</StatusEffect>
-				</StatusEffectAction>
-				<AfflictionAction targettag="psychoclown" affliction="psychoclown" strength="100" />
+			  <SpawnAction npcsetidentifier="abandonedoutpostnpcs" npcidentifier="psychoclown" targettag="psychoclown" spawnpointtag="saferoom" spawnlocation="beaconstation" requirespawnpointtag="true" team="None"/>
+			  <StatusEffectAction targettag="psychoclown">
+			    <StatusEffect>
+			      <GiveTalentInfo giverandom="false" talentidentifiers="chonkyhonks,psychoclown,waterprankster,enrollintoclowncollege" />
+			    </StatusEffect>
+			  </StatusEffectAction>
+			  <AfflictionAction targettag="psychoclown" affliction="psychoclown" strength="100" />
 			</ScriptedEvent>
 		</EventPrefabs>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 0                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -30,7 +30,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 1                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -80,7 +80,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 2                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -140,21 +140,21 @@
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="30">
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="0.5" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="0.5" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
-					<MonsterEvent characterfile="Hammerhead" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 			</EventSet>
 
@@ -260,7 +260,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 3                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -322,8 +322,8 @@
 						<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
 					</EventSet>
 					<EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
-						<MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="1" spawntype="ruin" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="1" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
 					</EventSet>
 					<EventSet identifier="entrance3" chooserandom="false" triggereventcooldown="false" allowatstart="true">
@@ -364,28 +364,28 @@
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="30">
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="0" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="0" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="0" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="0" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
-					<MonsterEvent characterfile="Hammerhead" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" scatter="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" scatter="1000" spawnprobability="1" />
 				</EventSet>
 			</EventSet>
 
@@ -605,7 +605,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 4                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -668,8 +668,8 @@
 						<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance1" />
 					</EventSet>
 					<EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
-						<MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="1" spawntype="ruin" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="1" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
 					</EventSet>
 					<EventSet identifier="entrance3" chooserandom="false" triggereventcooldown="false" allowatstart="true">
@@ -710,28 +710,28 @@
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="30">
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="0" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="0" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="0" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="0" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="0" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
-					<MonsterEvent characterfile="Hammerhead" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" scatter="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" scatter="1000" spawnprobability="1" />
 				</EventSet>
 			</EventSet>
 
@@ -975,7 +975,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 5                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1095,34 +1095,34 @@
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="30">
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Watcher" minamount="0" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Watcher" minamount="0" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="1" maxamount="3" spawntype="wreck" spawndistance="2000" scatter="1000" spawnprobability="1" />
@@ -1377,7 +1377,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 6                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1495,34 +1495,34 @@
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="30">
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Watcher" minamount="0" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Watcher" minamount="0" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="1" maxamount="3" spawntype="wreck" spawndistance="2000" scatter="1000" spawnprobability="1" />
@@ -1760,7 +1760,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 7                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1838,8 +1838,8 @@
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance1" />
 					</EventSet>
 					<EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
-						<MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="3" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
 					</EventSet>
 					<EventSet identifier="entrance3" chooserandom="false" triggereventcooldown="false" allowatstart="true">
@@ -1887,53 +1887,53 @@
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
-					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="30">
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="cavebonethreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="0" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="0" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="0" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="0" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerhead_juvenile" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="1" maxamount="2" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerheadsblack" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Hammerheadblack" minamount="2" maxamount="4" spawntype="wreck" spawndistance="5000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 			</EventSet>
 
@@ -2223,7 +2223,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 8                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2301,9 +2301,9 @@
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance1" />
 					</EventSet>
 					<EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
-						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance2" />
 					</EventSet>
 					<EventSet identifier="entrance3" chooserandom="false" triggereventcooldown="false" allowatstart="true">
@@ -2353,55 +2353,55 @@
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="30">
-					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="cavebonethreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerhead_juvenile" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerheadsblack" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Hammerheadblack" minamount="2" maxamount="4" spawntype="wreck" spawndistance="5000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="1">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="wreck" spawndistance="5000" spawnprobability="1" />
@@ -2918,7 +2918,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 9                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2994,9 +2994,9 @@
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance1" />
 					</EventSet>
 					<EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
-						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Hammerheadblack" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance2" />
 					</EventSet>
 					<EventSet identifier="entrance3" chooserandom="false" triggereventcooldown="false" allowatstart="true">
@@ -3046,55 +3046,55 @@
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="30">
-					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="cavebonethreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerhead_juvenile" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerheadsblack" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Hammerheadblack" minamount="2" maxamount="4" spawntype="wreck" spawndistance="5000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="1">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="wreck" spawndistance="5000" spawnprobability="1" />
@@ -3613,7 +3613,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-
+		
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 10                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -3689,9 +3689,9 @@
 						<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance1" />
 					</EventSet>
 					<EventSet identifier="entrance2" chooserandom="false" triggereventcooldown="false" allowatstart="true">
-						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="encounter_entrance2" />
-						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalguardian" minamount="2" maxamount="3" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalguardian2" minamount="2" maxamount="3" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
+						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="2" spawntype="ruin" spawndistance="1500" spawnpointtag="encounter_entrance2" />
 						<MonsterEvent characterfile="Portalguardian" minamount="1" maxamount="2" spawntype="ruin" spawndistance="3000" spawnpointtag="encounter_entrance2" />
 					</EventSet>
 					<EventSet identifier="entrance3" chooserandom="false" triggereventcooldown="false" allowatstart="true">
@@ -3741,41 +3741,41 @@
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="30">
-					<MonsterEvent characterfile="Crawler_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawler_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="cavebonethreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="bonethreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="3000" spawnprobability="1" />
@@ -3785,18 +3785,18 @@
 					<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="wreck" spawndistance="3000" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerhead_juvenile" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Hammerhead_juvenile" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="hammerheadsblack" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Hammerheadblack" minamount="2" maxamount="4" spawntype="wreck" spawndistance="5000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
-					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1000" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+					<MonsterEvent characterfile="Husk" minamount="3" maxamount="5" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
 				<EventSet identifier="charybdisjuvenile" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="1">
 					<MonsterEvent characterfile="Charybdis_juvenile" minamount="1" maxamount="1" spawntype="wreck" spawndistance="5000" spawnprobability="1" />
