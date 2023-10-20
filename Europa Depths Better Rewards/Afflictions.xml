@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+
+    <AfflictionHusk name="Husk Ascension" identifier="huskascension" type="alieninfection" targets="human" isbuff="true" huskedspeciesname="[speciesname]husk" limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="0" showinhealthscannerthreshold="0" karmachangeonapplied="-1" maxstrength="100" transferbuffs="true" causespeechimpediment="false" achievementonreceived="ascension" achievementonremoved="healhusk" dormantthreshold="50" activethreshold="75" transformthresholdondeath="1000" transitionthreshold="1000" healableinmedicalclinic="false" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
+        <Effect minstrength="0" maxstrength="75" maxvitalitydecrease="0" strengthchange="50" minbodytint="255,255,255,0" maxbodytint="255,255,255,255" minfacetint="255,255,255,0" maxfacetint="255,255,255,255" tag="huskinfected" blocktransformation="huskinfection" resistancefor="huskinfection" minresistance="1.0" maxresistance="1.0">
+            <StatusEffect target="Character" type="OnActive">
+                <ReduceAffliction identifier="huskinfection" amount="1000" />
+            </StatusEffect>
+        </Effect>
+        <Effect minstrength="75" maxstrength="100" maxvitalitydecrease="0" strengthchange="10" minbodytint="255,255,255,255" maxbodytint="255,255,255,255" minfacetint="255,255,255,255" maxfacetint="255,255,255,255" tag="huskinfected" blocktransformation="huskinfection" resistancefor="huskinfection" minresistance="1.0" maxresistance="1.0">
+            <StatusEffect target="Character" type="OnActive">
+                <ReduceAffliction identifier="huskinfection" amount="1000" />
+                <ReduceAffliction identifier="husksymbiosis" amount="1000" />
+            </StatusEffect>
+            <StatusEffect target="Character">
+                <ReduceAffliction type="damage" amount="0.75" />
+                <ReduceAffliction type="bleeding" amount="0.18" />
+            </StatusEffect>
+        </Effect>
+        <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,640,128,128" color="60,107,195,255" origin="0,0"/>
+    </AfflictionHusk>
+
+    <Affliction name="Mother's Touch" identifier="motherstouch" description="Mother's Touch" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+        <Effect minstrength="0" maxstrength="1" resistancefor="bleeding,bloodloss" minresistance="0.1" maxresistance="0.1">
+            <StatusEffect target="NearbyCharacters" range="200" interval="5" disabledeltatime="true">
+                <Affliction identifier="motherstouch" strength="1" />
+            </StatusEffect>
+        </Effect>
+        <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,7" sheetelementsize="128,128" color="255,165,0,255" origin="0,0"/>
+    </Affliction>
+
+    <Affliction name="Mother's Rage" identifier="mothersrage" description="Mother's Rage" type="talentbuff" isbuff="true" limbspecific="false" hideiconafterdelay="false" maxstrength="15" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+        <Effect minstrength="0" maxstrength="5" strengthchange="-1" resistancefor="stun" minresistance="0.1" maxresistance="0.45">
+            <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+                <ReduceAffliction type="damage" strength="0.05"/>
+                <ReduceAffliction type="burn" strength="0.05"/>
+                <ReduceAffliction identifier="bloodloss" strength="0.05"/>
+                <ReduceAffliction identifier="bleeding" strength="0.05"/>
+                <ReduceAffliction identifier="chemwithdrawal" strength="0.05"/>
+                <ReduceAffliction identifier="oxygenlow" amount="1" />
+            </StatusEffect>
+            <StatValue stattype="MaximumHealthMultiplier" value="0.1" />
+            <StatValue stattype="MovementSpeed" value="0.1"/>
+        </Effect>
+        <Effect minstrength="5" maxstrength="15" strengthchange="-1" resistancefor="stun" minresistance="0.45" maxresistance="0.5">
+            <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+                <ReduceAffliction type="damage" strength="0.1"/>
+                <ReduceAffliction type="burn" strength="0.1"/>
+                <ReduceAffliction identifier="bloodloss" strength="0.1"/>
+                <ReduceAffliction identifier="bleeding" strength="0.1"/>
+                <ReduceAffliction identifier="chemwithdrawal" strength="0.1"/>
+                <ReduceAffliction identifier="huskinfection" amount="0.1" />
+                <ReduceAffliction identifier="oxygenlow" amount="1" />
+            </StatusEffect>
+            <StatValue stattype="MaximumHealthMultiplier" value="0.2" />
+            <StatValue stattype="MovementSpeed" value="0.2"/>
+        </Effect>
+        <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,5" sheetelementsize="128,128"/>
+    </Affliction>
+
+</Afflictions>
