@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Items" modversion="1.4.32" corepackage="False" steamworkshopid="2821614540" gameversion="1.0.21.0">
+<contentpackage name="Europa Depths Items" modversion="1.5.1" corepackage="False" steamworkshopid="2821614540" gameversion="1.1.18.1">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Character file="%ModDir%/Characters/Defensebot/Defensebot.xml" />
   <Character file="%ModDir%/Characters/Mudraptor_pet/Mudraptor_pet.xml" />
@@ -49,7 +49,6 @@
   <Other file="%ModDir%/sprites/beam.png" />
   <Other file="%ModDir%/sprites/classic.png" />
   <Other file="%ModDir%/sprites/items.png" />
-  <Submarine file="%ModDir%/Europa Depths Items Tester.sub" />
   <Talents file="%ModDir%/talents/TalentsAssistant.xml" />
   <Talents file="%ModDir%/talents/TalentsCaptain.xml" />
   <Talents file="%ModDir%/talents/TalentsDoctor.xml" />
@@ -59,4 +58,5 @@
   <Text file="%ModDir%/text/English.xml" />
   <Text file="%ModDir%/text/TraditionalChinese.xml" />
   <UpgradeModules file="%ModDir%/upgrades/upgrade_modules.xml" />
+  <Submarine file="%ModDir%/Europa Depths Items Tester.sub" />
 </contentpackage>

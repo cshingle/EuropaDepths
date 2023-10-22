@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
     <Override>
-        <ChloralHydrate name="" identifier="chloralhydrate" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,poison,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+        <ChloralHydrate name="" identifier="chloralhydrate" category="Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,poison,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
             <PreferredContainer primary="toxcab" secondary="toxcontainer"/>
             <PreferredContainer primary="wrecktoxcab,abandonedtoxcab" spawnprobability="0.1" />
@@ -19,7 +19,7 @@
             </Fabricate>
             <Fabricate suitablefabricators="medicalfabricator" requiredtime="60">
                 <RequiredSkill identifier="medical" level="70" />
-                <RequiredItem identifier="badraptorbane" count="2" />
+                <RequiredItem identifier="badraptorbane" />
                 <RequiredItem identifier="ethanol" />
             </Fabricate>
             <Deconstruct time="20">

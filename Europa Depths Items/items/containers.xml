@@ -127,10 +127,6 @@
       </Upgrade>
     </Item>
 
-
-
-
-
     <Item name="" identifier="artifacttransportcase" category="Equipment" tags="mediumitem,mobilecontainer,artifactcontainer" cargocontaineridentifier="metalcrate" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_soft">
       <PreferredContainer primary="engcab"/>
       <Deconstruct time="20">
@@ -148,12 +144,28 @@
         <Price storeidentifier="merchantmilitary" multiplier="0.8" />
         <Price storeidentifier="merchantmine" multiplier="0.8" />
       </Price>
-      <InventoryIcon texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="806,2,124,100" origin="0.5,0.5" />
+      <InventoryIcon texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="806,103,124,100" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="806,2,124,100" depth="0.6" />
+      <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="934,49,30,30" offset="24,-11" depth="0.599" rotationspeed="500">
+        <AnimationConditional Voltage="gt 0.1" targetitemcomponent="LightComponent"/>
+      </DecorativeSprite>
+      <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="934,49,30,30" offset="-23,-11" depth="0.599" rotationspeed="-500">
+        <AnimationConditional Voltage="gt 0.1" targetitemcomponent="LightComponent"/>
+      </DecorativeSprite>
       <Body width="124" height="95" density="20" />
+      <LightComponent range="100" lightcolor="142,145,184,120" castshadows="false" depth="0.6" powerconsumption="10" IsOn="true" allowingameediting="false" />
       <Holdable slots="Any,RightHand,LeftHand" holdpos="0,-70" handle1="0,45" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" allowswappingwhenpicked="false" />
-      <ItemContainer capacity="1" hideitems="true">
+      <ItemContainer capacity="1" hideitems="true" ContainedStateIndicatorSlot="1">
         <Containable items="alienartifact"/>
+        <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
+        <SubContainer capacity="1" maxstacksize="1">
+          <Containable items="mobilebattery">
+            <StatusEffect type="OnContaining" target="Contained" Condition="-0.15">
+              <RequiredItem items="alienartifact" type="Contained"/>
+            </StatusEffect>
+            <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true" />
+          </Containable>
+        </SubContainer>
       </ItemContainer>
     </Item>
 
@@ -176,21 +188,6 @@
       <Holdable slots="RightHand+LeftHand" holdpos="0,-80" handle1="-30,14" handle2="30,14" aimable="false" msg="ItemMsgPickUpSelect" />
       <ItemContainer capacity="20" canbeselected="false" hideitems="true" keepopenwhenequipped="false" movableframe="true">
         <Containable items="smallitem,mediumitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
-      </ItemContainer>
-    </Item>
-    <Item name="" identifier="medcabinet" tags="container,medcontainer" category="Medical" linkable="true" pickdistance="150" waterproof="true" scale="0.5">
-      <Sprite texture="Content/Items/Containers/containers.png" depth="0.84" sourcerect="815,1,208,346"/>
-      <ItemContainer capacity="30" slotsperrow="6" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.25,0.45" anchor="Center" slotsperrow="6" style="ItemUI"/>
-        <Containable items="smallitem,chem,medical,medicalcase"/>
-      </ItemContainer>
-    </Item>
-    <Item name="" identifier="toxcabinet" tags="container,toxcontainer" linkable="true" pickdistance="150" waterproof="true" scale="0.5">
-      <Sprite texture="Content/Items/Containers/containers.png" depth="0.84" sourcerect="889,483,125,148" origin="0.5,0.5"/>
-      <ItemContainer capacity="20" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
-        <GuiFrame relativesize="0.25,0.45" anchor="Center" style="ItemUI"/>
-        <RequiredItem items="idcard" type="Picked" msg="ItemMsgUnauthorizedAccess" ignoreineditor="true"/>
-        <Containable items="smallitem,chem,medical,medicalcase"/>
       </ItemContainer>
     </Item>
   </Override>

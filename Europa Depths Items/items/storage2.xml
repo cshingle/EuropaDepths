@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <Item name="Bulk Aluminium" identifier="bulkaluminium" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Aluminium" identifier="bulkaluminium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="aluminiumstorage,materialcab" secondary="storagecab" />
         <Price baseprice="2016" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -23,7 +23,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Organic Fiber" identifier="bulkorganicfiber" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Organic Fiber" identifier="bulkorganicfiber" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="organicfiberstorage,materialcab" secondary="storagecab" />
         <Price baseprice="1440" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -46,7 +46,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Carbon" identifier="bulkcarbon" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Carbon" identifier="bulkcarbon" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="carbonstorage,materialcab" secondary="storagecab" />
         <Price baseprice="2016" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -69,7 +69,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Copper" identifier="bulkcopper" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Copper" identifier="bulkcopper" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="copperstorage,materialcab" secondary="storagecab" />
         <Price baseprice="1056" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -92,7 +92,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Iron" identifier="bulkiron" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Iron" identifier="bulkiron" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="ironstorage,materialcab" secondary="storagecab" />
         <Price baseprice="1056" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -115,7 +115,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Lead" identifier="bulklead" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Lead" identifier="bulklead" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="leadstorage,materialcab" secondary="storagecab" />
         <Price baseprice="864" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -138,7 +138,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Plastic" identifier="bulkplastic" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Plastic" identifier="bulkplastic" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="plasticstorage,materialcab" secondary="storagecab" />
         <Price baseprice="2160" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -161,7 +161,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Rubber" identifier="bulkrubber" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Rubber" identifier="bulkrubber" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="rubberstorage,materialcab" secondary="storagecab" />
         <Price baseprice="960" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -184,7 +184,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Silicon" identifier="bulksilicon" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Silicon" identifier="bulksilicon" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="siliconstorage,materialcab" secondary="storagecab" />
         <Price baseprice="816" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -207,7 +207,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Steel" identifier="bulksteel" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Steel" identifier="bulksteel" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="steelstorage,materialcab" secondary="storagecab" />
         <Price baseprice="1344" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -230,7 +230,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Thorium" identifier="bulkthorium" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Thorium" identifier="bulkthorium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="thoriumstorage,materialcab" secondary="storagecab" />
         <Price baseprice="6000" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -253,7 +253,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Tin" identifier="bulktin" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Tin" identifier="bulktin" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="tinstorage,materialcab" secondary="storagecab" />
         <Price baseprice="528" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -276,7 +276,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Titanium" identifier="bulktitanium" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Titanium" identifier="bulktitanium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="titaniumstorage,materialcab" secondary="storagecab" />
         <Price baseprice="3120" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -299,7 +299,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Titanium Aluminium Alloy" identifier="bulktitaniumaluminiumalloy" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Titanium Aluminium Alloy" identifier="bulktitaniumaluminiumalloy" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="titaniumaluminiumalloystorage,materialcab" secondary="storagecab" />
         <Price baseprice="7200" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -322,7 +322,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Uranium" identifier="bulkuranium" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Uranium" identifier="bulkuranium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="uraniumstorage,materialcab" secondary="storagecab" />
         <Price baseprice="2400" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -345,7 +345,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Zinc" identifier="bulkzinc" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Zinc" identifier="bulkzinc" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="zincstorage,materialcab" secondary="storagecab" />
         <Price baseprice="1248" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -368,7 +368,7 @@
         </Holdable>
         <AiTarget sightrange="1000" static="true" />
     </Item>
-    <Item name="Bulk Ballistic Fiber" identifier="bulkballisticfiber" category="Material" maxstacksize="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="Bulk Ballistic Fiber" identifier="bulkballisticfiber" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,bulkstorage" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="ballisticfiberstorage,materialcab" secondary="storagecab" />
         <Price baseprice="7680" sold="false">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />

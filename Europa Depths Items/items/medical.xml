@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <TonicLiquid name="Dr. Neon's Healing Tonic" identifier="minorhealingtonic" category="Medical,Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <TonicLiquid name="Dr. Neon's Healing Tonic" identifier="minorhealingtonic" category="Medical,Material" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
         <Upgrade gameversion="0.10.0.0" scale="0.5" />
         <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
         <PreferredContainer secondary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -52,7 +52,7 @@
         <SkillRequirementHint identifier="medical" level="35" />
     </TonicLiquid>
     <Override>
-        <Stabilozine name="" identifier="stabilozine" category="Medical" maxstacksize="8" tags="smallitem,chem,medical,syringe" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+        <Stabilozine name="" identifier="stabilozine" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" tags="smallitem,chem,medical,syringe" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
             <PreferredContainer secondary="abandonedmedcab,wreckmedcab" minamount="1" maxamount="2" spawnprobability="0.5" />
             <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
@@ -101,7 +101,7 @@
             <SkillRequirementHint identifier="medical" level="25" />
         </Stabilozine>
 
-        <Item name="" identifier="nitroglycerin" category="Material,Weapon" maxstacksize="8" description="" spritecolor="1.0,1.0,1.0,1.0" containercolor="1.0,1.0,1.0,1.0" cargocontaineridentifier="explosivecrate" Tags="smallitem,chem,medical,syringe" impacttolerance="6" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+        <Item name="" identifier="nitroglycerin" category="Material,Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" description="" spritecolor="1.0,1.0,1.0,1.0" containercolor="1.0,1.0,1.0,1.0" cargocontaineridentifier="explosivecrate" Tags="smallitem,chem,medical,syringe" impacttolerance="6" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
             <PreferredContainer primary="secarmcab" secondary="armcab"/>
             <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
             <Price baseprice="150">
@@ -141,7 +141,7 @@
             <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="Throwable" inheritrequiredskillsfrom="Throwable" />
         </Item>
 
-        <Antibiotics name="" identifier="antibiotics" category="Medical" maxstacksize="8" Tags="smallitem,chem,medical,syringe" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true" RequireAimToUse="True">
+        <Antibiotics name="" identifier="antibiotics" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,chem,medical,syringe" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
             <PreferredContainer secondary="abandonedmedcab,wreckmedcab" minamount="1" maxamount="2" spawnprobability="0.5" />
             <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
@@ -208,7 +208,7 @@
             <SkillRequirementHint identifier="medical" level="25" />
         </Antibiotics>
 
-        <Opium name="" identifier="opium" category="Medical" maxstacksize="8" Tags="smallitem,chem" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true" RequireAimToUse="True">
+        <Opium name="" identifier="opium" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,chem" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
             <PreferredContainer secondary="abandonedmedcab,wreckmedcab" minamount="1" maxamount="2" spawnprobability="0.5" />
             <PreferredContainer primary="medfabcab" secondary="medcontainer"/>
@@ -263,7 +263,7 @@
             <SkillRequirementHint identifier="medical" level="60" />
         </Opium>
 
-        <Calyxanide name="" identifier="calyxanide" category="Medical" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+        <Calyxanide name="" identifier="calyxanide" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
             <PreferredContainer secondary="wreckmedcab,abandonedmedcab" amount="1" spawnprobability="0.2" />
             <PreferredContainer secondary="outpostmedcab" amount="1" spawnprobability="0.1" />

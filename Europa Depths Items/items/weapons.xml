@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
   <Override>
-    <Item name="" identifier="spear" category="Weapon" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="spear" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="harpoongun" amount="6" spawnprobability="1" />
       <PreferredContainer primary="armcab" minamount="3" maxamount="6" spawnprobability="1" notcampaign="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="4" spawnprobability="0.2" />
@@ -47,13 +47,12 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="alienspear" category="Weapon,Alien" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="alienspear" category="Weapon,Alien" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="harpoongun" />
-      <PreferredContainer primary="armcab" amount="6" spawnprobability="0.05" notcampaign="true" />
-      <PreferredContainer secondary="ruinstoragesmall" minamount="1" maxamount="2" spawnprobability="0.05" />
-      <PreferredContainer secondary="ruinstorage" minamount="2" maxamount="3" spawnprobability="0.05" />
-      <PreferredContainer secondary="ruinstoragelarge" minamount="3" maxamount="6" spawnprobability="0.05" />
-      <PreferredContainer primary="secarmcab" />
+      <PreferredContainer secondary="ruinstoragesmall,ruinstorage" minamount="1" maxamount="3" spawnprobability="0.1" />
+      <PreferredContainer secondary="ruinstoragelarge" amount="6" spawnprobability="0.2" />
+      <PreferredContainer primary="ruintreasure" amount="6" spawnprobability="0.25" />
+      <PreferredContainer primary="secarmcab,armcab" />
       <Price baseprice="50" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -77,7 +76,7 @@
         </StatusEffect>
       </Rope>
       <Projectile characterusable="false" launchimpulse="5.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
-        <Attack structuredamage="25" itemdamage="55" targetforce="20" severlimbsprobability="0.2">
+        <Attack structuredamage="25" itemdamage="35" targetforce="20" severlimbsprobability="0.2">
           <Affliction identifier="lacerations" strength="60" />
           <Affliction identifier="bleeding" strength="60" />
           <Affliction identifier="stun" strength="0.5" />
@@ -91,7 +90,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="explosivespear" category="Weapon" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="explosivespear" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="harpoongun" />
       <PreferredContainer primary="armcab" amount="6" spawnprobability="0.1" notcampaign="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="6" spawnprobability="0.1" />
@@ -156,7 +155,7 @@
       <RequiredItem identifier="raptorbaneextract" />
     </Fabricate>
     <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
-      <Attack structuredamage="20" itemdamage="55" targetforce="20" severlimbsprobability="0.2">
+      <Attack structuredamage="20" itemdamage="20" targetforce="20" severlimbsprobability="0.2">
         <Affliction identifier="lacerations" strength="35" />
         <Affliction identifier="bleeding" strength="35" />
         <Affliction identifier="stun" strength="0.5" />
@@ -177,7 +176,7 @@
     </Projectile>
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
-  <Item name="Depleted Fuel Harpoon" identifier="spearepletedfuel" category="Weapon" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" impactsoundtag="impact_metal_light">
+  <Item name="Depleted Fuel Harpoon" identifier="spearepletedfuel" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="harpoongun" amount="6" spawnprobability="0.05" />
     <PreferredContainer primary="armcab" minamount="3" maxamount="6" spawnprobability="0.05" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="4" spawnprobability="0.05" />
@@ -208,13 +207,13 @@
       </StatusEffect>
     </Rope>
     <Projectile characterusable="false" launchimpulse="5.0" sticktocharacters="true" sticktoitems="true" sticktostructures="true" sticktodoors="true">
-      <Attack structuredamage="25" itemdamage="55" targetforce="20" severlimbsprobability="0.2">
+      <Attack structuredamage="25" itemdamage="35" targetforce="20" severlimbsprobability="0.2">
         <Affliction identifier="lacerations" strength="55" />
         <Affliction identifier="bleeding" strength="55" />
         <Affliction identifier="stun" strength="0.5" />
         <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
-          <Conditional radiationsickness="lt 30" />
-          <Affliction identifier="radiationsickness" strength="10" />
+          <Conditional radiationsickness="lt 40" />
+          <Affliction identifier="radiationsickness" strength="15" />
         </StatusEffect>
       </Attack>
       <StatusEffect type="OnActive" target="UseTarget,This" checkconditionalalways="true" comparison="And">
@@ -280,13 +279,13 @@
       <SkillRequirementHint identifier="weapons" level="30" />
     </Item>
 
-    <Item name="" identifier="revolverround" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,revolverammo,pistolammoitem" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="revolverround" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,revolverammo,pistolammoitem" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="revolver" amount="6" spawnprobability="1" />
       <PreferredContainer primary="armcab" amount="6" spawnprobability="1" />
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" minamount="1" maxamount="6" spawnprobability="0.2" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.25" />
       <PreferredContainer secondary="secarmcab" />
-      <Price baseprice="30">
+      <Price baseprice="15">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" minavailable="12" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="12" />
         <Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="12" />
@@ -296,9 +295,9 @@
       </Price>
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="12">
         <RequiredSkill identifier="weapons" level="30" />
-        <RequiredItem identifier="magnesium" amount="1" />
-        <RequiredItem identifier="lead" amount="1" />
-        <RequiredItem identifier="copper" amount="1" />
+        <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
+        <RequiredItem tag="munition_core" description="fabricationdescription.munition_core" />
+        <RequiredItem tag="munition_jacket" description="fabricationdescription.munition_jacket" />
       </Fabricate>
       <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,196,64,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,93,50,13" depth="0.55" origin="0.5,0.5" />
@@ -324,7 +323,7 @@
     </Item>
 
 
-    <Item name="" identifier="smgmagazine" maxstacksize="2" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,smgammo" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="smgmagazine" maxstacksize="8" maxstacksizecharacterinventory="2" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,smgammo" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="smg,smgunique,machinepistol" amount="1" spawnprobability="1" />
       <PreferredContainer primary="armcab" amount="1" spawnprobability="1" notcampaign="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="2" spawnprobability="0.5" />
@@ -340,22 +339,23 @@
       </Price>
       <Fabricate suitablefabricators="fabricator" requiredtime="25" requiresrecipe="true">
         <RequiredSkill identifier="weapons" level="40" />
-        <RequiredItem identifier="magnesium" />
-        <RequiredItem identifier="lead" />
+        <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
+        <RequiredItem tag="munition_core" description="fabricationdescription.munition_core" />
+        <RequiredItem tag="munition_jacket" description="fabricationdescription.munition_jacket" />
         <RequiredItem identifier="steel" />
       </Fabricate>
       <Fabricate suitablefabricators="fabricator" requiredtime="15" requiresrecipe="true" displayname="recycleitem">
         <RequiredSkill identifier="weapons" level="40" />
-        <RequiredItem identifier="magnesium" />
-        <RequiredItem identifier="lead" />
-        <RequiredItem identifier="smgmagazine" mincondition="0.0" maxcondition="0.1" usecondition="false" />
+        <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
+        <RequiredItem tag="munition_core" description="fabricationdescription.munition_core" />
+        <RequiredItem tag="munition_jacket" description="fabricationdescription.munition_jacket" />
+        <RequiredItem tag="smgammo" mincondition="0.0" maxcondition="0.1" usecondition="false" />
       </Fabricate>
       <Deconstruct time="10">
-        <Item identifier="lead" mincondition="0.95" />
         <Item identifier="steel" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,960,64,64" />
-      <Sprite texture="Content/Items/Weapons/weapons_new.png" depth="0.54" sourcerect="146,157,17,44" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Weapons/weapons_new.png" depth="0.54" sourcerect="146,157,21,44" origin="0.5,0.5" />
       <Body width="14" height="40" density="25" />
       <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" SpawnWithId="smground" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
         <Containable items="smground" />
@@ -370,7 +370,7 @@
     </Item>
 
 
-    <Item name="" identifier="stungrenade" category="Weapon" maxstacksize="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,stunner,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="stungrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,stunner,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="3" spawnprobability="0.5" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
@@ -418,7 +418,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="empgrenade" category="Weapon" maxstacksize="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="empgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
       <PreferredContainer secondary="armcab" />
@@ -469,7 +469,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="fraggrenade" category="Weapon" maxstacksize="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Item name="" identifier="fraggrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" scale="0.5" impactsoundtag="impact_metal_heavy">
       <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
       <PreferredContainer secondary="armcab" />
@@ -501,7 +501,7 @@
           <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="5000" />
           <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="5000" />
           <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="5000" />
-          <Explosion range="750.0" ballastfloradamage="100" structuredamage="20" levelwalldamage="140" itemdamage="500" force="5" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
+          <Explosion range="750.0" ballastfloradamage="100" structuredamage="20" levelwalldamage="140" itemdamage="500" force="5" severlimbsprobability="0.5" debris="true" decal="explosion" decalsize="0.5">
             <Affliction identifier="explosiondamage" strength="150" />
             <Affliction identifier="bleeding" strength="100" />
             <Affliction identifier="bleeding" strength="50" probability="0.1" dividebylimbcount="false" />
@@ -523,7 +523,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="incendiumgrenade" category="Weapon" maxstacksize="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_heavy">
+    <Item name="" identifier="incendiumgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_heavy">
       <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
       <PreferredContainer primary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <PreferredContainer secondary="armcab" />
@@ -596,7 +596,7 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="770,0,58,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,191,63" depth="0.55" origin="0.4954025,0.7936202" />
       <Body width="170" height="30" density="20" />
-      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,20" handle1="-30,15" holdangle="20" aimangle="30" reload="0.95" range="100" combatPriority="49" msg="ItemMsgPickUpSelect" preferredcontaineditems="mobilebattery">
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,20" handle1="-30,15" holdangle="20" aimangle="30" reload="0.95" range="100" combatPriority="35" msg="ItemMsgPickUpSelect" preferredcontaineditems="mobilebattery">
         <Attack targetimpulse="5" itemdamage="1">
           <StatusEffect type="OnUse" target="UseTarget">
             <Conditional entitytype="eq Character" />
@@ -648,8 +648,8 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="divingknife" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
-      <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.25" />
+    <Item name="" identifier="divingknife" category="Weapon" Tags="smallitem,weapon,gunsmith,mountableweapon,sharptool" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+      <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.20" />
       <PreferredContainer secondary="abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="beaconsupplycab" amount="1" spawnprobability="0.05" />
       <PreferredContainer primary="secarmcab" secondary="armcab" />
@@ -660,6 +660,7 @@
         <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="15" />
         <Price storeidentifier="merchantmine" multiplier="1.25" minavailable="2" />
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="15" />
+        <Price storeidentifier="merchanthusk" minavailable="0" maxavailable="2"/>
       </Price>
       <Deconstruct time="10">
         <Item identifier="iron" amount="2" />
@@ -749,7 +750,7 @@
       <SkillRequirementHint identifier="weapons" level="60" />
     </Item>
 
-    <Item name="" identifier="40mmgrenade" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="40mmgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="grenadelauncher" amount="1" spawnprobability="1" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
       <PreferredContainer primary="secarmcab" secondary="armcab" />
@@ -783,7 +784,7 @@
         <!--Grenade launcher ammo explodes on impact-->
         <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
           <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" range="2000" />
-          <Explosion range="300.0" ballastfloradamage="80" structuredamage="20" levelwalldamage="120" itemdamage="400" force="5.0" severlimbsprobability="0.4" decal="explosion" decalsize="0.3">
+          <Explosion range="300.0" ballastfloradamage="80" structuredamage="20" levelwalldamage="120" itemdamage="400" force="5.0" severlimbsprobability="0.4" debris="true" decal="explosion" decalsize="0.3">
             <Affliction identifier="burn" strength="100" />
             <Affliction identifier="bleeding" strength="400" probability="0.05" />
             <Affliction identifier="stun" strength="5" />
@@ -794,7 +795,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="40mmstungrenade" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="40mmstungrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
       <PreferredContainer primary="secarmcab" secondary="armcab" />
       <Price baseprice="120" sold="false">
@@ -836,7 +837,7 @@
     </Item>
   </Override>
 
-  <Item name="" identifier="40mmempgrenade" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="40mmempgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
     <PreferredContainer primary="secarmcab" secondary="armcab" />
     <Price baseprice="160" sold="false">
@@ -883,7 +884,7 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
 
-  <Item name="40mm Incendium Grenade" identifier="40mmincendiumgrenade" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="40mm Incendium Grenade" identifier="40mmincendiumgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.03" />
     <PreferredContainer primary="secarmcab" secondary="armcab" />
     <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="4" spawnprobability="0.1" />
@@ -992,7 +993,7 @@
       <SkillRequirementHint identifier="weapons" level="50" />
     </Item>
 
-    <Item name="" identifier="shotgunshell" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="shotgunshell" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="shotgun" amount="6" spawnprobability="1" />
       <PreferredContainer primary="autoshotgun" amount="8" spawnprobability="1" />
       <PreferredContainer primary="shotgununique" amount="2" spawnprobability="1" />
@@ -1010,8 +1011,9 @@
       </Price>
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="12">
         <RequiredSkill identifier="weapons" level="30" />
-        <RequiredItem identifier="magnesium" amount="2" />
-        <RequiredItem identifier="lead" amount="2" />
+        <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
+        <RequiredItem tag="munition_core" description="fabricationdescription.munition_core" />
+        <RequiredItem tag="shotgun_jacket" description="fabricationdescription.shotgun_jacket" />
         <RequiredItem identifier="plastic" />
       </Fabricate>
       <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,256,64,64" origin="0.5,0.5" />
@@ -1038,7 +1040,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="shotgunshellblunt" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="shotgunshellblunt" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="shotgun,autoshotgun,shotgununique" />
       <PreferredContainer primary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5" />
@@ -1100,7 +1102,7 @@
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,368,83,47" depth="0.55" origin="0.5,0.5" />
       <Body width="80" height="40" density="25" />
       <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="70,10" handle1="-5,-7" msg="ItemMsgPickUpSelect" />
-      <RangedWeapon barrelpos="14,6" spread="0" unskilledspread="2" combatPriority="100" drawhudwhenequipped="true" crosshairscale="0.2">
+      <RangedWeapon barrelpos="14,6" spread="0" unskilledspread="2" combatPriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
         <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
         <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
         <Sound file="Content/Items/Weapons/TaserShot1.ogg" type="OnUse" range="1000" selectionmode="Random" />
@@ -1123,7 +1125,7 @@
       <SkillRequirementHint identifier="weapons" level="20" />
     </Item>
 
-    <Item name="" identifier="stungundart" category="Weapon" maxstacksize="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="stungundart" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="armcab" minamount="1" maxamount="10" spawnprobability="0.25" notcampaign="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
       <PreferredContainer primary="stungun" amount="4" spawnprobability="1" />
@@ -1167,7 +1169,7 @@
     </Item>
 
 
-    <Item name="" identifier="spearunique" category="Weapon" maxstacksize="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true">
+    <Item name="" identifier="spearunique" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true">
       <PreferredContainer primary="harpoongun,armcab" secondary="secarmcab" />
       <PreferredContainer secondary="wrecksecarmcab,wreckarmcab,abandonedsecarmcab,abandonedarmcab" amount="6" spawnprobability="0.05" />
       <Price baseprice="550" sold="false" canbespecial="false" />
@@ -1200,7 +1202,7 @@
       </Projectile>
     </Item>
 
-    <Item name="" identifier="divingknifeunique" category="Weapon" Tags="smallitem,weapon,mountableweapon" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true" RequireAimToUse="True">
+    <Item name="" identifier="divingknifeunique" category="Weapon" Tags="smallitem,weapon,mountableweapon,sharptool" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true" RequireAimToUse="True">
       <PreferredContainer primary="secarmcab" secondary="armcab" />
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0.05" />
       <Price baseprice="770" sold="false" canbespecial="false" />
@@ -1211,7 +1213,7 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="448,320,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="186,183,63,16" depth="0.55" origin="0.5,0.5" />
       <Body width="65" height="15" density="25" />
-      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-10,0" holdangle="30" reload="0.75" range="50" combatPriority="25" msg="ItemMsgPickUpSelect">
+      <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-10,0" holdangle="30" reload="0.75" range="50" combatPriority="30" msg="ItemMsgPickUpSelect">
         <Attack targetimpulse="2" severlimbsprobability="0.1" itemdamage="3" structuredamage="2" structuresoundtype="StructureSlash">
           <Affliction identifier="lacerations" strength="10" />
           <Affliction identifier="bleeding" strength="10" />
@@ -1285,7 +1287,7 @@
 
     </Item>
 
-    <Item name="" identifier="riflebullet" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,rifleammo,riflemanbonus" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="riflebullet" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,rifleammo,riflemanbonus" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="rifle" amount="6" spawnprobability="1" />
       <PreferredContainer primary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5" />
@@ -1301,9 +1303,10 @@
       </Price>
       <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="12">
         <RequiredSkill identifier="weapons" level="30" />
-        <RequiredItem identifier="magnesium" />
-        <RequiredItem identifier="lead" />
-        <RequiredItem identifier="plastic" />
+        <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
+        <RequiredItem tag="munition_core" description="fabricationdescription.munition_core" />
+        <RequiredItem tag="munition_jacket" description="fabricationdescription.munition_jacket" />
+        <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
       </Fabricate>
       <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="496,128,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="233,163,23,9" depth="0.55" origin="0.5,0.5" />
@@ -1329,7 +1332,7 @@
     </Item>
   </Override>
 
-  <Item name="" identifier="leveractionrifle" aliases="" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="leveractionrifle" aliases="" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,pistolitem,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="secarmcab" amount="1" spawnprobability="1" notcampaign="true" />
     <PreferredContainer secondary="outpostsecarmcab" amount="1" spawnprobability="0.5" />
     <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" amount="1" spawnprobability="0.2" />
@@ -1409,7 +1412,7 @@
     <SkillRequirementHint identifier="weapons" level="30" />
   </Item>
 
-  <Item name="" identifier="3030round" aliases="" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,rifleammo" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="3030round" aliases="" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,rifleammo" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="leveractionrifle" amount="6" spawnprobability="1" />
     <PreferredContainer primary="armcab" minamount="12" maxamount="24" spawnprobability="1" notcampaign="true" />
     <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5" />
@@ -1428,9 +1431,9 @@
     </Price>
     <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="12">
       <RequiredSkill identifier="weapons" level="30" />
-      <RequiredItem identifier="magnesium" />
-      <RequiredItem identifier="lead" />
-      <RequiredItem identifier="copper" />
+      <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
+      <RequiredItem tag="munition_core" description="fabricationdescription.munition_core" />
+      <RequiredItem tag="munition_jacket" description="fabricationdescription.munition_jacket" />
     </Fabricate>
     <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,128,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,81,50,13" depth="0.55" origin="0.5,0.5" />

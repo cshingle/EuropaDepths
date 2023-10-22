@@ -27,7 +27,7 @@
         <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.9" setvalue="true" />
       </Holdable>
       <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
-        <sprite name="Autoshogun Worn" texture="Content/Items/JobGear/TalentGear.png" canbehiddenbyotherwearables="false" rotation="90" inheritlimbdepth="false" depth="0.6" sourcerect="308,1,152,61" limb="Torso" ignorelimbscale="true" scale="0.62" origin="0.5,0.9" />
+        <sprite name="Autoshogun Worn" texture="Content/Items/JobGear/TalentGear.png" canbehiddenbyotherwearables="false" rotation="90" depth="0.6" sourcerect="308,1,152,61" limb="Torso" depthlimb="LeftArm" ignorelimbscale="true" scale="0.62" origin="0.5,0.9" />
       </Wearable>
       <RangedWeapon barrelpos="68,10" weapondamagemodifier="0.9" spread="0.2" unskilledspread="3" combatPriority="80" reload="0.45" holdtrigger="true" drawhudwhenequipped="true" crosshairscale="0.2">
         <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
@@ -82,7 +82,7 @@
         <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.9" setvalue="true" />
       </Holdable>
       <Wearable slots="Bag" msg="ItemMsgEquipSelect" canbeselected="false" canbepicked="true" pickkey="Select">
-        <sprite name="Assault Rifle Worn" texture="Content/Items/JobGear/TalentGear.png" canbehiddenbyotherwearables="false" rotation="90" inheritlimbdepth="false" depth="0.6" sourcerect="276,63,233,62" limb="Torso" scale="0.5" origin="0.5,0.8" />
+        <sprite name="Assault Rifle Worn" texture="Content/Items/JobGear/TalentGear.png" canbehiddenbyotherwearables="false" rotation="90" depth="0.6" sourcerect="276,63,233,62" limb="Torso" depthlimb="LeftArm" scale="0.5" origin="0.5,0.8" />
       </Wearable>
       <RangedWeapon reload="0.24" holdtrigger="true" barrelpos="100,20" spread="4" unskilledspread="16" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2">
         <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
@@ -114,10 +114,10 @@
         <QualityStat stattype="FirepowerMultiplier" value="0.1" />
       </Quality>
     </Item>
-    <Item name="" identifier="assaultriflemagazine" maxstacksize="2" scale="0.5" category="Weapon" allowasextracargo="true" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,assaultrifleammo,riflemanbonus" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="assaultriflemagazine" maxstacksize="8" maxstacksizecharacterinventory="2" scale="0.5" category="Weapon" allowasextracargo="true" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,assaultrifleammo,riflemanbonus" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="assaultrifle" minamount="1" maxamount="1" spawnprobability="1"/>
       <PreferredContainer primary="armcab" secondary="secarmcab"/>
-      <Price baseprice="350" sold="false" minleveldifficulty="60" displaynonempty="true">
+      <Price baseprice="300" sold="false" minleveldifficulty="60" displaynonempty="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.4" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
         <Price storeidentifier="merchantresearch" multiplier="1.25" />
@@ -127,18 +127,19 @@
       <Fabricate suitablefabricators="fabricator" requiredtime="35" requiresrecipe="true">
         <RequiredSkill identifier="weapons" level="40" />
         <RequiredItem identifier="magnesium" />
-        <RequiredItem identifier="lead" />
+        <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
+        <RequiredItem tag="advmunition_core" description="fabricationdescription.advmunition_core" />
+        <RequiredItem tag="advmunition_jacket" description="fabricationdescription.advmunition_jacket" />
         <RequiredItem identifier="steel" />
       </Fabricate>
       <Fabricate suitablefabricators="fabricator" requiredtime="35" displayname="recycleitem" requiresrecipe="true">
         <RequiredSkill identifier="weapons" level="40" />
-        <RequiredItem identifier="magnesium" />
-        <RequiredItem identifier="lead" />
+        <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
+        <RequiredItem tag="advmunition_core" description="fabricationdescription.advmunition_core" />
+        <RequiredItem tag="advmunition_jacket" description="fabricationdescription.advmunition_jacket" />
         <RequiredItem identifier="assaultriflemagazine" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
       </Fabricate>
       <Deconstruct time="15">
-        <Item identifier="magnesium" mincondition="0.95" />
-        <Item identifier="lead" mincondition="0.95" />
         <Item identifier="steel" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="476,3,36,48" origin="0.5,0.5" />
@@ -176,7 +177,7 @@
       </Projectile>
     </Item>
   </Override>
-  <Item name="" identifier="shotgunslugshell" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="" identifier="shotgunslugshell" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="armcab" secondary="secarmcab"/>
     <Price baseprice="75" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -187,9 +188,9 @@
     </Price>
     <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="12">
       <RequiredSkill identifier="weapons" level="40" />
-      <RequiredItem identifier="plastic" />
-      <RequiredItem identifier="lead" />
-      <RequiredItem identifier="magnesium" />
+      <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
+      <RequiredItem tag="munition_core" description="fabricationdescription.munition_core" />
+      <RequiredItem tag="shotgun_jacket" description="fabricationdescription.shotgun_jacket" />
     </Fabricate>
     <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,64,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,124,60,18" depth="0.55" origin="0.5,0.5" />
@@ -216,7 +217,7 @@
     </Projectile>
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
-  <Item name="" identifier="depletedshotgunslugshell" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
+  <Item name="" identifier="depletedshotgunslugshell" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
     <PreferredContainer primary="armcab" secondary="secarmcab"/>
     <Price baseprice="75" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -227,8 +228,9 @@
     </Price>
     <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="12">
       <RequiredSkill identifier="weapons" level="40" />
-      <RequiredItem identifier="plastic" />
+      <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
       <RequiredItem identifier="depletedfuel" />
+      <RequiredItem tag="shotgun_jacket" description="fabricationdescription.shotgun_jacket" />
     </Fabricate>
     <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="432,64,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,124,60,18" depth="0.55" origin="0.5,0.5" />
@@ -260,7 +262,7 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
   <Override>
-    <Item name="" identifier="shotgunslugexplosive" category="Weapon" maxstacksize="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="shotgunslugexplosive" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="armcab" secondary="secarmcab"/>
       <Price baseprice="75" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -271,8 +273,9 @@
       </Price>
       <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="12">
         <RequiredSkill identifier="weapons" level="40" />
-        <RequiredItem identifier="plastic" />
+        <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
         <RequiredItem identifier="incendium" />
+        <RequiredItem tag="shotgun_jacket" description="fabricationdescription.shotgun_jacket" />
       </Fabricate>
       <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="496,64,64,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,144,60,18" depth="0.55" origin="0.5,0.5" />
@@ -329,7 +332,7 @@
       <ItemContainer capacity="1" maxstacksize="1" slotsperrow="1" canbeselected="true">
         <SlotIcon slotindex="0" texture="%ModDir%/sprites/items.png" sourcerect="640,0,64,64" origin="0.5,0.5" />
         <Containable items="mountableweapon,weapon" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
-        <SubContainer hideitems="true" capacity="4" maxstacksize="64">
+        <SubContainer hideitems="true" capacity="4" maxstacksize="8">
           <Containable items="smallitem" />
         </SubContainer>
       </ItemContainer>
@@ -394,6 +397,10 @@
       </Fabricate>
       <WifiComponent range="75000.0" LinkToChat="true" target="Character" MinChatMessageInterval="0.0" comparison="And">
         <RequiredItems items="mobilebattery" type="Contained" mincondition="0.01" targetslot="1"/>
+        <StatusEffect type="OnActive" targettype="This">
+          <Conditional JamTimer="gt 0" targetitemcomponent="WifiComponent" />
+          <sound file="Content/Sounds/RadioStatic.ogg" range="500.0" frequencymultiplier="0.7" loop="true" volume="0.5" />
+        </StatusEffect>
       </WifiComponent>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="256,704,128,128" origin="0.5,0.5" />
       <Sprite name="Slipsuit Item" texture="Content/Items/Jobgear/Security/Slipsuit_Items.png" sourcerect="7,8,157,121" depth="0.55" origin="0.5,0.5" />
@@ -410,10 +417,10 @@
         <sprite name="SlipSuit Torso" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
         <sprite name="SlipSuit Right Hand" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
         <sprite name="SlipSuit Left Hand" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-        <sprite name="SlipSuit Right Lower Arm" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-        <sprite name="SlipSuit Left Lower Arm" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-        <sprite name="SlipSuit Right Upper Arm" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-        <sprite name="SlipSuit Left Upper Arm" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="SlipSuit Right Upper Arm" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="RightArm" depthlimb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="SlipSuit Left Upper Arm" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="SlipSuit Right Lower Arm" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="RightForearm" depthlimb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+        <sprite name="SlipSuit Left Lower Arm" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
         <sprite name="SlipSuit Waist" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
         <sprite name="SlipSuit Right Thigh" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
         <sprite name="SlipSuit Left Thigh" texture="Content/Items/Jobgear/Security/slipsuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
@@ -512,7 +519,7 @@
       </ItemContainer>
       <aitarget maxsightrange="1500" />
     </Item>
-    <Item name="" identifier="stungundartfulgurium" category="Weapon" maxstacksize="8" interactthroughwalls="true" allowasextracargo="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="stungundartfulgurium" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" allowasextracargo="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="armcab" secondary="secarmcab"/>
       <Price baseprice="40" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.4" />

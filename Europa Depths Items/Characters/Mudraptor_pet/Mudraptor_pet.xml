@@ -3,7 +3,7 @@
   <Charactervariant inherit="Mudraptor" speciesname="Mudraptor_pet" speciestranslationoverride="Mudraptor_pet" texture="Content/Characters/Variants/Mudraptor_pet/Mudraptorpet.png" eatingspeed="5" group="human">
     <health vitality="100" usehealthwindow="False"/>
     <animations folder="Content/Characters/Variants/Mudraptor_pet/Animations/"/>
-    <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="True">
+    <Inventory slots="Any, Any, Any, Any" accessiblewhenalive="True" >
       <Item identifier="smallmudraptoregg" />
     </Inventory>
     <ai combatstrength="105" sight="1" hearing="1" fleehealththreshold="0" aggressiveboarding="True" aggressiongreed="20" aggressionhurt="300" attackwhenprovoked="True" avoidgunfire="False" enforceaggressivebehaviorformissions="False" targetouterwalls="True" randomattack="True">
@@ -28,7 +28,7 @@
       <target tag="nasonov" state="Idle" priority="1" />
       <target tag="provocative" state="Idle" priority="1" />
       <target tag="tool" state="Idle" priority="1" />
-      <petbehavior maxhappiness="100" happinessdecreaserate="0.016" hungerincreaserate="0.03" playforce="6.0">
+      <petbehavior maxhappiness="100" unhappythreshold="50" happythreshold="80" happinessdecreaserate="0.035"  hungerincreaserate="0.03" playforce="6.0">
         <eat tag="monsterfood" ignorecontained="true" requiredhunger="10-100" hunger="-50" happiness="5" priority="80" />
         <eat tag="dead" requiredhunger="10-100" hunger="-100" happiness="10" priority="80" />
         <itemproduction rate="0.0015" invhungerrate="0.002" requiredhunger="0-30">

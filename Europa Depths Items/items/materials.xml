@@ -2,7 +2,7 @@
 <Items>
   <Override>
     <!-- Elements ************************************************************************************************ -->
-    <Item name="" identifier="carbon" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="carbon" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="carbonstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="10" sold="false">
@@ -13,7 +13,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="20" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="5,55,46,38" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="5,55,46,38" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="30" density="20" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -23,7 +23,7 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="iron" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="iron" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,munition_jacket,shotgun_jacket,petfood3,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="ironstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="8" sold="false">
@@ -34,7 +34,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="20" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="512,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="5,92,46,38" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="5,92,46,38" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="30" density="30" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -62,7 +62,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="" identifier="tin" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="tin" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,petfood3,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="tinstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="11" sold="false">
@@ -73,7 +73,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="20" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="832,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="150,92,47,38" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="150,92,47,38" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="30" density="30" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -84,7 +84,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="" identifier="lead" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="lead" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,petfood3,munition_core,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="leadstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="18" sold="true" minavailable="3">
@@ -95,7 +95,7 @@
         <Price storeidentifier="merchantmine" multiplier="0.8" minavailable="20" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="768,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="101,92,47,38" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="101,92,47,38" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="30" density="40" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -106,7 +106,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="" identifier="phosphorus" category="Material" maxstacksize="8" Tags="smallitem,chem" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="phosphorus" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,munition_propulsion,chem" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="chemcab,storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="25" sold="false">
@@ -117,7 +117,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="10" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="153,6,23,44" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="153,6,23,44" depth="0.55" origin="0.5,0.5" />
       <Body width="22" height="42" density="20" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -127,8 +127,8 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="copper" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="carboncopper,materialcab" secondary="storagecab" />
+    <Item name="" identifier="copper" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,petfood3,munition_core,munition_jacket,shotgun_jacket,advmunition_jacket,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="copperstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="22" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -138,7 +138,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="10" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="53,92,48,38" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="53,92,48,38" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="30" density="30" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -149,7 +149,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="" identifier="zinc" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="zinc" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,munition_jacket,shotgun_jacket,advmunition_jacket,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="zincstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="26" sold="false">
@@ -160,7 +160,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="10" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="102,55,46,37" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="102,55,46,37" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="30" density="15" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -170,9 +170,9 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="sodium" category="Material" maxstacksize="8" Tags="smallitem,chem,explodesinwater" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="sodium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,chem,explodesinwater" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="chemcab,medfabcab" />
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
+      <PreferredContainer secondary="abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="33" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -181,15 +181,17 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="10" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="29,7,23,44" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="29,7,23,44" depth="0.55" origin="0.5,0.5" />
       <Body width="22" height="42" density="20" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
       <LightComponent LightColor="255,127,39,255" Flicker="1.0" range="100" IsOn="false">
-        <StatusEffect type="NotInWater" target="This" IsOn="false" />
+        <StatusEffect type="OnActive" target="This" IsOn="false">
+          <Conditional target="This" InWater="false" />
+        </StatusEffect>
         <StatusEffect type="InWater" target="This" IsOn="true">
-          <ParticleEmitter particle="weldspark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="weldspark" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
           <ParticleEmitter particle="swirlysmoke" particlespersecond="2" scalemin="0.5" scalemax="1" />
-          <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="360" velocitymin="-10" velocitymax="10" />
+          <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="360" velocitymin="-10" velocitymax="10" />
           <sound file="Content/Items/Tools/FlareLoop.ogg" type="OnActive" range="500.0" loop="true" />
         </StatusEffect>
         <StatusEffect type="InWater" target="This" delay="3.0" setvalue="true" condition="0" stackable="false" checkconditionalalways="true">
@@ -210,7 +212,7 @@
       </LightComponent>
     </Item>
 
-    <Item name="" identifier="silicon" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="silicon" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="siliconstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="17" sold="false">
@@ -221,7 +223,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="10" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,128,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="196,54,46,38" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="196,54,46,38" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="30" density="15" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -242,7 +244,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="10" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="256,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="129,6,23,44" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="129,6,23,44" depth="0.55" origin="0.5,0.5" />
       <Body width="22" height="42" density="15" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -252,7 +254,7 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="aluminium" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="aluminium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="aluminiumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="42" sold="false">
@@ -263,7 +265,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="10" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="53,53,47,39" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="53,53,47,39" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="30" density="30" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -274,7 +276,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="" identifier="uranium" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="uranium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,advmunition_core,material" canbepicked="true" description="" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="uraniumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="50" sold="false">
@@ -285,7 +287,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="5" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="898,192,61,63" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="4,130,49,41" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="4,130,49,41" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="32" density="40" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -295,7 +297,7 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="potassium" category="Material" maxstacksize="8" Tags="smallitem,chem,explodesinwater" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="potassium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,chem,explodesinwater" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="chemcab,storagecab" />
       <Price baseprice="10" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -305,15 +307,17 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="20" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="77,6,23,44" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="77,6,23,44" depth="0.55" origin="0.5,0.5" />
       <Body width="22" height="42" density="15" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
       <LightComponent LightColor="255,127,39,255" Flicker="1.0" range="100" IsOn="false">
-        <StatusEffect type="NotInWater" target="This" IsOn="false" />
+        <StatusEffect type="OnActive" target="This" IsOn="false">
+          <Conditional target="This" InWater="false" />
+        </StatusEffect>
         <StatusEffect type="InWater" target="This" IsOn="true">
-          <ParticleEmitter particle="weldspark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" />
+          <ParticleEmitter particle="weldspark" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
           <ParticleEmitter particle="swirlysmoke" particlespersecond="2" scalemin="0.5" scalemax="1" />
-          <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="360" velocitymin="-10" velocitymax="10" />
+          <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="360" velocitymin="-10" velocitymax="10" />
           <sound file="Content/Items/Tools/FlareLoop.ogg" type="OnActive" range="500.0" loop="true" />
         </StatusEffect>
         <StatusEffect type="InWater" target="This" delay="3.0" setvalue="true" condition="0" stackable="false" checkconditionalalways="true">
@@ -334,7 +338,7 @@
       </LightComponent>
     </Item>
 
-    <Item name="" identifier="titanium" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="titanium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,petfood3,advmunition_core,advmunition_tip,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="titaniumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.02" />
       <Price baseprice="65" sold="false" minleveldifficulty="15">
@@ -345,7 +349,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="3" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="150,55,46,37" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="150,55,46,37" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="30" density="30" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -356,8 +360,8 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="" identifier="magnesium" category="Material" maxstacksize="8" Tags="smallitem,chem" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab,storagecab" />
+    <Item name="" identifier="magnesium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,chem,munition_propulsion" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="chemcab" secondary="materialcab,storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.10"/>
       <Price baseprice="65">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="4"/>
@@ -367,7 +371,7 @@
         <Price storeidentifier="merchantmine" multiplier="0.8" minavailable="10"/>
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="102,6,23,44" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="102,6,23,44" depth="0.55" origin="0.5,0.5" />
       <Body width="22" height="42" density="15" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used (not used by the vanilla game) -->
@@ -377,9 +381,9 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="lithium" category="Material" maxstacksize="8" Tags="smallitem,chem,explodesinwater" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab,storagecab" />
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
+    <Item name="" identifier="lithium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,chem,explodesinwater" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="chemcab" secondary="materialcab,storagecab" />
+      <PreferredContainer secondary="abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="88" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -388,16 +392,18 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="5" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="3,7,24,44" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="3,7,24,44" depth="0.55" origin="0.5,0.5" />
       <Body width="27" height="47" density="15" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
       <LightComponent LightColor="255,0,0,255" Flicker="1.0" range="100" IsOn="false">
-        <StatusEffect type="NotInWater" target="This" IsOn="false" />
+      <StatusEffect type="OnActive" target="This" IsOn="false">
+        <Conditional target="This" InWater="false" />
+      </StatusEffect>
         <StatusEffect type="InWater" target="This" IsOn="true">
-          <ParticleEmitter particle="weldspark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" />
+        <ParticleEmitter particle="weldspark" particlespersecond="5" anglemin="0" anglemax="360" velocitymin="100" velocitymax="500" scalemin="0.5" scalemax="1" />
           <ParticleEmitter particle="swirlysmoke" particlespersecond="2" scalemin="0.5" scalemax="1" />
-          <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="360" velocitymin="-10" velocitymax="10" />
-          <sound file="Content/Items/Tools/FlareLoop.ogg" type="OnActive" range="800.0" loop="true" />
+        <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="360" velocitymin="-10" velocitymax="10" />
+        <sound file="Content/Items/Tools/FlareLoop.ogg" type="OnActive" range="500.0" loop="true" />
         </StatusEffect>
         <StatusEffect type="InWater" target="This" delay="3.0" setvalue="true" condition="0" stackable="false" checkconditionalalways="true">
           <!-- check the item is still in water after the delay has run out-->
@@ -417,8 +423,8 @@
       </LightComponent>
     </Item>
 
-    <Item name="" identifier="chlorine" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab,storagecab" />
+    <Item name="" identifier="chlorine" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="chemcab" secondary="materialcab,storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="11" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -428,7 +434,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="20" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,256,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="55,7,22,44" depth="0.6" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="55,7,22,44" depth="0.6" origin="0.5,0.5" />
       <Body width="22" height="42" density="20" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -438,7 +444,7 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="thorium" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="thorium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="thoriumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.02" />
       <Price baseprice="125" sold="false" minleveldifficulty="15">
@@ -449,7 +455,7 @@
         <Price storeidentifier="merchantmine" sold="true" multiplier="0.8" minavailable="5" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,192,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="54,131,46,39" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="54,131,46,39" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="30" density="30" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -460,7 +466,7 @@
     </Item>
 
     <!-- Compounds ************************************************************************************************ -->
-    <Item name="" identifier="steel" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.4" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="steel" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,petfood3,munition_core,advmunition_core,advmunition_tip,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.4" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="steelstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="28">
@@ -470,18 +476,18 @@
         <Price storeidentifier="merchantmilitary" multiplier="0.9" minavailable="15" />
         <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="20" />
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="5">
+      <Fabricate suitablefabricators="fabricator" requiredtime="8">
         <RequiredSkill identifier="mechanical" level="20" />
         <RequiredItem identifier="carbon" />
         <RequiredItem identifier="iron" amount="2" />
       </Fabricate>
-      <Deconstruct time="5">
+      <Deconstruct time="8">
         <Item identifier="iron" mincondition="0.5"/>
         <Item identifier="iron" mincondition="0.95"/>
         <Item identifier="carbon" mincondition="0.95"/>
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,128,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="4,171,54,27" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="4,171,54,27" depth="0.55" origin="0.5,0.5" />
       <Body width="50" height="25" density="30" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -509,7 +515,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="" identifier="titaniumaluminiumalloy" category="Material" maxstacksize="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.4" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="titaniumaluminiumalloy" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,petfood3,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.4" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="titaniumaluminiumalloystorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.02" />
       <Price baseprice="150" minleveldifficulty="15">
@@ -530,7 +536,7 @@
         <Item identifier="titanium" copycondition="true" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,768,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="62,203,55,27" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="62,203,55,27" depth="0.55" origin="0.5,0.5" />
       <Body width="50" height="25" density="30" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -541,7 +547,7 @@
       <AiTarget sightrange="1000" static="true" />
     </Item>
 
-    <Item name="" identifier="plastic" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.4" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="plastic" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material,shotgun_jacket" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.4" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="plasticstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="45">
@@ -562,7 +568,7 @@
         <Item identifier="carbon" copycondition="true"/>
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,128,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="202,100,43,30" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="202,100,43,30" depth="0.55" origin="0.5,0.5" />
       <Body width="40" height="27" density="12" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -572,7 +578,7 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="ballisticfiber" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_soft">
+    <Item name="" identifier="ballisticfiber" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="ballisticfiberstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" amount="1" spawnprobability="0.05" />
       <Price baseprice="160" minleveldifficulty="15">
@@ -593,7 +599,7 @@
         <Item identifier="plastic" mincondition="0.95" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="706,770,62,61" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="221,0,35,53" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="221,0,35,53" depth="0.55" origin="0.5,0.5" />
       <Body width="35" height="55" density="12" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -603,7 +609,7 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="organicfiber" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_soft">
+    <Item name="" identifier="organicfiber" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="organicfiberstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="30">
@@ -614,7 +620,7 @@
         <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="2" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,768,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="178,8,42,45" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="178,8,42,45" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="45" density="12" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0">
         <!-- Remove the item when fully used -->
@@ -624,7 +630,7 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="rubber" category="Material" maxstacksize="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_soft">
+    <Item name="" identifier="rubber" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,material" canbepicked="true" cargocontaineridentifier="materialcrate" scale="0.5" impactsoundtag="impact_soft">
       <PreferredContainer primary="rubberstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.1" />
       <Price baseprice="20">
@@ -635,8 +641,8 @@
         <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="6" />
       </Price>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,770,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="133,221,35,32" depth="0.55" origin="0.5,0.5" />
-      <Body width="5" radius="15" density="8" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="133,221,35,32" depth="0.55" origin="0.5,0.5" />
+      <Body width="5" radius="15" density="9" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
         <StatusEffect type="OnBroken" target="This">
@@ -645,8 +651,8 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="flashpowder" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,explosive" impacttolerance="8" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab,storagecab" />
+    <Item name="" identifier="flashpowder" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,explosive" impacttolerance="8" useinhealthinterface="true" scale="0.4" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="chemcab" secondary="materialcab,storagecab" />
       <PreferredContainer secondary="wreckstorage,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="90">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.3" />
@@ -665,9 +671,9 @@
         <Item identifier="potassium" mincondition="0.95" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,256,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" depth="0.55" sourcerect="127,134,23,42" origin="0.5,0.5" />
-      <Body width="23" height="43" density="20" />
-      <Throwable characterusable="false" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <Sprite texture="Content/Items/Materials/minerals.png" depth="0.55" sourcerect="127,134,23,42" origin="0.5,0.5" />
+      <Body width="23" height="43" density="15" />
+      <Throwable characterusable="false" canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true" />
         <StatusEffect type="OnFire" target="this" Condition="-50" />
         <StatusEffect type="OnUse" target="This" Condition="0.0" setvalue="true" />
@@ -685,7 +691,7 @@
       </Throwable>
     </Item>
 
-    <Item name="" identifier="scrap" sonarsize="2" category="Material" maxstacksize="8" Tags="smallitem" canbepicked="true" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" aliases="scrap1,scrap2,scrap3,scrap4,scrap5,scrap6,scrap7,scrap8">
+    <Item name="" identifier="scrap" sonarsize="2" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem" canbepicked="true" description="" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" aliases="scrap1,scrap2,scrap3,scrap4,scrap5,scrap6,scrap7,scrap8">
       <PreferredContainer primary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,wreckreactorcab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.5" />
       <Price baseprice="5" sold="false" />
@@ -701,7 +707,7 @@
         <Item identifier="lead" commonness="0.7" />
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas2.png" sourcerect="448,384,64,64" />
-      <Sprite texture="Content/Items/Materials/CraftingElements1.png" sourcerect="175,220,50,33" depth="0.55" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/Materials/minerals.png" sourcerect="175,220,50,33" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="20" density="25" />
       <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
         <!-- Remove the item when fully used -->
@@ -732,8 +738,8 @@
 
     <!-- ALIEN MATERIALS -->
 
-    <Item name="" identifier="incendium" category="Material,Alien" Tags="smallitem,ore" maxstacksize="8" cargocontaineridentifier="materialcrate" canbepicked="true" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+    <Item name="" identifier="incendium" category="Material,Alien" Tags="smallitem,ore" maxstacksize="32" maxstacksizecharacterinventory="12" cargocontaineridentifier="materialcrate" canbepicked="true" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab" amount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="ruinstorage,ruinstoragesmall" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstoragelarge" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -777,8 +783,8 @@
       </LevelResource>
     </Item>
 
-    <Item name="" identifier="fulgurium" category="Material,Alien" Tags="smallitem,ore" maxstacksize="8" cargocontaineridentifier="materialcrate" canbepicked="true" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab,storagecab" />
+    <Item name="" identifier="fulgurium" category="Material,Alien" Tags="smallitem,ore" maxstacksize="32" maxstacksizecharacterinventory="12" cargocontaineridentifier="materialcrate" canbepicked="true" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab" amount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="ruinstorage,ruinstoragesmall" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstoragelarge" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -809,8 +815,8 @@
         <RequiredItem items="cuttingequipment" type="Equipped" />
       </LevelResource>
     </Item>
-    <Item name="" identifier="physicorium" category="Material,Alien" Tags="smallitem,ore" maxstacksize="8" scale="0.5" cargocontaineridentifier="materialcrate" canbepicked="true">
-      <PreferredContainer primary="materialcab,storagecab" />
+    <Item name="" identifier="physicorium" category="Material,Alien" Tags="smallitem,ore" maxstacksize="32" maxstacksizecharacterinventory="12" scale="0.5" cargocontaineridentifier="materialcrate" canbepicked="true">
+      <PreferredContainer primary="materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab" amount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="ruinstorage,ruinstoragesmall" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstoragelarge" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -842,8 +848,8 @@
       </LevelResource>
     </Item>
 
-    <Item name="" identifier="dementonite" category="Material,Alien" Tags="smallitem,ore" maxstacksize="8" scale="0.5" cargocontaineridentifier="materialcrate" canbepicked="true">
-      <PreferredContainer primary="materialcab,storagecab" />
+    <Item name="" identifier="dementonite" category="Material,Alien" Tags="smallitem,ore" maxstacksize="32" maxstacksizecharacterinventory="12" scale="0.5" cargocontaineridentifier="materialcrate" canbepicked="true">
+      <PreferredContainer primary="materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab" amount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="ruinstorage,ruinstoragesmall" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstoragelarge" minamount="1" maxamount="2" spawnprobability="0.1" />

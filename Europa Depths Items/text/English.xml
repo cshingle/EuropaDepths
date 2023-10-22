@@ -90,4 +90,7 @@
   <talentdescription.waterprankster>Clown Power gives you immunity to pressure and allows you to swim [swimspeedvalue]% faster.</talentdescription.waterprankster>
   <upgradedescription.increasesupercapacitorefficiency>Supercapacitors will waste less Electricity.</upgradedescription.increasesupercapacitorefficiency>
   <upgradename.increasesupercapacitorefficiency>Upgrade Supercapacitor Efficiency</upgradename.increasesupercapacitorefficiency>
+  <fabricationdescription.shotgun_jacket>Munition jacket material. Softer metals or plastic.</fabricationdescription.shotgun_jacket>
+  <entityname.depthchargemine>Mine Shell</entityname.depthchargemine>
+  <entitydescription.depthchargemine>A barrel of explosives. Will float and then explode.</entitydescription.depthchargemine>
 </infotexts>

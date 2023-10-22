@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Afflictions>
     <Affliction name="Cowboy" identifier="cowboy" type="resistance" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
-        <Effect minstrength="0" maxstrength="1" resistancefor="stun" minresistance="0.33" maxresistance="0.33">
-            <StatValue stattype="RangedAttackSpeed" value="0.25" />
+        <Effect minstrength="0" maxstrength="1" resistancefor="stun" minresistance="0.5" maxresistance="0.5">
+            <StatValue stattype="RangedAttackSpeed" value="0.33" />
         </Effect>
         <Icon texture="Content/UI/TalentsIcons4.png" sheetindex="3,1" sheetelementsize="128,128" color="10,193,114,255" origin="0,0"/>
     </Affliction>
@@ -33,16 +33,6 @@
             </StatusEffect>
         </Effect>
         <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,896,128,128" color="255,165,0,255" origin="0,0"/>
-    </Affliction>
-
-    <Affliction name="Mother's Embrace" identifier="mothersembrace" description="Mother's Embrace" type="resistance" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
-        <Effect minstrength="0" maxstrength="1" resistancefor="bleeding,bloodloss" minresistance="0.5" maxresistance="0.5">
-            <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
-                <reduceaffliction type="bleeding" strength="0.4" />
-                <reduceaffliction type="bloodloss" strength="0.2" />
-            </StatusEffect>
-        </Effect>
-        <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,7" sheetelementsize="128,128" color="255,165,0,255" origin="0,0"/>
     </Affliction>
 
     <Affliction name="Sepsis" identifier="bloodpoisoning" description="Sepsis is a serious condition in which the body responds improperly to an infection." type="poison" causeofdeathdescription="Died of Sepsis." selfcauseofdeathdescription="You have died of Sepsis." limbspecific="false" indicatorlimb="Torso" showiconthreshold="75" showinhealthscannerthreshold="25" treatmentthreshold="100" karmachangeonapplied="0" maxstrength="100" affectmachines="false" healcostmultiplier="0" basehealcost="25" MedicalSkillGain="1.5">
@@ -83,6 +73,16 @@
             </StatusEffect>
         </PeriodicEffect>
         <icon texture="%ModDir%/sprites/icons.png" sourcerect="0,0,128,128" color="101,100,50,255" origin="0,0"/>
+    </Affliction>
+
+    <Affliction name="Mother's Embrace" identifier="mothersembrace" description="Mother's Embrace" type="resistance" isbuff="true" limbspecific="false" hideiconafterdelay="true" maxstrength="1" duration="1" iconcolors="33,75,78;126,211,224;126,211,224;227,247,249">
+        <Effect minstrength="0" maxstrength="1" resistancefor="bleeding,bloodloss" minresistance="0.5" maxresistance="0.5">
+            <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
+                <reduceaffliction type="bleeding" strength="0.4" />
+                <reduceaffliction type="bloodloss" strength="0.2" />
+            </StatusEffect>
+        </Effect>
+        <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,7" sheetelementsize="128,128" color="255,165,0,255" origin="0,0"/>
     </Affliction>
 
     <Override>

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <Override>
-    <Item name="" identifier="pressurestabilizer" category="Medical" maxstacksize="8" Tags="smallitem,chem,medical,syringe" allowasextracargo="true" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+
+    <Item name="" identifier="pressurestabilizer" category="Medical" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,chem,medical,syringe" allowasextracargo="true" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="medcab"/>
       <Price baseprice="200" sold="false">
         <Price storeidentifier="merchantoutpost" />
@@ -20,7 +21,7 @@
       </Deconstruct>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,640,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="3,308,37,69" depth="0.6" origin="0.5,0.5" />
-      <Body width="35" height="65" density="10.2" />
+      <Body width="35" height="65" density="10.2" waterdragcoefficient="1"/>
       <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
         <RequiredSkill identifier="medical" level="35" />
         <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
@@ -47,6 +48,44 @@
         </StatusEffect>
       </MeleeWeapon>
       <Projectile characterusable="false" launchimpulse="18.0" sticktocharacters="true" launchrotation="-90" inheritstatuseffectsfrom="MeleeWeapon" inheritrequiredskillsfrom="MeleeWeapon"/>
+      <SkillRequirementHint identifier="medical" level="35" />
     </Item>
+
+    <Item name="" identifier="autoinjectorheadset" scale="0.4" category="Equipment,Medical" tags="smallitem,geneticdevice" description="" cargocontaineridentifier="metalcrate" inventoryiconcolor="160,160,255,255" colormultiplier="160,160,255,255" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="medcab" secondary="medcab"/>
+      <PreferredContainer secondary="abandonedmedcab,wreckmedcab,outpostmedcab,researchcontainer" spawnprobability="0.02"/>
+      <Price baseprice="150" minleveldifficulty="15">
+        <Price storeidentifier="merchantresearch" />
+        <Price storeidentifier="merchantcity" sold="false"/>
+        <Price storeidentifier="merchantmedical" />
+        <Price storeidentifier="merchanthusk" minavailable="0" maxavailable="50">
+          <Reputation faction="huskcult" min="70"/>
+        </Price>
+      </Price>
+      <Deconstruct time="10">
+        <Item identifier="plastic" amount="2" />
+        <Item identifier="copper" amount="2" />
+        <Item identifier="rubber" />
+        <Item identifier="silicon" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true">
+        <RequiredSkill identifier="medical" level="50" />
+        <RequiredItem identifier="plastic" />
+        <RequiredItem identifier="fpgacircuit" amount="2" />
+        <RequiredItem identifier="rubber" amount="2" />
+        <RequiredItem identifier="silicon" amount="2" />
+      </Fabricate>
+      <InventoryIcon texture="Content/Items/Genetic/Genetic.png" sourcerect="244,62,76,65" origin="0.5,0.5" />
+      <Sprite name="Headset" texture="Content/Items/Genetic/Genetic.png" depth="0.6" sourcerect="67,85,73,35" origin="0.5,0.5" />
+      <Body radius="15" width="45" density="25" />
+      <ItemContainer capacity="1" maxstacksize="1" autoinject="true" autoinjectthreshold="0.25" allowswappingcontaineditems="false">
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="384,448,64,64" origin="0.5,0.5" />
+        <Containable items="chem,syringe" />
+      </ItemContainer>
+      <Wearable limbtype="Head" slots="Any,HealthInterface" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
+        <sprite name="Gene Splicer Wearable" texture="Content/Items/Genetic/Genetic.png" limb="Head" hidelimb="false" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.5" hideotherwearables="false" sourcerect="258,131,64,54" origin="0.6,0.0" />
+      </Wearable>
+    </Item>
+
   </Override>
 </Items>

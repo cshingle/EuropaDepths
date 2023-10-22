@@ -25,7 +25,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="aluminium,bulkaluminium" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -56,7 +56,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="organicfiber,bulkorganicfiber" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -87,7 +87,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="carbon,bulkcarbon" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -118,7 +118,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="copper,bulkcopper" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -149,7 +149,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="iron,bulkiron" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -180,7 +180,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="lead,bulklead" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -211,7 +211,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="plastic,bulkplastic" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -242,7 +242,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="rubber,bulkrubber" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -273,7 +273,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="silicon,bulksilicon" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -304,7 +304,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="steel,bulksteel" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -335,7 +335,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="thorium,bulkthorium" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -366,7 +366,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="tin,bulktin" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -397,7 +397,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="titanium,bulktitanium" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -428,7 +428,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="titaniumaluminiumalloy,bulktitaniumaluminiumalloy" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -459,7 +459,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="uranium,bulkuranium" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -490,7 +490,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="zinc,bulkzinc" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -521,7 +521,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="12" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="ballisticfiber,bulkballisticfiber" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
