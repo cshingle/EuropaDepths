@@ -54,15 +54,23 @@
     <Item name="" identifier="nuclearlaserloader" tags="nuclearlaserequipment,nuclearlaserammosource,turretammosource" category="Machine,Weapon" linkable="true" allowedlinks="pulselaser" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2">
         <SwappableItem canbebought="false" origin="82,358" spawnwithid="nuclearlaserammobox"/>
         <Sprite name="Pulse Laser Loader Front" texture="Content/Items/Weapons/Loaders.png" depth="0.785" sourcerect="529,5,165,358" origin="0.5,0.5"/>
+        <BrokenSprite texture="Content/Items/Weapons/Loaders.png" sourcerect="163,563,153,351" origin="0.5,0.5" offset="5,6" depth="0.77" fadein="true" maxcondition="99"/>
         <DecorativeSprite name="Pulse Laser Loader Frame Back" texture="Content/Items/Weapons/Loaders.png" depth="0.8" sourcerect="31,569,117,200" origin="0.5,0.5" offset="0,-68"/>
+        <LightComponent range="150.0" lightcolor="255,100,100,255" pulsefrequency="12" pulseamount="0.8" powerconsumption="0" IsOn="false" castshadows="true" allowingameediting="false">
+            <sprite texture="Content/Items/Weapons/Loaders.png" sourcerect="0,791,165,358" depth="0.1" origin="0.5,0.5" alpha="1.0" />
+            <StatusEffect type="OnUse" target="This,Contained" IsOn="True">
+                <Conditional condition="gt 0.0" TargetContainedItem="true" />
+            </StatusEffect>
+            <StatusEffect type="OnActive" target="This" stackable="false" delay="0.25" IsOn="false"/>
+        </LightComponent>
         <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="10" mindeteriorationdelay="60" maxdeteriorationdelay="300" MinDeteriorationCondition="0" RepairThreshold="50" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
             <StatusEffect type="InWater" target="This" condition="-0.25"/>
             <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI"/>
             <RequiredSkill identifier="mechanical" level="55"/>
             <RequiredItem items="wrench" type="Equipped"/>
-            <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0"/>
-            <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0"/>
-            <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0"/>
+            <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+            <ParticleEmitter particle="smoke" particlespersecond="2" scalemin="1" scalemax="2.5" anglemax="360" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+            <ParticleEmitter particle="heavysmoke" particlespersecond="2" scalemin="1.0" scalemax="2.5" anglemax="360" distancemax="60" mincondition="0.0" maxcondition="15.0" />
             <StatusEffect type="OnFailure" target="UseTarget, This" targetlimbs="LeftHand,RightHand">
                 <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000"/>
                 <Affliction identifier="lacerations" strength="5"/>
@@ -83,6 +91,30 @@
             <RequiredItem items="screwdriver" type="Equipped"/>
             <output name="condition_out" displayname="connection.conditionout"/>
         </ConnectionPanel>
+        <LightComponent lightcolor="219,0,36,150" castshadows="false" range="0.0" IsOn="true" powerconsumption="0" alphablend="true" allowingameediting="false">
+            <sprite texture="Content/Items/Weapons/Loaders.png" sourcerect="348,921,25,27" origin="1.685,-4.79" alpha="1.0" />
+            <IsActiveConditional targetcontaineditem="true" conditionpercentage="gt 0"/>
+        </LightComponent>
+        <LightComponent lightcolor="255,170,1,150" castshadows="false" range="0.0" IsOn="true" powerconsumption="0" alphablend="true" allowingameediting="false">
+            <sprite texture="Content/Items/Weapons/Loaders.png" sourcerect="348,921,25,27" origin="1.135,-4.79" alpha="1.0" />
+            <IsActiveConditional targetcontaineditem="true" conditionpercentage="gt 20"/>
+        </LightComponent>
+        <LightComponent lightcolor="246,210,2,150" castshadows="false" range="0.0" IsOn="true" powerconsumption="0" alphablend="true" allowingameediting="false">
+            <sprite texture="Content/Items/Weapons/Loaders.png" sourcerect="348,921,25,27" origin="0.585,-4.79" alpha="1.0" />
+            <IsActiveConditional targetcontaineditem="true" conditionpercentage="gt 40"/>
+        </LightComponent>
+        <LightComponent lightcolor="252,230,150" castshadows="false" range="0.0" IsOn="true" powerconsumption="0" alphablend="true" allowingameediting="false">
+            <sprite texture="Content/Items/Weapons/Loaders.png" sourcerect="348,921,25,27" origin="0.035,-4.79" alpha="1.0" />
+            <IsActiveConditional targetcontaineditem="true" conditionpercentage="gt 60"/>
+        </LightComponent>
+        <LightComponent lightcolor="185,214,0,150" castshadows="false" range="0.0" IsOn="true" powerconsumption="0" alphablend="true" allowingameediting="false">
+            <sprite texture="Content/Items/Weapons/Loaders.png" sourcerect="348,921,25,27" origin="-0.515,-4.79" alpha="1.0" />
+            <IsActiveConditional targetcontaineditem="true" conditionpercentage="gt 80"/>
+        </LightComponent>
+        <LightComponent lightcolor="79,184,0,150" castshadows="false" range="0.0" IsOn="true" powerconsumption="0" alphablend="true" allowingameediting="false">
+            <sprite texture="Content/Items/Weapons/Loaders.png" sourcerect="348,921,25,27" origin="-1.065,-4.79" alpha="1.0" />
+            <IsActiveConditional targetcontaineditem="true" conditionpercentage="gte 100"/>
+        </LightComponent>
     </Item>
 
     <Item name="" identifier="nuclearlaserammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="42">

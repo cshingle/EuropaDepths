@@ -164,7 +164,7 @@
                 </StatusEffect>
             </Effect>
 
-            <Effect minstrength="40" maxstrength="80" minscreendistort="0.1" maxscreendistort="0.7" minscreenblur="0.1" maxscreenblur="0.3" strengthchange="-0.1" minradialdistort="0.0" maxradialdistort="2.0" dialogflag="DrunkMedium" minfacetint="255,0,0,50" maxfacetint="255,0,0,100">
+            <Effect minstrength="40" maxstrength="80" minscreendistort="0.1" maxscreendistort="0.3" minscreenblur="0.1" maxscreenblur="0.3" strengthchange="-0.1" minradialdistort="0.0" maxradialdistort="0.5" dialogflag="DrunkMedium" minfacetint="255,0,0,50" maxfacetint="255,0,0,100">
                 <!-- remove "normal" drunkenness -->
                 <StatusEffect target="Character" setvalue="true">
                     <ReduceAffliction identifier="drunk" strength="100" />
@@ -172,7 +172,7 @@
                 </StatusEffect>
             </Effect>
 
-            <Effect minstrength="80" maxstrength="100" minscreendistort="1.0" maxscreendistort="3.0" minscreenblur="0.5" maxscreenblur="1.0" strengthchange="-0.2" minradialdistort="2.0" maxradialdistort="3.0" dialogflag="DrunkHigh" minfacetint="255,0,0,150" maxfacetint="255,0,0,150">
+            <Effect minstrength="80" maxstrength="100" minscreendistort="0.3" maxscreendistort="0.5" minscreenblur="0.1" maxscreenblur="0.3" strengthchange="-0.2" minradialdistort="0.1" maxradialdistort="0.5" dialogflag="DrunkHigh" minfacetint="255,0,0,150" maxfacetint="255,0,0,150">
                 <!-- remove "normal" drunkenness -->
                 <StatusEffect target="Character" setvalue="true">
                     <ReduceAffliction identifier="drunk" strength="100" />

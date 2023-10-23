@@ -31,14 +31,14 @@
             <RequiredSkill identifier="medical" level="35" />
             <StatusEffect type="OnSuccess" target="This" Condition="-100.0" setvalue="true"/>
             <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true"/>
-            <StatusEffect tags="medical" type="OnSuccess" target="UseTarget">
-                <affliction identifier="minorhealing" strength="100"/>
-                <Affliction identifier="drunk" amount="50" />
+            <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="10">
+                <affliction identifier="minorhealing" strength="10"/>
+                <Affliction identifier="drunk" amount="5" />
             </StatusEffect>
-            <StatusEffect tags="medical" type="OnFailure" target="UseTarget">
+            <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="10">
                 <affliction identifier="minorhealing" strength="33"/>
-                <Affliction identifier="drunk" amount="90" />
-                <affliction identifier="nausea" strength="40"/>
+                <Affliction identifier="drunk" amount="9" />
+                <affliction identifier="nausea" strength="4"/>
             </StatusEffect>
             <StatusEffect type="OnImpact" target="UseTarget" multiplyafflictionsbymaxvitality="true" AllowWhenBroken="true">
                 <Affliction identifier="stun" amount="0.1" />
