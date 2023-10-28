@@ -42,11 +42,19 @@
         <StatusEffect type="OnBroken" target="Contained">
           <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" range="20000" />
           <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" range="20000" />
-          <Explosion range="700.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="80" severlimbsprobability="0.5" debris="true" decal="explosion" decalsize="0.5" penetration="0.5">
-            <Affliction identifier="explosiondamage" strength="250" dividebylimbcount="false"/>
+          <Explosion range="700.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="40" severlimbsprobability="0.75" debris="true" decal="explosion" decalsize="0.5" penetration="0.5">
+            <Affliction identifier="explosiondamage" strength="150" dividebylimbcount="false"/>
+            <Affliction identifier="burn" strength="40" dividebylimbcount="false"/>
+            <Affliction identifier="bleeding" strength="30" dividebylimbcount="false"/>
+            <Affliction identifier="stun" strength="10" />
+            <Affliction identifier="concussion" strength="6" probability="0.3" />
+          </Explosion>
+          <Explosion range="350.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="50" severlimbsprobability="1" debris="true" decal="explosion" decalsize="0.5" penetration="0.75">
+            <Affliction identifier="explosiondamage" strength="150" dividebylimbcount="false"/>
             <Affliction identifier="burn" strength="50" dividebylimbcount="false"/>
             <Affliction identifier="bleeding" strength="40" dividebylimbcount="false"/>
             <Affliction identifier="stun" strength="15" />
+            <Affliction identifier="blunttrauma" strength="40" />
           </Explosion>
           <Use />
         </StatusEffect>
@@ -110,19 +118,25 @@
         </StatusEffect>
         <!-- Trigger explosions on contained items -->
         <StatusEffect type="OnBroken" target="Contained">
-          <StatusEffect type="OnBroken" target="Contained">
-            <Explosion range="700.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="80" severlimbsprobability="0.5" debris="true" decal="explosion" decalsize="0.5" penetration="0.5">
-              <Affliction identifier="explosiondamage" strength="250" dividebylimbcount="false"/>
-              <Affliction identifier="burn" strength="50" dividebylimbcount="false"/>
-              <Affliction identifier="bleeding" strength="40" dividebylimbcount="false"/>
-              <Affliction identifier="stun" strength="15" />
-            </Explosion>
-            <Use />
-          </StatusEffect>
+          <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" range="20000" />
+          <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" range="20000" />
+          <Explosion range="700.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="40" severlimbsprobability="0.75" debris="true" decal="explosion" decalsize="0.5" penetration="0.5">
+            <Affliction identifier="explosiondamage" strength="150" dividebylimbcount="false"/>
+            <Affliction identifier="burn" strength="40" dividebylimbcount="false"/>
+            <Affliction identifier="bleeding" strength="30" dividebylimbcount="false"/>
+            <Affliction identifier="stun" strength="10" />
+            <Affliction identifier="concussion" strength="6" probability="0.3" />
+          </Explosion>
+          <Explosion range="350.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="50" severlimbsprobability="1" debris="true" decal="explosion" decalsize="0.5" penetration="0.75">
+            <Affliction identifier="explosiondamage" strength="150" dividebylimbcount="false"/>
+            <Affliction identifier="burn" strength="50" dividebylimbcount="false"/>
+            <Affliction identifier="bleeding" strength="40" dividebylimbcount="false"/>
+            <Affliction identifier="stun" strength="15" />
+            <Affliction identifier="blunttrauma" strength="40" />
+          </Explosion>
           <Use />
-          <particleemitter particle="shrapnel" drawontop="true" particleamount="100" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.2" scalemax="0.35" />
         </StatusEffect>
-        <!-- Remove when broken -->
+        <!-- Remove the item after exploding -->
         <StatusEffect type="OnBroken" target="This" delay="0.01">
           <Remove />
           <SpawnItem identifier="flakshrapnelexplosive" spawnposition="This" count="12" aimspread="360" rotationtype="Collider" rotation="0" />
@@ -188,11 +202,19 @@
       <StatusEffect type="OnBroken" target="Contained">
         <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" range="20000" />
         <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" range="20000" />
-        <Explosion range="700.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="80" severlimbsprobability="0.5" debris="true" decal="explosion" decalsize="0.5" penetration="0.5">
-          <Affliction identifier="explosiondamage" strength="250" dividebylimbcount="false"/>
+        <Explosion range="700.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="40" severlimbsprobability="0.75" debris="true" decal="explosion" decalsize="0.5" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="150" dividebylimbcount="false"/>
+          <Affliction identifier="burn" strength="40" dividebylimbcount="false"/>
+          <Affliction identifier="bleeding" strength="30" dividebylimbcount="false"/>
+          <Affliction identifier="stun" strength="10" />
+          <Affliction identifier="concussion" strength="6" probability="0.3" />
+        </Explosion>
+        <Explosion range="350.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="50" severlimbsprobability="1" debris="true" decal="explosion" decalsize="0.5" penetration="0.75">
+          <Affliction identifier="explosiondamage" strength="150" dividebylimbcount="false"/>
           <Affliction identifier="burn" strength="50" dividebylimbcount="false"/>
           <Affliction identifier="bleeding" strength="40" dividebylimbcount="false"/>
           <Affliction identifier="stun" strength="15" />
+          <Affliction identifier="blunttrauma" strength="40" />
         </Explosion>
         <Use />
       </StatusEffect>
@@ -253,19 +275,25 @@
       </StatusEffect>
       <!-- Trigger explosions on contained items -->
       <StatusEffect type="OnBroken" target="Contained">
-        <StatusEffect type="OnBroken" target="Contained">
-          <Explosion range="700.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="80" severlimbsprobability="0.5" debris="true" decal="explosion" decalsize="0.5" penetration="0.5">
-            <Affliction identifier="explosiondamage" strength="250" dividebylimbcount="false"/>
-            <Affliction identifier="burn" strength="50" dividebylimbcount="false"/>
-            <Affliction identifier="bleeding" strength="40" dividebylimbcount="false"/>
-            <Affliction identifier="stun" strength="15" />
-          </Explosion>
-          <Use />
-        </StatusEffect>
+        <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" range="20000" />
+        <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" range="20000" />
+        <Explosion range="700.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="40" severlimbsprobability="0.75" debris="true" decal="explosion" decalsize="0.5" penetration="0.5">
+          <Affliction identifier="explosiondamage" strength="150" dividebylimbcount="false"/>
+          <Affliction identifier="burn" strength="40" dividebylimbcount="false"/>
+          <Affliction identifier="bleeding" strength="30" dividebylimbcount="false"/>
+          <Affliction identifier="stun" strength="10" />
+          <Affliction identifier="concussion" strength="6" probability="0.3" />
+        </Explosion>
+        <Explosion range="350.0" ballastfloradamage="150" structuredamage="175" itemdamage="500" force="50" severlimbsprobability="1" debris="true" decal="explosion" decalsize="0.5" penetration="0.75">
+          <Affliction identifier="explosiondamage" strength="150" dividebylimbcount="false"/>
+          <Affliction identifier="burn" strength="50" dividebylimbcount="false"/>
+          <Affliction identifier="bleeding" strength="40" dividebylimbcount="false"/>
+          <Affliction identifier="stun" strength="15" />
+          <Affliction identifier="blunttrauma" strength="40" />
+        </Explosion>
         <Use />
-        <particleemitter particle="shrapnel" drawontop="true" particleamount="100" velocitymin="100" velocitymax="500" anglemin="0" anglemax="360" distancemin="0" distancemax="20" scalemin="0.2" scalemax="0.35" />
       </StatusEffect>
-      <!-- Remove when broken -->
+      <!-- Remove the item after exploding -->
       <StatusEffect type="OnBroken" target="This" delay="0.01">
         <Remove />
         <SpawnItem identifier="flakshrapnelexplosive" spawnposition="This" count="12" aimspread="360" rotationtype="Collider" rotation="0" />
