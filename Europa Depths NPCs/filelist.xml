@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Npcs" modversion="1.4.11" corepackage="False" steamworkshopid="2824698537" gameversion="1.0.21.0">
+<contentpackage name="Europa Depths Npcs" modversion="1.4.12" corepackage="False" steamworkshopid="2824698537" gameversion="1.1.18.1">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Item file="%ModDir%/items.xml" />
   <Missions file="%ModDir%/Missions.xml" />
-  <NPCSets file="%ModDir%/AbandonedOutpostNpcs.xml" />
+  <NPCSets file="%ModDir%/OutpostNpcs.xml" />
   <NPCSets file="%ModDir%/AbandonedOutpostNpcsDire.xml" />
   <NPCSets file="%ModDir%/CombatMissionNpcs.xml" />
   <NPCSets file="%ModDir%/PirateNpcs.xml" />
