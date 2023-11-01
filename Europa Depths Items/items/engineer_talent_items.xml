@@ -368,10 +368,10 @@
           <Containable items="mobilebattery" />
         </SubContainer>
         <SubContainer capacity="2" maxstacksize="12">
-          <Containable items="smallitem,mediumitem,ammobox,coilgunammo,depthchargeammo,railgunammo,deepdiving" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+          <Containable items="smallitem,mediumitem,ammobox,coilgunammo,depthchargeammo,railgunammo,deepdiving" excludeditems="toolbelt,toolbox,bandolier,mobilecontainer" />
         </SubContainer>
         <SubContainer capacity="9" maxstacksize="12">
-          <Containable items="smallitem,mediumitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+          <Containable items="smallitem,mediumitem" excludeditems="toolbelt,toolbox,bandolier,mobilecontainer" />
         </SubContainer>
       </ItemContainer>
       <AiTarget soundrange="3000" maxsightrange="3000" />

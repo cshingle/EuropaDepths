@@ -32,7 +32,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-  <Item name="" identifier="backpack" category="Equipment" tags="mediumitem,mobilecontainer,tool" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_soft">
+  <Item name="" identifier="backpack" category="Equipment" tags="mediumitem,mobilecontainer,largemobilecontainer,tool" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_soft">
     <PreferredContainer primary="engcab"/>
     <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" />
     <PreferredContainer primary="outpostcrewcabinet" />
@@ -62,7 +62,7 @@
       <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.7" PropulsionSpeedMultiplier="0.7" setvalue="true" disabledeltatime="true" />
     </Holdable>
     <ItemContainer capacity="12" maxstacksize="12" depth="0.5" >
-      <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier" />
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,mobilecontainer" />
     </ItemContainer>
   </Item>
 
@@ -1217,7 +1217,7 @@
       </Attack>
     </MeleeWeapon>
     <ItemContainer capacity="12" keepopenwhenequipped="true" movableframe="true">
-      <Containable items="chem,medical,unidentifiedgeneticmaterial,geneticmaterial" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+      <Containable items="chem,medical,unidentifiedgeneticmaterial,geneticmaterial" excludeditems="toolbelt,toolbox,bandolier,mobilecontainer" />
     </ItemContainer>
     <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
