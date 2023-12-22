@@ -21,7 +21,7 @@
         <Item identifier="oxygeniteshard" />
         <Item identifier="oxygeniteshard" />
       </Deconstruct>
-      <Body radius="45" density="40" friction="0.95" />
+      <Body width="80" height="95" density="40" friction="0.95" />
       <!-- drains water if not contained  -->
       <Pump maxflow="2000" IsOn="False" flowpercentage="-100" powerconsumption="10">
         <PumpOutEmitter particle="shockwaveinverted" particlespersecond="10" position="41,-40" anglemin="0" anglemax="360" velocitymin="0" velocitymax="0" scalemin="0.25" scalemax="0.5"/>
@@ -61,7 +61,6 @@
       <PreferredContainer primary="wrecksecarmcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="ruintreasure" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstoragelarge" amount="1" spawnprobability="0.01" />
-
       <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" depth="0.6" sourcerect="542,112,102,99" origin="0.5,0.5" />
       <Deconstruct time="30">
         <Item identifier="steel" />
@@ -69,7 +68,7 @@
         <Item identifier="incendium" />
         <Item identifier="incendium" />
       </Deconstruct>
-      <Body radius="45" density="40" friction="0.95" />
+      <Body width="80" height="95" density="40" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="NotInWater" target="This" stackable="false" delay="15" checkconditionalalways="true">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
@@ -111,7 +110,7 @@
     </Item>
     <Item name="" identifier="faradayartifact" category="Alien" Tags="alien,alienartifact" sonarsize="30" scale="0.5" impactsoundtag="impact_metal_heavy" allowsellingwhenbroken="true" hideconditionbar="true">
       <Upgrade gameversion="0.9.3.1" scale="0.5" />
-      <Price baseprice="1000" sold="false">
+      <Price baseprice="2000" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="0.85" />
         <Price storeidentifier="merchantcity" multiplier="0.85" />
         <Price storeidentifier="merchantresearch" multiplier="2" />
@@ -122,7 +121,6 @@
       <PreferredContainer primary="wrecksecarmcab" amount="1" spawnprobability="0.01" />
       <PreferredContainer primary="ruintreasure" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstoragelarge" amount="1" spawnprobability="0.01" />
-
       <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" depth="0.6" sourcerect="645,108,93,103" origin="0.5,0.5" />
       <Deconstruct time="30">
         <Item identifier="steel" />
@@ -130,7 +128,7 @@
         <Item identifier="fulgurium" />
         <Item identifier="fulgurium" />
       </Deconstruct>
-      <Body radius="45" density="50" friction="0.95" />
+      <Body width="80" height="95" density="50" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
         <!-- EMP explosion every 15 seconds. Increased range and reduced EMP strength -->
         <StatusEffect type="Always" target="This" delay="15" stackable="false" checkconditionalalways="true">
@@ -213,11 +211,11 @@
     </Item>
     <Item name="" identifier="psychosisartifact" category="Alien" Tags="alien,alienartifact" sonarsize="30" spritecolor="200,200,200,255" scale="0.5" impactsoundtag="impact_metal_heavy">
       <Upgrade gameversion="0.9.3.1" scale="0.5" />
-      <Price baseprice="1000" sold="false">
+      <Price baseprice="2000" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="0.85" />
         <Price storeidentifier="merchantcity" multiplier="0.85" />
         <Price storeidentifier="merchantresearch" multiplier="2" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.25 " />
+        <Price storeidentifier="merchantmilitary" multiplier="1.25" />
         <Price storeidentifier="merchantmine" />
       </Price>
       <PreferredContainer primary="artifactholder" amount="1" spawnprobability="0.3" />
@@ -231,14 +229,13 @@
         <Item identifier="dementonite" />
         <Item identifier="dementonite" />
       </Deconstruct>
-      <Body radius="45" density="50" friction="0.95" />
+      <Body width="80" height="95" density="50" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="Always" target="This">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
           <Conditional Voltage="0.0" targetcontainer="true" />
           <sound file="Content/Items/Alien/AlienArtifactLoop1.ogg" range="500.0" loop="true" volume="0.5"/>
           <ParticleEmitter particle="psychosisfx" scalemultiplier="0.7,0.7" anglemax="360" emitinterval="1.1" particleamount="1" particlespersecond="1" />
-          <ParticleEmitter particle="psychosisfx" anglemax="360" particlespersecond="12" />
         </StatusEffect>
         <!-- Releases a burst of watchers gaze in a 1500 radius periodically -->
         <StatusEffect type="Always" target="This,NearbyCharacters" range="1500" Delay="30" Duration="5" stackable="false" setvalue="true" checkconditionalalways="true">
@@ -260,7 +257,7 @@
       <Price storeidentifier="merchantoutpost" multiplier="0.85" />
       <Price storeidentifier="merchantcity" multiplier="0.85" />
       <Price storeidentifier="merchantresearch" multiplier="2" />
-      <Price storeidentifier="merchantmilitary" multiplier="1.25 "/>
+      <Price storeidentifier="merchantmilitary" multiplier="1.25" />
       <Price storeidentifier="merchantmine" />
     </Price>
     <PreferredContainer primary="artifactholder" amount="1" spawnprobability="0.3" />

@@ -26,8 +26,8 @@
         <sprite name="ToolBelt" texture="Content/Items/Tools/tools.png" sourcerect="256,102,112,54" limb="Torso" inherittexturescale="true" origin="0.5,-0.2" />
       </Wearable>
       <Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,0" handle2="10,-20" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false" />
-      <ItemContainer capacity="8" maxstacksize="12" depth="0.5">
-        <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+      <ItemContainer capacity="6" maxstacksize="32" depth="0.5" >
+        <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier" />
       </ItemContainer>
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
@@ -61,14 +61,14 @@
     <Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,50" handle2="10,50" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false">
       <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.7" PropulsionSpeedMultiplier="0.7" setvalue="true" disabledeltatime="true" />
     </Holdable>
-    <ItemContainer capacity="12" maxstacksize="12" depth="0.5" >
-      <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,mobilecontainer" />
+    <ItemContainer capacity="12" maxstacksize="32" depth="0.5" >
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier" />
     </ItemContainer>
   </Item>
 
     <Item name="" identifier="toolbox" category="Equipment" tags="mediumitem,mobilecontainer,tool" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
       <PreferredContainer primary="locker"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05"/>
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab"/>
       <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.1"/>
       <Deconstruct time="10">
         <Item identifier="steel" amount="2" />
@@ -98,7 +98,7 @@
           </StatusEffect>
         </Attack>
       </MeleeWeapon>
-      <ItemContainer capacity="12" maxstacksize="8" keepopenwhenequipped="true" movableframe="true" QuickUseMovesItemsInside="false">
+      <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" QuickUseMovesItemsInside="false">
         <Containable items="smallitem" />
       </ItemContainer>
       <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />

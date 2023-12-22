@@ -168,4 +168,54 @@
     </MeleeWeapon>
     <aitarget sightrange="500" soundrange="1000" fadeouttime="3"/>
   </Item>
+  <Item name="Stun Stick" identifier="stunstick" category="Weapon" Tags="smallitem,weapon,stunner,gunsmith,mountableweapon" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <PreferredContainer primary="secarmcab" secondary="armcab"/>
+    <Price baseprice="25" sold="false">
+      <Price storeidentifier="merchantoutpost" multiplier="1.5" />
+      <Price storeidentifier="merchantcity" multiplier="1.25" />
+      <Price storeidentifier="merchantresearch" multiplier="1.25" />
+      <Price storeidentifier="merchantmilitary" multiplier="0.9" />
+      <Price storeidentifier="merchantmine" multiplier="1.25" />
+      <Price storeidentifier="merchantarmory" multiplier="0.9" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="aluminium" usecondition="false"/>
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/sprites/sprites.png" sourcerect="0,18,64,64" origin="0.5,0.6" />
+    <Sprite texture="%ModDir%/sprites/sprites.png" sourcerect="0,0,153,18" depth="0.55" origin="0.5,0.5" />
+    <Body width="153" height="18" density="30" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="35,10" handle1="-28,4" holdangle="30" aimangle="20" reload="0.75" range="75" combatPriority="24" msg="ItemMsgPickUpSelect">
+      <Attack targetimpulse="2" severlimbsprobability="0.05" itemdamage="5" structuredamage="1" structuresoundtype="StructureSlash">
+        <Affliction identifier="blunttrauma" strength="6" />
+        <Affliction identifier="stun" strength="0.25" />
+        <StatusEffect type="OnUse" target="Limb" targetLimbs="Head">
+          <Affliction identifier="concussion" strength="10" />
+          <Affliction identifier="blunttrauma" strength="6" />
+          <Affliction identifier="stun" strength="6" />
+          <Conditional IsHuman="true"/>
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="UseTarget">
+          <Affliction identifier="stun" strength="0.5" />
+          <Conditional TeamID="Team1" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="-0.5">
+          <Conditional entitytype="eq Character"/>
+        </StatusEffect>
+      </Attack>
+      <StatusEffect type="OnUse" target="UseTarget">
+        <Conditional entitytype="eq Character"/>
+        <Sound file="Content/Sounds/Damage/LimbBlunt1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbBlunt2.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbBlunt3.ogg" range="500" />
+        <Sound file="Content/Sounds/Damage/LimbBlunt4.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
+    <Quality>
+      <QualityStat stattype="StrikingPowerMultiplier" value="0.15"/>
+    </Quality>
+  </Item>
 </Items>

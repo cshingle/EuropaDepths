@@ -283,7 +283,7 @@
     <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="140,486,21,21" depth="0.55" />
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
-    <Projectile characterusable="false" launchimpulse="-45.0" impulsespread="0.35" spread="35">
+    <Projectile characterusable="false" launchimpulse="-25.0" impulsespread="0.35" spread="35">
       <Attack structuredamage="5" itemdamage="5" severlimbsprobability="0.9" targetforce="15" penetration="0.1">
         <Affliction identifier="bleeding" strength="2.5" />
         <Affliction identifier="blunttrauma" strength="40" />

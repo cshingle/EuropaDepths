@@ -62,7 +62,7 @@
         <Price storeidentifier="merchantmine" multiplier="1.2" />
       </Price>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="0,312,58,56" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/JobGear/TalentGear.png" depth="0.8" sourcerect="7,129,56,61" origin="0.5,0.5" />
+      <Sprite texture="Content/Items/JobGear/TalentGear.png" depth="0.81" sourcerect="7,129,56,61" origin="0.5,0.5" />
       <Body width="50" height="55" density="25" />
       <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true">
         <RequiredSkill identifier="mechanical" level="50" />
@@ -220,7 +220,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="exosuit" category="Diving,Equipment" tags="diving,deepdiving,deepdivinglarge,radiationproof" scale="0.605" fireproof="true" description="" isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy" botpriority="0.01" cargocontaineridentifier="">
+    <Item name="" identifier="exosuit" category="Diving,Equipment" tags="diving,deepdiving,deepdivinglarge,radiationproof,human" scale="0.605" fireproof="true" description="" isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy" botpriority="0.01" cargocontaineridentifier="">
       <Price baseprice="80" canbespecial="false" sold="false" />
       <Deconstruct time="30">
         <Item identifier="titaniumaluminiumalloy" amount="4" />
@@ -243,7 +243,7 @@
         </sprite>
         <sprite name="Exosuit Right Hand" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,160,64,48" />
         <sprite name="Exosuit Left Hand" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,160,64,48" />
-        <sprite name="Exosuit Right Upper Arm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,0,64,96" />
+        <sprite name="Exosuit Right Upper Arm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightArm" depthlimb="Head" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,0,64,96" />
         <sprite name="Exosuit Left Upper Arm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,0,64,96" />
         <sprite name="Exosuit Right Forearm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,96,64,64" />
         <sprite name="Exosuit Left Forearm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,96,64,64" />
@@ -335,7 +335,7 @@
             <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
           </Containable>
         </SubContainer>
-        <SubContainer capacity="1" maxstacksize="12">
+        <SubContainer capacity="1" maxstacksize="32">
           <Containable items="smallitem,mediumitem,ammobox,coilgunammo,depthchargeammo,railgunammo,deepdiving,mountableweapon" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
         </SubContainer>
         <SubContainer capacity="9">
@@ -373,14 +373,14 @@
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,372,159,57" depth="0.55" origin="0.4,0.5" />
     <Body radius="40" width="60" density="40" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-10,0" handle2="50,-10" msg="ItemMsgPickUpSelect" />
-    <RepairTool firedamage="20.0" structurefixamount="-0.6" range="360" barrelpos="62,0" fireprobability="0.05" combatpriority="25" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-20.0" targetforce="12">
+    <RepairTool firedamage="20.0" structurefixamount="-0.7" range="360" barrelpos="62,0" fireprobability="0.05" combatpriority="25" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-23.0" targetforce="12">
       <RequiredItems items="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
-      <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-4.0" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-3.0" />
       <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-1" />
       <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-80.0" Condition="-12.0" />
       <StatusEffect type="OnUse" targettype="UseTarget" Condition="-12.0" />
-      <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.01">
-        <Affliction identifier="burn" amount="12.0" />
+      <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.01">v
+        <Affliction identifier="burn" amount="14.0" />
       </StatusEffect>
       <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
       <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />

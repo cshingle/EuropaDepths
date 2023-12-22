@@ -4,7 +4,7 @@
 
     <Item name="" identifier="batterycell" category="Equipment,Electrical" maxstacksize="8" tags="smallitem,loadable,mobilebattery" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="batterycellrecharger" maxcondition="80"/>
-      <PreferredContainer primary="stunbaton,underwaterscooter,handheldsonar,sonarbeacon,flashlight,portablepump,divingsuit,abyssdivingsuit,combatdivingsuit,pucs,slipsuit" spawnprobability="1.0" mincondition="25"/>
+      <PreferredContainer primary="stunbaton,underwaterscooter,handheldsonar,sonarbeacon,flashlight,portablepump,poweredcontainer,divingsuit,abyssdivingsuit,combatdivingsuit,pucs,slipsuit" spawnprobability="1.0" mincondition="25"/>
       <PreferredContainer secondary="divingcab" amount="3" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer secondary="abandonedengcab,wreckengcab,outpostengcab" minamount="1" maxamount="2" spawnprobability="0.1"/>
       <PreferredContainer secondary="abandonedstoragecab,wreckstoragecabcab" minamount="1" maxamount="2" spawnprobability="0.05"/>
@@ -40,7 +40,7 @@
     <Item name="" identifier="fulguriumbatterycell" category="Equipment,Electrical" maxstacksize="8" tags="smallitem,loadable,mobilebattery" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_light" health="200">
       <Upgrade gameversion="0.10.0.0" scale="0.5"/>
       <PreferredContainer primary="batterycellrecharger" maxcondition="80"/>
-      <PreferredContainer secondary="divingcab,engcab,reactorcab"/>
+      <PreferredContainer secondary="divingcab,engcab,reactorcab,stunbaton,underwaterscooter,handheldsonar,sonarbeacon,flashlight,portablepump,poweredcontainer,divingsuit,abyssdivingsuit,combatdivingsuit,pucs,slipsuit"/>
       <PreferredContainer secondary="abandonedengcab,wreckengcab" amount="1" spawnprobability="0.05"/>
       <Price baseprice="250" minavailable="1" minleveldifficulty="15">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.25" />

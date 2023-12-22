@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Equipment" modversion="1.5.3" corepackage="False" steamworkshopid="2832149257" gameversion="1.1.18.1">
+<contentpackage name="Europa Depths Equipment" modversion="1.5.7" corepackage="False" steamworkshopid="2832149257" gameversion="1.2.7.0">
   <Item file="%ModDir%/equipment.xml" />
   <Item file="%ModDir%/posters.xml" />
   <Item file="%ModDir%/depthcharge.xml" />
@@ -10,6 +10,7 @@
   <Submarine file="%ModDir%/MudFish.sub" />
   <Submarine file="%ModDir%/Impulse.sub" />
   <Submarine file="%ModDir%/Basilisk.sub" />
-  <Submarine file="%ModDir%/Vulture.sub" />
   <Submarine file="%ModDir%/Ægir.sub" />
+  <Submarine file="%ModDir%/Massena.sub" />
+  <Submarine file="%ModDir%/Vulture.sub" />
 </contentpackage>

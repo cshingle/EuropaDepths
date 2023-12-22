@@ -618,7 +618,7 @@
         <StatusEffectAction targettag="alarmbutton">
           <StatusEffect State="true" />
         </StatusEffectAction>
-        <ConversationAction text="EventText.jailbreak_alarm.c1" eventsprite="NoticeBoard" />
+        <ConversationAction text="EventText.jailbreak_alarm.c1" eventsprite="NoticeBoard" ContinueAutomatically="true" />
         <NPCFollowAction npctag="triggerer_prisoner" targettag="triggerer_securitynpc" follow="false" />
         <NPCChangeTeamAction npctag="securitynpc" teamid="Team2" />
       </ScriptedEvent>
@@ -828,7 +828,7 @@
         <MissionAction missiontag="cargohuskcult" />
       </ScriptedEvent>
       <ScriptedEvent identifier="huskcultspecialhire1">
-        <CheckDataAction identifier="subraevent_state" condition="lt 2">
+        <CheckDataAction identifier="subraevent_state" condition="lt 3">
           <Failure>
             <!-- cannot start the way to ascension if Subra has been assassinated (see assassinationofjacovsubra4) -->
           </Failure>
@@ -1053,7 +1053,7 @@
                                 <ReputationAction targettype="Faction" identifier="huskcult" increase="-10" />
                                 <CombatAction combatmode="Arrest" npctag="securitynpc" enemytag="cultist2" isinstigator="false" witnessreaction="retreat" />
                               </Option>
-                              <Option text="EventText.youngcultists.o1.o1.o1.o1.o2" endconversation="true">
+                              <Option text="EventText.youngcultists.o1.o1.o1.o1.o2"  endconversation="true">
                                 <ReputationAction targettype="Faction" identifier="huskcult" increase="-2" />
                               </Option>
                               <Option text="EventText.youngcultists.o1.o1.o1.o1.o3">
@@ -1595,7 +1595,7 @@
           </Option>
           <Option text="eventtext.huskextremists1.o2">
             <ConversationAction text="eventtext.huskextremists1.o2.c1" targettag="triggerer_player">
-              <Option text="eventtext.givingdirections.o2.o2" endconversation="true">                <!-- Uh oh. -->
+              <Option text="eventtext.givingdirections.o2.o2" endconversation="true"><!-- Uh oh. -->
                 <!-- Combat -->
                 <NPCChangeTeamAction npctag="cultist" teamid="Team2" />
                 <NPCWaitAction npctag="talk_cultist" wait="false" />

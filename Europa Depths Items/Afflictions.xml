@@ -156,6 +156,14 @@
 
         <Affliction identifier="drunknodebuffs" type="debuff" translationoverride="drunk" limbspecific="false" indicatorlimb="Head" activationthreshold="20" maxstrength="100" affectmachines="false">
 
+            <!-- no effects at this point -->
+            <Effect minstrength="0" maxstrength="20" strengthchange="-0.1">
+                <StatusEffect target="Character" setvalue="true">
+                    <reduceaffliction identifier="bloodpoisoning" strength="0.07" />
+                </StatusEffect>
+            </Effect>
+
+
             <Effect minstrength="20" maxstrength="40" minscreendistort="0" maxscreendistort="0.1" strengthchange="-0.05" minfacetint="255,0,0,0" maxfacetint="255,0,0,50">
                 <!-- remove "normal" drunkenness -->
                 <StatusEffect target="Character" setvalue="true">
