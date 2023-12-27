@@ -112,8 +112,8 @@
         <Containable items="oxygensource" excludeditems="oxygenitetank">
           <StatusEffect type="OnWearing" target="Contained" targetslot="0">
             <RequiredItem items="oxygensource" type="Contained" />
-            <Conditional condition="lt 5.0" />
-            <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true"/>
+            <Conditional condition="lt 5.0" targetslot="0"/>
+            <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
           </StatusEffect>
         </Containable>
         <Containable items="oxygenitetank">
@@ -121,9 +121,9 @@
             <Conditional IsDead="false" />
           </StatusEffect>
         </Containable>
-        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true">
+        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
           <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
-          <Conditional condition="lte 0.0" />
+          <Conditional condition="lte 0.0" targetslot="0" />
           <Sound file="Content/Items/WarningBeep.ogg" range="250" loop="true"/>
         </StatusEffect>
         <SubContainer capacity="1" maxstacksize="1">
@@ -242,10 +242,10 @@
         <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
         <Containable items="weldingtoolfuel,wreckoxygentank" excludeditems="oxygenitetank" />
         <Containable items="oxygensource" excludeditems="oxygenitetank">
-          <StatusEffect type="OnWearing" target="Contained">
+          <StatusEffect type="OnWearing" target="Contained" targetslot="0">
             <RequiredItem items="oxygensource" type="Contained" />
-            <Conditional condition="lt 5.0" />
-            <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true"/>
+            <Conditional condition="lt 5.0" targetslot="0"/>
+            <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
           </StatusEffect>
         </Containable>
         <Containable items="oxygenitetank">
@@ -253,9 +253,9 @@
             <Conditional IsDead="false" />
           </StatusEffect>
         </Containable>
-        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true">
+        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
           <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
-          <Conditional condition="lte 0.0" />
+          <Conditional condition="lte 0.0" targetslot="0" />
           <Sound file="Content/Items/WarningBeep.ogg" range="250" loop="true"/>
         </StatusEffect>
         <SubContainer capacity="1" maxstacksize="1">
@@ -377,10 +377,10 @@
         <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
         <Containable items="weldingtoolfuel,wreckoxygentank" excludeditems="oxygenitetank" />
         <Containable items="oxygensource" excludeditems="oxygenitetank">
-          <StatusEffect type="OnWearing" target="Contained">
+          <StatusEffect type="OnWearing" target="Contained" targetslot="0">
             <RequiredItem items="oxygensource" type="Contained" />
-            <Conditional condition="lt 5.0" />
-            <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true"/>
+            <Conditional condition="lt 5.0" targetslot="0"/>
+            <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
           </StatusEffect>
         </Containable>
         <Containable items="oxygenitetank">
@@ -388,9 +388,9 @@
             <Conditional IsDead="false" />
           </StatusEffect>
         </Containable>
-        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true">
+        <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
           <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
-          <Conditional condition="lte 0.0" />
+          <Conditional condition="lte 0.0" targetslot="0" />
           <Sound file="Content/Items/WarningBeep.ogg" range="250" loop="true"/>
         </StatusEffect>
         <SubContainer capacity="1" maxstacksize="1">

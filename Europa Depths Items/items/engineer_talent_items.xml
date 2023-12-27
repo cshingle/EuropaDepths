@@ -551,14 +551,14 @@
         <ItemComponent IsActiveConditionalComparison="Or">
           <IsActive HullOxygenPercentage="lt 50" />
           <IsActive InWater="eq true" />
-          <StatusEffect type="OnActive" target="Contained,Character" comparison="And">
-            <RequiredItem items="oxygensource" type="Contained" />
-            <Conditional condition="lt 5.0" />
+          <StatusEffect type="OnActive" target="Contained,Character" comparison="And" targetslot="0">
+            <RequiredItem items="oxygensource" type="Contained" targetslot="0" />
+            <Conditional condition="lt 5.0" targetslot="0"/>
             <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true"/>
           </StatusEffect>
-          <StatusEffect type="OnActive" target="Contained" playsoundonrequireditemfailure="true">
-            <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
-            <Conditional condition="lte 0.0" />
+          <StatusEffect type="OnActive" target="Contained" playsoundonrequireditemfailure="true" targetslot="0">
+            <RequiredItem items="oxygensource" type="Contained" matchonempty="true" targetslot="0" />
+            <Conditional condition="lte 0.0" targetslot="0" />
             <Sound file="Content/Items/WarningBeep.ogg" range="250" loop="true"/>
           </StatusEffect>
         </ItemComponent>
