@@ -125,7 +125,7 @@
     </Item>
     <Item name="" identifier="assaultriflemagazine" maxstacksize="8" maxstacksizecharacterinventory="2" scale="0.5" category="Weapon" allowasextracargo="true" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,assaultrifleammo,riflemanbonus" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="assaultrifle" minamount="1" maxamount="1" spawnprobability="1"/>
-      <PreferredContainer primary="armcab" secondary="secarmcab"/>
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
       <Price baseprice="300" sold="false" minleveldifficulty="60" displaynonempty="true">
         <Price storeidentifier="merchantoutpost" multiplier="1.4" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -187,7 +187,10 @@
     </Item>
   </Override>
   <Item name="" identifier="shotgunslugshell" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
-    <PreferredContainer primary="armcab" secondary="secarmcab"/>
+    <PreferredContainer primary="shotgun" amount="6" spawnprobability="0" />
+    <PreferredContainer primary="autoshotgun" amount="8" spawnprobability="0" />
+    <PreferredContainer primary="shotgununique" amount="2" spawnprobability="0" />
+    <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
     <Price baseprice="75" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
       <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -227,7 +230,10 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
   <Item name="" identifier="depletedshotgunslugshell" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110">
-    <PreferredContainer primary="armcab" secondary="secarmcab"/>
+    <PreferredContainer primary="shotgun" amount="6" spawnprobability="0" />
+    <PreferredContainer primary="autoshotgun" amount="8" spawnprobability="0" />
+    <PreferredContainer primary="shotgununique" amount="2" spawnprobability="0" />
+    <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
     <Price baseprice="75" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
       <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -272,7 +278,10 @@
   </Item>
   <Override>
     <Item name="" identifier="shotgunslugexplosive" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="armcab" secondary="secarmcab"/>
+      <PreferredContainer primary="shotgun" amount="6" spawnprobability="0" />
+      <PreferredContainer primary="autoshotgun" amount="8" spawnprobability="0" />
+      <PreferredContainer primary="shotgununique" amount="2" spawnprobability="0" />
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
       <Price baseprice="75" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -534,7 +543,7 @@
     <aitarget maxsightrange="1500" />
   </Item>
   <Item name="" identifier="stungundartfulgurium" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" allowasextracargo="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo" Scale="0.5" impactsoundtag="impact_metal_light">
-    <PreferredContainer primary="armcab" secondary="secarmcab"/>
+    <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
     <Price baseprice="40" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.4" />
       <Price storeidentifier="merchantcity" multiplier="1.25" />

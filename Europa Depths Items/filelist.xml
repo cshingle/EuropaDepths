@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Items" modversion="1.5.8" corepackage="False" steamworkshopid="2821614540" gameversion="1.2.7.0">
+<contentpackage name="Europa Depths Items" modversion="1.5.9" corepackage="False" steamworkshopid="2821614540" gameversion="1.2.7.0">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Character file="%ModDir%/Characters/Defensebot/Defensebot.xml" />
   <Character file="%ModDir%/Characters/Mudraptor_pet/Mudraptor_pet.xml" />
@@ -38,6 +38,7 @@
   <Item file="%ModDir%/items/reactor.xml" />
   <Item file="%ModDir%/items/securityofficer_gear.xml" />
   <Item file="%ModDir%/items/securityofficer_talent_items.xml" />
+  <Item file="%ModDir%/items/signalitems.xml" />
   <Item file="%ModDir%/items/storage.xml" />
   <Item file="%ModDir%/items/storage2.xml" />
   <Item file="%ModDir%/items/tools.xml" />

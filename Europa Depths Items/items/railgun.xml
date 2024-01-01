@@ -477,6 +477,7 @@
   </Item>
 
   <Item name="Railgun Ammo Box" identifier="railgunmagammobox" scale="0.5" tags="railgunmagequipment,railgunmagammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" cargocontaineridentifier="">
+    <PreferredContainer primary="emptyammoboxcontainer" maxcondition="1"/>
     <PreferredContainer primary="railgunmagloader" amount="1" mincondition="1"/>
     <PreferredContainer primary="ammoboxcontainer" mincondition="1"/>
     <!--Ensure that Thalamus always has at least one coilgun ammo box to use-->

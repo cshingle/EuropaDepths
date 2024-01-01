@@ -71,6 +71,9 @@
         <Containable items="chem,paint" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
       </ItemContainer>
     </Item>
+    <Item name="" identifier="chemicalcratedamaged" variantof="chemicalcrate" tags="crate" waterproof="false">
+      <DecorativeSprite texture="Content/Items/Containers/containers2.png" sourcerect=" 0,86,146,83" depth="0.53" origin="0.5,0.5" />
+    </Item>
     <Item name="" identifier="materialcrate" tags="crate,allowcleanup" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy">
       <Deconstruct time="20">
         <Item identifier="steel" />

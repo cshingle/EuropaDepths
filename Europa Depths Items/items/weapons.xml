@@ -3,7 +3,7 @@
   <Override>
     <Item name="" identifier="spear" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="harpoongun" amount="6" spawnprobability="1" />
-      <PreferredContainer primary="armcab" minamount="3" maxamount="6" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="spearcab" secondary="armcab" minamount="3" maxamount="6" spawnprobability="1" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="4" spawnprobability="0.2" />
       <PreferredContainer primary="secarmcab" />
       <Price baseprice="7">
@@ -49,10 +49,10 @@
 
     <Item name="" identifier="alienspear" category="Weapon,Alien" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="harpoongun" />
+      <PreferredContainer primary="spearcab,secarmcab" secondary="armcab" />
       <PreferredContainer secondary="ruinstoragesmall,ruinstorage" minamount="1" maxamount="3" spawnprobability="0.1" />
       <PreferredContainer secondary="ruinstoragelarge" amount="6" spawnprobability="0.2" />
       <PreferredContainer primary="ruintreasure" amount="6" spawnprobability="0.25" />
-      <PreferredContainer primary="secarmcab,armcab" />
       <Price baseprice="50" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -92,9 +92,9 @@
 
     <Item name="" identifier="explosivespear" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="harpoongun" />
+      <PreferredContainer primary="spearcab,secarmcab" secondary="armcab" />
       <PreferredContainer primary="armcab" amount="6" spawnprobability="0.1" notcampaign="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="6" spawnprobability="0.1" />
-      <PreferredContainer primary="secarmcab" />
       <Price baseprice="50">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.4" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="3" sold="false" />
@@ -135,9 +135,9 @@
   </Override>
   <Item name="" identifier="ed_raptorbanespear" inherit="spear" pickdistance="150" spritecolor="255,165,0,255" InventoryIconColor="255,165,0,255">
     <PreferredContainer primary="harpoongun" amount="6" spawnprobability="0.05" />
+    <PreferredContainer primary="spearcab,secarmcab" secondary="armcab" />
     <PreferredContainer primary="armcab" minamount="3" maxamount="6" spawnprobability="0.1" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="4" spawnprobability="0.1" />
-    <PreferredContainer primary="secarmcab" />
     <Price baseprice="45">
       <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
       <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="3" />
@@ -178,9 +178,8 @@
   </Item>
   <Item name="Depleted Fuel Harpoon" identifier="spearepletedfuel" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="harpoongun" amount="6" spawnprobability="0.05" />
-    <PreferredContainer primary="armcab" minamount="3" maxamount="6" spawnprobability="0.05" />
+    <PreferredContainer primary="spearcab,secarmcab" secondary="armcab" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="4" spawnprobability="0.05" />
-    <PreferredContainer primary="secarmcab" />
     <Price baseprice="50" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
       <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -227,8 +226,8 @@
   <Override>
     <Item name="" identifier="harpoongun" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer secondary="wreckweaponholder" spawnprobability="0.05" />
+      <PreferredContainer primary="spearcab,secarmcab" secondary="armcab,weaponholder" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1" />
-      <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder" />
       <Price baseprice="170" minavailable="1">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="2" sold="false" />
@@ -281,10 +280,9 @@
 
     <Item name="" identifier="revolverround" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,revolverammo,pistolammoitem" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="revolver" amount="6" spawnprobability="1" />
-      <PreferredContainer primary="armcab" amount="6" spawnprobability="1" />
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" amount="6" spawnprobability="1" />
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" minamount="1" maxamount="6" spawnprobability="0.2" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.25" />
-      <PreferredContainer secondary="secarmcab" />
       <Price baseprice="12">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" minavailable="12" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="12" />
@@ -325,7 +323,7 @@
 
     <Item name="" identifier="smgmagazine" maxstacksize="8" maxstacksizecharacterinventory="2" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,smgammo" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="smg,smgunique,machinepistol" amount="1" spawnprobability="1" />
-      <PreferredContainer primary="armcab" amount="1" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" spawnprobability="1" notcampaign="true"  />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="2" spawnprobability="0.5" />
       <PreferredContainer secondary="wrecksecarmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
       <PreferredContainer secondary="secarmcab" />
@@ -371,10 +369,10 @@
 
 
     <Item name="" identifier="stungrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,stunner,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
       <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="3" spawnprobability="0.5" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
-      <PreferredContainer secondary="armcab" />
       <Upgrade gameversion="0.9.2.0" scale="0.5" />
       <Price baseprice="125">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
@@ -419,9 +417,8 @@
     </Item>
 
     <Item name="" identifier="empgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
-      <PreferredContainer secondary="armcab" />
       <Price baseprice="175">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="1" sold="false" />
@@ -470,9 +467,8 @@
     </Item>
 
     <Item name="" identifier="fraggrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" scale="0.5" impactsoundtag="impact_metal_heavy">
-      <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
-      <PreferredContainer secondary="armcab" />
       <Upgrade gameversion="0.9.3.0" scale="0.5" />
       <Price baseprice="150">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.35" />
@@ -524,9 +520,8 @@
     </Item>
 
     <Item name="" identifier="incendiumgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_heavy">
-      <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
       <PreferredContainer primary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.05" />
-      <PreferredContainer secondary="armcab" />
       <Upgrade gameversion="0.9.3.0" scale="0.5" />
       <Price baseprice="175" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -752,8 +747,8 @@
 
     <Item name="" identifier="40mmgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="grenadelauncher" amount="1" spawnprobability="1" />
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
-      <PreferredContainer primary="secarmcab" secondary="armcab" />
       <Price baseprice="100" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -796,8 +791,8 @@
     </Item>
 
     <Item name="" identifier="40mmstungrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
-      <PreferredContainer primary="secarmcab" secondary="armcab" />
       <Price baseprice="120" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -838,8 +833,8 @@
   </Override>
 
   <Item name="" identifier="40mmempgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
-    <PreferredContainer primary="secarmcab" secondary="armcab" />
     <Price baseprice="160" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
       <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -885,8 +880,8 @@
   </Item>
 
   <Item name="40mm Incendium Grenade" identifier="40mmincendiumgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,grenade" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
     <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="2" spawnprobability="0.03" />
-    <PreferredContainer primary="secarmcab" secondary="armcab" />
     <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="4" spawnprobability="0.1" />
     <Price baseprice="200" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -998,10 +993,9 @@
       <PreferredContainer primary="shotgun" amount="6" spawnprobability="1" />
       <PreferredContainer primary="autoshotgun" amount="8" spawnprobability="1" />
       <PreferredContainer primary="shotgununique" amount="2" spawnprobability="1" />
-      <PreferredContainer primary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5" />
       <PreferredContainer secondary="wreckarmcab,wrecksecarmcab,abandonedarmcab,abandonedsecarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
-      <PreferredContainer secondary="secarmcab" />
       <Price baseprice="30" minleveldifficulty="30">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="4" sold="true" />
@@ -1043,10 +1037,9 @@
 
     <Item name="" identifier="shotgunshellblunt" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="shotgun,autoshotgun,shotgununique" />
-      <PreferredContainer primary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5" />
       <PreferredContainer secondary="wreckarmcab,wrecksecarmcab,abandonedarmcab,abandonedsecarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
-      <PreferredContainer secondary="secarmcab" />
       <Price baseprice="15" minleveldifficulty="30">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="4" sold="true" />
@@ -1127,10 +1120,9 @@
     </Item>
 
     <Item name="" identifier="stungundart" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo" Scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="armcab" minamount="1" maxamount="10" spawnprobability="0.25" notcampaign="true" />
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
       <PreferredContainer primary="stungun" amount="4" spawnprobability="1" />
-      <PreferredContainer secondary="secarmcab" />
       <Price baseprice="15">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="3" />
@@ -1172,6 +1164,7 @@
 
     <Item name="" identifier="spearunique" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo" Scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true">
       <PreferredContainer primary="harpoongun,armcab" secondary="secarmcab" />
+      <PreferredContainer primary="spearcab" />
       <PreferredContainer secondary="wrecksecarmcab,wreckarmcab,abandonedsecarmcab,abandonedarmcab" amount="6" spawnprobability="0.05" />
       <Price baseprice="550" sold="false" canbespecial="false" />
       <Deconstruct time="5">
@@ -1291,10 +1284,10 @@
 
     <Item name="" identifier="riflebullet" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,rifleammo,riflemanbonus" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="rifle" amount="6" spawnprobability="1" />
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
       <PreferredContainer primary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5" />
       <PreferredContainer secondary="wreckarmcab,wrecksecarmcab,abandonedarmcab,abandonedsecarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
-      <PreferredContainer secondary="secarmcab" />
       <Price baseprice="30" minleveldifficulty="15">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="4" sold="true" />
@@ -1416,7 +1409,7 @@
 
   <Item name="" identifier="3030round" aliases="" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,rifleammo" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="leveractionrifle" amount="6" spawnprobability="1" />
-    <PreferredContainer primary="armcab" minamount="12" maxamount="24" spawnprobability="1" notcampaign="true" />
+    <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="12" maxamount="24" spawnprobability="1" notcampaign="true" />
     <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5" />
     <PreferredContainer secondary="wreckarmcab,wrecksecarmcab,abandonedarmcab,abandonedsecarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
     <PreferredContainer secondary="outpostsecarmcab" minamount="6" maxamount="12" spawnprobability="0.2" />

@@ -157,14 +157,14 @@
         <Affliction identifier="drunknodebuffs" type="debuff" translationoverride="drunk" limbspecific="false" indicatorlimb="Head" activationthreshold="20" maxstrength="100" affectmachines="false">
 
             <!-- no effects at this point -->
-            <Effect minstrength="0" maxstrength="20" strengthchange="-0.1">
+            <Effect minstrength="0" maxstrength="20" resistancefor="nausea" minresistance="0.6" maxresistance="1" strengthchange="-0.1">
                 <StatusEffect target="Character" setvalue="true">
                     <reduceaffliction identifier="bloodpoisoning" strength="0.07" />
                 </StatusEffect>
             </Effect>
 
 
-            <Effect minstrength="20" maxstrength="40" minscreendistort="0" maxscreendistort="0.1" strengthchange="-0.05" minfacetint="255,0,0,0" maxfacetint="255,0,0,50">
+            <Effect minstrength="20" maxstrength="40" resistancefor="nausea" minresistance="0.6" maxresistance="1" minscreendistort="0" maxscreendistort="0.1" strengthchange="-0.05" minfacetint="255,0,0,0" maxfacetint="255,0,0,50">
                 <!-- remove "normal" drunkenness -->
                 <StatusEffect target="Character" setvalue="true">
                     <ReduceAffliction identifier="drunk" strength="100" />
@@ -172,7 +172,7 @@
                 </StatusEffect>
             </Effect>
 
-            <Effect minstrength="40" maxstrength="80" minscreendistort="0.1" maxscreendistort="0.3" minscreenblur="0.1" maxscreenblur="0.3" strengthchange="-0.1" minradialdistort="0.0" maxradialdistort="0.5" dialogflag="DrunkMedium" minfacetint="255,0,0,50" maxfacetint="255,0,0,100">
+            <Effect minstrength="40" maxstrength="80" resistancefor="nausea" minresistance="0.6" maxresistance="1" minscreendistort="0.1" maxscreendistort="0.3" minscreenblur="0.1" maxscreenblur="0.3" strengthchange="-0.1" minradialdistort="0.0" maxradialdistort="0.5" dialogflag="DrunkMedium" minfacetint="255,0,0,50" maxfacetint="255,0,0,100">
                 <!-- remove "normal" drunkenness -->
                 <StatusEffect target="Character" setvalue="true">
                     <ReduceAffliction identifier="drunk" strength="100" />
@@ -180,7 +180,7 @@
                 </StatusEffect>
             </Effect>
 
-            <Effect minstrength="80" maxstrength="100" minscreendistort="0.3" maxscreendistort="0.5" minscreenblur="0.1" maxscreenblur="0.3" strengthchange="-0.2" minradialdistort="0.1" maxradialdistort="0.5" dialogflag="DrunkHigh" minfacetint="255,0,0,150" maxfacetint="255,0,0,150">
+            <Effect minstrength="80" maxstrength="100" resistancefor="nausea" minresistance="0.8" maxresistance="1" minscreendistort="0.3" maxscreendistort="0.5" minscreenblur="0.1" maxscreenblur="0.3" strengthchange="-0.2" minradialdistort="0.1" maxradialdistort="0.5" dialogflag="DrunkHigh" minfacetint="255,0,0,150" maxfacetint="255,0,0,150">
                 <!-- remove "normal" drunkenness -->
                 <StatusEffect target="Character" setvalue="true">
                     <ReduceAffliction identifier="drunk" strength="100" />

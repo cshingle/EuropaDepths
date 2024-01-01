@@ -291,8 +291,9 @@
     </Item>
 
     <Item name="" identifier="weldingfueltank" category="Equipment,Fuel" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,weldingtoolfuel,weldingfuel" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="weldingfuelholder" maxcondition="90"/>
       <PreferredContainer primary="weldingtool,flamer" spawnprobability="1"/>
-      <PreferredContainer primary="engcab" minamount="4" maxamount="6" spawnprobability="1" notcampaign="true"/>
+      <PreferredContainer primary="engcab" minamount="4" maxamount="6" spawnprobability="1" notcampaign="true" mincondition="10"/>
       <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" minamount="1" maxamount="3" spawnprobability="0.2"/>
       <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05"/>
       <PreferredContainer secondary="supplycab"/>

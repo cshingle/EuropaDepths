@@ -12,7 +12,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="0,0,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -25,7 +25,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="aluminium,bulkaluminium" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -43,7 +43,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="64,0,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -56,7 +56,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="organicfiber,bulkorganicfiber" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -74,7 +74,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="128,0,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -87,7 +87,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="carbon,bulkcarbon" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -105,7 +105,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="192,0,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -118,7 +118,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="copper,bulkcopper" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -136,7 +136,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="256,0,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -149,7 +149,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="iron,bulkiron" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -167,7 +167,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="0,64,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -180,7 +180,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="lead,bulklead" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -198,7 +198,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="64,64,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -211,7 +211,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="plastic,bulkplastic" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -229,7 +229,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="128,64,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -242,7 +242,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="rubber,bulkrubber" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -260,7 +260,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="192,64,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -273,7 +273,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="silicon,bulksilicon" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -291,7 +291,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="256,64,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -304,7 +304,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="steel,bulksteel" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -322,7 +322,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="0,128,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -335,7 +335,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="thorium,bulkthorium" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -353,7 +353,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="64,128,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -366,7 +366,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="tin,bulktin" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -384,7 +384,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="128,128,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -397,7 +397,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="titanium,bulktitanium" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -415,7 +415,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="192,128,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -428,7 +428,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="titaniumaluminiumalloy,bulktitaniumaluminiumalloy" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -446,7 +446,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="256,128,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -459,7 +459,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="uranium,bulkuranium" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -477,7 +477,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="0,192,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -490,7 +490,7 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="zinc,bulkzinc" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
@@ -508,7 +508,7 @@
             <Item identifier="plastic" amount="2" />
         </Deconstruct>
         <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="64,192,64,64" origin="0.5,0.6" />
-        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,192,94,74" origin="0.5,0.5" depth="0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
         <Body width="90" height="60" density="20" />
         <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
             <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
@@ -521,8 +521,417 @@
                 </StatusEffect>
             </Attack>
         </MeleeWeapon>
-        <ItemContainer capacity="12" maxstacksize="32" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
             <Containable items="ballisticfiber,bulkballisticfiber" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+    <Item name="FPGA Case" identifier="fpgacircuitstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="128,192,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="fpgacircuit" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+    <Item name="Phosphorus Case" identifier="phosphorusstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="192,192,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="phosphorus" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+    <Item name="Potassium Case" identifier="potassiumstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="256,192,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="potassium" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+    <Item name="Physicorium Case" identifier="physicoriumstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="0,256,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="physicorium" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+    <Item name="Dementonite Case" identifier="dementonitestorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="64,256,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="dementonite" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+    <Item name="Incendium Case" identifier="incendiumstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="128,256,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="incendium" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+    <Item name="Fulgurium Case" identifier="fulguriumstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="192,256,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="fulgurium" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+
+    <Item name="Ethanol Case" identifier="ethanolstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="chemcab,materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="256,256,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="ethanol" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+
+    <Item name="Sodium Case" identifier="sodiumstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="chemcab,materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="0,320,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="sodium" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+
+    <Item name="Magnesium Case" identifier="magnesiumstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="chemcab,materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="64,320,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="magnesium" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+
+    <Item name="Calcium Case" identifier="calciumstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="chemcab,materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="128,320,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="calcium" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+
+    <Item name="Lithium Case" identifier="lithiumstorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="chemcab,materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="192,320,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="lithium" />
+        </ItemContainer>
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
+
+    <Item name="Chlorine Case" identifier="chlorinestorage" category="Storage" tags="mediumitem,mobilecontainer,toolbox,bulkstorage" cargocontaineridentifier="" showcontentsintooltip="true" Scale="0.5" fireproof="true" description="" impactsoundtag="impact_metal_heavy" RequireAimToUse="True">
+        <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.01"/>
+        <PreferredContainer primary="chemcab,materialcab" secondary="storagecab" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="30">
+            <RequiredSkill identifier="mechanical" level="35"/>
+            <Item identifier="plastic" amount="2" />
+            <Item identifier="blackpaint" />
+        </Fabricate>
+        <Deconstruct time="15">
+            <Item identifier="plastic" amount="2" />
+        </Deconstruct>
+        <InventoryIcon texture="%ModDir%/sprites/storage.png" sourcerect="256,320,64,64" origin="0.5,0.6" />
+        <Sprite texture="%ModDir%/sprites/storage.png" sourcerect="192,384,94,74" origin="0.5,0.5" depth="0.6" />
+        <Body width="90" height="60" density="20" />
+        <MeleeWeapon slots="RightHand,LeftHand" controlpose="true" canbecombined="true" aimpos="45,10" handle1="0,18" holdangle="90" reload="1" range="50" combatpriority="6" msg="ItemMsgPickUpSelect">
+            <Attack structuredamage="0" itemdamage="1" targetimpulse="2">
+                <Affliction identifier="blunttrauma" strength="2" />
+                <Affliction identifier="stun" strength="0.6" />
+                <StatusEffect type="OnUse" target="UseTarget">
+                    <Conditional entitytype="eq Character"/>
+                    <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
+                    <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
+                </StatusEffect>
+            </Attack>
+        </MeleeWeapon>
+        <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
+            <Containable items="chlorine" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
         <Upgrade gameversion="0.10.0.0" scale="0.5" />

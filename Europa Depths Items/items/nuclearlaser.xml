@@ -118,7 +118,8 @@
     </Item>
 
     <Item name="" identifier="nuclearlaserammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="42">
-        <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.05"/>
+        <PreferredContainer primary="emptyammoboxcontainer" maxcondition="1"/>
+        <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.05" mincondition="1"/>
         <Price baseprice="310" displaynonempty="true">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
             <Price storeidentifier="merchantcity" multiplier="1.2"/>
@@ -160,7 +161,8 @@
     </Item>
 
     <Item name="" identifier="nuclearlaserthoriumammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="42">
-        <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.03"/>
+        <PreferredContainer primary="emptyammoboxcontainer" maxcondition="1"/>
+        <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.03" mincondition="1"/>
         <Price baseprice="400" displaynonempty="true">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
             <Price storeidentifier="merchantcity" multiplier="1.2"/>
@@ -182,7 +184,7 @@
         </Fabricate>
         <Deconstruct time="10">
             <Item identifier="steel" mincondition="0.95"/>
-            <Item identifier="physicorium" mincondition="0.95"/>
+            <RequiredItem identifier="thorium" amount="2" />
             <Item identifier="aluminium"/>
         </Deconstruct>
         <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="320,128,64,64" />-->
@@ -201,7 +203,8 @@
     </Item>
 
     <Item name="" identifier="nuclearlaserfulguriumammobox" scale="0.5" tags="nuclearlaserequipment,nuclearlaserammo,ammobox" category="Weapon" linkable="true" impactsoundtag="impact_metal_heavy" health="42">
-        <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.02"/>
+        <PreferredContainer primary="emptyammoboxcontainer" maxcondition="1"/>
+        <PreferredContainer primary="coilgunammocontainer" spawnprobability="0.02" mincondition="1"/>
         <Price baseprice="600" sold="false" displaynonempty="true">
             <Price storeidentifier="merchantoutpost" multiplier="1.3" />
             <Price storeidentifier="merchantcity" multiplier="1.2"/>

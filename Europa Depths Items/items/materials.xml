@@ -107,7 +107,7 @@
     </Item>
 
     <Item name="" identifier="phosphorus" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,munition_propulsion,chem" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab,storagecab" />
+      <PreferredContainer primary="phosphorusstorage,chemcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="25" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -171,7 +171,7 @@
     </Item>
 
     <Item name="" identifier="sodium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,chem,explodesinwater" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab,medfabcab" />
+      <PreferredContainer primary="sodiumstorage,chemcab" secondary="materialcab,storagecab" />
       <PreferredContainer secondary="abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="33" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -233,8 +233,8 @@
       </Holdable>
     </Item>
 
-    <Item name="" identifier="calcium" category="Material" maxstacksize="8" Tags="smallitem,chem" canbepicked="true" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab,storagecab" secondary="medfabcab" />
+    <Item name="" identifier="calcium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,chem" canbepicked="true" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="calciumstorage,chemcab" secondary="materialcab,storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="31" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -298,7 +298,7 @@
     </Item>
 
     <Item name="" identifier="potassium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,chem,explodesinwater" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab,storagecab" />
+      <PreferredContainer primary="potassiumstorage,chemcab" secondary="storagecab" />
       <Price baseprice="10" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
         <Price storeidentifier="merchantcity" multiplier="1.25" />
@@ -361,7 +361,7 @@
     </Item>
 
     <Item name="" identifier="magnesium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,chem,munition_propulsion" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab" secondary="materialcab,storagecab" />
+      <PreferredContainer primary="magnesiumstorage,chemcab" secondary="materialcab,storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.10"/>
       <Price baseprice="65">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="4"/>
@@ -382,7 +382,7 @@
     </Item>
 
     <Item name="" identifier="lithium" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" Tags="smallitem,chem,explodesinwater" canbepicked="true" description="" cargocontaineridentifier="chemicalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab" secondary="materialcab,storagecab" />
+      <PreferredContainer primary="lithiumstorage,chemcab" secondary="materialcab,storagecab" />
       <PreferredContainer secondary="abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="88" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -424,7 +424,7 @@
     </Item>
 
     <Item name="" identifier="chlorine" category="Material" maxstacksize="32" maxstacksizecharacterinventory="12" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="chemcab" secondary="materialcab,storagecab" />
+      <PreferredContainer primary="chlorinestorage,chemcab" secondary="materialcab,storagecab" />
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Price baseprice="11" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" />
@@ -739,7 +739,7 @@
     <!-- ALIEN MATERIALS -->
 
     <Item name="" identifier="incendium" category="Material,Alien" Tags="smallitem,ore" maxstacksize="32" maxstacksizecharacterinventory="12" cargocontaineridentifier="materialcrate" canbepicked="true" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab" secondary="storagecab" />
+      <PreferredContainer primary="incendiumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab" amount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="ruinstorage,ruinstoragesmall" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstoragelarge" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -784,7 +784,7 @@
     </Item>
 
     <Item name="" identifier="fulgurium" category="Material,Alien" Tags="smallitem,ore" maxstacksize="32" maxstacksizecharacterinventory="12" cargocontaineridentifier="materialcrate" canbepicked="true" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="materialcab" secondary="storagecab" />
+      <PreferredContainer primary="fulguriumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab" amount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="ruinstorage,ruinstoragesmall" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstoragelarge" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -815,8 +815,9 @@
         <RequiredItem items="cuttingequipment" type="Equipped" />
       </LevelResource>
     </Item>
+
     <Item name="" identifier="physicorium" category="Material,Alien" Tags="smallitem,ore" maxstacksize="32" maxstacksizecharacterinventory="12" scale="0.5" cargocontaineridentifier="materialcrate" canbepicked="true">
-      <PreferredContainer primary="materialcab" secondary="storagecab" />
+      <PreferredContainer primary="physicoriumstorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab" amount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="ruinstorage,ruinstoragesmall" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstoragelarge" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -849,7 +850,7 @@
     </Item>
 
     <Item name="" identifier="dementonite" category="Material,Alien" Tags="smallitem,ore" maxstacksize="32" maxstacksizecharacterinventory="12" scale="0.5" cargocontaineridentifier="materialcrate" canbepicked="true">
-      <PreferredContainer primary="materialcab" secondary="storagecab" />
+      <PreferredContainer primary="dementonitestorage,materialcab" secondary="storagecab" />
       <PreferredContainer secondary="wreckstoragecab" amount="1" spawnprobability="0.02" />
       <PreferredContainer secondary="ruinstorage,ruinstoragesmall" amount="1" spawnprobability="0.05" />
       <PreferredContainer secondary="ruinstoragelarge" minamount="1" maxamount="2" spawnprobability="0.1" />
