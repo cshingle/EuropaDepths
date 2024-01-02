@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="" identifier="largeengine_boost" inherit="largeengine" tags="engine" category="Machine" Scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" GrabWhenSelected="true">
+    <LightComponent range="10.0" lightcolor="255,0,0,50" powerconsumption="1" IsOn="false" castshadows="false" allowingameediting="false">
+      <IsActive targetitemcomponent="Engine" currpowerconsumption="gt 3000" />
+      <StatusEffect type="OnActive" target="This" Condition="-2">
+        <ParticleEmitter particle="fleshsmoke" particlespersecond="4" scalemin="2" scalemax="4" angle="270" distance="30" />
+      </StatusEffect>
+      <sprite texture="Content/Items/Engine/Engines.png" depth="0.025" sourcerect="0,933,1613,592" origin="0.5,0.5" alpha="0.2" />
+    </LightComponent>
+  </Item>
+</Items>

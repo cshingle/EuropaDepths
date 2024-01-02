@@ -104,6 +104,15 @@
       <Containable items="smallitem,mediumitem" />
     </ItemContainer>
   </Item>
+
+<Item name="Plant Cabinet" identifier="plant_cabnet" nameidentifier="plantcabinet" tags="locker,container,plantcab" linkable="true" pickdistance="150" waterproof="true" width="80" height="128" texturescale="1.0,1.0" scale="0.8" category="Equipment">
+  <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="400,0,80,128" depth="0.84" premultiplyalpha="false" origin="0.5,0.5" />
+  <ItemContainer capacity="30" slotsperrow="6" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
+    <GuiFrame relativesize="0.25,0.45" anchor="Center" slotsperrow="6" style="ItemUI" />
+    <Containable items="planter,wateringcan,fertilizer,seedbag,plantitem,smallitem" />
+  </ItemContainer>
+</Item>
+
   <Item name="Large Shelf" identifier="shelflarge" description="Storage for small and medium items" tags="locker,container" linkable="true" pickdistance="150" waterproof="true" width="272" height="336" texturescale="1.0,1.0" scale="0.5" category="Equipment">
     <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1504,1,272,336" depth="0.84" premultiplyalpha="false" origin="0.5,0.5" />
     <ItemContainer capacity="30" slotsperrow="6" canbeselected="true" hideitems="true" msg="ItemMsgInteractSelect">
@@ -187,6 +196,27 @@
       <Containable items="ammobox,coilgunammo,depthchargeammo" />
     </ItemContainer>
   </Item>
+  <Item name="Large Ammunition Shelf" identifier="largecoilgunammoshelftileable" tags="container,ammoboxcontainer" linkable="true" pickdistance="150" waterproof="true" scale="0.5">
+    <Sprite texture="%ModDir%/sprites/equipment.png" depth="0.84" sourcerect="140,215,122,405" canflipx="false" origin="0.5,0.5" />
+    <ItemContainer capacity="4" canbeselected="true" hideitems="false" itempos="70,-52" iteminterval="0,-96" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.26,0.20" anchor="Center" style="ItemUI" />
+      <Containable items="ammobox,coilgunammo,depthchargeammo" />
+    </ItemContainer>
+  </Item>
+  <Item name="Large Ammunition Shelf (Empty)" identifier="largecoilgunammoshelfempty" tags="container,emptyammoboxcontainer" linkable="true" pickdistance="150" waterproof="true" scale="0.5">
+    <Sprite texture="%ModDir%/sprites/equipment.png" depth="0.84" sourcerect="0,215,140,405" canflipx="false" origin="0.5,0.5" />
+    <ItemContainer capacity="4" canbeselected="true" hideitems="false" itempos="70,-52" iteminterval="0,-96" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.26,0.20" anchor="Center" style="ItemUI" />
+      <Containable items="ammobox,coilgunammo,depthchargeammo" />
+    </ItemContainer>
+  </Item>
+  <Item name="Large Ammunition Shelf (Depthcharge)" identifier="largedepthchargeammoshelf" tags="container,depthchargecontainer" linkable="true" pickdistance="150" waterproof="true" scale="0.5">
+    <Sprite texture="%ModDir%/sprites/equipment.png" depth="0.84" sourcerect="0,215,140,405" canflipx="false" origin="0.5,0.5" />
+    <ItemContainer capacity="4" canbeselected="true" hideitems="false" itempos="70,-52" iteminterval="0,-96" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.26,0.20" anchor="Center" style="ItemUI" />
+      <Containable items="ammobox,coilgunammo,depthchargeammo" />
+    </ItemContainer>
+  </Item>
   <Item name="Crate Shelf (No Cargo)" identifier="crateshelfnocargo" tags="container" linkable="true" canflipx="false" pickdistance="150" scale="0.5">
     <Sprite texture="Content/Items/Containers/containers.png" depth="0.84" sourcerect="1,657,185,366" origin="0.5,0.5" />
     <ItemContainer capacity="4" maxstacksize="1" canbeselected="true" hideitems="false" itempos="92,-48" iteminterval="0,-92" msg="ItemMsgInteractSelect">
@@ -230,17 +260,9 @@
       </StatusEffect>
     </Controller>
   </Item>
-  <Item name="" identifier="largeengine_boost" inherit="largeengine" tags="engine" category="Machine" Scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" GrabWhenSelected="true">
-    <LightComponent range="10.0" lightcolor="255,0,0,50" powerconsumption="1" IsOn="false" castshadows="false" allowingameediting="false">
-      <IsActive targetitemcomponent="Engine" currpowerconsumption="gt 3000" />
-      <StatusEffect type="OnActive" target="This" Condition="-2">
-        <ParticleEmitter particle="fleshsmoke" particlespersecond="4" scalemin="2" scalemax="4" angle="270" distance="30" />
-      </StatusEffect>
-      <sprite texture="Content/Items/Engine/Engines.png" depth="0.025" sourcerect="0,933,1613,592" origin="0.5,0.5" alpha="0.2" />
-    </LightComponent>
-  </Item>
+
   <Item name="" identifier="oxygentankshelflarge" nameidentifier="oxygentankshelf" category="Diving" tags="container,oxygentankcontainer,oxygentankrefiller" pickdistance="50" scale="0.5">
-    <Sprite name="Diving Suit Locker Large" texture="%ModDir%/sprites/equipment.png" sourcerect="145,221,257,84" depth="0.84" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Locker Large" texture="%ModDir%/sprites/equipment.png" sourcerect="418,0,257,84" depth="0.84" origin="0.5,0.5" />
     <Powered powerconsumption="60" currpowerconsumption="60" isactive="true">
       <GuiFrame relativesize="0.18,0.15" minsize="350,160" maxsize="420,192" anchor="Center" relativeoffset="0,-0.1" style="ItemUI" msg="ItemMsgInteractSelect" />
     </Powered>
@@ -271,7 +293,7 @@
     </ItemContainer>
   </Item>
   <Item name="" identifier="oxygentankshelflarge_oxygengenerator" nameidentifier="oxygentankshelf" category="Machine" tags="container,oxygentankcontainer,oxygentankrefiller" pickdistance="50" linkable="true" allowedlinks="oxygenerator" scale="0.5">
-    <Sprite name="Diving Suit Locker Large" texture="%ModDir%/sprites/equipment.png" sourcerect="145,221,257,84" depth="0.84" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Locker Large" texture="%ModDir%/sprites/equipment.png" sourcerect="418,0,257,84" depth="0.84" origin="0.5,0.5" />
     <Vent>
       <sound file="Content/Items/OxygenGenerator/Ventilation.ogg" type="OnActive" range="400.0" volumeproperty="OxygenFlow" volume="0.0005f" loop="true"/>
     </Vent>
@@ -305,10 +327,7 @@
     </ItemContainer>
   </Item>
   <Item name="Charging Dock Large" identifier="chargingdocklarge" tags="chargingdock,batterycellrecharger" category="Electrical,Machine" scale="0.5" description="">
-    <UpgradePreviewSprite texture="Content/UI/WeaponUI.png" sourcerect="64,961,32,22" origin="0.5,0.45" />
-    <Sprite texture="%ModDir%/sprites/equipment.png" sourcerect="145,309,210,31" depth="0.8" />
-    <BrokenSprite texture="%ModDir%/sprites/equipment.png" sourcerect="145,309,210,31" depth="0.8" maxcondition="40" fadein="true" />
-    <BrokenSprite texture="%ModDir%/sprites/equipment.png" sourcerect="145,309,210,31" maxcondition="0" />
+    <Sprite texture="%ModDir%/sprites/equipment.png" sourcerect="418,84,210,31" depth="0.8" />
     <Powered powerconsumption="200" currpowerconsumption="200" isactive="true">
       <GuiFrame relativesize="0.18,0.15" minsize="350,160" maxsize="420,192" anchor="Center" relativeoffset="0,-0.1" style="ItemUI" msg="ItemMsgInteractSelect" />
       <StatusEffect type="OnActive" targettype="Contained" targets="loadable" Condition="2.0">

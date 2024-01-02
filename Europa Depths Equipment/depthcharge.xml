@@ -14,4 +14,12 @@
       <input name="trigger_in" displayname="connection.turrettriggerin" />
     </ConnectionPanel>
   </Item>
+
+  <Item name="Double Depth Charge Loader" identifier="depthchargeloaderdouble" tags="depthchargeammosource" category="Machine,Weapon" linkable="true" allowedlinks="depthchargelauncher" scale="0.5">
+    <Sprite texture="%ModDir%/sprites/equipment.png" depth="0.8" sourcerect="262,215,125,375" origin="0.5,0.5" />
+    <ItemContainer hideitems="false" drawinventory="true" capacity="2" maxstacksize="1" slotsperrow="1" itempos="62,-117" itemrotation="-90" iteminterval="0,-187" canbeselected="true" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.18,0.23" anchor="Center" minsize="140,390" maxsize="280,460" style="ItemUI" />
+      <Containable items="depthchargeammo" />
+    </ItemContainer>
+  </Item>
 </Items>

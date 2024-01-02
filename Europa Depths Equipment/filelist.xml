@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Equipment" modversion="1.5.7" corepackage="False" steamworkshopid="2832149257" gameversion="1.2.7.0">
+<contentpackage name="Europa Depths Equipment" modversion="1.5.10" corepackage="False" steamworkshopid="2832149257" gameversion="1.2.7.0">
+  <Item file="%ModDir%/depthcharge.xml" />
+  <Item file="%ModDir%/engine.xml" />
   <Item file="%ModDir%/equipment.xml" />
   <Item file="%ModDir%/posters.xml" />
-  <Item file="%ModDir%/depthcharge.xml" />
-  <Text file="%ModDir%/English.xml" />
   <Other file="%ModDir%/sprites/equipment.png" />
   <Other file="%ModDir%/sprites/posters.png" />
-  <Submarine file="%ModDir%/Sea Snake.sub" />
-  <Submarine file="%ModDir%/MudFish.sub" />
-  <Submarine file="%ModDir%/Impulse.sub" />
-  <Submarine file="%ModDir%/Basilisk.sub" />
   <Submarine file="%ModDir%/Ægir.sub" />
+  <Submarine file="%ModDir%/Basilisk.sub" />
+  <Submarine file="%ModDir%/Impulse.sub" />
   <Submarine file="%ModDir%/Massena.sub" />
+  <Submarine file="%ModDir%/MudFish.sub" />
+  <Submarine file="%ModDir%/Sea Snake.sub" />
+  <Text file="%ModDir%/English.xml" />
   <Submarine file="%ModDir%/Vulture.sub" />
 </contentpackage>
