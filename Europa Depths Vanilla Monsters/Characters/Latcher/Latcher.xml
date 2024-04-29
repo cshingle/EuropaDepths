@@ -33,15 +33,17 @@
   <sound file="Content/Characters/Latcher/ABYSSM_escape_1.ogg" state="Die" range="30000" volume="1" />
   <Inventory slots="Any, Any, Any, Any, Any" accessiblewhenalive="False" commonness="3">
     <Item identifier="diversremains" />
+    <Item identifier="ilmenite" amount="2" />
     <Item identifier="ballisticfiber" />
   </Inventory>
   <Inventory slots="Any, Any, Any, Any, Any" accessiblewhenalive="False" commonness="1">
     <Item identifier="diversremains" />
-    <Item identifier="diversremains" />
-    <Item identifier="ballisticfiber" />
+    <Item identifier="ilmenite" amount="2" />
+    <Item identifier="ballisticfiber" amount="3" />
   </Inventory>
   <Inventory slots="Any, Any, Any, Any, Any" accessiblewhenalive="False" commonness="1">
     <Item identifier="diversremains" />
+    <Item identifier="ilmenite" amount="2" />
     <Item identifier="ballisticfiber" amount="2" />
   </Inventory>
   <ai CombatStrength="7000" Sight="3" Hearing="10" AggressionHurt="100" AggressionGreed="0" FleeHealthThreshold="0" AttackWhenProvoked="False" AvoidGunfire="True" DamageThreshold="50" AvoidTime="10" MinFleeTime="20" AggressiveBoarding="False" EnforceAggressiveBehaviorForMissions="True" TargetOuterWalls="True" RandomAttack="True" CanOpenDoors="False" KeepDoorsClosed="False" AvoidAbyss="False" StayInAbyss="False" PatrolFlooded="False" PatrolDry="False" StartAggression="0" MaxAggression="100" AggressionCumulation="10" WallTargetingMethod="Target">

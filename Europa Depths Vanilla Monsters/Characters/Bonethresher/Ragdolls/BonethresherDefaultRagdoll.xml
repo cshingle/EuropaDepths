@@ -30,6 +30,7 @@
       <affliction identifier="bitewounds" strength="60" probability="1" />
       <affliction identifier="bleeding" strength="60" probability="1" />
       <affliction identifier="stun" strength="1" probability="1" />
+      <Affliction identifier="infection" amount="10" probability="0.75" />
     </attack>
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bitewounds" afflictiontypes="" damagesound="" probabilitymultiplier="1" damageparticle="" />
   </limb>

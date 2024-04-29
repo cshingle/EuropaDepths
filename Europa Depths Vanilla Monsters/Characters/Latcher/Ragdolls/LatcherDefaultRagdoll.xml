@@ -11,7 +11,7 @@
       <spritedeformation type="custom" row0="0,0 0,0 0,0 0,0 0,0" row1="0,0 0,0 0,0.5 0,0 0,0" row2="0,0 0,0.75 0,1 0,0.75 0,0" row3="0,1 0,1 0,1 0,1 0,1" row4="0,0.5 0,0.25 0,0.75 0,0.25 0,0.5" typename="custom" Frequency="2" Amplitude="0.2" Sync="-1" BlendMode="Add" Strength="1" MaxRotation="90" UseMovementSine="True" StopWhenHostIsDead="False" OnlyInWater="False" SineOffset="0.5" Resolution="5,5" />
     </deformablesprite>
     <damagemodifier DamageSound="" DamageParticle="" DamageMultiplier="2" ProbabilityMultiplier="1" ArmorSector="0,360" DeflectProjectiles="False" AfflictionIdentifiers="" AfflictionTypes="bleeding,damage,burn" />
-    <StatusEffect type="OnDamaged" onlyplayertriggered="true">
+    <StatusEffect type="OnDamaged" target="This" onlyplayertriggered="true">
       <requiredaffliction type="damage" minstrength="10" />
       <requiredaffliction type="burn" minstrength="10" />
       <Conditional isdead="False" />
