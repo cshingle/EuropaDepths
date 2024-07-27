@@ -107,7 +107,7 @@
     </Item>
     <Item name="" identifier="extinguisherbracket" category="Equipment" tags="extinguisherholder" canflipx="false" canflipy="false" scale="0.5" pickdistance="75">
       <Sprite texture="Content/Items/Containers/containers.png" depth="0.84" sourcerect="815,349,72,204" origin="0.5,0.5" />
-      <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="1" itempos="35,-130" iteminterval="0,0" itemrotation="0" canbeselected="true" msg="ItemMsgInteractSelect">
+      <ItemContainer hideitems="false" drawinventory="true" capacity="1" AutoInteractWithContained="true" maxstacksize="1" slotsperrow="1" itempos="35,-130" iteminterval="0,0" itemrotation="0" canbeselected="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
         <Containable items="extinguisher" />
       </ItemContainer>
@@ -116,7 +116,7 @@
     <Item name="" identifier="weaponholder" category="Weapon" tags="weaponholder" canflipx="false" canflipy="false" scale="0.5">
       <Sprite texture="Content/Items/Containers/containers.png" depth="0.85" sourcerect="188,596,84,85" origin="0.5,0.5"/>
       <DecorativeSprite texture="Content/Items/Containers/containers.png" depth="0.83" sourcerect="188,682,124,33" origin="0.5,0.5" />
-      <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="1" itempos="46,-47" iteminterval="0,0" itemrotation="90" containedspritedepth="0.84" canbeselected="true" msg="ItemMsgInteractSelect">
+      <ItemContainer hideitems="false" drawinventory="true" capacity="1" AutoInteractWithContained="true" maxstacksize="1" slotsperrow="1" itempos="46,-47" iteminterval="0,0" itemrotation="90" containedspritedepth="0.84" canbeselected="true" msg="ItemMsgInteractSelect">
         <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
         <Containable items="mountableweapon" />
       </ItemContainer>
@@ -149,10 +149,10 @@
       </Price>
       <InventoryIcon texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="806,103,124,100" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="806,2,124,100" depth="0.6" />
-      <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="934,49,30,30" offset="24,-11" depth="0.599" rotationspeed="500">
+      <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="934,49,30,30" offset="24,-11" depth="0.59999" rotationspeed="500">
         <AnimationConditional Voltage="gt 0.1" targetitemcomponent="LightComponent"/>
       </DecorativeSprite>
-      <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="934,49,30,30" offset="-23,-11" depth="0.599" rotationspeed="-500">
+      <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="934,49,30,30" offset="-23,-11" depth="0.59999" rotationspeed="-500">
         <AnimationConditional Voltage="gt 0.1" targetitemcomponent="LightComponent"/>
       </DecorativeSprite>
       <Body width="124" height="95" density="20" />

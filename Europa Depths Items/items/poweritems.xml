@@ -6,8 +6,8 @@
       <PreferredContainer primary="batterycellrecharger" maxcondition="80"/>
       <PreferredContainer primary="stunbaton,underwaterscooter,handheldsonar,sonarbeacon,flashlight,portablepump,poweredcontainer,divingsuit,abyssdivingsuit,combatdivingsuit,pucs,slipsuit" spawnprobability="1.0" mincondition="25"/>
       <PreferredContainer secondary="divingcab" amount="3" spawnprobability="1" notcampaign="true"/>
-      <PreferredContainer secondary="abandonedengcab,wreckengcab,outpostengcab" minamount="1" maxamount="2" spawnprobability="0.1"/>
-      <PreferredContainer secondary="abandonedstoragecab,wreckstoragecabcab" minamount="1" maxamount="2" spawnprobability="0.05"/>
+      <PreferredContainer secondary="abandonedengcab,pirateengcab,wreckengcab,outpostengcab" minamount="1" maxamount="2" spawnprobability="0.1"/>
+      <PreferredContainer secondary="abandonedstoragecab,piratestoragecab,wreckstoragecab" minamount="1" maxamount="2" spawnprobability="0.05"/>
       <PreferredContainer secondary="outposttrashcan" amount="1" spawnprobability="0.1" />
       <Upgrade gameversion="0.10.0.0" scale="0.5"/>
       <Price baseprice="125" minavailable="7">
@@ -41,7 +41,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5"/>
       <PreferredContainer primary="batterycellrecharger" maxcondition="80"/>
       <PreferredContainer secondary="divingcab,engcab,reactorcab,stunbaton,underwaterscooter,handheldsonar,sonarbeacon,flashlight,portablepump,poweredcontainer,divingsuit,abyssdivingsuit,combatdivingsuit,pucs,slipsuit"/>
-      <PreferredContainer secondary="abandonedengcab,wreckengcab" amount="1" spawnprobability="0.05"/>
+      <PreferredContainer secondary="abandonedengcab,pirateengcab,wreckengcab" amount="1" spawnprobability="0.05"/>
       <Price baseprice="250" minavailable="1" minleveldifficulty="15">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.25" />
         <Price storeidentifier="merchantcity" />

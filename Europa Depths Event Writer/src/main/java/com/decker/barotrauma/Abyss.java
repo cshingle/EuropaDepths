@@ -1,9 +1,9 @@
 package com.decker.barotrauma;
 
-import com.decker.barotrauma.campaign.AbyssEvent;
-import com.decker.barotrauma.campaign.Character;
-import com.decker.barotrauma.campaign.MonsterEvent;
-import com.decker.barotrauma.campaign.MonsterSet;
+import com.decker.barotrauma.components.AbyssEvent;
+import com.decker.barotrauma.components.MonsterEvent;
+import com.decker.barotrauma.components.Character;
+import com.decker.barotrauma.components.MonsterSet;
 
 public class Abyss {
 	public static AbyssEvent coldCaverns() {

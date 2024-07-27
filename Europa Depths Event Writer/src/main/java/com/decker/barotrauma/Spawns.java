@@ -1,13 +1,9 @@
 package com.decker.barotrauma;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import com.decker.barotrauma.campaign.Character;
-import com.decker.barotrauma.campaign.Monster;
-import com.decker.barotrauma.campaign.MonsterEvent;
-import com.decker.barotrauma.campaign.MonsterSet;
+import com.decker.barotrauma.components.Character;
+import com.decker.barotrauma.components.Monster;
+import com.decker.barotrauma.components.MonsterEvent;
+import com.decker.barotrauma.components.MonsterSet;
 
 public class Spawns {
 	public static Monster[] coldCaverns1() {
@@ -33,14 +29,12 @@ public class Spawns {
 						new MonsterEvent(Character.Mudraptor_unarmored, 2, 3),
 						new MonsterEvent(Character.Mudraptor, 0, 3)),
 				new MonsterSet("spinglings", false, 20).monsters(
-						new MonsterEvent(Character.Spineling, 4, 6)),
-				new MonsterSet("hammerheads", false, 20).monsters(
-						new MonsterEvent(Character.Hammerhead, 1, 2))
+						new MonsterEvent(Character.Spineling, 4, 6))
 		};
 	}
 	
 	/**
-	 * Introduces (armored/regular) Mudraptors, Threshers, Golden Hammerhead (rare), Crawler Broodmother, Husks, Husked Crawlers, and the first abyss monster.
+	 * Introduces (armored/regular) Mudraptors, Golden Hammerhead (rare), Crawler Broodmother (rare), Husks, Husked Crawlers, and the first abyss monster.
 	 * 
 	 * @return
 	 */
@@ -58,6 +52,9 @@ public class Spawns {
 						new MonsterEvent(Character.Mudraptor, 1, 5)),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Character.Spineling, 4, 10)),
+				new MonsterSet("spinglings_red", false, 10).monsters(
+						new MonsterEvent(Character.Spineling_red, 3, 4),
+						new MonsterEvent(Character.Spineling, 3, 4)),
 				new MonsterSet("hammerheads", false, 10).monsters(
 						new MonsterEvent(Character.Hammerhead, 2, 3),
 						new MonsterEvent(Character.Hammerheadgold, 0, 2),
@@ -74,12 +71,32 @@ public class Spawns {
 	 * @return
 	 */
 	public static Monster[] europanRidge() {
-		List<Monster> monsters = new ArrayList<>();
-		monsters.addAll(Arrays.asList(coldCavernsTransition()));
-		monsters.add(
+		return new Monster[] {
+				new MonsterSet("crawlerswarm", false, 40).monsters(
+						new MonsterEvent(Character.Crawler, 5, 6),
+						new MonsterEvent(Character.Crawlerbroodmother, 0, 1)),
+				new MonsterSet("husks", false, 20).monsters(
+						new MonsterEvent(Character.Husk, 6, 10).scatter(800)),
+				new MonsterSet("Crawlerhusk", false, 40).monsters(
+						new MonsterEvent(Character.Crawlerhusk, 5, 6)),
+				new MonsterSet("mudraptors", false, 40).monsters(
+						new MonsterEvent(Character.Mudraptor_unarmored, 2, 4),
+						new MonsterEvent(Character.Mudraptor, 1, 5)),
+				new MonsterSet("spinglings", false, 20).monsters(
+						new MonsterEvent(Character.Spineling, 4, 10)),
+				new MonsterSet("spinglings_red", false, 10).monsters(
+						new MonsterEvent(Character.Spineling_red, 4, 5),
+						new MonsterEvent(Character.Spineling, 2, 3)),
+				new MonsterSet("hammerheads", false, 10).monsters(
+						new MonsterEvent(Character.Hammerhead, 2, 3),
+						new MonsterEvent(Character.Hammerheadgold, 0, 2),
+						new MonsterEvent(Character.Hammerhead_juvenile, 1, 2).spawnprobability(0.5)),
+				new MonsterSet("threshers", false, 20).monsters(
+						new MonsterEvent(Character.Bonethresher, 1, 2),
+						new MonsterEvent(Character.Tigerthresher, 2, 3)),
 				new MonsterSet("molochs", false, 10).monsters(
-						new MonsterEvent(Character.Moloch, 1, 1).offset(3000).scatter(3000)));
-		return monsters.toArray(new Monster[0]);
+						new MonsterEvent(Character.Moloch, 1, 1).offset(3000).scatter(3000))
+		};
 	}
 	
 	public static Monster[] europanRidgeToPlateau() {
@@ -94,6 +111,9 @@ public class Spawns {
 						new MonsterEvent(Character.Mudraptor_veteran, 1, 2)),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Character.Spineling, 7, 12)),
+				new MonsterSet("spinglings", false, 10).monsters(
+						new MonsterEvent(Character.Spineling, 3, 5),
+						new MonsterEvent(Character.Spineling_red, 2, 3)),
 				new MonsterSet("hammerheads", false, 30).monsters(
 						new MonsterEvent(Character.Hammerhead, 2, 3),
 						new MonsterEvent(Character.Hammerheadgold, 1, 2),
@@ -190,8 +210,8 @@ public class Spawns {
 										new MonsterEvent(Character.Bonethresher, 1, 2),
 										new MonsterEvent(Character.Tigerthresher, 3, 5)))),
 				new MonsterSet("spinglings", false, 20).monsters(
-						new MonsterEvent(Character.Spineling, 10, 18),
-						new MonsterEvent(Character.Spineling_red, 1, 1),
+						new MonsterEvent(Character.Spineling, 6, 8),
+						new MonsterEvent(Character.Spineling_red, 3, 5),
 						new MonsterEvent(Character.Spineling_giant, 1, 2)),
 				new MonsterSet("hammerheads", false, 30).monsters(
 						new MonsterEvent(Character.Hammerhead, 2, 6),
@@ -215,7 +235,10 @@ public class Spawns {
 				new MonsterSet("mudraptors", false, 40).monsters(
 						new MonsterEvent(Character.Mudraptor_veteran, 6, 10)),
 				new MonsterSet("thrashers", false, 40).monsters(
-						new MonsterEvent(Character.Tigerthresher_veteran, 5, 8))
+						new MonsterEvent(Character.Tigerthresher_veteran, 5, 8)),
+				new MonsterSet("spinelings", false, 5).monsters(
+						new MonsterEvent(Character.Spineling_red, 3, 3),
+						new MonsterEvent(Character.Spineling_morbusine, 0, 3).spawnprobability(0.33).scatter(2000))
 		};
 	}
 	
@@ -296,7 +319,10 @@ public class Spawns {
 				new MonsterSet("molochs", true, 5).monsters(
 						new MonsterEvent(Character.Moloch, 2, 3).offset(1000).scatter(3000),
 						new MonsterEvent(Character.Molochbaby, 10, 20).scatter(3000),
-						new MonsterEvent(Character.Molochblack, 1, 1).offset(10000).scatter(3000))
+						new MonsterEvent(Character.Molochblack, 1, 1).offset(10000).scatter(3000)),
+				new MonsterSet("spinelings", false, 5).monsters(
+						new MonsterEvent(Character.Spineling_red, 3, 3),
+						new MonsterEvent(Character.Spineling_morbusine, 0, 3).spawnprobability(0.33).scatter(2000))
 		};
 	}
 	
@@ -325,9 +351,13 @@ public class Spawns {
 										new MonsterEvent(Character.Bonethresher_veteran, 2, 3),
 										new MonsterEvent(Character.Tigerthresher_veteran, 3, 5)))),
 				new MonsterSet("spinglings", false, 20).monsters(
-						new MonsterEvent(Character.Spineling, 10, 20),
+						new MonsterEvent(Character.Spineling, 10, 14),
+						new MonsterEvent(Character.Spineling_morbusine, 2, 3),
 						new MonsterEvent(Character.Spineling_red, 2, 3),
 						new MonsterEvent(Character.Spineling_giant, 2, 3)),
+				new MonsterSet("spinglings", false, 20).monsters(
+						new MonsterEvent(Character.Spineling, 7, 10),
+						new MonsterEvent(Character.Spineling_morbusine, 7, 9)),
 				new MonsterSet("threshers", false, 40).monsters(
 						new MonsterEvent(Character.Bonethresher_veteran, 3, 4).scatter(1000),
 						new MonsterEvent(Character.Tigerthresher_veteran, 5, 8)),
@@ -352,7 +382,7 @@ public class Spawns {
 								new MonsterEvent(Character.Molochbaby, 10, 20).scatter(3000),
 								new MonsterEvent(Character.Molochblack, 1, 1).offset(10000).scatter(3000))),
 				new MonsterSet("portalguardians", false, 1).monsters(
-						new MonsterEvent(Character.Portalguardian, 1, 1)),
+						new MonsterEvent(Character.Portalguardian, 1, 2)),
 				new MonsterSet("latcher", false, 5).monsters(
 						new MonsterEvent(Character.Latcher, 1, 1)),
 				new MonsterSet("destroyer", false, 1).monsters(

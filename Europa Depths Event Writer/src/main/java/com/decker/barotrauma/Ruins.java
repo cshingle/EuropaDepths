@@ -1,10 +1,10 @@
 package com.decker.barotrauma;
 
-import com.decker.barotrauma.campaign.Character;
-import com.decker.barotrauma.campaign.MonsterEvent;
-import com.decker.barotrauma.campaign.MonsterSet;
-import com.decker.barotrauma.campaign.RuinEncounters;
-import com.decker.barotrauma.campaign.RuinEvent;
+import com.decker.barotrauma.components.Character;
+import com.decker.barotrauma.components.MonsterEvent;
+import com.decker.barotrauma.components.MonsterSet;
+import com.decker.barotrauma.components.RuinEncounters;
+import com.decker.barotrauma.components.RuinEvent;
 
 public class Ruins {
 	

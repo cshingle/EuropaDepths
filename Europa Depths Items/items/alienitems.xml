@@ -68,7 +68,7 @@
         <Item identifier="incendium" />
         <Item identifier="incendium" />
       </Deconstruct>
-      <Body width="80" height="95" density="40" friction="0.95" />
+      <Body width="80" height="95" density="13" friction="0.95" />
       <Holdable slots="RightHand+LeftHand" holdpos="30,-15" handle1="0,10" handle2="0,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="NotInWater" target="This" stackable="false" delay="15" checkconditionalalways="true">
           <Conditional hastag="neq artifactcontainer" targetcontainer="true" />
@@ -339,7 +339,7 @@
           <Affliction identifier="lacerations" strength="10" />
           <Affliction identifier="bleeding" strength="10" />
           <Affliction identifier="stun" strength="0.25" />
-          <Affliction identifier="bloodpoisoning" strength="0.5" />
+          <Affliction identifier="infection" strength="0.5" />
         </Attack>
         <StatusEffect type="OnActive" target="This" lifetime="0.5">
           <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="0" anglemax="0" particleamount="10" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" />
@@ -376,7 +376,7 @@
           <Affliction identifier="bleeding" strength="10" />
           <Affliction identifier="stun" strength="1" />
           <Affliction identifier="stun" strength="0.5" probability="0.25" />
-          <Affliction identifier="bloodpoisoning" strength="1" />
+          <Affliction identifier="infection" strength="1" />
         </Attack>
         <StatusEffect type="OnActive" target="This" lifetime="0.5">
           <ParticleEmitter particle="ammotrailwater" copyentityangle="true" anglemin="0" anglemax="0" particleamount="10" velocitymin="-10" velocitymax="-100" scalemin="0.5" scalemax="1" />

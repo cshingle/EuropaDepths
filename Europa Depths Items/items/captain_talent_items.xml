@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <Override>
-    <Item name="" identifier="handcannonround" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" Scale="0.5" tags="smallitem,handcannonammo,pistolammoitem" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="handcannonround" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" Scale="0.5" tags="smallitem,handcannonammo,handheldammo,pistolammoitem" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="ammocab,secarmcab" secondary="armcab"/>
       <PreferredContainer primary="handcannon" amount="6" spawnprobability="1.0"/>
       <PreferredContainer secondary="wrecksecarmcab" minamount="1" maxamount="6" spawnprobability="0.02"/>
@@ -11,7 +11,7 @@
         <RequiredItem tag="munition_propulsion" description="fabricationdescription.munition_propulsion" />
         <RequiredItem tag="advmunition_tip" description="fabricationdescription.advmunition_tip" />
         <RequiredItem tag="advmunition_core" description="fabricationdescription.advmunition_core" />
-      <RequiredItem tag="advmunition_jacket" description="fabricationdescription.advmunition_jacket" />
+        <RequiredItem tag="advmunition_jacket" description="fabricationdescription.advmunition_jacket" />
       </Fabricate>
       <InventoryIcon texture="%ModDir%/sprites/items.png" sourcerect="496,192,64,64" origin="0.5,0.5" />
       <Sprite texture="%ModDir%/sprites/items.png" sourcerect="351,162,60,18" depth="0.55" origin="0.5,0.5" />
@@ -34,7 +34,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item name="" identifier="handcannon" category="Weapon" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,weapon,gun,pistolitem,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="handcannon" category="Weapon" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="smallitem,weapon,gun,pistolitem,mountableweapon,provocativetohumanai" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="secarmcab"/>
       <PreferredContainer secondary="armcab,weaponholder" />
       <Price baseprice="600" sold="false">
@@ -67,8 +67,8 @@
         <Sound file="Content/Items/JobGear/Captain/WEAPONS_handCannon_4.ogg" type="OnUse" range="3000" />
         <Sound file="Content/Items/JobGear/Captain/WEAPONS_handCannon_5.ogg" type="OnUse" range="3000" />
         <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="7.0,7.0" colormultiplier="255,200,115,200" />
-        <StatusEffect type="OnUse">
-<ParticleEmitter particle="casingfirearm" particleamount="1" anglemin="90" anglemax="150" velocitymin="50" velocitymax="250" CopyEntityAngle="true" />
+        <StatusEffect type="OnUse" target="This">
+          <ParticleEmitter particle="casingfirearm" particleamount="1" anglemin="90" anglemax="150" velocitymin="50" velocitymax="250" CopyEntityAngle="true" />
           <Explosion range="150.0" force="5" shockwave="false" smoke="false" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="6.0" />
         </StatusEffect>
         <RequiredItems items="handcannonammo" type="Contained" msg="ItemMsgAmmoRequired" />

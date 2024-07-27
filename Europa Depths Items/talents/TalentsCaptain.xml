@@ -11,24 +11,5 @@
       <AddedRecipe itemidentifier="3030round"/>
       <AddedRecipe itemidentifier="leveractionrifle"/>
     </Talent>
-
-    <Talent identifier="campaigning">
-      <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,4" sheetelementsize="128,128"/>
-      <Description tag="talentdescription.campaigning">
-        <Replace tag="[amount]" value="20" color="gui.green"/>
-      </Description>
-      <Description tag="talentdescription.extramission"/>
-      <AbilityGroupEffect abilityeffecttype="None">
-        <Abilities>
-          <CharacterAbilityGiveStat stattype="ExtraMissionCount" value="2"/>
-        </Abilities>
-      </AbilityGroupEffect>
-      <AbilityGroupEffect abilityeffecttype="None">
-        <Abilities>
-          <CharacterAbilityGivePermanentStat statidentifier="campaigning" stattype="ShipyardBuyMultiplierAffiliated" value="0.2" targetallies="true" setvalue="true" />
-        </Abilities>
-      </AbilityGroupEffect>
-    </Talent>
-
   </Override>
 </Talents>

@@ -34,8 +34,8 @@
       <AbilityGroupEffect abilityeffecttype="OnItemDeconstructedMaterial">
         <Conditions>
           <AbilityConditionServerRandom randomChance="0.2"/>
-          <!--  don't allow duplicating genetic materials  -->
-          <AbilityConditionItem tags="geneticmaterial,unidentifiedgeneticmaterial,bulkstorage" invert="true"/>
+          <!-- don't allow duplicating genetic materials, and prevent infinite FPGA circuits -->
+          <AbilityConditionItem tags="geneticmaterial,unidentifiedgeneticmaterial,circuitboxcomponent,lightcomponent" invert="true"/>
         </Conditions>
         <Abilities>
           <CharacterAbilityModifyValue multiplyvalue="2"/>

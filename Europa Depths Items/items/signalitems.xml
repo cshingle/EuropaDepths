@@ -11,7 +11,7 @@
                 <Price storeidentifier="merchantengineering" multiplier="0.9" />
             </Price>
             <PreferredContainer primary="fpgacircuitstorage,materialcab" secondary="engcab" />
-            <PreferredContainer secondary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.05" />
+            <PreferredContainer secondary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" amount="1" spawnprobability="0.05" />
             <Deconstruct time="5">
                 <Item identifier="copper" />
             </Deconstruct>
@@ -21,7 +21,7 @@
                 <RequiredItem identifier="copper" amount="2" />
                 <RequiredItem identifier="tin" />
             </Fabricate>
-            <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="true" amount="2">
+            <Fabricate suitablefabricators="fabricator" requiredtime="5" requiresrecipe="true" amount="2" displayname="cheapitem">
                 <RequiredSkill identifier="electrical" level="15" />
                 <RequiredItem identifier="plastic" />
                 <RequiredItem identifier="copper" amount="2" />

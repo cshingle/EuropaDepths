@@ -12,7 +12,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
       </Price>
       <PreferredContainer primary="plantcab" secondary="crewcab"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.1" />
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.1" />
       <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
         <requireditem items="wrench" type="Equipped" />
       </Holdable>
@@ -50,7 +50,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="0.75" />
       </Price>
       <PreferredContainer primary="plantcab" secondary="crewcab" amount="1" spawnprobability="0.5" notcampaign="true"/>
-      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,wreckcrewcab,abandonedcrewcab,outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,wreckcrewcab,abandonedcrewcab,outpostcrewcabinet,piratestoragecab" amount="1" spawnprobability="0.1" />
       <Body width="121" height="96" density="40" />
       <Fabricate suitablefabricators="fabricator" requiredtime="35">
         <RequiredSkill identifier="mechanical" level="20" />
@@ -98,7 +98,7 @@
 
     <Item name="" identifier="seedbag" category="Misc" Tags="smallitem,mobilecontainer" scale="0.5">
       <PreferredContainer primary="plantcab" secondary="crewcab"/>
-      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,wreckcrewcab,abandonedcrewcab,outpostcrewcabinet" amount="1" spawnprobability="0.2" />
+      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab,wreckcrewcab,abandonedcrewcab,outpostcrewcabinet,piratestoragecab" amount="1" spawnprobability="0.2" />
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="841,704,49,65" depth="0.55" origin="0.5,0.5" />
       <Body width="45" height="60" density="25" />
       <Price baseprice="60" minleveldifficulty="1">

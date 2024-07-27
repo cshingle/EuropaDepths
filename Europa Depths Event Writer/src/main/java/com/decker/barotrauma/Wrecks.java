@@ -1,10 +1,10 @@
 package com.decker.barotrauma;
 
-import com.decker.barotrauma.campaign.Character;
-import com.decker.barotrauma.campaign.MonsterEvent;
-import com.decker.barotrauma.campaign.MonsterSet;
-import com.decker.barotrauma.campaign.WreckEncountersEvent;
-import com.decker.barotrauma.campaign.WreckEvent;
+import com.decker.barotrauma.components.Character;
+import com.decker.barotrauma.components.MonsterEvent;
+import com.decker.barotrauma.components.MonsterSet;
+import com.decker.barotrauma.components.WreckEncountersEvent;
+import com.decker.barotrauma.components.WreckEvent;
 
 public class Wrecks {
 	
@@ -77,8 +77,12 @@ public class Wrecks {
 						new MonsterEvent(Character.Mudraptor_unarmored, 1, 2).spawndistance(1500),
 						new MonsterEvent(Character.Mudraptor, 0, 2).spawndistance(1500),
 						new MonsterEvent(Character.Mudraptor, 0, 2).spawndistance(1500)),
-				new MonsterSet("hammerheads", false, 10).allowatstart(true).monsters(
-						new MonsterEvent(Character.Hammerhead, 1, 3).spawndistance(1500).scatter(1000)));
+				new MonsterSet("hammerheads", false, 5).allowatstart(true).monsters(
+						new MonsterEvent(Character.Hammerhead, 1, 3).spawndistance(1500).scatter(1000)),
+				new MonsterSet("mantises", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Mantis, 2, 3).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 2, 3).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 2, 4).spawnprobability(0.5).spawndistance(1500)));
 	}
 	
 	public static WreckEncountersEvent aphoticPlateau1Encounters() {
@@ -123,20 +127,21 @@ public class Wrecks {
 						new MonsterEvent(Character.Mudraptor_unarmored, 1, 2).spawndistance(1500),
 						new MonsterEvent(Character.Mudraptor, 1, 2).spawndistance(1500),
 						new MonsterEvent(Character.Mudraptor, 1, 2).spawndistance(1500),
-						new MonsterEvent(Character.Mudraptor, 1, 2).spawndistance(1500),
-						new MonsterEvent(Character.Watcher, 0, 1).spawndistance(1500)),
+						new MonsterEvent(Character.Mudraptor, 1, 2).spawndistance(1500)),
 				new MonsterSet("threshers", false, 20).allowatstart(true).monsters(
 						new MonsterEvent(Character.Tigerthresher, 1, 2).spawndistance(1500),
 						new MonsterEvent(Character.Tigerthresher, 1, 2).spawndistance(1500),
 						new MonsterEvent(Character.Tigerthresher, 1, 2).spawndistance(1500),
 						new MonsterEvent(Character.Tigerthresher, 1, 2).spawndistance(1500)),
-				new MonsterSet("hammerheads", false, 10).allowatstart(true).monsters(
-						new MonsterEvent(Character.Hammerhead, 1, 3).spawndistance(2000).scatter(1000),
-						new MonsterEvent(Character.Hammerheadgold, 1, 2).spawndistance(2000).scatter(1000),
-						new MonsterEvent(Character.Hammerheadblack, 1, 3).spawndistance(2000).scatter(1000)),
-				new MonsterSet("hammerheadsblack", false, 10).allowatstart(true).monsters(
-						new MonsterEvent(Character.Hammerheadgold, 2, 2).spawndistance(2000).scatter(1000),
-						new MonsterEvent(Character.Hammerheadblack, 2, 3).spawndistance(2000).scatter(1000)));
+				new MonsterSet("hammerhead_juvenile", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Hammerhead_juvenile, 1, 2).spawndistance(1500),
+						new MonsterEvent(Character.Hammerhead_juvenile, 1, 2).spawndistance(1500),
+						new MonsterEvent(Character.Hammerhead_juvenile, 1, 1).spawndistance(1500)),
+				new MonsterSet("mantises", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Mantis, 1, 3).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 1, 3).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 1, 3).spawnprobability(0.5).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 1, 3).spawnprobability(0.5).spawndistance(1500)));
 	}
 	
 	public static WreckEncountersEvent aphoticPlateau2Encounters() {
@@ -206,7 +211,12 @@ public class Wrecks {
 						new MonsterEvent(Character.Husk, 2, 3).spawndistance(1500),
 						new MonsterEvent(Character.Husk, 2, 3).spawndistance(1500),
 						new MonsterEvent(Character.Husk, 2, 3).spawndistance(1500),
-						new MonsterEvent(Character.Husk, 2, 3).spawndistance(1500)));
+						new MonsterEvent(Character.Husk, 2, 3).spawndistance(1500)),
+				new MonsterSet("mantises", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Mantis, 2, 3).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 2, 3).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.5).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.5).spawndistance(1500)));
 	}
 	
 	public static WreckEncountersEvent greatSeaEncounters() {
@@ -279,8 +289,11 @@ public class Wrecks {
 						new MonsterEvent(Character.Husk, 3, 5).spawndistance(1500),
 						new MonsterEvent(Character.Husk, 3, 5).spawndistance(1500),
 						new MonsterEvent(Character.Husk, 3, 5).spawndistance(1500)),
-				new MonsterSet("charybdisjuvenile", false, 1).monsters(
-						new MonsterEvent(Character.Charybdis_juvenile, 1, 1).spawndistance(5000)));
+				new MonsterSet("mantises", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Mantis, 2, 4).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 2, 5).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 2, 4).spawnprobability(0.5).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 2, 4).spawnprobability(0.5).spawndistance(1500)));
 	}
 	
 	public static WreckEncountersEvent hydrothermalWastesEncounters() {
@@ -359,7 +372,10 @@ public class Wrecks {
 						new MonsterEvent(Character.Husk, 3, 5).spawndistance(1500),
 						new MonsterEvent(Character.Husk, 3, 5).spawndistance(1500),
 						new MonsterEvent(Character.Husk, 3, 5).spawndistance(1500)),
-				new MonsterSet("charybdisjuvenile", false, 1).monsters(
-						new MonsterEvent(Character.Charybdis_juvenile, 1, 1).spawndistance(5000)));
+				new MonsterSet("mantises", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Mantis, 3, 5).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 3, 5).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 3, 5).spawnprobability(0.5).spawndistance(1500),
+						new MonsterEvent(Character.Mantis, 3, 5).spawnprobability(0.5).spawndistance(1500)));
 	}
 }

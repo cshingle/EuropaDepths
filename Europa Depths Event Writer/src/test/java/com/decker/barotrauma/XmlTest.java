@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.decker.barotrauma.campaign.BeaconStationEncountersEvent;
-import com.decker.barotrauma.campaign.BeaconStationEvent;
+import com.decker.barotrauma.campaign.beacon.BeaconStationEvent;
 import com.decker.barotrauma.campaign.CaveEvent;
 import com.decker.barotrauma.campaign.Character;
 import com.decker.barotrauma.campaign.MonsterEvent;

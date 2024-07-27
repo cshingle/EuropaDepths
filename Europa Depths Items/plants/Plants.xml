@@ -30,8 +30,8 @@
         <FlowerSprite texture="Content/Items/Materials/LootablePlants.png" depth="0.53" sourcerect="191,128,96,128" offset="0,-30" randomrotation="-20,20" randomscale="0.8,3" randomoffset="30,10" origin="0.5,0.5" />
         <VineSprite type="Stem" sourcerect="640,128,128,128" />
         <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
-        <VineSprite type="VerticalLane" sourcerect="512,0,128,128" />
-        <VineSprite type="HorizontalLane" sourcerect="640,0,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,0,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,0,128,128" />
         <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
         <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
         <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
@@ -78,8 +78,8 @@
         <FlowerSprite texture="Content/Items/Materials/LootablePlants.png" depth="0.53" sourcerect="416,254,96,116" offset="0,-30" randomrotation="-20,20" randomscale="0.8,3" randomoffset="30,10" origin="0.5,0.5" />
         <VineSprite type="Stem" sourcerect="640,128,128,128" />
         <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
-        <VineSprite type="VerticalLane" sourcerect="512,0,128,128" />
-        <VineSprite type="HorizontalLane" sourcerect="640,0,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,0,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,0,128,128" />
         <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
         <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
         <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
@@ -126,8 +126,8 @@
         <FlowerSprite texture="Content/Items/Materials/LootablePlants.png" depth="0.53" sourcerect="191,0,96,128" offset="0,-30" randomrotation="-20,20" randomscale="0.8,3" randomoffset="30,10" origin="0.5,0.5" />
         <VineSprite type="Stem" sourcerect="640,128,128,128" />
         <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
-        <VineSprite type="VerticalLane" sourcerect="512,0,128,128" />
-        <VineSprite type="HorizontalLane" sourcerect="640,0,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,0,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,0,128,128" />
         <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
         <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
         <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
@@ -172,8 +172,8 @@
         <FlowerSprite texture="Content/Items/Materials/LootablePlants.png" depth="0.52" sourcerect="412,374,96,128" offset="-20,0" randomrotation="-20,20" randomscale="0.8,2" randomoffset="30,30" origin="0.5,0.5" />
         <VineSprite type="Stem" sourcerect="640,128,128,128" />
         <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
-        <VineSprite type="VerticalLane" sourcerect="512,0,128,128" />
-        <VineSprite type="HorizontalLane" sourcerect="640,0,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,0,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,0,128,128" />
         <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
         <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
         <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />
@@ -220,8 +220,8 @@
         <FlowerSprite texture="Content/Items/Materials/LootablePlants.png" depth="0.53" sourcerect="191,256,96,128" offset="0,-30" randomrotation="-20,20" randomscale="0.8,3" randomoffset="30,10" origin="0.5,0.5" />
         <VineSprite type="Stem" sourcerect="640,128,128,128" />
         <VineSprite type="CrossJunction" sourcerect="512,128,128,128" />
-        <VineSprite type="VerticalLane" sourcerect="512,0,128,128" />
-        <VineSprite type="HorizontalLane" sourcerect="640,0,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,0,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,0,128,128" />
         <VineSprite type="TurnTopRight" sourcerect="0,0,128,128" />
         <VineSprite type="TurnTopLeft" sourcerect="384,0,128,128" />
         <VineSprite type="TurnBottomLeft" sourcerect="256,0,128,128" />

@@ -6,6 +6,7 @@ target/
 logs/
 prototype/
 tmp/
+.idea/
 
 ### OS Files ###
 .DS_Store

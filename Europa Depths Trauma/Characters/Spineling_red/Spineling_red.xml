@@ -33,18 +33,18 @@
   <sound gender="None" File="Content/Characters/Spineling_giant/SPINELINGGIANT_dead2.ogg" State="Die" Range="6000" Volume="1" Tags="" />
   <sound gender="None" File="Content/Characters/Spineling_giant/SPINELINGGIANT_dead3.ogg" State="Die" Range="6000" Volume="1" Tags="" />
   <sound gender="None" File="Content/Characters/Spineling_giant/SPINELINGGIANT_dead4.ogg" State="Die" Range="6000" Volume="1" Tags="" />
-  <Inventory Slots="Any, Any, Any, Any" AccessibleWhenAlive="False" Commonness="1">
-    <Item amount="3 " Identifier="alienblood" />
-    <Item Identifier="swimbladder" />
-    <Item amount="3" Identifier="carbon" />
+  <Inventory Slots="Any, Any, Any, Any, Any" AccessibleWhenAlive="False" Commonness="1">
+    <Item identifier="alienblood" amount="3 "/>
+    <Item identifier="swimbladder" />
+    <Item identifier="carbon" amount="3" />
   </Inventory>
-  <Inventory Slots="Any, Any, Any, Any" AccessibleWhenAlive="False" Commonness="1">
-    <Item amount="3 " Identifier="alienblood" />
-    <Item Identifier="swimbladder" />
-    <Item amount="3" Identifier="zinc" />
+  <Inventory slots="Any, Any, Any, Any, Any" accessiblewhenalive="False" commonness="1">
+    <Item identifier="alienblood" amount="3 "/>
+    <Item identifier="swimbladder" />
+    <Item identifier="incendium" amount="2" />
   </Inventory>
-  <damageemitter drawontop="True" Particle="blackgib" AngleMin="0" AngleMax="360" ScaleMin="0.5" ScaleMax="1" VelocityMin="50" VelocityMax="300" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="20" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
-  <bloodemitter Particle="blackblood" AngleMin="1" AngleMax="2" ScaleMin="1" ScaleMax="1" VelocityMin="0" VelocityMax="0" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="20" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
-  <bloodemitter Particle="blackwaterblood" AngleMin="1" AngleMax="2" ScaleMin="3" ScaleMax="3" VelocityMin="0" VelocityMax="0" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="1" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
-  <gibemitter Particle="blackgib" AngleMin="0" AngleMax="360" ScaleMin="1" ScaleMax="2" VelocityMin="200" VelocityMax="1500" EmitInterval="0" ParticlesPerSecond="0" ParticleAmount="60" HighQualityCollisionDetection="False" CopyEntityAngle="False" />
+  <damageemitter particle="blackgib" drawontop="True" particleamount="20" velocitymin="50" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1.0" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <bloodemitter particle="blackblood" anglemin="1" anglemax="2" scalemin="1" scalemax="1" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" particleamount="20" highqualitycollisiondetection="False" copyentityangle="False" />
+  <bloodemitter particle="blackwaterblood" anglemin="1" anglemax="2" scalemin="3" scalemax="3" velocitymin="0" velocitymax="0" emitinterval="0" particlespersecond="0" particleamount="1" highqualitycollisiondetection="False" copyentityangle="False" />
+  <gibemitter particle="blackgib" anglemin="0" anglemax="360" scalemin="1" scalemax="2" velocitymin="200" velocitymax="1500" emitinterval="0" particlespersecond="0" particleamount="60" highqualitycollisiondetection="False" copyentityangle="False" />
 </Character>

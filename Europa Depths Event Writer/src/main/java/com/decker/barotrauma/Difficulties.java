@@ -1,35 +1,34 @@
 package com.decker.barotrauma;
 
-import com.decker.barotrauma.campaign.Comment;
-import com.decker.barotrauma.campaign.CommonnessEvent;
-import com.decker.barotrauma.campaign.DifficultySet;
-import com.decker.barotrauma.campaign.EventSet;
-import com.decker.barotrauma.campaign.SpawnEvent;
+import com.decker.barotrauma.components.Comment;
+import com.decker.barotrauma.components.CommonnessEvent;
+import com.decker.barotrauma.components.DifficultySet;
+import com.decker.barotrauma.components.SpawnEvent;
 
 public class Difficulties {
 	
-	public static EventSet coldCaverns0() {
+	public static DifficultySet coldCaverns0() {
 		double maxIntensity = 0.25;
 		
 		return new DifficultySet(0)
 				.identifier("Caverns entry")
 				.biome("coldcaverns")
 				.maxleveldifficulty(1)
-				.extend(
+				.add(
 						new CommonnessEvent(),
 						
 						new Comment(),
 						new SpawnEvent("1_fifty", 0.50D, 300, maxIntensity).monsters(Spawns.coldCaverns1()));
 	}
 	
-	public static EventSet coldCaverns1() {
+	public static DifficultySet coldCaverns1() {
 		double maxIntensity = 0.25;
 		
 		return new DifficultySet(1)
 				.identifier("Caverns1")
 				.biome("coldcaverns")
 				.minleveldifficulty(1)
-				.extend(
+				.add(
 						new CommonnessEvent("ColdCavernsBasic"),
 						
 						new Comment(),
@@ -39,18 +38,17 @@ public class Difficulties {
 						new SpawnEvent("1_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.coldCaverns1()));
 	}
 	
-	public static EventSet coldCaverns2() {
+	public static DifficultySet coldCaverns2() {
 		double maxIntensity = 0.35;
 		
 		return new DifficultySet(2)
 				.identifier("Caverns2")
 				.biome("coldcaverns")
 				.comment("Introduces Spinelings and Hammerheads")
-				.extend(
+				.add(
 						new CommonnessEvent("ColdCavernsAdvanced", "ColdCavernsMaze"),
 						
 						Caves.coldCaverns(),
-						BeaconStations.coldCavernsEncounters(),
 						BeaconStations.coldCaverns(),
 						Wrecks.coldCavernsEncounters(),
 						Wrecks.coldCaverns(),
@@ -65,18 +63,18 @@ public class Difficulties {
 						new SpawnEvent("2_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.coldCaverns2()));
 	}
 	
-	public static EventSet coldCavernsTransition() {
+	public static DifficultySet coldCavernsTransition() {
 		double maxIntensity = 0.45;
 		
 		return new DifficultySet(3)
 				.identifier("Caverns Transition")
 				.maxleveldifficulty(15)
-				.comment("Introduces (armored/regular) Mudraptors, Threshers, Golden Hammerhead (rare), Crawler Broodmother, Husks, Husked Crawlers, and the first abyss monster.")
-				.extend(
+				.comment("Introduces (armored/regular) Mudraptors, Threshers, Golden Hammerhead (rare), Crawler Broodmother (rare), Husks, Husked Crawlers, and the first abyss monster.")
+				.add(
 						new CommonnessEvent("ColdCavernsTransition"),
 						
 						Caves.europanRidge(),
-						BeaconStations.europanRidgeEncounters(),
+						Caves.europanRidgeB(),
 						BeaconStations.europanRidge(),
 						Ruins.europanRidge(),
 						Wrecks.europanRidgeEncounters(),
@@ -95,7 +93,7 @@ public class Difficulties {
 						new SpawnEvent("3_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.coldCavernsTransition()));
 	}
 	
-	public static EventSet europanRidge() {
+	public static DifficultySet europanRidge() {
 		double maxIntensity = 0.55;
 		
 		return new DifficultySet(4)
@@ -103,11 +101,11 @@ public class Difficulties {
 				.biome("europanridge")
 				.maxleveldifficulty(30)
 				.comment("Introduces Moloch.")
-				.extend(
+				.add(
 						new CommonnessEvent("RidgeBasic").leveltype("RidgeAdvanced", 0.5),
 						
 						Caves.europanRidge(),
-						BeaconStations.europanRidgeEncounters(),
+						Caves.europanRidgeB(),
 						BeaconStations.europanRidge(),
 						Ruins.europanRidge(),
 						Wrecks.europanRidgeEncounters(),
@@ -126,21 +124,19 @@ public class Difficulties {
 						new SpawnEvent("4_eighty", 0.80D, 3660, maxIntensity).monsters(Spawns.europanRidge()));
 	}
 	
-	public static EventSet europanRidgeToPlateau() {
+	public static DifficultySet europanRidgeToPlateau() {
 		double maxIntensity = 0.65;
 		
 		return new DifficultySet(5)
 				.identifier("Ridge to Plateau")
 				.maxleveldifficulty(35)
 				.comment("Introduces Veteran Mudraptor and Charybdis. Threshers get more common.")
-				.extend(
+				.add(
 						new CommonnessEvent("RidgeAdvanced"),
 						
 						Caves.aphoticPlateau(),
-						BeaconStations.aphoticPlateauEncounters(),
 						BeaconStations.aphoticPlateau(),
 						Ruins.aphoticPlateau1(),
-						Wrecks.aphoticPlateau1Encounters(),
 						Wrecks.aphoticPlateau1(),
 						
 						Abyss.aphoticPlateau1(),
@@ -157,7 +153,7 @@ public class Difficulties {
 						new SpawnEvent("5_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.aphoticPlateau1NearStation()));
 	}
 	
-	public static EventSet aphoticPlateau1() {
+	public static DifficultySet aphoticPlateau1() {
 		double maxIntensity = 0.75;
 		
 		return new DifficultySet(6)
@@ -165,11 +161,11 @@ public class Difficulties {
 				.biome("theaphoticplateau")
 				.maxleveldifficulty(40)
 				.comment("Introduces Watcher")
-				.extend(
+				.add(
 						new CommonnessEvent(),
 						
 						Caves.aphoticPlateau(),
-						BeaconStations.aphoticPlateauEncounters(),
+						Caves.aphoticPlateauB(),
 						BeaconStations.aphoticPlateau(),
 						Ruins.aphoticPlateau1(),
 						Wrecks.aphoticPlateau1Encounters(),
@@ -189,7 +185,7 @@ public class Difficulties {
 						new SpawnEvent("6_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.aphoticPlateau1NearStation()));
 	}
 	
-	public static EventSet aphoticPlateau2() {
+	public static DifficultySet aphoticPlateau2() {
 		double maxIntensity = 0.80;
 		
 		return new DifficultySet(7)
@@ -197,12 +193,12 @@ public class Difficulties {
 				.biome("theaphoticplateau")
 				.minleveldifficulty(40)
 				.comment("Introduces Watcher")
-				.extend(
+				.add(
 						new CommonnessEvent(),
 						
 						Caves.aphoticPlateau(),
-						BeaconStations.aphoticPlateauEncounters(),
-						BeaconStations.aphoticPlateau(),
+						Caves.aphoticPlateauB(),
+						BeaconStations.aphoticPlateau2(),
 						Ruins.aphoticPlateau2(),
 						Wrecks.aphoticPlateau2Encounters(),
 						Wrecks.aphoticPlateau2(),
@@ -220,7 +216,7 @@ public class Difficulties {
 						new SpawnEvent("7_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.aphoticPlateau2NearStation()));
 	}
 	
-	public static EventSet plateauToSea() {
+	public static DifficultySet plateauToSea() {
 		double maxIntensity = 0.85;
 		
 		return new DifficultySet(8)
@@ -228,11 +224,11 @@ public class Difficulties {
 				.minleveldifficulty(45)
 				.maxleveldifficulty(50)
 				.comment("Introduces Hammerhead Matriarch, Moloch Baby, Giant Spineling")
-				.extend(
+				.add(
 						new CommonnessEvent("PlateauBasic"),
 						
 						Caves.greatSea(),
-						BeaconStations.greatSeaEncounters(),
+						Caves.greatSeaB(),
 						BeaconStations.greatSea(),
 						Ruins.greatSea(),
 						Wrecks.greatSeaEncounters(),
@@ -252,18 +248,18 @@ public class Difficulties {
 						new SpawnEvent("8_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.greatSeaNearStation()));
 	}
 	
-	public static EventSet greatSea() {
+	public static DifficultySet greatSea() {
 		double maxIntensity = 0.85;
 		
 		return new DifficultySet(9)
 				.identifier("GreatSea")
 				.biome("thegreatsea")
 				.comment("Introduces Black Moloch. Smaller creatures are less frequent and appear in even larger swarms, more bigger guys.")
-				.extend(
+				.add(
 						new CommonnessEvent(),
 						
 						Caves.greatSea(),
-						BeaconStations.greatSeaEncounters(),
+						Caves.greatSeaB(),
 						BeaconStations.greatSea(),
 						Ruins.greatSea(),
 						Wrecks.greatSeaEncounters(),
@@ -283,17 +279,17 @@ public class Difficulties {
 						new SpawnEvent("9_nintyFive", 0.95D, null, maxIntensity).monsters(Spawns.greatSeaNearStation()));
 	}
 	
-	public static EventSet wastes() {
+	public static DifficultySet wastes() {
 		double maxIntensity = 0.9;
 		return new DifficultySet(10)
 				.identifier("Wastes")
 				.biome("hydrothermalwastes")
 				.comment("Smaller guys make a return")
-				.extend(
+				.add(
 						new CommonnessEvent(),
 						
 						Caves.hydrothermalWastes(),
-						BeaconStations.hydrothermalWastesEncounters(),
+						Caves.hydrothermalWastesB(),
 						BeaconStations.hydrothermalWastes(),
 						Ruins.wastes(),
 						Wrecks.hydrothermalWastesEncounters(),

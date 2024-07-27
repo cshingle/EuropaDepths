@@ -257,6 +257,7 @@
         <reduceaffliction identifier="opiateaddiction" strength="0.2" />
         <reduceaffliction identifier="huskinfection" strength="0.2" />
         <reduceaffliction identifier="reaperstax" strength="0.2" />
+        <reduceaffliction identifier="infection" strength="0.02" />
       </StatusEffect>
     </Controller>
   </Item>

@@ -1,8 +1,7 @@
 package com.decker.barotrauma;
 
-import com.decker.barotrauma.campaign.CaveEvent;
-import com.decker.barotrauma.campaign.Character;
-import com.decker.barotrauma.campaign.MonsterEvent;
+import com.decker.barotrauma.components.*;
+import com.decker.barotrauma.components.Character;
 
 public class Caves {
 	
@@ -21,7 +20,14 @@ public class Caves {
 				new MonsterEvent(Character.Spineling, 2, 5),
 				new MonsterEvent(Character.Mudraptor_unarmored, 2, 5),
 				new MonsterEvent(Character.Bonethresher_cave, 1, 2),
-				new MonsterEvent(Character.Tigerthresher, 1, 3));
+				new MonsterEvent(Character.Tigerthresher, 1, 3),
+				new MonsterEvent(Character.Mantis, 1, 3).scatter(2000));
+	}
+	
+	public static CaveEvent europanRidgeB() {
+		return new CaveEvent().monsters(
+				new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000),
+				new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000));
 	}
 	
 	public static CaveEvent aphoticPlateau() {
@@ -33,7 +39,15 @@ public class Caves {
 				new MonsterEvent(Character.Mudraptor, 2, 4),
 				new MonsterEvent(Character.Tigerthresher, 2, 4),
 				new MonsterEvent(Character.Mudraptor_veteran, 2, 3),
-				new MonsterEvent(Character.Bonethresher_cave, 2, 3));
+				new MonsterEvent(Character.Bonethresher_cave, 2, 3),
+				new MonsterEvent(Character.Mantis, 2, 3).scatter(2000));
+	}
+	
+	public static CaveEvent aphoticPlateauB() {
+		return new CaveEvent().monsters(
+				new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000),
+				new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000),
+				new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000));
 	}
 	
 	public static CaveEvent greatSea() {
@@ -45,7 +59,16 @@ public class Caves {
 				new MonsterEvent(Character.Mudraptor_veteran, 3, 4),
 				new MonsterEvent(Character.Tigerthresher_veteran, 3, 4),
 				new MonsterEvent(Character.Bonethresher_cave, 4, 5),
-				new MonsterEvent(Character.Bonethresher_veteran, 2, 3));
+				new MonsterEvent(Character.Bonethresher_veteran, 2, 3),
+				new MonsterEvent(Character.Mantis, 3, 3).scatter(2000));
+	}
+	
+	public static CaveEvent greatSeaB() {
+		return new CaveEvent().monsters(
+				new MonsterEvent(Character.Mantis, 3, 4).spawnprobability(0.33).scatter(2000),
+				new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000),
+				new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000),
+				new MonsterEvent(Character.Spineling_morbusine, 0, 2).spawnprobability(0.33).scatter(2000));
 	}
 	
 	public static CaveEvent hydrothermalWastes() {
@@ -56,7 +79,16 @@ public class Caves {
 				new MonsterEvent(Character.Mudraptor_veteran, 5, 6),
 				new MonsterEvent(Character.Tigerthresher_veteran, 3, 5),
 				new MonsterEvent(Character.Bonethresher_cave, 4, 6),
-				new MonsterEvent(Character.Bonethresher_veteran, 3, 4));
+				new MonsterEvent(Character.Bonethresher_veteran, 3, 4),
+				new MonsterEvent(Character.Mantis, 3, 4).scatter(2000));
+	}
+	
+	public static CaveEvent hydrothermalWastesB() {
+		return new CaveEvent().monsters(
+				new MonsterEvent(Character.Mantis, 4, 5).spawnprobability(0.33).scatter(2000),
+				new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000),
+				new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000),
+				new MonsterEvent(Character.Spineling_morbusine, 0, 3).spawnprobability(0.33).scatter(2000));
 	}
 	
 }

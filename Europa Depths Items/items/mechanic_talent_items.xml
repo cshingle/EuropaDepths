@@ -118,7 +118,7 @@
       </ItemContainer>
     </Item>
 
-    <Item name="" identifier="fixfoamgrenade" category="Equipment" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" allowasextracargo="true" tags="smallitem,weapon,explosive,demolitionsexpert" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="fixfoamgrenade" category="Equipment" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" allowasextracargo="true" tags="smallitem,weapon,explosive,demolitionsexpert,handgrenade" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="engcab" secondary="locker"/>
       <Price baseprice="95" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
@@ -174,8 +174,8 @@
     <Item name="" identifier="heavywrench" variantof="wrench" addedrepairspeedmultiplier="0.4">
       <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="0" notcampaign="true"/>
       <PreferredContainer primary="engcab" spawnprobability="0"/>
-      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
-      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
+      <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" spawnprobability="0" />
+      <PreferredContainer primary="wreckengcab,abandonedengcab,pirateengcab,outpostengcab,beaconengcab" spawnprobability="0"/>
       <PreferredContainer secondary="outpostcrewcabinet" spawnprobability="0"/>
       <PreferredContainer secondary="outposttrashcan" spawnprobability="0" />
       <Price baseprice="190" sold="false" />
@@ -203,7 +203,7 @@
             <Sound file="Content/Items/Weapons/Smack1.ogg" selectionmode="random" range="500"/>
             <Sound file="Content/Items/Weapons/Smack2.ogg" range="500" />
           </StatusEffect>
-          <StatusEffect type="OnUse" target="Character" >
+          <StatusEffect type="OnUse" target="Character">
             <Conditional skillrequirement="true" mechanical="lt 40" />
             <Affliction identifier="stun" strength="0.3" />
           </StatusEffect>
@@ -254,16 +254,18 @@
         <sprite name="Exosuit Left Leg" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
         <sprite name="Exosuit Left Shoe" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
         <sprite name="Exosuit Right Shoe" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.2,0.5" inheritsourcerect="false" sourcerect="371,211,133,37" />
-        <StatusEffect type="OnWearing" target="Character" HideFace="true" UseHullOxygen="true" ObstructVision="true" PressureProtection="10000.0" SpeedMultiplier="0.4" PropulsionSpeedMultiplier="0.25" setvalue="true" disabledeltatime="true">
+        <StatusEffect type="OnWearing" target="Character" HideFace="true" UseHullOxygen="true" ObstructVisionAmount="0.5" PressureProtection="10000.0" SpeedMultiplier="0.4" PropulsionSpeedMultiplier="0.25" setvalue="true" disabledeltatime="true">
           <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="250" loop="true"/>
           <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="250" loop="true"/>
+          <TriggerAnimation Type="Walk" FileName="HumanWalkExosuit" priority="1" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" FileName="HumanRunExosuit" priority="1" ExpectedSpecies="Human" />
         </StatusEffect>
         <!-- no HMG stun -->
         <StatusEffect type="OnWearing" target="Character" interval="0.9" disabledeltatime="true">
           <Affliction identifier="recoilstabilized" amount="1" />
         </StatusEffect>
         <!-- slow movement -->
-        <StatusEffect type="OnWearing" target="This,Character" SpeedMultiplier="0.4" setvalue="true" disabledeltatime="true">
+        <StatusEffect type="OnWearing" target="This,Character" setvalue="true" disabledeltatime="true">
           <Conditional Voltage="gt 0.5" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" Condition="-0.07" interval="1" disabledeltatime="true" targetslot="1" comparison="Or">
@@ -303,14 +305,15 @@
           <Conditional IsDead="false" />
           <RequiredItem items="oxygenitetank" targetslot="0" type="Contained" />
         </StatusEffect>
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,bitewounds,lacerations,bleeding" damagemultiplier="0.3" damagesound="LimbArmor" deflectprojectiles="true" />
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,lacerations,explosiondamage" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, bleeding" damagemultiplier="0.25" probabilitymultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
+        <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.5" probabilitymultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.5" damagesound="" deflectprojectiles="true" />
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness" damagemultiplier="0.75" damagesound="LimbArmor"/>
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="acidburn" damagemultiplier="0.1" damagesound=""/>
-        <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.7" damagesound=""/>
-        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.5" damagesound="LimbArmor"/>
+        <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="huskinfection" probabilitymultiplier="0.1" damagesound="LimbArmor"/>
         <sound file="Content/Items/Weapons/WEAPONS_chargeUp.ogg" type="OnWearing" range="500.0" volumeproperty="Speed" volume="0.2" loop="true" frequencymultiplier="0.5" />
         <StatValue stattype="FlowResistance" value="0.9" />
+        <StatValue stattype="PropulsionSpeed" value="-0.75" />
         <StatValue stattype="MeleeAttackMultiplier" value="0.25" />
       </Wearable>
       <ItemContainer capacity="0" maxstacksize="12" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
