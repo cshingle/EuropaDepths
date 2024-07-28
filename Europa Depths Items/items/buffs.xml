@@ -40,6 +40,7 @@
           <ReduceAffliction identifier="psychosis" amount="2.0" />
           <ReduceAffliction identifier="hallucinating" amount="2.0" />
           <Affliction identifier="psychosisresistance" amount="30" />
+          <ReduceAffliction identifier="infection" amount="1" />
           <Remove />
         </StatusEffect>
         <StatusEffect type="OnSecondaryUse" target="This">
@@ -47,7 +48,7 @@
         </StatusEffect>
         <!-- When Ethanol is used in Health GUI -->
         <StatusEffect type="OnUse" target="This, Limb" duration="10">
-          <ReduceAffliction identifier="infection" amount="0.8" />
+          <ReduceAffliction identifier="infection" amount="5" />
           <Affliction identifier="drunk" amount="2.0" />
           <ReduceAffliction identifier="psychosis" amount="0.5" />
           <Affliction identifier="burn" amount="0.15" />

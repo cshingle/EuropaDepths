@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Npcs" modversion="1.4.13" corepackage="False" steamworkshopid="2824698537" gameversion="1.1.18.1">
+<contentpackage name="Europa Depths Npcs" modversion="1.4.14" corepackage="False" steamworkshopid="2824698537" gameversion="1.5.9.1">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Item file="%ModDir%/items.xml" />
   <Missions file="%ModDir%/Missions.xml" />

@@ -393,12 +393,10 @@
                 <Item identifier="assaultrifle" equip="true">
                     <Item identifier="assaultriflemagazine" />
                 </Item>
-                <Item identifier="bandolier" equip="true">
-                    <Item identifier="assaultriflemagazine" />
-                    <Item identifier="assaultriflemagazine" />
-                    <Item identifier="assaultriflemagazine" />
-                    <Item identifier="assaultriflemagazine" />
-                </Item>
+                <Item identifier="assaultriflemagazine" />
+                <Item identifier="assaultriflemagazine" />
+                <Item identifier="assaultriflemagazine" />
+                <Item identifier="assaultriflemagazine" />
                 <Item identifier="fraggrenade" />
                 <Item identifier="pressurestabilizer" equip="false" />
                 <Item identifier="toolbelt" equip="true"/>

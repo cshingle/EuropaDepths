@@ -19,6 +19,9 @@
                 <Conditional IsPlayer="True"/>
                 <reduceaffliction identifier="killerclown" strength="25" />
             </StatusEffect>
+            <StatusEffect target="Character">
+                <TriggerAnimation Type="Walk" filename="JollyWalk" priority="7" ExpectedSpecies="Human" />
+            </StatusEffect>
         </Effect>
         <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="2,7" sheetelementsize="128,128" color="255,0,0,255" origin="0,0"/>
     </Affliction>

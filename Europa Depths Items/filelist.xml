@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Items" modversion="1.5.11" corepackage="False" steamworkshopid="2821614540" gameversion="1.5.9.1">
+<contentpackage name="Europa Depths Items" modversion="1.5.13" corepackage="False" steamworkshopid="2821614540" gameversion="1.5.9.1">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Character file="%ModDir%/Characters/Defensebot/Defensebot.xml" />
   <Character file="%ModDir%/Characters/Mudraptor_pet/Mudraptor_pet.xml" />

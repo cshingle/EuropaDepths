@@ -90,15 +90,12 @@
           </Item>
           <Item identifier="grenadelauncher" equip="true">
             <Item identifier="40mmgrenade" />
-          </Item>
-          <Item identifier="bandolier" equip="true">
             <Item identifier="40mmgrenade" />
             <Item identifier="40mmgrenade" />
             <Item identifier="40mmgrenade" />
             <Item identifier="40mmgrenade" />
           </Item>
           <Item identifier="pressurestabilizer" equip="false" />
-          <Item identifier="toolbelt" equip="true"/>
         </ItemSet>
         <ItemSet commonness="1">
           <Item identifier="idcard" equip="true" />
@@ -116,12 +113,10 @@
           <Item identifier="assaultrifle" equip="true">
             <Item identifier="assaultriflemagazine" />
           </Item>
-          <Item identifier="bandolier" equip="true">
-            <Item identifier="assaultriflemagazine" />
-            <Item identifier="assaultriflemagazine" />
-            <Item identifier="assaultriflemagazine" />
-            <Item identifier="assaultriflemagazine" />
-          </Item>
+          <Item identifier="assaultriflemagazine" />
+          <Item identifier="assaultriflemagazine" />
+          <Item identifier="assaultriflemagazine" />
+          <Item identifier="assaultriflemagazine" />
           <Item identifier="pressurestabilizer" equip="false" />
         </ItemSet>
       </npc>
@@ -411,16 +406,14 @@
             <Item identifier="shotgunslugexplosive" />
             <Item identifier="shotgunslugexplosive" />
           </Item>
-          <Item identifier="bandolier" equip="true">
-            <Item identifier="shotgunslugexplosive" />
-            <Item identifier="shotgunslugexplosive" />
-            <Item identifier="shotgunslugexplosive" />
-            <Item identifier="shotgunslugexplosive" />
-            <Item identifier="shotgunslugexplosive" />
-            <Item identifier="shotgunslugexplosive" />
-            <Item identifier="shotgunslugexplosive" />
-            <Item identifier="shotgunslugexplosive" />
-          </Item>
+          <Item identifier="shotgunslugexplosive" />
+          <Item identifier="shotgunslugexplosive" />
+          <Item identifier="shotgunslugexplosive" />
+          <Item identifier="shotgunslugexplosive" />
+          <Item identifier="shotgunslugexplosive" />
+          <Item identifier="shotgunslugexplosive" />
+          <Item identifier="shotgunslugexplosive" />
+          <Item identifier="shotgunslugexplosive" />
           <Item identifier="captainspipe" equip="false" />
         </ItemSet>
         <ItemSet commonness="1">
@@ -431,12 +424,10 @@
           <Item identifier="assaultrifle" equip="true">
             <Item identifier="assaultriflemagazine" />
           </Item>
-          <Item identifier="bandolier" equip="true">
-            <Item identifier="assaultriflemagazine" />
-            <Item identifier="assaultriflemagazine" />
-            <Item identifier="assaultriflemagazine" />
-            <Item identifier="assaultriflemagazine" />
-          </Item>
+          <Item identifier="assaultriflemagazine" />
+          <Item identifier="assaultriflemagazine" />
+          <Item identifier="assaultriflemagazine" />
+          <Item identifier="assaultriflemagazine" />
           <Item identifier="captainspipe" equip="false" />
         </ItemSet>
       </npc>

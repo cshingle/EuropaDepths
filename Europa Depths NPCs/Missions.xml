@@ -385,7 +385,7 @@
         <message header="missionheader1.pirate1" text="missionmessage1.pirate1"/>
     </PirateMission>
 
-    <PirateMission type="Pirate" identifier="piratesecondary" tags="piratehumpback" difficulty="4" commonness="20" reward="4000" issideobjective="true" addedmissiondifficultyperplayer="10">
+    <PirateMission type="Pirate" identifier="piratesecondary" tags="piratehumpback" difficulty="4" commonness="10" reward="4000" issideobjective="true" addedmissiondifficultyperplayer="10">
         <message header="Pirates detected" text=""/>
         <message header="Pirates eliminated" text=""/>
         <SubmarineTypes>

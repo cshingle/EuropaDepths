@@ -131,12 +131,10 @@
                     </Item>
                     <Item identifier="opium"/>
                     <Item identifier="divingknifehardened"/>
-                    <Item identifier="bandolier" equip="true">
-                        <Item identifier="smgmagazinedepletedfuel"/>
-                        <Item identifier="smgmagazinedepletedfuel"/>
-                        <Item identifier="smgmagazinedepletedfuel"/>
-                        <Item identifier="smgmagazinedepletedfuel"/>
-                    </Item>
+                    <Item identifier="smgmagazinedepletedfuel"/>
+                    <Item identifier="smgmagazinedepletedfuel"/>
+                    <Item identifier="smgmagazinedepletedfuel"/>
+                    <Item identifier="smgmagazinedepletedfuel"/>
                     <Item identifier="smgunique">
                         <Item identifier="smgmagazinedepletedfuel"/>
                     </Item>
