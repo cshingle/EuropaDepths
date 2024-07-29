@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Items" modversion="1.5.13" corepackage="False" steamworkshopid="2821614540" gameversion="1.5.9.1">
+<contentpackage name="Europa Depths Items" modversion="1.5.14" corepackage="False" steamworkshopid="2821614540" gameversion="1.5.9.1">
   <Afflictions file="%ModDir%/Afflictions.xml" />
   <Character file="%ModDir%/Characters/Defensebot/Defensebot.xml" />
   <Character file="%ModDir%/Characters/Mudraptor_pet/Mudraptor_pet.xml" />
@@ -41,6 +41,7 @@
   <Item file="%ModDir%/items/storage.xml" />
   <Item file="%ModDir%/items/storage2.xml" />
   <Item file="%ModDir%/items/tools.xml" />
+  <Item file="%ModDir%/items/traitor_items.xml" />
   <Item file="%ModDir%/items/weapons.xml" />
   <Item file="%ModDir%/plants//plantproducts.xml" />
   <Item file="%ModDir%/plants/gardeningtools.xml" />

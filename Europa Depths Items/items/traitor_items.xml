@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Override>
+        <Item name="" identifier="coilgunammobox_blanks" nameidentifier="coilgunammobox" variantof="coilgunammobox" hideinmenus="true">
+            <PreferredContainer primary="coilgunammoloader" spawnprobability="0" />
+            <PreferredContainer spawnprobability="0" />
+            <PreferredContainer spawnprobability="0.01" />
+            <!-- Tiny chance Thalamus/wrecks get the funny ammo -->
+            <PreferredContainer spawnprobability="0" />
+            <Price sold="false" />
+            <Deconstruct time="10">
+                <Item identifier="aluminium"/>
+            </Deconstruct>
+            <Fabricate />
+            <Fabricate />
+            <ItemContainer>
+                <StatusEffect type="OnUse" target="This" disabledeltatime="true">
+                    <SpawnItem identifiers="coilgunbolt_blank" spawnposition="ThisInventory" />
+                </StatusEffect>
+                <StatusEffect type="OnUse" target="This" condition="-0.5" disabledeltatime="true">
+                    <RequiredItem items="coilgunbolt_blank" type="Contained" />
+                </StatusEffect>
+                <StatusEffect type="OnUse" target="This">
+                    <Conditional health="lte 90" />
+                    <Sound file="Content/Items/Weapons/honk.ogg" type="OnUse" range="1000" />
+                </StatusEffect>
+                <Containable items="coilgunbolt_blank" />
+            </ItemContainer>
+        </Item>
+
+        <Item name="" identifier="coilgunbolt_blank" nameidentifier="coilgunbolt" variantof="coilgunbolt" hideinmenus="true" sonarsize="0">
+            <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,1,1" depth="0.55" />
+            <Holdable />
+            <Projectile>
+                <Attack />
+                <StatusEffect />
+                <StatusEffect type="OnNotContained" target="This" stackable="false" delay="0.1">
+                    <Remove />
+                </StatusEffect>
+                <StatusEffect />
+            </Projectile>
+        </Item>
+    </Override>
+</Items>

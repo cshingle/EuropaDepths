@@ -70,6 +70,9 @@
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds,bleeding" damagemultiplier="0.75" probabilitymultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
         <StatusEffect tags="clown" type="OnWearing" target="Character" duration="0.1" stackable="false" />
       </Wearable>
+      <ItemContainer capacity="1" maxstacksize="8" hideitems="true">
+        <Containable items="toyhammer,bikehorn,banana,bananapeel" />
+      </ItemContainer>
     </Item>
     <Item name="" identifier="clownmaskunique" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,clothing,clownmask,clowns" description="" hideinmenus="true" scale="0.5">
       <Price baseprice="100" canbespecial="false" sold="false">
@@ -126,6 +129,9 @@
         <!-- %50 cance of getting %75 armor -->
         <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds,bleeding" damagemultiplier="0.25" probabilitymultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
       </Wearable>
+      <ItemContainer capacity="1" maxstacksize="8" hideitems="true">
+        <Containable items="toyhammer,bikehorn,banana,bananapeel" />
+      </ItemContainer>
     </Item>
   </Override>
 

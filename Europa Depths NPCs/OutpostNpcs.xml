@@ -42,7 +42,7 @@
       </ItemSet>-->
             </npc>
 
-            <npc identifier="outpostmanagercoalition" job="captain" tags="outpostmanager" spawnpointtags="admin" behavior="StayInHull" preferredoutpostmoduletypes="admin,adminmodule">
+            <npc identifier="outpostmanagercoalition" job="outpostmanager" tags="outpostmanager" spawnpointtags="admin" behavior="StayInHull" preferredoutpostmoduletypes="admin,adminmodule">
                 <ItemSet commonness="1">
                     <Item identifier="administratorclothes" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
@@ -55,7 +55,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="outpostmanagerseparatists" job="captain" tags="outpostmanager" spawnpointtags="admin" behavior="StayInHull" preferredoutpostmoduletypes="admin,adminmodule">
+            <npc identifier="outpostmanagerseparatists" job="outpostmanager" tags="outpostmanager" spawnpointtags="admin" behavior="StayInHull" preferredoutpostmoduletypes="admin,adminmodule">
                 <ItemSet commonness="1">
                     <Item identifier="piratecaptainhat" equip="true" />
                     <Item identifier="pirateclotheshard" equip="true" outfit="true" />
@@ -71,7 +71,7 @@
 
             <!-- for backwards compatibility (some mods that override location types still use this - if it doesn't exist, you can't get any missions)
           not used by the vanilla game -->
-            <npc identifier="outpostmanager" job="captain" tags="outpostmanager" spawnpointtags="admin" behavior="Passive" preferredoutpostmoduletypes="admin,adminmodule">
+            <npc identifier="outpostmanager" job="outpostmanager" tags="outpostmanager" spawnpointtags="admin" behavior="Passive" preferredoutpostmoduletypes="admin,adminmodule">
                 <ItemSet commonness="1">
                     <Item identifier="administratorclothes" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
@@ -102,7 +102,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="reactoroperator" job="engineer" commonness="1" spawnpointtags="engineering" healthmultiplier="3" behavior="StayInHull" aimspeed="1" aimaccuracy="0.75" preferredoutpostmoduletypes="engineeringmodule">
+            <npc identifier="reactoroperator" job="engineer" commonness="1" spawnpointtags="engineering" healthmultiplier="3" behavior="StayInHull" preferredoutpostmoduletypes="engineeringmodule">
                 <ItemSet commonness="1">
                     <Item identifier="orangejumpsuit2" equip="true"/>
                     <Item identifier="baseballcap" equip="true"/>
@@ -119,7 +119,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="subupgradenpc" job="mechanic" commonness="1" spawnpointtags="engineering" healthmultiplier="3" campaigninteractiontype="Upgrade" behavior="StayInHull" aimspeed="1" aimaccuracy="0.75">
+            <npc identifier="subupgradenpc" job="mechanic" commonness="1" spawnpointtags="engineering" healthmultiplier="3" campaigninteractiontype="Upgrade" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="toolbelt" equip="true">
                         <Item identifier="weldingfueltank"/>
@@ -142,7 +142,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="subsalesnpc" job="mechanic" commonness="1" spawnpointtags="engineering" healthmultiplier="3" campaigninteractiontype="PurchaseSub" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="subsalesnpc" job="mechanic" commonness="1" spawnpointtags="engineering" healthmultiplier="3" campaigninteractiontype="PurchaseSub" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="toolbelt" equip="true">
                         <Item identifier="weldingfueltank"/>
@@ -165,7 +165,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="merchantoutpost" job="watchman" spawnpointtags="shop" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="merchantoutpost" job="watchman" spawnpointtags="shop" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="baseballcap" equip="true"/>
                     <Item identifier="crewchiefclothes" equip="true"/>
@@ -181,7 +181,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="merchantcity" job="watchman" spawnpointtags="shop" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="merchantcity" job="watchman" spawnpointtags="shop" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="baseballcap" equip="true"/>
                     <Item identifier="crewchiefclothes" equip="true"/>
@@ -197,7 +197,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="merchantmine" job="watchman" spawnpointtags="shop" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="merchantmine" job="watchman" spawnpointtags="shop" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="baseballcap" equip="true"/>
                     <Item identifier="crewchiefclothes" equip="true"/>
@@ -213,7 +213,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="merchantresearch" job="watchman" spawnpointtags="shop" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="merchantresearch" job="watchman" spawnpointtags="shop" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="baseballcap" equip="true"/>
                     <Item identifier="crewchiefclothes" equip="true"/>
@@ -229,7 +229,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="merchantmilitary" job="watchman" spawnpointtags="shop" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="merchantmilitary" job="watchman" spawnpointtags="shop" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="baseballcap" equip="true"/>
                     <Item identifier="crewchiefclothes" equip="true"/>
@@ -245,7 +245,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="merchantarmory" job="watchman" spawnpointtags="armory" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="merchantarmory" job="watchman" spawnpointtags="armory" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="baseballcap" equip="true"/>
                     <Item identifier="crewchiefclothes" equip="true"/>
@@ -259,7 +259,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="merchantmedical" job="watchman" spawnpointtags="medical" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="merchantmedical" job="watchman" spawnpointtags="medical" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="medicalofficerclothes" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
@@ -276,7 +276,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="merchantengineering" job="watchman" spawnpointtags="engineering" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="merchantengineering" job="watchman" spawnpointtags="engineering" healthmultiplier="3" campaigninteractiontype="Store" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="orangejumpsuit1" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
@@ -291,7 +291,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="securitynpccoalition" job="securityofficer" tags="securitynpc" spawnpointtags="security" healthmultiplier="2" behavior="Patrol" aimspeed="2" aimaccuracy="1">
+            <npc identifier="securitynpccoalition" job="outpostsecurityofficer" tags="securitynpc" spawnpointtags="security" healthmultiplier="2" behavior="Patrol">
                 <ItemSet>
                     <Item identifier="securitypatrolclothes" equip="true" />
                     <Item identifier="idcard" equip="true" tags="id_outpostsecurity"/>
@@ -390,7 +390,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="securitynpcseparatists" job="securityofficer" tags="securitynpc" spawnpointtags="security" healthmultiplier="2" behavior="Patrol" aimspeed="2" aimaccuracy="1">
+            <npc identifier="securitynpcseparatists" job="outpostsecurityofficer" tags="securitynpc" spawnpointtags="security" healthmultiplier="2" behavior="Patrol">
                 <ItemSet>
                     <Item identifier="pirateclothes" equip="true" />
                     <Item identifier="piratebodyarmor" equip="true" />
@@ -449,7 +449,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="cargomissiongiver" job="mechanic" moduleflags="none" behavior="Passive" aimspeed="1" aimaccuracy="1">
+            <npc identifier="cargomissiongiver" job="mechanic" moduleflags="none" behavior="Passive">
                 <ItemSet>
                     <Item identifier="commonerclothes1" equip="true"/>
                     <Item identifier="ballistichelmet1" equip="true"/>
@@ -496,7 +496,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="salvagemissiongiver" job="medicaldoctor" moduleflags="none" behavior="Passive" aimspeed="1" aimaccuracy="1">
+            <npc identifier="salvagemissiongiver" job="medicaldoctor" moduleflags="none" behavior="Passive">
                 <ItemSet commonness="1">
                     <Item identifier="doctorsuniform1" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
@@ -520,7 +520,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="outpostdoctor" job="medicaldoctor" campaigninteractiontype="MedicalClinic" moduleflags="MedicalModule" behavior="Passive" aimspeed="1" aimaccuracy="1">
+            <npc identifier="outpostdoctor" job="medicaldoctor" campaigninteractiontype="MedicalClinic" moduleflags="MedicalModule" behavior="Passive">
                 <ItemSet commonness="1">
                     <Item identifier="medicalofficerclothes" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
@@ -534,7 +534,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="watchman" job="watchman" spawnpointtags="unlockpath" healthmultiplier="3" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="watchman" job="watchman" spawnpointtags="unlockpath" healthmultiplier="3" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="watchmanclothes" equip="true"/>
                     <Item identifier="captainscap1" equip="true"/>
@@ -554,7 +554,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="watchmanseparatist" job="watchman" spawnpointtags="unlockpath" healthmultiplier="3" behavior="StayInHull" aimspeed="1" aimaccuracy="1">
+            <npc identifier="watchmanseparatist" job="watchman" spawnpointtags="unlockpath" healthmultiplier="3" behavior="StayInHull">
                 <ItemSet commonness="1">
                     <Item identifier="watchmanclothes" equip="true"/>
                     <Item identifier="piratecaptainhat" equip="true" />
@@ -574,7 +574,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="commoner" commonness="0" moduleflags="none" job="mechanic" behavior="Passive" healthmultiplier="1.75" preferredoutpostmoduletypes="crewmodule,seccrewmodule" aimspeed="1" aimaccuracy="1">
+            <npc identifier="commoner" commonness="0" moduleflags="none" job="mechanic" behavior="Passive" healthmultiplier="1.75" preferredoutpostmoduletypes="crewmodule,seccrewmodule">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="commonerclothes1" equip="true"/>
@@ -650,7 +650,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="researcher" commonness="0" moduleflags="none" job="medicaldoctor" behavior="Passive" healthmultiplier="1.75" ModuleFlags="ResearchModule" preferredoutpostmoduletypes="researchmodule,crewmodule" aimspeed="1" aimaccuracy="1">
+            <npc identifier="researcher" commonness="0" moduleflags="none" job="medicaldoctor" behavior="Passive" healthmultiplier="1.75" ModuleFlags="ResearchModule" preferredoutpostmoduletypes="researchmodule,crewmodule">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="researcherclothes" equip="true"/>
@@ -663,7 +663,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="miner" commonness="0" moduleflags="none" job="mechanic" behavior="Passive" healthmultiplier="1.75" preferredoutpostmoduletypes="crewmodule" aimspeed="1" aimaccuracy="1">
+            <npc identifier="miner" commonness="0" moduleflags="none" job="mechanic" behavior="Passive" healthmultiplier="1.75" preferredoutpostmoduletypes="crewmodule">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="minerclothes" equip="true"/>
@@ -762,7 +762,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="merchantclown" commonness="0" faction="clowns" moduleflags="clownmodule" job="assistant" behavior="Passive" preferredoutpostmoduletypes="clownmodule" campaigninteractiontype="Store" spawnpointtags="clown" aimspeed="1" aimaccuracy="1">
+            <npc identifier="merchantclown" commonness="0" faction="clowns" moduleflags="clownmodule" job="assistant" behavior="Passive" preferredoutpostmoduletypes="clownmodule" campaigninteractiontype="Store" spawnpointtags="clown">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="clownmask" equip="true"/>
@@ -771,7 +771,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="huskcultist" tags="huskcultist" faction="huskcult" commonness="0" moduleflags="huskmodule" job="assistant" behavior="Passive" healthmultiplier="0.5" preferredoutpostmoduletypes="huskmodule" spawnpointtags="husk" aimspeed="1" aimaccuracy="1">
+            <npc identifier="huskcultist" tags="huskcultist" faction="huskcult" commonness="0" moduleflags="huskmodule" job="assistant" behavior="Passive" healthmultiplier="0.5" preferredoutpostmoduletypes="huskmodule" spawnpointtags="husk">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="cultistrobes" equip="true"/>
@@ -791,7 +791,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="huskcultecclesiast" faction="huskcult" tags="" commonness="0" moduleflags="huskmodule" job="assistant" behavior="Passive" healthmultiplier="3.0" preferredoutpostmoduletypes="huskmodule" spawnpointtags="husk" aimspeed="1" aimaccuracy="1">
+            <npc identifier="huskcultecclesiast" faction="huskcult" tags="" commonness="0" moduleflags="huskmodule" job="assistant" behavior="Passive" healthmultiplier="3.0" preferredoutpostmoduletypes="huskmodule" spawnpointtags="husk">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="zealotrobes" equip="true"/>
@@ -800,7 +800,7 @@
                 </ItemSet>
             </npc>
 
-            <npc identifier="merchanthusk" faction="huskcult" commonness="0" moduleflags="huskmodule" job="assistant" behavior="Passive" preferredoutpostmoduletypes="huskmodule" campaigninteractiontype="Store" spawnpointtags="clown" aimspeed="1" aimaccuracy="1">
+            <npc identifier="merchanthusk" faction="huskcult" commonness="0" moduleflags="huskmodule" job="assistant" behavior="Passive" preferredoutpostmoduletypes="huskmodule" campaigninteractiontype="Store" spawnpointtags="clown">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="zealotrobes" equip="true"/>
@@ -1071,7 +1071,7 @@
             <npc identifier="hireablehuskcultist" job="assistant" skillmultiplier="1.5" experiencepoints="2000">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
-                    <Item identifier="commonerclothes1" equip="true"/>
+                    <Item identifier="cultistrobes" equip="true"/>
                     <Item identifier="divingknife" equip="false"/>
                     <Item identifier="headset" equip="true"/>
                     <Item identifier="wrench"/>
@@ -1079,7 +1079,7 @@
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
-                    <Item identifier="vipclothes2" equip="true"/>
+                    <Item identifier="cultistrobes" equip="true"/>
                     <Item identifier="divingknife" equip="false"/>
                     <Item identifier="piratebandana" equip="true" />
                     <Item identifier="headset" equip="true"/>
@@ -1087,7 +1087,33 @@
                     <Item identifier="screwdriver"/>
                 </ItemSet>
             </npc>
-
+            <npc identifier="hireablehuskcultistveteran" skillmultiplier="2.0" experiencepoints="6000">
+                <ItemSet commonness="1">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="zealotrobes" equip="true"/>
+                    <Item identifier="divingknife" equip="false"/>
+                    <Item identifier="rituallantern" equip="true"/>
+                    <Item identifier="syringegun" equip="false">
+                        <Item identifier="huskeggs" amount="2" />
+                    </Item>
+                    <Item identifier="headset" equip="true"/>
+                    <Item identifier="wrench"/>
+                    <Item identifier="screwdriver"/>
+                </ItemSet>
+                <ItemSet commonness="1">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="zealotrobes" equip="true"/>
+                    <Item identifier="divingknife" equip="false"/>
+                    <Item identifier="piratebandana" equip="true" />
+                    <Item identifier="headset" equip="true"/>
+                    <Item identifier="huskstinger" equip="true"/>
+                    <Item identifier="syringegun" equip="false">
+                        <Item identifier="huskeggs" amount="2" />
+                    </Item>
+                    <Item identifier="wrench"/>
+                    <Item identifier="screwdriver"/>
+                </ItemSet>
+            </npc>
             <npc identifier="hireableclown" job="assistant" skillmultiplier="1.5" experiencepoints="2000">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
@@ -1097,6 +1123,18 @@
                     <Item identifier="headset" equip="true"/>
                     <Item identifier="wrench"/>
                     <Item identifier="screwdriver"/>
+                </ItemSet>
+            </npc>
+            <npc identifier="hireableclownveteran" job="assistant" skillmultiplier="2.0" experiencepoints="6000">
+                <ItemSet commonness="1">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="clownmask" equip="true"/>
+                    <Item identifier="clowncostume" equip="true"/>
+                    <Item identifier="cymbals" equip="false"/>
+                    <Item identifier="headset" equip="true"/>
+                    <Item identifier="bananapeel" amount="8" />
+                    <Item identifier="toyhammer"/>
+                    <Item identifier="honkmotherianscriptures1"/>
                 </ItemSet>
             </npc>
 
@@ -1138,8 +1176,7 @@
         <!--                          Abandoned Outpost NPCs                           -->
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <npcset identifier="abandonedoutpostnpcs">
-
-            <npc identifier="bandit" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="1.5" aimspeed="1" aimaccuracy="0.75" reportrange="500">
+            <npc identifier="bandit" commonness="0" tags="bandit" moduleflags="crewmodule,engineeringmodule" job="structuredefender" behavior="Passive" healthmultiplier="1.5" aimspeed="0.8" aimaccuracy="0.75" reportrange="500" hearing="1.0" findweaponsrange="1000">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
                     <Item identifier="banditclothes2" equip="true" />
@@ -1327,6 +1364,108 @@
                     <Item identifier="toolbelt" equip="true" />
                 </ItemSet>
             </npc>
+            <npc identifier="bandit_elite" commonness="0" tags="bandit" moduleflags="crewmodule,engineeringmodule" job="structuredefender" behavior="Passive" aimspeed="0.9" aimaccuracy="0.65" reportrange="600" hearing="1.0" findweaponsrange="1000">
+                <ItemSet commonness="1">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="banditclothes1" equip="true"/>
+                    <Item identifier="piratebodyarmor" equip="true" />
+                    <Item identifier="piratehelmet" equip="true" />
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="weldingtool">
+                        <Item identifier="weldingfueltank" />
+                    </Item>
+                    <Item identifier="divingknife" equip="false"/>
+                    <Item identifier="smgmagazine" amount="2" />
+                    <Item identifier="machinepistol" equip="true">
+                        <Item identifier="smgmagazine"/>
+                    </Item>
+                    <Item identifier="machinepistol" equip="true">
+                        <Item identifier="smgmagazine"/>
+                    </Item>
+                    <Item identifier="toolbelt" equip="true"/>
+                </ItemSet>
+                <ItemSet commonness="1">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="banditclothes2" equip="true"/>
+                    <Item identifier="piratebodyarmor" equip="true" />
+                    <Item identifier="piratehelmet" equip="true" />
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="weldingtool">
+                        <Item identifier="weldingfueltank" />
+                    </Item>
+                    <Item identifier="baseballcap" equip="true"/>
+                    <Item identifier="crowbar" equip="false"/>
+                    <Item identifier="shotgunshell" amount="6"/>
+                    <Item identifier="shotgun">
+                        <Item identifier="shotgunshell" amount="6"/>
+                    </Item>
+                    <Item identifier="shotgunshell" amount="6"/>
+                </ItemSet>
+                <ItemSet commonness="1">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="banditclothes2" equip="true"/>
+                    <Item identifier="piratebodyarmor" equip="true" />
+                    <Item identifier="piratehelmet" equip="true" />
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="weldingtool">
+                        <Item identifier="weldingfueltank" />
+                    </Item>
+                    <Item identifier="divingknife" equip="false"/>
+                    <Item identifier="toolbelt" equip="true"/>
+                    <Item identifier="rifle" equip="true">
+                        <Item identifier="riflebullet" amount="6"/>
+                    </Item>
+                    <Item identifier="riflebullet" amount="6"/>
+                </ItemSet>
+            </npc>
+            <npc identifier="bandit_heavy" commonness="0" tags="bandit" moduleflags="crewmodule,engineeringmodule" job="structuredefender" behavior="Passive" healthmultiplier="0.8" aimspeed="0.85" aimaccuracy="0.45" reportrange="550" hearing="1.0" findweaponsrange="1000">
+                <ItemSet commonness="1">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="piratehelmet" equip="true" />
+                    <Item identifier="piratebodyarmor" equip="true" />
+                    <Item identifier="banditclothes1" equip="true"/>
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="weldingtool">
+                        <Item identifier="weldingfueltank" />
+                    </Item>
+                    <Item identifier="divingknife" equip="false"/>
+                    <Item identifier="assaultrifle" equip="true">
+                        <Item identifier="assaultriflemagazine" />
+                    </Item>
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="toolbelt" equip="true"/>
+                </ItemSet>
+                <ItemSet commonness="1">
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="piratehelmet" equip="true" />
+                    <Item identifier="piratebodyarmor" equip="true" />
+                    <Item identifier="banditclothes2" equip="true"/>
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="weldingtool">
+                        <Item identifier="weldingfueltank" />
+                    </Item>
+                    <Item identifier="baseballcap" equip="true"/>
+                    <Item identifier="crowbar" equip="false"/>
+                    <Item identifier="shotgun">
+                        <Item identifier="shotgunshell" amount="6"/>
+                    </Item>
+                    <Item identifier="shotgunshell" amount="6"/>
+                </ItemSet>
+            </npc>
+
             <npc identifier="banditleader" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1.2" healthmultiplierinmultiplayer="2" aimspeed="1.0" aimaccuracy="0.75" reportrange="750">
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
@@ -1338,6 +1477,7 @@
                     <Item identifier="divingknife" />
                     <Item identifier="captainscap2" equip="true" />
                     <Item identifier="captainsuniform2" equip="true" />
+                    <Item identifier="piratebodyarmor" equip="true" />
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
                     </Item>
@@ -1357,6 +1497,7 @@
                     <Item identifier="idcard" equip="true" />
                     <Item identifier="captainscap2" equip="true" />
                     <Item identifier="captainsuniform2" equip="true" />
+                    <Item identifier="piratebodyarmor" equip="true" />
                     <Item identifier="antidama1" />
                     <Item identifier="antibleeding2" />
                     <Item identifier="antibleeding2" />
@@ -1378,6 +1519,7 @@
                     <Item identifier="idcard" equip="true" />
                     <Item identifier="captainscap2" equip="true" />
                     <Item identifier="captainsuniform2" equip="true" />
+                    <Item identifier="piratebodyarmor" equip="true" />
                     <Item identifier="antidama1" />
                     <Item identifier="antibleeding2" />
                     <Item identifier="antibleeding2" />
@@ -1628,33 +1770,66 @@
                     <Item identifier="toolbelt" equip="true"/>
                 </ItemSet>
             </npc>
-            <npc identifier="hostage" job="assistant" moduleflags="none" behavior="Passive">
+    <npc identifier="hostage" tags="hostage,prisoner" job="assistant" moduleflags="none" behavior="Passive" AllowDraggingIndefinitely="true">
                 <ItemSet>
-                    <Item identifier="commonerclothes1" equip="true" />
-                    <Item identifier="handcuffs" equip="true" />
-                    <Item identifier="idcard" equip="true" />
+        <Item identifier="commonerclothes1" equip="true"/>
+        <Item identifier="handcuffs" equip="true"/>
+        <Item identifier="idcard" equip="true"/>
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
                     </Item>
-                    <Item identifier="pressurestabilizer" equip="false" />
                 </ItemSet>
                 <ItemSet>
-                    <Item identifier="commonerclothes2" equip="true" />
-                    <Item identifier="handcuffs" equip="true" />
-                    <Item identifier="idcard" equip="true" />
+        <Item identifier="commonerclothes2" equip="true"/>
+        <Item identifier="handcuffs" equip="true"/>
+        <Item identifier="idcard" equip="true"/>
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
                     </Item>
-                    <Item identifier="pressurestabilizer" equip="false" />
                 </ItemSet>
                 <ItemSet>
-                    <Item identifier="commonerclothes3" equip="true" />
-                    <Item identifier="handcuffs" equip="true" />
-                    <Item identifier="idcard" equip="true" />
+        <Item identifier="commonerclothes3" equip="true"/>
+        <Item identifier="handcuffs" equip="true"/>
+        <Item identifier="idcard" equip="true"/>
+        <Item identifier="divingmask" >
+                        <Item identifier="oxygentank" />
+                    </Item>
+                </ItemSet>
+            </npc>
+            <npc identifier="hostageseparatists" tags="hostage,prisoner" job="assistant" moduleflags="none" faction="separatists" behavior="Passive" AllowDraggingIndefinitely="true">
+                <ItemSet>
+                    <Item identifier="pirateclothesnovice" equip="true" />
+                    <Item identifier="handcuffs" equip="true"/>
+                    <Item identifier="idcard" equip="true"/>
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
                     </Item>
-                    <Item identifier="pressurestabilizer" equip="false" />
+                </ItemSet>
+                <ItemSet>
+                    <Item identifier="pirateclothes" equip="true" />
+                    <Item identifier="handcuffs" equip="true"/>
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                </ItemSet>
+            </npc>
+            <npc identifier="hostagecoalition" tags="hostage,prisoner" job="assistant" moduleflags="none" faction="coalition" behavior="Passive" AllowDraggingIndefinitely="true">
+                <ItemSet>
+                    <Item identifier="bluejumpsuit2" equip="true" />
+                    <Item identifier="handcuffs" equip="true"/>
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                </ItemSet>
+                <ItemSet>
+                    <Item identifier="orangejumpsuit2" equip="true" />
+                    <Item identifier="handcuffs" equip="true"/>
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
                 </ItemSet>
             </npc>
             <npc identifier="psychoclown" commonness="0" moduleflags="none" job="killer" behavior="Passive" healthmultiplier="1.0" healthmultiplierinmultiplayer="1.2" aimspeed="1" aimaccuracy="1" reportrange="500">
