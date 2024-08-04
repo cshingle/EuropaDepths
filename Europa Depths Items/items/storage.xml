@@ -867,7 +867,7 @@
             </Attack>
         </MeleeWeapon>
         <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
-            <Containable items="calcium" />
+            <Containable items="calcium,bulkcalcium" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
         <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -899,7 +899,7 @@
             </Attack>
         </MeleeWeapon>
         <ItemContainer capacity="12" maxstacksize="16" keepopenwhenequipped="true" movableframe="true" canbecombined="true">
-            <Containable items="lithium" />
+            <Containable items="lithium,bulklithium" />
         </ItemContainer>
         <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
         <Upgrade gameversion="0.10.0.0" scale="0.5" />

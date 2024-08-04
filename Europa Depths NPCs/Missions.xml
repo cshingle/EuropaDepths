@@ -57,7 +57,7 @@
         </AbandonedOutpostMission>
     </Override>
 
-    <AbandonedOutpostMission identifier="abandonedoutpostrescuekillerclown" tags="abandonedoutpost" type="AbandonedOutpost" MaxDifficulty="50" achievementidentifier="abandonedoutpostrescue" reward="3000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
+    <AbandonedOutpostMission identifier="abandonedoutpostrescuekillerclown" tags="abandonedoutpost" type="AbandonedOutpost" MaxDifficulty="50" achievementidentifier="abandonedoutpostrescue" reward="3000" difficulty="4" commonness="25" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
         <LocationType identifier="Abandoned" />
         <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
@@ -157,7 +157,7 @@
         <message header="missionheader0.abandonedoutpostrescue" text="missionmessage0.abandonedoutpostrescue"/>
     </AbandonedOutpostMission>
 
-    <AbandonedOutpostMission name="Dire Outpost Recovery" identifier="abandonedoutpostrescuekillerclowndire" tags="abandonedoutpost" type="AbandonedOutpost" MinDifficulty="50" achievementidentifier="abandonedoutpostrescue" reward="4000" difficulty="4" commonness="20" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
+    <AbandonedOutpostMission name="Dire Outpost Recovery" identifier="abandonedoutpostrescuekillerclowndire" tags="abandonedoutpost" type="AbandonedOutpost" MinDifficulty="50" achievementidentifier="abandonedoutpostrescue" reward="4000" difficulty="4" commonness="25" allowretry="true" hostageskilledmessage="hostageskilled" unhideentitysubcategories="abandonedhuman">
         <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48"/>
         <LocationType identifier="Abandoned" />
         <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />

@@ -52,6 +52,9 @@
                     <Item identifier="revolver" equip="false">
                         <Item identifier="revolverround" amount="6"/>
                     </Item>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
             </npc>
 
@@ -65,6 +68,9 @@
                     </Item>
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
                     </Item>
                 </ItemSet>
             </npc>
@@ -311,6 +317,9 @@
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
                     </Item>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
                 <ItemSet>
                     <Item identifier="securitypatrolclothes" equip="true"/>
@@ -342,6 +351,7 @@
                     <Item identifier="revolver" equip="false">
                         <Item identifier="revolverround" amount="6"/>
                     </Item>
+                    <Item identifier="revolverround" amount="6"/>
                     <Item identifier="divingknife" />
                     <Item identifier="antibleeding1"/>
                     <Item identifier="bodyarmor" equip="true"/>
@@ -359,6 +369,7 @@
                     <Item identifier="revolver" equip="false">
                         <Item identifier="revolverround" amount="6"/>
                     </Item>
+                    <Item identifier="revolverround" amount="6"/>
                     <Item identifier="divingknife" />
                     <Item identifier="antibleeding1"/>
                     <Item identifier="bodyarmor" equip="true"/>
@@ -409,6 +420,9 @@
                     <Item identifier="ballistichelmet1" equip="true"/>
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
                     </Item>
                 </ItemSet>
                 <ItemSet>
@@ -712,7 +726,9 @@
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
                     </Item>
-                    <Item identifier="nitroglycerin"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
@@ -749,7 +765,9 @@
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
                     </Item>
-                    <Item identifier="nitroglycerin"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
@@ -796,7 +814,9 @@
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="zealotrobes" equip="true"/>
                     <Item identifier="divingknifeunique" equip="false"/>
-                    <Item identifier="nitroglycerin"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
             </npc>
 
@@ -922,7 +942,9 @@
                     <Item identifier="syringegun"/>
                     <Item identifier="antibleeding1"/>
                     <Item identifier="antidama1"/>
-                    <Item identifier="nitroglycerin"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
             </npc>
             <npc identifier="hireablecoalitionmedicveteran" job="medicaldoctor" skillmultiplier="2.0" experiencepoints="6000">
@@ -1381,9 +1403,6 @@
                     <Item identifier="machinepistol" equip="true">
                         <Item identifier="smgmagazine"/>
                     </Item>
-                    <Item identifier="machinepistol" equip="true">
-                        <Item identifier="smgmagazine"/>
-                    </Item>
                     <Item identifier="toolbelt" equip="true"/>
                 </ItemSet>
                 <ItemSet commonness="1">
@@ -1445,6 +1464,9 @@
                     <Item identifier="assaultriflemagazine" />
                     <Item identifier="assaultriflemagazine" />
                     <Item identifier="toolbelt" equip="true"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
@@ -1463,6 +1485,9 @@
                         <Item identifier="shotgunshell" amount="6"/>
                     </Item>
                     <Item identifier="shotgunshell" amount="6"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
             </npc>
 
@@ -1492,6 +1517,9 @@
                     <Item identifier="fraggrenade" />
                     <Item identifier="pressurestabilizer" equip="false" />
                     <Item identifier="toolbelt" equip="true"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
@@ -1536,6 +1564,9 @@
                     <Item identifier="40mmgrenade" />
                     <Item identifier="pressurestabilizer" equip="false" />
                     <Item identifier="toolbelt" equip="true"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
             </npc>
             <npc identifier="banditleader_heavy" commonness="0" moduleflags="crewmodule,engineeringmodule" job="securityofficer" behavior="Patrol" healthmultiplier="1.7" healthmultiplierinmultiplayer="2.5" aimspeed="1.0" aimaccuracy="0.75" reportrange="750">
@@ -1564,6 +1595,9 @@
                     <Item identifier="fraggrenade" />
                     <Item identifier="pressurestabilizer" equip="false" />
                     <Item identifier="toolbelt" equip="true"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
@@ -1588,6 +1622,9 @@
                     <Item identifier="smgmagazine" />
                     <Item identifier="fraggrenade" />
                     <Item identifier="toolbelt" />
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
@@ -1613,6 +1650,9 @@
                     <Item identifier="fraggrenade" equip="true" />
                     <Item identifier="pressurestabilizer" equip="false" />
                     <Item identifier="toolbelt" equip="true"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true" />
@@ -1637,6 +1677,9 @@
                     <Item identifier="fraggrenade" />
                     <Item identifier="pressurestabilizer" equip="false" />
                     <Item identifier="toolbelt" equip="true"/>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
             </npc>
             <npc identifier="banditmedic" commonness="0" moduleflags="crewmodule,engineeringmodule" job="medicaldoctor" behavior="Patrol" healthmultiplier="1" healthmultiplierinmultiplayer="1.5" aimspeed="1" aimaccuracy="0.85" reportrange="750">
@@ -1882,6 +1925,9 @@
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
                     </Item>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="idcard" equip="true"/>
@@ -1936,6 +1982,9 @@
                     <Item identifier="assaultriflemagazine" />
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
                     </Item>
                 </ItemSet>
                 <ItemSet commonness="1">

@@ -613,6 +613,9 @@
                 <Item identifier="shotgunshell" />
                 <Item identifier="bikehorn" />
                 <Item identifier="killerhorn" />
+                <Item identifier="deadmansswitch" equip="true">
+                    <Item identifier="combatstimulantsyringe" />
+                </Item>
             </ItemSet>
             <ItemSet commonness="1">
                 <Item identifier="idcard" equip="true"/>
@@ -625,6 +628,9 @@
                 <Item identifier="hmgmagazine" />
                 <Item identifier="bikehorn" equip="true"/>
                 <Item identifier="killerhorn" equip="true"/>
+                <Item identifier="deadmansswitch" equip="true">
+                    <Item identifier="combatstimulantsyringe" />
+                </Item>
             </ItemSet>
             <ItemSet commonness="0.5">
                 <Item identifier="idcard" equip="true"/>
@@ -633,6 +639,9 @@
                 <Item identifier="boardingaxeunique" equip="true"/>
                 <Item identifier="bikehorn" equip="true"/>
                 <Item identifier="killerhorn" equip="true"/>
+                <Item identifier="deadmansswitch" equip="true">
+                    <Item identifier="combatstimulantsyringe" />
+                </Item>
             </ItemSet>
         </npc>
     </npcset>

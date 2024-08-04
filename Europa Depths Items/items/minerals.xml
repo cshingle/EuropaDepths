@@ -33,9 +33,9 @@
       <LevelResource deattachduration="4" randomoffsetfromwall="80">
         <Commonness commonness="0.45" abysscommonness="25" />
         <Commonness commonness="0.55" abysscommonness="10" leveltype="europanridge" />
-        <Commonness commonness="0.50" abysscommonness="0" leveltype="theaphoticplateau" />
-        <Commonness commonness="0.40" abysscommonness="0" leveltype="thegreatsea" />
-        <Commonness commonness="0.30" abysscommonness="0" leveltype="hydrothermalwastes" />
+        <Commonness commonness="0.50" abysscommonness="5" leveltype="theaphoticplateau" />
+        <Commonness commonness="0.40" abysscommonness="3" leveltype="thegreatsea" />
+        <Commonness commonness="0.30" abysscommonness="3" leveltype="hydrothermalwastes" />
         <RequiredItem items="cuttingequipment" type="Equipped" />
       </LevelResource>
       <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgUsePlasmaCutter" handle1="0,0" pickingtime="5.0" attachable="true" reattachable="false" />

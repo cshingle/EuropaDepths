@@ -147,7 +147,7 @@
                     <Item identifier="abyssdivingsuit" equip="true">
                         <Item identifier="oxygenitetank"/>
                     </Item>
-                    <Item identifier="autoinjectorheadset" equip="true">
+                    <Item identifier="deadmansswitch" equip="true">
                         <Item identifier="hyperzine"/>
                     </Item>
                     <Item identifier="cigar"/>
@@ -175,7 +175,7 @@
                     <Item identifier="abyssdivingsuit" equip="true">
                         <Item identifier="oxygenitetank"/>
                     </Item>
-                    <Item identifier="autoinjectorheadset" equip="true">
+                    <Item identifier="deadmansswitch" equip="true">
                         <Item identifier="hyperzine"/>
                     </Item>
                     <Item identifier="cigar"/>
@@ -260,6 +260,9 @@
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank"/>
                     </Item>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
             </npc>
             <npc identifier="piratesecuritybruteelite" job="securityofficer" spawnpointtags="security" behavior="Patrol" healthmultiplier="0.9" healthmultiplierinmultiplayer="1.9" aimspeed="0.5" aimaccuracy="0.4">
@@ -277,6 +280,9 @@
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank"/>
                     </Item>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="pirateclothes" equip="true"/>
@@ -291,6 +297,9 @@
                     <Item identifier="piratebandana" equip="true"/>
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank"/>
+                    </Item>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
                     </Item>
                 </ItemSet>
             </npc>
@@ -317,7 +326,9 @@
                     </Item>
                     <Item identifier="spearunique"/>
                     <Item identifier="spearunique"/>
-                    <Item identifier="pressurestabilizer" equip="false" />
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="pressurestabilizer" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="2">
                     <Item identifier="pirateclotheshard" equip="true"/>
@@ -334,7 +345,9 @@
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank"/>
                     </Item>
-                    <Item identifier="pressurestabilizer" equip="false" />
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="pressurestabilizer" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="pirateclotheshard" equip="true"/>
@@ -351,7 +364,9 @@
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank"/>
                     </Item>
-                    <Item identifier="pressurestabilizer" equip="false" />
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="pressurestabilizer" />
+                    </Item>
                 </ItemSet>
                 <ItemSet commonness="1">
                     <Item identifier="pirateclotheshard" equip="true"/>
@@ -371,7 +386,9 @@
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank"/>
                     </Item>
-                    <Item identifier="pressurestabilizer" equip="false" />
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="pressurestabilizer" />
+                    </Item>
                 </ItemSet>
             </npc>
             <npc identifier="pirateengineerrecruit" job="engineer" commonness="1" behavior="Patrol" healthmultiplier="0.4" healthmultiplierinmultiplayer="1.4" aimspeed="0.8" aimaccuracy="0.6">
