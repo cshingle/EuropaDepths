@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Charactervariant inherit="Crawler" speciesname="Crawler_veteran" speciestranslationoverride="Crawler_veteran" usebosshealthbar="false">
   <health Vitality="120" />
+  <ragdolls folder="Content/Characters/Crawler/Ragdolls" />
   <ragdoll scalemultiplier="1.1"/>
   <attack damagemultiplier="1.1" rangemultiplier="1.1" impactmultiplier="1.1"/>
 </Charactervariant>

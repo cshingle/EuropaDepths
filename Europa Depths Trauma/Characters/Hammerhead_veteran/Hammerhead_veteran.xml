@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Charactervariant inherit="Hammerhead" speciesname="Hammerhead_veteran" speciestranslationoverride="Hammerhead_veteran" usebosshealthbar="false">
   <health Vitality="500" />
+  <ragdolls folder="Content/Characters/Hammerhead/Ragdolls" />
   <ragdoll scalemultiplier="1.1"/>
   <attack damagemultiplier="1.2" rangemultiplier="1.2" impactmultiplier="1.2"/>
 </Charactervariant>

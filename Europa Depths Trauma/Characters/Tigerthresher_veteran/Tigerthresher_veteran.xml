@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Charactervariant inherit="Tigerthresher" speciesname="Tigerthresher_veteran" speciestranslationoverride="Tigerthresher_veteran" usebosshealthbar="false">
   <health Vitality="350" />
+  <ragdolls folder="Content/Characters/Tigerthresher/Ragdolls" />
   <ragdoll scalemultiplier="1.1"/>
   <attack damagemultiplier="1.2" rangemultiplier="1.2" impactmultiplier="1.2"/>
 </Charactervariant>

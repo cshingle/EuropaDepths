@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Charactervariant inherit="Bonethresher" speciesname="Bonethresher_veteran" speciestranslationoverride="Bonethresher_veteran" usebosshealthbar="false">
   <health Vitality="700" />
+  <ragdolls folder="Content/Characters/Bonethresher/Ragdolls" />
   <ragdoll scalemultiplier="1.1"/>
   <attack damagemultiplier="1.2" rangemultiplier="1.2" impactmultiplier="1.2"/>
 </Charactervariant>
