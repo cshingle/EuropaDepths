@@ -134,7 +134,11 @@ public class Spawns {
 						new MonsterEvent(Character.Crawlerhusk, 6, 10).scatter(1000)),
 				new MonsterSet("mudraptors", false, 40).monsters(
 						new MonsterEvent(Character.Mudraptor, 3, 6),
-						new MonsterEvent(Character.Mudraptor_unarmored, 1, 2)) };
+						new MonsterEvent(Character.Mudraptor_unarmored, 1, 2)),
+				new MonsterSet("spinelings", false, 5).monsters(
+						new MonsterEvent(Character.Spineling, 5, 7),
+						new MonsterEvent(Character.Spineling_red, 1, 2).offset(1000).scatter(1000))
+		};
 	}
 	
 	/**
@@ -153,7 +157,7 @@ public class Spawns {
 						new MonsterEvent(Character.Mudraptor, 3, 6),
 						new MonsterEvent(Character.Mudraptor_veteran, 1, 2)),
 				new MonsterSet("watcher", false, 20).monsters(
-						new MonsterEvent(Character.Watcher, 0, 1),
+						new MonsterEvent(Character.Watcher, 0, 1).triggereventcooldown(false),
 						new MonsterEvent(Character.Mudraptor, 1, 2)),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Character.Spineling, 10, 15),
@@ -180,7 +184,10 @@ public class Spawns {
 						new MonsterEvent(Character.Crawlerhusk, 10, 15).scatter(1000)),
 				new MonsterSet("mudraptors", false, 40).monsters(
 						new MonsterEvent(Character.Mudraptor, 3, 8),
-						new MonsterEvent(Character.Mudraptor_veteran, 1, 3))
+						new MonsterEvent(Character.Mudraptor_veteran, 1, 3)),
+				new MonsterSet("spinelings", false, 5).monsters(
+						new MonsterEvent(Character.Spineling, 5, 7),
+						new MonsterEvent(Character.Spineling_red, 3, 3).offset(1000).scatter(1000))
 		};
 	}
 	
@@ -200,7 +207,7 @@ public class Spawns {
 						new MonsterEvent(Character.Mudraptor, 3, 6),
 						new MonsterEvent(Character.Mudraptor_veteran, 1, 2)),
 				new MonsterSet("watcher", 15).monsters(
-						new MonsterEvent(Character.Watcher, 1, 1),
+						new MonsterEvent(Character.Watcher, 1, 1).triggereventcooldown(false),
 						new MonsterSet(true).monsters(
 								new MonsterSet("crawlers").monsters(
 										new MonsterEvent(Character.Crawler, 5, 15)),
@@ -237,8 +244,9 @@ public class Spawns {
 				new MonsterSet("thrashers", false, 40).monsters(
 						new MonsterEvent(Character.Tigerthresher_veteran, 5, 8)),
 				new MonsterSet("spinelings", false, 5).monsters(
+						new MonsterEvent(Character.Spineling, 5, 7),
 						new MonsterEvent(Character.Spineling_red, 3, 3),
-						new MonsterEvent(Character.Spineling_morbusine, 0, 3).spawnprobability(0.33).scatter(2000))
+						new MonsterEvent(Character.Spineling_morbusine, 0, 3).spawnprobability(0.5).scatter(2000))
 		};
 	}
 	
@@ -258,7 +266,7 @@ public class Spawns {
 						new MonsterEvent(Character.Mudraptor, 8, 10),
 						new MonsterEvent(Character.Mudraptor_veteran, 3, 4)),
 				new MonsterSet("watcher", 20).monsters(
-						new MonsterEvent(Character.Watcher, 1, 1),
+						new MonsterEvent(Character.Watcher, 1, 1).triggereventcooldown(false),
 						new MonsterSet(true).monsters(
 								new MonsterSet("crawlers").monsters(
 										new MonsterEvent(Character.Crawler_veteran, 8, 14)),
@@ -321,8 +329,9 @@ public class Spawns {
 						new MonsterEvent(Character.Molochbaby, 10, 20).scatter(3000),
 						new MonsterEvent(Character.Molochblack, 1, 1).offset(10000).scatter(3000)),
 				new MonsterSet("spinelings", false, 5).monsters(
+						new MonsterEvent(Character.Spineling, 5, 7),
 						new MonsterEvent(Character.Spineling_red, 3, 3),
-						new MonsterEvent(Character.Spineling_morbusine, 0, 3).spawnprobability(0.33).scatter(2000))
+						new MonsterEvent(Character.Spineling_morbusine, 1, 3).spawnprobability(0.75).scatter(2000))
 		};
 	}
 	
@@ -341,7 +350,7 @@ public class Spawns {
 				new MonsterSet("mudraptors", false, 40).monsters(
 						new MonsterEvent(Character.Mudraptor_veteran, 10, 12)),
 				new MonsterSet("watcher", 20).monsters(
-						new MonsterEvent(Character.Watcher, 1, 1),
+						new MonsterEvent(Character.Watcher, 1, 1).triggereventcooldown(false),
 						new MonsterSet(true).monsters(
 								new MonsterSet("crawlers").monsters(
 										new MonsterEvent(Character.Crawler_veteran, 5, 8)),

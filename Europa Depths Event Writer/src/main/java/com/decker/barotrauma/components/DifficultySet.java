@@ -9,14 +9,14 @@ public class DifficultySet extends EventSet<DifficultySet> {
 	
 	int id;
 	String comment = null;
-	Map<String, Object> fields = new TreeMap<>(new FieldComparator());
 	
 	public DifficultySet(int id) {
+		super();
 		this.id = id;
-		fields.put("identifier", "");
-		fields.put("chooserandom", "false");
-		fields.put("allowatstart", "true");
-		fields.put("campaign", "true");
+		this.getFields().put("identifier", "");
+		this.getFields().put("chooserandom", "false");
+		this.getFields().put("allowatstart", "true");
+		this.getFields().put("campaign", "true");
 	}
 	
 	@Override
