@@ -2,12 +2,7 @@
 <Afflictions>
 
     <AfflictionHusk name="Husk Ascension" identifier="huskascension" type="alieninfection" targets="human" isbuff="true" huskedspeciesname="[speciesname]husk" limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="0" showinhealthscannerthreshold="0" karmachangeonapplied="-1" maxstrength="100" transferbuffs="true" causespeechimpediment="false" achievementonreceived="ascension" achievementonremoved="healhusk" dormantthreshold="50" activethreshold="75" transformthresholdondeath="1000" transitionthreshold="1000" healableinmedicalclinic="false" iconcolors="60,140,195,255;60,107,195,255;60,0,195,255">
-        <Effect minstrength="0" maxstrength="75" maxvitalitydecrease="0" strengthchange="1" minbodytint="255,255,255,0" maxbodytint="255,255,255,255" minfacetint="255,255,255,0" maxfacetint="255,255,255,255" tag="huskinfected" blocktransformation="huskinfection" resistancefor="huskinfection" minresistance="1.0" maxresistance="1.0">
-            <StatusEffect target="Character" type="OnActive">
-                <ReduceAffliction identifier="huskinfection" amount="1000" />
-            </StatusEffect>
-        </Effect>
-        <Effect minstrength="75" maxstrength="100" maxvitalitydecrease="0" strengthchange="2" minbodytint="255,255,255,255" maxbodytint="255,255,255,255" minfacetint="255,255,255,255" maxfacetint="255,255,255,255" tag="huskinfected" blocktransformation="huskinfection" resistancefor="huskinfection" minresistance="1.0" maxresistance="1.0">
+        <Effect minstrength="0" maxstrength="100" maxvitalitydecrease="0" strengthchange="10" minbodytint="255,255,255,255" maxbodytint="255,255,255,255" minfacetint="255,255,255,255" maxfacetint="255,255,255,255" tag="huskinfected" blocktransformation="huskinfection" resistancefor="huskinfection" minresistance="1.0" maxresistance="1.0">
             <StatusEffect target="Character" type="OnActive">
                 <ReduceAffliction identifier="huskinfection" amount="1000" />
                 <ReduceAffliction identifier="husksymbiosis" amount="1000" />
@@ -34,6 +29,7 @@
             <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
                 <ReduceAffliction type="damage" strength="0.05"/>
                 <ReduceAffliction type="burn" strength="0.05"/>
+                <ReduceAffliction type="nausea" strength="0.05"/>
                 <ReduceAffliction identifier="bloodloss" strength="0.05"/>
                 <ReduceAffliction identifier="bleeding" strength="0.05"/>
                 <ReduceAffliction identifier="chemwithdrawal" strength="0.05"/>
@@ -46,6 +42,7 @@
             <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
                 <ReduceAffliction type="damage" strength="0.1"/>
                 <ReduceAffliction type="burn" strength="0.1"/>
+                <ReduceAffliction type="nausea" strength="0.1"/>
                 <ReduceAffliction identifier="bloodloss" strength="0.1"/>
                 <ReduceAffliction identifier="bleeding" strength="0.1"/>
                 <ReduceAffliction identifier="chemwithdrawal" strength="0.1"/>
