@@ -203,10 +203,10 @@
                     <Affliction identifier="stun" amount="0.1" />
                 </StatusEffect>
                 <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="300">
-                    <ReduceAffliction identifier="infection" amount="1.2" />
+                    <ReduceAffliction identifier="infection" amount="3" />
                 </StatusEffect>
                 <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="120">
-                    <ReduceAffliction identifier="infection" amount="1.2" />
+                    <ReduceAffliction identifier="infection" amount="2" />
                 </StatusEffect>
                 <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" duration="5">
                     <Affliction identifier="drunkweakness" amount="10" />
