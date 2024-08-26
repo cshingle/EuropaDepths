@@ -54,52 +54,53 @@
 				<TriggerEventAction identifier="beaconbandit_defense" />
 			</ScriptedEvent>
 			<ScriptedEvent identifier="beaconbandit_enablelayers">
-			  <LayerAction layer="bandit" enabled="true" />
-			  <CheckDifficultyAction mindifficulty="50">
-			    <Success>
-			      <LayerAction layer="bandit_hard" enabled="true" />
-			    </Success>
-			  </CheckDifficultyAction>
-			
-			  <TagAction criteria="itemtag:reactor" submarinetype="BeaconStation" tag="beaconreactor" />
-			  <SpawnAction itemidentifier="fuelrod" targetinventory="beaconreactor" />
+				<LayerAction layer="bandit" enabled="true" />
+				<CheckDifficultyAction mindifficulty="50">
+					<Success>
+						<LayerAction layer="bandit_hard" enabled="true" />
+					</Success>
+				</CheckDifficultyAction>
+
+				<TagAction criteria="itemtag:reactor" submarinetype="BeaconStation" tag="beaconreactor" />
+				<SpawnAction itemidentifier="fuelrod" targetinventory="beaconreactor" />
 			</ScriptedEvent>
-			
+
 			<ScriptedEvent identifier="beaconbandit_spawndivingsuit">
-			  <TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="divingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
-			  <TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
+				<TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
+				<SpawnAction itemidentifier="divingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
+				<TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
 			</ScriptedEvent>
-			
+
 			<ScriptedEvent identifier="beaconbandit_spawncombatdivingsuit">
-			  <TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="combatdivingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
-			  <TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
+				<TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
+				<SpawnAction itemidentifier="combatdivingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
+				<TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
 			</ScriptedEvent>
-			
+
 			<ScriptedEvent identifier="beaconbandit_spawnabyssdivingsuit">
-			  <TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="abyssdivingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
-			  <TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
+				<TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
+				<SpawnAction itemidentifier="abyssdivingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
+				<TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
 			</ScriptedEvent>
-			 
+
 			<ScriptedEvent identifier="beaconbandit_defense">
-			  <!-- Pick one bandit at random to defend, and one target at random to defend. -->
-			  <TagAction criteria="humanprefabtag:bandit" tag="defender" chooserandom="true" />
-			  <TagAction criteria="itemtag:defendable" tag="defendable" chooserandom="true" AllowHiddenItems="true" />
-			  <WaitAction time="20" /> <!-- Give some time to start the reactor -->
-			  <!-- Make the NPC "operate" the defendable position (dummy item that marks the position the bandit should defend -->
-			  <!-- Priority of 70 makes defending take priority over autonomous objectives, but emergency objectives like finding safety are still higher prio (90) -->
-			  <NPCOperateItemAction npctag="defender" targettag="defendable" itemcomponentname="controller" operate="true" Priority="70" />
+				<!-- Pick one bandit at random to defend, and one target at random to defend. -->
+				<TagAction criteria="humanprefabtag:bandit" tag="defender" chooserandom="true" />
+				<TagAction criteria="itemtag:defendable" tag="defendable" chooserandom="true" AllowHiddenItems="true" />
+				<WaitAction time="20" />
+				<!-- Give some time to start the reactor -->
+				<!-- Make the NPC "operate" the defendable position (dummy item that marks the position the bandit should defend -->
+				<!-- Priority of 70 makes defending take priority over autonomous objectives, but emergency objectives like finding safety are still higher prio (90) -->
+				<NPCOperateItemAction npctag="defender" targettag="defendable" itemcomponentname="controller" operate="true" Priority="70" />
 			</ScriptedEvent>
 		</EventPrefabs>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 0                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -117,7 +118,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 1                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -167,7 +168,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 2                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -180,10 +181,22 @@
 
 			<!-- Populate the caves -->
 			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Crawler" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Crawlerhusk" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="cave" delaybetweenspawns="1" />
+				<EventSet identifier="Crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawler" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Crawlerhusks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawlerhusk" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Spinelings" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Spineling" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="2" maxamount="2" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the beacon stations -->
@@ -345,7 +358,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 3                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -357,19 +370,42 @@
 
 			<!-- Populate the caves -->
 			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Crawler" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Crawlerhusk" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_unarmored" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="1" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
-			</EventSet>
-
-			<!-- Populate the caves -->
-			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				<EventSet identifier="Crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawler" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Crawlerhusks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawlerhusk" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Spinelings" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Spineling" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Bonethresher_caves" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mantis" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the beacon stations -->
@@ -745,7 +781,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 4                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -758,19 +794,42 @@
 
 			<!-- Populate the caves -->
 			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Crawler" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Crawlerhusk" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_unarmored" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="1" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
-			</EventSet>
-
-			<!-- Populate the caves -->
-			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				<EventSet identifier="Crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawler" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Crawlerhusks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawlerhusk" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Spinelings" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Spineling" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="2" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Bonethresher_caves" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mantis" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the beacon stations -->
@@ -1170,7 +1229,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 5                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1182,15 +1241,50 @@
 
 			<!-- Populate the caves -->
 			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Crawler" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_unarmored" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor" minamount="2" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
+				<EventSet identifier="Crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawler" minamount="3" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Crawlerhusks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Spinelings" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors2" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Bonethresher_caves" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mantis" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the beacon stations -->
@@ -1588,7 +1682,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 6                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1598,22 +1692,50 @@
 
 			<!-- Populate the caves -->
 			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Crawler" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_unarmored" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor" minamount="2" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
-			</EventSet>
-
-			<!-- Populate the caves -->
-			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				<EventSet identifier="Crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawler" minamount="3" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Crawlerhusks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Spinelings" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors2" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Bonethresher_caves" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mantis" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the beacon stations -->
@@ -1812,9 +1934,14 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" chooserandom="false" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="0" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1848,9 +1975,14 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" chooserandom="false" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="0" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1884,9 +2016,14 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" chooserandom="false" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="0" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1920,9 +2057,14 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" chooserandom="false" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="0" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1956,9 +2098,14 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" chooserandom="false" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="0" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1997,7 +2144,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 7                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2007,22 +2154,50 @@
 
 			<!-- Populate the caves -->
 			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Crawler" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_unarmored" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor" minamount="2" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
-			</EventSet>
-
-			<!-- Populate the caves -->
-			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				<EventSet identifier="Crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawler" minamount="3" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Crawlerhusks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawlerhusk" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Spinelings" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
+					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors2" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="1" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Bonethresher_caves" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="1" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mantis" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the beacon stations -->
@@ -2241,7 +2416,7 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="3" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 			<!-- 15% or 6 min -->
@@ -2257,20 +2432,23 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="15">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="6" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -2304,20 +2482,23 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="15">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="6" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -2351,20 +2532,23 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="15">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="6" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -2398,20 +2582,23 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="15">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="6" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -2445,20 +2632,23 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="15">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="6" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -2493,11 +2683,11 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="3" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 8                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2509,23 +2699,59 @@
 
 			<!-- Populate the caves -->
 			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Crawler_veteran" minamount="4" maxamount="7" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Crawlerhusk" minamount="8" maxamount="10" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling" minamount="5" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor" minamount="4" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_cave" minamount="4" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="3" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
-			</EventSet>
-
-			<!-- Populate the caves -->
-			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Mantis" minamount="3" maxamount="4" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling_morbusine" minamount="0" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				<EventSet identifier="Crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawler_veteran" minamount="4" maxamount="7" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Crawlerhusks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawlerhusk" minamount="8" maxamount="10" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Spinelings" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
+					<MonsterEvent characterfile="Mudraptor" minamount="4" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors2" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Bonethresher_caves" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="4" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mantis" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mantis" minamount="3" maxamount="5" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the beacon stations -->
@@ -2752,7 +2978,7 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="3" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 			<!-- 15% or 6 min -->
@@ -2768,23 +2994,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -2844,23 +3071,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -2920,23 +3148,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -2996,23 +3225,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3072,23 +3302,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3148,23 +3379,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3232,7 +3464,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 9                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -3242,23 +3474,59 @@
 
 			<!-- Populate the caves -->
 			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Crawler_veteran" minamount="4" maxamount="7" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Crawlerhusk" minamount="8" maxamount="10" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling" minamount="5" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor" minamount="4" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_cave" minamount="4" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="3" maxamount="3" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
-			</EventSet>
-
-			<!-- Populate the caves -->
-			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Mantis" minamount="3" maxamount="4" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling_morbusine" minamount="0" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				<EventSet identifier="Crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawler_veteran" minamount="4" maxamount="7" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Crawlerhusks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawlerhusk" minamount="8" maxamount="10" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Spinelings" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
+					<MonsterEvent characterfile="Mudraptor" minamount="4" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors2" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="15">
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Bonethresher_caves" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="4" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mantis" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mantis" minamount="3" maxamount="5" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the beacon stations -->
@@ -3504,23 +3772,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3580,23 +3849,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3656,23 +3926,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3732,23 +4003,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3808,23 +4080,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3884,23 +4157,24 @@
 					<MonsterEvent characterfile="Mudraptor" minamount="8" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher" minamount="2" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -3968,7 +4242,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 10                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -3978,22 +4252,53 @@
 
 			<!-- Populate the caves -->
 			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="10" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Crawlerhusk" minamount="8" maxamount="10" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling" minamount="5" maxamount="10" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_cave" minamount="4" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Bonethresher_veteran" minamount="3" maxamount="4" spawntype="cave" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="3" maxamount="4" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
-			</EventSet>
-
-			<!-- Populate the caves -->
-			<EventSet identifier="caves" chooserandom="true" percave="true" triggereventcooldown="false" allowatstart="true">
-				<MonsterEvent characterfile="Mantis" minamount="4" maxamount="5" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
-				<MonsterEvent characterfile="Spineling_morbusine" minamount="0" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				<EventSet identifier="Crawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="10" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Crawlerhusks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Crawlerhusk" minamount="8" maxamount="10" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawlerhusk" minamount="8" maxamount="10" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Spinelings" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="10" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mudraptors" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="5" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="1" maxamount="2" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Bonethresher_caves" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="5" maxamount="6" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="1" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Tigerthreshers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="cave" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="Mantis" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="20">
+					<MonsterEvent characterfile="Mantis" minamount="3" maxamount="5" spawntype="cave" scatter="2000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.33" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_cave" minamount="2" maxamount="3" spawntype="cave" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the beacon stations -->
@@ -4226,8 +4531,8 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_morbusine" minamount="1" maxamount="3" spawntype="mainpath,sidepath" scatter="2000" spawnprobability="0.75" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="mainpath,sidepath" scatter="2000" spawnprobability="0.75" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 			<!-- 15% or 6 min -->
@@ -4242,20 +4547,24 @@
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4322,20 +4631,24 @@
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4402,20 +4715,24 @@
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4482,20 +4799,24 @@
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4562,20 +4883,24 @@
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4642,20 +4967,24 @@
 				<EventSet identifier="mudraptors" chooserandom="false" triggereventcooldown="false" commonness="40">
 					<MonsterEvent characterfile="Mudraptor_veteran" minamount="10" maxamount="12" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
-				<EventSet identifier="watcher" triggereventcooldown="false" commonness="20">
-					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" triggereventcooldown="false" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<EventSet chooserandom="true">
-						<EventSet identifier="crawlers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Crawler_veteran" minamount="5" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="mudraptors" triggereventcooldown="false">
-							<MonsterEvent characterfile="Mudraptor_veteran" minamount="2" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-						<EventSet identifier="threshers" triggereventcooldown="false">
-							<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-							<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-						</EventSet>
-					</EventSet>
+				<EventSet identifier="watcher1" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Mudraptor_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher3" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Crawler_veteran" minamount="8" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+				</EventSet>
+				<EventSet identifier="watcher4" chooserandom="false" triggereventcooldown="false" commonness="15">
+					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Bonethresher_veteran" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Tigerthresher_veteran" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -4728,8 +5057,8 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_morbusine" minamount="1" maxamount="3" spawntype="mainpath,sidepath" scatter="2000" spawnprobability="0.75" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="mainpath,sidepath" scatter="2000" spawnprobability="0.75" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 		</EventSet>

@@ -1,6 +1,5 @@
 package com.decker.barotrauma.components;
 
-
 import java.io.IOException;
 import java.io.Writer;
 
@@ -21,6 +20,15 @@ public class CaveEvent extends SpecialEventSet<CaveEvent> {
 	
 	@Override
 	protected CaveEvent getThis() {
+		return this;
+	}
+	
+	public CaveEvent chooseRandom(boolean chooseRandom) {
+		if (chooseRandom) {
+			this.getFields().put("chooserandom", Boolean.valueOf(chooseRandom).toString());
+		} else {
+			this.getFields().remove("chooserandom");
+		}
 		return this;
 	}
 	

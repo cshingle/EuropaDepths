@@ -26,7 +26,7 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Explosion range="250.0" ballastfloradamage="200" structuredamage="0" itemdamage="100" force="10.0" severlimbsprobability="0" underwaterbubble="false">
-          <Affliction identifier="burn" strength="10" />
+          <Affliction identifier="burn" strength="12" />
           <Affliction identifier="stun" strength="0.5" />
         </Explosion>
         <Fire size="50" probability="0.75" />
@@ -37,5 +37,23 @@
       <Sprite texture="Content/Characters/Spineling/Spineling.png" sourcerect="0,230,180,23" origin="0.5,0.6" alpha="0.5"/>
     </LightComponent>
   </Item>
-
+  <Override>
+    <Item name="" variantof="spinelingspike" identifier="morbusinespinelingspike" nameidentifier="spinelingspike" category="Misc" scale="0.5" sonarsize="2" hideinmenus="true">
+      <Sprite texture="Content/Characters/Spineling_morbusine/Spineling_morbusine.png" sourcerect="0,215,180,18" depth="0.55" />
+      <Projectile>
+        <Attack structuredamage="20" itemdamage="20" severlimbsprobability="0.5" penetration="0.2">
+          <!--Hits up to 3 limbs, so the actual damage can be 3x-->
+          <Affliction identifier="lacerations" strength="10" />
+          <Affliction identifier="bleeding" strength="10" />
+          <Affliction identifier="stun" strength="0.25" />
+          <!-- Greatly buff morbusine poisoning chance -->
+          <Affliction identifier="morbusinepoisoning" strength="3" />
+          <Affliction identifier="morbusinepoisoning" strength="3" probability="0.1"/>
+        </Attack>
+      </Projectile>
+      <LightComponent range="200" castshadows="False" drawbehindsubs="False" ison="True" blinkfrequency="0" lightcolor="200,255,200,20" isactive="True" minvoltage="0" powerconsumption="0" vulnerabletoemp="False" pickingtime="0" canbepicked="False" allowingameediting="False" msg="">
+        <Sprite texture="Content/Characters/Spineling_morbusine/Spineling_morbusine.png" sourcerect="0,230,180,23" origin="0.5,0.6" alpha="0.5" />
+      </LightComponent>
+    </Item>
+  </Override>
 </Items>

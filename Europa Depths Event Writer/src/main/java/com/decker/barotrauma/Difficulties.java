@@ -74,7 +74,6 @@ public class Difficulties {
 						new CommonnessEvent("ColdCavernsTransition"),
 						
 						Caves.europanRidge(),
-						Caves.europanRidgeB(),
 						BeaconStations.europanRidge(),
 						Ruins.europanRidge(),
 						Wrecks.europanRidgeEncounters(),
@@ -105,7 +104,6 @@ public class Difficulties {
 						new CommonnessEvent("RidgeBasic").leveltype("RidgeAdvanced", 0.5),
 						
 						Caves.europanRidge(),
-						Caves.europanRidgeB(),
 						BeaconStations.europanRidge(),
 						Ruins.europanRidge(),
 						Wrecks.europanRidgeEncounters(),
@@ -165,7 +163,6 @@ public class Difficulties {
 						new CommonnessEvent(),
 						
 						Caves.aphoticPlateau(),
-						Caves.aphoticPlateauB(),
 						BeaconStations.aphoticPlateau(),
 						Ruins.aphoticPlateau1(),
 						Wrecks.aphoticPlateau1Encounters(),
@@ -197,7 +194,6 @@ public class Difficulties {
 						new CommonnessEvent(),
 						
 						Caves.aphoticPlateau(),
-						Caves.aphoticPlateauB(),
 						BeaconStations.aphoticPlateau2(),
 						Ruins.aphoticPlateau2(),
 						Wrecks.aphoticPlateau2Encounters(),
@@ -228,7 +224,6 @@ public class Difficulties {
 						new CommonnessEvent("PlateauBasic"),
 						
 						Caves.greatSea(),
-						Caves.greatSeaB(),
 						BeaconStations.greatSea(),
 						Ruins.greatSea(),
 						Wrecks.greatSeaEncounters(),
@@ -259,7 +254,6 @@ public class Difficulties {
 						new CommonnessEvent(),
 						
 						Caves.greatSea(),
-						Caves.greatSeaB(),
 						BeaconStations.greatSea(),
 						Ruins.greatSea(),
 						Wrecks.greatSeaEncounters(),
@@ -289,7 +283,6 @@ public class Difficulties {
 						new CommonnessEvent(),
 						
 						Caves.hydrothermalWastes(),
-						Caves.hydrothermalWastesB(),
 						BeaconStations.hydrothermalWastes(),
 						Ruins.wastes(),
 						Wrecks.hydrothermalWastesEncounters(),
