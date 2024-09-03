@@ -376,14 +376,15 @@
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,372,159,57" depth="0.55" origin="0.4,0.5" />
     <Body radius="40" width="60" density="40" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-10,0" handle2="50,-10" msg="ItemMsgPickUpSelect" />
-    <RepairTool firedamage="20.0" structurefixamount="-0.7" range="360" barrelpos="62,0" fireprobability="0.05" combatpriority="25" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-23.0" targetforce="12">
+    <RepairTool firedamage="20.0" structurefixamount="-0.8" range="360" barrelpos="62,0" fireprobability="0.05" combatpriority="25" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-23.0" targetforce="12">
       <RequiredItems items="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
       <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-3.0" />
       <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-1" />
-      <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-80.0" Condition="-12.0" />
-      <StatusEffect type="OnUse" targettype="UseTarget" Condition="-12.0" />
-      <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.01">v
-        <Affliction identifier="burn" amount="14.0" />
+      <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-80.0" Condition="-24.0" />
+      <StatusEffect type="OnUse" targettype="UseTarget" Condition="-24.0" />
+      <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.01">
+        <Affliction identifier="burn" amount="14.0" penetration="0.5" />
+        <Affliction identifier="stun" amount="1" probability="0.15"/>
       </StatusEffect>
       <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
       <ParticleEmitterHitStructure particle="plasmasmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="10" velocitymax="20" />
