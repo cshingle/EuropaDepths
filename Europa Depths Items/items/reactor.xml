@@ -87,8 +87,10 @@
         <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
           <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
           <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="stun" strength="4" probability="0.5" />
+          <Affliction identifier="electricshock" strength="60"/>
           <Affliction identifier="burn" strength="5" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
         </StatusEffect>
         <RequiredItem items="screwdriver" type="Equipped" />
         <output name="power_out" displayname="connection.powerout" maxwires="1" />
@@ -140,8 +142,10 @@
         <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
           <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
           <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="stun" strength="4" probability="0.5" />
+          <Affliction identifier="electricshock" strength="60"/>
           <Affliction identifier="burn" strength="5" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
         </StatusEffect>
       </Repairable>
       <Upgrade gameversion="0.1500.6.0">

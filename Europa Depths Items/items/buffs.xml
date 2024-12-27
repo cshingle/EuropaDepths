@@ -10,6 +10,7 @@
       <PreferredContainer secondary="wreckmedcab,abandonedmedcab,piratemedcab" amount="1" spawnprobability="0.2" />
       <PreferredContainer secondary="abandonedcrewcab,piratecrewcab" minamount="1" maxamount="2" spawnprobability="0.3" />
       <PreferredContainer primary="sodiumstorage,chemcab" secondary="medfabcab,materialcab,storagecab" />
+      <PreferredContainer secondary="crewcab" amount="1" spawnprobability="0.5" notcampaign="true" notpvp="true"/>
       <Price baseprice="30" minavailable="10">
         <Price storeidentifier="merchantoutpost" />
         <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="8" />
@@ -17,6 +18,7 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.1" />
         <Price storeidentifier="merchantmine" multiplier="1.1" />
         <Price storeidentifier="merchantclown" minavailable="0" maxavailable="2" />
+        <Price storeidentifier="merchantnightclub" minavailable="4" />
       </Price>
       <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
         <RequiredSkill identifier="medical" level="20" />

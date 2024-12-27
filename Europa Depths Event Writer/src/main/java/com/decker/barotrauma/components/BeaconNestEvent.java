@@ -10,11 +10,13 @@ public class BeaconNestEvent extends SpecialEventSet<BeaconNestEvent> {
 		this.spawnPointTag = spawnPointTag;
 		
 		this.getFields().put("identifier", identifier);
-		this.getFields().put("requiredlayer", requiredlayer);
 		this.getFields().put("chooserandom", "false");
 		this.getFields().put("triggereventcooldown", "false");
 		this.getFields().put("allowatstart", "true");
 		this.getFields().put("commonness", commonness);
+		if(spawnPointTag != null) {
+			this.getFields().put("requiredspawnpointtag", spawnPointTag);
+		}
 		
 		this.add(new ScriptedEvent("nestlayer").add(
 				new LayerAction(requiredlayer)

@@ -13,7 +13,7 @@
         <Price storeidentifier="merchantmilitary" multiplier="0.9" />
         <Price storeidentifier="merchantmine" multiplier="0.85" />
       </Price>
-      <SuitableTreatment type="bloodloss" suitability="40" />
+      <SuitableTreatment type="bloodloss" suitability="10" />
       <SuitableTreatment type="psychosis" suitability="-45" />
       <SuitableTreatment type="damage" suitability="-10" />
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,771,64,64" origin="0.5,0.5" />

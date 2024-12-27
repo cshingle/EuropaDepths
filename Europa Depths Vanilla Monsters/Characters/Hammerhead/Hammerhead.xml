@@ -48,6 +48,7 @@
     <target tag="hammerheadmatriarch" state="Protect" priority="10"/>
     <target tag="sonar" state="Attack" priority="10" />
     <target tag="turret" state="Attack" priority="1" />
+    <target tag="searchlight" state="Attack" priority="1" />
     <target tag="terminalcell" state="Idle" priority="1"/>
     <SwarmBehavior mindistfromclosest="300" maxdistfromcenter="3000" cohesion="0.25" />
   </ai>

@@ -317,7 +317,7 @@
         </StatusEffect>
       </Projectile>
     </Item>
-    <Item name="" identifier="bandolier" category="Equipment" tags="mediumitem,clothing" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true" description="" impactsoundtag="impact_soft">
+    <Item name="" identifier="bandolier" category="Equipment" tags="mediumitem,clothing,mobilecontainer" scale="0.5" cargocontaineridentifier="metalcrate" allowasextracargo="true" description="" impactsoundtag="impact_soft">
       <PreferredContainer primary="armcab" secondary="secarmcab"/>
       <Price baseprice="250" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.3" minavailable="0" maxavailable="1" sold="true">
@@ -402,7 +402,7 @@
       <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
     </Item>
 
-    <Item name="" identifier="stungundartfulgurium" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" allowasextracargo="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="stungundartfulgurium" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" allowasextracargo="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo,handheldammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
       <Price baseprice="40" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.4" />
@@ -420,18 +420,28 @@
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="200,189,72,18" depth="0.55" origin="0.5,0.5" />
       <Body width="70" height="15" density="11" waterdragcoefficient="1" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
-      <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true">
+      <Projectile characterusable="false" launchimpulse="15.0" sticktocharacters="true">
         <Attack structuredamage="0" targetforce="2">
           <Affliction identifier="lacerations" strength="1" />
-          <Affliction identifier="stun" strength="6" />
-          <Affliction identifier="progressivestun" strength="10" />
-          <StatusEffect tags="poison" type="OnUse" target="Character" duration="20">
-            <Affliction identifier="nausea" amount="5" />
-          </StatusEffect>
         </Attack>
+        <StatusEffect type="OnImpact" target="UseTarget" disabledeltatime="true">
+          <Conditional entitytype="eq Character" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="5" DistanceMax="20" ParticleAmount="3" ScaleMin="0.07" ScaleMax="0.1" />
+          <Affliction identifier="electricshock" strength="80" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget" delay="0.6" disabledeltatime="true">
+          <Conditional entitytype="eq Character" />
+          <Affliction identifier="electricshock" strength="40" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget" delay="5" disabledeltatime="true">
+          <Conditional entitytype="eq Character" />
+          <!-- Reapply after 5 seconds to extend the stun -->
+          <Affliction identifier="electricshock" strength="100" />
+        </StatusEffect>
         <StatusEffect type="OnImpact" target="This">
           <Sound file="Content/Items/Weapons/TaserHit1.ogg" type="OnUse" range="1500" selectionmode="Random" />
           <Sound file="Content/Items/Weapons/TaserHit2.ogg" type="OnUse" range="1500" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="5" DistanceMax="20" ParticleAmount="3" ScaleMin="0.07" ScaleMax="0.1" />
           <Remove />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="UseTarget">
@@ -442,7 +452,7 @@
       </Projectile>
     </Item>
 
-    <Item name="" identifier="hmgmagazine" maxstacksize="4" maxstacksizecharacterinventory="1" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,hmgammo,handheldammo" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="hmgmagazine" maxstacksize="4" maxstacksizecharacterinventory="1" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,hmgammo,handheldammo" impactsoundtag="impact_metal_light" health="150">
       <PreferredContainer primary="hmg" minamount="1" maxamount="1" spawnprobability="1" />
       <PreferredContainer primary="armcab" secondary="secarmcab" />
       <Price baseprice="330" sold="true" minleveldifficulty="65" displaynonempty="true">

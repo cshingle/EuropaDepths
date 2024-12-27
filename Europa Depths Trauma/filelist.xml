@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Trauma" modversion="1.5.3" corepackage="False" steamworkshopid="2827201404" gameversion="1.5.9.1">
+<contentpackage name="Europa Depths Trauma" modversion="1.5.4" corepackage="False" steamworkshopid="2827201404" gameversion="1.7.7.0">
   <Character file="%ModDir%/Characters/Bonethresher_cave/Bonethresher_cave.xml" />
   <Character file="%ModDir%/Characters/Bonethresher_veteran/Bonethresher_veteran.xml" />
   <Character file="%ModDir%/Characters/Charybdis_juvenile/Charybdis_juvenile.xml" />
@@ -16,7 +16,6 @@
   <EventManagerSettings file="%ModDir%/EventManagerSettings.xml" />
   <Item file="%ModDir%/items.xml" />
   <Missions file="%ModDir%/Missions_cargo.xml" />
-  <Missions file="%ModDir%/Missions_Dire.xml" />
   <Missions file="%ModDir%/Missions.xml" />
   <Missions file="%ModDir%/OutpostMissions.xml" />
   <RandomEvents file="%ModDir%/randomevents_campaign.xml" />

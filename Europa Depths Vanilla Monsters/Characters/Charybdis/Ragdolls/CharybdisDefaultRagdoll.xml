@@ -241,7 +241,7 @@
       <StatusEffect type="OnUse" target="This" delay="0.15">
         <!-- a secondary "attack" that does damage to characters if the structure attack (and the FollowThroughWithoutObstacleAvoidance) 
           after it manages to push the monster's head inside the sub -->
-        <Explosion ignorecover="true" distancefalloff="false" onlyinside="true" range="350" force="-20" flames="false" smoke="false" shockwave="false" sparks="false" flash="false" underwaterbubble="false" camerashake="5" playtinnitus="false" structuredamage="250" applyFireEffects="false">
+        <Explosion ignorecover="true" distancefalloff="true" onlyinside="true" range="350" force="-20" flames="false" smoke="false" shockwave="false" sparks="false" flash="false" underwaterbubble="false" camerashake="5" playtinnitus="false" structuredamage="250" applyFireEffects="false">
           <Affliction identifier="stun" strength="1.5" probability="1" />
           <Affliction identifier="bitewounds" strength="10" probability="1" />
           <Affliction identifier="bleeding" strength="300" probability="1" />
@@ -330,7 +330,7 @@
         <sound file="Content/Characters/Charybdis/CHARYBDIS_attack1.ogg" range="30000" volume="1" dontmuffle="True" selectionmode="random" />
         <sound file="Content/Characters/Charybdis/CHARYBDIS_attack2.ogg" range="30000" volume="1" dontmuffle="True" />
         <sound file="Content/Characters/Charybdis/CHARYBDIS_attack3.ogg" range="30000" volume="1" dontmuffle="True" />
-        <Explosion ignorecover="true" distancefalloff="false" onlyinside="true" range="350" force="-20" flames="false" smoke="false" shockwave="false" sparks="false" flash="false" underwaterbubble="false" camerashake="5" playtinnitus="false" structuredamage="250" applyFireEffects="false" />
+        <Explosion ignorecover="true" distancefalloff="true" onlyinside="true" range="350" force="-20" flames="false" smoke="false" shockwave="false" sparks="false" flash="false" underwaterbubble="false" camerashake="5" playtinnitus="false" structuredamage="250" applyFireEffects="false" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="This">
         <sound file="Content/Characters/Charybdis/Bite1.ogg" range="1000" volume="1" dontmuffle="True" selectionmode="random" />

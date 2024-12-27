@@ -20,7 +20,8 @@
     <target tag="sonar" state="Attack" priority="10" reactdistance="0" attackdistance="0" timer="0" ignorecontained="False" />
     <target tag="weaker" state="Aggressive" priority="10" reactdistance="2000" attackdistance="0" timer="0" ignorecontained="False" />
     <target tag="terminalcell" state="Idle" priority="1" reactdistance="0" attackdistance="0" timer="0" ignorecontained="False" />
-    <target tag="turret" state="Attack" priority="1" reactdistance="0" attackdistance="0" timer="0" ignorecontained="False" />
+    <target tag="turret" state="Attack" priority="1" ignoreinside="true" />
+    <target tag="searchlight" state="Attack" priority="1" ignoreinside="true"/>
     <target tag="watcher" state="Protect" priority="1" reactdistance="0" attackdistance="0" timer="0" ignorecontained="False" />
     <SwarmBehavior mindistfromclosest="400" maxdistfromcenter="2000" cohesion="0.25" />
   </ai>

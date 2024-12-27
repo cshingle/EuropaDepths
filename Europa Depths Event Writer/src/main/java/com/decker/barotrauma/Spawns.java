@@ -18,7 +18,7 @@ public class Spawns {
 	
 	/**
 	 * Introduces Spinelings and Hammerheads
-	 * 
+	 *
 	 * @return
 	 */
 	public static Monster[] coldCaverns2() {
@@ -29,13 +29,14 @@ public class Spawns {
 						new MonsterEvent(Character.Mudraptor_unarmored, 2, 3),
 						new MonsterEvent(Character.Mudraptor, 0, 3)),
 				new MonsterSet("spinglings", false, 20).monsters(
-						new MonsterEvent(Character.Spineling, 4, 6))
+						new MonsterEvent(Character.Spineling, 4, 6),
+						new MonsterEvent(Character.Spineling_red, 3, 4))
 		};
 	}
 	
 	/**
 	 * Introduces (armored/regular) Mudraptors, Golden Hammerhead (rare), Crawler Broodmother (rare), Husks, Husked Crawlers, and the first abyss monster.
-	 * 
+	 *
 	 * @return
 	 */
 	public static Monster[] coldCavernsTransition() {
@@ -58,16 +59,13 @@ public class Spawns {
 				new MonsterSet("hammerheads", false, 10).monsters(
 						new MonsterEvent(Character.Hammerhead, 2, 3),
 						new MonsterEvent(Character.Hammerheadgold, 0, 2),
-						new MonsterEvent(Character.Hammerhead_juvenile, 1, 2).spawnprobability(0.5)),
-				new MonsterSet("threshers", false, 20).monsters(
-						new MonsterEvent(Character.Bonethresher, 1, 2),
-						new MonsterEvent(Character.Tigerthresher, 2, 3))
+						new MonsterEvent(Character.Hammerhead_juvenile, 1, 2).spawnprobability(0.5))
 		};
 	}
 	
 	/**
 	 * Introduces Moloch
-	 * 
+	 *
 	 * @return
 	 */
 	public static Monster[] europanRidge() {
@@ -91,7 +89,7 @@ public class Spawns {
 						new MonsterEvent(Character.Hammerhead, 2, 3),
 						new MonsterEvent(Character.Hammerheadgold, 0, 2),
 						new MonsterEvent(Character.Hammerhead_juvenile, 1, 2).spawnprobability(0.5)),
-				new MonsterSet("threshers", false, 20).monsters(
+				new MonsterSet("threshers", false, 5).monsters(
 						new MonsterEvent(Character.Bonethresher, 1, 2),
 						new MonsterEvent(Character.Tigerthresher, 2, 3)),
 				new MonsterSet("molochs", false, 10).monsters(
@@ -137,13 +135,15 @@ public class Spawns {
 						new MonsterEvent(Character.Mudraptor_unarmored, 1, 2)),
 				new MonsterSet("spinelings", false, 5).monsters(
 						new MonsterEvent(Character.Spineling, 5, 7),
-						new MonsterEvent(Character.Spineling_red, 1, 2).offset(1000).scatter(1000))
+						new MonsterEvent(Character.Spineling_red, 1, 2).offset(1000).scatter(1000)),
+				new MonsterSet("fire", false, 5).monsters(
+						new MonsterEvent(Character.Spineling_red, 6, 9).offset(1000).scatter(1000))
 		};
 	}
 	
 	/**
 	 * Introduces Watcher
-	 * 
+	 *
 	 * @return
 	 */
 	public static Monster[] aphoticPlateau1() {
@@ -165,7 +165,7 @@ public class Spawns {
 						new MonsterEvent(Character.Spineling_red, 4, 5)),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Character.Spineling, 10, 15),
-						new MonsterEvent(Character.Spineling_red, 1, 1),
+						new MonsterEvent(Character.Spineling_red, 3, 5),
 						new MonsterEvent(Character.Spineling_giant, 1, 2)),
 				new MonsterSet("hammerheads", false, 30).monsters(
 						new MonsterEvent(Character.Hammerhead, 2, 4),
@@ -191,13 +191,15 @@ public class Spawns {
 						new MonsterEvent(Character.Mudraptor_veteran, 1, 3)),
 				new MonsterSet("spinelings", false, 5).monsters(
 						new MonsterEvent(Character.Spineling, 5, 7),
-						new MonsterEvent(Character.Spineling_red, 3, 6).offset(1000).scatter(1000))
+						new MonsterEvent(Character.Spineling_red, 3, 6).offset(1000).scatter(1000)),
+				new MonsterSet("fire", false, 5).monsters(
+						new MonsterEvent(Character.Spineling_red, 7, 9).offset(1000).scatter(1000))
 		};
 	}
 	
 	/**
 	 * Introduces Watcher
-	 * 
+	 *
 	 * @return
 	 */
 	public static Monster[] aphoticPlateau2() {
@@ -226,7 +228,7 @@ public class Spawns {
 						new MonsterEvent(Character.Tigerthresher, 3, 5)),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Character.Spineling, 6, 8),
-						new MonsterEvent(Character.Spineling_red, 3, 5),
+						new MonsterEvent(Character.Spineling_red, 4, 7),
 						new MonsterEvent(Character.Spineling_giant, 1, 2)),
 				new MonsterSet("hammerheads", false, 30).monsters(
 						new MonsterEvent(Character.Hammerhead, 2, 6),
@@ -253,14 +255,14 @@ public class Spawns {
 						new MonsterEvent(Character.Tigerthresher_veteran, 5, 8)),
 				new MonsterSet("spinelings", false, 5).monsters(
 						new MonsterEvent(Character.Spineling, 5, 7),
-						new MonsterEvent(Character.Spineling_red, 3, 3),
+						new MonsterEvent(Character.Spineling_red, 5, 7),
 						new MonsterEvent(Character.Spineling_morbusine, 0, 3).spawnprobability(0.5).scatter(2000))
 		};
 	}
 	
 	/**
 	 * Introduces Black Moloch. Smaller creatures are less frequent and appear in even larger swarms, more bigger guys.
-	 * 
+	 *
 	 * @return
 	 */
 	public static Monster[] greatSea() {
@@ -290,8 +292,8 @@ public class Spawns {
 						new MonsterEvent(Character.Tigerthresher_veteran, 3, 5)),
 				new MonsterSet("spinglings", false, 20).monsters(
 						new MonsterEvent(Character.Spineling, 10, 20),
-						new MonsterEvent(Character.Spineling_red, 2, 2),
-						new MonsterEvent(Character.Spineling_giant, 2, 2)),
+						new MonsterEvent(Character.Spineling_red, 3, 7),
+						new MonsterEvent(Character.Spineling_giant, 2, 3)),
 				new MonsterSet("threshers", false, 40).monsters(
 						new MonsterEvent(Character.Bonethresher, 2, 3),
 						new MonsterEvent(Character.Bonethresher_veteran, 1, 1),
@@ -340,14 +342,14 @@ public class Spawns {
 						new MonsterEvent(Character.Molochblack, 1, 1).offset(10000).scatter(3000)),
 				new MonsterSet("spinelings", false, 5).monsters(
 						new MonsterEvent(Character.Spineling, 5, 7),
-						new MonsterEvent(Character.Spineling_red, 3, 5),
-						new MonsterEvent(Character.Spineling_morbusine, 2, 3).spawnprobability(0.75).scatter(2000))
+						new MonsterEvent(Character.Spineling_red, 5, 7),
+						new MonsterEvent(Character.Spineling_morbusine, 5, 7).spawnprobability(0.75).scatter(2000))
 		};
 	}
 	
 	/**
 	 * Introduces Hammerhead Matriarch, Moloch Baby, Giant Spineling Introduces Black Moloch. Smaller creatures are less frequent and appear in even larger swarms, more bigger guys.
-	 * 
+	 *
 	 * @return
 	 */
 	public static Monster[] hydrothermalWastes() {
@@ -365,8 +367,8 @@ public class Spawns {
 				new MonsterSet("watcher2", false, 15).monsters(
 						new MonsterEvent(Character.Watcher, 1, 1),
 						new MonsterEvent(Character.Spineling, 5, 7),
-						new MonsterEvent(Character.Spineling_morbusine, 3, 4),
-						new MonsterEvent(Character.Spineling_red, 4, 5)),
+						new MonsterEvent(Character.Spineling_morbusine, 5, 7),
+						new MonsterEvent(Character.Spineling_red, 5, 7)),
 				new MonsterSet("watcher3", false, 15).monsters(
 						new MonsterEvent(Character.Watcher, 1, 1),
 						new MonsterEvent(Character.Crawler_veteran, 8, 15)),
@@ -405,12 +407,13 @@ public class Spawns {
 								new MonsterEvent(Character.Moloch, 2, 3).offset(10000).scatter(3000),
 								new MonsterEvent(Character.Molochbaby, 10, 20).scatter(3000),
 								new MonsterEvent(Character.Molochblack, 1, 1).offset(10000).scatter(3000))),
-				new MonsterSet("portalguardians", false, 1).monsters(
+				new MonsterSet("portalguardians", false, 3).monsters(
 						new MonsterEvent(Character.Portalguardian, 1, 2)),
 				new MonsterSet("latcher", false, 5).monsters(
 						new MonsterEvent(Character.Latcher, 1, 1)),
 				new MonsterSet("destroyer", false, 1).monsters(
-						new MonsterEvent(Character.Ed_Fractaldestroyer, 1, 1)),
+						new MonsterEvent(Character.Ed_Fractaldestroyer, 1, 1),
+						new MonsterEvent(Character.Portalguardian, 1, 2)),
 				new MonsterSet("charybdisjuvenile", false, 5).monsters(
 						new MonsterEvent(Character.Charybdis_juvenile, 1, 1))
 		};

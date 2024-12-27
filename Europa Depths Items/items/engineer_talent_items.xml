@@ -133,6 +133,7 @@
       <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" spawnprobability="0"/>
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" spawnprobability="0"/>
+      <PreferredContainer secondary="respawncontainer_kingofthehull" spawnprobability="0"/>
       <Price baseprice="20" sold="false">
         <Price storeidentifier="merchantoutpost" multiplier="1.4" />
         <Price storeidentifier="merchantcity" />
@@ -166,6 +167,8 @@
       <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" />
       <PreferredContainer primary="outpostsecarmcab" spawnprobability="0"/>
       <PreferredContainer primary="wrecksecarmcab" spawnprobability="0"/>
+      <PreferredContainer secondary="respawncontainer_kingofthehull" spawnprobability="0"/>
+
       <Price baseprice="160" sold="false" />
       <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true">
         <RequiredSkill identifier="weapons" level="40" />
@@ -323,13 +326,12 @@
       <Deconstruct time="20">
         <Item identifier="aluminium" amount="2" />
         <Item identifier="titaniumaluminiumalloy" amount="2" />
-        <Item identifier="tin" amount="2" />
+        <Item identifier="fpgacircuit" />
       </Deconstruct>
       <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true">
         <RequiredSkill identifier="mechanical" level="30" />
-        <RequiredItem identifier="aluminium" amount="2" />
+        <RequiredItem identifier="underwaterscooter" />
         <RequiredItem identifier="titaniumaluminiumalloy" amount="2" />
-        <RequiredItem identifier="tin" amount="2" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="131,123,53,58" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" depth="0.55" sourcerect="295,195,149,105" origin="0.5,0.5" />
@@ -443,7 +445,7 @@
       </ItemComponent>
     </Item>
 
-    <Item name="" identifier="fulguriumfuelrodvolatile" category="Fuel" Tags="smallitem,reactorfuel,volatilefuel,fulguriumfuelrodvolatile" maxstacksize="8" allowasextracargo="true" cargocontaineridentifier="metalcrate" health="400" scale="0.5">
+    <Item name="" identifier="fulguriumfuelrodvolatile" category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel,volatilefuel,fulguriumfuelrodvolatile" maxstacksize="8" allowasextracargo="true" cargocontaineridentifier="metalcrate" health="400" scale="0.5">
       <PreferredContainer primary="fuelrodcase" secondary="reactorcab" />
       <Price baseprice="400" sold="false" displaynonempty="true">
         <Price storeidentifier="merchantoutpost" />
@@ -498,7 +500,7 @@
       </Quality>
     </Item>
   </Override>
-  <Item name="" identifier="fuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,volatilefuel,fuelrodvolatile" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" health="120">
+  <Item name="" identifier="fuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel,volatilefuel,fuelrodvolatile" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" health="120">
     <PreferredContainer primary="fuelrodcase" secondary="reactorcab" />
     <PreferredContainer secondary="nucleargun" minamount="1" maxamount="1" spawnprobability="1"/>
     <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
@@ -552,7 +554,7 @@
       <QualityStat stattype="Condition" value="0.1"/>
     </Quality>
   </Item>
-  <Item name="" identifier="thoriumfuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,volatilefuel,thoriumfuelrodvolatile" maxstacksize="8" cargocontaineridentifier="metalcrate" health="300" scale="0.5">
+  <Item name="" identifier="thoriumfuelrodvolatile" Category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel,volatilefuel,thoriumfuelrodvolatile" maxstacksize="8" cargocontaineridentifier="metalcrate" health="300" scale="0.5">
     <PreferredContainer primary="fuelrodcase" secondary="reactorcab" />
     <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" amount="1" spawnprobability="0.1"/>
     <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.02"/>

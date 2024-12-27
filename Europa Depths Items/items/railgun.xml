@@ -67,9 +67,10 @@
           <Remove />
         </StatusEffect>
       </Projectile>
-      <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false">
+      <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false" containedstateindicatorstyle="explosive" containedspritedepth="0.81">
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,384,64,64" origin="0.5,0.5" />
         <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
-        <Containable items="smallitem" />
+        <Containable items="smallitem,explosive" />
       </ItemContainer>
     </Item>
 
@@ -147,7 +148,8 @@
           <Remove />
         </StatusEffect>
       </Projectile>
-      <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false">
+      <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false" containedstateindicatorstyle="explosive" containedspritedepth="0.81">
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,384,64,64" origin="0.5,0.5" />
         <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
         <Containable items="smallitem" />
       </ItemContainer>
@@ -239,9 +241,10 @@
           <Remove />
         </StatusEffect>
       </Projectile>
-      <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false">
+      <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false" containedstateindicatorstyle="explosive" containedspritedepth="0.81">
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,384,64,64" origin="0.5,0.5" />
         <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
-        <Containable items="smallitem" />
+        <Containable items="smallitem,explosive" />
       </ItemContainer>
     </Item>
 
@@ -455,6 +458,10 @@
     <BrokenSprite texture="Content/Items/Weapons/Loaders.png" sourcerect="163,563,153,351" origin="0.5,0.5" offset="35,4" depth="0.77" fadein="true" maxcondition="99"/>
     <UpgradePreviewSprite texture="Content/UI/WeaponUI.png" sourcerect="208,968,32,46" origin="0.5,0.5" />
     <DecorativeSprite name="Railgun Loader Frame Front" texture="Content/Items/Weapons/Loaders.png" depth="0.8" sourcerect="31,569,117,200" origin="0.5,0.5" offset="0,-30" />
+    <DecorativeSprite name="Ammobelt" texture="Content/Items/Containers/containers.png" depth="0.79" sourcerect="499,663,52,142" origin="0.5,0.5" offset="0,12">
+      <IsActiveConditional targetcontaineditem="true" condition="gt 0.0"/>
+      <IsActiveConditional targetcontaineditem="true" hastag="! noammobelt"/>
+    </DecorativeSprite>
     <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="10" mindeteriorationdelay="60" maxdeteriorationdelay="300" MinDeteriorationCondition="0" RepairThreshold="50" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
       <StatusEffect type="InWater" target="This" condition="-0.25" />
       <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />

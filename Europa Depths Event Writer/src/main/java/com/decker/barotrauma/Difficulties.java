@@ -99,7 +99,7 @@ public class Difficulties {
 				.identifier("Ridge")
 				.biome("europanridge")
 				.maxleveldifficulty(30)
-				.comment("Introduces Moloch.")
+				.comment("Introduces Threshers, Moloch, and Husk prowler. Crawler Broodmother less rare.")
 				.add(
 						new CommonnessEvent("RidgeBasic").leveltype("RidgeAdvanced", 0.5),
 						
@@ -135,6 +135,7 @@ public class Difficulties {
 						Caves.aphoticPlateau(),
 						BeaconStations.aphoticPlateau(),
 						Ruins.aphoticPlateau1(),
+						Wrecks.aphoticPlateau1Encounters(),
 						Wrecks.aphoticPlateau1(),
 						
 						Abyss.aphoticPlateau1(),

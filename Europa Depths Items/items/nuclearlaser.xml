@@ -58,7 +58,7 @@
         <Sprite name="Pulse Laser Loader Front" texture="Content/Items/Weapons/Loaders.png" depth="0.785" sourcerect="529,5,165,358" origin="0.5,0.5"/>
         <BrokenSprite texture="Content/Items/Weapons/Loaders.png" sourcerect="163,563,153,351" origin="0.5,0.5" offset="5,6" depth="0.77" fadein="true" maxcondition="99"/>
         <DecorativeSprite name="Pulse Laser Loader Frame Back" texture="Content/Items/Weapons/Loaders.png" depth="0.8" sourcerect="31,569,117,200" origin="0.5,0.5" offset="0,-68"/>
-        <LightComponent range="150.0" lightcolor="255,100,100,255" pulsefrequency="12" pulseamount="0.8" powerconsumption="0" IsOn="false" castshadows="true" allowingameediting="false">
+        <LightComponent range="150.0" lightcolor="255,100,100,255" pulsefrequency="12" pulseamount="0.8" powerconsumption="0" IsOn="false" castshadows="true" allowingameediting="false" characterusable="false">
             <sprite texture="Content/Items/Weapons/Loaders.png" sourcerect="0,791,165,358" depth="0.1" origin="0.5,0.5" alpha="1.0" />
             <StatusEffect type="OnUse" target="This,Contained" IsOn="True">
                 <Conditional condition="gt 0.0" TargetContainedItem="true" />

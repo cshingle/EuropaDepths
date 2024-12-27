@@ -16,8 +16,9 @@ public class Ruins {
 				new MonsterEvent(Character.Fractalbrain1, 0, 1).probability(1).spawnpointtag("fractalguardian"),
 				new MonsterEvent(Character.Husk, 2, 3).probability(0.8).spawnpointtag("husk"),
 				new MonsterEvent(Character.Husk, 2, 3).probability(0.6).spawnpointtag("husk"),
-				new MonsterEvent(Character.Husk, 2, 3).probability(0.4).spawnpointtag("husk"),
+				new MonsterEvent(Character.Husk_prowler, 2, 3).probability(0.4).spawnpointtag("husk"),
 				new MonsterEvent(Character.Crawlerhusk, 1, 2).probability(0.3).spawnpointtag("husk"),
+				new MonsterEvent(Character.Fractalguardian, 1, 2).probability(1).spawnpointtag("workshopguardian"),
 				
 				new RuinEncounters().monsters(
 						new MonsterSet("entrance1", false).monsters(
@@ -62,7 +63,11 @@ public class Ruins {
 								new MonsterEvent(Character.Fractalbrain1, 1, 2)).spawnpointtag("encounter_entrance3"),
 						new MonsterSet("chambers1", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 1, 2),
-								new MonsterEvent(Character.Fractalbrain1, 1, 2)).spawnpointtag("encounter_chambers1")));
+								new MonsterEvent(Character.Fractalbrain1, 1, 2)).spawnpointtag("encounter_chambers1"),
+						new MonsterSet("workshop_guardians", false).monsters(
+								new MonsterEvent(Character.Fractalguardian, 1, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalguardian2, 1, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalbrain1, 1, 2).spawnpointtag("workshopguardian"))));
 	}
 	
 	public static RuinEvent aphoticPlateau2() {
@@ -94,7 +99,12 @@ public class Ruins {
 						new MonsterSet("chambers1", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 1, 3),
 								new MonsterEvent(Character.Fractalbrain1, 1, 2),
-								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_chambers1")));
+								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_chambers1"),
+						new MonsterSet("workshop_guardians", false).monsters(
+								new MonsterEvent(Character.Fractalguardian, 1, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalguardian, 0, 1).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalguardian2, 1, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalbrain1, 1, 2).spawnpointtag("workshopguardian"))));
 	}
 	
 	public static RuinEvent greatSea() {
@@ -130,7 +140,13 @@ public class Ruins {
 								new MonsterEvent(Character.Fractalguardian, 2, 3),
 								new MonsterEvent(Character.Fractalguardian2, 2, 3),
 								new MonsterEvent(Character.Fractalbrain1, 2, 2),
-								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_chambers1")));
+								new MonsterEvent(Character.Hammerheadblack, 1, 2).spawndistance(1500)).spawnpointtag("encounter_chambers1"),
+						new MonsterSet("workshop_guardians", false).monsters(
+								new MonsterEvent(Character.Fractalguardian, 1, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalguardian, 0, 1).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalguardian2, 1, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalguardian3, 1, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalbrain1, 1, 2).spawnpointtag("workshopguardian"))));
 	}
 	
 	public static RuinEvent wastes() {
@@ -141,7 +157,7 @@ public class Ruins {
 				new MonsterEvent(Character.Fractalguardian, 3, 3).probability(1).spawnpointtag("fractalguardian"),
 				new MonsterEvent(Character.Fractalbrain1, 2, 3).probability(1).spawnpointtag("fractalguardian"),
 				new MonsterEvent(Character.Fractalguardian3, 2, 3).probability(1).spawnpointtag("fractalguardian"),
-				new MonsterEvent(Character.Fractalguardian_veteran, 2, 2).offset(3000).scatter(1000).spawnpointtag("fractalguardian"),
+				new MonsterEvent(Character.Fractalguardian_veteran, 2, 2).offset(3000).scatter(1000).spawnpointtag("workshopguardian"),
 				new MonsterEvent(Character.Husk, 2, 5).probability(0.5).spawnpointtag("husk"),
 				new MonsterEvent(Character.Husk, 2, 5).probability(0.5).spawnpointtag("husk"),
 				new MonsterEvent(Character.Crawlerhusk, 1, 2).probability(0.5).spawnpointtag("husk"),
@@ -166,6 +182,12 @@ public class Ruins {
 								new MonsterEvent(Character.Fractalguardian, 2, 3),
 								new MonsterEvent(Character.Fractalguardian2, 2, 3),
 								new MonsterEvent(Character.Fractalbrain1, 2, 2),
-								new MonsterEvent(Character.Portalguardian, 1, 2).spawndistance(1500)).spawnpointtag("encounter_chambers1")));
+								new MonsterEvent(Character.Portalguardian, 1, 2).spawndistance(1500)).spawnpointtag("encounter_chambers1"),
+						new MonsterSet("workshop_guardians", false).monsters(
+								new MonsterEvent(Character.Fractalguardian, 1, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalguardian, 1, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalguardian2, 1, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalguardian3, 2, 2).spawnpointtag("workshopguardian"),
+								new MonsterEvent(Character.Fractalbrain1, 2, 3).spawnpointtag("workshopguardian"))));
 	}
 }

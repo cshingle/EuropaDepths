@@ -17,6 +17,7 @@ public class FieldComparator implements Comparator<String> {
 			case "characterfile":
 			case "npcidentifier":
 			case "requiredlayer":
+			case "requiredspawnpointtag":
 				return 1;
 			case "minamount":
 				return 2;
@@ -68,6 +69,8 @@ public class FieldComparator implements Comparator<String> {
 				return 500;
 			case "requirespawnpointtag":
 				return 600;
+			case "playdeadprobability":
+				return 700;
 			case "team":
 				return 1000;
 			case "resettime":

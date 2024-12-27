@@ -108,8 +108,9 @@
     </Item>
 
     <Item name="" identifier="weldingtool" category="Equipment" Tags="smallitem,weldingequipment,tool,mountableweapon" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer secondary="respawncontainer_kingofthehull" amount="2" spawnprobability="1" notcampaign="true"/>
       <PreferredContainer primary="engcab" amount="1" spawnprobability="1" notcampaign="true"/>
-      <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.2" notcampaign="true"/>
+      <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.2" notcampaign="true" notpvp="true"/>
       <PreferredContainer primary="outpostsupplycab" amount="1" spawnprobability="0.5"/>
       <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1"/>
       <PreferredContainer primary="wrecksupplycab,beaconsupplycab" amount="1" spawnprobability="0.05"/>
@@ -426,13 +427,25 @@
         <StatusEffect type="OnUse" targettype="This" Condition="-2.0" />
         <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
       </RepairTool>
+      <RepairTool range="500" barrelpos="21,25" IgnoreCharacters="false">
+        <!-- Remove 'burning' affliction from characters-->
+        <StatusEffect type="OnUse" target="UseTarget">
+          <ReduceAffliction identifier="burning" amount="15.0" />
+        </StatusEffect>
+      </RepairTool>
+      <RepairTool range="500" barrelpos="21,25" IgnoreCharacters="false">
+        <!-- Remove 'burning' affliction from characters-->
+        <StatusEffect type="OnUse" target="UseTarget">
+          <ReduceAffliction identifier="burning" amount="15.0" />
+        </StatusEffect>
+      </RepairTool>
       <Propulsion force="-80" usablein="water" particles="bubbles" />
       <aitarget sightrange="1000" soundrange="1000" fadeouttime="1" />
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
     <Item name="" identifier="flare" category="Equipment" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,light,provocative" impactsoundtag="impact_soft" isshootable="true" damagedbymonsters="true" health="10">
-      <PreferredContainer primary="divingcab" minamount="2" maxamount="5" spawnprobability="1" notcampaign="true"/>
+      <PreferredContainer primary="divingcab" minamount="2" maxamount="5" spawnprobability="1" notcampaign="true" notpvp="true"/>
       <PreferredContainer secondary="abandonedstoragecab,piratestoragecab,wreckstoragecab" amount="1" spawnprobability="0.05"/>
       <PreferredContainer secondary="outpostcrewcabinet" amount="1" spawnprobability="0.1"/>
       <Price baseprice="19" minavailable="6">
@@ -470,9 +483,9 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="flamer" category="Equipment" Tags="smallitem,weapon,gun,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="flamer" category="Equipment" Tags="smallitem,weapon,gun,mountableweapon" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" notpvp="true">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
-      <PreferredContainer primary="secarmcab" amount="1" spawnprobability="0.2" notcampaign="true"/>
+      <PreferredContainer primary="secarmcab" amount="1" spawnprobability="0.2" notcampaign="true" notpvp="true"/>
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab,piratesecarmcab" amount="1" spawnprobability="0.1"/>
       <PreferredContainer secondary="armcab,weaponholder"/>
       <Price baseprice="105" sold="false">
@@ -526,20 +539,22 @@
         </StatusEffect>
         <!-- when using, the contained welding fuel tank will detoriate (= lose fuel) -->
         <StatusEffect type="OnUse" targettype="Contained" targets="weldingfueltank" Condition="-25.0" />
-        <StatusEffect type="OnUse" targettype="Contained" targets="incendiumfueltank" Condition="-5.0" />
+        <StatusEffect type="OnUse" targettype="Contained" targets="incendiumfueltank" Condition="-10.0" />
         <!-- do burn damage to characters -->
         <StatusEffect type="OnUse" target="UseTarget">
           <Conditional InWater="false"/>
-          <Affliction identifier="burn" amount="2" />
+          <Affliction identifier="burn" amount="1.25" />
+          <Affliction identifier="burning" amount="2" dividebylimbcount="true"/>
           <Affliction identifier="stun" strength="1" probability="0.1" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="UseTarget">
           <RequiredItem items="incendiumfueltank" type="Contained" />
           <Conditional InWater="false"/>
-          <Affliction identifier="burn" amount="3.5" />
+          <Affliction identifier="burn" amount="2.5" />
+          <Affliction identifier="burning" amount="2" dividebylimbcount="true"/>
           <Affliction identifier="stun" strength="1" probability="0.1" />
         </StatusEffect>
-        <StatusEffect type="OnUse" target="This" firedamage="40.0" fireprobability="0.3" setvalue="true">
+        <StatusEffect type="OnUse" target="This" firedamage="40.0" fireprobability="0.4" setvalue="true">
           <RequiredItem items="incendiumfueltank" type="Contained" />
         </StatusEffect>
         <!-- explode if oxygen tanks are inserted -->
@@ -626,7 +641,7 @@
       <PreferredContainer primary="oxygentankcontainer" amount="3" spawnprobability="1"/>
       <PreferredContainer primary="oxygengenerator" maxcondition="75"/>
       <PreferredContainer primary="divingmask,plasmacutter,deepdiving" spawnprobability="1.0" mincondition="25"/>
-      <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true"/>
+      <PreferredContainer secondary="divingcab" minamount="3" maxamount="5" spawnprobability="1" mincondition="25" notcampaign="true" notpvp="true"/>
       <PreferredContainer secondary="supplycab" amount="1" spawnprobability="0.5" mincondition="25" notcampaign="true"/>
       <PreferredContainer secondary="outpostsupplycab" minamount="1" maxamount="3" spawnprobability="0.5"/>
       <PreferredContainer secondary="beaconsupplycab" amount="1" spawnprobability="0.2"/>
@@ -707,7 +722,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="fuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" health="60">
+    <Item name="" identifier="fuelrod" Category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" health="60">
       <PreferredContainer primary="reactorcab"/>
       <PreferredContainer secondary="nucleargun" minamount="1" maxamount="1" spawnprobability="1"/>
       <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab,piratereactorcab" minamount="1" maxamount="2" spawnprobability="0.5"/>
@@ -758,7 +773,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="fulguriumfuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="150" scale="0.5">
+    <Item name="" identifier="fulguriumfuelrod" Category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="150" scale="0.5">
       <PreferredContainer primary="reactorcab" />
       <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab,piratereactorcab" amount="1" spawnprobability="0.2"/>
       <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.05"/>
@@ -802,7 +817,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="thoriumfuelrod" Category="Fuel" Tags="smallitem,reactorfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="100" scale="0.5">
+    <Item name="" identifier="thoriumfuelrod" Category="Fuel" Tags="smallitem,reactorfuel,divingsuitfuel" maxstacksize="8" cargocontaineridentifier="metalcrate" health="100" scale="0.5">
       <PreferredContainer primary="reactorcab" />
       <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab,piratereactorcab" amount="1" spawnprobability="0.1"/>
       <PreferredContainer secondary="beaconengcab" amount="1" spawnprobability="0.02"/>
@@ -852,7 +867,7 @@
     </Item>
 
     <redpaint name="" identifier="redpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="128,0,0,255" InventoryIconColor="255,0,0,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6">
-      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
+      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true" notpvp="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.1" />
       <Price baseprice="140" minleveldifficulty="5">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
@@ -888,7 +903,7 @@
     </redpaint>
 
     <greenpaint name="" identifier="greenpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="0,128,0,255" InventoryIconColor="0,255,0,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6">
-      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
+      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true" notpvp="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.1" />
       <Price baseprice="90" minleveldifficulty="5">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
@@ -924,7 +939,7 @@
     </greenpaint>
 
     <bluepaint name="" identifier="bluepaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="0,0,128,255" InventoryIconColor="0,0,255,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6">
-      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
+      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true" notpvp="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.1" />
       <Price baseprice="90" minleveldifficulty="5">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
@@ -960,7 +975,7 @@
     </bluepaint>
 
     <blackpaint name="" identifier="blackpaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="20,20,20,255" InventoryIconColor="20,20,20,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6">
-      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
+      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true" notpvp="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.1" />
       <Price baseprice="90" minleveldifficulty="5">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
@@ -996,7 +1011,7 @@
     </blackpaint>
 
     <whitepaint name="" identifier="whitepaint" category="Misc" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,paint" spritecolor="128,128,128,255" InventoryIconColor="128,128,128,255" scale="0.5" impactsoundtag="impact_metal_light" impacttolerance="6">
-      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true"/>
+      <PreferredContainer secondary="storagecab" minamount="1" maxamount="2" spawnprobability="0.25" notcampaign="true" notpvp="true"/>
       <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab,piratestoragecab" amount="1" spawnprobability="0.1" />
       <Price baseprice="90" minleveldifficulty="5">
         <Price storeidentifier="merchantoutpost" multiplier="1.1" />
@@ -1203,7 +1218,7 @@
       </Attack>
     </MeleeWeapon>
     <ItemContainer capacity="6" slotsperrow="2" keepopenwhenequipped="true" movableframe="true">
-      <Containable items="reactorfuel" />
+      <Containable items="reactorfuel,divingsuitfuel" />
     </ItemContainer>
     <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
   </Item>

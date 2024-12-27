@@ -21,7 +21,7 @@
           <AbilityConditionItem tags="ore"/>
         </Conditions>
         <Abilities>
-          <CharacterAbilityModifyValue multiplyvalue="2"/>
+          <CharacterAbilityModifyValue multiplyvalue="2.5"/>
         </Abilities>
       </AbilityGroupEffect>
       <AddedRecipe itemidentifier="mininglaser"/>

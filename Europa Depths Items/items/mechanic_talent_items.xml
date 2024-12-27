@@ -28,7 +28,7 @@
         <GuiFrame relativesize="0.4,0.4" anchor="CenterLeft" relativeoffset="0.006,-0.01" style="ItemUI" />
       </MiniMap>
     </Item>
-    <Item name="" identifier="repairpack" category="Equipment" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,tool,wrench,screwdriver" cargocontaineridentifier="metalcrate" allowasextracargo="true" Scale="0.5" impactsoundtag="impact_metal_light" addedrepairspeedmultiplier="1.5">
+    <Item name="" identifier="repairpack" category="Equipment" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,tool,electricalrepairtool,mechanicalrepairtool,wrench,wrenchitem,screwdriver,multitool" cargocontaineridentifier="metalcrate" allowasextracargo="true" Scale="0.5" impactsoundtag="impact_metal_light" addedrepairspeedmultiplier="1.5">
       <PreferredContainer primary="engcab"/>
       <Price baseprice="43" sold="false">
         <Price storeidentifier="merchantoutpost" />
@@ -37,7 +37,8 @@
         <Price storeidentifier="merchantmilitary" multiplier="1.25" />
         <Price storeidentifier="merchantmine" />
       </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="2">
+      <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="4">
+        <RequiredSkill identifier="mechanical" level="40" />
         <RequiredItem identifier="copper" />
         <RequiredItem identifier="silicon" />
         <RequiredItem identifier="tin" />
@@ -45,12 +46,15 @@
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="251,1,56,57" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="113,239,57,19" depth="0.55" origin="0.5,0.5" />
       <Body width="60" height="15" density="30" />
-      <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" holdangle="-80" msg="ItemMsgPickUpSelect">
+      <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" holdangle="60" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnSuccess" target="This">
           <Remove />
         </StatusEffect>
       </Holdable>
       <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
+      <Quality>
+        <QualityStat stattype="RepairSpeed" value="0.1"/>
+      </Quality>
     </Item>
     <Item name="" identifier="portablepump" tags="smallitem,donttakeitems" category="Machine" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" allowasextracargo="true" impactsoundtag="impact_metal_heavy" isshootable="true">
       <PreferredContainer primary="engcab"/>
@@ -97,8 +101,10 @@
         <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
           <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
           <Explosion range="100.0" force="1.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
-          <Affliction identifier="stun" strength="4" />
+          <Affliction identifier="stun" strength="4" probability="0.5" />
+          <Affliction identifier="electricshock" strength="60"/>
           <Affliction identifier="burn" strength="5" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
         </StatusEffect>
         <RequiredItem items="screwdriver" type="Equipped" />
         <input name="toggle" displayname="connection.togglestate" />
@@ -107,7 +113,7 @@
         <input name="set_targetlevel" displayname="connection.settargetwaterlevel" />
       </ConnectionPanel>
       <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="20.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true" limitedattachable="true">
-        <requireditem items="wrench" type="Equipped" />
+        <RequiredItem items="wrench,deattachtool" excludeditems="multitool" type="Equipped" />
       </Holdable>
       <ItemContainer capacity="1" maxstacksize="1" canbeselected="true" hideitems="true" hudpos="0.5,0.6" uilabel="entityname.portablepump">
         <GuiFrame relativesize="0.2,0.2" anchor="Center" relativeoffset="0,0.2" style="ItemUI" />
@@ -148,14 +154,12 @@
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="64,114,66,62" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="130,0,29,62" depth="0.55" origin="0.5,0.5" />
       <Body width="30" height="62" density="30" />
-      <ItemComponent characterusable="false">
-        <!-- statuseffect that explodes the grenade when used by something else than a character (e.g. a detonator) -->
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
-          <sound file="Content/Items/Weapons/StunGrenade.ogg" range="2000"/>
+          <sound file="Content/Items/Weapons/StunGrenade.ogg" range="2000" />
           <Explosion range="200" force="0.5" smoke="false" flames="false" underwaterbubble="false" sparks="false" />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This" delay="0.5">
+        <StatusEffect type="OnBroken" target="This">
           <Explosion range="1000" force="0.0" camerashake="0" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" structuredamage="-200" />
         </StatusEffect>
         <StatusEffect type="OnBroken" target="This" duration="3.0" soundselectionmode="All">
@@ -165,10 +169,35 @@
           <ParticleEmitter particle="fixfoamgoosplash" anglemax="360" distancemax="10" particlespersecond="60" />
           <ParticleEmitter particle="fixfoamgoosplash" anglemax="360" distancemax="10" scalemultiplier="2.0,2.0" particlespersecond="20" />
         </StatusEffect>
-      </ItemComponent>
-      <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="3.5" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="0.5" disabledeltatime="true" checkconditionalalways="true" />
+        <StatusEffect type="OnUse" targettype="This" Condition="0" setvalue="true" comparison="OR">
+          <Conditional HasTag="detonator" targetcontainer="true" />
+          <Conditional HasTag="railgunammo" targetcontainer="true" />
+          <Conditional HasTag="depthchargeammo" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" checkconditionalalways="true">
+          <Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+          <Use />
+        </StatusEffect>
       </Throwable>
+      <ItemComponent IsActive="false" CharacterUsable="true">
+        <!--reduce condition by 1 to mark the user as the one responsible for the item breaking and exploding -->
+        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" comparison="AND" condition="-1">
+          <Conditional HasTag="neq detonator" targetcontainer="true" />
+          <Conditional HasTag="neq railgunammo" targetcontainer="true" />
+          <Conditional HasTag="neq depthchargeammo" targetcontainer="true" />
+          <Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+          <!-- No lever cause it has no lever on the sprite-->
+          <ParticleEmitter particle="grenadepin" emitinterval="10" particleamount="1" anglemin="70" anglemax="100" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+          <Sound file="Content/Items/Weapons/pinpull.ogg" type="OnUse" range="720" />
+        </StatusEffect>
+        <!-- shorter fuze time -->
+        <StatusEffect type="OnActive" targettype="This" Condition="-30">
+          <ParticleEmitter particle="flamethrowersmoke" particlespersecond="25" anglemin="0" anglemax="0" velocitymin="75" velocitymax="125" copyentityangle="true" scalemin="0.1" scalemax="0.15" colormultiplier="255,255,255,150" />
+        </StatusEffect>
+      </ItemComponent>
+      <Quality>
+        <QualityStat stattype="ExplosionRadius" value="0.2" />
+      </Quality>
     </Item>
 
     <Item name="" identifier="heavywrench" variantof="wrench" addedrepairspeedmultiplier="0.4">
@@ -220,7 +249,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="exosuit" category="Diving,Equipment" tags="diving,deepdiving,deepdivinglarge,radiationproof,human" scale="0.605" fireproof="true" description="" isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy" botpriority="0.01" cargocontaineridentifier="">
+    <Item name="" identifier="exosuit" category="Diving,Equipment" tags="diving,deepdiving,deepdivinglarge,radiationproof,human" scale="0.605" fireproof="true" description="" isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy" botpriority="0.5" cargocontaineridentifier="">
       <Price baseprice="80" canbespecial="false" sold="false" />
       <Deconstruct time="30">
         <Item identifier="titaniumaluminiumalloy" amount="4" />
@@ -243,11 +272,11 @@
         </sprite>
         <sprite name="Exosuit Right Hand" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,160,64,48" />
         <sprite name="Exosuit Left Hand" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,160,64,48" />
-        <sprite name="Exosuit Right Upper Arm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightArm" depthlimb="Head" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,0,64,96" />
+        <sprite name="Exosuit Right Upper Arm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightArm" depthlimb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,0,64,96" />
         <sprite name="Exosuit Left Upper Arm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,0,64,96" />
-        <sprite name="Exosuit Right Forearm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,96,64,64" />
+        <sprite name="Exosuit Right Forearm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightForearm" depthlimb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,96,64,64" />
         <sprite name="Exosuit Left Forearm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,96,64,64" />
-        <sprite name="Exosuit Waist" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="Waist" hidelimb="true" scale="1.2" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" sourcerect="182,196,178,53" />
+        <sprite name="Exosuit Waist" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" sourcerect="182,196,178,53" />
         <sprite name="Exosuit Right Thigh" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" inheritlimbdepth="true" sourcerect="0,0,96,112" />
         <sprite name="Exosuit Left Thigh" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" origin="0.5,0.5" inheritsourcerect="false" sourcerect="0,0,96,112" />
         <sprite name="Exosuit Right Leg" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritlimbdepth="true" inheritsourcerect="true" />
@@ -258,7 +287,7 @@
           <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="250" loop="true"/>
           <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="250" loop="true"/>
           <TriggerAnimation Type="Walk" FileName="HumanWalkExosuit" priority="1" ExpectedSpecies="Human" />
-          <TriggerAnimation Type="Run" FileName="HumanRunExosuit" priority="1" ExpectedSpecies="Human" />
+          <TriggerAnimation Type="Run" FileName="HumanRunExosuit" priority="10" ExpectedSpecies="Human" />
         </StatusEffect>
         <!-- no HMG stun -->
         <StatusEffect type="OnWearing" target="Character" interval="0.9" disabledeltatime="true">
@@ -270,7 +299,7 @@
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" Condition="-0.07" interval="1" disabledeltatime="true" targetslot="1" comparison="Or">
           <Conditional IsDead="false" />
-          <RequiredItem items="reactorfuel" targetslot="1" type="Contained" />
+          <RequiredItem items="divingsuitfuel" targetslot="1" type="Contained" />
         </StatusEffect>
         <!-- 0 movement speed when out of fuel-->
         <StatusEffect type="OnWearing" target="This,Character" SpeedMultiplier="-10.0" setvalue="true" disabledeltatime="true">
@@ -298,7 +327,7 @@
           <RequiredItem items="oxygensource" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained" Condition="0.1" comparison="And" targetslot="0">
-          <RequiredItem items="reactorfuel" targetslot="1" type="Contained" matchonempty="false" />
+          <RequiredItem items="divingsuitfuel" targetslot="1" type="Contained" matchonempty="false" />
           <RequiredItem items="refillableoxygensource" type="Contained" targetslot="0" />
         </StatusEffect>
         <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1500.0" Condition="-0.05" comparison="Or" targetslot="0">
@@ -334,7 +363,7 @@
           <Containable items="oxygensource,weldingtoolfuel"/>
         </SubContainer>
         <SubContainer capacity="1" maxstacksize="1">
-          <Containable items="reactorfuel">
+          <Containable items="divingsuitfuel">
             <StatusEffect type="OnContaining" target="This" Voltage="1.0" setvalue="true"/>
           </Containable>
         </SubContainer>
@@ -350,7 +379,7 @@
 
   </Override>
 
-  <Item name="Mining Laser" identifier="mininglaser" category="Equipment" Tags="smallitem,cuttingequipment,tool,mountableweapon" fireprobability="0.25" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_heavy">
+  <Item name="Mining Laser" identifier="mininglaser" category="Equipment" Tags="smallitem,cuttingequipment,tool,mountableweapon" fireprobability="0.3" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_heavy">
     <PreferredContainer primary="weaponholder,divingcab" secondary="engcab"/>
     <Price baseprice="900" sold="false">
       <Price storeidentifier="merchantoutpost" multiplier="1.5" />
@@ -376,14 +405,14 @@
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,372,159,57" depth="0.55" origin="0.4,0.5" />
     <Body radius="40" width="60" density="40" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-10,0" handle2="50,-10" msg="ItemMsgPickUpSelect" />
-    <RepairTool firedamage="20.0" structurefixamount="-0.8" range="360" barrelpos="62,0" fireprobability="0.05" combatpriority="25" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-23.0" targetforce="12">
+    <RepairTool firedamage="20.0" structurefixamount="-0.8" range="360" barrelpos="62,0" fireprobability="0.3" combatpriority="25" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-23.0" targetforce="12">
       <RequiredItems items="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
       <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-3.0" />
       <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-1" />
       <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-80.0" Condition="-24.0" />
       <StatusEffect type="OnUse" targettype="UseTarget" Condition="-24.0" />
       <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.01">
-        <Affliction identifier="burn" amount="14.0" penetration="0.5" />
+        <Affliction identifier="burn" amount="20.0" penetration="0.5" />
         <Affliction identifier="stun" amount="1" probability="0.15"/>
       </StatusEffect>
       <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
@@ -400,7 +429,7 @@
       <StatusEffect type="OnFailure" target="Character">
         <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
         <Affliction identifier="stun" strength="5" />
-        <Affliction identifier="burn" strength="2" />
+        <Affliction identifier="electricshock" strength="20"/>
       </StatusEffect>
       <LightComponent LightColor="1.0,1.0,1.0,1" range="850" Flicker="1" flickerspeed="0.2">
         <LightTexture texture="%ModDir%/sprites/beam.png" origin="-0.01, 0.471" size="0.3,0.3" />
@@ -413,8 +442,8 @@
     <aitarget sightrange="2000" soundrange="500" fadeouttime="3" />
     <SkillRequirementHint identifier="mechanical" level="50"/>
     <Quality>
-      <QualityStat stattype="RepairToolStructureDamageMultiplier" value="0.1"/>
-      <QualityStat stattype="RepairToolDeattachTimeMultiplier" value="0.1"/>
+      <QualityStat stattype="RepairToolStructureDamageMultiplier" value="0.2"/>
+      <QualityStat stattype="RepairToolDeattachTimeMultiplier" value="0.2"/>
     </Quality>
   </Item>
 </Items>

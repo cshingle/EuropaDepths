@@ -4,7 +4,7 @@ public class BeaconBanditsEvent extends EventSet<BeaconBanditsEvent> {
 	
 	public BeaconBanditsEvent(TriggerEventAction triggerEventAction, int commonness) {
 		this.getFields().put("identifier", "bandits");
-		this.getFields().put("requiredlayer", "bandit");
+		this.getFields().put("requiredspawnpointtag", "beacon_bandit");
 		this.getFields().put("chooserandom", "false");
 		this.getFields().put("triggereventcooldown", "false");
 		this.getFields().put("allowatstart", "true");

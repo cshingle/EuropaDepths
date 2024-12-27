@@ -138,7 +138,7 @@
     <!--Bomb scare-->
     <ScriptedEvent identifier="bombscare" commonness="50">
       <TagAction criteria="player" tag="player" />
-      <TagAction criteria="itemidentifier:mediumsteelcabinet" tag="bombcabinet" SubmarineType="Outpost" chooserandom="true" ContinueIfNoTargetsFound="false" />
+      <TagAction criteria="itemidentifier:mediumsteelcabinet" tag="bombcabinet" SubmarineType="Outpost" chooserandom="true" ContinueIfNoTargetsFound="false"  />
       <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="securitynpc[faction]" targettag="bombsecurity" spawnlocation="Outpost" />
       <Label name="beginning" />
       <ClearTagAction tag="triggerer_player" />
@@ -174,7 +174,7 @@
                           <!-- Bomb defused, go to security. -->
                           <Label name="hasdefusedbomb" />
                           <TriggerAction target1tag="player" target2tag="bombsecurity" applytotarget1="bombbringer" waitforinteraction="true" />
-                          <CheckItemAction targettag="bombbringer" itemtags="bombscarebomb">
+                          <CheckItemAction targettag="bombbringer" itemtags="bombscarebomb" >
                             <Success>
                               <NPCFollowAction npctag="bombsecurity" targettag="bombbringer" follow="true" />
                               <ConversationAction text="EventText.bombscare.o1.o1.o1.c1.o1.c1.c1" targettag="bombbringer" eventsprite="BombScare1"/>
@@ -206,7 +206,7 @@
                               <Waitaction Time="1" />
                               <StatusEffectAction targettag="bombscarebomb">
                                 <StatusEffect target="This" IsOn="True" setvalue="true" />
-                                <StatusEffect target="This" type="OnActive" duration="100" Condition="-2">
+                                <StatusEffect target="This" type="OnActive" duration="100" Condition="-2" >
                                   <sound file="Content/Items/Button/Switch1.ogg" range="200" frequencymultiplier="1" volume="0.75" loop="true" />
                                 </StatusEffect>
                               </StatusEffectAction>
@@ -870,13 +870,24 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!--                          Church of the Husk                               -->
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <ScriptedEvent identifier="missionevent_escort1huskcult" commonness="100">
+    <ScriptedEvent identifier="missionevent_escort1huskcult" commonness="100" requiredDestinationTypes="anyoutpost">
       <ConversationAction text="EventText.missionevent_escort1huskcult.c1" speakertag="huskcultist" endeventifinterrupted="false" dialogtype="Small" />
       <MissionAction missiontag="escortcommonershuskcult" />
     </ScriptedEvent>
-    <ScriptedEvent identifier="missionevent_cargohuskcult" commonness="100">
+    <ScriptedEvent identifier="missionevent_cargohuskcult" commonness="100" requiredDestinationTypes="anyoutpost">
       <ConversationAction text="eventtext.missionevent_cargohuskcult" speakertag="huskcultist" endeventifinterrupted="false" dialogtype="Small" />
       <MissionAction missiontag="cargohuskcult" />
+    </ScriptedEvent>
+    <!--"Outbreak"-->
+    <ScriptedEvent identifier="outbreak" commonness="100">
+      <TagAction criteria="player" tag="player" />
+      <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="commoner" targettag="infectednpc" spawnlocation="Outpost" />
+      <SpawnAction npcsetidentifier="outpostnpcs1" npcidentifier="commoner" targettag="outbreaknpc" spawnlocation="Outpost" />
+      <TriggerAction target1tag="outbreaknpc" target2tag="player" applytotarget2="triggerer_player" radius="250" waitforinteraction="true"/>
+      <AfflictionAction targettag="infectednpc" affliction="huskinfection" strength="40" />
+      <ConversationAction targettag="triggerer_player" text="EventText.outbreak.c1" eventsprite="cultist">
+        <Option text="EventText.outbreak.o1" />
+      </ConversationAction>
     </ScriptedEvent>
     <ScriptedEvent identifier="huskcultspecialhire1">
       <CheckDataAction identifier="subraevent_state" condition="lt 3">
@@ -1104,7 +1115,7 @@
                               <ReputationAction targettype="Faction" identifier="huskcult" increase="-10" />
                               <CombatAction combatmode="Arrest" npctag="securitynpc" enemytag="cultist2" isinstigator="false" witnessreaction="retreat" />
                             </Option>
-                            <Option text="EventText.youngcultists.o1.o1.o1.o1.o2" endconversation="true">
+                            <Option text="EventText.youngcultists.o1.o1.o1.o1.o2"  endconversation="true">
                               <ReputationAction targettype="Faction" identifier="huskcult" increase="-2" />
                             </Option>
                             <Option text="EventText.youngcultists.o1.o1.o1.o1.o3">
@@ -1215,12 +1226,12 @@
                                   <Label name="challenge" />
                                   <ConversationAction text="EventText.waytoascension1.o5.o1.o1.o1.c1" targettag="triggerer_player" eventsprite="Ecclesiast">
                                     <Option text="EventText.waytoascension1.o5.o1.o1.o1.o1">
-                                      <Label name="wronganswer" />
+                                      <Label name="wronganswer2" />
                                       <ConversationAction text="EventText.waytoascension1.o5.o1.o1.o1.o1.c1" targettag="triggerer_player" eventsprite="Ecclesiast" endconversation="true" />
                                       <SetDataAction identifier="waytoascension" value="1" />
                                     </Option>
                                     <Option text="EventText.waytoascension1.o5.o1.o1.o1.o2">
-                                      <GoTo name="wronganswer" />
+                                      <GoTo name="wronganswer2" />
                                     </Option>
                                     <Option text="EventText.waytoascension1.o5.o1.o1.o1.o3">
                                       <Label name="givetask" />
@@ -1558,10 +1569,10 @@
                           <AfflictionAction targettag="ecclesiast" affliction="husksymbiosis" strength="1000" />
                           <AfflictionAction targettag="huskcultist" affliction="huskinfection" strength="1000" />
                           <StatusEffectAction targettag="triggerer_player">
-                            <StatusEffect target="NearbyCharacters" range="8000" duration="10">
+                            <StatusEffect target="NearbyCharacters" range="20000" duration="10">
                               <Conditional TeamID="Team1" />
                               <Sound file="Content/Items/Alien/AlienTurret2.ogg" range="1000" />
-                              <Affliction identifier="hallucinating" strength="10" />
+                              <Affliction identifier="hallucinating" strength="50" />
                               <Affliction identifier="huskascension" strength="10" />
                             </StatusEffect>
                           </StatusEffectAction>
@@ -1655,7 +1666,6 @@
         </Option>
         <Option text="eventtext.huskextremists1.o3" endconversation="true">
           <!-- Combat -->
-          <Label name="beforecheck2" />
           <NPCChangeTeamAction npctag="cultist" teamid="Team2" />
           <CombatAction combatmode="Offensive" npctag="cultist" enemytag="triggerer_player" isinstigator="true" guardreaction="none" witnessreaction="retreat"/>
           <ReputationAction targettype="Faction" identifier="clowns" increase="5" />
@@ -1667,7 +1677,7 @@
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <!--                                  Clowns                                   -->
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <ScriptedEvent identifier="missionevent_escort1clowns" commonness="100">
+    <ScriptedEvent identifier="missionevent_escort1clowns" commonness="100" requiredDestinationTypes="anyoutpost">
       <ConversationAction text="EventText.missionevent_escort1clowns.c1" speakertag="clown" endeventifinterrupted="false" dialogtype="Small" />
       <MissionAction missiontag="escortcommonersclowns" />
     </ScriptedEvent>
@@ -1682,6 +1692,7 @@
       <SpawnAction itemidentifier="bikehorn" targetinventory="clowntoolbelt" />
       <SpawnAction itemidentifier="clownmask" targetinventory="clowntoolbelt" />
       <SpawnAction itemidentifier="clowncostume" targetinventory="clowntoolbelt" />
+      <Label name="beginning" />
       <TagAction criteria="player" tag="player" />
       <TriggerAction target1tag="clowntoolbelt" target2tag="player" applytotarget2="triggerer_player" radius="150" waitforinteraction="true" />
       <ConversationAction targettag="triggerer_player" text="EventText.clownrelations1.c1">
@@ -1708,7 +1719,10 @@
             </Option>
           </ConversationAction>
         </Option>
-        <Option text="EventText.clownrelations1.o2" />
+        <Option text="EventText.clownrelations1.o2" endconversation="true">
+          <!-- END -->
+          <GoTo name="beginning" />
+        </Option>
       </ConversationAction>
       <NPCFollowAction npctag="clown1" targettag="clowntoolbelt" follow="false" />
       <NPCFollowAction npctag="clown2" targettag="triggerer_player" follow="false" />
@@ -1755,7 +1769,7 @@
       <CombatAction combatmode="offensive" npctag="clownnpc2" enemytag="clownvictimnpc" isinstigator="true" guardreaction="arrest" witnessreaction="retreat" />
     </ScriptedEvent>
     <!--Infiltration-->
-    <ScriptedEvent identifier="infiltration" commonness="50">
+    <ScriptedEvent identifier="infiltration" commonness="50" requiredDestinationTypes="anyoutpost">
       <CheckDataAction identifier="infiltration_complete" condition="eq true">
         <Success>
           <!--Don't repeat-->
@@ -1835,7 +1849,6 @@
                                       <Goto name="convincedclowns" />
                                     </Success>
                                     <Failure>
-                                      <Label name="unconvincedclowns" />
                                       <ConversationAction targettag="triggerer_player" text="EventText.infiltration.o1.o1.o1.o2.o2.c1" eventsprite="Jestmaster">
                                         <Option text="EventText.infiltration.o1.o1.o1.o2.o1.o2">
                                           <ConversationAction targettag="triggerer_player" text="EventText.infiltration.o1.o1.o1.o2.o1.o2.c1" eventsprite="Jestmaster"/>
@@ -1890,7 +1903,7 @@
                   <SpawnAction itemidentifier="bikehorn" targetinventory="clownbox" ignorebyai="true" />
                   <SpawnAction itemidentifier="bikehorn" targetinventory="clownbox" ignorebyai="true" />
                 </Option>
-                <Option text="EventText.censorship.o1.o1.o2">
+                <Option text="EventText.censorship.o1.o1.o2" endconversation="true">
                   <!--END-->
                   <GoTo name="beginning" />
                 </Option>
@@ -2058,7 +2071,7 @@
                 <Option text="EventText.pathofthebikehorn1.o2">
                   <ReputationAction targettype="Faction" identifier="clowns" increase="-2" />
                   <ConversationAction text="EventText.pathofthebikehorn1.o2.c1" targettag="triggerer_player">
-                    <Option text="EventText.pathofthebikehorn1.o2.o1">
+                    <Option text="EventText.pathofthebikehorn1.o2.o1" endconversation="true">
                       <ReputationAction targettype="Faction" identifier="clowns" increase="-2" />
                     </Option>
                     <Option text="EventText.pathofthebikehorn1.o2.o2">
@@ -2461,10 +2474,10 @@
                             <Option text="EventText.pathofthebikehorn5.o1.o1.o1.o1">
                               <ConversationAction targettag="triggerer_player" text="EventText.pathofthebikehorn5.o1.o1.o1.o1.c1" endconversation="true" />
                               <StatusEffectAction targettag="triggerer_player">
-                                <StatusEffect target="NearbyCharacters" range="8000" duration="10">
+                                <StatusEffect target="NearbyCharacters" range="20000" duration="10">
                                   <Conditional TeamID="Team1" />
                                   <Sound file="Content/Items/Alien/AlienTurret2.ogg" range="1000" />
-                                  <Affliction identifier="hallucinating" strength="10" />
+                                  <Affliction identifier="hallucinating" strength="50" />
                                   <Affliction identifier="motherstouch" strength="1" />
                                 </StatusEffect>
                               </StatusEffectAction>

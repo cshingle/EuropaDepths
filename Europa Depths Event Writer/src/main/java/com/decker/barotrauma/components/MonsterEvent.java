@@ -41,6 +41,11 @@ public class MonsterEvent extends AbstractEntity<MonsterEvent> implements Monste
 		return this;
 	}
 	
+	public MonsterEvent playdeadprobability(double playDeadProbability) {
+		this.getFields().putIfAbsent("playdeadprobability", Double.toString(playDeadProbability).replaceAll(".0$", ""));
+		return this;
+	}
+	
 	public MonsterEvent maxamountperlevel(int maxamountperlevel) {
 		this.getFields().put("maxamountperlevel", maxamountperlevel);
 		return this;

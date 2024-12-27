@@ -35,7 +35,7 @@ public class SpawnAction extends AbstractEntity<SpawnAction> {
 	}
 	
 	public static SpawnAction beaconBanditLeaderHeavy() {
-		return new SpawnAction("abandonedoutpostnpcs", "bandit_heavy", "beacon_bandit", "beacon_bandit", "beaconstation", true, "None");
+		return new SpawnAction("abandonedoutpostnpcs", "banditleader_heavy", "beacon_bandit", "beacon_bandit", "beaconstation", true, "None");
 	}
 	
 	public static SpawnAction beaconBanditElite() {

@@ -2,7 +2,7 @@
 <Items>
   <Override>
 
-    <Item name="" identifier="depthchargeshell" tags="depthchargeammo" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_heavy" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" indestructible="true" health="10" cargocontaineridentifier="">
+    <Item name="" identifier="depthchargeshell" tags="depthchargeammo,demolitionsexpert" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_heavy" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" indestructible="true" health="10" cargocontaineridentifier="">
       <Upgrade gameversion="0.20.4.0" scale="0.4"/>
       <PreferredContainer primary="depthchargeloader,depthchargecontainer" secondary="ammoboxcontainer" />
       <Price baseprice="60" minavailable="3">
@@ -25,7 +25,7 @@
       <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="0,0,130,89" depth="0.55" origin="0.5,0.5" />
       <Body width="128" height="85" density="20" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,20" handle2="10,20" aimable="false" msg="ItemMsgPickUpSelect" />
-      <Projectile characterusable="false" launchimpulse="5.0">
+      <Projectile characterusable="false" launchimpulse="8.0">
         <!-- Make destructible when launched -->
         <StatusEffect type="OnUse" target="This" Indestructible="false"/>
         <StatusEffect type="OnImpact" target="this" setvalue="true" condition="-100"/>
@@ -70,7 +70,8 @@
           <Conditional targetitemcomponent="MotionSensor" MotionDetected="eq true" />
         </StatusEffect>
       </MotionSensor>
-      <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false">
+      <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false" containedstateindicatorstyle="explosive" containedspritedepth="0.81">
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,384,64,64" origin="0.5,0.5" />
         <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
         <Containable items="smallitem,explosive" />
       </ItemContainer>
@@ -80,7 +81,7 @@
       </Quality>
     </Item>
 
-    <Item name="" identifier="depthdecoyshell" tags="depthchargeammo,decoy" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_heavy" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" health="200" indestructible="true" cargocontaineridentifier="">
+    <Item name="" identifier="depthdecoyshell" tags="depthchargeammo,decoy,demolitionsexpert" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_heavy" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" health="200" indestructible="true" cargocontaineridentifier="">
       <Upgrade gameversion="0.20.4.0" scale="0.4"/>
       <PreferredContainer primary="depthchargeloader,depthchargecontainer" secondary="ammoboxcontainer" />
       <Price baseprice="180" minavailable="2">
@@ -103,10 +104,11 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="267,64,41,61" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" sourcerect="138,380,129,88" depth="0.55" origin="0.5,0.5" />
-      <Body width="128" height="85" density="15" />
+      <!-- almost neutral buoyancy: sinks very slowly -->
+      <Body width="128" height="85" density="10.5" />
       <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,20" handle2="10,20" aimable="false" msg="ItemMsgPickUpSelect" />
       <AiTarget maxsoundrange="10000" maxsightrange="6000" />
-      <Projectile characterusable="false" launchimpulse="5.0">
+      <Projectile characterusable="false" launchimpulse="8.0">
         <!-- Turns lights on and make destructible after launch-->
         <StatusEffect type="OnUse" target="This" IsOn="true" Indestructible="false"/>
         <!-- Self-destruction after 45 seconds-->
@@ -148,7 +150,8 @@
         <Sound file="Content/Items/Weapons/SonarDecoy.ogg" type="OnActive" range="20000" loop="true" dontmuffle="true" />
         <StatusEffect type="OnActive" target="This" setvalue="true" soundrange="10000" sightrange="6000"/>
       </LightComponent>
-      <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false">
+      <ItemContainer hideitems="true" capacity="1" maxstacksize="1" canbeselected="false" containedstateindicatorstyle="explosive" containedspritedepth="0.81">
+        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,384,64,64" origin="0.5,0.5" />
         <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
         <Containable items="smallitem,explosive" />
       </ItemContainer>
@@ -160,7 +163,7 @@
 
   </Override>
 
-  <Item name="Mine Shell" identifier="depthchargemine" tags="depthchargeammo" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_light" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" indestructible="true" health="10" cargocontaineridentifier="">
+  <Item name="Mine Shell" identifier="depthchargemine" tags="depthchargeammo,demolitionsexpert" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_light" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" indestructible="true" health="10" cargocontaineridentifier="">
     <Upgrade gameversion="0.20.4.0" scale="0.4"/>
     <PreferredContainer primary="depthchargeloader,depthchargecontainer" secondary="ammoboxcontainer" />
     <Price baseprice="60" minavailable="3">
@@ -185,7 +188,7 @@
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="127,800,130,89" depth="0.55" origin="0.5,0.5" />
     <Body width="128" height="85" density="10" waterdragcoefficient="1" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,20" handle2="10,20" aimable="false" msg="ItemMsgPickUpSelect" />
-    <Projectile characterusable="false" launchimpulse="5.0">
+    <Projectile characterusable="false" launchimpulse="8.0">
       <!-- Make destructible when launched -->
       <StatusEffect type="OnUse" target="This" Indestructible="false" delay="0.5"/>
       <StatusEffect type="OnImpact" target="this" setvalue="true" condition="-100"/>
@@ -240,7 +243,7 @@
     </Quality>
   </Item>
 
-  <Item name="Mine Decoy" identifier="depthchargeminedecoy" tags="depthchargeammo,decoy" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_light" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" indestructible="true" health="10" cargocontaineridentifier="">
+  <Item name="Mine Decoy" identifier="depthchargeminedecoy" tags="depthchargeammo,decoy,demolitionsexpert" category="Weapon" sonarsize="5" scale="0.4" impactsoundtag="impact_metal_light" damagedbymonsters="true" damagedbyexplosions="true" damagedbyrepairtools="true" damagedbyprojectiles="true" damagedbymeleeweapons="true" indestructible="true" health="10" cargocontaineridentifier="">
     <Upgrade gameversion="0.20.4.0" scale="0.4"/>
     <PreferredContainer primary="depthchargeloader,depthchargecontainer" secondary="ammoboxcontainer" />
     <Price baseprice="60" minavailable="3">
@@ -265,7 +268,7 @@
     <Body width="128" height="85" density="10" waterdragcoefficient="1" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,20" handle2="10,20" aimable="false" msg="ItemMsgPickUpSelect" />
     <AiTarget maxsoundrange="10000" maxsightrange="6000" />
-    <Projectile characterusable="false" launchimpulse="5.0">
+    <Projectile characterusable="false" launchimpulse="8.0">
       <!-- Turns lights on and make destructible after launch-->
       <StatusEffect type="OnUse" target="This" IsOn="true" Indestructible="false" delay="0.5"/>
       <!-- Effects when taking damage-->

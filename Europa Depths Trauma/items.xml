@@ -26,10 +26,10 @@
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Explosion range="250.0" ballastfloradamage="200" structuredamage="0" itemdamage="100" force="10.0" severlimbsprobability="0" underwaterbubble="false">
-          <Affliction identifier="burn" strength="12" />
+          <Affliction identifier="burn" strength="18" />
           <Affliction identifier="stun" strength="0.5" />
         </Explosion>
-        <Fire size="50" probability="0.75" />
+        <Fire size="50" probability="0.80" />
         <Remove />
       </StatusEffect>
     </Projectile>

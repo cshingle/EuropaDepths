@@ -90,13 +90,19 @@ public class Caves {
 				),
 				new MonsterSet("Mudraptors2", false, 15).monsters(
 						new MonsterEvent(Character.Mudraptor, 3, 6),
-						new MonsterEvent(Character.Mudraptor_veteran, 1, 1).spawnprobability(0.33).scatter(2000),
+						new MonsterEvent(Character.Mudraptor_veteran, 1, 1).spawnprobability(0.50).scatter(2000),
 						new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000),
 						new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000)
 				),
 				new MonsterSet("Bonethresher_caves", false, 20).monsters(
 						new MonsterEvent(Character.Bonethresher_cave, 2, 3),
 						new MonsterEvent(Character.Tigerthresher, 1, 3).spawnprobability(0.33).scatter(2000),
+						new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000),
+						new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000)
+				),
+				new MonsterSet("hammerhead_caves", false, 5).monsters(
+						new MonsterEvent(Character.Hammerhead_juvenile, 3, 4),
+						new MonsterEvent(Character.Hammerheadblack, 1, 2).spawnprobability(0.33).scatter(2000),
 						new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000),
 						new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000)
 				),
@@ -155,6 +161,12 @@ public class Caves {
 						new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000),
 						new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000)
 				),
+				new MonsterSet("hammerhead_caves", false, 5).monsters(
+						new MonsterEvent(Character.Hammerhead_juvenile, 4, 5),
+						new MonsterEvent(Character.Hammerheadblack, 1, 2).spawnprobability(0.33).scatter(2000),
+						new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000),
+						new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000)
+				),
 				new MonsterSet("Tigerthreshers", false, 20).monsters(
 						new MonsterEvent(Character.Tigerthresher_veteran, 3, 4),
 						new MonsterEvent(Character.Bonethresher_cave, 1, 2).spawnprobability(0.5).scatter(2000),
@@ -205,6 +217,12 @@ public class Caves {
 						new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000),
 						new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000),
 						new MonsterEvent(Character.Mantis, 2, 3).spawnprobability(0.33).scatter(2000)
+				),
+				new MonsterSet("hammerhead_caves", false, 5).monsters(
+						new MonsterEvent(Character.Hammerhead_juvenile, 4, 5),
+						new MonsterEvent(Character.Hammerheadblack, 1, 2).spawnprobability(0.33).scatter(2000),
+						new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000),
+						new MonsterEvent(Character.Mantis, 1, 2).spawnprobability(0.33).scatter(2000)
 				),
 				new MonsterSet("Tigerthreshers", false, 20).monsters(
 						new MonsterEvent(Character.Tigerthresher_veteran, 3, 5),

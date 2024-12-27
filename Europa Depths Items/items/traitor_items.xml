@@ -41,4 +41,27 @@
             </Projectile>
         </Item>
     </Override>
+    <Item name="" identifier="fakeextinguisher" variantof="extinguisher" hideinmenus="true">
+        <Upgrade gameversion="0.9.600.0" Tags="mediumitem,fireextinguisher,provocative" />
+        <PreferredContainer primary="extinguisherholder" spawnprobability="0"/>
+        <PreferredContainer secondary="engcab,reactorcab" spawnprobability="0"/>
+        <PreferredContainer secondary="loosevent" maxamount="1" spawnprobability="1" />
+        <Price sold="false" />
+        <Deconstruct time="10">
+            <Item identifier="aluminium" />
+        </Deconstruct>
+        <Fabricate suitablefabricators="fabricator" requiredtime="10">
+            <RequiredSkill identifier="mechanical" level="20" />
+            <RequiredItem identifier="aluminium" />
+            <RequiredItem identifier="ethanol" amount="1" />
+        </Fabricate>
+        <RepairTool extinguishamount="-30.0" range="500" barrelpos="21,25" repairthroughholes="true" hititems="false" IgnoreCharacters="true">
+            <ParticleEmitter particle="extinguisher" velocitymin="1000.0" velocitymax="1650.0" particlespersecond="100" />
+            <StatusEffect type="OnUse" targettype="This" Condition="-2.0" />
+            <sound file="Content/Items/Tools/Extinguisher.ogg" type="OnUse" range="500.0" loop="true" />
+        </RepairTool>
+        <Propulsion force="-80" usablein="water" particles="bubbles" />
+        <aitarget sightrange="1000" soundrange="1000" fadeouttime="1" />
+        <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    </Item>
 </Items>

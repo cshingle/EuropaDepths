@@ -3,9 +3,10 @@
   <Override>
     <Item name="" identifier="spear" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo,handheldammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="harpoongun" amount="6" spawnprobability="1" />
-      <PreferredContainer primary="spearcab" secondary="armcab" minamount="3" maxamount="6" spawnprobability="1" />
+      <PreferredContainer primary="spearcab" secondary="armcab" minamount="3" maxamount="6" spawnprobability="1" notpvp="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab" minamount="1" maxamount="4" spawnprobability="0.2" />
       <PreferredContainer primary="secarmcab" />
+      <PreferredContainer secondary="respawncontainer_kingofthehull" amount="32" spawnprobability="1" notcampaign="true"/>
       <Price baseprice="7">
         <Price storeidentifier="merchantoutpost" minavailable="12" multiplier="1.5" />
         <Price storeidentifier="merchantcity" minavailable="12" multiplier="1.25" />
@@ -94,7 +95,7 @@
 
     <Item name="" identifier="explosivespear" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="6" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="mediumitem,harpoonammo,demolitionsexpert,handheldammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="harpoongun" />
-      <PreferredContainer primary="spearcab,secarmcab" secondary="armcab" />
+      <PreferredContainer primary="spearcab,secarmcab" secondary="armcab" notpvp="true" />
       <PreferredContainer primary="armcab" amount="6" spawnprobability="0.1" notcampaign="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="6" spawnprobability="0.1" />
       <Price baseprice="50">
@@ -230,6 +231,7 @@
       <PreferredContainer secondary="wreckweaponholder" spawnprobability="0.05" />
       <PreferredContainer primary="spearcab,secarmcab" secondary="armcab,weaponholder" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab" amount="1" spawnprobability="0.1" />
+      <PreferredContainer secondary="respawncontainer_kingofthehull" amount="2" spawnprobability="1" notcampaign="true"/>
       <Price baseprice="170" minavailable="1">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="2" sold="false" />
@@ -282,9 +284,10 @@
 
     <Item name="" identifier="revolverround" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" Scale="0.5" tags="smallitem,revolverammo,pistolammoitem,handheldammo" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="revolver" amount="6" spawnprobability="1" />
-      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" amount="6" spawnprobability="1" />
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" amount="6" spawnprobability="1" notpvp="true" />
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab,piratesecarmcab" minamount="1" maxamount="6" spawnprobability="0.2" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratesecarmcab" minamount="1" maxamount="3" spawnprobability="0.25" />
+      <PreferredContainer secondary="respawncontainer_kingofthehull" amount="32" spawnprobability="1" notcampaign="true"/>
       <Price baseprice="12">
         <Price storeidentifier="merchantoutpost" multiplier="1.5" minavailable="12" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="12" />
@@ -306,8 +309,8 @@
       <Projectile characterusable="false" hitscan="true" removeonhit="true">
         <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,255,115,175" scalemultiplier="1,0.6" />
         <Attack structuredamage="10" targetforce="10" itemdamage="15" severlimbsprobability="0.2" penetration="0.1">
-          <Affliction identifier="gunshotwound" strength="32" />
-          <Affliction identifier="bleeding" strength="30" />
+          <Affliction identifier="gunshotwound" strength="30" />
+          <Affliction identifier="bleeding" strength="28" />
           <Affliction identifier="stun" strength="0.3" />
         </Attack>
         <StatusEffect type="OnImpact" target="UseTarget">
@@ -325,10 +328,11 @@
 
     <Item name="" identifier="smgmagazine" maxstacksize="8" maxstacksizecharacterinventory="2" scale="0.5" category="Weapon" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,smgammo,handheldammo" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="smg,smgunique,machinepistol" amount="1" spawnprobability="1" />
-      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" spawnprobability="1" notcampaign="true" notpvp="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="2" spawnprobability="0.5" />
       <PreferredContainer secondary="wrecksecarmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
       <PreferredContainer secondary="secarmcab" />
+      <PreferredContainer secondary="respawncontainer_kingofthehull" amount="8" spawnprobability="1" notcampaign="true"/>
       <Price baseprice="100" displaynonempty="true" minleveldifficulty="15">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="2" sold="false" />
@@ -370,11 +374,11 @@
     </Item>
 
 
-    <Item name="" identifier="stungrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,stunner,explosive,demolitionsexpert,handgrenade" Scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
-      <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
+    <Item name="" identifier="stungrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert,handgrenade" Scale="0.5" impactsoundtag="impact_metal_light">
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" notpvp="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="3" spawnprobability="0.5" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
+      <PreferredContainer secondary="armcab" />
       <Upgrade gameversion="0.9.2.0" scale="0.5" />
       <Price baseprice="125">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
@@ -397,30 +401,65 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,0,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="130,312,27,54" depth="0.55" origin="0.5,0.5" />
+      <BrokenSprite texture="Content/Items/Weapons/weapons_new.png" name="stungrenade" sourcerect="467,125,27,54" depth="0.55" origin="0.5,0.5" maxcondition="99.9" />
       <Body width="26" height="50" density="30" />
-      <ItemComponent characterusable="false">
-        <!-- statuseffect that explodes the grenade when used by something else than a character (e.g. a detonator) -->
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
-          <sound file="Content/Items/Weapons/StunGrenade.ogg" range="2000" />
-          <Explosion range="750" force="1" flames="false">
-            <Affliction identifier="explosiondamage" strength="10" />
-            <Affliction identifier="stun" strength="40" />
+          <sound file="Content/Items/Weapons/TrueStunGrenade.ogg" range="3000" />
+          <!-- Effect without distance fall off to ensure some stun and flash effect -->
+          <Explosion range="750" force="0" smoke="false" playtinnitus="true" DistanceFalloff="false" flash="true" screenColor="255,255,255,255" screenColorDuration="10">
+            <Affliction identifier="stun" strength="4" />
+            <Affliction identifier="blind" strength="15" />
+            <Affliction identifier="sensoryoverload" strength="15" />
           </Explosion>
+          <Explosion range="500" force="0.1" smoke="false">
+            <Affliction identifier="stun" strength="10" />
+            <Affliction identifier="blind" strength="25" />
+            <Affliction identifier="sensoryoverload" strength="30" />
+          </Explosion>
+          <!-- Secondary stronger blinding effect in the epicenter of the explosion -->
+          <Explosion range="200" force="0.1" smoke="false" penetration="1">
+            <Affliction identifier="explosiondamage" strength="10" />
+            <Affliction identifier="blind_hard" strength="10" />
+          </Explosion>
+          <Remove />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="This" Condition="0" setvalue="true" comparison="OR">
+          <Conditional HasTag="detonator" targetcontainer="true" />
+          <Conditional HasTag="railgunammo" targetcontainer="true" />
+          <Conditional HasTag="depthchargeammo" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" checkconditionalalways="true">
+          <Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <!-- Activating the ItemComponent starts the timer -->
+      <ItemComponent IsActive="false" CharacterUsable="true">
+        <!--reduce condition by 1 to mark the user as the one responsible for the item breaking and exploding -->
+        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" comparison="AND" condition="-1">
+          <Conditional HasTag="neq detonator" targetcontainer="true" />
+          <Conditional HasTag="neq railgunammo" targetcontainer="true" />
+          <Conditional HasTag="neq depthchargeammo" targetcontainer="true" />
+          <Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+          <ParticleEmitter particle="grenadepin" emitinterval="10" particleamount="1" anglemin="70" anglemax="100" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+          <ParticleEmitter particle="grenadelever" emitinterval="10" particleamount="1" anglemin="120" anglemax="210" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+          <Sound file="Content/Items/Weapons/pinpull.ogg" type="OnUse" range="720" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" targettype="This" Condition="-24">
+          <ParticleEmitter particle="flamethrowersmoke" particlespersecond="25" anglemin="0" anglemax="0" velocitymin="75" velocitymax="125" copyentityangle="true" scalemin="0.1" scalemax="0.15" colormultiplier="255,255,255,150" />
         </StatusEffect>
       </ItemComponent>
-      <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="3.5" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0" disabledeltatime="true" checkconditionalalways="true" />
-      </Throwable>
       <Quality>
-        <QualityStat stattype="ExplosionRadius" value="0.1" />
-        <QualityStat stattype="ExplosionDamage" value="0.1" />
+        <QualityStat stattype="ExplosionRadius" value="0.2" />
+        <QualityStat stattype="ExplosionDamage" value="0.2" />
       </Quality>
     </Item>
 
     <Item name="" identifier="empgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert,handgrenade" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
+      <PreferredContainer primary="secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" notpvp="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
+      <PreferredContainer secondary="armcab" />
       <Price baseprice="175">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="1" sold="false" />
@@ -434,23 +473,23 @@
       <Deconstruct time="10">
         <Item identifier="iron" />
         <Item identifier="copper" mincondition="0.9" />
-        <Item identifier="uex" mincondition="0.9" />
+        <Item identifier="flashpowder" mincondition="0.9" />
       </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="20">
-        <RequiredSkill identifier="weapons" level="50" />
+      <Fabricate suitablefabricators="fabricator" requiredtime="10">
+        <RequiredSkill identifier="weapons" level="30" />
+        <RequiredSkill identifier="electrical" level="20" />
         <RequiredItem identifier="iron" />
         <RequiredItem identifier="copper" />
-        <RequiredItem identifier="uex" />
+        <RequiredItem identifier="flashpowder" />
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="450,450,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="159,311,27,54" depth="0.55" origin="0.5,0.5185185" />
+      <BrokenSprite texture="Content/Items/Weapons/weapons_new.png" name="empgrenade" sourcerect="434,186,27,54" depth="0.55" origin="0.5,0.5185185" maxcondition="99.9" />
       <Body width="26" height="50" density="30" />
-      <ItemComponent characterusable="false">
-        <!-- statuseffect that explodes the grenade when used by something else than a character (e.g. a detonator) -->
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
-          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="3000" selectionmode="All" />
-          <sound file="Content/Items/Weapons/Emp.ogg" range="3000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="1000" selectionmode="All" />
+          <sound file="Content/Items/Weapons/Emp.ogg" range="1000" />
           <Explosion range="500" force="5" empstrength="10" applyfireeffects="false" flames="false">
             <Affliction identifier="explosiondamage" strength="10" />
             <Affliction identifier="stun" strength="5" />
@@ -458,10 +497,36 @@
           </Explosion>
           <Remove />
         </StatusEffect>
-      </ItemComponent>
-      <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="3.5" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0" disabledeltatime="true" />
+        <StatusEffect type="OnUse" targettype="This" Condition="0" setvalue="true" comparison="OR">
+          <Conditional HasTag="detonator" targetcontainer="true" />
+          <Conditional HasTag="railgunammo" targetcontainer="true" />
+          <Conditional HasTag="depthchargeammo" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" checkconditionalalways="true">
+          <Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+          <Use />
+        </StatusEffect>
+        <StatusEffect type="OnBroken" target="This" duration="0.65">
+          <ParticleEmitter particle="ElectricShock" copyentityangle="false" anglemin="0" anglemax="360" particleamount="5" velocitymin="0" velocitymax="2000" scalemin="0.3" scalemax="0.33" />
+        </StatusEffect>
+        <!-- Drain condition of nearby batteries.-->
+        <StatusEffect type="OnBroken" target="nearbyItems" range="450" targettags="loadable" condition="-100" />
       </Throwable>
+      <ItemComponent IsActive="false" CharacterUsable="true">
+        <!--reduce condition by 1 to mark the user as the one responsible for the item breaking and exploding -->
+        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" comparison="AND" condition="-1">
+          <Conditional HasTag="neq detonator" targetcontainer="true" />
+          <Conditional HasTag="neq railgunammo" targetcontainer="true" />
+          <Conditional HasTag="neq depthchargeammo" targetcontainer="true" />
+          <Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+          <ParticleEmitter particle="grenadepin" emitinterval="10" particleamount="1" anglemin="70" anglemax="100" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+          <ParticleEmitter particle="grenadelever" emitinterval="10" particleamount="1" anglemin="120" anglemax="210" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+          <Sound file="Content/Items/Weapons/pinpull.ogg" type="OnUse" range="720" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" targettype="This" Condition="-24">
+          <ParticleEmitter particle="flamethrowersmoke" particlespersecond="25" anglemin="0" anglemax="0" velocitymin="75" velocitymax="125" copyentityangle="true" scalemin="0.1" scalemax="0.15" colormultiplier="255,255,255,150" />
+        </StatusEffect>
+      </ItemComponent>
       <Quality>
         <QualityStat stattype="ExplosionRadius" value="0.1" />
         <QualityStat stattype="ExplosionDamage" value="0.1" />
@@ -469,7 +534,7 @@
     </Item>
 
     <Item name="" identifier="fraggrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert,handgrenade" scale="0.5" impactsoundtag="impact_metal_heavy">
-      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" notpvp="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab" minamount="1" maxamount="2" spawnprobability="0.2" />
       <Upgrade gameversion="0.9.3.0" scale="0.5" />
       <Price baseprice="150">
@@ -491,15 +556,14 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="580,770,54,63" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="217,305,40,61" depth="0.55" origin="0.5,0.5" />
+      <!-- Broken sprite is the same but without the pin and lever-->
+      <BrokenSprite texture="Content/Items/Weapons/weapons_new.png" name="fraggrenade" sourcerect="423,120,40,61" depth="0.55" origin="0.5,0.5" maxcondition="99.9" />
       <Body radius="20" height="10" density="30" />
-      <ItemComponent characterusable="false">
-        <!-- statuseffect that explodes the grenade when used by something else than a character (e.g. a detonator) -->
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
-          <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="5000" />
-          <sound file="Content/Items/Weapons/ExplosionMedium2.ogg" range="5000" />
-          <sound file="Content/Items/Weapons/ExplosionMedium3.ogg" range="5000" />
-          <Explosion range="750.0" ballastfloradamage="100" structuredamage="20" levelwalldamage="140" itemdamage="500" force="5" severlimbsprobability="0.5" debris="true" decal="explosion" decalsize="0.5">
+          <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="10000" selectionmode="All" />
+          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="10000" />
+          <Explosion range="750.0" ballastfloradamage="100" structuredamage="20" levelwalldamage="140" itemdamage="500" force="5" severlimbsprobability="0.5" decal="explosion" decalsize="0.5">
             <Affliction identifier="explosiondamage" strength="150" />
             <Affliction identifier="bleeding" strength="100" />
             <Affliction identifier="bleeding" strength="50" probability="0.1" dividebylimbcount="false" />
@@ -507,14 +571,34 @@
           </Explosion>
           <Remove />
         </StatusEffect>
-        <StatusEffect type="OnBroken" target="This">
-          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" range="3500" />
-          <sound file="Content/Items/Weapons/ExplosionDebris2.ogg" range="3500" />
+        <!-- Skip the removal of safeties and explode immediatly if inside of a detonator, railgun shell or a depth charge-->
+        <StatusEffect type="OnUse" targettype="This" Condition="0" setvalue="true" comparison="OR">
+          <Conditional HasTag="detonator" targetcontainer="true" />
+          <Conditional HasTag="railgunammo" targetcontainer="true" />
+          <Conditional HasTag="depthchargeammo" targetcontainer="true" />
+        </StatusEffect>
+        <!-- forcefully pull the pin if player hasnt done so -->
+        <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" checkconditionalalways="true">
+          <Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+          <Use />
+        </StatusEffect>
+      </Throwable>
+      <!-- Activating the ItemComponent starts the timer -->
+      <ItemComponent IsActive="false" CharacterUsable="true">
+        <!--reduce condition by 1 to mark the user as the one responsible for the item breaking and exploding -->
+        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" comparison="AND" condition="-1">
+          <Conditional HasTag="neq detonator" targetcontainer="true" />
+          <Conditional HasTag="neq railgunammo" targetcontainer="true" />
+          <Conditional HasTag="neq depthchargeammo" targetcontainer="true" />
+          <Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+          <ParticleEmitter particle="grenadepin" emitinterval="10" particleamount="1" anglemin="70" anglemax="100" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+          <ParticleEmitter particle="grenadelever" emitinterval="10" particleamount="1" anglemin="120" anglemax="210" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+          <Sound file="Content/Items/Weapons/pinpull.ogg" type="OnUse" range="720" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" targettype="This" Condition="-24">
+          <ParticleEmitter particle="flamethrowersmoke" particlespersecond="25" anglemin="0" anglemax="0" velocitymin="75" velocitymax="125" copyentityangle="true" scalemin="0.1" scalemax="0.15" colormultiplier="255,255,255,150" />
         </StatusEffect>
       </ItemComponent>
-      <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="3.5" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0" disabledeltatime="true" checkconditionalalways="true" />
-      </Throwable>
       <Quality>
         <QualityStat stattype="ExplosionRadius" value="0.1" />
         <QualityStat stattype="ExplosionDamage" value="0.1" />
@@ -522,7 +606,7 @@
     </Item>
 
     <Item name="" identifier="incendiumgrenade" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" tags="smallitem,weapon,explosive,demolitionsexpert,handgrenade" Scale="0.5" impactsoundtag="impact_metal_heavy">
-      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" />
+      <PreferredContainer primary="ammocab" secondary="armcab,secarmcab" minamount="1" maxamount="3" spawnprobability="0.75" notcampaign="true" notpvp="true" />
       <PreferredContainer primary="wreckarmcab,abandonedarmcab,piratearmcab" minamount="1" maxamount="2" spawnprobability="0.05" />
       <Upgrade gameversion="0.9.3.0" scale="0.5" />
       <Price baseprice="175" sold="false">
@@ -544,33 +628,38 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="68,320,56,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="188,312,26,54" depth="0.55" origin="0.5,0.5" />
+      <BrokenSprite texture="Content/Items/Weapons/weapons_new.png" name="incendiumgrenade" sourcerect="460,186,27,54" depth="0.55" origin="0.5,0.5" maxcondition="99.9" />
       <Body width="24" height="52" density="30" />
-      <ItemComponent characterusable="false">
-        <!-- statuseffect that explodes the grenade when used by something else than a character (e.g. a detonator) -->
-        <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
         <StatusEffect type="OnBroken" target="This">
-          <sound file="Content/Items/Weapons/IncendiumGrenade.ogg" range="3000" />
-          <Explosion range="500" ballastfloradamage="100" itemdamage="200" force="5" smoke="false">
+          <sound file="Content/Items/Weapons/IncendiumGrenade.ogg" />
+          <!-- Incendiary grenade tweaked: now instead of causing fires it spawn a bunch of emitters that act as lasting area-denial effect, similar to acid grenade, but with afterburn. This is done to encourage usage of this grenade indoors, Also buffed damage against ballast flora -->
+          <Explosion range="300" ballastfloradamage="360" itemdamage="200" force="5" smoke="false">
             <Affliction identifier="burn" strength="75" />
+            <Affliction identifier="burning" strength="15" dividebylimbcount="false" />
             <Affliction identifier="burn" strength="15" probability="0.2" dividebylimbcount="false" />
             <Affliction identifier="stun" strength="7" />
           </Explosion>
           <Remove />
-          <Fire size="300.0" />
         </StatusEffect>
-      </ItemComponent>
-      <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" throwforce="3.5" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-100.0" delay="3.0" disabledeltatime="true" checkconditionalalways="true" />
+        <StatusEffect type="OnBroken" target="this" offset="0,20">
+          <SpawnItem identifier="incendiumemitter" count="12" aimspread="120" rotationtype="Collider" rotation="0" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="This" Condition="0" setvalue="true" comparison="OR">
+          <Conditional HasTag="detonator" targetcontainer="true" />
+          <Conditional HasTag="railgunammo" targetcontainer="true" />
+          <Conditional HasTag="depthchargeammo" targetcontainer="true" />
+        </StatusEffect>
+        <StatusEffect type="OnSecondaryUse" target="This" disabledeltatime="true" checkconditionalalways="true">
+          <Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+          <Use />
+        </StatusEffect>
       </Throwable>
-      <Quality>
-        <QualityStat stattype="ExplosionRadius" value="0.1" />
-        <QualityStat stattype="ExplosionDamage" value="0.1" />
-      </Quality>
     </Item>
 
     <Item name="" identifier="stunbaton" category="Weapon" Tags="smallitem,weapon,stunner,gunsmith,mountableweapon" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" RequireAimToUse="True">
       <PreferredContainer secondary="outpostsecarmcab" amount="1" spawnprobability="0.5" />
-      <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1" />
+      <PreferredContainer secondary="wreckarmcab,abandonedarmcab,piratearmcab" amount="1" spawnprobability="0.1" />
       <PreferredContainer primary="secarmcab" secondary="armcab" />
       <Upgrade gameversion="0.9.2.0" scale="0.5" />
       <Price baseprice="200">
@@ -603,34 +692,37 @@
           <Affliction identifier="blunttrauma" strength="4" />
           <Affliction identifier="stun" strength="0.2" />
         </Attack>
-        <!-- changed to use incremental stun: normal batteries cause 40 points of incremental stun -> full stun in three consecutive hits -->
-        <!-- keep weight check in place for now (affect targets with mass < 60) -->
+        <!-- changed to use electricshock: normal batteries cause 45 points of electricshock. Due to strength change of -5/s we can expect full stun in three consecutive hits -->
+        <!-- keep weight check in place for now (affect targets with mass < 40, humans, mudraptors, etc.) -->
         <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
-          <Affliction identifier="stun" strength="0.5" />
-          <Affliction identifier="incrementalstun" strength="40" />
+          <Conditional mass="lt 40" />
+          <Affliction identifier="stun" strength="0.3" />
+          <Affliction identifier="electricshock" strength="45" />
+          <Affliction identifier="incrementalstun" strength="10" />
           <sound file="Content/Items/Weapons/StunBaton1.ogg" selectionmode="random" range="500" />
           <sound file="Content/Items/Weapons/StunBaton2.ogg" range="500" />
           <sound file="Content/Items/Weapons/StunBaton3.ogg" range="500" />
           <sound file="Content/Items/Weapons/StunBaton4.ogg" range="500" />
-          <RequiredItem items="batterycell" type="Contained" msg="ItemMsgBatteryCellRequired" />
+          <RequiredItem items="mobilebattery" ExcludedIdentifiers="fulguriumbatterycell" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Explosion range="100.0" force="0.1" shockwave="false" flames="false" smoke="false" underwaterbubble="false" camerashake="6.0" />
-          <Conditional mass="lt 60" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="5" DistanceMax="20" ParticleAmount="3" ScaleMin="0.07" ScaleMax="0.1" />
         </StatusEffect>
-        <!-- changed to use incremental stun: fulgurium batteries cause 55 points of incremental stun -> full stun in two consecutive hits -->
-        <!-- keep weight check in place for now (affect targets with mass < 150) -->
+        <!-- changed to use electricshock: fulgurium batteries cause 60 points of electricshock -> full stun in two consecutive hits -->
+        <!-- keep weight check in place for now (affect targets with mass < 60, includes veteran mudraptors) -->
         <StatusEffect type="OnUse" target="UseTarget" disabledeltatime="true">
-          <Affliction identifier="stun" strength="0.5" />
-          <Affliction identifier="incrementalstun" strength="55" />
+          <Conditional mass="lt 60" />
+          <Affliction identifier="stun" strength="0.3" />
+          <Affliction identifier="electricshock" strength="60" />
           <sound file="Content/Items/Weapons/StunBaton1.ogg" selectionmode="random" range="500" />
           <sound file="Content/Items/Weapons/StunBaton2.ogg" range="500" />
           <sound file="Content/Items/Weapons/StunBaton3.ogg" range="500" />
           <sound file="Content/Items/Weapons/StunBaton4.ogg" range="500" />
           <RequiredItem items="fulguriumbatterycell" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Explosion range="100.0" force="0.5" shockwave="false" flames="false" smoke="true" underwaterbubble="false" camerashake="6.0" />
-          <Conditional mass="lt 150" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="10" DistanceMax="25" ParticleAmount="5" ScaleMin="0.1" ScaleMax="0.12" />
         </StatusEffect>
-        <!-- 4 usages with normal battery -->
-        <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-25.0" disabledeltatime="true">
+        <!-- 8 usages with normal battery, 16 with fulgurium -->
+        <StatusEffect type="OnUse" target="Contained,UseTarget" Condition="-12.5" disabledeltatime="true">
           <RequiredItem items="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Conditional entitytype="eq Character" />
         </StatusEffect>
@@ -768,9 +860,12 @@
         <sound file="Content/Items/Weapons/StunGrenade40mmShot2.ogg" type="OnImpact" range="2000" />
         <!--Grenade launcher ammo explodes on impact-->
         <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
-          <Explosion range="300" force="1" flames="false">
-            <Affliction identifier="explosiondamage" strength="10" />
-            <Affliction identifier="stun" strength="15" />
+          <sound file="Content/Items/Weapons/TrueStunGrenade.ogg" range="3000" />
+          <Explosion range="300" force="1" smoke="false" playtinnitus="true">
+            <Affliction identifier="explosiondamage" strength="5" />
+            <Affliction identifier="stun" strength="10" />
+            <Affliction identifier="blind" strength="30" />
+            <Affliction identifier="sensoryoverload" strength="15" />
           </Explosion>
           <Remove />
         </StatusEffect>
@@ -871,7 +966,7 @@
 
   <Override>
     <Item name="" identifier="shotgun" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon,provocativetohumanai" Scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="secarmcab,weaponholder" amount="1" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="secarmcab,weaponholder" amount="1" spawnprobability="1" notcampaign="true" notpvp="true" />
       <PreferredContainer secondary="outpostsecarmcab" amount="1" spawnprobability="0.5" />
       <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" amount="1" spawnprobability="0.2" />
       <PreferredContainer secondary="wreckweaponholder" amount="1" spawnprobability="0.03" />
@@ -940,9 +1035,10 @@
       <PreferredContainer primary="shotgun" amount="6" spawnprobability="1" />
       <PreferredContainer primary="autoshotgun" amount="8" spawnprobability="1" />
       <PreferredContainer primary="shotgununique" amount="2" spawnprobability="1" />
-      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" notpvp="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5" />
       <PreferredContainer secondary="wreckarmcab,wrecksecarmcab,abandonedarmcab,abandonedsecarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
+      <PreferredContainer secondary="respawncontainer_kingofthehull" amount="32" spawnprobability="1" notcampaign="true"/>
       <Price baseprice="30" minleveldifficulty="30">
         <Price storeidentifier="merchantoutpost" sold="false" multiplier="1.5" />
         <Price storeidentifier="merchantcity" multiplier="1.25" minavailable="4" sold="true" />
@@ -984,7 +1080,7 @@
 
     <Item name="" identifier="shotgunshellblunt" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo,handheldammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="shotgun,autoshotgun,shotgununique" />
-      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" notpvp="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5" />
       <PreferredContainer secondary="wreckarmcab,wrecksecarmcab,abandonedarmcab,abandonedsecarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
       <Price baseprice="15" minleveldifficulty="30">
@@ -1019,7 +1115,7 @@
     </Item>
 
     <Item name="" identifier="stungun" category="Weapon" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,stunner,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="secarmcab" minamount="1" maxamount="2" spawnprobability="1" notcampaign="true" notpvp="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" amount="1" spawnprobability="0.1" />
       <PreferredContainer secondary="armcab" />
       <Price baseprice="180">
@@ -1054,20 +1150,20 @@
         <RequiredItems items="stungunammo" type="Contained" msg="ItemMsgAmmoRequired" />
         <RequiredSkill identifier="weapons" level="20" />
       </RangedWeapon>
-      <ItemContainer capacity="1" hideitems="true" maxstacksize="4" containedstateindicatorstyle="bullet">
+      <ItemContainer capacity="1" hideitems="true" maxstacksize="1" containedstateindicatorstyle="bullet">
         <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
         <Containable items="stungunammo" />
       </ItemContainer>
       <aitarget sightrange="0" soundrange="0" />
       <Quality>
-        <QualityStat stattype="FirepowerMultiplier" value="3" />
+        <QualityStat stattype="FirepowerMultiplier" value="0.2" />
       </Quality>
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <SkillRequirementHint identifier="weapons" level="20" />
     </Item>
 
     <Item name="" identifier="stungundart" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="8" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,stungunammo,handheldammo" Scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" notpvp="true" />
       <PreferredContainer secondary="wreckarmcab,abandonedarmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
       <PreferredContainer primary="stungun" amount="4" spawnprobability="1" />
       <Price baseprice="15">
@@ -1094,9 +1190,20 @@
           <Affliction identifier="stun" strength="0.5" />
           <Affliction identifier="progressivestun" strength="10" />
         </Attack>
-        <StatusEffect type="OnImpact" target="This">
+        <StatusEffect type="OnImpact" target="UseTarget" delay="0.5" disabledeltatime="true">
+          <Conditional entitytype="eq Character" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="5" DistanceMax="20" ParticleAmount="3" ScaleMin="0.07" ScaleMax="0.1" />
+          <Affliction identifier="electricshock" strength="80" />
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="UseTarget" delay="2.5" disabledeltatime="true">
+          <Conditional entitytype="eq Character" />
+          <Affliction identifier="electricshock" strength="35" />
+          <!-- should reach between 90-100 str (-5 strength change/s)-->
+        </StatusEffect>
+        <StatusEffect type="OnImpact" target="This" delay="0.5">
           <Sound file="Content/Items/Weapons/TaserHit1.ogg" type="OnUse" range="500" selectionmode="Random" />
           <Sound file="Content/Items/Weapons/TaserHit2.ogg" type="OnUse" range="500" />
+          <ParticleEmitter particle="ElectricShock" DistanceMin="5" DistanceMax="20" ParticleAmount="3" ScaleMin="0.07" ScaleMax="0.1" />
           <Remove />
         </StatusEffect>
         <StatusEffect type="OnImpact" target="UseTarget">
@@ -1228,7 +1335,7 @@
     </Item>
     <Item name="" identifier="riflebullet" category="Weapon" maxstacksize="32" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,rifleammo,riflemanbonus,handheldammo" Scale="0.5" impactsoundtag="impact_metal_light">
       <PreferredContainer primary="rifle" amount="6" spawnprobability="1" />
-      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
+      <PreferredContainer primary="ammocab,secarmcab" secondary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" notpvp="true" />
       <PreferredContainer primary="armcab" minamount="6" maxamount="12" spawnprobability="1" notcampaign="true" />
       <PreferredContainer secondary="outpostsecarmcab" minamount="1" maxamount="6" spawnprobability="0.5" />
       <PreferredContainer secondary="wreckarmcab,wrecksecarmcab,abandonedarmcab,abandonedsecarmcab,piratearmcab" minamount="1" maxamount="3" spawnprobability="0.2" />
@@ -1272,7 +1379,7 @@
   </Override>
 
   <Item name="" identifier="leveractionrifle" aliases="" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,pistolitem,gunsmith,mountableweapon,riflemanbonus,provocativetohumanai" Scale="0.5" impactsoundtag="impact_metal_light">
-    <PreferredContainer primary="secarmcab" amount="1" spawnprobability="1" notcampaign="true" />
+    <PreferredContainer primary="secarmcab" amount="1" spawnprobability="1" notcampaign="true" notpvp="true" />
     <PreferredContainer secondary="outpostsecarmcab" amount="1" spawnprobability="0.5" />
     <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" amount="1" spawnprobability="0.2" />
     <PreferredContainer secondary="wreckweaponholder" amount="1" spawnprobability="0.03" />
