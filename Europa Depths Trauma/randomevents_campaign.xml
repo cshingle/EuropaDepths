@@ -54,52 +54,53 @@
 				<TriggerEventAction identifier="beaconbandit_defense" />
 			</ScriptedEvent>
 			<ScriptedEvent identifier="beaconbandit_enablelayers">
-			  <LayerAction layer="bandit" enabled="true" />
-			  <CheckDifficultyAction mindifficulty="50">
-			    <Success>
-			      <LayerAction layer="bandit_hard" enabled="true" />
-			    </Success>
-			  </CheckDifficultyAction>
-			
-			  <TagAction criteria="itemtag:reactor" submarinetype="BeaconStation" tag="beaconreactor" />
-			  <SpawnAction itemidentifier="fuelrod" targetinventory="beaconreactor" />
+				<LayerAction layer="bandit" enabled="true" />
+				<CheckDifficultyAction mindifficulty="50">
+					<Success>
+						<LayerAction layer="bandit_hard" enabled="true" />
+					</Success>
+				</CheckDifficultyAction>
+
+				<TagAction criteria="itemtag:reactor" submarinetype="BeaconStation" tag="beaconreactor" />
+				<SpawnAction itemidentifier="fuelrod" targetinventory="beaconreactor" />
 			</ScriptedEvent>
-			
+
 			<ScriptedEvent identifier="beaconbandit_spawndivingsuit">
-			  <TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="divingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
-			  <TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
+				<TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
+				<SpawnAction itemidentifier="divingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
+				<TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
 			</ScriptedEvent>
-			
+
 			<ScriptedEvent identifier="beaconbandit_spawncombatdivingsuit">
-			  <TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="combatdivingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
-			  <TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
+				<TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
+				<SpawnAction itemidentifier="combatdivingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
+				<TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
 			</ScriptedEvent>
-			
+
 			<ScriptedEvent identifier="beaconbandit_spawnabyssdivingsuit">
-			  <TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="abyssdivingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
-			  <TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
-			  <SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
+				<TagAction criteria="itemtag:divingsuitcontainer" submarinetype="BeaconStation" tag="banditsuitcontainer" />
+				<SpawnAction itemidentifier="abyssdivingsuit" targettag="banditdivingsuit" targetinventory="banditsuitcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="banditdivingsuit" />
+				<TagAction criteria="itemtag:oxygentankcontainer" submarinetype="BeaconStation" tag="bandittankcontainer" />
+				<SpawnAction itemidentifier="oxygentank" targetinventory="bandittankcontainer" />
 			</ScriptedEvent>
-			 
+
 			<ScriptedEvent identifier="beaconbandit_defense">
-			  <!-- Pick one bandit at random to defend, and one target at random to defend. -->
-			  <TagAction criteria="humanprefabtag:bandit" tag="defender" chooserandom="true" />
-			  <TagAction criteria="itemtag:defendable" tag="defendable" chooserandom="true" AllowHiddenItems="true" />
-			  <WaitAction time="20" /> <!-- Give some time to start the reactor -->
-			  <!-- Make the NPC "operate" the defendable position (dummy item that marks the position the bandit should defend -->
-			  <!-- Priority of 70 makes defending take priority over autonomous objectives, but emergency objectives like finding safety are still higher prio (90) -->
-			  <NPCOperateItemAction npctag="defender" targettag="defendable" itemcomponentname="controller" operate="true" Priority="70" />
+				<!-- Pick one bandit at random to defend, and one target at random to defend. -->
+				<TagAction criteria="humanprefabtag:bandit" tag="defender" chooserandom="true" />
+				<TagAction criteria="itemtag:defendable" tag="defendable" chooserandom="true" AllowHiddenItems="true" />
+				<WaitAction time="20" />
+				<!-- Give some time to start the reactor -->
+				<!-- Make the NPC "operate" the defendable position (dummy item that marks the position the bandit should defend -->
+				<!-- Priority of 70 makes defending take priority over autonomous objectives, but emergency objectives like finding safety are still higher prio (90) -->
+				<NPCOperateItemAction npctag="defender" targettag="defendable" itemcomponentname="controller" operate="true" Priority="70" />
 			</ScriptedEvent>
 		</EventPrefabs>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 0                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -117,7 +118,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 1                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -167,7 +168,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 2                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -360,7 +361,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 3                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -759,7 +760,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 4                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1211,7 +1212,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 5                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -1711,7 +1712,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 6                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2196,7 +2197,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 7                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2763,7 +2764,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 8                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -3563,7 +3564,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 9                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -4361,7 +4362,7 @@
 				</EventSet>
 			</EventSet>
 		</EventSet>
-		
+
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 		<!--                               Set 10                                       -->
 		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

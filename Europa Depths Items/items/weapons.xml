@@ -363,8 +363,8 @@
       <Body width="14" height="40" density="25" />
       <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" SpawnWithId="smground" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
         <Containable items="smground" />
-        <!--Spawn an SMG round on use. Condition -4.8 -> 21 shots per magazine.-->
-        <StatusEffect type="OnUse" target="This" condition="-4.8" disabledeltatime="true">
+        <!--Spawn an SMG round on use. Condition -3.12 -> 32 shots per magazine.-->
+        <StatusEffect type="OnUse" target="This" condition="-3.12" disabledeltatime="true">
           <SpawnItem identifiers="smground" spawnposition="ThisInventory" />
         </StatusEffect>
       </ItemContainer>
@@ -655,6 +655,25 @@
           <Use />
         </StatusEffect>
       </Throwable>
+      <ItemComponent IsActive="false" CharacterUsable="true">
+        <!--reduce condition by 1 to mark the user as the one responsible for the item breaking and exploding -->
+        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" comparison="AND" condition="-1">
+          <Conditional HasTag="neq detonator" targetcontainer="true" />
+          <Conditional HasTag="neq railgunammo" targetcontainer="true" />
+          <Conditional HasTag="neq depthchargeammo" targetcontainer="true" />
+          <Conditional IsActive="false" targetitemcomponent="ItemComponent" />
+          <ParticleEmitter particle="grenadepin" emitinterval="10" particleamount="1" anglemin="70" anglemax="100" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+          <ParticleEmitter particle="grenadelever" emitinterval="10" particleamount="1" anglemin="120" anglemax="210" velocitymin="100" velocitymax="200" copyentityangle="true" scalemin="0.5" scalemax="0.5" />
+          <Sound file="Content/Items/Weapons/pinpull.ogg" type="OnUse" range="720" />
+        </StatusEffect>
+        <StatusEffect type="OnActive" targettype="This" Condition="-24">
+          <ParticleEmitter particle="flamethrowersmoke" particlespersecond="25" anglemin="0" anglemax="0" velocitymin="75" velocitymax="125" copyentityangle="true" scalemin="0.1" scalemax="0.15" colormultiplier="255,255,255,150" />
+        </StatusEffect>
+      </ItemComponent>
+      <Quality>
+        <QualityStat stattype="ExplosionRadius" value="0.15" />
+        <QualityStat stattype="ExplosionDamage" value="0.15" />
+      </Quality>
     </Item>
 
     <Item name="" identifier="stunbaton" category="Weapon" Tags="smallitem,weapon,stunner,gunsmith,mountableweapon" Scale="0.5" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light" RequireAimToUse="True">
@@ -1150,7 +1169,7 @@
         <RequiredItems items="stungunammo" type="Contained" msg="ItemMsgAmmoRequired" />
         <RequiredSkill identifier="weapons" level="20" />
       </RangedWeapon>
-      <ItemContainer capacity="1" hideitems="true" maxstacksize="1" containedstateindicatorstyle="bullet">
+      <ItemContainer capacity="1" hideitems="true" maxstacksize="8" containedstateindicatorstyle="bullet">
         <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
         <Containable items="stungunammo" />
       </ItemContainer>

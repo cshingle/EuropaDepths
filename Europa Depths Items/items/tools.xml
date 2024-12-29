@@ -421,7 +421,7 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="161,105,64,128" origin="0.5,0.5" />
       <Body width="30" height="100" density="8" />
-      <Holdable slots="RightHand+LeftHand" controlpose="true" aimpos="40,-20" handle1="-6,10" handle2="-10,40" msg="ItemMsgPickUpSelect" />
+      <Holdable slots="RightHand+LeftHand" canbecombined="true" removeoncombined="false" controlpose="true" aimpos="40,-20" handle1="-6,10" handle2="-10,40" msg="ItemMsgPickUpSelect" />
       <RepairTool extinguishamount="60.0" range="500" barrelpos="21,25" repairthroughholes="true" hititems="false" IgnoreCharacters="true">
         <ParticleEmitter particle="extinguisher" velocitymin="1000.0" velocitymax="1650.0" particlespersecond="100" />
         <StatusEffect type="OnUse" targettype="This" Condition="-2.0" />
