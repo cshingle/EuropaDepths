@@ -36,7 +36,10 @@ public class Ruins {
 						new MonsterSet("chambers1", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 1, 2),
 								new MonsterEvent(Character.Fractalbrain1, 0, 1),
-								new MonsterEvent(Character.Crawler, 1, 3)).spawnpointtag("encounter_chambers1")));
+								new MonsterEvent(Character.Crawler, 1, 3)).spawnpointtag("encounter_chambers1"),
+						new MonsterSet("maze_husks", false).monsters(
+								new MonsterEvent(Character.Husk, 1, 2),
+								new MonsterEvent(Character.Husk, 1, 2)).spawnpointtag("mazehusk")));
 	}
 	
 	public static RuinEvent aphoticPlateau1() {
@@ -67,7 +70,11 @@ public class Ruins {
 						new MonsterSet("workshop_guardians", false).monsters(
 								new MonsterEvent(Character.Fractalguardian, 1, 2).spawnpointtag("workshopguardian"),
 								new MonsterEvent(Character.Fractalguardian2, 1, 2).spawnpointtag("workshopguardian"),
-								new MonsterEvent(Character.Fractalbrain1, 1, 2).spawnpointtag("workshopguardian"))));
+								new MonsterEvent(Character.Fractalbrain1, 1, 2).spawnpointtag("workshopguardian")),
+						new MonsterSet("maze_husks", false).monsters(
+								new MonsterEvent(Character.Husk, 1, 2),
+								new MonsterEvent(Character.Husk_prowler, 0, 2),
+								new MonsterEvent(Character.Husk_chimera, 0, 2)).spawnpointtag("mazehusk")));
 	}
 	
 	public static RuinEvent aphoticPlateau2() {
@@ -104,7 +111,11 @@ public class Ruins {
 								new MonsterEvent(Character.Fractalguardian, 1, 2).spawnpointtag("workshopguardian"),
 								new MonsterEvent(Character.Fractalguardian, 0, 1).spawnpointtag("workshopguardian"),
 								new MonsterEvent(Character.Fractalguardian2, 1, 2).spawnpointtag("workshopguardian"),
-								new MonsterEvent(Character.Fractalbrain1, 1, 2).spawnpointtag("workshopguardian"))));
+								new MonsterEvent(Character.Fractalbrain1, 1, 2).spawnpointtag("workshopguardian")),
+						new MonsterSet("maze_husks", false).monsters(
+								new MonsterEvent(Character.Husk, 1, 2),
+								new MonsterEvent(Character.Husk_prowler, 1, 2),
+								new MonsterEvent(Character.Husk_chimera, 1, 2)).spawnpointtag("mazehusk")));
 	}
 	
 	public static RuinEvent greatSea() {
@@ -146,7 +157,11 @@ public class Ruins {
 								new MonsterEvent(Character.Fractalguardian, 0, 1).spawnpointtag("workshopguardian"),
 								new MonsterEvent(Character.Fractalguardian2, 1, 2).spawnpointtag("workshopguardian"),
 								new MonsterEvent(Character.Fractalguardian3, 1, 2).spawnpointtag("workshopguardian"),
-								new MonsterEvent(Character.Fractalbrain1, 1, 2).spawnpointtag("workshopguardian"))));
+								new MonsterEvent(Character.Fractalbrain1, 1, 2).spawnpointtag("workshopguardian")),
+						new MonsterSet("maze_husks", false).monsters(
+								new MonsterEvent(Character.Husk, 1, 3),
+								new MonsterEvent(Character.Husk_prowler, 1, 2),
+								new MonsterEvent(Character.Husk_chimera, 1, 2)).spawnpointtag("mazehusk")));
 	}
 	
 	public static RuinEvent wastes() {
@@ -188,6 +203,10 @@ public class Ruins {
 								new MonsterEvent(Character.Fractalguardian, 1, 2).spawnpointtag("workshopguardian"),
 								new MonsterEvent(Character.Fractalguardian2, 1, 2).spawnpointtag("workshopguardian"),
 								new MonsterEvent(Character.Fractalguardian3, 2, 2).spawnpointtag("workshopguardian"),
-								new MonsterEvent(Character.Fractalbrain1, 2, 3).spawnpointtag("workshopguardian"))));
+								new MonsterEvent(Character.Fractalbrain1, 2, 3).spawnpointtag("workshopguardian")),
+						new MonsterSet("maze_husks", false).monsters(
+								new MonsterEvent(Character.Husk, 1, 3),
+								new MonsterEvent(Character.Husk_prowler, 1, 2),
+								new MonsterEvent(Character.Husk_chimera, 1, 2)).spawnpointtag("mazehusk")));
 	}
 }

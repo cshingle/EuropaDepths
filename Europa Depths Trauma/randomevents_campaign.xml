@@ -486,6 +486,10 @@
 						<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="1" spawntype="ruin" spawnpointtag="encounter_chambers1" />
 						<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="encounter_chambers1" />
 					</EventSet>
+					<EventSet identifier="maze_husks" chooserandom="false" triggereventcooldown="false" allowatstart="true">
+						<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+					</EventSet>
 				</EventSet>
 			</EventSet>
 
@@ -885,6 +889,10 @@
 						<MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="encounter_chambers1" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="0" maxamount="1" spawntype="ruin" spawnpointtag="encounter_chambers1" />
 						<MonsterEvent characterfile="Crawler" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="encounter_chambers1" />
+					</EventSet>
+					<EventSet identifier="maze_husks" chooserandom="false" triggereventcooldown="false" allowatstart="true">
+						<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
 					</EventSet>
 				</EventSet>
 			</EventSet>
@@ -1359,6 +1367,11 @@
 						<MonsterEvent characterfile="Fractalguardian" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
+					</EventSet>
+					<EventSet identifier="maze_husks" chooserandom="false" triggereventcooldown="false" allowatstart="true">
+						<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_prowler" minamount="0" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_chimera" minamount="0" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
 					</EventSet>
 				</EventSet>
 			</EventSet>
@@ -1858,6 +1871,11 @@
 						<MonsterEvent characterfile="Fractalguardian2" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 					</EventSet>
+					<EventSet identifier="maze_husks" chooserandom="false" triggereventcooldown="false" allowatstart="true">
+						<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_prowler" minamount="0" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_chimera" minamount="0" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+					</EventSet>
 				</EventSet>
 			</EventSet>
 
@@ -2354,6 +2372,11 @@
 						<MonsterEvent characterfile="Fractalguardian" minamount="0" maxamount="1" spawntype="ruin" spawnpointtag="workshopguardian" />
 						<MonsterEvent characterfile="Fractalguardian2" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
+					</EventSet>
+					<EventSet identifier="maze_husks" chooserandom="false" triggereventcooldown="false" allowatstart="true">
+						<MonsterEvent characterfile="Husk" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_prowler" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_chimera" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
 					</EventSet>
 				</EventSet>
 			</EventSet>
@@ -2940,6 +2963,11 @@
 						<MonsterEvent characterfile="Fractalguardian2" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 						<MonsterEvent characterfile="Fractalguardian3" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
+					</EventSet>
+					<EventSet identifier="maze_husks" chooserandom="false" triggereventcooldown="false" allowatstart="true">
+						<MonsterEvent characterfile="Husk" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_prowler" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_chimera" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
 					</EventSet>
 				</EventSet>
 			</EventSet>
@@ -3739,6 +3767,11 @@
 						<MonsterEvent characterfile="Fractalguardian3" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 					</EventSet>
+					<EventSet identifier="maze_husks" chooserandom="false" triggereventcooldown="false" allowatstart="true">
+						<MonsterEvent characterfile="Husk" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_prowler" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_chimera" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+					</EventSet>
 				</EventSet>
 			</EventSet>
 
@@ -4526,6 +4559,11 @@
 						<MonsterEvent characterfile="Fractalguardian2" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 						<MonsterEvent characterfile="Fractalguardian3" minamount="2" maxamount="2" spawntype="ruin" spawnpointtag="workshopguardian" />
 						<MonsterEvent characterfile="Fractalbrain1" minamount="2" maxamount="3" spawntype="ruin" spawnpointtag="workshopguardian" />
+					</EventSet>
+					<EventSet identifier="maze_husks" chooserandom="false" triggereventcooldown="false" allowatstart="true">
+						<MonsterEvent characterfile="Husk" minamount="1" maxamount="3" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_prowler" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
+						<MonsterEvent characterfile="Husk_chimera" minamount="1" maxamount="2" spawntype="ruin" spawnpointtag="mazehusk" />
 					</EventSet>
 				</EventSet>
 			</EventSet>
