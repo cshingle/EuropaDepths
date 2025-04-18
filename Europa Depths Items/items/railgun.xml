@@ -521,7 +521,7 @@
     <Body width="160" height="10" density="20" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" />
     <Projectile characterusable="false" launchimpulse="0" maxtargetstohit="5" damagedoors="true">
-      <Attack structuredamage="40" itemdamage="40" severlimbsprobability="5" penetration="2" targetforce="750">
+      <Attack structuredamage="40" itemdamage="40" levelwalldamage="150" severlimbsprobability="5" penetration="10" targetforce="750">
         <Affliction identifier="explosiondamage" strength="90" />
         <Addliction identifier="bleeding" strength="40" />
         <Affliction identifier="stun" strength="15" />

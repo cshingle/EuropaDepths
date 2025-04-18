@@ -21,7 +21,7 @@
                 <reduceaffliction identifier="opiateaddiction" strength="0.05" />
             </StatusEffect>
         </Effect>
-        <Effect minstrength="70" maxstrength="100" strengthchange="-0.333">
+        <Effect minstrength="70" maxstrength="100" strengthchange="-0.333" minspeedmultiplier="1.0" maxspeedmultiplier="1.1">
             <StatusEffect target="Character" interval="0.5" disabledeltatime="true">
                 <reduceaffliction type="bloodloss" strength="0.1" />
                 <reduceaffliction type="burn" strength="0.1" />

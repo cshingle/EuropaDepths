@@ -28,34 +28,7 @@
         <GuiFrame relativesize="0.4,0.4" anchor="CenterLeft" relativeoffset="0.006,-0.01" style="ItemUI" />
       </MiniMap>
     </Item>
-    <Item name="" identifier="repairpack" category="Equipment" maxstacksize="32" maxstacksizecharacterinventory="8" Tags="smallitem,tool,electricalrepairtool,mechanicalrepairtool,wrench,wrenchitem,screwdriver,multitool" cargocontaineridentifier="metalcrate" allowasextracargo="true" Scale="0.5" impactsoundtag="impact_metal_light" addedrepairspeedmultiplier="1.5">
-      <PreferredContainer primary="engcab"/>
-      <Price baseprice="43" sold="false">
-        <Price storeidentifier="merchantoutpost" />
-        <Price storeidentifier="merchantcity" multiplier="0.9" />
-        <Price storeidentifier="merchantresearch" multiplier="1.25" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.25" />
-        <Price storeidentifier="merchantmine" />
-      </Price>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="true" amount="4">
-        <RequiredSkill identifier="mechanical" level="40" />
-        <RequiredItem identifier="copper" />
-        <RequiredItem identifier="silicon" />
-        <RequiredItem identifier="tin" />
-      </Fabricate>
-      <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="251,1,56,57" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="113,239,57,19" depth="0.55" origin="0.5,0.5" />
-      <Body width="60" height="15" density="30" />
-      <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" holdangle="60" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSuccess" target="This">
-          <Remove />
-        </StatusEffect>
-      </Holdable>
-      <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
-      <Quality>
-        <QualityStat stattype="RepairSpeed" value="0.1"/>
-      </Quality>
-    </Item>
+
     <Item name="" identifier="portablepump" tags="smallitem,donttakeitems" category="Machine" scale="0.5" damagedbyexplosions="true" explosiondamagemultiplier="0.2" allowasextracargo="true" impactsoundtag="impact_metal_heavy" isshootable="true">
       <PreferredContainer primary="engcab"/>
       <Price baseprice="520" sold="false">
@@ -405,14 +378,14 @@
     <Sprite texture="%ModDir%/sprites/items.png" sourcerect="128,372,159,57" depth="0.55" origin="0.4,0.5" />
     <Body radius="40" width="60" density="40" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="60,0" handle1="-10,0" handle2="50,-10" msg="ItemMsgPickUpSelect" />
-    <RepairTool firedamage="20.0" structurefixamount="-0.8" range="360" barrelpos="62,0" fireprobability="0.3" combatpriority="25" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-23.0" targetforce="12">
+    <RepairTool firedamage="20.0" structurefixamount="-2.3" range="360" barrelpos="62,0" fireprobability="0.3" combatpriority="25" repairmultiple="true" repairthroughwalls="false" maxoverlappingwalldist="0.0" repairthroughholes="true" levelwallfixamount="-166.0" targetforce="12">
       <RequiredItems items="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
-      <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-3.0" />
-      <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-1" />
-      <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-80.0" Condition="-24.0" />
-      <StatusEffect type="OnUse" targettype="UseTarget" Condition="-24.0" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-5.0" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-1.5" />
+      <StatusEffect type="OnUse" targettype="UseTarget" targets="door,ductblock,aliendoor" Stuck="-80.0" Condition="-66.0" />
+      <StatusEffect type="OnUse" targettype="UseTarget" Condition="-66.0" />
       <StatusEffect type="OnUse" targettype="Limb" severlimbsprobability="0.01">
-        <Affliction identifier="burn" amount="20.0" penetration="0.5" />
+        <Affliction identifier="burn" amount="25.0" penetration="0.5" />
         <Affliction identifier="stun" amount="1" probability="0.15"/>
       </StatusEffect>
       <ParticleEmitterHitStructure particle="plasmaspark" particlespersecond="100" anglemin="-40" anglemax="40" velocitymin="100" velocitymax="800" />
