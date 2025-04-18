@@ -269,6 +269,9 @@
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="1" maxamount="1" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 				</EventSet>
+				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
+					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="6" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the abyss -->
@@ -287,7 +290,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 			<!-- 20% or 6 min -->
@@ -301,7 +304,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 			<!-- 40% or 11 min -->
@@ -315,7 +318,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 			<!-- 50% or 16 min -->
@@ -329,7 +332,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 			<!-- 60% or 21 min -->
@@ -343,7 +346,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 			<!-- 80% or 61 min -->
@@ -357,7 +360,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 		</EventSet>
@@ -546,6 +549,9 @@
 					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="0.5" />
 				</EventSet>
+				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
+					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="6" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the abyss -->
@@ -580,8 +586,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -609,8 +615,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -638,8 +644,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -667,8 +673,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -696,8 +702,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -725,8 +731,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -754,8 +760,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -950,6 +956,9 @@
 					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
 					<MonsterEvent characterfile="Mantis" minamount="2" maxamount="4" spawntype="wreck" spawndistance="1500" spawnprobability="0.5" />
 				</EventSet>
+				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
+					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="6" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the abyss -->
@@ -987,8 +996,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1023,8 +1032,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1059,8 +1068,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1095,8 +1104,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1131,8 +1140,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1167,8 +1176,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1203,8 +1212,8 @@
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="10" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings_red" chooserandom="false" triggereventcooldown="false" commonness="10">
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="4" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1446,6 +1455,9 @@
 					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="0.5" />
 					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="0.5" />
 				</EventSet>
+				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the abyss -->
@@ -1484,7 +1496,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1518,7 +1530,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1552,7 +1564,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1586,7 +1598,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1620,7 +1632,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1654,7 +1666,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1688,7 +1700,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="10">
 					<MonsterEvent characterfile="Spineling" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
 					<MonsterEvent characterfile="Hammerhead" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
@@ -1717,8 +1729,8 @@
 					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
-					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="1" maxamount="2" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="9" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
@@ -1949,6 +1961,9 @@
 					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="0.5" />
 					<MonsterEvent characterfile="Mantis" minamount="1" maxamount="3" spawntype="wreck" spawndistance="1500" spawnprobability="0.5" />
 				</EventSet>
+				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="wreck" spawndistance="1500" spawnprobability="1" />
+				</EventSet>
 			</EventSet>
 
 			<!-- Populate the abyss -->
@@ -1982,8 +1997,8 @@
 					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
-					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="1" maxamount="2" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="9" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
@@ -2009,11 +2024,11 @@
 				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
@@ -2050,11 +2065,11 @@
 				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
@@ -2091,11 +2106,11 @@
 				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
@@ -2132,11 +2147,11 @@
 				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
@@ -2173,11 +2188,11 @@
 				<EventSet identifier="watcher2" chooserandom="false" triggereventcooldown="false" commonness="15">
 					<MonsterEvent characterfile="Watcher" minamount="1" maxamount="1" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="5" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
@@ -2207,8 +2222,8 @@
 					<MonsterEvent characterfile="Mudraptor_unarmored" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
-					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="1" maxamount="2" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="9" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
@@ -2411,6 +2426,9 @@
 				<EventSet identifier="huskcrawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Crawlerhusk" minamount="5" maxamount="6" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" />
 				</EventSet>
+				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="8" spawntype="wreck" spawndistance="1500" spawnprobability="1" spawnpointtag="encounter" />
+				</EventSet>
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
@@ -2510,10 +2528,10 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" commonness="5">
-					<MonsterEvent characterfile="Spineling_red" minamount="7" maxamount="9" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="9" maxamount="12" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 			<!-- 15% or 6 min -->
@@ -2549,7 +2567,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="6" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
@@ -2599,7 +2617,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="6" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
@@ -2649,7 +2667,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="6" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
@@ -2699,7 +2717,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="6" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
@@ -2749,7 +2767,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="6" maxamount="8" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="1" maxamount="2" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="hammerheads" chooserandom="false" triggereventcooldown="false" commonness="30">
@@ -2780,10 +2798,10 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" commonness="5">
-					<MonsterEvent characterfile="Spineling_red" minamount="7" maxamount="9" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="9" maxamount="12" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 		</EventSet>
@@ -3002,6 +3020,9 @@
 				<EventSet identifier="huskcrawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Crawlerhusk" minamount="5" maxamount="6" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" />
 				</EventSet>
+				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
+					<MonsterEvent characterfile="Spineling_red" minamount="8" maxamount="8" spawntype="wreck" spawndistance="1500" spawnprobability="1" spawnpointtag="encounter" />
+				</EventSet>
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
@@ -3103,10 +3124,10 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="6" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" commonness="5">
-					<MonsterEvent characterfile="Spineling_red" minamount="7" maxamount="9" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="9" maxamount="12" spawntype="mainpath,sidepath" offset="1000" scatter="1000" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
 			<!-- 15% or 6 min -->
@@ -3143,7 +3164,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -3220,7 +3241,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -3297,7 +3318,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -3374,7 +3395,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -3451,7 +3472,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -3528,7 +3549,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -3587,7 +3608,7 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="0" maxamount="3" spawntype="mainpath,sidepath" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
@@ -3805,6 +3826,9 @@
 				<EventSet identifier="huskcrawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Crawlerhusk" minamount="5" maxamount="6" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" />
 				</EventSet>
+				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
+					<MonsterEvent characterfile="Spineling_red" minamount="8" maxamount="8" spawntype="wreck" spawndistance="1500" spawnprobability="1" spawnpointtag="encounter" />
+				</EventSet>
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="50">
@@ -3908,7 +3932,7 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="0" maxamount="3" spawntype="mainpath,sidepath" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
@@ -3946,7 +3970,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -4023,7 +4047,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -4100,7 +4124,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -4177,7 +4201,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -4254,7 +4278,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -4331,7 +4355,7 @@
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="20" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="3" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="threshers" chooserandom="false" triggereventcooldown="false" commonness="40">
@@ -4390,7 +4414,7 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="0" maxamount="3" spawntype="mainpath,sidepath" scatter="2000" spawnprobability="0.5" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
@@ -4588,7 +4612,7 @@
 				</EventSet>
 				<EventSet identifier="spinlings" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="15" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="4" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="8" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" />
 				</EventSet>
 				<EventSet identifier="husks" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Husk" minamount="5" maxamount="6" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" playdeadprobability="1" />
@@ -4596,6 +4620,9 @@
 				</EventSet>
 				<EventSet identifier="huskcrawlers" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
 					<MonsterEvent characterfile="Crawlerhusk" minamount="10" maxamount="15" spawntype="wreck" spawnprobability="1" spawnpointtag="encounter" />
+				</EventSet>
+				<EventSet identifier="fire" chooserandom="false" triggereventcooldown="false" allowatstart="true" commonness="10">
+					<MonsterEvent characterfile="Spineling_red" minamount="8" maxamount="8" spawntype="wreck" spawndistance="1500" spawnprobability="1" spawnpointtag="encounter" />
 				</EventSet>
 			</EventSet>
 			<EventSet identifier="wrecks" chooserandom="true" perwreck="true" triggereventcooldown="false" allowatstart="true">
@@ -4710,7 +4737,7 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="5" maxamount="7" spawntype="mainpath,sidepath" scatter="2000" spawnprobability="0.75" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>
@@ -4748,7 +4775,7 @@
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
@@ -4833,7 +4860,7 @@
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
@@ -4918,7 +4945,7 @@
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
@@ -5003,7 +5030,7 @@
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
@@ -5088,7 +5115,7 @@
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
@@ -5173,7 +5200,7 @@
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
 					<MonsterEvent characterfile="Spineling" minamount="10" maxamount="14" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="4" maxamount="6" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_giant" minamount="2" maxamount="3" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 				</EventSet>
 				<EventSet identifier="spinglings" chooserandom="false" triggereventcooldown="false" commonness="20">
@@ -5242,7 +5269,7 @@
 				</EventSet>
 				<EventSet identifier="spinelings" chooserandom="false" triggereventcooldown="false" commonness="5">
 					<MonsterEvent characterfile="Spineling" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
-					<MonsterEvent characterfile="Spineling_red" minamount="5" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
+					<MonsterEvent characterfile="Spineling_red" minamount="6" maxamount="7" spawntype="mainpath,sidepath" delaybetweenspawns="1" />
 					<MonsterEvent characterfile="Spineling_morbusine" minamount="5" maxamount="7" spawntype="mainpath,sidepath" scatter="2000" spawnprobability="0.75" delaybetweenspawns="1" />
 				</EventSet>
 			</EventSet>

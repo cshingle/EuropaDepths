@@ -43,7 +43,7 @@
             </npc>
 
             <npc identifier="outpostmanagercoalition" job="outpostmanager" tags="outpostmanager" spawnpointtags="admin" behavior="StayInHull" preferredoutpostmoduletypes="admin,adminmodule">
-                <ItemSet commonness="1">
+                <ItemSet commonness="5">
                     <Item identifier="administratorclothes" equip="true"/>
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="divingmask">
@@ -56,16 +56,51 @@
                         <Item identifier="combatstimulantsyringe" />
                     </Item>
                 </ItemSet>
+                <ItemSet commonness="1">
+                    <Item identifier="administratorclothes" equip="true"/>
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="assaultrifle" equip="false">
+                        <Item identifier="assaultriflemagazine" />
+                    </Item>
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
+                </ItemSet>
             </npc>
 
             <npc identifier="outpostmanagerseparatists" job="outpostmanager" tags="outpostmanager" spawnpointtags="admin" behavior="StayInHull" preferredoutpostmoduletypes="admin,adminmodule">
-                <ItemSet commonness="1">
+                <ItemSet commonness="5">
                     <Item identifier="piratecaptainhat" equip="true" />
                     <Item identifier="separatistcommoner3" equip="true" outfit="true" />
                     <Item identifier="idcard" equip="true"/>
                     <Item identifier="revolver" equip="false">
                         <Item identifier="revolverround" amount="6"/>
                     </Item>
+                    <Item identifier="divingmask">
+                        <Item identifier="oxygentank" />
+                    </Item>
+                    <Item identifier="deadmansswitch" equip="true">
+                        <Item identifier="combatstimulantsyringe" />
+                    </Item>
+                </ItemSet>
+                <ItemSet commonness="1">
+                    <Item identifier="piratecaptainhat" equip="true" />
+                    <Item identifier="separatistcommoner3" equip="true" outfit="true" />
+                    <Item identifier="idcard" equip="true"/>
+                    <Item identifier="assaultrifle" equip="false">
+                        <Item identifier="assaultriflemagazine" />
+                    </Item>
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="assaultriflemagazine" />
+                    <Item identifier="assaultriflemagazine" />
                     <Item identifier="divingmask">
                         <Item identifier="oxygentank" />
                     </Item>

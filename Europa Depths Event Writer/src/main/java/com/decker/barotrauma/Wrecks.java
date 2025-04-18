@@ -35,7 +35,9 @@ public class Wrecks {
 						new MonsterEvent(Character.Mudraptor_unarmored, 1, 2).spawndistance(1500),
 						new MonsterEvent(Character.Mudraptor, 0, 2).spawndistance(1500)),
 				new MonsterSet("hammerheads", false, 10).allowatstart(true).monsters(
-						new MonsterEvent(Character.Hammerhead, 1, 1).spawndistance(1500)));
+						new MonsterEvent(Character.Hammerhead, 1, 1).spawndistance(1500)),
+				new MonsterSet("fire", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Spineling_red, 3, 6).spawndistance(1500)));
 	}
 	
 	// set 3, 4
@@ -84,7 +86,9 @@ public class Wrecks {
 				new MonsterSet("mantises", false, 10).allowatstart(true).monsters(
 						new MonsterEvent(Character.Mantis, 2, 3).spawndistance(1500),
 						new MonsterEvent(Character.Mantis, 2, 3).spawndistance(1500),
-						new MonsterEvent(Character.Mantis, 2, 4).spawnprobability(0.5).spawndistance(1500)));
+						new MonsterEvent(Character.Mantis, 2, 4).spawnprobability(0.5).spawndistance(1500)),
+				new MonsterSet("fire", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Spineling_red, 5, 6).spawndistance(1500)));
 	}
 	
 	// Set 5, 6
@@ -148,7 +152,9 @@ public class Wrecks {
 						new MonsterEvent(Character.Mantis, 1, 3).spawndistance(1500),
 						new MonsterEvent(Character.Mantis, 1, 3).spawndistance(1500),
 						new MonsterEvent(Character.Mantis, 1, 3).spawnprobability(0.5).spawndistance(1500),
-						new MonsterEvent(Character.Mantis, 1, 3).spawnprobability(0.5).spawndistance(1500)));
+						new MonsterEvent(Character.Mantis, 1, 3).spawnprobability(0.5).spawndistance(1500)),
+				new MonsterSet("fire", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Spineling_red, 6, 6).spawndistance(1500)));
 	}
 	
 	public static WreckEncountersEvent aphoticPlateau2Encounters() {
@@ -173,7 +179,9 @@ public class Wrecks {
 						new MonsterEvent(Character.Husk_prowler, 2, 5),
 						new MonsterEvent(Character.Husk_exosuit, 1, 2)),
 				new MonsterSet("huskcrawlers", false, 10).allowatstart(true).monsters(
-						new MonsterEvent(Character.Crawlerhusk, 5, 6)));
+						new MonsterEvent(Character.Crawlerhusk, 5, 6)),
+				new MonsterSet("fire", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Spineling_red, 6, 8).spawndistance(1500)));
 	}
 	
 	public static WreckEvent aphoticPlateau2() {
@@ -251,7 +259,9 @@ public class Wrecks {
 						new MonsterEvent(Character.Husk_prowler, 2, 5),
 						new MonsterEvent(Character.Husk_exosuit, 2, 2)),
 				new MonsterSet("huskcrawlers", false, 10).allowatstart(true).monsters(
-						new MonsterEvent(Character.Crawlerhusk, 5, 6)));
+						new MonsterEvent(Character.Crawlerhusk, 5, 6)),
+				new MonsterSet("fire", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Spineling_red, 8, 8).spawndistance(1500)));
 	}
 	
 	public static WreckEvent greatSea() {
@@ -324,12 +334,14 @@ public class Wrecks {
 						new MonsterEvent(Character.Mudraptor_veteran, 2, 4)),
 				new MonsterSet("spinlings", false, 10).allowatstart(true).monsters(
 						new MonsterEvent(Character.Spineling, 10, 15),
-						new MonsterEvent(Character.Spineling_red, 2, 4)),
+						new MonsterEvent(Character.Spineling_red, 6, 8)),
 				new MonsterSet("husks", false, 10).allowatstart(true).monsters(
 						new MonsterEvent(Character.Husk, 5, 6).playdeadprobability(1),
 						new MonsterEvent(Character.Crawlerhusk, 6, 10)),
 				new MonsterSet("huskcrawlers", false, 10).allowatstart(true).monsters(
-						new MonsterEvent(Character.Crawlerhusk, 10, 15)));
+						new MonsterEvent(Character.Crawlerhusk, 10, 15)),
+				new MonsterSet("fire", false, 10).allowatstart(true).monsters(
+						new MonsterEvent(Character.Spineling_red, 8, 8).spawndistance(1500)));
 	}
 	
 	public static WreckEvent hydrothermalWastes() {
