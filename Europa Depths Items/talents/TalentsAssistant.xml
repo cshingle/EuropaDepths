@@ -47,21 +47,6 @@
                     </CharacterAbilityApplyStatusEffects>
                 </Abilities>
             </AbilityGroupInterval>
-            <AbilityGroupEffect abilityeffecttype="OnAttack">
-                <Conditions>
-                    <AbilityConditionHasAffliction afflictionidentifier="clownpower" />
-                    <AbilityConditionMission statidentifier="pathofthebikehorn" min="7"/>
-                </Conditions>
-                <Abilities>
-                    <CharacterAbilityApplyStatusEffectsToAllies maxdistance="2000" allowself="true">
-                        <StatusEffects>
-                            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
-                                <Affliction identifier="mothersrage" strength="5" />
-                            </StatusEffect>
-                        </StatusEffects>
-                    </CharacterAbilityApplyStatusEffectsToAllies>
-                </Abilities>
-            </AbilityGroupEffect>
         </Talent>
 
         <Talent identifier="waterprankster">

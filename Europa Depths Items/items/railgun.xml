@@ -556,7 +556,7 @@
       <Price storeidentifier="merchantmine" multiplier="1.2" minavailable="2"/>
       <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="6"/>
     </Price>
-    <Deconstruct time="10">
+    <Deconstruct time="30">
       <Item identifier="steel" mincondition="0.95"/>
       <Item identifier="steel" mincondition="0.95"/>
       <Item identifier="aluminium"/>

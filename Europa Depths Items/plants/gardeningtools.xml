@@ -39,7 +39,7 @@
       </Planter>
     </Item>
 
-    <Item name="" identifier="wateringcan" category="Misc" Tags="smallitem,tool" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="wateringcan" category="Misc" Tags="smallitem,tool,mountableweapon" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
       <InventoryIcon texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="896,0,128,128" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="896,0,128,128" depth="0.55" origin="0.5,0.5" />
       <Price baseprice="80" minleveldifficulty="1">

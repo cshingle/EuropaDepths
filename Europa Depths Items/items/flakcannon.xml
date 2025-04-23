@@ -310,7 +310,7 @@
       <RequiredItem identifier="magnesium" />
       <RequiredItem tag="ammobox" mincondition="0.0" maxcondition="0.1" usecondition="false" description="fabricationdescription.ammoboxrecycle" header="fabricationheader.ammoboxrecycle" defaultitem="flakcannonammoboxphysicoriummagnesium" />
     </Fabricate>
-    <Deconstruct time="10">
+    <Deconstruct time="30">
       <Item identifier="physicorium" mincondition="0.95"/>
       <Item identifier="magnesium" mincondition="0.95"/>
       <Item identifier="aluminium"/>

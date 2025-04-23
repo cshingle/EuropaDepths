@@ -16,7 +16,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="1.2" />
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
       </Price>
-      <Deconstruct time="10">
+      <Deconstruct time="30">
         <Item identifier="lead" mincondition="0.95" />
         <Item identifier="titanium" mincondition="0.95"/>
         <Item identifier="aluminium" />
@@ -63,7 +63,7 @@
         <Price storeidentifier="merchantmine" multiplier="1.2"/>
         <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" minavailable="1"/>
       </Price>
-      <Deconstruct time="10">
+      <Deconstruct time="30">
         <Item identifier="physicorium" mincondition="0.95" />
         <Item identifier="titanium" mincondition="0.95" />
         <Item identifier="aluminium" />
@@ -110,7 +110,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="1.2" />
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
       </Price>
-      <Deconstruct time="10">
+      <Deconstruct time="30">
         <Item identifier="lead" mincondition="0.95" />
         <Item identifier="titaniumaluminiumalloy" mincondition="0.95" />
         <Item identifier="aluminium" />

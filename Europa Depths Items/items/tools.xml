@@ -391,7 +391,7 @@
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
     </Item>
 
-    <Item name="" identifier="extinguisher" category="Equipment" Tags="mediumitem,fireextinguisher,provocative" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light" donttransferbetweensubs="true">
+    <Item name="" identifier="extinguisher" category="Equipment" Tags="mediumitem,fireextinguisher,provocative,mountableweapon" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light" donttransferbetweensubs="true">
       <Upgrade gameversion="0.9.600.0" Tags="mediumitem,fireextinguisher,provocative" />
       <PreferredContainer primary="extinguisherholder" spawnprobability="1.0"/>
       <PreferredContainer primary="wreckextinguisherholder" spawnprobability="0.6"/>
@@ -1259,7 +1259,7 @@
     <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
-  <Item name="" identifier="hammer" category="Equipment" Tags="mediumitem,tool,crowbar,mountableweapon" scale="0.5" requireaimtouse="true" impactsoundtag="impact_metal_heavy">
+  <Item name="" identifier="hammer" category="Equipment" Tags="mediumitem,tool,crowbar,mountableweapon,disallowduplicatedeconstructoutput,disallowremovefabricationingredient" scale="0.5" requireaimtouse="true" impactsoundtag="impact_metal_heavy">
     <Preferredcontainer secondary="respawncontainer" amount="1" spawnprobability="1" notcampaign="true"/>
     <PreferredContainer primary="engcab"/>
     <Price baseprice="250" sold="true">

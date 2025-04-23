@@ -142,7 +142,7 @@
             <RequiredItem identifier="uranium" amount="2" />
             <RequiredItem tag="ammobox" mincondition="0.0" maxcondition="0.1" usecondition="false" description="fabricationdescription.ammoboxrecycle" header="fabricationheader.ammoboxrecycle" defaultitem="nuclearlaserammobox" />
         </Fabricate>
-        <Deconstruct time="10">
+        <Deconstruct time="30">
             <Item identifier="lead" amount="2" />
             <Item identifier="uranium" mincondition="0.95" />
             <Item identifier="uranium" mincondition="0.49" />
@@ -187,7 +187,7 @@
             <RequiredItem identifier="thorium" amount="2" />
             <RequiredItem tag="ammobox" mincondition="0.0" maxcondition="0.1" usecondition="false" description="fabricationdescription.ammoboxrecycle" header="fabricationheader.ammoboxrecycle" defaultitem="nuclearlaserthoriumammobox" />
         </Fabricate>
-        <Deconstruct time="10">
+        <Deconstruct time="30">
             <Item identifier="steel" mincondition="0.95"/>
             <RequiredItem identifier="thorium" amount="2" />
             <Item identifier="aluminium"/>
@@ -231,7 +231,7 @@
             <RequiredItem identifier="fulgurium" amount="2" />
             <RequiredItem tag="ammobox" mincondition="0.0" maxcondition="0.1" usecondition="false" description="fabricationdescription.ammoboxrecycle" header="fabricationheader.ammoboxrecycle" defaultitem="nuclearlaserfulguriumammobox" />
         </Fabricate>
-        <Deconstruct time="10">
+        <Deconstruct time="30">
             <Item identifier="steel" mincondition="0.95"/>
             <Item identifier="physicorium" mincondition="0.95"/>
             <Item identifier="aluminium"/>

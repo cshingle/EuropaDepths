@@ -48,7 +48,7 @@
     </Affliction>
 
     <Override>
-        <Affliction name="Sepsis" identifier="infection" aliases="bloodpoisoning" description="Sepsis is a serious condition in which the body responds improperly to an infection." type="infection" causeofdeathdescription="Died of Sepsis." selfcauseofdeathdescription="You have died of Sepsis." limbspecific="true" showiconthreshold="90" showinhealthscannerthreshold="60" karmachangeonapplied="0" maxstrength="200" affectmachines="false" healcostmultiplier="0" basehealcost="15" MedicalSkillGain="1.5">
+        <Affliction name="Sepsis" identifier="infection" aliases="bloodpoisoning" description="Sepsis is a serious condition in which the body responds improperly to an infection." type="infection" causeofdeathdescription="Died of Sepsis." selfcauseofdeathdescription="You have died of Sepsis." limbspecific="true" showiconthreshold="90" showinhealthscannerthreshold="40" karmachangeonapplied="0" maxstrength="200" affectmachines="false" healcostmultiplier="0" basehealcost="15" MedicalSkillGain="1.5">
             <Description textidentifier="afflictiondescription.infection.low" minstrength="0" maxstrength="80"/>
             <Description textidentifier="afflictiondescription.infection" minstrength="80" maxstrength="125"/>
             <Description textidentifier="afflictiondescription.infection.high" minstrength="125" maxstrength="200"/>

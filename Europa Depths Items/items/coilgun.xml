@@ -192,7 +192,7 @@
         <Price storeidentifier="merchantmine" multiplier="1.2" minavailable="3"/>
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="15"/>
       </Price>
-      <Deconstruct time="10">
+      <Deconstruct time="30">
         <Item identifier="lead" mincondition="0.95"/>
         <Item identifier="steel" mincondition="0.95"/>
         <Item identifier="aluminium"/>
@@ -244,7 +244,7 @@
       <Price storeidentifier="merchantmine" multiplier="1.2"/>
       <Price storeidentifier="merchantarmory" multiplier="1.0" sold="true" minavailable="6" />
     </Price>
-    <Deconstruct time="10">
+    <Deconstruct time="30">
       <Item identifier="copper" mincondition="0.95" />
       <Item identifier="steel" mincondition="0.95" />
       <Item identifier="aluminium"/>
@@ -307,7 +307,7 @@
         <RequiredItem identifier="steel" />
         <RequiredItem tag="ammobox" mincondition="0.0" maxcondition="0.1" usecondition="false" description="fabricationdescription.ammoboxrecycle" header="fabricationheader.ammoboxrecycle" defaultitem="physicoriumammobox" />
       </Fabricate>
-      <Deconstruct time="10">
+      <Deconstruct time="30">
         <Item identifier="steel" mincondition="0.95"/>
         <Item identifier="physicorium" mincondition="0.95"/>
         <Item identifier="aluminium"/>
@@ -345,7 +345,7 @@
         <Price storeidentifier="merchantmine" multiplier="1.2" />
         <Price storeidentifier="merchantarmory" sold="true" multiplier="0.9" maxavailable="2" minleveldifficulty="5" />
       </Price>
-      <Deconstruct time="10">
+      <Deconstruct time="30">
         <Item identifier="steel" mincondition="0.95"/>
         <Item identifier="sodium" mincondition="0.95" />
         <Item identifier="aluminium" />
@@ -395,7 +395,7 @@
         <Price storeidentifier="merchantmine" sold="false" multiplier="1.2" />
         <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="8" minleveldifficulty="5"/>
       </Price>
-      <Deconstruct time="10">
+      <Deconstruct time="30">
         <Item identifier="titaniumaluminiumalloy" mincondition="0.95" />
         <Item identifier="aluminium"/>
       </Deconstruct>
