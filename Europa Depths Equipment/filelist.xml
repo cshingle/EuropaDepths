@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Europa Depths Equipment" modversion="1.5.22" corepackage="False" steamworkshopid="2832149257" gameversion="1.8.7.0">
+<contentpackage name="Europa Depths Equipment" modversion="1.5.23" corepackage="False" steamworkshopid="2832149257" gameversion="1.9.8.0">
   <Item file="%ModDir%/depthcharge.xml" />
   <Item file="%ModDir%/engine.xml" />
   <Item file="%ModDir%/equipment.xml" />
@@ -17,4 +17,5 @@
   <Submarine file="%ModDir%/Missive.sub" />
   <Submarine file="%ModDir%/Subliminal.sub" />
   <Submarine file="%ModDir%/Una.sub" />
+  <Submarine file="%ModDir%/Invictus.sub" />
 </contentpackage>

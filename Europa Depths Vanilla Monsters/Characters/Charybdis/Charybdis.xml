@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Override>
-<Character speciesname="Charybdis" humanoid="False" speciestranslationoverride="" displayname="" group="abyss" hasinfo="False" husk="False" usehuskappendage="False" needsair="False" needswater="False" canspeak="False" noise="100" visibility="100" blooddecal="blood" bleedparticleair="blooddrop" bleedparticlewater="waterblood" bleedparticlemultiplier="1" eatingspeed="500" pathfinderpriority="1" hideinsonar="False" sonardisruption="0" distantsonarrange="30000" disabledistance="100000" usebosshealthbar="true">
+<Character speciesname="Charybdis" humanoid="False" speciestranslationoverride="" displayname="" group="abyss" hasinfo="False" husk="False" usehuskappendage="False" needsair="False" needswater="False" canspeak="False" noise="100" visibility="100" blooddecal="blood" bleedparticleair="blooddrop" bleedparticlewater="waterblood" bleedparticlemultiplier="1" eatingspeed="500" pathfinderpriority="1" hideinsonar="False" sonardisruption="0" distantsonarrange="30000" disabledistance="100000" usebosshealthbar="true" UnlockKillAchievementForWholeCrew="true">
   <ragdolls folder="%ModDir%/Characters/Charybdis/Ragdolls/" />
   <animations folder="Content/Characters/Charybdis/Animations"/>
   <damageemitter particle="gib" drawontop="True" particleamount="2" velocitymin="200" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.5" scalemax="1" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />

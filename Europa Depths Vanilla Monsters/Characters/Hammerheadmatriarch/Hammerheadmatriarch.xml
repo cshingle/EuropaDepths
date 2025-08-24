@@ -40,6 +40,7 @@
     <ParticleEmitter particle="blackwaterblood" particlespersecond="100" scalemin="3" scalemax="5" velocitymin="0" velocitymax="50" anglemin="0" anglemax="360" />
   </StatusEffect>
   <StatusEffect type="OnDeath" target="This" targetlimb="Head">
+    <SteamTimeLineEvent title="Hammerhead Matriarch bursted" description="A Hammerhead Matriarch bursted and set free its spawns!" icon="steam_bolt"/>
     <Explosion ignorecover="true" onlyinside="true" range="1000" force="5" flames="false" shockwave="true" sparks="false" flash="false" underwaterbubble="false" playtinnitus="true" camerashake="75" structuredamage="350" applyFireEffects="false">
       <Affliction identifier="stun" strength="4.5" />
     </Explosion>

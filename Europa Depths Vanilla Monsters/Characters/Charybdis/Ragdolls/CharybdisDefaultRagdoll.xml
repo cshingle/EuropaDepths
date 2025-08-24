@@ -336,6 +336,7 @@
         <sound file="Content/Characters/Charybdis/Bite1.ogg" range="1000" volume="1" dontmuffle="True" selectionmode="random" />
         <sound file="Content/Characters/Charybdis/Bite2.ogg" range="1000" volume="1" dontmuffle="True" />
         <sound file="Content/Characters/Charybdis/Bite3.ogg" range="1000" volume="1" dontmuffle="True" />
+        <SteamTimeLineEvent title="Charybdis Grab Attack" description="A Charybdis grabbed its prey!" icon="steam_bolt"/>
       </StatusEffect>
     </attack>
   </limb>
