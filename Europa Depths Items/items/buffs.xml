@@ -30,10 +30,13 @@
       <Body width="30" height="55" density="20" />
       <SuitableTreatment type="infection" suitability="15" />
       <SuitableTreatment type="burn" suitability ="-3" />
-      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnSecondaryUse" target="This" Condition="-30.0"/>
+    <!-- characterusable="false" because the "Use" action is triggered via a status effect when the bottle is empty, can't be done just by hitting E -->
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" characterusable="false" aimpos="32,28" holdangle="30" aimangle="120" aimable="false" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-30.0">
+        <Sound file="Content/Items/Medical/ITEM_drinkingLoop.ogg" range="250" loop="true" />
+      </StatusEffect>
         <StatusEffect type="OnUse" target="This" Condition="-100.0" setvalue="true">
-          <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <Sound file="Content/Items/Medical/ITEM_liquid.ogg" range="500" />
         </StatusEffect>
         <!-- When Ethanol is drunk -->
         <StatusEffect type="OnSecondaryUse" target="This,UseTarget" delay="10" duration="10" stackable="false">

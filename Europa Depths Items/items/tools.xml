@@ -60,7 +60,7 @@
         <StatValue stattype="PropulsionSpeed" value="-0.3" />
       </Wearable>
       <Holdable slots="RightHand+LeftHand" holdpos="0,-70" handle1="-5,50" handle2="10,50" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false">
-        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.7" PropulsionSpeedMultiplier="0.7" setvalue="true" disabledeltatime="true" />
+        <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.7" setvalue="true" disabledeltatime="true" />
         <StatValue stattype="PropulsionSpeed" value="-0.3" />
       </Holdable>
       <ItemContainer capacity="12" maxstacksize="32" depth="0.5">
@@ -105,6 +105,11 @@
       </ItemContainer>
       <aitarget sightrange="1000" soundrange="1000" fadeouttime="2" />
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
+      <!-- the item used to have the (default) 64 max stack size, i.e. stack size was only limited by the max stack size of the contained items -->
+      <!-- set the stack size back in old saves/subs to prevent items from dropping from containers -->
+      <Upgrade gameversion="1.1.0.0" maxstacksize="64">
+        <ItemContainer maxstacksize="64" />
+      </Upgrade>
     </Item>
 
     <Item name="" identifier="weldingtool" category="Equipment" Tags="smallitem,weldingequipment,tool,mountableweapon" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_metal_light">
@@ -433,12 +438,6 @@
           <ReduceAffliction identifier="burning" amount="15.0" />
         </StatusEffect>
       </RepairTool>
-      <RepairTool range="500" barrelpos="21,25" IgnoreCharacters="false">
-        <!-- Remove 'burning' affliction from characters-->
-        <StatusEffect type="OnUse" target="UseTarget">
-          <ReduceAffliction identifier="burning" amount="15.0" />
-        </StatusEffect>
-      </RepairTool>
       <Propulsion force="-80" usablein="water" particles="bubbles" />
       <aitarget sightrange="1000" soundrange="1000" fadeouttime="1" />
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -463,13 +462,14 @@
       </Fabricate>
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,0,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Tools/tools.png" sourcerect="227,204,54,18" depth="0.55" origin="0.5,0.5" />
-      <Body width="50" height="15" density="10" />
-      <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" holdangle="90" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" />
-      <LightComponent LightColor="255,0.0,0.0,255" Flicker="0.5" range="600" IsOn="false">
-        <StatusEffect type="OnUse" targettype="This" IsOn="true" DontCleanUp="True">
+      <Body width="50" height="15" density="10"/>
+      <Throwable slots="Any,RightHand,LeftHand" holdpos="0,0" handle1="0,0" holdangle="90" throwforce="2.0" aimpos="35,-10" msg="ItemMsgPickUpSelect" DisableWhenRangedWeaponEquipped="true">
+        <StatusEffect type="OnUse" targettype="This" targetitemcomponent="LightComponent" IsOn="true" DontCleanUp="True">
           <Conditional IsOn="eq False" targetitemcomponent="LightComponent" />
           <sound file="Content/Items/Tools/FlareIgnite.ogg" range="800.0" />
         </StatusEffect>
+      </Throwable>
+      <LightComponent LightColor="255,0.0,0.0,255" Flicker="0.5" range="600" IsOn="false">
         <StatusEffect type="OnActive" targettype="This" Condition="-0.025" />
         <StatusEffect type="OnActive" targettype="This">
           <Conditional PhysicsBodyActive="eq true" />
@@ -658,7 +658,7 @@
       <Sprite texture="Content/Items/Tools/tools.png" sourcerect="410,71,24,66" depth="0.55" origin="0.5,0.5" />
       <Body width="22" height="64" density="9.7" />
       <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
+        <StatusEffect type="OnFire" target="This" Condition="-10.0" statuseffecttags="onfire" duration="1" stackable="false" />
         <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
           <Conditional HasStatusTag="onfire" />
           <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
@@ -705,7 +705,7 @@
       <Sprite texture="Content/Items/Tools/tools.png" sourcerect="486,71,24,64" depth="0.55" />
       <Body width="22" height="64" density="9.9" />
       <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
+        <StatusEffect type="OnFire" target="This" Condition="-10.0" statuseffecttags="onfire" duration="1" stackable="false" />
         <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
           <Conditional HasStatusTag="onfire" />
           <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
@@ -895,7 +895,7 @@
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_red" decalsize="1.0" />
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="128,0,0,255" />
         </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
+        <StatusEffect type="OnFire" target="This" Condition="-50.0" interval="1" disabledeltatime="true" />
         <StatusEffect type="OnBroken" target="This" Condition="-100.0">
           <Remove />
         </StatusEffect>
@@ -931,7 +931,7 @@
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_green" decalsize="1.0" />
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="0,128,0,255" />
         </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
+        <StatusEffect type="OnFire" target="This" Condition="-50.0" interval="1" disabledeltatime="true" />
         <StatusEffect type="OnBroken" target="This" Condition="-100.0">
           <Remove />
         </StatusEffect>
@@ -967,7 +967,7 @@
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_blue" decalsize="1.0" />
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="0,0,128,255" />
         </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
+        <StatusEffect type="OnFire" target="This" Condition="-50.0" interval="1" disabledeltatime="true" />
         <StatusEffect type="OnBroken" target="This" Condition="-100.0">
           <Remove />
         </StatusEffect>
@@ -1003,7 +1003,7 @@
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_black" decalsize="1.0" />
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" colormultiplier="20,20,20,255" />
         </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
+        <StatusEffect type="OnFire" target="This" Condition="-50.0" interval="1" disabledeltatime="true" />
         <StatusEffect type="OnBroken" target="This" Condition="-100.0">
           <Remove />
         </StatusEffect>
@@ -1039,7 +1039,7 @@
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter_white" decalsize="1.0" />
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
         </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
+        <StatusEffect type="OnFire" target="This" Condition="-50.0" interval="1" disabledeltatime="true" />
         <StatusEffect type="OnBroken" target="This" Condition="-100.0">
           <Remove />
         </StatusEffect>

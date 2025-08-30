@@ -44,6 +44,7 @@
         <sound file="Content/Items/Reactor/Reactor.ogg" type="OnActive" range="2000.0" volumeproperty="FissionRate" volume="0.02" loop="true" />
         <StatusEffect type="OnBroken" target="This" FissionRate="0.0" disabledeltatime="true">
           <Conditional AvailableFuel="gt 1" />
+        <SteamTimeLineEvent title="Reactor Meltdown" description="The reactor of [sub] has melted down!" icon="steam_explosion"/>
           <sound file="Content/Items/Weapons/ExplosionLarge1.ogg" range="50000" />
           <sound file="Content/Items/Weapons/ExplosionLarge2.ogg" range="50000" />
           <Explosion range="750" ballastfloradamage="1000" structuredamage="300" itemdamage="500" force="25.0" camerashake="0" flashrange="10000" flashduration="5.0" debris="true" screencolor="255,255,255,255" screencolorrange="5000" screencolorduration="3.0" decal="explosion" decalsize="1">

@@ -71,8 +71,10 @@
       <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="85,398,170,14" depth="0.55" origin="0.5,0.5" />
       <Body width="160" height="10" density="30" />
       <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
-      <Rope sourcepullforce="300" targetpullforce="100" projectilepullforce="5" maxlength="1500" snaponcollision="false" spritewidth="3" tile="true" origin="0.05,0.5" targetminmass="30" lerpforces="true" snapanimduration="0.5">
+      <Rope sourcepullforce="300" targetpullforce="150" projectilepullforce="5" maxlength="1500" snaponcollision="false" spritewidth="3" tile="true" origin="0.05,0.5" targetminmass="10" lerpforces="true" snapanimduration="0.5" ReelSoundPitchSlide="1.0,2.25">
         <Sprite texture="Content/Map/Thalamus/thalamus.png" sourcerect="617,352,174,32" depth="0.57" origin="0.5,0.5" />
+        <SnapSound file="Content/Items/Weapons/HarpoonGun1.ogg" range="500" frequencymultiplier="3.0,4.0"/>
+        <ReelSound file="Content/Items/Weapons/WEAPON_harpoonGunReelLoop.ogg" range="1000" />
         <!-- Snap after 1 seconds if not stuck to anything -->
         <StatusEffect type="OnUse" target="This" Snapped="true" delay="1" checkconditionalalways="true">
           <Conditional targetitemcomponent="Projectile" IsStuckToTarget="false" />
@@ -437,7 +439,7 @@
       <!-- Activating the ItemComponent starts the timer -->
       <ItemComponent IsActive="false" CharacterUsable="true">
         <!--reduce condition by 1 to mark the user as the one responsible for the item breaking and exploding -->
-        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" comparison="AND" condition="-1">
+        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" IsDangerous="true" comparison="AND" condition="-1">
           <Conditional HasTag="neq detonator" targetcontainer="true" />
           <Conditional HasTag="neq railgunammo" targetcontainer="true" />
           <Conditional HasTag="neq depthchargeammo" targetcontainer="true" />
@@ -514,7 +516,7 @@
       </Throwable>
       <ItemComponent IsActive="false" CharacterUsable="true">
         <!--reduce condition by 1 to mark the user as the one responsible for the item breaking and exploding -->
-        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" comparison="AND" condition="-1">
+        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" IsDangerous="true" comparison="AND" condition="-1">
           <Conditional HasTag="neq detonator" targetcontainer="true" />
           <Conditional HasTag="neq railgunammo" targetcontainer="true" />
           <Conditional HasTag="neq depthchargeammo" targetcontainer="true" />
@@ -586,7 +588,7 @@
       <!-- Activating the ItemComponent starts the timer -->
       <ItemComponent IsActive="false" CharacterUsable="true">
         <!--reduce condition by 1 to mark the user as the one responsible for the item breaking and exploding -->
-        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" comparison="AND" condition="-1">
+        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" IsDangerous="true" comparison="AND" condition="-1">
           <Conditional HasTag="neq detonator" targetcontainer="true" />
           <Conditional HasTag="neq railgunammo" targetcontainer="true" />
           <Conditional HasTag="neq depthchargeammo" targetcontainer="true" />
@@ -657,7 +659,7 @@
       </Throwable>
       <ItemComponent IsActive="false" CharacterUsable="true">
         <!--reduce condition by 1 to mark the user as the one responsible for the item breaking and exploding -->
-        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" comparison="AND" condition="-1">
+        <StatusEffect type="OnUse" targettype="This" IsActive="true" DontCleanUp="true" IsDangerous="true" comparison="AND" condition="-1">
           <Conditional HasTag="neq detonator" targetcontainer="true" />
           <Conditional HasTag="neq railgunammo" targetcontainer="true" />
           <Conditional HasTag="neq depthchargeammo" targetcontainer="true" />

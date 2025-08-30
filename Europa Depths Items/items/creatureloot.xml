@@ -19,19 +19,20 @@
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,771,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="1,128,30,58" depth="0.6" origin="0.5,0.5" />
       <Body width="30" height="55" density="11" />
-      <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" holdangle="10" handle1="0,0" msg="ItemMsgPickUpSelect">
-        <RequiredSkill identifier="medical" level="35" />
+    <!-- characterusable="false" because the "Use" action should not be triggerable just by hitting E -->
+    <Holdable canBeCombined="true" removeOnCombined="true" characterusable="false" slots="Any,RightHand,LeftHand" holdangle="10" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="55" />
         <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
           <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         </StatusEffect>
-        <StatusEffect tags="medical" type="OnSuccess" target="UseTarget, This" duration="15">
-          <ReduceAffliction identifier="bloodloss" amount="6" />
-          <Affliction identifier="psychosis" amount="3" />
+      <StatusEffect statuseffecttags="medical" type="OnSuccess" target="UseTarget, This" duration="15">
+        <ReduceAffliction identifier="bloodloss" amount="4" />
+        <Affliction identifier="psychosis" amount="4" />
           <Affliction identifier="organdamage" amount="0.65" />
         </StatusEffect>
-        <StatusEffect tags="medical" type="OnFailure" target="UseTarget, This" duration="15">
-          <ReduceAffliction identifier="bloodloss" amount="3" />
-          <Affliction identifier="psychosis" amount="3" />
+      <StatusEffect statuseffecttags="medical" type="OnFailure" target="UseTarget, This" duration="15">
+        <ReduceAffliction identifier="bloodloss" amount="2" />
+        <Affliction identifier="psychosis" amount="4" />
           <Affliction identifier="organdamage" amount="0.65" />
         </StatusEffect>
         <!-- Remove the item when fully used -->

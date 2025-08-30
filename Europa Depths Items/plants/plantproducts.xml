@@ -112,9 +112,15 @@
         <Item identifier="saltvineseed" />
       </Deconstruct>
       <Throwable characterusable="true" canBeCombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="InWater" target="This" Condition="0.0" setvalue="true">
-          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" selectionmode="All" range="5000" />
-          <sound file="Content/Items/Weapons/ExplosionDebris1.ogg" selectionmode="All" range="5000" />
+        <StatusEffect type="InWater" target="This">
+          <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="0.7" anglemin="0" anglemax="360" velocitymin="-10" velocitymax="10" />
+        </StatusEffect>
+        <StatusEffect type="InWater" target="This" delay="1.5" setvalue="true" condition="0" stackable="false" checkconditionalalways="true">
+          <!-- check the item is still in water after the delay has run out-->
+          <Conditional InWater="true"/>
+          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
+          <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
           <Explosion range="50.0" force="5.0" flames="false" underwaterBubble="false" sparks="false" smoke="false" shockwave="true">
             <Affliction identifier="burn" strength="20" />
             <Affliction identifier="stun" strength="5" />
@@ -122,11 +128,11 @@
         </StatusEffect>
         <StatusEffect type="OnImpact" target="This" Condition="0.0" setvalue="true">
           <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="fruitsplatter1" decalsize="1.0" />
+        </StatusEffect>
+        <StatusEffect type="OnFire" target="This" Condition="0.0" setvalue="true" delay="0.5" />
+        <StatusEffect type="OnBroken" target="This" Condition="-100.0">
           <ParticleEmitter particle="whitegoosplash" anglemin="0" anglemax="360" particleamount="2" velocitymin="0" velocitymax="0" scalemin="1.5" scalemax="2" />
           <ParticleEmitter particle="fruitchunks" anglemin="0" anglemax="360" particleamount="10" velocitymin="200" velocitymax="300" scalemin="0.4" scalemax="0.8" />
-        </StatusEffect>
-        <StatusEffect type="OnFire" target="This" Condition="-50.0" />
-        <StatusEffect type="OnBroken" target="This" Condition="-100.0">
           <Remove />
         </StatusEffect>
       </Throwable>

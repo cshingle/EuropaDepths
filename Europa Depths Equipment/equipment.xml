@@ -173,7 +173,7 @@
     </ConnectionPanel>
     <ItemContainer hideitems="false" drawinventory="true" capacity="3" maxstacksize="1" slotsperrow="3" itempos="27,-42" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.16,0.18" anchor="Center" style="ItemUI" />
-      <StatusEffect type="OnFire" target="This" tags="onfire" duration="1" stackable="false" />
+      <StatusEffect type="OnFire" target="This" tags="onfire" duration="10" stackable="false" />
       <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
         <StatusEffect type="OnContaining" targettype="Contained" Condition="0.1" Comparison="And">
           <Conditional Voltage="gt 0.1" targetcontainer="true" targetitemcomponent="Powered"/>
@@ -287,7 +287,7 @@
     </ConnectionPanel>
     <ItemContainer hideitems="false" drawinventory="true" capacity="10" slotsperrow="5" maxstacksize="1" itempos="27,-44" iteminterval="22.5,0" itemrotation="0" canbeselected="true" containedspritedepth="0.83" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.25,0.25" anchor="Center" style="ItemUI" />
-      <StatusEffect type="OnFire" target="This" tags="onfire" duration="1" stackable="false" />
+      <StatusEffect type="OnFire" target="This" tags="onfire" duration="10" stackable="false" />
       <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
         <StatusEffect type="OnContaining" targettype="Contained" Condition="1.0" Comparison="And">
           <Conditional Voltage="gt 0.1" targetcontainer="true" targetitemcomponent="Powered"/>
@@ -376,6 +376,7 @@
           <reduceaffliction type="damage" strength="0.02" />
           <reduceaffliction identifier="bloodloss" strength="0.02" />
           <reduceaffliction identifier="concussion" strength="0.02" />
+          <reduceaffliction identifier="blunttrauma" strength="0.04" />
           <reduceaffliction identifier="nausea" strength="0.02" />
         </StatusEffect>
       </Controller>
